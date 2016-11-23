@@ -2762,7 +2762,7 @@
 
     aput-object v6, v1, v4
 
-    invoke-static {v0, v1}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
+    invoke-static {p1, p3}, Lcom/android/server/am/ActivityStackHook;->writeAmRelaunchActivityEventLog(Lcom/android/server/am/ActivityRecord;Z)V
 
     .line 4495
     iget-object v0, p1, Lcom/android/server/am/ActivityRecord;->app:Lcom/android/server/am/ProcessRecord;
@@ -6999,7 +6999,7 @@
 
     aput-object v6, v4, v5
 
-    invoke-static {v3, v4}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
+    invoke-static/range {v32 .. v32}, Lcom/android/server/am/ActivityStackHook;->writeAmResumeActivityEventLog(Lcom/android/server/am/ActivityRecord;)V
 
     .line 2328
     const/4 v3, 0x0
@@ -8158,7 +8158,7 @@
     :goto_2
     aput-object v1, v3, v4
 
-    invoke-static {v2, v3}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
+    invoke-static {p0, v0}, Lcom/android/server/am/ActivityStackHook;->writeAmFailedToPauseEventLog(Lcom/android/server/am/ActivityStack;Lcom/android/server/am/ActivityRecord;)V
 
     .line 1139
     iget-boolean v1, v0, Lcom/android/server/am/ActivityRecord;->finishing:Z
@@ -9951,7 +9951,7 @@
 
     aput-object p3, v7, v8
 
-    invoke-static {v5, v7}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
+    invoke-static {p1, p3}, Lcom/android/server/am/ActivityStackHook;->writeAmDestroyActivityEventLog(Lcom/android/server/am/ActivityRecord;Ljava/lang/String;)V
 
     .line 3796
     sget-boolean v5, Lcom/android/server/am/ActivityManagerDebugConfig;->ENABLE_THERMAL:Z
@@ -14460,8 +14460,11 @@
     const/4 v10, 0x4
 
     aput-object p4, v9, v10
+     
+    move-object/from16 v11,p1
+    move-object/from16 v12,p4
 
-    invoke-static {v8, v9}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
+    invoke-static {v11, v12}, Lcom/android/server/am/ActivityStackHook;->writeAmFinishActivityEventLog(Lcom/android/server/am/ActivityRecord;Ljava/lang/String;)V
 
     .line 3309
     iget-object v1, v5, Lcom/android/server/am/TaskRecord;->mActivities:Ljava/util/ArrayList;
@@ -20874,7 +20877,7 @@
 
     aput-object v10, v8, v9
 
-    invoke-static {v7, v8}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
+    invoke-static {v4, v10}, Lcom/android/server/am/ActivityStackHook;->writeAmFinishActivityEventLog(Lcom/android/server/am/ActivityRecord;Ljava/lang/String;)V
 
     .line 4030
     iget-object v7, v4, Lcom/android/server/am/ActivityRecord;->state:Lcom/android/server/am/ActivityStack$ActivityState;
@@ -25140,7 +25143,7 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v2}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
+    invoke-static {v1}, Lcom/android/server/am/ActivityStackHook;->writeAmPauseActivityEventLog(Lcom/android/server/am/ActivityRecord;)V
 
     .line 1061
     iget-object v0, p0, Lcom/android/server/am/ActivityStack;->mService:Lcom/android/server/am/ActivityManagerService;

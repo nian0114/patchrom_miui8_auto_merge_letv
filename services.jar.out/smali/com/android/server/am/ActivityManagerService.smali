@@ -28719,6 +28719,31 @@
     .end local v40    # "msg":Ljava/lang/String;
     .end local v44    # "providerRunning":Z
     :cond_4
+    invoke-static/range {p5 .. p5}, Lmiui/securityspace/XSpaceUserHandle;->isXSpaceUserId(I)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_miui_3
+
+    move-object/from16 v6, p0
+
+    move-object/from16 v0, p2
+
+    move/from16 v1, p5
+
+    invoke-direct {v6, v0, v1}, Lcom/android/server/am/ActivityManagerService;->getProviderInfoLocked(Ljava/lang/String;I)Landroid/content/pm/ProviderInfo;
+
+    move-result-object v5
+
+    if-nez v5, :cond_miui_3
+
+    const/16 p5, 0x0
+
+    const/16 v21, 0x0
+
+    goto :goto_0
+
+    :cond_miui_3
     move-object/from16 v0, p0
 
     iget-object v6, v0, Lcom/android/server/am/ActivityManagerService;->mProviderMap:Lcom/android/server/am/ProviderMap;
@@ -29163,6 +29188,32 @@
     move-wide/from16 v1, v46
 
     invoke-direct {v0, v1, v2, v6}, Lcom/android/server/am/ActivityManagerService;->checkTime(JLjava/lang/String;)V
+    
+    if-nez v7, :cond_miui_c
+
+    invoke-static/range {p5 .. p5}, Lmiui/securityspace/XSpaceUserHandle;->isXSpaceUserId(I)Z
+
+    move-result v5
+
+    if-eqz v6, :cond_miui_c
+
+    const/16 p5, 0x0
+   
+    move/from16 v1, p5
+    
+    invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
+
+    move-result-object v6
+
+    const/16 v8, 0xc00
+
+    move-object/from16 v0, p2
+    
+    invoke-interface {v6, v0, v8, v1}, Landroid/content/pm/IPackageManager;->resolveContentProvider(Ljava/lang/String;II)Landroid/content/pm/ProviderInfo;
+   
+    move-result-object v7
+    
+    :cond_miui_c
     :try_end_4
     .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_4} :catch_6
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
@@ -44696,7 +44747,14 @@
 
     aput v5, v8, v4
 
-    .line 3574
+    invoke-static {v6}, Landroid/os/UserHandle;->getUserId(I)I
+
+    move-result v4
+
+    invoke-static {v4, v8}, Lcom/android/server/am/ActivityManagerServiceInjector;->computeGids(I[I)[I
+
+    move-result-object v8
+
     .end local v26    # "mountServiceInternal":Landroid/os/storage/MountServiceInternal;
     .end local v28    # "permGids":[I
     .end local v29    # "pm":Landroid/content/pm/IPackageManager;
