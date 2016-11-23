@@ -1,0 +1,52 @@
+diff --git a/MiuiSystemUI/smali/com/android/systemui/statusbar/CommandQueue$Callbacks.smali b/MiuiSystemUI/smali/com/android/systemui/statusbar/CommandQueue$Callbacks.smali
+index 522e05d..d9d17f4 100644
+--- a/MiuiSystemUI/smali/com/android/systemui/statusbar/CommandQueue$Callbacks.smali
++++ b/MiuiSystemUI/smali/com/android/systemui/statusbar/CommandQueue$Callbacks.smali
+@@ -57,6 +57,9 @@
+ .method public abstract setStatus(ILjava/lang/String;Landroid/os/Bundle;)V
+ .end method
+ 
++.method public abstract setSystemUiIconColor(I)V
++.end method
++
+ .method public abstract setSystemUiVisibility(II)V
+ .end method
+ 
+diff --git a/MiuiSystemUI/smali/com/android/systemui/statusbar/CommandQueue.smali b/MiuiSystemUI/smali/com/android/systemui/statusbar/CommandQueue.smali
+index b5d61b1..6e121d0 100644
+--- a/MiuiSystemUI/smali/com/android/systemui/statusbar/CommandQueue.smali
++++ b/MiuiSystemUI/smali/com/android/systemui/statusbar/CommandQueue.smali
+@@ -919,6 +919,14 @@
+     throw v1
+ .end method
+ 
++.method public setSystemUiIconColor(I)V
++    .locals 3
++    .param p1, "color"    # I
++
++    .prologue
++    return-void
++.end method
++
+ .method public setSystemUiVisibility(II)V
+     .locals 4
+     .param p1, "vis"    # I
+diff --git a/MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar.smali b/MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar.smali
+index 3ca08df..732aabe 100644
+--- a/MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar.smali
++++ b/MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar.smali
+@@ -18394,6 +18394,14 @@
+     .end packed-switch
+ .end method
+ 
++.method public setSystemUiIconColor(I)V
++    .locals 3
++    .param p1, "color"    # I
++
++    .prologue
++    return-void
++.end method
++
+ .method public setSystemUiVisibility(II)V
+     .locals 13
+     .param p1, "vis"    # I

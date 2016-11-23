@@ -1,0 +1,81 @@
+
+.field mIgnoreNextInsertActionModeStart:Z
+
+.field mSectionBoundPaint:Landroid/graphics/Paint;
+
+.method getInsertHandleHeight()I
+    .locals 2
+
+    .prologue
+    .line 6369
+    iget-object v1, p0, Landroid/widget/Editor;->mSelectHandleCenter:Landroid/graphics/drawable/Drawable;
+
+    if-nez v1, :cond_1
+
+    .line 6370
+    const/4 v0, 0x0
+
+    .line 6376
+    :cond_0
+    :goto_0
+    return v0
+
+    .line 6372
+    :cond_1
+    iget-object v1, p0, Landroid/widget/Editor;->mSelectHandleCenter:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+
+    move-result v0
+
+    .line 6373
+    .local v0, "height":I
+    if-gez v0, :cond_0
+
+    .line 6374
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method isInSectionMode()Z
+    .locals 1
+
+    .prologue
+    .line 6379
+    iget-object v0, p0, Landroid/widget/Editor;->mSelectionModifierCursorController:Landroid/widget/Editor$SelectionModifierCursorController;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/widget/Editor;->mSelectionModifierCursorController:Landroid/widget/Editor$SelectionModifierCursorController;
+
+    invoke-virtual {v0}, Landroid/widget/Editor$SelectionModifierCursorController;->isInSectionMode()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 6381
+    const/4 v0, 0x1
+
+    .line 6384
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method setSectionBoundPaint(Landroid/graphics/Paint;)V
+    .locals 0
+    .param p1, "paint"    # Landroid/graphics/Paint;
+
+    .prologue
+    .line 6363
+    iput-object p1, p0, Landroid/widget/Editor;->mSectionBoundPaint:Landroid/graphics/Paint;
+
+    .line 6364
+    return-void
+.end method

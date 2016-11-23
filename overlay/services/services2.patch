@@ -1,0 +1,27 @@
+From 8424a3718323526e4ee5d3f817f6577beb7649a2 Mon Sep 17 00:00:00 2001
+From: zhaochengw <zhaochengw@qq.com>
+Date: Thu, 6 Oct 2016 22:30:15 +0800
+Subject: fix soft restart after app installed
+
+
+diff --git a/services/smali/com/android/server/AppOpsService.smali b/services/smali/com/android/server/AppOpsService.smali
+index 5ce76aa..9c68165 100644
+--- a/services/smali/com/android/server/AppOpsService.smali
++++ b/services/smali/com/android/server/AppOpsService.smali
+@@ -5957,6 +5957,16 @@
+     goto :goto_0
+ .end method
+ 
++.method public packageAdded(ILjava/lang/String;)V
++    .locals 2
++    .param p1, "uid"    # I
++    .param p2, "packageName"    # Ljava/lang/String;
++
++    .prologue
++    .line 445
++    return-void
++.end method
++
+ .method public packageRemoved(ILjava/lang/String;)V
+     .locals 3
+     .param p1, "uid"    # I
