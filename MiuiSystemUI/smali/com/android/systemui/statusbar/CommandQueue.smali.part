@@ -1,0 +1,8 @@
+
+.method public setSystemUiIconColor(I)V
+    .locals 3
+    .param p1, "color"    # I
+
+    .prologue
+    return-void
+.end method

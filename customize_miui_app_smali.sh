@@ -20,13 +20,13 @@ function applyPatch () {
 }
 
 function appendSmaliPart() {
-    for file in `find $1/smali -name *.part`
-    do
-		filepath=`dirname $file`
-		filename=`basename $file .part`
-		dstfile="out/$filepath/$filename"
-        cat $file >> $dstfile
-    done
+  for file in `find $1 -name *.part`
+  do
+    filepath=`dirname $file`
+    filename=`basename $file .part`
+    dstfile="out/$filepath/$filename"
+    cat $file >> $dstfile
+  done
 }
 
 function mergyXmlPart() {
@@ -47,7 +47,7 @@ if [ $1 = "MiuiKeyguard" ];then
 fi
 
 if [ $1 = "MiuiSystemUI" ];then
-    applyPatch $1 $2
+    appendSmaliPart "MiuiSystemUI"
 fi
 
 if [ $1 = "TeleService" ];then
