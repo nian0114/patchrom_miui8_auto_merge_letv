@@ -9,4 +9,4 @@ local-phone-apps := AntHalService AutoRegistration BasicDreams Bluetooth Bluetoo
 
 local-phone-priv-apps := AlipayAuthInfoProvider BackupRestoreConfirmation CarrierConfig CNEService com.qualcomm.location DefaultContainerService \
 	dpmserviceapp ExternalStorageProvider FusedLocation InputDevices LetvCellBroadcastReceiver \
-	LetvVideoLeading ProxyHandler QcCrashHandler qcrilmsgtunnel QtiTetherService SharedStorageBackup Shell VpnDialogs \
+	ProxyHandler QcCrashHandler qcrilmsgtunnel QtiTetherService SharedStorageBackup Shell VpnDialogs \
