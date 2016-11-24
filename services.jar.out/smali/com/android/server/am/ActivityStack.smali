@@ -14461,10 +14461,11 @@
 
     aput-object p4, v9, v10
      
-    move-object/from16 v11,p1
-    move-object/from16 v12,p4
+    move-object/from16 v0,p1
+    
+    move-object/from16 v1,p4
 
-    invoke-static {v11, v12}, Lcom/android/server/am/ActivityStackHook;->writeAmFinishActivityEventLog(Lcom/android/server/am/ActivityRecord;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/android/server/am/ActivityStackHook;->writeAmFinishActivityEventLog(Lcom/android/server/am/ActivityRecord;Ljava/lang/String;)V
 
     .line 3309
     iget-object v1, v5, Lcom/android/server/am/TaskRecord;->mActivities:Ljava/util/ArrayList;
