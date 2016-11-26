@@ -65,3 +65,7 @@ fi
 if [ $1 = "SecurityCenter" ];then
     applyPatch $1 $2
 fi
+
+if [ $1 = "Settings" ];then
+    applyPatch $1 $2
+fi
