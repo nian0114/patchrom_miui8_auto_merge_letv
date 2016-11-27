@@ -41,3 +41,7 @@ function mergyXmlPart() {
 if [ $1 = "InCallUI" ];then
     $XMLMERGYTOOL $1/res/values $2/res/values
 fi
+
+if [ $1 = "Mms" ];then
+    sed -i '/  - 16/a\  - 18' $2/apktool.yml
+fi
