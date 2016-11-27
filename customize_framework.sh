@@ -54,3 +54,8 @@ if [ $2 = "$BUILD_OUT/services" ]
 then
     appendSmaliPart "services"
 fi
+
+if [ $2 = "$BUILD_OUT/telephony-common" ]
+then
+    appendSmaliPart "telephony-common"
+fi
