@@ -672,7 +672,7 @@
 
     cmp-long v18, v14, v18
 
-    if-lez v18, :cond_2
+    if-lez v18, :cond_1
 
     array-length v0, v6
 
@@ -686,7 +686,7 @@
 
     cmp-long v18, v18, v14
 
-    if-gez v18, :cond_1
+    if-gez v18, :cond_0
 
     array-length v0, v6
 
@@ -719,7 +719,7 @@
     move-result v7
 
     .local v7, "didRead":I
-    if-ltz v7, :cond_0
+    if-ltz v7, :cond_1
 
     move-object/from16 v0, p0
 
@@ -739,7 +739,6 @@
 
     iput-wide v0, v2, Lcom/android/server/backup/BackupManagerService$FullRestoreEngine;->mBytes:J
 
-    :cond_0
     const/16 v18, 0x0
 
     move/from16 v0, v18
@@ -756,12 +755,12 @@
 
     .end local v7    # "didRead":I
     .end local v16    # "toRead":J
-    :cond_1
+    :cond_0
     move-wide/from16 v16, v14
 
     goto :goto_1
 
-    :cond_2
+    :cond_1
     invoke-virtual {v5}, Ljava/io/FileOutputStream;->close()V
 
     const/16 v18, 0x1
@@ -840,7 +839,7 @@
 
     move/from16 v1, v19
 
-    if-eq v0, v1, :cond_4
+    if-eq v0, v1, :cond_3
 
     move-object/from16 v0, p0
 
@@ -867,11 +866,11 @@
 
     move-object/from16 v1, v19
 
-    if-eq v0, v1, :cond_3
+    if-eq v0, v1, :cond_2
 
     const/4 v9, 0x0
 
-    :cond_3
+    :cond_2
     :goto_2
     invoke-virtual {v4}, Ljava/io/File;->delete()Z
 
@@ -886,7 +885,7 @@
     .restart local v6    # "buffer":[B
     .restart local v10    # "packageUri":Landroid/net/Uri;
     .restart local v14    # "size":J
-    :cond_4
+    :cond_3
     const/4 v13, 0x0
 
     .local v13, "uninstall":Z
@@ -913,7 +912,7 @@
 
     move-result v18
 
-    if-nez v18, :cond_6
+    if-nez v18, :cond_5
 
     const-string v18, "RestoreEngine"
 
@@ -969,9 +968,9 @@
 
     const/4 v13, 0x1
 
-    :cond_5
+    :cond_4
     :goto_4
-    if-eqz v13, :cond_3
+    if-eqz v13, :cond_2
 
     move-object/from16 v0, p0
 
@@ -1057,7 +1056,7 @@
     .restart local v10    # "packageUri":Landroid/net/Uri;
     .restart local v13    # "uninstall":Z
     .restart local v14    # "size":J
-    :cond_6
+    :cond_5
     :try_start_3
     move-object/from16 v0, p0
 
@@ -1097,7 +1096,7 @@
 
     and-int v18, v18, v19
 
-    if-nez v18, :cond_7
+    if-nez v18, :cond_6
 
     const-string v18, "RestoreEngine"
 
@@ -1137,7 +1136,7 @@
 
     goto/16 :goto_4
 
-    :cond_7
+    :cond_6
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/backup/BackupManagerService$FullRestoreEngine;->mManifestSignatures:Ljava/util/HashMap;
@@ -1161,7 +1160,7 @@
 
     move-result v18
 
-    if-eqz v18, :cond_8
+    if-eqz v18, :cond_7
 
     iget-object v0, v11, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -1179,7 +1178,7 @@
 
     move/from16 v1, v19
 
-    if-ge v0, v1, :cond_5
+    if-ge v0, v1, :cond_4
 
     iget-object v0, v11, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -1191,7 +1190,7 @@
 
     move-object/from16 v18, v0
 
-    if-nez v18, :cond_5
+    if-nez v18, :cond_4
 
     const-string v18, "RestoreEngine"
 
@@ -1231,7 +1230,7 @@
 
     goto/16 :goto_4
 
-    :cond_8
+    :cond_7
     const-string v18, "RestoreEngine"
 
     new-instance v19, Ljava/lang/StringBuilder;

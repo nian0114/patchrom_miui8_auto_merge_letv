@@ -227,6 +227,10 @@
     # setter for: Lcom/android/server/wifi/SupplicantStateTracker;->mAssociationRejectCount:I
     invoke-static {v2, v6}, Lcom/android/server/wifi/SupplicantStateTracker;->access$802(Lcom/android/server/wifi/SupplicantStateTracker;I)I
 
+    iget v2, p1, Landroid/os/Message;->arg1:I
+
+    invoke-static {v2}, Landroid/net/wifi/SupplicantStateTrackerInjector;->handleConnectNetwork(I)V
+
     goto :goto_0
 
     :sswitch_4
@@ -236,6 +240,8 @@
     invoke-static {v2}, Lcom/android/server/wifi/SupplicantStateTracker;->access$808(Lcom/android/server/wifi/SupplicantStateTracker;)I
 
     goto :goto_0
+
+    nop
 
     :sswitch_data_0
     .sparse-switch

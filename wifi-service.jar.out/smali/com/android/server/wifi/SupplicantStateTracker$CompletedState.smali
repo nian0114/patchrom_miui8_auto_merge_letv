@@ -105,6 +105,8 @@
     # setter for: Lcom/android/server/wifi/SupplicantStateTracker;->mNetworksDisabledDuringConnect:Z
     invoke-static {v0, v3}, Lcom/android/server/wifi/SupplicantStateTracker;->access$702(Lcom/android/server/wifi/SupplicantStateTracker;Z)Z
 
+    invoke-static {}, Landroid/net/wifi/SupplicantStateTrackerInjector;->handleNetworkConnectionComplete()V
+
     :cond_1
     return-void
 .end method

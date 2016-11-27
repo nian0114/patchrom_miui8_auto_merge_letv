@@ -912,11 +912,6 @@
 
     move-result-object v1
 
-    .local v1, "notification":Landroid/app/Notification;
-    const v4, 0x10805cd
-
-    iput v4, v1, Landroid/app/Notification;->notificationIcon:I
-
     iget-boolean v4, p0, Lcom/android/server/wifi/WifiNotificationController;->mNotificationShown:Z
 
     if-nez v4, :cond_3
@@ -945,7 +940,7 @@
     invoke-virtual {v2, v8, v9, v1, v4}, Landroid/app/NotificationManager;->notifyAsUser(Ljava/lang/String;ILandroid/app/Notification;Landroid/os/UserHandle;)V
 
     .end local v0    # "details":Ljava/lang/CharSequence;
-    .end local v1    # "notification":Landroid/app/Notification;
+    .end local v1
     .end local v3    # "title":Ljava/lang/CharSequence;
     :goto_2
     iput-boolean p1, p0, Lcom/android/server/wifi/WifiNotificationController;->mNotificationShown:Z
@@ -953,7 +948,7 @@
     goto/16 :goto_0
 
     .restart local v0    # "details":Ljava/lang/CharSequence;
-    .restart local v1    # "notification":Landroid/app/Notification;
+    .restart local v1
     .restart local v3    # "title":Ljava/lang/CharSequence;
     :cond_3
     iget-object v4, p0, Lcom/android/server/wifi/WifiNotificationController;->mNotificationBuilder:Landroid/app/Notification$Builder;
@@ -963,7 +958,7 @@
     goto :goto_1
 
     .end local v0    # "details":Ljava/lang/CharSequence;
-    .end local v1    # "notification":Landroid/app/Notification;
+    .end local v1
     .end local v3    # "title":Ljava/lang/CharSequence;
     :cond_4
     sget-object v4, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;

@@ -101,6 +101,8 @@
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
+    invoke-static {p1}, Lcom/android/server/wifi/WifiServiceInjector;->handleClientMessage(Landroid/os/Message;)V
+
     return-void
 
     :sswitch_0
@@ -555,6 +557,8 @@
     invoke-virtual {v3, v4}, Lcom/android/server/wifi/WifiStateMachine;->sendMessage(Landroid/os/Message;)V
 
     goto/16 :goto_0
+
+    nop
 
     :sswitch_data_0
     .sparse-switch

@@ -33,11 +33,9 @@
 
 # virtual methods
 .method public enter()V
-    .locals 7
+    .locals 6
 
     .prologue
-    const/4 v6, 0x4
-
     const/4 v5, 0x0
 
     # getter for: Lcom/android/server/wifi/SupplicantStateTracker;->DBG:Z
@@ -94,8 +92,26 @@
 
     move-result v2
 
-    if-lt v2, v6, :cond_2
+    const/4 v3, 0x2
 
+    if-ge v2, v3, :cond_1
+
+    iget v2, v1, Lcom/android/server/wifi/StateChangeResult;->networkId:I
+
+    iget-object v3, p0, Lcom/android/server/wifi/SupplicantStateTracker$DisconnectedState;->this$0:Lcom/android/server/wifi/SupplicantStateTracker;
+
+    # getter for: Lcom/android/server/wifi/SupplicantStateTracker;->mAuthenticationFailuresCount:I
+    invoke-static {v3}, Lcom/android/server/wifi/SupplicantStateTracker;->access$100(Lcom/android/server/wifi/SupplicantStateTracker;)I
+
+    move-result v3
+
+    invoke-static {v2, v3}, Landroid/net/wifi/SupplicantStateTrackerInjector;->isConformAuthFailure(II)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    :cond_1
     const-string v2, "SupplicantStateTracker"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -134,11 +150,11 @@
     # setter for: Lcom/android/server/wifi/SupplicantStateTracker;->mAuthenticationFailuresCount:I
     invoke-static {v2, v5}, Lcom/android/server/wifi/SupplicantStateTracker;->access$102(Lcom/android/server/wifi/SupplicantStateTracker;I)I
 
-    :cond_1
+    :cond_2
     :goto_0
     return-void
 
-    :cond_2
+    :cond_3
     iget-object v2, p0, Lcom/android/server/wifi/SupplicantStateTracker$DisconnectedState;->this$0:Lcom/android/server/wifi/SupplicantStateTracker;
 
     # getter for: Lcom/android/server/wifi/SupplicantStateTracker;->mAssociationRejectCount:I
@@ -148,7 +164,7 @@
 
     const/16 v3, 0x10
 
-    if-lt v2, v3, :cond_1
+    if-lt v2, v3, :cond_2
 
     const-string v2, "SupplicantStateTracker"
 
@@ -178,8 +194,10 @@
 
     iget v3, v1, Lcom/android/server/wifi/StateChangeResult;->networkId:I
 
+    const/4 v4, 0x4
+
     # invokes: Lcom/android/server/wifi/SupplicantStateTracker;->handleNetworkConnectionFailure(II)V
-    invoke-static {v2, v3, v6}, Lcom/android/server/wifi/SupplicantStateTracker;->access$1000(Lcom/android/server/wifi/SupplicantStateTracker;II)V
+    invoke-static {v2, v3, v4}, Lcom/android/server/wifi/SupplicantStateTracker;->access$1000(Lcom/android/server/wifi/SupplicantStateTracker;II)V
 
     iget-object v2, p0, Lcom/android/server/wifi/SupplicantStateTracker$DisconnectedState;->this$0:Lcom/android/server/wifi/SupplicantStateTracker;
 

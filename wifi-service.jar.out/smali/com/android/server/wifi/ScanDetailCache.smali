@@ -24,10 +24,34 @@
     .end annotation
 .end field
 
+.field private mMap:Ljava/util/concurrent/ConcurrentHashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/concurrent/ConcurrentHashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/android/server/wifi/ScanDetail;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field private mPasspointMatches:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private mPasspointMatches:Ljava/util/concurrent/ConcurrentHashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/concurrent/ConcurrentHashMap",
             "<",
             "Ljava/lang/String;",
             "Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;",

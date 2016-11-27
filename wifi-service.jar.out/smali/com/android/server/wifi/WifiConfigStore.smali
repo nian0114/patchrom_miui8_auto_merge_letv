@@ -375,6 +375,8 @@
 
 .field private final mSupplicantBridge:Lcom/android/server/wifi/hotspot2/SupplicantBridge;
 
+.field private mWifiAutoConnController:Lcom/android/server/wifi/WifiAutoConnController;
+
 .field private mWifiFwkExt:Landroid/net/wifi/IWifiFwkExt;
 
 .field private mWifiNative:Lcom/android/server/wifi/WifiNative;
@@ -2035,6 +2037,25 @@
     const-string v2, "disabled"
 
     goto :goto_2
+.end method
+
+.method constructor <init>(Landroid/content/Context;Lcom/android/server/wifi/WifiStateMachine;Lcom/android/server/wifi/WifiNative;Landroid/os/Handler;)V
+    .locals 1
+    .param p1, "c"    # Landroid/content/Context;
+    .param p2, "w"    # Lcom/android/server/wifi/WifiStateMachine;
+    .param p3, "wn"    # Lcom/android/server/wifi/WifiNative;
+    .param p4, "handler"    # Landroid/os/Handler;
+
+    .prologue
+    invoke-direct {p0, p1, p2, p3}, Lcom/android/server/wifi/WifiConfigStore;-><init>(Landroid/content/Context;Lcom/android/server/wifi/WifiStateMachine;Lcom/android/server/wifi/WifiNative;)V
+
+    new-instance v0, Lcom/android/server/wifi/WifiAutoConnController;
+
+    invoke-direct {v0, p0, p1, p4}, Lcom/android/server/wifi/WifiAutoConnController;-><init>(Lcom/android/server/wifi/WifiConfigStore;Landroid/content/Context;Landroid/os/Handler;)V
+
+    iput-object v0, p0, Lcom/android/server/wifi/WifiConfigStore;->mWifiAutoConnController:Lcom/android/server/wifi/WifiAutoConnController;
+
+    return-void
 .end method
 
 .method static synthetic access$000()Z
@@ -13808,163 +13829,143 @@
 .end method
 
 .method enableAllNetworks()V
-    .locals 15
+    .locals 12
 
     .prologue
-    const/4 v14, 0x4
-
-    const/4 v13, 0x3
-
-    const/4 v12, 0x1
-
     const/4 v11, 0x2
 
     const/4 v10, 0x0
 
+    iget-object v3, p0, Lcom/android/server/wifi/WifiConfigStore;->mWifiAutoConnController:Lcom/android/server/wifi/WifiAutoConnController;
+
+    invoke-virtual {v3}, Lcom/android/server/wifi/WifiAutoConnController;->shouldEnableAllNetworks()Z
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
     .local v4, "now":J
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    .local v3, "networkEnabledStateChanged":Z
-    iget-object v6, p0, Lcom/android/server/wifi/WifiConfigStore;->mWifiFwkExt:Landroid/net/wifi/IWifiFwkExt;
+    .local v2, "networkEnabledStateChanged":Z
+    iget-object v3, p0, Lcom/android/server/wifi/WifiConfigStore;->mConfiguredNetworks:Lcom/android/server/wifi/ConfigurationMap;
 
-    if-eqz v6, :cond_4
+    invoke-virtual {v3}, Lcom/android/server/wifi/ConfigurationMap;->values()Ljava/util/Collection;
 
-    iget-object v6, p0, Lcom/android/server/wifi/WifiConfigStore;->mWifiFwkExt:Landroid/net/wifi/IWifiFwkExt;
+    move-result-object v3
 
-    invoke-interface {v6}, Landroid/net/wifi/IWifiFwkExt;->hasCustomizedAutoConnect()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_4
-
-    iget-object v6, p0, Lcom/android/server/wifi/WifiConfigStore;->mWifiFwkExt:Landroid/net/wifi/IWifiFwkExt;
-
-    invoke-interface {v6}, Landroid/net/wifi/IWifiFwkExt;->shouldAutoConnect()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_9
-
-    invoke-virtual {p0}, Lcom/android/server/wifi/WifiConfigStore;->getDisconnectNetworks()Ljava/util/List;
+    invoke-interface {v3}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .local v1, "disconnectNetworks":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
-    iget-object v6, p0, Lcom/android/server/wifi/WifiConfigStore;->mConfiguredNetworks:Lcom/android/server/wifi/ConfigurationMap;
+    .local v1, "i$":Ljava/util/Iterator;
+    :cond_2
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {v6}, Lcom/android/server/wifi/ConfigurationMap;->values()Ljava/util/Collection;
+    move-result v3
 
-    move-result-object v6
+    if-eqz v3, :cond_7
 
-    invoke-interface {v6}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    .local v2, "i$":Ljava/util/Iterator;
-    :cond_0
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_9
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/net/wifi/WifiConfiguration;
 
     .local v0, "config":Landroid/net/wifi/WifiConfiguration;
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_6
 
-    iget v6, v0, Landroid/net/wifi/WifiConfiguration;->status:I
+    iget v3, v0, Landroid/net/wifi/WifiConfiguration;->status:I
 
-    if-ne v6, v12, :cond_0
+    const/4 v6, 0x1
 
-    iget-boolean v6, v0, Landroid/net/wifi/WifiConfiguration;->ephemeral:Z
+    if-ne v3, v6, :cond_6
 
-    if-nez v6, :cond_0
+    iget-boolean v3, v0, Landroid/net/wifi/WifiConfiguration;->ephemeral:Z
 
-    iget v6, v0, Landroid/net/wifi/WifiConfiguration;->autoJoinStatus:I
+    if-nez v3, :cond_6
 
-    const/16 v7, 0x80
+    iget-object v3, p0, Lcom/android/server/wifi/WifiConfigStore;->mWifiAutoConnController:Lcom/android/server/wifi/WifiAutoConnController;
 
-    if-gt v6, v7, :cond_0
+    iget-object v6, v0, Landroid/net/wifi/WifiConfiguration;->SSID:Ljava/lang/String;
+
+    invoke-virtual {v3, v6}, Lcom/android/server/wifi/WifiAutoConnController;->isDisableByUser(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_6
+
+    iget v3, v0, Landroid/net/wifi/WifiConfiguration;->autoJoinStatus:I
+
+    const/16 v6, 0x80
+
+    if-gt v3, v6, :cond_6
+
+    iget v3, v0, Landroid/net/wifi/WifiConfiguration;->disableReason:I
+
+    if-eq v3, v11, :cond_3
+
+    iget v3, v0, Landroid/net/wifi/WifiConfiguration;->disableReason:I
+
+    const/4 v6, 0x4
+
+    if-eq v3, v6, :cond_3
+
+    iget v3, v0, Landroid/net/wifi/WifiConfiguration;->disableReason:I
+
+    const/4 v6, 0x3
+
+    if-ne v3, v6, :cond_4
+
+    :cond_3
+    iget-wide v6, v0, Landroid/net/wifi/WifiConfiguration;->blackListTimestamp:J
+
+    const-wide/16 v8, 0x0
+
+    cmp-long v3, v6, v8
+
+    if-eqz v3, :cond_4
+
+    iget-wide v6, v0, Landroid/net/wifi/WifiConfiguration;->blackListTimestamp:J
+
+    cmp-long v3, v4, v6
+
+    if-lez v3, :cond_4
+
+    iget-wide v6, v0, Landroid/net/wifi/WifiConfiguration;->blackListTimestamp:J
+
+    sub-long v6, v4, v6
+
+    iget v3, p0, Lcom/android/server/wifi/WifiConfigStore;->wifiConfigBlacklistMinTimeMilli:I
+
+    int-to-long v8, v3
+
+    cmp-long v3, v6, v8
+
+    if-ltz v3, :cond_2
+
+    :cond_4
+    iget-object v3, p0, Lcom/android/server/wifi/WifiConfigStore;->mWifiNative:Lcom/android/server/wifi/WifiNative;
 
     iget v6, v0, Landroid/net/wifi/WifiConfiguration;->networkId:I
 
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v3, v6, v10}, Lcom/android/server/wifi/WifiNative;->enableNetwork(IZ)Z
 
-    move-result-object v6
+    move-result v3
 
-    invoke-interface {v1, v6}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+    if-eqz v3, :cond_5
 
-    move-result v6
-
-    if-nez v6, :cond_0
-
-    iget v6, v0, Landroid/net/wifi/WifiConfiguration;->disableReason:I
-
-    if-eq v6, v11, :cond_1
-
-    iget v6, v0, Landroid/net/wifi/WifiConfiguration;->disableReason:I
-
-    if-eq v6, v14, :cond_1
-
-    iget v6, v0, Landroid/net/wifi/WifiConfiguration;->disableReason:I
-
-    if-eq v6, v13, :cond_1
-
-    iget v6, v0, Landroid/net/wifi/WifiConfiguration;->disableReason:I
-
-    const/4 v7, 0x6
-
-    if-ne v6, v7, :cond_2
-
-    :cond_1
-    iget-wide v6, v0, Landroid/net/wifi/WifiConfiguration;->blackListTimestamp:J
-
-    const-wide/16 v8, 0x0
-
-    cmp-long v6, v6, v8
-
-    if-eqz v6, :cond_2
-
-    iget-wide v6, v0, Landroid/net/wifi/WifiConfiguration;->blackListTimestamp:J
-
-    cmp-long v6, v4, v6
-
-    if-lez v6, :cond_2
-
-    iget-wide v6, v0, Landroid/net/wifi/WifiConfiguration;->blackListTimestamp:J
-
-    sub-long v6, v4, v6
-
-    iget v8, p0, Lcom/android/server/wifi/WifiConfigStore;->wifiConfigBlacklistMinTimeMilli:I
-
-    int-to-long v8, v8
-
-    cmp-long v6, v6, v8
-
-    if-ltz v6, :cond_0
-
-    :cond_2
-    iget-object v6, p0, Lcom/android/server/wifi/WifiConfigStore;->mWifiNative:Lcom/android/server/wifi/WifiNative;
-
-    iget v7, v0, Landroid/net/wifi/WifiConfiguration;->networkId:I
-
-    invoke-virtual {v6, v7, v10}, Lcom/android/server/wifi/WifiNative;->enableNetwork(IZ)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_3
-
-    const/4 v3, 0x1
+    const/4 v2, 0x1
 
     iput v11, v0, Landroid/net/wifi/WifiConfiguration;->status:I
 
@@ -13976,187 +13977,51 @@
 
     invoke-virtual {v0, v10}, Landroid/net/wifi/WifiConfiguration;->setAutoJoinStatus(I)V
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_3
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v7, "Enable network failed on "
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    iget v7, v0, Landroid/net/wifi/WifiConfiguration;->networkId:I
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {p0, v6}, Lcom/android/server/wifi/WifiConfigStore;->loge(Ljava/lang/String;)V
-
-    goto/16 :goto_0
-
-    .end local v0    # "config":Landroid/net/wifi/WifiConfiguration;
-    .end local v1    # "disconnectNetworks":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
-    .end local v2    # "i$":Ljava/util/Iterator;
-    :cond_4
-    iget-object v6, p0, Lcom/android/server/wifi/WifiConfigStore;->mConfiguredNetworks:Lcom/android/server/wifi/ConfigurationMap;
-
-    invoke-virtual {v6}, Lcom/android/server/wifi/ConfigurationMap;->values()Ljava/util/Collection;
-
-    move-result-object v6
-
-    invoke-interface {v6}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    .restart local v2    # "i$":Ljava/util/Iterator;
     :cond_5
-    :goto_1
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    move-result v6
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    if-eqz v6, :cond_9
+    const-string v6, "Enable network failed on "
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    move-result-object v3
 
-    check-cast v0, Landroid/net/wifi/WifiConfiguration;
+    iget v6, v0, Landroid/net/wifi/WifiConfiguration;->networkId:I
 
-    .restart local v0    # "config":Landroid/net/wifi/WifiConfiguration;
-    if-eqz v0, :cond_5
+    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget v6, v0, Landroid/net/wifi/WifiConfiguration;->status:I
+    move-result-object v3
 
-    if-ne v6, v12, :cond_5
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-boolean v6, v0, Landroid/net/wifi/WifiConfiguration;->ephemeral:Z
+    move-result-object v3
 
-    if-nez v6, :cond_5
+    invoke-virtual {p0, v3}, Lcom/android/server/wifi/WifiConfigStore;->loge(Ljava/lang/String;)V
 
-    iget v6, v0, Landroid/net/wifi/WifiConfiguration;->autoJoinStatus:I
-
-    const/16 v7, 0x80
-
-    if-gt v6, v7, :cond_5
-
-    iget v6, v0, Landroid/net/wifi/WifiConfiguration;->disableReason:I
-
-    if-eq v6, v11, :cond_6
-
-    iget v6, v0, Landroid/net/wifi/WifiConfiguration;->disableReason:I
-
-    if-eq v6, v14, :cond_6
-
-    iget v6, v0, Landroid/net/wifi/WifiConfiguration;->disableReason:I
-
-    if-eq v6, v13, :cond_6
-
-    iget v6, v0, Landroid/net/wifi/WifiConfiguration;->disableReason:I
-
-    const/4 v7, 0x6
-
-    if-ne v6, v7, :cond_7
+    goto :goto_1
 
     :cond_6
-    iget-wide v6, v0, Landroid/net/wifi/WifiConfiguration;->blackListTimestamp:J
+    iget-object v3, p0, Lcom/android/server/wifi/WifiConfigStore;->mWifiAutoConnController:Lcom/android/server/wifi/WifiAutoConnController;
 
-    const-wide/16 v8, 0x0
+    invoke-virtual {v3, v0}, Lcom/android/server/wifi/WifiAutoConnController;->disableNetwork(Landroid/net/wifi/WifiConfiguration;)V
 
-    cmp-long v6, v6, v8
-
-    if-eqz v6, :cond_7
-
-    iget-wide v6, v0, Landroid/net/wifi/WifiConfiguration;->blackListTimestamp:J
-
-    cmp-long v6, v4, v6
-
-    if-lez v6, :cond_7
-
-    iget-wide v6, v0, Landroid/net/wifi/WifiConfiguration;->blackListTimestamp:J
-
-    sub-long v6, v4, v6
-
-    iget v8, p0, Lcom/android/server/wifi/WifiConfigStore;->wifiConfigBlacklistMinTimeMilli:I
-
-    int-to-long v8, v8
-
-    cmp-long v6, v6, v8
-
-    if-ltz v6, :cond_5
-
-    :cond_7
-    iget-object v6, p0, Lcom/android/server/wifi/WifiConfigStore;->mWifiNative:Lcom/android/server/wifi/WifiNative;
-
-    iget v7, v0, Landroid/net/wifi/WifiConfiguration;->networkId:I
-
-    invoke-virtual {v6, v7, v10}, Lcom/android/server/wifi/WifiNative;->enableNetwork(IZ)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_8
-
-    const/4 v3, 0x1
-
-    iput v11, v0, Landroid/net/wifi/WifiConfiguration;->status:I
-
-    iput v10, v0, Landroid/net/wifi/WifiConfiguration;->numConnectionFailures:I
-
-    iput v10, v0, Landroid/net/wifi/WifiConfiguration;->numIpConfigFailures:I
-
-    iput v10, v0, Landroid/net/wifi/WifiConfiguration;->numAuthFailures:I
-
-    invoke-virtual {v0, v10}, Landroid/net/wifi/WifiConfiguration;->setAutoJoinStatus(I)V
-
-    goto :goto_1
-
-    :cond_8
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v7, "Enable network failed on "
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    iget v7, v0, Landroid/net/wifi/WifiConfiguration;->networkId:I
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {p0, v6}, Lcom/android/server/wifi/WifiConfigStore;->loge(Ljava/lang/String;)V
-
-    goto :goto_1
+    goto/16 :goto_1
 
     .end local v0    # "config":Landroid/net/wifi/WifiConfiguration;
-    .end local v2    # "i$":Ljava/util/Iterator;
-    :cond_9
-    if-eqz v3, :cond_a
+    :cond_7
+    if-eqz v2, :cond_0
 
-    iget-object v6, p0, Lcom/android/server/wifi/WifiConfigStore;->mWifiNative:Lcom/android/server/wifi/WifiNative;
+    iget-object v3, p0, Lcom/android/server/wifi/WifiConfigStore;->mWifiNative:Lcom/android/server/wifi/WifiNative;
 
-    invoke-virtual {v6}, Lcom/android/server/wifi/WifiNative;->saveConfig()Z
+    invoke-virtual {v3}, Lcom/android/server/wifi/WifiNative;->saveConfig()Z
 
     invoke-direct {p0}, Lcom/android/server/wifi/WifiConfigStore;->sendConfiguredNetworksChangedBroadcast()V
 
-    :cond_a
-    return-void
+    goto/16 :goto_0
 .end method
 
 .method enableNetwork(IZI)Z
@@ -14862,6 +14727,16 @@
 
     if-nez v4, :cond_0
 
+    iget-object v4, p0, Lcom/android/server/wifi/WifiConfigStore;->mWifiAutoConnController:Lcom/android/server/wifi/WifiAutoConnController;
+
+    iget-object v5, v1, Landroid/net/wifi/WifiConfiguration;->SSID:Ljava/lang/String;
+
+    invoke-virtual {v4, v5}, Lcom/android/server/wifi/WifiAutoConnController;->isDisableByUser(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_0
+
     invoke-virtual {p0, v1}, Lcom/android/server/wifi/WifiConfigStore;->getScanDetailCache(Landroid/net/wifi/WifiConfiguration;)Lcom/android/server/wifi/ScanDetailCache;
 
     move-result-object v0
@@ -15230,6 +15105,15 @@
 
     .restart local v5    # "nonQuoteSSID":Ljava/lang/String;
     goto :goto_3
+.end method
+
+.method public getWifiAutoConnController()Lcom/android/server/wifi/WifiAutoConnController;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/wifi/WifiConfigStore;->mWifiAutoConnController:Lcom/android/server/wifi/WifiAutoConnController;
+
+    return-object v0
 .end method
 
 .method public getWifiConfigForHomeSP(Lcom/android/server/wifi/hotspot2/pps/HomeSP;)Landroid/net/wifi/WifiConfiguration;
@@ -17590,6 +17474,10 @@
     const-string v2, "Loading config and enabling all networks "
 
     invoke-virtual {p0, v2}, Lcom/android/server/wifi/WifiConfigStore;->log(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/android/server/wifi/WifiConfigStore;->mWifiAutoConnController:Lcom/android/server/wifi/WifiAutoConnController;
+
+    invoke-virtual {v0}, Lcom/android/server/wifi/WifiAutoConnController;->loadAndEnableAllNetworks()V
 
     invoke-virtual {p0}, Lcom/android/server/wifi/WifiConfigStore;->loadConfiguredNetworks()V
 
@@ -20981,6 +20869,12 @@
     invoke-direct {p0, v5, v6}, Lcom/android/server/wifi/WifiConfigStore;->localLog(Ljava/lang/String;I)V
 
     :cond_0
+    iget-object v5, p0, Lcom/android/server/wifi/WifiConfigStore;->mWifiAutoConnController:Lcom/android/server/wifi/WifiAutoConnController;
+
+    iget v6, p1, Landroid/net/wifi/WifiConfiguration;->networkId:I
+
+    invoke-virtual {v5, v6}, Lcom/android/server/wifi/WifiAutoConnController;->selectNetwork(I)V
+
     iget v5, p1, Landroid/net/wifi/WifiConfiguration;->networkId:I
 
     if-ne v5, v7, :cond_1
