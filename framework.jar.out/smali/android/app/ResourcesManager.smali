@@ -26,8 +26,6 @@
     .end annotation
 .end field
 
-.field mAdjustFontScale:Z
-
 .field private final mDisplays:Landroid/util/ArrayMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -142,401 +140,6 @@
     const/4 v0, 0x0
 
     goto :goto_0
-.end method
-
-.method final applyConfigurationToResourcesLocked(Landroid/content/res/Configuration;Landroid/content/res/CompatibilityInfo;)Z
-    .locals 16
-    .param p1, "config"    # Landroid/content/res/Configuration;
-    .param p2, "compat"    # Landroid/content/res/CompatibilityInfo;
-
-    .prologue
-    move-object/from16 v0, p0
-
-    iget-object v13, v0, Landroid/app/ResourcesManager;->mResConfiguration:Landroid/content/res/Configuration;
-
-    if-nez v13, :cond_0
-
-    new-instance v13, Landroid/content/res/Configuration;
-
-    invoke-direct {v13}, Landroid/content/res/Configuration;-><init>()V
-
-    move-object/from16 v0, p0
-
-    iput-object v13, v0, Landroid/app/ResourcesManager;->mResConfiguration:Landroid/content/res/Configuration;
-
-    :cond_0
-    move-object/from16 v0, p0
-
-    iget-object v13, v0, Landroid/app/ResourcesManager;->mResConfiguration:Landroid/content/res/Configuration;
-
-    move-object/from16 v0, p1
-
-    invoke-virtual {v13, v0}, Landroid/content/res/Configuration;->isOtherSeqNewer(Landroid/content/res/Configuration;)Z
-
-    move-result v13
-
-    if-nez v13, :cond_2
-
-    if-nez p2, :cond_2
-
-    sget-boolean v13, Landroid/app/ActivityThread;->DEBUG_CONFIGURATION:Z
-
-    if-eqz v13, :cond_1
-
-    const-string v13, "ResourcesManager"
-
-    new-instance v14, Ljava/lang/StringBuilder;
-
-    invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v15, "Skipping new config: curSeq="
-
-    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v14
-
-    move-object/from16 v0, p0
-
-    iget-object v15, v0, Landroid/app/ResourcesManager;->mResConfiguration:Landroid/content/res/Configuration;
-
-    iget v15, v15, Landroid/content/res/Configuration;->seq:I
-
-    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v14
-
-    const-string v15, ", newSeq="
-
-    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v14
-
-    move-object/from16 v0, p1
-
-    iget v15, v0, Landroid/content/res/Configuration;->seq:I
-
-    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v14
-
-    invoke-virtual {v14}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v14
-
-    invoke-static {v13, v14}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_1
-    const/4 v13, 0x0
-
-    :goto_0
-    return v13
-
-    :cond_2
-    move-object/from16 v0, p0
-
-    iget-object v13, v0, Landroid/app/ResourcesManager;->mResConfiguration:Landroid/content/res/Configuration;
-
-    move-object/from16 v0, p1
-
-    invoke-virtual {v13, v0}, Landroid/content/res/Configuration;->updateFrom(Landroid/content/res/Configuration;)I
-
-    move-result v2
-
-    .local v2, "changes":I
-    move-object/from16 v0, p0
-
-    iget-object v13, v0, Landroid/app/ResourcesManager;->mDisplays:Landroid/util/ArrayMap;
-
-    invoke-virtual {v13}, Landroid/util/ArrayMap;->clear()V
-
-    invoke-virtual/range {p0 .. p0}, Landroid/app/ResourcesManager;->getDisplayMetricsLocked()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    .local v3, "defaultDisplayMetrics":Landroid/util/DisplayMetrics;
-    if-eqz p2, :cond_4
-
-    move-object/from16 v0, p0
-
-    iget-object v13, v0, Landroid/app/ResourcesManager;->mResCompatibilityInfo:Landroid/content/res/CompatibilityInfo;
-
-    if-eqz v13, :cond_3
-
-    move-object/from16 v0, p0
-
-    iget-object v13, v0, Landroid/app/ResourcesManager;->mResCompatibilityInfo:Landroid/content/res/CompatibilityInfo;
-
-    move-object/from16 v0, p2
-
-    invoke-virtual {v13, v0}, Landroid/content/res/CompatibilityInfo;->equals(Ljava/lang/Object;)Z
-
-    move-result v13
-
-    if-nez v13, :cond_4
-
-    :cond_3
-    move-object/from16 v0, p2
-
-    move-object/from16 v1, p0
-
-    iput-object v0, v1, Landroid/app/ResourcesManager;->mResCompatibilityInfo:Landroid/content/res/CompatibilityInfo;
-
-    or-int/lit16 v2, v2, 0xd00
-
-    :cond_4
-    move-object/from16 v0, p1
-
-    iget-object v13, v0, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
-
-    if-eqz v13, :cond_5
-
-    move-object/from16 v0, p1
-
-    iget-object v13, v0, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
-
-    invoke-static {v13}, Ljava/util/Locale;->setDefault(Ljava/util/Locale;)V
-
-    :cond_5
-    move-object/from16 v0, p1
-
-    iget v6, v0, Landroid/content/res/Configuration;->fontScale:F
-
-    .local v6, "fontScale":F
-    move-object/from16 v0, p0
-
-    iget-boolean v13, v0, Landroid/app/ResourcesManager;->mAdjustFontScale:Z
-
-    if-eqz v13, :cond_6
-
-    move-object/from16 v0, p1
-
-    iget v13, v0, Landroid/content/res/Configuration;->leFontScale:F
-
-    move-object/from16 v0, p1
-
-    iput v13, v0, Landroid/content/res/Configuration;->fontScale:F
-
-    move-object/from16 v0, p0
-
-    iget-object v13, v0, Landroid/app/ResourcesManager;->mResConfiguration:Landroid/content/res/Configuration;
-
-    move-object/from16 v0, p1
-
-    iget v14, v0, Landroid/content/res/Configuration;->leFontScale:F
-
-    iput v14, v13, Landroid/content/res/Configuration;->fontScale:F
-
-    :cond_6
-    move-object/from16 v0, p1
-
-    move-object/from16 v1, p2
-
-    invoke-static {v0, v3, v1}, Landroid/content/res/Resources;->updateSystemConfiguration(Landroid/content/res/Configuration;Landroid/util/DisplayMetrics;Landroid/content/res/CompatibilityInfo;)V
-
-    invoke-static {}, Landroid/app/ApplicationPackageManager;->configurationChanged()V
-
-    const/4 v12, 0x0
-
-    .local v12, "tmpConfig":Landroid/content/res/Configuration;
-    move-object/from16 v0, p0
-
-    iget-object v13, v0, Landroid/app/ResourcesManager;->mActiveResources:Landroid/util/ArrayMap;
-
-    invoke-virtual {v13}, Landroid/util/ArrayMap;->size()I
-
-    move-result v13
-
-    add-int/lit8 v8, v13, -0x1
-
-    .local v8, "i":I
-    :goto_1
-    if-ltz v8, :cond_f
-
-    move-object/from16 v0, p0
-
-    iget-object v13, v0, Landroid/app/ResourcesManager;->mActiveResources:Landroid/util/ArrayMap;
-
-    invoke-virtual {v13, v8}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
-
-    move-result-object v10
-
-    check-cast v10, Landroid/content/res/ResourcesKey;
-
-    .local v10, "key":Landroid/content/res/ResourcesKey;
-    move-object/from16 v0, p0
-
-    iget-object v13, v0, Landroid/app/ResourcesManager;->mActiveResources:Landroid/util/ArrayMap;
-
-    invoke-virtual {v13, v8}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
-
-    move-result-object v13
-
-    check-cast v13, Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v13}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
-    move-result-object v11
-
-    check-cast v11, Landroid/content/res/Resources;
-
-    .local v11, "r":Landroid/content/res/Resources;
-    if-eqz v11, :cond_e
-
-    sget-boolean v13, Landroid/app/ActivityThread;->DEBUG_CONFIGURATION:Z
-
-    if-eqz v13, :cond_7
-
-    const-string v13, "ResourcesManager"
-
-    new-instance v14, Ljava/lang/StringBuilder;
-
-    invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v15, "Changing resources "
-
-    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v14
-
-    invoke-virtual {v14, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v14
-
-    const-string v15, " config to: "
-
-    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v14
-
-    move-object/from16 v0, p1
-
-    invoke-virtual {v14, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v14
-
-    invoke-virtual {v14}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v14
-
-    invoke-static {v13, v14}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_7
-    iget v4, v10, Landroid/content/res/ResourcesKey;->mDisplayId:I
-
-    .local v4, "displayId":I
-    if-nez v4, :cond_c
-
-    const/4 v9, 0x1
-
-    .local v9, "isDefaultDisplay":Z
-    :goto_2
-    move-object v5, v3
-
-    .local v5, "dm":Landroid/util/DisplayMetrics;
-    invoke-virtual {v10}, Landroid/content/res/ResourcesKey;->hasOverrideConfiguration()Z
-
-    move-result v7
-
-    .local v7, "hasOverrideConfiguration":Z
-    if-eqz v9, :cond_8
-
-    if-eqz v7, :cond_d
-
-    :cond_8
-    if-nez v12, :cond_9
-
-    new-instance v12, Landroid/content/res/Configuration;
-
-    .end local v12    # "tmpConfig":Landroid/content/res/Configuration;
-    invoke-direct {v12}, Landroid/content/res/Configuration;-><init>()V
-
-    .restart local v12    # "tmpConfig":Landroid/content/res/Configuration;
-    :cond_9
-    move-object/from16 v0, p1
-
-    invoke-virtual {v12, v0}, Landroid/content/res/Configuration;->setTo(Landroid/content/res/Configuration;)V
-
-    if-nez v9, :cond_a
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v4}, Landroid/app/ResourcesManager;->getDisplayMetricsLocked(I)Landroid/util/DisplayMetrics;
-
-    move-result-object v5
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v5, v12}, Landroid/app/ResourcesManager;->applyNonDefaultDisplayMetricsToConfigurationLocked(Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;)V
-
-    :cond_a
-    if-eqz v7, :cond_b
-
-    iget-object v13, v10, Landroid/content/res/ResourcesKey;->mOverrideConfiguration:Landroid/content/res/Configuration;
-
-    invoke-virtual {v12, v13}, Landroid/content/res/Configuration;->updateFrom(Landroid/content/res/Configuration;)I
-
-    :cond_b
-    move-object/from16 v0, p2
-
-    invoke-virtual {v11, v12, v5, v0}, Landroid/content/res/Resources;->updateConfiguration(Landroid/content/res/Configuration;Landroid/util/DisplayMetrics;Landroid/content/res/CompatibilityInfo;)V
-
-    .end local v4    # "displayId":I
-    .end local v5    # "dm":Landroid/util/DisplayMetrics;
-    .end local v7    # "hasOverrideConfiguration":Z
-    .end local v9    # "isDefaultDisplay":Z
-    :goto_3
-    add-int/lit8 v8, v8, -0x1
-
-    goto :goto_1
-
-    .restart local v4    # "displayId":I
-    :cond_c
-    const/4 v9, 0x0
-
-    goto :goto_2
-
-    .restart local v5    # "dm":Landroid/util/DisplayMetrics;
-    .restart local v7    # "hasOverrideConfiguration":Z
-    .restart local v9    # "isDefaultDisplay":Z
-    :cond_d
-    move-object/from16 v0, p1
-
-    move-object/from16 v1, p2
-
-    invoke-virtual {v11, v0, v5, v1}, Landroid/content/res/Resources;->updateConfiguration(Landroid/content/res/Configuration;Landroid/util/DisplayMetrics;Landroid/content/res/CompatibilityInfo;)V
-
-    goto :goto_3
-
-    .end local v4    # "displayId":I
-    .end local v5    # "dm":Landroid/util/DisplayMetrics;
-    .end local v7    # "hasOverrideConfiguration":Z
-    .end local v9    # "isDefaultDisplay":Z
-    :cond_e
-    move-object/from16 v0, p0
-
-    iget-object v13, v0, Landroid/app/ResourcesManager;->mActiveResources:Landroid/util/ArrayMap;
-
-    invoke-virtual {v13, v8}, Landroid/util/ArrayMap;->removeAt(I)Ljava/lang/Object;
-
-    goto :goto_3
-
-    .end local v10    # "key":Landroid/content/res/ResourcesKey;
-    .end local v11    # "r":Landroid/content/res/Resources;
-    :cond_f
-    move-object/from16 v0, p1
-
-    iput v6, v0, Landroid/content/res/Configuration;->fontScale:F
-
-    if-eqz v2, :cond_10
-
-    const/4 v13, 0x1
-
-    goto/16 :goto_0
-
-    :cond_10
-    const/4 v13, 0x0
-
-    goto/16 :goto_0
 .end method
 
 .method final applyNonDefaultDisplayMetricsToConfigurationLocked(Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;)V
@@ -1157,43 +760,14 @@
 
     :cond_b
     :goto_7
-    move-object/from16 v0, p0
-
-    iget-boolean v0, v0, Landroid/app/ResourcesManager;->mAdjustFontScale:Z
-
-    move/from16 v20, v0
-
-    if-eqz v20, :cond_c
-
-    if-eqz v5, :cond_c
-
-    iget v0, v5, Landroid/content/res/Configuration;->leFontScale:F
-
-    move/from16 v20, v0
-
-    move/from16 v0, v20
-
-    iput v0, v5, Landroid/content/res/Configuration;->fontScale:F
-
-    if-eqz v15, :cond_c
-
-    iget v0, v5, Landroid/content/res/Configuration;->leFontScale:F
-
-    move/from16 v20, v0
-
-    move/from16 v0, v20
-
-    iput v0, v15, Landroid/content/res/Configuration;->fontScale:F
-
-    :cond_c
-    new-instance v16, Landroid/content/res/Resources;
+    new-instance v16, Landroid/content/res/MiuiResources;
 
     .end local v16    # "r":Landroid/content/res/Resources;
     move-object/from16 v0, v16
 
     move-object/from16 v1, p7
 
-    invoke-direct {v0, v4, v6, v5, v1}, Landroid/content/res/Resources;-><init>(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;Landroid/content/res/CompatibilityInfo;)V
+    invoke-direct {v0, v4, v6, v5, v1}, Landroid/content/res/MiuiResources;-><init>(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;Landroid/content/res/CompatibilityInfo;)V
 
     .restart local v16    # "r":Landroid/content/res/Resources;
     monitor-enter p0
@@ -1316,12 +890,233 @@
     goto/16 :goto_2
 .end method
 
-.method setShouldAdjustFontScale(Z)V
-    .locals 0
-    .param p1, "adjust"    # Z
+.method final applyConfigurationToResourcesLocked(Landroid/content/res/Configuration;Landroid/content/res/CompatibilityInfo;)Z
+    .locals 13
+    .param p1, "config"    # Landroid/content/res/Configuration;
+    .param p2, "compat"    # Landroid/content/res/CompatibilityInfo;
 
     .prologue
-    iput-boolean p1, p0, Landroid/app/ResourcesManager;->mAdjustFontScale:Z
+    const/4 v11, 0x1
 
-    return-void
+    const/4 v12, 0x0
+
+    iget-object v10, p0, Landroid/app/ResourcesManager;->mResConfiguration:Landroid/content/res/Configuration;
+
+    if-nez v10, :cond_0
+
+    new-instance v10, Landroid/content/res/Configuration;
+
+    invoke-direct {v10}, Landroid/content/res/Configuration;-><init>()V
+
+
+    iput-object v10, p0, Landroid/app/ResourcesManager;->mResConfiguration:Landroid/content/res/Configuration;
+
+    :cond_0
+    iget-object v10, p0, Landroid/app/ResourcesManager;->mResConfiguration:Landroid/content/res/Configuration;
+
+    invoke-virtual {v10, p1}, Landroid/content/res/Configuration;->isOtherSeqNewer(Landroid/content/res/Configuration;)Z
+
+    move-result v10
+
+    if-nez v10, :cond_1
+
+    if-nez p2, :cond_1
+
+    :goto_0
+    return v12
+
+    :cond_1
+
+    iget-object v10, p0, Landroid/app/ResourcesManager;->mResConfiguration:Landroid/content/res/Configuration;
+
+    invoke-virtual {v10, p1}, Landroid/content/res/Configuration;->updateFrom(Landroid/content/res/Configuration;)I
+
+    move-result v0
+
+    .local v0, "changes":I
+
+    iget-object v10, p0, Landroid/app/ResourcesManager;->mDisplays:Landroid/util/ArrayMap;
+
+    invoke-virtual {v10}, Landroid/util/ArrayMap;->clear()V
+
+    invoke-virtual {p0}, Landroid/app/ResourcesManager;->getDisplayMetricsLocked()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    .local v1, "defaultDisplayMetrics":Landroid/util/DisplayMetrics;
+    if-eqz p2, :cond_3
+
+    iget-object v10, p0, Landroid/app/ResourcesManager;->mResCompatibilityInfo:Landroid/content/res/CompatibilityInfo;
+
+    if-eqz v10, :cond_2
+
+    iget-object v10, p0, Landroid/app/ResourcesManager;->mResCompatibilityInfo:Landroid/content/res/CompatibilityInfo;
+
+    invoke-virtual {v10, p2}, Landroid/content/res/CompatibilityInfo;->equals(Ljava/lang/Object;)Z
+
+    move-result v10
+
+    if-nez v10, :cond_3
+
+    :cond_2
+    iput-object p2, p0, Landroid/app/ResourcesManager;->mResCompatibilityInfo:Landroid/content/res/CompatibilityInfo;
+
+    or-int/lit16 v0, v0, 0xd00
+
+    :cond_3
+    invoke-static {v0, p1}, Landroid/app/MiuiThemeHelper;->handleExtraConfigurationChanges(ILandroid/content/res/Configuration;)V
+
+    iget-object v10, p1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+
+    if-eqz v10, :cond_4
+
+    iget-object v10, p1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+
+    invoke-static {v10}, Ljava/util/Locale;->setDefault(Ljava/util/Locale;)V
+
+    :cond_4
+    invoke-static {p1, v1, p2}, Landroid/content/res/Resources;->updateSystemConfiguration(Landroid/content/res/Configuration;Landroid/util/DisplayMetrics;Landroid/content/res/CompatibilityInfo;)V
+
+    invoke-static {}, Landroid/app/ApplicationPackageManager;->configurationChanged()V
+
+    const/4 v9, 0x0
+
+    .local v9, "tmpConfig":Landroid/content/res/Configuration;
+    iget-object v10, p0, Landroid/app/ResourcesManager;->mActiveResources:Landroid/util/ArrayMap;
+
+    invoke-virtual {v10}, Landroid/util/ArrayMap;->size()I
+
+    move-result v10
+
+    add-int/lit8 v5, v10, -0x1
+
+    .local v5, "i":I
+    :goto_1
+    if-ltz v5, :cond_c
+
+    iget-object v10, p0, Landroid/app/ResourcesManager;->mActiveResources:Landroid/util/ArrayMap;
+
+    invoke-virtual {v10, v5}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Landroid/content/res/ResourcesKey;
+
+    .local v7, "key":Landroid/content/res/ResourcesKey;
+    iget-object v10, p0, Landroid/app/ResourcesManager;->mActiveResources:Landroid/util/ArrayMap;
+
+    invoke-virtual {v10, v5}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
+
+    move-result-object v10
+
+    check-cast v10, Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v10}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Landroid/content/res/Resources;
+
+    .local v8, "r":Landroid/content/res/Resources;
+    if-eqz v8, :cond_b
+
+    iget v2, v7, Landroid/content/res/ResourcesKey;->mDisplayId:I
+
+    .local v2, "displayId":I
+    if-nez v2, :cond_9
+
+    move v6, v11
+
+    .local v6, "isDefaultDisplay":Z
+    :goto_2
+    move-object v3, v1
+
+    .local v3, "dm":Landroid/util/DisplayMetrics;
+    invoke-virtual {v7}, Landroid/content/res/ResourcesKey;->hasOverrideConfiguration()Z
+
+    move-result v4
+
+    .local v4, "hasOverrideConfiguration":Z
+    if-eqz v6, :cond_5
+
+    if-eqz v4, :cond_a
+
+    :cond_5
+    if-nez v9, :cond_6
+
+    new-instance v9, Landroid/content/res/Configuration;
+
+    .end local v9    # "tmpConfig":Landroid/content/res/Configuration;
+    invoke-direct {v9}, Landroid/content/res/Configuration;-><init>()V
+
+    .restart local v9    # "tmpConfig":Landroid/content/res/Configuration;
+    :cond_6
+    invoke-virtual {v9, p1}, Landroid/content/res/Configuration;->setTo(Landroid/content/res/Configuration;)V
+
+    if-nez v6, :cond_7
+
+    invoke-virtual {p0, v2}, Landroid/app/ResourcesManager;->getDisplayMetricsLocked(I)Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    invoke-virtual {p0, v3, v9}, Landroid/app/ResourcesManager;->applyNonDefaultDisplayMetricsToConfigurationLocked(Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;)V
+
+    :cond_7
+    if-eqz v4, :cond_8
+
+    iget-object v10, v7, Landroid/content/res/ResourcesKey;->mOverrideConfiguration:Landroid/content/res/Configuration;
+
+    invoke-virtual {v9, v10}, Landroid/content/res/Configuration;->updateFrom(Landroid/content/res/Configuration;)I
+
+    :cond_8
+    invoke-virtual {v8, v9, v3, p2}, Landroid/content/res/Resources;->updateConfiguration(Landroid/content/res/Configuration;Landroid/util/DisplayMetrics;Landroid/content/res/CompatibilityInfo;)V
+
+    .end local v2    # "displayId":I
+    .end local v3    # "dm":Landroid/util/DisplayMetrics;
+    .end local v4    # "hasOverrideConfiguration":Z
+    .end local v6    # "isDefaultDisplay":Z
+    :goto_3
+    add-int/lit8 v5, v5, -0x1
+
+    goto :goto_1
+
+    .restart local v2    # "displayId":I
+    :cond_9
+    move v6, v12
+
+    goto :goto_2
+
+    .restart local v3    # "dm":Landroid/util/DisplayMetrics;
+    .restart local v4    # "hasOverrideConfiguration":Z
+    .restart local v6    # "isDefaultDisplay":Z
+    :cond_a
+    invoke-virtual {v8, p1, v3, p2}, Landroid/content/res/Resources;->updateConfiguration(Landroid/content/res/Configuration;Landroid/util/DisplayMetrics;Landroid/content/res/CompatibilityInfo;)V
+
+    goto :goto_3
+
+    .end local v2    # "displayId":I
+    .end local v3    # "dm":Landroid/util/DisplayMetrics;
+    .end local v4    # "hasOverrideConfiguration":Z
+    .end local v6    # "isDefaultDisplay":Z
+    :cond_b
+    iget-object v10, p0, Landroid/app/ResourcesManager;->mActiveResources:Landroid/util/ArrayMap;
+
+    invoke-virtual {v10, v5}, Landroid/util/ArrayMap;->removeAt(I)Ljava/lang/Object;
+
+    goto :goto_3
+
+    .end local v7    # "key":Landroid/content/res/ResourcesKey;
+    .end local v8    # "r":Landroid/content/res/Resources;
+    :cond_c
+    if-eqz v0, :cond_d
+
+    :goto_4
+    move v12, v11
+
+    goto/16 :goto_0
+
+    :cond_d
+    move v11, v12
+
+    goto :goto_4
 .end method
