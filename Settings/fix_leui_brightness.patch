@@ -1,0 +1,436 @@
+From 2f6034bf93ff1822df4de00794bd908bfeb96782 Mon Sep 17 00:00:00 2001
+From: nian0114 <268078545@qq.com>
+Date: Sun, 27 Nov 2016 00:30:43 +0800
+Subject: [PATCH] LeUI is 4095(0xfff) max brightness & needn't
+ screen_auto_brightness_adj
+
+---
+ .../settings/display/BrightnessFragment.smali      | 435 +++++++++------------
+ 1 file changed, 188 insertions(+), 247 deletions(-)
+
+--- a/Settings/smali/com/android/settings/display/BrightnessFragment.smali
++++ b/Settings/smali/com/android/settings/display/BrightnessFragment.smali
+@@ -168,115 +168,6 @@
+     goto :goto_0
+ .end method
+ 
+-.method private j(IZ)V
+-    .locals 4
+-
+-    .prologue
+-    iget-boolean v0, p0, Lcom/android/settings/display/BrightnessFragment;->XN:Z
+-
+-    if-eqz v0, :cond_0
+-
+-    int-to-float v0, p1
+-
+-    const/high16 v1, 0x40000000    # 2.0f
+-
+-    mul-float/2addr v0, v1
+-
+-    const v1, 0x461c4000    # 10000.0f
+-
+-    div-float/2addr v0, v1
+-
+-    const/high16 v1, 0x3f800000    # 1.0f
+-
+-    sub-float/2addr v0, v1
+-
+-    invoke-virtual {p0}, Lcom/android/settings/display/BrightnessFragment;->getActivity()Landroid/app/Activity;
+-
+-    move-result-object v1
+-
+-    invoke-virtual {v1}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
+-
+-    move-result-object v1
+-
+-    const-string v2, "screen_auto_brightness_adj"
+-
+-    invoke-static {v1, v2, v0}, Landroid/provider/Settings$System;->putFloat(Landroid/content/ContentResolver;Ljava/lang/String;F)Z
+-
+-    :goto_0
+-    return-void
+-
+-    :cond_0
+-    iget v0, p0, Lcom/android/settings/display/BrightnessFragment;->XP:I
+-
+-    rsub-int v0, v0, 0xff
+-
+-    mul-int/2addr v0, p1
+-
+-    int-to-double v0, v0
+-
+-    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
+-
+-    mul-double/2addr v0, v2
+-
+-    const-wide v2, 0x40c3880000000000L    # 10000.0
+-
+-    div-double/2addr v0, v2
+-
+-    const-wide/high16 v2, 0x3fe0000000000000L    # 0.5
+-
+-    add-double/2addr v0, v2
+-
+-    iget v2, p0, Lcom/android/settings/display/BrightnessFragment;->XP:I
+-
+-    int-to-double v2, v2
+-
+-    add-double/2addr v0, v2
+-
+-    double-to-int v1, v0
+-
+-    invoke-virtual {p0}, Lcom/android/settings/display/BrightnessFragment;->getActivity()Landroid/app/Activity;
+-
+-    move-result-object v0
+-
+-    const-string v2, "power"
+-
+-    invoke-virtual {v0, v2}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+-
+-    move-result-object v0
+-
+-    check-cast v0, Landroid/os/PowerManager;
+-
+-    if-eqz v0, :cond_1
+-
+-    invoke-virtual {v0, v1}, Landroid/os/PowerManager;->setBacklightBrightness(I)V
+-
+-    :cond_1
+-    if-eqz p2, :cond_2
+-
+-    const/4 v0, -0x1
+-
+-    iput v0, p0, Lcom/android/settings/display/BrightnessFragment;->XO:I
+-
+-    invoke-virtual {p0}, Lcom/android/settings/display/BrightnessFragment;->getActivity()Landroid/app/Activity;
+-
+-    move-result-object v0
+-
+-    invoke-virtual {v0}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
+-
+-    move-result-object v0
+-
+-    const-string v2, "screen_brightness"
+-
+-    invoke-static {v0, v2, v1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+-
+-    goto :goto_0
+-
+-    :cond_2
+-    iput v1, p0, Lcom/android/settings/display/BrightnessFragment;->XO:I
+-
+-    goto :goto_0
+-.end method
+-
+ .method private ps()V
+     .locals 2
+ 
+@@ -305,101 +196,6 @@
+     return-void
+ .end method
+ 
+-.method private pt()I
+-    .locals 3
+-
+-    .prologue
+-    const/4 v0, 0x0
+-
+-    invoke-direct {p0, v0}, Lcom/android/settings/display/BrightnessFragment;->bC(I)I
+-
+-    move-result v0
+-
+-    const/4 v1, 0x1
+-
+-    if-ne v0, v1, :cond_0
+-
+-    invoke-virtual {p0}, Lcom/android/settings/display/BrightnessFragment;->getActivity()Landroid/app/Activity;
+-
+-    move-result-object v0
+-
+-    invoke-virtual {v0}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
+-
+-    move-result-object v0
+-
+-    const-string v1, "screen_auto_brightness_adj"
+-
+-    const/4 v2, 0x0
+-
+-    invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->getFloat(Landroid/content/ContentResolver;Ljava/lang/String;F)F
+-
+-    move-result v0
+-
+-    const/high16 v1, 0x3f800000    # 1.0f
+-
+-    add-float/2addr v0, v1
+-
+-    const/high16 v1, 0x40000000    # 2.0f
+-
+-    div-float/2addr v0, v1
+-
+-    :goto_0
+-    const v1, 0x461c4000    # 10000.0f
+-
+-    mul-float/2addr v0, v1
+-
+-    float-to-int v0, v0
+-
+-    return v0
+-
+-    :cond_0
+-    iget v0, p0, Lcom/android/settings/display/BrightnessFragment;->XO:I
+-
+-    if-gez v0, :cond_1
+-
+-    invoke-virtual {p0}, Lcom/android/settings/display/BrightnessFragment;->getActivity()Landroid/app/Activity;
+-
+-    move-result-object v0
+-
+-    invoke-virtual {v0}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
+-
+-    move-result-object v0
+-
+-    const-string v1, "screen_brightness"
+-
+-    const/16 v2, 0x64
+-
+-    invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+-
+-    move-result v0
+-
+-    int-to-float v0, v0
+-
+-    :goto_1
+-    iget v1, p0, Lcom/android/settings/display/BrightnessFragment;->XP:I
+-
+-    int-to-float v1, v1
+-
+-    sub-float/2addr v0, v1
+-
+-    iget v1, p0, Lcom/android/settings/display/BrightnessFragment;->XP:I
+-
+-    rsub-int v1, v1, 0xff
+-
+-    int-to-float v1, v1
+-
+-    div-float/2addr v0, v1
+-
+-    goto :goto_0
+-
+-    :cond_1
+-    iget v0, p0, Lcom/android/settings/display/BrightnessFragment;->XO:I
+-
+-    int-to-float v0, v0
+-
+-    goto :goto_1
+-.end method
+-
+ .method private pu()V
+     .locals 2
+ 
+@@ -553,6 +349,7 @@
+ 
+ .method public onCreate(Landroid/os/Bundle;)V
+     .locals 4
++    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
+ 
+     .prologue
+     const/4 v3, 0x1
+@@ -591,24 +388,6 @@
+ 
+     move-result-object v0
+ 
+-    const-string v1, "screen_auto_brightness_adj"
+-
+-    invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+-
+-    move-result-object v1
+-
+-    iget-object v2, p0, Lcom/android/settings/display/BrightnessFragment;->XQ:Landroid/database/ContentObserver;
+-
+-    invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
+-
+-    invoke-virtual {p0}, Lcom/android/settings/display/BrightnessFragment;->getActivity()Landroid/app/Activity;
+-
+-    move-result-object v0
+-
+-    invoke-virtual {v0}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
+-
+-    move-result-object v0
+-
+     const-string v1, "screen_brightness"
+ 
+     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+@@ -978,3 +757,169 @@
+ 
+     goto :goto_1
+ .end method
++
++.method private pt()I
++    .locals 5
++
++    .prologue
++    const/4 v2, 0x0
++
++    invoke-direct {p0, v2}, Lcom/android/settings/display/BrightnessFragment;->bC(I)I
++
++    move-result v1
++
++    .local v1, "mode":I
++    const/4 v0, 0x0
++
++    .local v0, "brightness":F
++    const/4 v2, 0x1
++
++    if-ne v1, v2, :cond_0
++
++    :goto_0
++    const v2, 0x461c4000    # 10000.0f
++
++    mul-float/2addr v2, v0
++
++    float-to-int v2, v2
++
++    return v2
++
++    :cond_0
++    iget v2, p0, Lcom/android/settings/display/BrightnessFragment;->XO:I
++
++    if-gez v2, :cond_1
++
++    invoke-virtual {p0}, Lcom/android/settings/display/BrightnessFragment;->getActivity()Landroid/app/Activity;
++
++    move-result-object v2
++
++    invoke-virtual {v2}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
++
++    move-result-object v2
++
++    const-string v3, "screen_brightness"
++
++    const/16 v4, 0x64
++
++    invoke-static {v2, v3, v4}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
++
++    move-result v2
++
++    int-to-float v0, v2
++
++    :goto_1
++    iget v2, p0, Lcom/android/settings/display/BrightnessFragment;->XP:I
++
++    int-to-float v2, v2
++
++    sub-float v2, v0, v2
++
++    iget v3, p0, Lcom/android/settings/display/BrightnessFragment;->XP:I
++
++    rsub-int v3, v3, 0xfff
++
++    int-to-float v3, v3
++
++    div-float v0, v2, v3
++
++    goto :goto_0
++
++    :cond_1
++    iget v2, p0, Lcom/android/settings/display/BrightnessFragment;->XO:I
++
++    int-to-float v0, v2
++
++    goto :goto_1
++.end method
++
++.method private j(IZ)V
++    .locals 8
++    .param p1, "brightness"    # I
++    .param p2, "write"    # Z
++
++    .prologue
++    iget-boolean v4, p0, Lcom/android/settings/display/BrightnessFragment;->XN:Z
++
++    if-eqz v4, :cond_0
++
++    .end local v2
++    .end local v3
++    :goto_0
++    return-void
++
++    :cond_0
++    iget v4, p0, Lcom/android/settings/display/BrightnessFragment;->XP:I
++
++    rsub-int v1, v4, 0xfff
++
++    .local v1, "range":I
++    mul-int v4, p1, v1
++
++    int-to-double v4, v4
++
++    const-wide/high16 v6, 0x3ff0000000000000L    # 1.0
++
++    mul-double/2addr v4, v6
++
++    const-wide v6, 0x40c3880000000000L    # 10000.0
++
++    div-double/2addr v4, v6
++
++    const-wide/high16 v6, 0x3fe0000000000000L    # 0.5
++
++    add-double/2addr v4, v6
++
++    iget v6, p0, Lcom/android/settings/display/BrightnessFragment;->XP:I
++
++    int-to-double v6, v6
++
++    add-double/2addr v4, v6
++
++    double-to-int p1, v4
++
++    invoke-virtual {p0}, Lcom/android/settings/display/BrightnessFragment;->getActivity()Landroid/app/Activity;
++
++    move-result-object v4
++
++    const-string v5, "power"
++
++    invoke-virtual {v4, v5}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
++
++    move-result-object v0
++
++    check-cast v0, Landroid/os/PowerManager;
++
++    .local v0, "power":Landroid/os/PowerManager;
++    if-eqz v0, :cond_1
++
++    invoke-virtual {v0, p1}, Landroid/os/PowerManager;->setBacklightBrightness(I)V
++
++    :cond_1
++    if-eqz p2, :cond_2
++
++    const/4 v4, -0x1
++
++    iput v4, p0, Lcom/android/settings/display/BrightnessFragment;->XO:I
++
++    invoke-virtual {p0}, Lcom/android/settings/display/BrightnessFragment;->getActivity()Landroid/app/Activity;
++
++    move-result-object v4
++
++    invoke-virtual {v4}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
++
++    move-result-object v2
++
++    .restart local v2
++    const-string v4, "screen_brightness"
++
++    invoke-static {v2, v4, p1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
++
++    goto :goto_0
++
++    .end local v2
++    :cond_2
++    iput p1, p0, Lcom/android/settings/display/BrightnessFragment;->XO:I
++
++    goto :goto_0
++.end method
+-- 
+2.10.1
+
