@@ -56,6 +56,12 @@ include $(PORT_BUILD)/porting.mk
 #updater := $(ZIP_DIR)/META-INF/com/google/android/updater-script
 #pre_install_data_packages := $(TMP_DIR)/pre_install_apk_pkgname.txt
 local-pre-zip-misc:
+	cp -rf stockrom/system/lib/libavcodec.so $(ZIP_DIR)/system/lib/libavcodec.so
+	cp -rf stockrom/system/lib/libavformat.so $(ZIP_DIR)/system/lib/libavformat.so
+	cp -rf stockrom/system/lib/libavutil.so $(ZIP_DIR)/system/lib/libavutil.so
+	cp -rf stockrom/system/lib64/libavcodec.so $(ZIP_DIR)/system/lib64/libavcodec.so
+	cp -rf stockrom/system/lib64/libavformat.so $(ZIP_DIR)/system/lib64/libavformat.so
+	cp -rf stockrom/system/lib64/libavutil.so $(ZIP_DIR)/system/lib64/libavutil.so
 	rm -rf $(ZIP_DIR)/system/vendor/ChinaMobile
 	rm -rf $(ZIP_DIR)/system/vendor/CmccPower
 	rm -rf $(ZIP_DIR)/system/vendor/operator
