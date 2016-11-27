@@ -23,7 +23,7 @@ local-miui-removed-priv-apps :=
 
 local-miui-modified-apps := 
 
-local-miui-modified-apps-smali := 
+local-miui-modified-apps-smali := TeleService
 
 PORT_PRODUCT := nian_lex2
 
