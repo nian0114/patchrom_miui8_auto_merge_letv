@@ -224,26 +224,6 @@
 
     iput-object v1, p0, Landroid/app/ContextImpl;->mResourcesManager:Landroid/app/ResourcesManager;
 
-    invoke-virtual {p3}, Landroid/app/LoadedApk;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
-
-    move-result-object v10
-
-    .local v10, "info":Landroid/content/pm/ApplicationInfo;
-    if-eqz v10, :cond_1
-
-    iget v1, v10, Landroid/content/pm/ApplicationInfo;->flags:I
-
-    and-int/lit8 v1, v1, 0x1
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Landroid/app/ContextImpl;->mResourcesManager:Landroid/app/ResourcesManager;
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, v2}, Landroid/app/ResourcesManager;->setShouldAdjustFontScale(Z)V
-
-    :cond_1
     const/4 v1, -0x1
 
     move/from16 v0, p9
@@ -351,6 +331,12 @@
     invoke-virtual/range {v1 .. v8}, Landroid/app/ResourcesManager;->getTopLevelResources(Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;ILandroid/content/res/Configuration;Landroid/content/res/CompatibilityInfo;)Landroid/content/res/Resources;
 
     move-result-object v11
+
+    iget-object v1, p0, Landroid/app/ContextImpl;->mPackageInfo:Landroid/app/LoadedApk;
+
+    iget-object v1, v1, Landroid/app/LoadedApk;->mPackageName:Ljava/lang/String;
+
+    invoke-static {v11, v1}, Landroid/miui/ResourcesManager;->initMiuiResource(Landroid/content/res/Resources;Ljava/lang/String;)V
 
     :cond_5
     iput-object v11, p0, Landroid/app/ContextImpl;->mResources:Landroid/content/res/Resources;
