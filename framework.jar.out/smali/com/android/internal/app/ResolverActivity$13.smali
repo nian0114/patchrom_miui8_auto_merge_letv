@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 2739
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$13;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     iput p2, p0, Lcom/android/internal/app/ResolverActivity$13;->val$platId:I
@@ -45,14 +44,12 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 2742
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.letv.android.note.ACTION_SHARE_PICTURE"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 2743
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "android.intent.extra.TEXT"
 
@@ -65,23 +62,19 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2744
     const-string v1, "com.letv.android.extra.WHICH_APP_TO_SHARE"
 
     iget v2, p0, Lcom/android/internal/app/ResolverActivity$13;->val$platId:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 2745
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$13;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-virtual {v1, v0}, Lcom/android/internal/app/ResolverActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 2746
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$13;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-virtual {v1}, Lcom/android/internal/app/ResolverActivity;->finish()V
 
-    .line 2747
     return-void
 .end method

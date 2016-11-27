@@ -51,7 +51,6 @@
 
     const/4 v4, 0x0
 
-    .line 4
     new-instance v0, Lcom/letv/tracker/enums/NetworkModel;
 
     const-string v1, "_2G"
@@ -62,7 +61,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/NetworkModel;->_2G:Lcom/letv/tracker/enums/NetworkModel;
 
-    .line 5
     new-instance v0, Lcom/letv/tracker/enums/NetworkModel;
 
     const-string v1, "_3G"
@@ -73,7 +71,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/NetworkModel;->_3G:Lcom/letv/tracker/enums/NetworkModel;
 
-    .line 6
     new-instance v0, Lcom/letv/tracker/enums/NetworkModel;
 
     const-string v1, "_4G"
@@ -84,7 +81,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/NetworkModel;->_4G:Lcom/letv/tracker/enums/NetworkModel;
 
-    .line 7
     new-instance v0, Lcom/letv/tracker/enums/NetworkModel;
 
     const-string v1, "Lte"
@@ -95,7 +91,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/NetworkModel;->Lte:Lcom/letv/tracker/enums/NetworkModel;
 
-    .line 8
     new-instance v0, Lcom/letv/tracker/enums/NetworkModel;
 
     const-string v1, "Auto"
@@ -106,7 +101,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/NetworkModel;->Auto:Lcom/letv/tracker/enums/NetworkModel;
 
-    .line 9
     new-instance v0, Lcom/letv/tracker/enums/NetworkModel;
 
     const-string v1, "Wifi"
@@ -119,7 +113,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/NetworkModel;->Wifi:Lcom/letv/tracker/enums/NetworkModel;
 
-    .line 10
     new-instance v0, Lcom/letv/tracker/enums/NetworkModel;
 
     const-string v1, "Wired"
@@ -132,7 +125,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/NetworkModel;->Wired:Lcom/letv/tracker/enums/NetworkModel;
 
-    .line 3
     const/4 v0, 0x7
 
     new-array v0, v0, [Lcom/letv/tracker/enums/NetworkModel;
@@ -186,13 +178,10 @@
     .end annotation
 
     .prologue
-    .line 14
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 15
     iput-object p3, p0, Lcom/letv/tracker/enums/NetworkModel;->id:Ljava/lang/String;
 
-    .line 16
     return-void
 .end method
 
@@ -201,7 +190,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 3
     const-class v0, Lcom/letv/tracker/enums/NetworkModel;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -217,7 +205,6 @@
     .locals 1
 
     .prologue
-    .line 3
     sget-object v0, Lcom/letv/tracker/enums/NetworkModel;->$VALUES:[Lcom/letv/tracker/enums/NetworkModel;
 
     invoke-virtual {v0}, [Lcom/letv/tracker/enums/NetworkModel;->clone()Ljava/lang/Object;
@@ -235,7 +222,6 @@
     .locals 1
 
     .prologue
-    .line 19
     iget-object v0, p0, Lcom/letv/tracker/enums/NetworkModel;->id:Ljava/lang/String;
 
     return-object v0

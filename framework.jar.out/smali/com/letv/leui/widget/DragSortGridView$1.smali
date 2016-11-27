@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 72
     iput-object p1, p0, Lcom/letv/leui/widget/DragSortGridView$1;->this$0:Lcom/letv/leui/widget/DragSortGridView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
     .end annotation
 
     .prologue
-    .line 75
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortGridView$1;->this$0:Lcom/letv/leui/widget/DragSortGridView;
 
@@ -79,7 +77,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 76
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortGridView$1;->this$0:Lcom/letv/leui/widget/DragSortGridView;
 
     # getter for: Lcom/letv/leui/widget/DragSortGridView;->mUserItemClickListener:Landroid/widget/AdapterView$OnItemClickListener;
@@ -97,7 +94,6 @@
 
     invoke-interface/range {v0 .. v5}, Landroid/widget/AdapterView$OnItemClickListener;->onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
 
-    .line 78
     :cond_0
     return-void
 .end method

@@ -16,10 +16,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 17
     invoke-direct {p0, v0, v0}, Lcom/letv/leui/widget/picker/ItemsRange;-><init>(II)V
 
-    .line 18
     return-void
 .end method
 
@@ -29,16 +27,12 @@
     .param p2, "count"    # I
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 26
     iput p1, p0, Lcom/letv/leui/widget/picker/ItemsRange;->first:I
 
-    .line 27
     iput p2, p0, Lcom/letv/leui/widget/picker/ItemsRange;->count:I
 
-    .line 28
     return-void
 .end method
 
@@ -49,7 +43,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 60
     invoke-virtual {p0}, Lcom/letv/leui/widget/picker/ItemsRange;->getFirst()I
 
     move-result v0
@@ -77,7 +70,6 @@
     .locals 1
 
     .prologue
-    .line 51
     iget v0, p0, Lcom/letv/leui/widget/picker/ItemsRange;->count:I
 
     return v0
@@ -87,7 +79,6 @@
     .locals 1
 
     .prologue
-    .line 35
     iget v0, p0, Lcom/letv/leui/widget/picker/ItemsRange;->first:I
 
     return v0
@@ -97,7 +88,6 @@
     .locals 2
 
     .prologue
-    .line 43
     invoke-virtual {p0}, Lcom/letv/leui/widget/picker/ItemsRange;->getFirst()I
 
     move-result v0

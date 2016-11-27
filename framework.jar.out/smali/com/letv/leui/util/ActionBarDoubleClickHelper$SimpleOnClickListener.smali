@@ -36,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 71
     invoke-static {}, Landroid/view/ViewConfiguration;->getDoubleTapTimeout()I
 
     move-result v0
@@ -50,15 +49,12 @@
     .locals 2
 
     .prologue
-    .line 78
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 76
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lcom/letv/leui/util/ActionBarDoubleClickHelper$SimpleOnClickListener;->mLastClickTime:J
 
-    .line 79
     return-void
 .end method
 
@@ -69,7 +65,6 @@
     .param p1, "l"    # Lcom/letv/leui/util/ActionBarDoubleClickHelper$OnDoubleClickListener;
 
     .prologue
-    .line 87
     iget-object v0, p0, Lcom/letv/leui/util/ActionBarDoubleClickHelper$SimpleOnClickListener;->mDoubleClickListener:Lcom/letv/leui/util/ActionBarDoubleClickHelper$OnDoubleClickListener;
 
     return-object v0
@@ -82,38 +77,32 @@
     .prologue
     const-wide/16 v6, -0x1
 
-    .line 92
     iget-wide v4, p0, Lcom/letv/leui/util/ActionBarDoubleClickHelper$SimpleOnClickListener;->mLastClickTime:J
 
     cmp-long v4, v4, v6
 
     if-nez v4, :cond_1
 
-    .line 93
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
     iput-wide v4, p0, Lcom/letv/leui/util/ActionBarDoubleClickHelper$SimpleOnClickListener;->mLastClickTime:J
 
-    .line 111
     :cond_0
     :goto_0
     return-void
 
-    .line 95
     :cond_1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 96
     .local v0, "currentTime":J
     iget-wide v4, p0, Lcom/letv/leui/util/ActionBarDoubleClickHelper$SimpleOnClickListener;->mLastClickTime:J
 
     sub-long v2, v0, v4
 
-    .line 98
     .local v2, "deltaTime":J
     const-wide/16 v4, 0x28
 
@@ -121,7 +110,6 @@
 
     if-ltz v4, :cond_0
 
-    .line 100
     sget v4, Lcom/letv/leui/util/ActionBarDoubleClickHelper$SimpleOnClickListener;->DOUBLE_TAP_TIMEOUT:I
 
     int-to-long v4, v4
@@ -130,21 +118,17 @@
 
     if-lez v4, :cond_2
 
-    .line 102
     iput-wide v0, p0, Lcom/letv/leui/util/ActionBarDoubleClickHelper$SimpleOnClickListener;->mLastClickTime:J
 
     goto :goto_0
 
-    .line 104
     :cond_2
     iput-wide v6, p0, Lcom/letv/leui/util/ActionBarDoubleClickHelper$SimpleOnClickListener;->mLastClickTime:J
 
-    .line 106
     iget-object v4, p0, Lcom/letv/leui/util/ActionBarDoubleClickHelper$SimpleOnClickListener;->mDoubleClickListener:Lcom/letv/leui/util/ActionBarDoubleClickHelper$OnDoubleClickListener;
 
     if-eqz v4, :cond_0
 
-    .line 107
     iget-object v4, p0, Lcom/letv/leui/util/ActionBarDoubleClickHelper$SimpleOnClickListener;->mDoubleClickListener:Lcom/letv/leui/util/ActionBarDoubleClickHelper$OnDoubleClickListener;
 
     invoke-interface {v4}, Lcom/letv/leui/util/ActionBarDoubleClickHelper$OnDoubleClickListener;->onDoubleClick()V
@@ -157,9 +141,7 @@
     .param p1, "l"    # Lcom/letv/leui/util/ActionBarDoubleClickHelper$OnDoubleClickListener;
 
     .prologue
-    .line 82
     iput-object p1, p0, Lcom/letv/leui/util/ActionBarDoubleClickHelper$SimpleOnClickListener;->mDoubleClickListener:Lcom/letv/leui/util/ActionBarDoubleClickHelper$OnDoubleClickListener;
 
-    .line 83
     return-void
 .end method

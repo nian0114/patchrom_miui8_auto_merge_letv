@@ -36,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 1095
     new-instance v0, Lcom/letv/leui/widget/SlidingMenu$SavedState$1;
 
     invoke-direct {v0}, Lcom/letv/leui/widget/SlidingMenu$SavedState$1;-><init>()V
@@ -51,17 +50,14 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 1077
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 1078
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/letv/leui/widget/SlidingMenu$SavedState;->mItem:I
 
-    .line 1079
     return-void
 .end method
 
@@ -71,7 +67,6 @@
     .param p2, "x1"    # Lcom/letv/leui/widget/SlidingMenu$1;
 
     .prologue
-    .line 1067
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/SlidingMenu$SavedState;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -83,13 +78,10 @@
     .param p2, "item"    # I
 
     .prologue
-    .line 1072
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 1073
     iput p2, p0, Lcom/letv/leui/widget/SlidingMenu$SavedState;->mItem:I
 
-    .line 1074
     return-void
 .end method
 
@@ -99,7 +91,6 @@
     .locals 1
 
     .prologue
-    .line 1082
     iget v0, p0, Lcom/letv/leui/widget/SlidingMenu$SavedState;->mItem:I
 
     return v0
@@ -111,14 +102,11 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 1091
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 1092
     iget v0, p0, Lcom/letv/leui/widget/SlidingMenu$SavedState;->mItem:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1093
     return-void
 .end method

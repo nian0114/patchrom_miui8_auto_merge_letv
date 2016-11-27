@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 654
     iput-object p1, p0, Lcom/letv/leui/widget/LeBottomSheet$5;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     iput-object p2, p0, Lcom/letv/leui/widget/LeBottomSheet$5;->val$keyName:[Ljava/lang/String;
@@ -60,7 +59,6 @@
     .end annotation
 
     .prologue
-    .line 657
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     iget-object v0, p0, Lcom/letv/leui/widget/LeBottomSheet$5;->val$keyName:[Ljava/lang/String;
 
@@ -70,13 +68,11 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 658
     iget-object v0, p0, Lcom/letv/leui/widget/LeBottomSheet$5;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # setter for: Lcom/letv/leui/widget/LeBottomSheet;->checkPos:I
     invoke-static {v0, p3}, Lcom/letv/leui/widget/LeBottomSheet;->access$102(Lcom/letv/leui/widget/LeBottomSheet;I)I
 
-    .line 659
     iget-object v0, p0, Lcom/letv/leui/widget/LeBottomSheet$5;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # getter for: Lcom/letv/leui/widget/LeBottomSheet;->adapter:Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;
@@ -86,7 +82,6 @@
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->notifyDataSetChanged()V
 
-    .line 666
     :goto_0
     iget-object v0, p0, Lcom/letv/leui/widget/LeBottomSheet$5;->val$itemListener:Landroid/widget/AdapterView$OnItemClickListener;
 
@@ -100,10 +95,8 @@
 
     invoke-interface/range {v0 .. v5}, Landroid/widget/AdapterView$OnItemClickListener;->onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
 
-    .line 667
     return-void
 
-    .line 661
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/LeBottomSheet$5;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
@@ -127,7 +120,6 @@
 
     if-nez v0, :cond_1
 
-    .line 662
     iget-object v0, p0, Lcom/letv/leui/widget/LeBottomSheet$5;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # getter for: Lcom/letv/leui/widget/LeBottomSheet;->checkList:Ljava/util/List;
@@ -160,7 +152,6 @@
 
     invoke-interface {v1, p3, v0}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 664
     :cond_1
     iget-object v0, p0, Lcom/letv/leui/widget/LeBottomSheet$5;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 

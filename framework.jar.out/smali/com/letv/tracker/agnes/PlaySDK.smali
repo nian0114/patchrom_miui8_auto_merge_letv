@@ -19,19 +19,14 @@
     .param p3, "version"    # Lcom/letv/tracker/msg/bean/Version;
 
     .prologue
-    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 8
     iput-object p1, p0, Lcom/letv/tracker/agnes/PlaySDK;->appId:Ljava/lang/String;
 
-    .line 9
     iput-object p2, p0, Lcom/letv/tracker/agnes/PlaySDK;->appRunId:Ljava/lang/String;
 
-    .line 10
     iput-object p3, p0, Lcom/letv/tracker/agnes/PlaySDK;->appVer:Lcom/letv/tracker/msg/bean/Version;
 
-    .line 11
     return-void
 .end method
 
@@ -41,7 +36,6 @@
     .locals 4
 
     .prologue
-    .line 20
     new-instance v0, Lcom/letv/tracker/agnes/VideoPlay;
 
     iget-object v1, p0, Lcom/letv/tracker/agnes/PlaySDK;->appId:Ljava/lang/String;
@@ -52,13 +46,11 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/letv/tracker/agnes/VideoPlay;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/letv/tracker/msg/bean/Version;)V
 
-    .line 21
     .local v0, "vp":Lcom/letv/tracker/agnes/VideoPlay;
     const-string v1, "play_sdk"
 
     invoke-virtual {v0, v1}, Lcom/letv/tracker/agnes/VideoPlay;->setCaller(Ljava/lang/String;)V
 
-    .line 22
     return-object v0
 .end method
 
@@ -67,7 +59,6 @@
     .param p1, "widgetId"    # Ljava/lang/String;
 
     .prologue
-    .line 26
     new-instance v0, Lcom/letv/tracker/agnes/VideoPlay;
 
     iget-object v1, p0, Lcom/letv/tracker/agnes/PlaySDK;->appId:Ljava/lang/String;
@@ -78,13 +69,11 @@
 
     invoke-direct {v0, v1, v2, v3, p1}, Lcom/letv/tracker/agnes/VideoPlay;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/letv/tracker/msg/bean/Version;Ljava/lang/String;)V
 
-    .line 27
     .local v0, "vp":Lcom/letv/tracker/agnes/VideoPlay;
     const-string v1, "play_sdk"
 
     invoke-virtual {v0, v1}, Lcom/letv/tracker/agnes/VideoPlay;->setCaller(Ljava/lang/String;)V
 
-    .line 28
     return-object v0
 .end method
 
@@ -92,7 +81,6 @@
     .locals 1
 
     .prologue
-    .line 13
     iget-object v0, p0, Lcom/letv/tracker/agnes/PlaySDK;->appId:Ljava/lang/String;
 
     return-object v0
@@ -102,7 +90,6 @@
     .locals 1
 
     .prologue
-    .line 17
     iget-object v0, p0, Lcom/letv/tracker/agnes/PlaySDK;->appRunId:Ljava/lang/String;
 
     return-object v0
@@ -112,7 +99,6 @@
     .locals 1
 
     .prologue
-    .line 15
     iget-object v0, p0, Lcom/letv/tracker/agnes/PlaySDK;->appVer:Lcom/letv/tracker/msg/bean/Version;
 
     return-object v0

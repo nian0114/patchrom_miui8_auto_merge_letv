@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 373
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,7 +45,6 @@
     .param p2, "colB"    # Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
     .prologue
-    .line 375
     # getter for: Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->grn:I
     invoke-static {p1}, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->access$100(Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;)I
 
@@ -66,7 +64,6 @@
     .locals 1
 
     .prologue
-    .line 373
     check-cast p1, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
     check-cast p2, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;

@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 749
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,13 +46,11 @@
     .end annotation
 
     .prologue
-    .line 752
     .local p2, "typeToken":Lcom/google/gson/reflect/TypeToken;, "Lcom/google/gson/reflect/TypeToken<TT;>;"
     invoke-virtual {p2}, Lcom/google/gson/reflect/TypeToken;->getRawType()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 753
     .local v0, "rawType":Ljava/lang/Class;, "Ljava/lang/Class<-TT;>;"
     const-class v1, Ljava/lang/Enum;
 
@@ -67,15 +64,12 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 754
     :cond_0
     const/4 v1, 0x0
 
-    .line 759
     :goto_0
     return-object v1
 
-    .line 756
     :cond_1
     invoke-virtual {v0}, Ljava/lang/Class;->isEnum()Z
 
@@ -83,12 +77,10 @@
 
     if-nez v1, :cond_2
 
-    .line 757
     invoke-virtual {v0}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 759
     :cond_2
     new-instance v1, Lcom/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;
 

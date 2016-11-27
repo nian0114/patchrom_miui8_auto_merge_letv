@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 496
     iput-object p1, p0, Lcom/android/server/LocationManagerService$NetworkStateReceiver;->this$0:Lcom/android/server/LocationManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/LocationManagerService$1;
 
     .prologue
-    .line 496
     invoke-direct {p0, p1}, Lcom/android/server/LocationManagerService$NetworkStateReceiver;-><init>(Lcom/android/server/LocationManagerService;)V
 
     return-void
@@ -51,7 +49,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 499
     const-string v1, "LocationManagerService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -74,7 +71,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 500
     iget-object v1, p0, Lcom/android/server/LocationManagerService$NetworkStateReceiver;->this$0:Lcom/android/server/LocationManagerService;
 
     # getter for: Lcom/android/server/LocationManagerService;->mLock:Ljava/lang/Object;
@@ -84,7 +80,6 @@
 
     monitor-enter v2
 
-    .line 501
     :try_start_0
     iget-object v1, p0, Lcom/android/server/LocationManagerService$NetworkStateReceiver;->this$0:Lcom/android/server/LocationManagerService;
 
@@ -103,7 +98,6 @@
 
     move-result-object v0
 
-    .line 503
     .local v0, "network_provider_mode":Ljava/lang/String;
     const-string v1, "auto"
 
@@ -113,21 +107,17 @@
 
     if-nez v1, :cond_0
 
-    .line 504
     const-string v1, "LocationManagerService"
 
     const-string v3, "not auto mode just return from Receiver"
 
     invoke-static {v1, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 505
     monitor-exit v2
 
-    .line 513
     :goto_0
     return-void
 
-    .line 507
     :cond_0
     const-string v1, "android.intent.action.CAMPED_NETWORK_STATE_CHANGED"
 
@@ -141,13 +131,11 @@
 
     if-eqz v1, :cond_2
 
-    .line 508
     iget-object v1, p0, Lcom/android/server/LocationManagerService$NetworkStateReceiver;->this$0:Lcom/android/server/LocationManagerService;
 
     # invokes: Lcom/android/server/LocationManagerService;->doCampedNetworkStateChanged(Landroid/content/Intent;)V
     invoke-static {v1, p2}, Lcom/android/server/LocationManagerService;->access$1100(Lcom/android/server/LocationManagerService;Landroid/content/Intent;)V
 
-    .line 512
     :cond_1
     :goto_1
     monitor-exit v2
@@ -164,7 +152,6 @@
 
     throw v1
 
-    .line 509
     .restart local v0    # "network_provider_mode":Ljava/lang/String;
     :cond_2
     :try_start_1
@@ -180,7 +167,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 510
     iget-object v1, p0, Lcom/android/server/LocationManagerService$NetworkStateReceiver;->this$0:Lcom/android/server/LocationManagerService;
 
     # invokes: Lcom/android/server/LocationManagerService;->doSimStateChanged(Landroid/content/Intent;)V

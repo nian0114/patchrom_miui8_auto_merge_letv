@@ -89,12 +89,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 67
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/policy/global/GlobalActionHandlerView;-><init>(Landroid/content/Context;Z)V
 
-    .line 68
     return-void
 .end method
 
@@ -108,105 +106,82 @@
 
     const/4 v1, 0x0
 
-    .line 71
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 37
     iput v2, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriRegionWidth:I
 
-    .line 38
     const/16 v0, 0x96
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriRegionHeight:I
 
-    .line 40
     const/16 v0, 0x78
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriWidth:I
 
-    .line 41
     const/16 v0, 0x5a
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriHeight:I
 
-    .line 42
     const/4 v0, 0x6
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriPenWidth:I
 
-    .line 43
     const v0, 0x44ffffff    # 2047.9999f
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriColor:I
 
-    .line 44
     const/16 v0, 0x44
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriColorAlpha:I
 
-    .line 45
     iput v1, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriMarqueeOffset:I
 
-    .line 46
     iput v1, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mMaxTriMarqueeOffset:I
 
-    .line 51
     iput v2, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTipRegionWidth:I
 
-    .line 52
     const/16 v0, 0x168
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTipRegionHeight:I
 
-    .line 53
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTipColor:I
 
-    .line 54
     const/16 v0, 0x2a
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTipTextSize:I
 
-    .line 56
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mHandlerRect:Landroid/graphics/Rect;
 
-    .line 64
     iput v1, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mInitBottom:I
 
-    .line 248
     iput-boolean v1, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mCancel:Z
 
-    .line 250
     new-instance v0, Lcom/android/server/policy/global/GlobalActionHandlerView$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/policy/global/GlobalActionHandlerView$1;-><init>(Lcom/android/server/policy/global/GlobalActionHandlerView;)V
 
     iput-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriAlphaInListener:Landroid/animation/Animator$AnimatorListener;
 
-    .line 277
     new-instance v0, Lcom/android/server/policy/global/GlobalActionHandlerView$2;
 
     invoke-direct {v0, p0}, Lcom/android/server/policy/global/GlobalActionHandlerView$2;-><init>(Lcom/android/server/policy/global/GlobalActionHandlerView;)V
 
     iput-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriMoveListener:Landroid/animation/Animator$AnimatorListener;
 
-    .line 445
     new-instance v0, Lcom/android/server/policy/global/GlobalActionHandlerView$3;
 
     invoke-direct {v0, p0}, Lcom/android/server/policy/global/GlobalActionHandlerView$3;-><init>(Lcom/android/server/policy/global/GlobalActionHandlerView;)V
 
     iput-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mAnimator:Lcom/android/server/policy/global/GlobalActionSwipeHelper$AnimatorCallback;
 
-    .line 72
     iput-boolean p2, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mLocked:Z
 
-    .line 73
     invoke-direct {p0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->init()V
 
-    .line 74
     return-void
 .end method
 
@@ -215,7 +190,6 @@
     .param p0, "x0"    # Lcom/android/server/policy/global/GlobalActionHandlerView;
 
     .prologue
-    .line 24
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriMoveAlphaOut:Landroid/animation/ObjectAnimator;
 
     return-object v0
@@ -227,7 +201,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 24
     invoke-direct {p0, p1}, Lcom/android/server/policy/global/GlobalActionHandlerView;->setMarqueeOffset(I)V
 
     return-void
@@ -238,7 +211,6 @@
     .param p0, "x0"    # Lcom/android/server/policy/global/GlobalActionHandlerView;
 
     .prologue
-    .line 24
     iget v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriColorAlpha:I
 
     return v0
@@ -249,7 +221,6 @@
     .param p0, "x0"    # Lcom/android/server/policy/global/GlobalActionHandlerView;
 
     .prologue
-    .line 24
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriAlphaIn:Landroid/animation/ValueAnimator;
 
     return-object v0
@@ -260,7 +231,6 @@
     .param p0, "x0"    # Lcom/android/server/policy/global/GlobalActionHandlerView;
 
     .prologue
-    .line 24
     iget v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mInitBottom:I
 
     return v0
@@ -271,7 +241,6 @@
     .param p0, "x0"    # Lcom/android/server/policy/global/GlobalActionHandlerView;
 
     .prologue
-    .line 24
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mHostCallback:Lcom/android/server/policy/global/GlobalActionHandlerView$HostViewCallback;
 
     return-object v0
@@ -282,7 +251,6 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 322
     iget-object v5, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTipMsg:Ljava/lang/String;
 
     invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -291,11 +259,9 @@
 
     if-eqz v5, :cond_0
 
-    .line 339
     :goto_0
     return-void
 
-    .line 324
     :cond_0
     iget-object v5, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTipPaint:Landroid/graphics/Paint;
 
@@ -305,7 +271,6 @@
 
     move-result v4
 
-    .line 325
     .local v4, "textWidth":F
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->getWidth()I
 
@@ -321,7 +286,6 @@
 
     div-int/lit8 v2, v5, 0x2
 
-    .line 326
     .local v2, "startX":I
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->getHeight()I
 
@@ -335,7 +299,6 @@
 
     sub-int v3, v5, v6
 
-    .line 327
     .local v3, "startY":I
     iget-object v5, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mHandlerRect:Landroid/graphics/Rect;
 
@@ -357,7 +320,6 @@
 
     invoke-virtual {v5, v2, v3, v6, v7}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 330
     int-to-float v5, v2
 
     iget-object v6, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mHandlerRect:Landroid/graphics/Rect;
@@ -378,14 +340,12 @@
 
     float-to-int v2, v5
 
-    .line 331
     iget-object v5, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTipPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v5}, Landroid/graphics/Paint;->getFontMetrics()Landroid/graphics/Paint$FontMetrics;
 
     move-result-object v0
 
-    .line 332
     .local v0, "fontMetrics":Landroid/graphics/Paint$FontMetrics;
     iget v5, v0, Landroid/graphics/Paint$FontMetrics;->top:F
 
@@ -401,12 +361,10 @@
 
     add-int/2addr v3, v5
 
-    .line 334
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v1
 
-    .line 335
     .local v1, "seq":I
     iget-object v5, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTipMsg:Ljava/lang/String;
 
@@ -418,7 +376,6 @@
 
     invoke-virtual {p1, v5, v6, v7, v8}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    .line 336
     invoke-virtual {p1, v1}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
     goto :goto_0
@@ -429,7 +386,6 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 395
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->getWidth()I
 
     move-result v3
@@ -440,7 +396,6 @@
 
     div-int/lit8 v1, v3, 0x2
 
-    .line 396
     .local v1, "startX":I
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->getHeight()I
 
@@ -454,13 +409,11 @@
 
     sub-int v2, v3, v4
 
-    .line 397
     .local v2, "startY":I
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v0
 
-    .line 398
     .local v0, "seq":I
     int-to-float v3, v1
 
@@ -476,17 +429,14 @@
 
     invoke-virtual {p1, v3, v4}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 399
     iget-object v3, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriPath:Landroid/graphics/Path;
 
     iget-object v4, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v3, v4}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 400
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    .line 401
     return-void
 .end method
 
@@ -498,18 +448,15 @@
     .param p4, "textWidth"    # F
 
     .prologue
-    .line 350
     move/from16 v0, p2
 
     int-to-float v2, v0
 
-    .line 351
     .local v2, "baseX":F
     move/from16 v0, p3
 
     int-to-float v3, v0
 
-    .line 353
     .local v3, "baseY":F
     move-object/from16 v0, p0
 
@@ -519,7 +466,6 @@
 
     move-result-object v31
 
-    .line 354
     .local v31, "fontMetrics":Landroid/graphics/Paint$FontMetrics;
     move-object/from16 v0, v31
 
@@ -527,7 +473,6 @@
 
     add-float v9, v3, v1
 
-    .line 355
     .local v9, "topY":F
     move-object/from16 v0, v31
 
@@ -535,7 +480,6 @@
 
     add-float v15, v3, v1
 
-    .line 356
     .local v15, "ascentY":F
     move-object/from16 v0, v31
 
@@ -543,7 +487,6 @@
 
     add-float v21, v3, v1
 
-    .line 357
     .local v21, "descentY":F
     move-object/from16 v0, v31
 
@@ -551,7 +494,6 @@
 
     add-float v27, v3, v1
 
-    .line 358
     .local v27, "bottomY":F
     move-object/from16 v0, v31
 
@@ -559,7 +501,6 @@
 
     add-float v32, v3, v1
 
-    .line 361
     .local v32, "leading":F
     new-instance v6, Landroid/graphics/Paint;
 
@@ -567,13 +508,11 @@
 
     invoke-direct {v6, v1}, Landroid/graphics/Paint;-><init>(I)V
 
-    .line 363
     .local v6, "baseLinePaint":Landroid/graphics/Paint;
     const/high16 v1, -0x10000
 
     invoke-virtual {v6, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 364
     add-float v4, v2, p4
 
     move-object/from16 v1, p1
@@ -582,27 +521,23 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 367
     const/high16 v1, 0x40a00000    # 5.0f
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v2, v3, v1, v6}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 370
     new-instance v12, Landroid/graphics/Paint;
 
     const/4 v1, 0x1
 
     invoke-direct {v12, v1}, Landroid/graphics/Paint;-><init>(I)V
 
-    .line 371
     .local v12, "topLinePaint":Landroid/graphics/Paint;
     const v1, -0x333334
 
     invoke-virtual {v12, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 372
     add-float v10, v2, p4
 
     move-object/from16 v7, p1
@@ -613,7 +548,6 @@
 
     invoke-virtual/range {v7 .. v12}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 375
     new-instance v18, Landroid/graphics/Paint;
 
     const/4 v1, 0x1
@@ -622,7 +556,6 @@
 
     invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
 
-    .line 376
     .local v18, "ascentLinePaint":Landroid/graphics/Paint;
     const v1, -0xff0100
 
@@ -630,7 +563,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 377
     add-float v16, v2, p4
 
     move-object/from16 v13, p1
@@ -641,7 +573,6 @@
 
     invoke-virtual/range {v13 .. v18}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 380
     new-instance v24, Landroid/graphics/Paint;
 
     const/4 v1, 0x1
@@ -650,7 +581,6 @@
 
     invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
 
-    .line 381
     .local v24, "descentLinePaint":Landroid/graphics/Paint;
     const/16 v1, -0x100
 
@@ -658,7 +588,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 382
     add-float v22, v2, p4
 
     move-object/from16 v19, p1
@@ -669,7 +598,6 @@
 
     invoke-virtual/range {v19 .. v24}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 385
     new-instance v30, Landroid/graphics/Paint;
 
     const/4 v1, 0x1
@@ -678,7 +606,6 @@
 
     invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
 
-    .line 386
     .local v30, "bottomLinePaint":Landroid/graphics/Paint;
     const v1, -0xff01
 
@@ -686,7 +613,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 387
     add-float v28, v2, p4
 
     move-object/from16 v25, p1
@@ -697,7 +623,6 @@
 
     invoke-virtual/range {v25 .. v30}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 388
     return-void
 .end method
 
@@ -707,7 +632,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 77
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -720,13 +644,10 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->density:F
 
-    .line 79
     invoke-direct {p0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->initTip()V
 
-    .line 80
     invoke-direct {p0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->initTri()V
 
-    .line 82
     new-instance v0, Landroid/graphics/Rect;
 
     iget v1, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTipRegionWidth:I
@@ -741,7 +662,6 @@
 
     iput-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mHandlerRect:Landroid/graphics/Rect;
 
-    .line 83
     return-void
 .end method
 
@@ -755,7 +675,6 @@
 
     const/4 v5, 0x0
 
-    .line 232
     const-string v2, "marqueeOffset"
 
     new-array v3, v7, [I
@@ -770,7 +689,6 @@
 
     move-result-object v1
 
-    .line 233
     .local v1, "triMarquee":Landroid/animation/PropertyValuesHolder;
     const-string v2, "triAlpha"
 
@@ -786,7 +704,6 @@
 
     move-result-object v0
 
-    .line 234
     .local v0, "triAlpha":Landroid/animation/PropertyValuesHolder;
     new-array v2, v7, [Landroid/animation/PropertyValuesHolder;
 
@@ -800,14 +717,12 @@
 
     iput-object v2, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriMoveAlphaOut:Landroid/animation/ObjectAnimator;
 
-    .line 235
     iget-object v2, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriMoveAlphaOut:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v4, 0x41a
 
     invoke-virtual {v2, v4, v5}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 236
     iget-object v2, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriMoveAlphaOut:Landroid/animation/ObjectAnimator;
 
     new-instance v3, Landroid/view/animation/DecelerateInterpolator;
@@ -818,14 +733,12 @@
 
     invoke-virtual {v2, v3}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 237
     iget-object v2, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriMoveAlphaOut:Landroid/animation/ObjectAnimator;
 
     iget-object v3, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriMoveListener:Landroid/animation/Animator$AnimatorListener;
 
     invoke-virtual {v2, v3}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 238
     return-void
 .end method
 
@@ -835,7 +748,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 87
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -853,7 +765,6 @@
 
     iput-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTipMsg:Ljava/lang/String;
 
-    .line 88
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -866,7 +777,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTipTextSize:I
 
-    .line 89
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -879,7 +789,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTipRegionWidth:I
 
-    .line 90
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -892,31 +801,26 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTipRegionHeight:I
 
-    .line 92
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTipPaint:Landroid/graphics/Paint;
 
-    .line 93
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTipPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 94
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTipPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setDither(Z)V
 
-    .line 95
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTipPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTipColor:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 96
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTipPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTipTextSize:I
@@ -925,31 +829,26 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    .line 97
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTipPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 98
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTipPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Join;->ROUND:Landroid/graphics/Paint$Join;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeJoin(Landroid/graphics/Paint$Join;)V
 
-    .line 99
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTipPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
-    .line 100
     return-void
 
-    .line 87
     :cond_0
     const v0, 0x104062f
 
@@ -962,7 +861,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 103
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -975,14 +873,12 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriColor:I
 
-    .line 104
     iget v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriColor:I
 
     shr-int/lit8 v0, v0, 0x18
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriColorAlpha:I
 
-    .line 105
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -995,7 +891,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriRegionWidth:I
 
-    .line 106
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1008,7 +903,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriRegionHeight:I
 
-    .line 107
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1021,7 +915,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriWidth:I
 
-    .line 108
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1034,7 +927,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriHeight:I
 
-    .line 109
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1047,7 +939,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriPenWidth:I
 
-    .line 111
     iget v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriRegionHeight:I
 
     iget v1, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriHeight:I
@@ -1064,34 +955,28 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mMaxTriMarqueeOffset:I
 
-    .line 114
     invoke-direct {p0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->initTriPath()V
 
-    .line 117
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriPaint:Landroid/graphics/Paint;
 
-    .line 118
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 119
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setDither(Z)V
 
-    .line 120
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriColor:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 121
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriPenWidth:I
@@ -1100,34 +985,28 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 122
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 123
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Join;->ROUND:Landroid/graphics/Paint$Join;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeJoin(Landroid/graphics/Paint$Join;)V
 
-    .line 124
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
-    .line 127
     invoke-direct {p0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->initMove()V
 
-    .line 128
     invoke-direct {p0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->initTriAlphaIn()V
 
-    .line 129
     return-void
 .end method
 
@@ -1137,7 +1016,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 242
     const-string v0, "triAlpha"
 
     const/4 v1, 0x2
@@ -1158,14 +1036,12 @@
 
     iput-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriAlphaIn:Landroid/animation/ValueAnimator;
 
-    .line 243
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriAlphaIn:Landroid/animation/ValueAnimator;
 
     const-wide/16 v2, 0x41a
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 244
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriAlphaIn:Landroid/animation/ValueAnimator;
 
     new-instance v1, Landroid/view/animation/AccelerateInterpolator;
@@ -1176,14 +1052,12 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 245
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriAlphaIn:Landroid/animation/ValueAnimator;
 
     iget-object v1, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriAlphaInListener:Landroid/animation/Animator$AnimatorListener;
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 246
     return-void
 .end method
 
@@ -1193,19 +1067,16 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 132
     new-instance v0, Landroid/graphics/Path;
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriPath:Landroid/graphics/Path;
 
-    .line 133
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriPath:Landroid/graphics/Path;
 
     invoke-virtual {v0, v3, v3}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 134
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriPath:Landroid/graphics/Path;
 
     iget v1, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriWidth:I
@@ -1220,7 +1091,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 135
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriPath:Landroid/graphics/Path;
 
     iget v1, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriWidth:I
@@ -1229,7 +1099,6 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 136
     return-void
 .end method
 
@@ -1238,15 +1107,12 @@
     .param p1, "offset"    # I
 
     .prologue
-    .line 194
     iput p1, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriMarqueeOffset:I
 
-    .line 195
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mHandlerRect:Landroid/graphics/Rect;
 
     invoke-virtual {p0, v0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->invalidate(Landroid/graphics/Rect;)V
 
-    .line 196
     return-void
 .end method
 
@@ -1256,41 +1122,33 @@
     .locals 1
 
     .prologue
-    .line 204
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->stopMarquee()V
 
-    .line 205
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriMoveAlphaOut:Landroid/animation/ObjectAnimator;
 
     if-eqz v0, :cond_0
 
-    .line 206
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriMoveAlphaOut:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 207
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriMoveAlphaOut:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->removeAllListeners()V
 
-    .line 209
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriAlphaIn:Landroid/animation/ValueAnimator;
 
     if-eqz v0, :cond_1
 
-    .line 210
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriAlphaIn:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
-    .line 211
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriAlphaIn:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->removeAllListeners()V
 
-    .line 213
     :cond_1
     return-void
 .end method
@@ -1299,7 +1157,6 @@
     .locals 1
 
     .prologue
-    .line 404
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mAnimator:Lcom/android/server/policy/global/GlobalActionSwipeHelper$AnimatorCallback;
 
     return-object v0
@@ -1309,7 +1166,6 @@
     .locals 1
 
     .prologue
-    .line 416
     iget v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mInitBottom:I
 
     return v0
@@ -1319,7 +1175,6 @@
     .locals 1
 
     .prologue
-    .line 412
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mHandlerRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
@@ -1334,7 +1189,6 @@
     .param p1, "animation"    # Z
 
     .prologue
-    .line 166
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
@@ -1381,7 +1235,6 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 171
     return-void
 .end method
 
@@ -1391,16 +1244,13 @@
     .param p2, "rawY"    # F
 
     .prologue
-    .line 145
     const/4 v3, 0x2
 
     new-array v0, v3, [I
 
-    .line 146
     .local v0, "location":[I
     invoke-virtual {p0, v0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->getLocationInWindow([I)V
 
-    .line 148
     const/4 v3, 0x0
 
     aget v3, v0, v3
@@ -1421,7 +1271,6 @@
 
     add-int v1, v3, v4
 
-    .line 149
     .local v1, "startX":I
     const/4 v3, 0x1
 
@@ -1441,7 +1290,6 @@
 
     add-int v2, v3, v4
 
-    .line 150
     .local v2, "startY":I
     iget-object v3, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mHandlerRect:Landroid/graphics/Rect;
 
@@ -1463,7 +1311,6 @@
 
     invoke-virtual {v3, v1, v2, v4, v5}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 151
     iget-object v3, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mHandlerRect:Landroid/graphics/Rect;
 
     float-to-int v4, p1
@@ -1482,10 +1329,8 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 308
     invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 310
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->getWidth()I
 
     move-result v0
@@ -1498,16 +1343,13 @@
 
     if-gtz v0, :cond_1
 
-    .line 315
     :cond_0
     :goto_0
     return-void
 
-    .line 312
     :cond_1
     invoke-direct {p0, p1}, Lcom/android/server/policy/global/GlobalActionHandlerView;->drawTip(Landroid/graphics/Canvas;)V
 
-    .line 314
     invoke-direct {p0, p1}, Lcom/android/server/policy/global/GlobalActionHandlerView;->drawTri(Landroid/graphics/Canvas;)V
 
     goto :goto_0
@@ -1517,7 +1359,6 @@
     .locals 4
 
     .prologue
-    .line 187
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
@@ -1546,7 +1387,6 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 191
     return-void
 .end method
 
@@ -1555,10 +1395,8 @@
     .param p1, "viewManager"    # Lcom/android/server/policy/global/GlobalActionViewManager;
 
     .prologue
-    .line 424
     iput-object p1, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mViewManager:Lcom/android/server/policy/global/GlobalActionViewManager;
 
-    .line 425
     return-void
 .end method
 
@@ -1567,10 +1405,8 @@
     .param p1, "hostCallback"    # Lcom/android/server/policy/global/GlobalActionHandlerView$HostViewCallback;
 
     .prologue
-    .line 432
     iput-object p1, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mHostCallback:Lcom/android/server/policy/global/GlobalActionHandlerView$HostViewCallback;
 
-    .line 433
     return-void
 .end method
 
@@ -1579,10 +1415,8 @@
     .param p1, "initBottom"    # I
 
     .prologue
-    .line 420
     iput p1, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mInitBottom:I
 
-    .line 421
     return-void
 .end method
 
@@ -1591,7 +1425,6 @@
     .param p1, "alpha"    # I
 
     .prologue
-    .line 199
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriColor:I
@@ -1606,10 +1439,8 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 200
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->invalidate()V
 
-    .line 201
     return-void
 .end method
 
@@ -1620,7 +1451,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 156
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
@@ -1637,10 +1467,8 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->setTranslationY(F)V
 
-    .line 157
     invoke-virtual {p0, v4}, Lcom/android/server/policy/global/GlobalActionHandlerView;->setAlpha(F)V
 
-    .line 158
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
@@ -1673,7 +1501,6 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 163
     return-void
 .end method
 
@@ -1683,7 +1510,6 @@
     .prologue
     const-wide/16 v6, 0x12c
 
-    .line 174
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v1
@@ -1722,7 +1548,6 @@
 
     invoke-virtual {v1}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 180
     const-string v1, "marqueeOffset"
 
     const/4 v2, 0x2
@@ -1745,11 +1570,9 @@
 
     move-result-object v0
 
-    .line 181
     .local v0, "triMove":Landroid/animation/ObjectAnimator;
     invoke-virtual {v0, v6, v7}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 182
     new-instance v1, Landroid/view/animation/AccelerateInterpolator;
 
     const/high16 v2, 0x40200000    # 2.5f
@@ -1758,10 +1581,8 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 183
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 184
     return-void
 .end method
 
@@ -1769,30 +1590,25 @@
     .locals 4
 
     .prologue
-    .line 221
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriMoveAlphaOut:Landroid/animation/ObjectAnimator;
 
     if-nez v0, :cond_1
 
-    .line 227
     :cond_0
     :goto_0
     return-void
 
-    .line 222
     :cond_1
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mCancel:Z
 
-    .line 223
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriMoveAlphaOut:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v2, 0x2bc
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
 
-    .line 224
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriMoveAlphaOut:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->isRunning()Z
@@ -1801,7 +1617,6 @@
 
     if-nez v0, :cond_0
 
-    .line 226
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mTriMoveAlphaOut:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
@@ -1813,16 +1628,13 @@
     .locals 1
 
     .prologue
-    .line 216
     iget-boolean v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView;->mCancel:Z
 
     if-eqz v0, :cond_0
 
-    .line 218
     :goto_0
     return-void
 
-    .line 217
     :cond_0
     const/4 v0, 0x1
 

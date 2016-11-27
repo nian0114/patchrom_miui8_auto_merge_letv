@@ -39,7 +39,6 @@
     .locals 4
 
     .prologue
-    .line 39
     const-string v0, "application/json; charset=%s"
 
     const/4 v1, 0x1
@@ -80,18 +79,14 @@
     .end annotation
 
     .prologue
-    .line 58
     .local p0, "this":Lcom/android/volley/toolbox/JsonRequest;, "Lcom/android/volley/toolbox/JsonRequest<TT;>;"
     .local p4, "listener":Lcom/android/volley/Response$Listener;, "Lcom/android/volley/Response$Listener<TT;>;"
     invoke-direct {p0, p1, p2, p5}, Lcom/android/volley/Request;-><init>(ILjava/lang/String;Lcom/android/volley/Response$ErrorListener;)V
 
-    .line 59
     iput-object p4, p0, Lcom/android/volley/toolbox/JsonRequest;->mListener:Lcom/android/volley/Response$Listener;
 
-    .line 60
     iput-object p3, p0, Lcom/android/volley/toolbox/JsonRequest;->mRequestBody:Ljava/lang/String;
 
-    .line 61
     return-void
 .end method
 
@@ -113,7 +108,6 @@
     .end annotation
 
     .prologue
-    .line 53
     .local p0, "this":Lcom/android/volley/toolbox/JsonRequest;, "Lcom/android/volley/toolbox/JsonRequest<TT;>;"
     .local p3, "listener":Lcom/android/volley/Response$Listener;, "Lcom/android/volley/Response$Listener<TT;>;"
     const/4 v1, -0x1
@@ -130,7 +124,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/volley/toolbox/JsonRequest;-><init>(ILjava/lang/String;Ljava/lang/String;Lcom/android/volley/Response$Listener;Lcom/android/volley/Response$ErrorListener;)V
 
-    .line 54
     return-void
 .end method
 
@@ -145,14 +138,12 @@
     .end annotation
 
     .prologue
-    .line 65
     .local p0, "this":Lcom/android/volley/toolbox/JsonRequest;, "Lcom/android/volley/toolbox/JsonRequest<TT;>;"
     .local p1, "response":Ljava/lang/Object;, "TT;"
     iget-object v0, p0, Lcom/android/volley/toolbox/JsonRequest;->mListener:Lcom/android/volley/Response$Listener;
 
     invoke-interface {v0, p1}, Lcom/android/volley/Response$Listener;->onResponse(Ljava/lang/Object;)V
 
-    .line 66
     return-void
 .end method
 
@@ -163,17 +154,14 @@
     .local p0, "this":Lcom/android/volley/toolbox/JsonRequest;, "Lcom/android/volley/toolbox/JsonRequest<TT;>;"
     const/4 v1, 0x0
 
-    .line 95
     :try_start_0
     iget-object v2, p0, Lcom/android/volley/toolbox/JsonRequest;->mRequestBody:Ljava/lang/String;
 
     if-nez v2, :cond_0
 
-    .line 99
     :goto_0
     return-object v1
 
-    .line 95
     :cond_0
     iget-object v2, p0, Lcom/android/volley/toolbox/JsonRequest;->mRequestBody:Ljava/lang/String;
 
@@ -187,11 +175,9 @@
 
     goto :goto_0
 
-    .line 96
     :catch_0
     move-exception v0
 
-    .line 97
     .local v0, "uee":Ljava/io/UnsupportedEncodingException;
     const-string v2, "Unsupported Encoding while trying to get the bytes of %s using %s"
 
@@ -220,7 +206,6 @@
     .locals 1
 
     .prologue
-    .line 89
     .local p0, "this":Lcom/android/volley/toolbox/JsonRequest;, "Lcom/android/volley/toolbox/JsonRequest<TT;>;"
     sget-object v0, Lcom/android/volley/toolbox/JsonRequest;->PROTOCOL_CONTENT_TYPE:Ljava/lang/String;
 
@@ -231,7 +216,6 @@
     .locals 1
 
     .prologue
-    .line 84
     .local p0, "this":Lcom/android/volley/toolbox/JsonRequest;, "Lcom/android/volley/toolbox/JsonRequest<TT;>;"
     invoke-virtual {p0}, Lcom/android/volley/toolbox/JsonRequest;->getBody()[B
 
@@ -244,7 +228,6 @@
     .locals 1
 
     .prologue
-    .line 76
     .local p0, "this":Lcom/android/volley/toolbox/JsonRequest;, "Lcom/android/volley/toolbox/JsonRequest<TT;>;"
     invoke-virtual {p0}, Lcom/android/volley/toolbox/JsonRequest;->getBodyContentType()Ljava/lang/String;
 

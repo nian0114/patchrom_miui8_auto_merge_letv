@@ -31,13 +31,10 @@
     .param p3, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 271
     iput-object p1, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView$InternalListViewSDK9;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;
 
-    .line 272
     invoke-direct {p0, p1, p2, p3}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView$InternalListView;-><init>(Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 273
     return-void
 .end method
 
@@ -51,13 +48,10 @@
     .param p4, "clampedY"    # Z
 
     .prologue
-    .line 292
     invoke-super {p0, p1, p2, p3, p4}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView$InternalListView;->onOverScrolled(IIZZ)V
 
-    .line 293
     iput-boolean p3, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView$InternalListViewSDK9;->mClampedX:Z
 
-    .line 294
     return-void
 .end method
 
@@ -74,18 +68,15 @@
     .param p9, "isTouchEvent"    # Z
 
     .prologue
-    .line 280
     invoke-super/range {p0 .. p9}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView$InternalListView;->overScrollBy(IIIIIIIIZ)Z
 
     move-result v6
 
-    .line 283
     .local v6, "returnValue":Z
     iget-boolean v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView$InternalListViewSDK9;->mClampedX:Z
 
     if-eqz v0, :cond_0
 
-    .line 284
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView$InternalListViewSDK9;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;
 
     move v1, p1
@@ -100,7 +91,6 @@
 
     invoke-static/range {v0 .. v5}, Lcom/letv/leui/widget/pulltorefresh/OverscrollHelper;->overScrollBy(Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;IIIIZ)V
 
-    .line 287
     :cond_0
     return v6
 .end method

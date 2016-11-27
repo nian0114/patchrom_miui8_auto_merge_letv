@@ -45,10 +45,8 @@
     .locals 1
 
     .prologue
-    .line 67
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 87
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
     move-result-object v0
@@ -64,7 +62,6 @@
     .locals 4
 
     .prologue
-    .line 91
     iget-wide v0, p0, Lcom/android/volley/Cache$Entry;->ttl:J
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -90,7 +87,6 @@
     .locals 4
 
     .prologue
-    .line 96
     iget-wide v0, p0, Lcom/android/volley/Cache$Entry;->softTtl:J
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J

@@ -26,7 +26,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 96
     iput-object p1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper$1;->this$0:Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     iput-object p3, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper$1;->val$cr:Landroid/content/ContentResolver;
@@ -47,7 +46,6 @@
 
     const/4 v1, 0x1
 
-    .line 99
     iget-object v3, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper$1;->this$0:Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper$1;->val$cr:Landroid/content/ContentResolver;
@@ -66,7 +64,6 @@
     # setter for: Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->isSettingEnable:Z
     invoke-static {v3, v0}, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->access$002(Lcom/letv/leui/systemui/AntiInadvertentlyHelper;Z)Z
 
-    .line 100
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper$1;->this$0:Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     # getter for: Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->isSettingEnable:Z
@@ -93,18 +90,15 @@
     # setter for: Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->ENABLE_ANTI_INADVERTENTLY:Ljava/lang/Boolean;
     invoke-static {v0}, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->access$102(Ljava/lang/Boolean;)Ljava/lang/Boolean;
 
-    .line 101
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 99
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 100
     goto :goto_1
 .end method

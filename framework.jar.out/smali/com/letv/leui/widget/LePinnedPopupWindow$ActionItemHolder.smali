@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 522
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,7 +39,6 @@
     .param p1, "x0"    # Lcom/letv/leui/widget/LePinnedPopupWindow$1;
 
     .prologue
-    .line 522
     invoke-direct {p0}, Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;-><init>()V
 
     return-void
@@ -54,13 +52,10 @@
     .param p2, "dividerBottom"    # Landroid/widget/ImageView;
 
     .prologue
-    .line 529
     iput-object p1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;->dividerOnTop:Landroid/widget/ImageView;
 
-    .line 530
     iput-object p2, p0, Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;->dividerOnBottom:Landroid/widget/ImageView;
 
-    .line 531
     return-void
 .end method
 
@@ -73,44 +68,36 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 534
     if-eqz p1, :cond_2
 
-    .line 535
     iget-object v0, p0, Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;->dividerOnTop:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_0
 
-    .line 536
     iget-object v0, p0, Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;->dividerOnTop:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1, v1, v1, v1}, Landroid/widget/ImageView;->setPadding(IIII)V
 
-    .line 538
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;->dividerOnBottom:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_1
 
-    .line 539
     iget-object v0, p0, Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;->dividerOnBottom:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1, v1, v1, v1}, Landroid/widget/ImageView;->setPadding(IIII)V
 
-    .line 560
     .end local p3    # "padding":I
     :cond_1
     :goto_0
     return-void
 
-    .line 542
     .restart local p3    # "padding":I
     :cond_2
     iget-object v0, p0, Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;->dividerOnTop:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_3
 
-    .line 543
     iget-object v5, p0, Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;->dividerOnTop:Landroid/widget/ImageView;
 
     if-eqz p2, :cond_4
@@ -135,13 +122,11 @@
     :goto_4
     invoke-virtual {v5, v4, v3, v2, v0}, Landroid/widget/ImageView;->setPadding(IIII)V
 
-    .line 551
     :cond_3
     iget-object v0, p0, Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;->dividerOnBottom:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_1
 
-    .line 552
     iget-object v4, p0, Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;->dividerOnBottom:Landroid/widget/ImageView;
 
     if-eqz p2, :cond_8
@@ -171,7 +156,6 @@
     :cond_4
     move v4, p3
 
-    .line 543
     goto :goto_1
 
     :cond_5
@@ -192,7 +176,6 @@
     :cond_8
     move v3, p3
 
-    .line 552
     goto :goto_5
 
     :cond_9

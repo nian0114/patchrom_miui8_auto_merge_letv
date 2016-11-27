@@ -52,51 +52,38 @@
     .param p10, "featureNames"    # [Ljava/lang/String;
 
     .prologue
-    .line 501
     iput-object p1, p0, Landroid/app/AppOpsUtils$AppOpsItem;->this$0:Landroid/app/AppOpsUtils;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 502
     iput p2, p0, Landroid/app/AppOpsUtils$AppOpsItem;->group_type:I
 
-    .line 503
     iput-object p3, p0, Landroid/app/AppOpsUtils$AppOpsItem;->group_title:Ljava/lang/String;
 
-    .line 504
     iput p4, p0, Landroid/app/AppOpsUtils$AppOpsItem;->order:I
 
-    .line 505
     iput-object p5, p0, Landroid/app/AppOpsUtils$AppOpsItem;->group_name:Ljava/lang/String;
 
-    .line 506
     iput-object p6, p0, Landroid/app/AppOpsUtils$AppOpsItem;->group_desc:Ljava/lang/String;
 
-    .line 507
     iput-object p7, p0, Landroid/app/AppOpsUtils$AppOpsItem;->perms:[Ljava/lang/String;
 
-    .line 508
     iput-object p8, p0, Landroid/app/AppOpsUtils$AppOpsItem;->ops:[I
 
-    .line 509
     move/from16 v0, p9
 
     iput-boolean v0, p0, Landroid/app/AppOpsUtils$AppOpsItem;->costMoney:Z
 
-    .line 510
     move-object/from16 v0, p10
 
     iput-object v0, p0, Landroid/app/AppOpsUtils$AppOpsItem;->featureNames:[Ljava/lang/String;
 
-    .line 511
     iget-boolean v3, p1, Landroid/app/AppOpsUtils;->isFirst:Z
 
     if-eqz v3, :cond_6
 
-    .line 512
     const/4 v1, 0x0
 
-    .line 513
     .local v1, "change":Z
     const/4 v2, 0x0
 
@@ -108,7 +95,6 @@
 
     if-ge v2, v3, :cond_2
 
-    .line 514
     iget-object v3, p1, Landroid/app/AppOpsUtils;->pm:Landroid/content/pm/PackageManager;
 
     aget-object v4, p10, v2
@@ -127,21 +113,17 @@
 
     if-eqz v3, :cond_0
 
-    .line 515
     const/4 v3, 0x0
 
     iput v3, p0, Landroid/app/AppOpsUtils$AppOpsItem;->mode:I
 
-    .line 516
     const/4 v1, 0x1
 
-    .line 513
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 517
     :cond_0
     iget-object v3, p1, Landroid/app/AppOpsUtils;->pm:Landroid/content/pm/PackageManager;
 
@@ -161,34 +143,29 @@
 
     if-eqz v3, :cond_1
 
-    .line 518
     const/4 v3, 0x1
 
     iput v3, p0, Landroid/app/AppOpsUtils$AppOpsItem;->mode:I
 
-    .line 519
     const/4 v1, 0x1
 
     goto :goto_1
 
-    .line 521
     :cond_1
     if-eqz v1, :cond_3
 
-    .line 539
     .end local v1    # "change":Z
     .end local v2    # "i":I
     :cond_2
     :goto_2
     return-void
 
-    .line 524
     .restart local v1    # "change":Z
     .restart local v2    # "i":I
     :cond_3
     iget-object v3, p1, Landroid/app/AppOpsUtils;->pm:Landroid/content/pm/PackageManager;
 
-    const-string/jumbo v4, "security.disable_runtime_permission"
+    const-string v4, "security.disable_runtime_permission"
 
     invoke-virtual {v3, v4}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
 
@@ -196,10 +173,9 @@
 
     if-eqz v3, :cond_5
 
-    .line 525
     iget-object v3, p1, Landroid/app/AppOpsUtils;->pm:Landroid/content/pm/PackageManager;
 
-    const-string/jumbo v4, "safe_show_phone_and_sms_permisson_detail"
+    const-string v4, "safe_show_phone_and_sms_permisson_detail"
 
     invoke-virtual {v3, v4}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
 
@@ -207,7 +183,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 526
     iget-object v3, p1, Landroid/app/AppOpsUtils;->aom:Landroid/app/AppOpsManager;
 
     const/4 v3, 0x0
@@ -226,7 +201,6 @@
 
     goto :goto_1
 
-    .line 528
     :cond_4
     iget-object v3, p1, Landroid/app/AppOpsUtils;->aom:Landroid/app/AppOpsManager;
 
@@ -244,7 +218,6 @@
 
     goto :goto_1
 
-    .line 531
     :cond_5
     iget-object v3, p1, Landroid/app/AppOpsUtils;->aom:Landroid/app/AppOpsManager;
 
@@ -260,7 +233,6 @@
 
     goto :goto_1
 
-    .line 537
     .end local v1    # "change":Z
     .end local v2    # "i":I
     :cond_6

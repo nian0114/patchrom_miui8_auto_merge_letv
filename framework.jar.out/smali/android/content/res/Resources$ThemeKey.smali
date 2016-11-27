@@ -32,10 +32,8 @@
     .locals 1
 
     .prologue
-    .line 1894
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1899
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/content/res/Resources$ThemeKey;->mHashCode:I
@@ -53,28 +51,23 @@
     .prologue
     const/4 v1, 0x4
 
-    .line 1902
     iget-object v0, p0, Landroid/content/res/Resources$ThemeKey;->mResId:[I
 
     if-nez v0, :cond_0
 
-    .line 1903
     new-array v0, v1, [I
 
     iput-object v0, p0, Landroid/content/res/Resources$ThemeKey;->mResId:[I
 
-    .line 1906
     :cond_0
     iget-object v0, p0, Landroid/content/res/Resources$ThemeKey;->mForce:[Z
 
     if-nez v0, :cond_1
 
-    .line 1907
     new-array v0, v1, [Z
 
     iput-object v0, p0, Landroid/content/res/Resources$ThemeKey;->mForce:[Z
 
-    .line 1910
     :cond_1
     iget-object v0, p0, Landroid/content/res/Resources$ThemeKey;->mResId:[I
 
@@ -86,7 +79,6 @@
 
     iput-object v0, p0, Landroid/content/res/Resources$ThemeKey;->mResId:[I
 
-    .line 1911
     iget-object v0, p0, Landroid/content/res/Resources$ThemeKey;->mForce:[Z
 
     iget v1, p0, Landroid/content/res/Resources$ThemeKey;->mCount:I
@@ -97,14 +89,12 @@
 
     iput-object v0, p0, Landroid/content/res/Resources$ThemeKey;->mForce:[Z
 
-    .line 1912
     iget v0, p0, Landroid/content/res/Resources$ThemeKey;->mCount:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Landroid/content/res/Resources$ThemeKey;->mCount:I
 
-    .line 1914
     iget v0, p0, Landroid/content/res/Resources$ThemeKey;->mHashCode:I
 
     mul-int/lit8 v0, v0, 0x1f
@@ -122,10 +112,8 @@
 
     iput v0, p0, Landroid/content/res/Resources$ThemeKey;->mHashCode:I
 
-    .line 1915
     return-void
 
-    .line 1914
     :cond_2
     const/4 v0, 0x0
 
@@ -136,33 +124,27 @@
     .locals 2
 
     .prologue
-    .line 1963
     new-instance v0, Landroid/content/res/Resources$ThemeKey;
 
     invoke-direct {v0}, Landroid/content/res/Resources$ThemeKey;-><init>()V
 
-    .line 1964
     .local v0, "other":Landroid/content/res/Resources$ThemeKey;
     iget-object v1, p0, Landroid/content/res/Resources$ThemeKey;->mResId:[I
 
     iput-object v1, v0, Landroid/content/res/Resources$ThemeKey;->mResId:[I
 
-    .line 1965
     iget-object v1, p0, Landroid/content/res/Resources$ThemeKey;->mForce:[Z
 
     iput-object v1, v0, Landroid/content/res/Resources$ThemeKey;->mForce:[Z
 
-    .line 1966
     iget v1, p0, Landroid/content/res/Resources$ThemeKey;->mCount:I
 
     iput v1, v0, Landroid/content/res/Resources$ThemeKey;->mCount:I
 
-    .line 1967
     iget v1, p0, Landroid/content/res/Resources$ThemeKey;->mHashCode:I
 
     iput v1, v0, Landroid/content/res/Resources$ThemeKey;->mHashCode:I
 
-    .line 1968
     return-object v0
 .end method
 
@@ -175,7 +157,6 @@
     .end annotation
 
     .prologue
-    .line 1894
     invoke-virtual {p0}, Landroid/content/res/Resources$ThemeKey;->clone()Landroid/content/res/Resources$ThemeKey;
 
     move-result-object v0
@@ -192,15 +173,12 @@
 
     const/4 v4, 0x0
 
-    .line 1935
     if-ne p0, p1, :cond_1
 
-    .line 1955
     :cond_0
     :goto_0
     return v3
 
-    .line 1939
     :cond_1
     if-eqz p1, :cond_2
 
@@ -227,16 +205,13 @@
     :cond_2
     move v3, v4
 
-    .line 1940
     goto :goto_0
 
     :cond_3
     move-object v2, p1
 
-    .line 1943
     check-cast v2, Landroid/content/res/Resources$ThemeKey;
 
-    .line 1944
     .local v2, "t":Landroid/content/res/Resources$ThemeKey;
     iget v5, p0, Landroid/content/res/Resources$ThemeKey;->mCount:I
 
@@ -246,14 +221,11 @@
 
     move v3, v4
 
-    .line 1945
     goto :goto_0
 
-    .line 1948
     :cond_4
     iget v0, p0, Landroid/content/res/Resources$ThemeKey;->mCount:I
 
-    .line 1949
     .local v0, "N":I
     const/4 v1, 0x0
 
@@ -261,7 +233,6 @@
     :goto_1
     if-ge v1, v0, :cond_0
 
-    .line 1950
     iget-object v5, p0, Landroid/content/res/Resources$ThemeKey;->mResId:[I
 
     aget v5, v5, v1
@@ -285,10 +256,8 @@
     :cond_5
     move v3, v4
 
-    .line 1951
     goto :goto_0
 
-    .line 1949
     :cond_6
     add-int/lit8 v1, v1, 0x1
 
@@ -299,7 +268,6 @@
     .locals 1
 
     .prologue
-    .line 1930
     iget v0, p0, Landroid/content/res/Resources$ThemeKey;->mHashCode:I
 
     return v0
@@ -312,7 +280,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1923
     iget-object v0, p1, Landroid/content/res/Resources$ThemeKey;->mResId:[I
 
     if-nez v0, :cond_0
@@ -322,7 +289,6 @@
     :goto_0
     iput-object v0, p0, Landroid/content/res/Resources$ThemeKey;->mResId:[I
 
-    .line 1924
     iget-object v0, p1, Landroid/content/res/Resources$ThemeKey;->mForce:[Z
 
     if-nez v0, :cond_1
@@ -330,15 +296,12 @@
     :goto_1
     iput-object v1, p0, Landroid/content/res/Resources$ThemeKey;->mForce:[Z
 
-    .line 1925
     iget v0, p1, Landroid/content/res/Resources$ThemeKey;->mCount:I
 
     iput v0, p0, Landroid/content/res/Resources$ThemeKey;->mCount:I
 
-    .line 1926
     return-void
 
-    .line 1923
     :cond_0
     iget-object v0, p1, Landroid/content/res/Resources$ThemeKey;->mResId:[I
 
@@ -350,7 +313,6 @@
 
     goto :goto_0
 
-    .line 1924
     :cond_1
     iget-object v0, p1, Landroid/content/res/Resources$ThemeKey;->mForce:[Z
 

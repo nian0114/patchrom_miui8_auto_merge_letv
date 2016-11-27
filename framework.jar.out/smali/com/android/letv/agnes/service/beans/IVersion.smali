@@ -36,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 91
     new-instance v0, Lcom/android/letv/agnes/service/beans/IVersion$1;
 
     invoke-direct {v0}, Lcom/android/letv/agnes/service/beans/IVersion$1;-><init>()V
@@ -50,10 +49,8 @@
     .locals 0
 
     .prologue
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
     return-void
 .end method
 
@@ -66,25 +63,18 @@
     .param p5, "version"    # Ljava/lang/String;
 
     .prologue
-    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 19
     iput p1, p0, Lcom/android/letv/agnes/service/beans/IVersion;->major:I
 
-    .line 20
     iput p2, p0, Lcom/android/letv/agnes/service/beans/IVersion;->minor:I
 
-    .line 21
     iput p3, p0, Lcom/android/letv/agnes/service/beans/IVersion;->patch:I
 
-    .line 22
     iput-object p4, p0, Lcom/android/letv/agnes/service/beans/IVersion;->build:Ljava/lang/String;
 
-    .line 23
     iput-object p5, p0, Lcom/android/letv/agnes/service/beans/IVersion;->version:Ljava/lang/String;
 
-    .line 24
     return-void
 .end method
 
@@ -94,7 +84,6 @@
     .locals 1
 
     .prologue
-    .line 79
     const/4 v0, 0x0
 
     return v0
@@ -104,7 +93,6 @@
     .locals 1
 
     .prologue
-    .line 55
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IVersion;->build:Ljava/lang/String;
 
     return-object v0
@@ -114,7 +102,6 @@
     .locals 1
 
     .prologue
-    .line 31
     iget v0, p0, Lcom/android/letv/agnes/service/beans/IVersion;->major:I
 
     return v0
@@ -124,7 +111,6 @@
     .locals 1
 
     .prologue
-    .line 39
     iget v0, p0, Lcom/android/letv/agnes/service/beans/IVersion;->minor:I
 
     return v0
@@ -134,7 +120,6 @@
     .locals 1
 
     .prologue
-    .line 47
     iget v0, p0, Lcom/android/letv/agnes/service/beans/IVersion;->patch:I
 
     return v0
@@ -144,7 +129,6 @@
     .locals 1
 
     .prologue
-    .line 63
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IVersion;->version:Ljava/lang/String;
 
     return-object v0
@@ -155,10 +139,8 @@
     .param p1, "build"    # Ljava/lang/String;
 
     .prologue
-    .line 51
     iput-object p1, p0, Lcom/android/letv/agnes/service/beans/IVersion;->build:Ljava/lang/String;
 
-    .line 52
     return-void
 .end method
 
@@ -167,10 +149,8 @@
     .param p1, "major"    # I
 
     .prologue
-    .line 27
     iput p1, p0, Lcom/android/letv/agnes/service/beans/IVersion;->major:I
 
-    .line 28
     return-void
 .end method
 
@@ -179,10 +159,8 @@
     .param p1, "minor"    # I
 
     .prologue
-    .line 35
     iput p1, p0, Lcom/android/letv/agnes/service/beans/IVersion;->minor:I
 
-    .line 36
     return-void
 .end method
 
@@ -191,10 +169,8 @@
     .param p1, "patch"    # I
 
     .prologue
-    .line 43
     iput p1, p0, Lcom/android/letv/agnes/service/beans/IVersion;->patch:I
 
-    .line 44
     return-void
 .end method
 
@@ -203,10 +179,8 @@
     .param p1, "version"    # Ljava/lang/String;
 
     .prologue
-    .line 59
     iput-object p1, p0, Lcom/android/letv/agnes/service/beans/IVersion;->version:Ljava/lang/String;
 
-    .line 60
     return-void
 .end method
 
@@ -222,25 +196,20 @@
 
     const/4 v3, 0x0
 
-    .line 68
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IVersion;->version:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 69
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IVersion;->version:Ljava/lang/String;
 
-    .line 73
     :goto_0
     return-object v0
 
-    .line 70
     :cond_0
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IVersion;->build:Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
-    .line 71
     const-string v0, "%d.%d.%d.%s"
 
     const/4 v1, 0x4
@@ -281,7 +250,6 @@
 
     goto :goto_0
 
-    .line 73
     :cond_1
     const-string v0, "%d.%d.%d"
 
@@ -324,31 +292,25 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 84
     iget v0, p0, Lcom/android/letv/agnes/service/beans/IVersion;->major:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 85
     iget v0, p0, Lcom/android/letv/agnes/service/beans/IVersion;->minor:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 86
     iget v0, p0, Lcom/android/letv/agnes/service/beans/IVersion;->patch:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 87
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IVersion;->build:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 88
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IVersion;->version:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 89
     return-void
 .end method

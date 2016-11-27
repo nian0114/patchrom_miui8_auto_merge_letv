@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 287
     invoke-static {}, Lcom/android/server/power/xtend/PowerXtendPlugInImpl$XtendMode;->values()[Lcom/android/server/power/xtend/PowerXtendPlugInImpl$XtendMode;
 
     move-result-object v0

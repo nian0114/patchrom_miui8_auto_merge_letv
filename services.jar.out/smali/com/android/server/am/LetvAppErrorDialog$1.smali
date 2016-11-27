@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 147
     iput-object p1, p0, Lcom/android/server/am/LetvAppErrorDialog$1;->this$0:Lcom/android/server/am/LetvAppErrorDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,14 +40,12 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 150
     const-string v0, "LetvAppErrorDialog"
 
     const-string v1, "FORCE_QUIT OK button"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 151
     iget-object v0, p0, Lcom/android/server/am/LetvAppErrorDialog$1;->this$0:Lcom/android/server/am/LetvAppErrorDialog;
 
     # getter for: Lcom/android/server/am/LetvAppErrorDialog;->mHandler:Landroid/os/Handler;
@@ -71,6 +68,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 152
     return-void
 .end method

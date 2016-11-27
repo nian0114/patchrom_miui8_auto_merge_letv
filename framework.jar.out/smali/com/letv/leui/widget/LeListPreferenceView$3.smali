@@ -36,7 +36,6 @@
     .param p5, "x3"    # [Ljava/lang/CharSequence;
 
     .prologue
-    .line 485
     iput-object p1, p0, Lcom/letv/leui/widget/LeListPreferenceView$3;->this$0:Lcom/letv/leui/widget/LeListPreferenceView;
 
     invoke-direct {p0, p2, p3, p4, p5}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;II[Ljava/lang/Object;)V
@@ -55,12 +54,10 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 488
     invoke-super {p0, p1, p2, p3}, Landroid/widget/ArrayAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v2
 
-    .line 489
     .local v2, "view":Landroid/view/View;
     const v3, 0x1020016
 
@@ -68,13 +65,11 @@
 
     move-result-object v1
 
-    .line 491
     .local v1, "title":Landroid/view/View;
     instance-of v3, v1, Landroid/widget/TextView;
 
     if-eqz v3, :cond_0
 
-    .line 496
     iget-object v3, p0, Lcom/letv/leui/widget/LeListPreferenceView$3;->this$0:Lcom/letv/leui/widget/LeListPreferenceView;
 
     # getter for: Lcom/letv/leui/widget/LeListPreferenceView;->listTitleColorSelected:I
@@ -84,7 +79,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 497
     check-cast v1, Landroid/widget/TextView;
 
     .end local v1    # "title":Landroid/view/View;
@@ -97,7 +91,6 @@
 
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 501
     :cond_0
     const v3, 0x1020001
 
@@ -105,13 +98,11 @@
 
     move-result-object v0
 
-    .line 503
     .local v0, "checkbox":Landroid/view/View;
     instance-of v3, v0, Lcom/letv/leui/widget/LeCheckBox;
 
     if-eqz v3, :cond_1
 
-    .line 504
     iget-object v3, p0, Lcom/letv/leui/widget/LeListPreferenceView$3;->this$0:Lcom/letv/leui/widget/LeListPreferenceView;
 
     # getter for: Lcom/letv/leui/widget/LeListPreferenceView;->mClickedDialogEntryIndex:I
@@ -121,18 +112,15 @@
 
     if-ne p1, v3, :cond_2
 
-    .line 505
     check-cast v0, Lcom/letv/leui/widget/LeCheckBox;
 
     .end local v0    # "checkbox":Landroid/view/View;
     invoke-virtual {v0, v4, v4}, Lcom/letv/leui/widget/LeCheckBox;->setChecked(ZZ)V
 
-    .line 511
     :cond_1
     :goto_0
     return-object v2
 
-    .line 507
     .restart local v0    # "checkbox":Landroid/view/View;
     :cond_2
     check-cast v0, Lcom/letv/leui/widget/LeCheckBox;

@@ -71,7 +71,6 @@
     .locals 1
 
     .prologue
-    .line 437
     new-instance v0, Lcom/letv/leui/widget/LeMenuPopupHelper$HiddenMethodReflector;
 
     invoke-direct {v0}, Lcom/letv/leui/widget/LeMenuPopupHelper$HiddenMethodReflector;-><init>()V
@@ -87,14 +86,12 @@
     .param p2, "menu"    # Lcom/android/internal/view/menu/MenuBuilder;
 
     .prologue
-    .line 84
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-direct {p0, p1, p2, v0, v1}, Lcom/letv/leui/widget/LeMenuPopupHelper;-><init>(Landroid/content/Context;Lcom/android/internal/view/menu/MenuBuilder;Landroid/view/View;Z)V
 
-    .line 85
     return-void
 .end method
 
@@ -105,12 +102,10 @@
     .param p3, "anchorView"    # Landroid/view/View;
 
     .prologue
-    .line 88
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/letv/leui/widget/LeMenuPopupHelper;-><init>(Landroid/content/Context;Lcom/android/internal/view/menu/MenuBuilder;Landroid/view/View;Z)V
 
-    .line 89
     return-void
 .end method
 
@@ -122,28 +117,22 @@
     .param p4, "overflowOnly"    # Z
 
     .prologue
-    .line 92
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 81
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mDropDownGravity:I
 
-    .line 93
     iput-object p1, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mContext:Landroid/content/Context;
 
-    .line 94
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 95
     iput-object p2, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mMenu:Lcom/android/internal/view/menu/MenuBuilder;
 
-    .line 96
     new-instance v1, Lcom/letv/leui/widget/LeMenuPopupHelper$MenuAdapter;
 
     iget-object v2, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mMenu:Lcom/android/internal/view/menu/MenuBuilder;
@@ -152,15 +141,12 @@
 
     iput-object v1, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mAdapter:Lcom/letv/leui/widget/LeMenuPopupHelper$MenuAdapter;
 
-    .line 97
     iput-boolean p4, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mOverflowOnly:Z
 
-    .line 99
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 100
     .local v0, "res":Landroid/content/res/Resources;
     invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
@@ -182,13 +168,10 @@
 
     iput v1, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mPopupMaxWidth:I
 
-    .line 103
     iput-object p3, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mAnchorView:Landroid/view/View;
 
-    .line 105
     invoke-virtual {p2, p0}, Lcom/android/internal/view/menu/MenuBuilder;->addMenuPresenter(Lcom/android/internal/view/menu/MenuPresenter;)V
 
-    .line 106
     return-void
 .end method
 
@@ -197,7 +180,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LeMenuPopupHelper;
 
     .prologue
-    .line 52
     iget-boolean v0, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mOverflowOnly:Z
 
     return v0
@@ -207,7 +189,6 @@
     .locals 1
 
     .prologue
-    .line 52
     sget-object v0, Lcom/letv/leui/widget/LeMenuPopupHelper;->HIDDEN_REFLECTOR:Lcom/letv/leui/widget/LeMenuPopupHelper$HiddenMethodReflector;
 
     return-object v0
@@ -218,7 +199,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LeMenuPopupHelper;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mInflater:Landroid/view/LayoutInflater;
 
     return-object v0
@@ -229,7 +209,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LeMenuPopupHelper;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mMenu:Lcom/android/internal/view/menu/MenuBuilder;
 
     return-object v0
@@ -241,40 +220,32 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 210
     const/4 v7, 0x0
 
-    .line 211
     .local v7, "maxWidth":I
     const/4 v5, 0x0
 
-    .line 212
     .local v5, "itemView":Landroid/view/View;
     const/4 v4, 0x0
 
-    .line 214
     .local v4, "itemType":I
     iget-object v0, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mAdapter:Lcom/letv/leui/widget/LeMenuPopupHelper$MenuAdapter;
 
-    .line 215
     .local v0, "adapter":Landroid/widget/ListAdapter;
     invoke-static {v10, v10}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v9
 
-    .line 216
     .local v9, "widthMeasureSpec":I
     invoke-static {v10, v10}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v2
 
-    .line 217
     .local v2, "heightMeasureSpec":I
     invoke-interface {v0}, Landroid/widget/ListAdapter;->getCount()I
 
     move-result v1
 
-    .line 218
     .local v1, "count":I
     const/4 v3, 0x0
 
@@ -282,28 +253,22 @@
     :goto_0
     if-ge v3, v1, :cond_2
 
-    .line 219
     invoke-interface {v0, v3}, Landroid/widget/ListAdapter;->getItemViewType(I)I
 
     move-result v8
 
-    .line 220
     .local v8, "positionType":I
     if-eq v8, v4, :cond_0
 
-    .line 221
     move v4, v8
 
-    .line 222
     const/4 v5, 0x0
 
-    .line 225
     :cond_0
     iget-object v10, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mMeasureParent:Landroid/view/ViewGroup;
 
     if-nez v10, :cond_1
 
-    .line 226
     new-instance v10, Landroid/widget/FrameLayout;
 
     iget-object v11, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mContext:Landroid/content/Context;
@@ -312,7 +277,6 @@
 
     iput-object v10, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mMeasureParent:Landroid/view/ViewGroup;
 
-    .line 229
     :cond_1
     iget-object v10, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mMeasureParent:Landroid/view/ViewGroup;
 
@@ -320,41 +284,33 @@
 
     move-result-object v5
 
-    .line 230
     invoke-virtual {v5, v9, v2}, Landroid/view/View;->measure(II)V
 
-    .line 232
     invoke-virtual {v5}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v6
 
-    .line 233
     .local v6, "itemWidth":I
     iget v10, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mPopupMaxWidth:I
 
     if-lt v6, v10, :cond_3
 
-    .line 234
     iget v7, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mPopupMaxWidth:I
 
-    .line 240
     .end local v6    # "itemWidth":I
     .end local v7    # "maxWidth":I
     .end local v8    # "positionType":I
     :cond_2
     return v7
 
-    .line 235
     .restart local v6    # "itemWidth":I
     .restart local v7    # "maxWidth":I
     .restart local v8    # "positionType":I
     :cond_3
     if-le v6, v7, :cond_4
 
-    .line 236
     move v7, v6
 
-    .line 218
     :cond_4
     add-int/lit8 v3, v3, 0x1
 
@@ -369,7 +325,6 @@
     .param p2, "item"    # Lcom/android/internal/view/menu/MenuItemImpl;
 
     .prologue
-    .line 341
     const/4 v0, 0x0
 
     return v0
@@ -379,19 +334,16 @@
     .locals 1
 
     .prologue
-    .line 174
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeMenuPopupHelper;->isShowing()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 175
     iget-object v0, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mPopup:Landroid/widget/ListPopupWindow;
 
     invoke-virtual {v0}, Landroid/widget/ListPopupWindow;->dismiss()V
 
-    .line 177
     :cond_0
     return-void
 .end method
@@ -402,7 +354,6 @@
     .param p2, "item"    # Lcom/android/internal/view/menu/MenuItemImpl;
 
     .prologue
-    .line 337
     const/4 v0, 0x0
 
     return v0
@@ -412,7 +363,6 @@
     .locals 1
 
     .prologue
-    .line 333
     const/4 v0, 0x0
 
     return v0
@@ -422,7 +372,6 @@
     .locals 1
 
     .prologue
-    .line 346
     const/4 v0, 0x0
 
     return v0
@@ -433,7 +382,6 @@
     .param p1, "root"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 276
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "MenuPopupHelpers manage their own views"
@@ -447,7 +395,6 @@
     .locals 1
 
     .prologue
-    .line 127
     iget-object v0, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mPopup:Landroid/widget/ListPopupWindow;
 
     return-object v0
@@ -459,7 +406,6 @@
     .param p2, "menu"    # Lcom/android/internal/view/menu/MenuBuilder;
 
     .prologue
-    .line 272
     return-void
 .end method
 
@@ -467,7 +413,6 @@
     .locals 1
 
     .prologue
-    .line 434
     iget-boolean v0, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mIgnoreGlobalLayout:Z
 
     return v0
@@ -477,7 +422,6 @@
     .locals 1
 
     .prologue
-    .line 191
     iget-object v0, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mPopup:Landroid/widget/ListPopupWindow;
 
     if-eqz v0, :cond_0
@@ -507,26 +451,21 @@
     .param p2, "allMenusAreClosing"    # Z
 
     .prologue
-    .line 323
     iget-object v0, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mMenu:Lcom/android/internal/view/menu/MenuBuilder;
 
     if-eq p1, v0, :cond_1
 
-    .line 329
     :cond_0
     :goto_0
     return-void
 
-    .line 325
     :cond_1
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeMenuPopupHelper;->dismiss()V
 
-    .line 326
     iget-object v0, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mPresenterCallback:Lcom/android/internal/view/menu/MenuPresenter$Callback;
 
     if-eqz v0, :cond_0
 
-    .line 327
     iget-object v0, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mPresenterCallback:Lcom/android/internal/view/menu/MenuPresenter$Callback;
 
     invoke-interface {v0, p1, p2}, Lcom/android/internal/view/menu/MenuPresenter$Callback;->onCloseMenu(Lcom/android/internal/view/menu/MenuBuilder;Z)V
@@ -540,20 +479,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 180
     iput-object v1, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mPopup:Landroid/widget/ListPopupWindow;
 
-    .line 181
     iget-object v0, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mMenu:Lcom/android/internal/view/menu/MenuBuilder;
 
     invoke-virtual {v0}, Lcom/android/internal/view/menu/MenuBuilder;->close()V
 
-    .line 182
     iget-object v0, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mTreeObserver:Landroid/view/ViewTreeObserver;
 
     if-eqz v0, :cond_1
 
-    .line 183
     iget-object v0, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mTreeObserver:Landroid/view/ViewTreeObserver;
 
     invoke-virtual {v0}, Landroid/view/ViewTreeObserver;->isAlive()Z
@@ -570,22 +505,18 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mTreeObserver:Landroid/view/ViewTreeObserver;
 
-    .line 184
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mTreeObserver:Landroid/view/ViewTreeObserver;
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeGlobalOnLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 185
     iput-object v1, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mTreeObserver:Landroid/view/ViewTreeObserver;
 
-    .line 187
     :cond_1
     iget-object v0, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mAnchorView:Landroid/view/View;
 
     invoke-virtual {v0, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
-    .line 188
     return-void
 .end method
 
@@ -593,17 +524,14 @@
     .locals 2
 
     .prologue
-    .line 245
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeMenuPopupHelper;->isShowing()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 246
     iget-object v0, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mAnchorView:Landroid/view/View;
 
-    .line 247
     .local v0, "anchor":Landroid/view/View;
     if-eqz v0, :cond_0
 
@@ -618,16 +546,13 @@
 
     if-nez v1, :cond_2
 
-    .line 248
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeMenuPopupHelper;->dismiss()V
 
-    .line 254
     .end local v0    # "anchor":Landroid/view/View;
     :cond_1
     :goto_0
     return-void
 
-    .line 249
     .restart local v0    # "anchor":Landroid/view/View;
     :cond_2
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeMenuPopupHelper;->isShowing()Z
@@ -636,7 +561,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 251
     iget-object v1, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mPopup:Landroid/widget/ListPopupWindow;
 
     invoke-virtual {v1}, Landroid/widget/ListPopupWindow;->show()V
@@ -660,11 +584,9 @@
     .end annotation
 
     .prologue
-    .line 196
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     iget-object v0, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mAdapter:Lcom/letv/leui/widget/LeMenuPopupHelper$MenuAdapter;
 
-    .line 197
     .local v0, "adapter":Lcom/letv/leui/widget/LeMenuPopupHelper$MenuAdapter;
     # getter for: Lcom/letv/leui/widget/LeMenuPopupHelper$MenuAdapter;->mAdapterMenu:Lcom/android/internal/view/menu/MenuBuilder;
     invoke-static {v0}, Lcom/letv/leui/widget/LeMenuPopupHelper$MenuAdapter;->access$000(Lcom/letv/leui/widget/LeMenuPopupHelper$MenuAdapter;)Lcom/android/internal/view/menu/MenuBuilder;
@@ -679,7 +601,6 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/internal/view/menu/MenuBuilder;->performItemAction(Landroid/view/MenuItem;I)Z
 
-    .line 198
     return-void
 .end method
 
@@ -692,7 +613,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 201
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v1
@@ -703,10 +623,8 @@
 
     if-ne p2, v1, :cond_0
 
-    .line 202
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeMenuPopupHelper;->dismiss()V
 
-    .line 205
     :goto_0
     return v0
 
@@ -721,7 +639,6 @@
     .param p1, "state"    # Landroid/os/Parcelable;
 
     .prologue
-    .line 356
     return-void
 .end method
 
@@ -729,7 +646,6 @@
     .locals 1
 
     .prologue
-    .line 351
     const/4 v0, 0x0
 
     return-object v0
@@ -742,14 +658,12 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 295
     invoke-virtual {p1}, Lcom/android/internal/view/menu/SubMenuBuilder;->hasVisibleItems()Z
 
     move-result v6
 
     if-eqz v6, :cond_2
 
-    .line 296
     new-instance v4, Lcom/letv/leui/widget/LeMenuPopupHelper;
 
     iget-object v6, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mContext:Landroid/content/Context;
@@ -758,22 +672,18 @@
 
     invoke-direct {v4, v6, p1, v7, v5}, Lcom/letv/leui/widget/LeMenuPopupHelper;-><init>(Landroid/content/Context;Lcom/android/internal/view/menu/MenuBuilder;Landroid/view/View;Z)V
 
-    .line 297
     .local v4, "subPopup":Lcom/letv/leui/widget/LeMenuPopupHelper;
     iget-object v6, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mPresenterCallback:Lcom/android/internal/view/menu/MenuPresenter$Callback;
 
     invoke-virtual {v4, v6}, Lcom/letv/leui/widget/LeMenuPopupHelper;->setCallback(Lcom/android/internal/view/menu/MenuPresenter$Callback;)V
 
-    .line 299
     const/4 v3, 0x0
 
-    .line 300
     .local v3, "preserveIconSpacing":Z
     invoke-virtual {p1}, Lcom/android/internal/view/menu/SubMenuBuilder;->size()I
 
     move-result v1
 
-    .line 301
     .local v1, "count":I
     const/4 v2, 0x0
 
@@ -781,12 +691,10 @@
     :goto_0
     if-ge v2, v1, :cond_0
 
-    .line 302
     invoke-virtual {p1, v2}, Lcom/android/internal/view/menu/SubMenuBuilder;->getItem(I)Landroid/view/MenuItem;
 
     move-result-object v0
 
-    .line 303
     .local v0, "childItem":Landroid/view/MenuItem;
     invoke-interface {v0}, Landroid/view/MenuItem;->isVisible()Z
 
@@ -800,36 +708,29 @@
 
     if-eqz v6, :cond_3
 
-    .line 304
     const/4 v3, 0x1
 
-    .line 308
     .end local v0    # "childItem":Landroid/view/MenuItem;
     :cond_0
     invoke-virtual {v4, v3}, Lcom/letv/leui/widget/LeMenuPopupHelper;->setForceShowIcon(Z)V
 
-    .line 310
     invoke-virtual {v4}, Lcom/letv/leui/widget/LeMenuPopupHelper;->tryShow()Z
 
     move-result v6
 
     if-eqz v6, :cond_2
 
-    .line 311
     iget-object v5, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mPresenterCallback:Lcom/android/internal/view/menu/MenuPresenter$Callback;
 
     if-eqz v5, :cond_1
 
-    .line 312
     iget-object v5, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mPresenterCallback:Lcom/android/internal/view/menu/MenuPresenter$Callback;
 
     invoke-interface {v5, p1}, Lcom/android/internal/view/menu/MenuPresenter$Callback;->onOpenSubMenu(Lcom/android/internal/view/menu/MenuBuilder;)Z
 
-    .line 314
     :cond_1
     const/4 v5, 0x1
 
-    .line 317
     .end local v1    # "count":I
     .end local v2    # "i":I
     .end local v3    # "preserveIconSpacing":Z
@@ -837,7 +738,6 @@
     :cond_2
     return v5
 
-    .line 301
     .restart local v0    # "childItem":Landroid/view/MenuItem;
     .restart local v1    # "count":I
     .restart local v2    # "i":I
@@ -854,7 +754,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 258
     return-void
 .end method
 
@@ -863,12 +762,10 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 262
     iget-object v0, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mTreeObserver:Landroid/view/ViewTreeObserver;
 
     if-eqz v0, :cond_1
 
-    .line 263
     iget-object v0, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mTreeObserver:Landroid/view/ViewTreeObserver;
 
     invoke-virtual {v0}, Landroid/view/ViewTreeObserver;->isAlive()Z
@@ -883,17 +780,14 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mTreeObserver:Landroid/view/ViewTreeObserver;
 
-    .line 264
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mTreeObserver:Landroid/view/ViewTreeObserver;
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeGlobalOnLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 266
     :cond_1
     invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
-    .line 267
     return-void
 .end method
 
@@ -902,10 +796,8 @@
     .param p1, "anchor"    # Landroid/view/View;
 
     .prologue
-    .line 109
     iput-object p1, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mAnchorView:Landroid/view/View;
 
-    .line 110
     return-void
 .end method
 
@@ -914,10 +806,8 @@
     .param p1, "cb"    # Lcom/android/internal/view/menu/MenuPresenter$Callback;
 
     .prologue
-    .line 290
     iput-object p1, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mPresenterCallback:Lcom/android/internal/view/menu/MenuPresenter$Callback;
 
-    .line 291
     return-void
 .end method
 
@@ -926,10 +816,8 @@
     .param p1, "forceShow"    # Z
 
     .prologue
-    .line 113
     iput-boolean p1, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mForceShowIcon:Z
 
-    .line 114
     return-void
 .end method
 
@@ -938,10 +826,8 @@
     .param p1, "gravity"    # I
 
     .prologue
-    .line 117
     iput p1, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mDropDownGravity:I
 
-    .line 118
     return-void
 .end method
 
@@ -950,10 +836,8 @@
     .param p1, "x"    # I
 
     .prologue
-    .line 137
     iput p1, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mHorizontalOffset:I
 
-    .line 138
     return-void
 .end method
 
@@ -962,10 +846,8 @@
     .param p1, "isIgnore"    # Z
 
     .prologue
-    .line 430
     iput-boolean p1, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mIgnoreGlobalLayout:Z
 
-    .line 431
     return-void
 .end method
 
@@ -974,10 +856,8 @@
     .param p1, "y"    # I
 
     .prologue
-    .line 132
     iput p1, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mVerticalOffset:I
 
-    .line 133
     return-void
 .end method
 
@@ -985,14 +865,12 @@
     .locals 2
 
     .prologue
-    .line 121
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeMenuPopupHelper;->tryShow()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 122
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "MenuPopupHelper cannot be used without an anchor"
@@ -1001,7 +879,6 @@
 
     throw v0
 
-    .line 124
     :cond_0
     return-void
 .end method
@@ -1014,7 +891,6 @@
 
     const/4 v2, 0x1
 
-    .line 141
     new-instance v3, Landroid/widget/ListPopupWindow;
 
     iget-object v4, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mContext:Landroid/content/Context;
@@ -1027,43 +903,35 @@
 
     iput-object v3, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mPopup:Landroid/widget/ListPopupWindow;
 
-    .line 142
     iget-object v3, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mPopup:Landroid/widget/ListPopupWindow;
 
     invoke-virtual {v3, p0}, Landroid/widget/ListPopupWindow;->setOnDismissListener(Landroid/widget/PopupWindow$OnDismissListener;)V
 
-    .line 143
     iget-object v3, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mPopup:Landroid/widget/ListPopupWindow;
 
     invoke-virtual {v3, p0}, Landroid/widget/ListPopupWindow;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 144
     iget-object v3, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mPopup:Landroid/widget/ListPopupWindow;
 
     iget-object v4, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mAdapter:Lcom/letv/leui/widget/LeMenuPopupHelper$MenuAdapter;
 
     invoke-virtual {v3, v4}, Landroid/widget/ListPopupWindow;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 145
     iget-object v3, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mPopup:Landroid/widget/ListPopupWindow;
 
     invoke-virtual {v3, v2}, Landroid/widget/ListPopupWindow;->setModal(Z)V
 
-    .line 147
     iget-object v1, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mAnchorView:Landroid/view/View;
 
-    .line 148
     .local v1, "anchor":Landroid/view/View;
     if-eqz v1, :cond_3
 
-    .line 149
     iget-object v3, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mTreeObserver:Landroid/view/ViewTreeObserver;
 
     if-nez v3, :cond_0
 
     move v0, v2
 
-    .line 150
     .local v0, "addGlobalListener":Z
     :cond_0
     invoke-virtual {v1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
@@ -1072,45 +940,37 @@
 
     iput-object v3, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mTreeObserver:Landroid/view/ViewTreeObserver;
 
-    .line 151
     if-eqz v0, :cond_1
 
     iget-object v3, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mTreeObserver:Landroid/view/ViewTreeObserver;
 
     invoke-virtual {v3, p0}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 152
     :cond_1
     invoke-virtual {v1, p0}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
-    .line 153
     iget-object v3, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mPopup:Landroid/widget/ListPopupWindow;
 
     invoke-virtual {v3, v1}, Landroid/widget/ListPopupWindow;->setAnchorView(Landroid/view/View;)V
 
-    .line 154
     iget-object v3, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mPopup:Landroid/widget/ListPopupWindow;
 
     iget v4, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mDropDownGravity:I
 
     invoke-virtual {v3, v4}, Landroid/widget/ListPopupWindow;->setDropDownGravity(I)V
 
-    .line 159
     iget-boolean v3, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mHasContentWidth:Z
 
     if-nez v3, :cond_2
 
-    .line 160
     invoke-direct {p0}, Lcom/letv/leui/widget/LeMenuPopupHelper;->measureContentWidth()I
 
     move-result v3
 
     iput v3, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mContentWidth:I
 
-    .line 161
     iput-boolean v2, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mHasContentWidth:Z
 
-    .line 164
     :cond_2
     iget-object v3, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mPopup:Landroid/widget/ListPopupWindow;
 
@@ -1118,33 +978,28 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/ListPopupWindow;->setContentWidth(I)V
 
-    .line 165
     iget-object v3, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mPopup:Landroid/widget/ListPopupWindow;
 
     const/4 v4, 0x2
 
     invoke-virtual {v3, v4}, Landroid/widget/ListPopupWindow;->setInputMethodMode(I)V
 
-    .line 166
     iget-object v3, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mPopup:Landroid/widget/ListPopupWindow;
 
     iget v4, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mHorizontalOffset:I
 
     invoke-virtual {v3, v4}, Landroid/widget/ListPopupWindow;->setHorizontalOffset(I)V
 
-    .line 167
     iget-object v3, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mPopup:Landroid/widget/ListPopupWindow;
 
     iget v4, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mVerticalOffset:I
 
     invoke-virtual {v3, v4}, Landroid/widget/ListPopupWindow;->setVerticalOffset(I)V
 
-    .line 168
     iget-object v3, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mPopup:Landroid/widget/ListPopupWindow;
 
     invoke-virtual {v3}, Landroid/widget/ListPopupWindow;->show()V
 
-    .line 169
     iget-object v3, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mPopup:Landroid/widget/ListPopupWindow;
 
     invoke-virtual {v3}, Landroid/widget/ListPopupWindow;->getListView()Landroid/widget/ListView;
@@ -1153,7 +1008,6 @@
 
     invoke-virtual {v3, p0}, Landroid/widget/ListView;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
 
-    .line 170
     .end local v0    # "addGlobalListener":Z
     :goto_0
     return v2
@@ -1161,7 +1015,6 @@
     :cond_3
     move v2, v0
 
-    .line 156
     goto :goto_0
 .end method
 
@@ -1170,22 +1023,18 @@
     .param p1, "cleared"    # Z
 
     .prologue
-    .line 281
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mHasContentWidth:Z
 
-    .line 283
     iget-object v0, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mAdapter:Lcom/letv/leui/widget/LeMenuPopupHelper$MenuAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 284
     iget-object v0, p0, Lcom/letv/leui/widget/LeMenuPopupHelper;->mAdapter:Lcom/letv/leui/widget/LeMenuPopupHelper$MenuAdapter;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/LeMenuPopupHelper$MenuAdapter;->notifyDataSetChanged()V
 
-    .line 286
     :cond_0
     return-void
 .end method

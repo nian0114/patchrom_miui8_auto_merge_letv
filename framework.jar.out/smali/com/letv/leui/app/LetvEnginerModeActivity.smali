@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 19
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     return-void
@@ -21,15 +20,12 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 26
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 27
     const v2, 0x10900ab
 
     invoke-virtual {p0, v2}, Lcom/letv/leui/app/LetvEnginerModeActivity;->setContentView(I)V
 
-    .line 28
     const v2, 0x1020439
 
     invoke-virtual {p0, v2}, Lcom/letv/leui/app/LetvEnginerModeActivity;->findViewById(I)Landroid/view/View;
@@ -38,7 +34,6 @@
 
     check-cast v1, Landroid/widget/Button;
 
-    .line 29
     .local v1, "tv_open":Landroid/widget/Button;
     new-instance v2, Lcom/letv/leui/app/LetvEnginerModeActivity$1;
 
@@ -46,7 +41,6 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 36
     const v2, 0x102043a
 
     invoke-virtual {p0, v2}, Lcom/letv/leui/app/LetvEnginerModeActivity;->findViewById(I)Landroid/view/View;
@@ -55,7 +49,6 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    .line 37
     .local v0, "tv_close":Landroid/widget/Button;
     new-instance v2, Lcom/letv/leui/app/LetvEnginerModeActivity$2;
 
@@ -63,6 +56,5 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 44
     return-void
 .end method

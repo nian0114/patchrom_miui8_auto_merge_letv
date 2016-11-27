@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 3847
     iput-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$23$1;->this$1:Lcom/android/server/net/NetworkPolicyManagerService$23;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -48,7 +47,6 @@
     .locals 1
 
     .prologue
-    .line 3847
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/android/server/net/NetworkPolicyManagerService$23$1;->doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
@@ -63,7 +61,6 @@
     .param p1, "voids"    # [Ljava/lang/Void;
 
     .prologue
-    .line 3849
     invoke-static {}, Lcom/letv/tracker/agnes/Agnes;->getInstance()Lcom/letv/tracker/agnes/Agnes;
 
     move-result-object v2
@@ -74,7 +71,6 @@
 
     move-result-object v9
 
-    .line 3850
     .local v9, "app":Lcom/letv/tracker/agnes/App;
     const-string v2, "1.3.4"
 
@@ -82,7 +78,6 @@
 
     move-result-object v27
 
-    .line 3851
     .local v27, "widget":Lcom/letv/tracker/agnes/Widget;
     sget-object v2, Lcom/letv/tracker/enums/EventType;->Send:Lcom/letv/tracker/enums/EventType;
 
@@ -92,19 +87,16 @@
 
     move-result-object v15
 
-    .line 3853
     .local v15, "event":Lcom/letv/tracker/agnes/Event;
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v11
 
-    .line 3854
     .local v11, "calendar":Ljava/util/Calendar;
     invoke-virtual {v11}, Ljava/util/Calendar;->getTimeInMillis()J
 
     move-result-wide v6
 
-    .line 3855
     .local v6, "endTime":J
     const/4 v2, 0x2
 
@@ -112,12 +104,10 @@
 
     invoke-virtual {v11, v2, v8}, Ljava/util/Calendar;->add(II)V
 
-    .line 3856
     invoke-virtual {v11}, Ljava/util/Calendar;->getTimeInMillis()J
 
     move-result-wide v4
 
-    .line 3857
     .local v4, "startTime":J
     move-object/from16 v0, p0
 
@@ -134,7 +124,6 @@
 
     move-result-object v26
 
-    .line 3858
     .local v26, "tele":Landroid/telephony/TelephonyManager;
     move-object/from16 v0, p0
 
@@ -151,13 +140,11 @@
 
     move-result-object v22
 
-    .line 3859
     .local v22, "sub":Landroid/telephony/SubscriptionManager;
     invoke-virtual/range {v22 .. v22}, Landroid/telephony/SubscriptionManager;->getActiveSubscriptionIdList()[I
 
     move-result-object v24
 
-    .line 3860
     .local v24, "subIds":[I
     move-object/from16 v0, p0
 
@@ -174,7 +161,6 @@
 
     move-result-object v20
 
-    .line 3861
     .local v20, "pm":Landroid/content/pm/PackageManager;
     move-object/from16 v10, v24
 
@@ -196,7 +182,6 @@
 
     aget v23, v10, v17
 
-    .line 3862
     .local v23, "subId":I
     move-object/from16 v0, v26
 
@@ -206,13 +191,11 @@
 
     move-result-object v25
 
-    .line 3863
     .local v25, "subscriberId":Ljava/lang/String;
     invoke-static/range {v25 .. v25}, Landroid/net/NetworkTemplate;->buildTemplateMobileAll(Ljava/lang/String;)Landroid/net/NetworkTemplate;
 
     move-result-object v3
 
-    .line 3866
     .local v3, "template":Landroid/net/NetworkTemplate;
     :try_start_0
     move-object/from16 v0, p0
@@ -234,13 +217,11 @@
 
     move-result-object v12
 
-    .line 3870
     .local v12, "data":Landroid/net/NetworkStats;
     invoke-virtual {v12}, Landroid/net/NetworkStats;->size()I
 
     move-result v21
 
-    .line 3871
     .local v21, "size":I
     const/16 v16, 0x0
 
@@ -252,7 +233,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 3872
     const/4 v2, 0x0
 
     move/from16 v0, v16
@@ -261,7 +241,6 @@
 
     move-result-object v14
 
-    .line 3873
     .local v14, "entry":Landroid/net/NetworkStats$Entry;
     iget v2, v14, Landroid/net/NetworkStats$Entry;->uid:I
 
@@ -271,7 +250,6 @@
 
     move-result-object v19
 
-    .line 3874
     .local v19, "packageNames":[Ljava/lang/String;
     iget-wide v0, v14, Landroid/net/NetworkStats$Entry;->rxBytes:J
 
@@ -283,11 +261,9 @@
 
     add-long v28, v30, v32
 
-    .line 3875
     .local v28, "total":J
     if-eqz v19, :cond_0
 
-    .line 3877
     const-string v2, "packageName"
 
     invoke-static/range {v19 .. v19}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
@@ -296,7 +272,6 @@
 
     invoke-virtual {v15, v2, v8}, Lcom/letv/tracker/agnes/Event;->addProp(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3878
     const-string v2, "dataUsage"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -323,13 +298,11 @@
 
     invoke-virtual {v15, v2, v8}, Lcom/letv/tracker/agnes/Event;->addProp(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3871
     :cond_0
     add-int/lit8 v16, v16, 0x1
 
     goto :goto_1
 
-    .line 3867
     .end local v12    # "data":Landroid/net/NetworkStats;
     .end local v14    # "entry":Landroid/net/NetworkStats$Entry;
     .end local v16    # "i":I
@@ -339,13 +312,11 @@
     :catch_0
     move-exception v13
 
-    .line 3861
     :goto_2
     add-int/lit8 v17, v17, 0x1
 
     goto :goto_0
 
-    .line 3881
     .restart local v12    # "data":Landroid/net/NetworkStats;
     .restart local v16    # "i":I
     .restart local v21    # "size":I
@@ -358,7 +329,6 @@
 
     goto :goto_2
 
-    .line 3883
     .end local v3    # "template":Landroid/net/NetworkTemplate;
     .end local v12    # "data":Landroid/net/NetworkStats;
     .end local v16    # "i":I

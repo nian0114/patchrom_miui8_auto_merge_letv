@@ -29,7 +29,6 @@
     .locals 3
 
     .prologue
-    .line 1317
     invoke-static {}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$AnimationStyle;->values()[Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$AnimationStyle;
 
     move-result-object v0
@@ -71,7 +70,6 @@
     :try_end_1
     .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_c
 
-    .line 673
     :goto_1
     invoke-static {}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;->values()[Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
 
@@ -146,7 +144,6 @@
     :try_end_5
     .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_8
 
-    .line 503
     :goto_5
     invoke-static {}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;->values()[Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;
 
@@ -253,7 +250,6 @@
     :try_end_b
     .catch Ljava/lang/NoSuchFieldError; {:try_start_b .. :try_end_b} :catch_2
 
-    .line 268
     :goto_b
     invoke-static {}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Orientation;->values()[Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Orientation;
 
@@ -309,7 +305,6 @@
 
     goto :goto_c
 
-    .line 503
     :catch_2
     move-exception v0
 
@@ -340,7 +335,6 @@
 
     goto :goto_6
 
-    .line 673
     :catch_8
     move-exception v0
 
@@ -361,7 +355,6 @@
 
     goto/16 :goto_2
 
-    .line 1317
     :catch_c
     move-exception v0
 

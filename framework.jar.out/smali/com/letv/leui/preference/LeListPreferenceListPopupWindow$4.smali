@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1091
     iput-object p1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$4;->this$0:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,13 +51,11 @@
     .end annotation
 
     .prologue
-    .line 1095
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     const/4 v1, -0x1
 
     if-eq p3, v1, :cond_0
 
-    .line 1096
     iget-object v1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$4;->this$0:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;
 
     # getter for: Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownList:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;
@@ -66,17 +63,14 @@
 
     move-result-object v0
 
-    .line 1098
     .local v0, "dropDownList":Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;
     if-eqz v0, :cond_0
 
-    .line 1099
     const/4 v1, 0x0
 
     # setter for: Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;->mListSelectionHidden:Z
     invoke-static {v0, v1}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;->access$602(Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;Z)Z
 
-    .line 1102
     .end local v0    # "dropDownList":Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;
     :cond_0
     return-void
@@ -93,7 +87,6 @@
     .end annotation
 
     .prologue
-    .line 1105
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     return-void
 .end method

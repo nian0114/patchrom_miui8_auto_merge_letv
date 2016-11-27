@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 798
     iput-object p1, p0, Lcom/letv/leui/widget/StaggeredGridView$2;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     iput-object p2, p0, Lcom/letv/leui/widget/StaggeredGridView$2;->val$child:Landroid/view/View;
@@ -50,7 +49,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 801
     iget-object v0, p0, Lcom/letv/leui/widget/StaggeredGridView$2;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     const/4 v1, 0x6
@@ -58,17 +56,14 @@
     # setter for: Lcom/letv/leui/widget/StaggeredGridView;->mTouchMode:I
     invoke-static {v0, v1}, Lcom/letv/leui/widget/StaggeredGridView;->access$402(Lcom/letv/leui/widget/StaggeredGridView;I)I
 
-    .line 802
     iget-object v0, p0, Lcom/letv/leui/widget/StaggeredGridView$2;->val$child:Landroid/view/View;
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setPressed(Z)V
 
-    .line 803
     iget-object v0, p0, Lcom/letv/leui/widget/StaggeredGridView$2;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     invoke-virtual {v0, v2}, Lcom/letv/leui/widget/StaggeredGridView;->setPressed(Z)V
 
-    .line 804
     iget-object v0, p0, Lcom/letv/leui/widget/StaggeredGridView$2;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     # getter for: Lcom/letv/leui/widget/StaggeredGridView;->mDataChanged:Z
@@ -78,12 +73,10 @@
 
     if-nez v0, :cond_0
 
-    .line 805
     iget-object v0, p0, Lcom/letv/leui/widget/StaggeredGridView$2;->val$performClick:Lcom/letv/leui/widget/StaggeredGridView$PerformClick;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/StaggeredGridView$PerformClick;->run()V
 
-    .line 807
     :cond_0
     return-void
 .end method

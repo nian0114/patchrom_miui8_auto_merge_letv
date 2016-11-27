@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 102
     iput-object p1, p0, Lcom/letv/leui/widget/LeTitleEditText$2;->this$0:Lcom/letv/leui/widget/LeTitleEditText;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "hasFocus"    # Z
 
     .prologue
-    .line 104
     iget-object v0, p0, Lcom/letv/leui/widget/LeTitleEditText$2;->this$0:Lcom/letv/leui/widget/LeTitleEditText;
 
     # getter for: Lcom/letv/leui/widget/LeTitleEditText;->mOnTextFocusChangeListener:Landroid/view/View$OnFocusChangeListener;
@@ -52,7 +50,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 105
     iget-object v0, p0, Lcom/letv/leui/widget/LeTitleEditText$2;->this$0:Lcom/letv/leui/widget/LeTitleEditText;
 
     # getter for: Lcom/letv/leui/widget/LeTitleEditText;->mOnTextFocusChangeListener:Landroid/view/View$OnFocusChangeListener;
@@ -64,7 +61,6 @@
 
     invoke-interface {v0, v1, p2}, Landroid/view/View$OnFocusChangeListener;->onFocusChange(Landroid/view/View;Z)V
 
-    .line 108
     :cond_0
     return-void
 .end method

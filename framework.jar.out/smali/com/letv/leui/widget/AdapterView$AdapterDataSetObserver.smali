@@ -25,13 +25,11 @@
     .locals 1
 
     .prologue
-    .line 792
     .local p0, "this":Lcom/letv/leui/widget/AdapterView$AdapterDataSetObserver;, "Lcom/letv/leui/widget/AdapterView<TT;>.AdapterDataSetObserver;"
     iput-object p1, p0, Lcom/letv/leui/widget/AdapterView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/AdapterView;
 
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
 
-    .line 794
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/letv/leui/widget/AdapterView$AdapterDataSetObserver;->mInstanceState:Landroid/os/Parcelable;
@@ -45,13 +43,11 @@
     .locals 1
 
     .prologue
-    .line 839
     .local p0, "this":Lcom/letv/leui/widget/AdapterView$AdapterDataSetObserver;, "Lcom/letv/leui/widget/AdapterView<TT;>.AdapterDataSetObserver;"
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/letv/leui/widget/AdapterView$AdapterDataSetObserver;->mInstanceState:Landroid/os/Parcelable;
 
-    .line 840
     return-void
 .end method
 
@@ -59,7 +55,6 @@
     .locals 2
 
     .prologue
-    .line 798
     .local p0, "this":Lcom/letv/leui/widget/AdapterView$AdapterDataSetObserver;, "Lcom/letv/leui/widget/AdapterView<TT;>.AdapterDataSetObserver;"
     iget-object v0, p0, Lcom/letv/leui/widget/AdapterView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/AdapterView;
 
@@ -67,7 +62,6 @@
 
     iput-boolean v1, v0, Lcom/letv/leui/widget/AdapterView;->mDataChanged:Z
 
-    .line 799
     iget-object v0, p0, Lcom/letv/leui/widget/AdapterView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/AdapterView;
 
     iget-object v1, p0, Lcom/letv/leui/widget/AdapterView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/AdapterView;
@@ -76,7 +70,6 @@
 
     iput v1, v0, Lcom/letv/leui/widget/AdapterView;->mOldItemCount:I
 
-    .line 800
     iget-object v0, p0, Lcom/letv/leui/widget/AdapterView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/AdapterView;
 
     iget-object v1, p0, Lcom/letv/leui/widget/AdapterView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/AdapterView;
@@ -91,7 +84,6 @@
 
     iput v1, v0, Lcom/letv/leui/widget/AdapterView;->mItemCount:I
 
-    .line 804
     iget-object v0, p0, Lcom/letv/leui/widget/AdapterView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/AdapterView;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
@@ -120,7 +112,6 @@
 
     if-lez v0, :cond_0
 
-    .line 806
     iget-object v0, p0, Lcom/letv/leui/widget/AdapterView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/AdapterView;
 
     iget-object v1, p0, Lcom/letv/leui/widget/AdapterView$AdapterDataSetObserver;->mInstanceState:Landroid/os/Parcelable;
@@ -128,26 +119,21 @@
     # invokes: Lcom/letv/leui/widget/AdapterView;->onRestoreInstanceState(Landroid/os/Parcelable;)V
     invoke-static {v0, v1}, Lcom/letv/leui/widget/AdapterView;->access$000(Lcom/letv/leui/widget/AdapterView;Landroid/os/Parcelable;)V
 
-    .line 807
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/letv/leui/widget/AdapterView$AdapterDataSetObserver;->mInstanceState:Landroid/os/Parcelable;
 
-    .line 811
     :goto_0
     iget-object v0, p0, Lcom/letv/leui/widget/AdapterView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/AdapterView;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/AdapterView;->checkFocus()V
 
-    .line 812
     iget-object v0, p0, Lcom/letv/leui/widget/AdapterView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/AdapterView;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/AdapterView;->requestLayout()V
 
-    .line 813
     return-void
 
-    .line 809
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/AdapterView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/AdapterView;
 
@@ -167,14 +153,12 @@
 
     const/4 v2, -0x1
 
-    .line 817
     iget-object v0, p0, Lcom/letv/leui/widget/AdapterView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/AdapterView;
 
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcom/letv/leui/widget/AdapterView;->mDataChanged:Z
 
-    .line 819
     iget-object v0, p0, Lcom/letv/leui/widget/AdapterView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/AdapterView;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
@@ -187,7 +171,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 822
     iget-object v0, p0, Lcom/letv/leui/widget/AdapterView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/AdapterView;
 
     # invokes: Lcom/letv/leui/widget/AdapterView;->onSaveInstanceState()Landroid/os/Parcelable;
@@ -197,7 +180,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/AdapterView$AdapterDataSetObserver;->mInstanceState:Landroid/os/Parcelable;
 
-    .line 826
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/AdapterView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/AdapterView;
 
@@ -207,46 +189,37 @@
 
     iput v1, v0, Lcom/letv/leui/widget/AdapterView;->mOldItemCount:I
 
-    .line 827
     iget-object v0, p0, Lcom/letv/leui/widget/AdapterView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/AdapterView;
 
     iput v3, v0, Lcom/letv/leui/widget/AdapterView;->mItemCount:I
 
-    .line 828
     iget-object v0, p0, Lcom/letv/leui/widget/AdapterView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/AdapterView;
 
     iput v2, v0, Lcom/letv/leui/widget/AdapterView;->mSelectedPosition:I
 
-    .line 829
     iget-object v0, p0, Lcom/letv/leui/widget/AdapterView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/AdapterView;
 
     iput-wide v4, v0, Lcom/letv/leui/widget/AdapterView;->mSelectedRowId:J
 
-    .line 830
     iget-object v0, p0, Lcom/letv/leui/widget/AdapterView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/AdapterView;
 
     iput v2, v0, Lcom/letv/leui/widget/AdapterView;->mNextSelectedPosition:I
 
-    .line 831
     iget-object v0, p0, Lcom/letv/leui/widget/AdapterView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/AdapterView;
 
     iput-wide v4, v0, Lcom/letv/leui/widget/AdapterView;->mNextSelectedRowId:J
 
-    .line 832
     iget-object v0, p0, Lcom/letv/leui/widget/AdapterView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/AdapterView;
 
     iput-boolean v3, v0, Lcom/letv/leui/widget/AdapterView;->mNeedSync:Z
 
-    .line 834
     iget-object v0, p0, Lcom/letv/leui/widget/AdapterView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/AdapterView;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/AdapterView;->checkFocus()V
 
-    .line 835
     iget-object v0, p0, Lcom/letv/leui/widget/AdapterView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/AdapterView;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/AdapterView;->requestLayout()V
 
-    .line 836
     return-void
 .end method

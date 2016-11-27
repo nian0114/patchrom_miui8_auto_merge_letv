@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 427
     iput-object p1, p0, Lcom/letv/leui/widget/LeBottomSheet$2;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 430
     iget-object v0, p0, Lcom/letv/leui/widget/LeBottomSheet$2;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # getter for: Lcom/letv/leui/widget/LeBottomSheet;->checkBox:Lcom/letv/leui/widget/LeCheckBox;
@@ -57,7 +55,6 @@
 
     if-nez v0, :cond_0
 
-    .line 431
     iget-object v0, p0, Lcom/letv/leui/widget/LeBottomSheet$2;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # getter for: Lcom/letv/leui/widget/LeBottomSheet;->checkBox:Lcom/letv/leui/widget/LeCheckBox;
@@ -67,11 +64,9 @@
 
     invoke-virtual {v0, v2, v2}, Lcom/letv/leui/widget/LeCheckBox;->setChecked(ZZ)V
 
-    .line 435
     :goto_0
     return-void
 
-    .line 433
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/LeBottomSheet$2;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 

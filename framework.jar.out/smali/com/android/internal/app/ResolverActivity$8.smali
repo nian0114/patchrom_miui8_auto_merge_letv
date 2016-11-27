@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2340
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$8;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -55,7 +54,6 @@
     .local p1, "adapterView":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     const/4 v7, 0x1
 
-    .line 2343
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$8;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->mAdapter:Lcom/android/internal/app/ResolverActivity$ResolveListAdapter;
@@ -71,10 +69,8 @@
 
     if-le v1, v2, :cond_0
 
-    .line 2344
     add-int/lit8 p3, p3, 0x4
 
-    .line 2346
     :cond_0
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$8;->this$0:Lcom/android/internal/app/ResolverActivity;
 
@@ -87,7 +83,6 @@
 
     move-result-object v0
 
-    .line 2347
     .local v0, "resolveInfo":Landroid/content/pm/ResolveInfo;
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$8;->this$0:Lcom/android/internal/app/ResolverActivity;
 
@@ -116,7 +111,6 @@
 
     if-nez v1, :cond_1
 
-    .line 2349
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$8;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     iget-object v2, p0, Lcom/android/internal/app/ResolverActivity$8;->this$0:Lcom/android/internal/app/ResolverActivity;
@@ -163,11 +157,9 @@
 
     invoke-virtual {v1}, Landroid/widget/Toast;->show()V
 
-    .line 2357
     :goto_0
     return-void
 
-    .line 2356
     :cond_1
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$8;->this$0:Lcom/android/internal/app/ResolverActivity;
 

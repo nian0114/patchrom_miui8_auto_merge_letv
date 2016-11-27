@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 2476
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$11;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     iput p2, p0, Lcom/android/internal/app/ResolverActivity$11;->val$j:I
@@ -47,16 +46,13 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 2479
     iget v1, p0, Lcom/android/internal/app/ResolverActivity$11;->val$j:I
 
     if-gez v1, :cond_0
 
-    .line 2493
     :goto_0
     return-void
 
-    .line 2483
     :cond_0
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$11;->this$0:Lcom/android/internal/app/ResolverActivity;
 
@@ -75,7 +71,6 @@
 
     move-result-object v0
 
-    .line 2484
     .local v0, "resolveInfo":Landroid/content/pm/ResolveInfo;
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$11;->this$0:Lcom/android/internal/app/ResolverActivity;
 
@@ -104,7 +99,6 @@
 
     if-nez v1, :cond_1
 
-    .line 2486
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$11;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     iget-object v2, p0, Lcom/android/internal/app/ResolverActivity$11;->this$0:Lcom/android/internal/app/ResolverActivity;
@@ -153,7 +147,6 @@
 
     goto :goto_0
 
-    .line 2492
     :cond_1
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$11;->this$0:Lcom/android/internal/app/ResolverActivity;
 

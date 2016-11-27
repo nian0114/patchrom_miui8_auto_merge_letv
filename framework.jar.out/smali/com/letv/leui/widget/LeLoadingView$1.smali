@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 149
     iput-object p1, p0, Lcom/letv/leui/widget/LeLoadingView$1;->this$0:Lcom/letv/leui/widget/LeLoadingView;
 
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/LeLoadingView$EmptyAnimatorListener;-><init>(Lcom/letv/leui/widget/LeLoadingView;)V
@@ -38,12 +37,10 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 152
     move-object v1, p1
 
     check-cast v1, Landroid/animation/ObjectAnimator;
 
-    .line 153
     .local v1, "objectAnimator":Landroid/animation/ObjectAnimator;
     invoke-virtual {v1}, Landroid/animation/ObjectAnimator;->getTarget()Ljava/lang/Object;
 
@@ -51,16 +48,13 @@
 
     check-cast v0, Lcom/letv/leui/widget/BallsLoadingShapeHolder;
 
-    .line 154
     .local v0, "holder":Lcom/letv/leui/widget/BallsLoadingShapeHolder;
     if-eqz v0, :cond_0
 
-    .line 155
     const/high16 v2, 0x3f800000    # 1.0f
 
     invoke-virtual {v0, v2}, Lcom/letv/leui/widget/BallsLoadingShapeHolder;->setAlpha(F)V
 
-    .line 157
     :cond_0
     return-void
 .end method

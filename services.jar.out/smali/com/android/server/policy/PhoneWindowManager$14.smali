@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 4157
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$14;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 4161
     new-instance v0, Lcom/android/server/policy/PhoneWindowManager$HideNavInputEventReceiver;
 
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager$14;->this$0:Lcom/android/server/policy/PhoneWindowManager;

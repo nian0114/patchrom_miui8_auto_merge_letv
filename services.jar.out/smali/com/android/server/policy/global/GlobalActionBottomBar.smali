@@ -79,91 +79,68 @@
 
     const/4 v1, 0x0
 
-    .line 72
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 40
     const/high16 v0, 0x42280000    # 42.0f
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mTipTextSize:F
 
-    .line 44
     iput v2, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mLineColorNormal:I
 
-    .line 45
     const v0, -0xcc00cd
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mLineColorPress:I
 
-    .line 46
     iput v3, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mLineWidth:I
 
-    .line 47
     const/16 v0, 0x36
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mLineHeight:I
 
-    .line 48
     const/4 v0, 0x3
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mLineOffsetInit:I
 
-    .line 49
     iput v1, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mLineOffset:I
 
-    .line 51
     iput v1, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mLineOffsetScale:I
 
-    .line 52
     iput v1, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mLineOffsetScaleInit:I
 
-    .line 55
     iput v2, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mArcColor:I
 
-    .line 56
     const v0, -0x66666667
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleRingColor:I
 
-    .line 57
     const/16 v0, 0xff
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleRingAlpha:I
 
-    .line 59
     const/high16 v0, -0x3d900000    # -60.0f
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mArcBeginAngle:F
 
-    .line 61
     const/16 v0, 0x7e
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mInnerRingDiameter:I
 
-    .line 62
     iput v1, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mRingWidthIncMax:I
 
-    .line 63
     iput v1, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mRingWidthInc:I
 
-    .line 65
     iput v1, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleRingWH:I
 
-    .line 67
     iput v3, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mArcWidth:I
 
-    .line 69
     iget v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mArcBeginAngle:F
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->startAngle:F
 
-    .line 343
     iput-boolean v1, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mCancel:Z
 
-    .line 73
     invoke-direct {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->init()V
 
-    .line 74
     return-void
 .end method
 
@@ -172,7 +149,6 @@
     .param p0, "x0"    # Lcom/android/server/policy/global/GlobalActionBottomBar;
 
     .prologue
-    .line 30
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleAnimator:Landroid/animation/ObjectAnimator;
 
     return-object v0
@@ -183,7 +159,6 @@
     .param p0, "x0"    # Lcom/android/server/policy/global/GlobalActionBottomBar;
 
     .prologue
-    .line 30
     invoke-direct {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->resetScale()V
 
     return-void
@@ -194,26 +169,22 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 280
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->getWidth()I
 
     move-result v0
 
     div-int/lit8 v6, v0, 0x2
 
-    .line 281
     .local v6, "centerX":I
     iget v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleRingWH:I
 
     div-int/lit8 v7, v0, 0x2
 
-    .line 282
     .local v7, "centerY":I
     iget v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mInnerRingDiameter:I
 
     div-int/lit8 v8, v0, 0x2
 
-    .line 283
     .local v8, "innerCircle":I
     new-instance v1, Landroid/graphics/RectF;
 
@@ -267,7 +238,6 @@
 
     invoke-direct {v1, v0, v2, v3, v4}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    .line 289
     .local v1, "rect2":Landroid/graphics/RectF;
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->paint:Landroid/graphics/Paint;
 
@@ -277,7 +247,6 @@
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 291
     iget v2, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->startAngle:F
 
     const/high16 v0, 0x43b40000    # 360.0f
@@ -302,7 +271,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
 
-    .line 292
     return-void
 .end method
 
@@ -311,14 +279,12 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 272
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->getWidth()I
 
     move-result v0
 
     div-int/lit8 v6, v0, 0x2
 
-    .line 274
     .local v6, "center":I
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->paint:Landroid/graphics/Paint;
 
@@ -328,7 +294,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 276
     int-to-float v1, v6
 
     iget v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mLineOffset:I
@@ -355,7 +320,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 277
     return-void
 .end method
 
@@ -364,26 +328,22 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 295
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->getWidth()I
 
     move-result v0
 
     div-int/lit8 v6, v0, 0x2
 
-    .line 296
     .local v6, "centerX":I
     iget v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleRingWH:I
 
     div-int/lit8 v7, v0, 0x2
 
-    .line 297
     .local v7, "centerY":I
     iget v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mInnerRingDiameter:I
 
     div-int/lit8 v8, v0, 0x2
 
-    .line 298
     .local v8, "innerCircle":I
     new-instance v1, Landroid/graphics/RectF;
 
@@ -453,7 +413,6 @@
 
     invoke-direct {v1, v0, v2, v3, v4}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    .line 304
     .local v1, "rect2":Landroid/graphics/RectF;
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleArcPaint:Landroid/graphics/Paint;
 
@@ -463,7 +422,6 @@
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 306
     iget v2, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->startAngle:F
 
     const/high16 v0, 0x43b40000    # 360.0f
@@ -488,7 +446,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
 
-    .line 307
     return-void
 .end method
 
@@ -497,14 +454,12 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 310
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->getWidth()I
 
     move-result v0
 
     div-int/lit8 v6, v0, 0x2
 
-    .line 312
     .local v6, "center":I
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleArcPaint:Landroid/graphics/Paint;
 
@@ -514,7 +469,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 314
     int-to-float v1, v6
 
     iget v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mLineOffset:I
@@ -545,7 +499,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 315
     return-void
 .end method
 
@@ -554,12 +507,10 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 237
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v0
 
-    .line 238
     .local v0, "seq":I
     iget-object v2, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mTipPaint:Landroid/graphics/Paint;
 
@@ -569,7 +520,6 @@
 
     move-result v1
 
-    .line 239
     .local v1, "textWidth":F
     iget-object v2, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mTipMsg:Ljava/lang/String;
 
@@ -603,10 +553,8 @@
 
     invoke-virtual {p1, v2, v3, v4, v5}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    .line 241
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    .line 242
     return-void
 .end method
 
@@ -614,7 +562,6 @@
     .locals 1
 
     .prologue
-    .line 77
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -627,16 +574,12 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->density:F
 
-    .line 79
     invoke-direct {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->initLine()V
 
-    .line 80
     invoke-direct {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->initArc()V
 
-    .line 81
     invoke-direct {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->initTip()V
 
-    .line 82
     return-void
 .end method
 
@@ -644,7 +587,6 @@
     .locals 2
 
     .prologue
-    .line 110
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -657,7 +599,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mArcColor:I
 
-    .line 111
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -670,7 +611,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mArcWidth:I
 
-    .line 112
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -685,7 +625,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mArcBeginAngle:F
 
-    .line 113
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -698,7 +637,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mInnerRingDiameter:I
 
-    .line 115
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -711,52 +649,44 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleRingWH:I
 
-    .line 117
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->paint:Landroid/graphics/Paint;
 
-    .line 118
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->paint:Landroid/graphics/Paint;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 119
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->paint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mArcColor:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 120
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->paint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 121
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->paint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Join;->ROUND:Landroid/graphics/Paint$Join;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeJoin(Landroid/graphics/Paint$Join;)V
 
-    .line 122
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->paint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
-    .line 124
     invoke-direct {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->initScaleArc()V
 
-    .line 125
     return-void
 .end method
 
@@ -764,7 +694,6 @@
     .locals 2
 
     .prologue
-    .line 101
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -777,7 +706,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mLineColorNormal:I
 
-    .line 102
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -790,7 +718,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mLineColorPress:I
 
-    .line 103
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -803,7 +730,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mLineWidth:I
 
-    .line 104
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -816,7 +742,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mLineHeight:I
 
-    .line 105
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -829,7 +754,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mLineOffsetInit:I
 
-    .line 106
     return-void
 .end method
 
@@ -843,14 +767,12 @@
 
     const/4 v6, 0x0
 
-    .line 369
     new-instance v3, Lcom/android/server/policy/global/GlobalActionBottomBar$1;
 
     invoke-direct {v3, p0}, Lcom/android/server/policy/global/GlobalActionBottomBar$1;-><init>(Lcom/android/server/policy/global/GlobalActionBottomBar;)V
 
     iput-object v3, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleListener:Landroid/animation/Animator$AnimatorListener;
 
-    .line 391
     const-string v3, "innerRingWidthInc"
 
     new-array v4, v8, [I
@@ -865,7 +787,6 @@
 
     move-result-object v2
 
-    .line 392
     .local v2, "ringScale":Landroid/animation/PropertyValuesHolder;
     const-string v3, "scaleRingAlpha"
 
@@ -881,7 +802,6 @@
 
     move-result-object v1
 
-    .line 393
     .local v1, "ringAlpha":Landroid/animation/PropertyValuesHolder;
     const-string v3, "lineOffsetScale"
 
@@ -897,7 +817,6 @@
 
     move-result-object v0
 
-    .line 394
     .local v0, "lineScale":Landroid/animation/PropertyValuesHolder;
     const/4 v3, 0x3
 
@@ -915,14 +834,12 @@
 
     iput-object v3, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleAnimator:Landroid/animation/ObjectAnimator;
 
-    .line 395
     iget-object v3, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleAnimator:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v4, 0x834
 
     invoke-virtual {v3, v4, v5}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 396
     iget-object v3, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleAnimator:Landroid/animation/ObjectAnimator;
 
     new-instance v4, Landroid/view/animation/AccelerateInterpolator;
@@ -933,26 +850,22 @@
 
     invoke-virtual {v3, v4}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 397
     iget-object v3, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleAnimator:Landroid/animation/ObjectAnimator;
 
     const/4 v4, -0x1
 
     invoke-virtual {v3, v4}, Landroid/animation/ObjectAnimator;->setRepeatCount(I)V
 
-    .line 398
     iget-object v3, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v3, v7}, Landroid/animation/ObjectAnimator;->setRepeatMode(I)V
 
-    .line 399
     iget-object v3, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleAnimator:Landroid/animation/ObjectAnimator;
 
     iget-object v4, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleListener:Landroid/animation/Animator$AnimatorListener;
 
     invoke-virtual {v3, v4}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 400
     return-void
 .end method
 
@@ -960,7 +873,6 @@
     .locals 2
 
     .prologue
-    .line 130
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -973,14 +885,12 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleRingColor:I
 
-    .line 131
     iget v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleRingColor:I
 
     shr-int/lit8 v0, v0, 0x18
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleRingAlpha:I
 
-    .line 132
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -993,7 +903,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mRingWidthIncMax:I
 
-    .line 134
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1006,52 +915,44 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mLineOffsetScaleInit:I
 
-    .line 136
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleArcPaint:Landroid/graphics/Paint;
 
-    .line 137
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleArcPaint:Landroid/graphics/Paint;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 138
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleArcPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleRingColor:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 139
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleArcPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 140
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleArcPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Join;->ROUND:Landroid/graphics/Paint$Join;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeJoin(Landroid/graphics/Paint$Join;)V
 
-    .line 141
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleArcPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
-    .line 143
     invoke-direct {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->initScale()V
 
-    .line 144
     return-void
 .end method
 
@@ -1061,7 +962,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 86
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1074,7 +974,6 @@
 
     iput-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mTipMsg:Ljava/lang/String;
 
-    .line 87
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1089,59 +988,50 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mTipTextSize:F
 
-    .line 89
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mTipPaint:Landroid/graphics/Paint;
 
-    .line 90
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mTipPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 91
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mTipPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setDither(Z)V
 
-    .line 92
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mTipPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mLineColorNormal:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 93
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mTipPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mTipTextSize:F
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    .line 94
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mTipPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 95
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mTipPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Join;->ROUND:Landroid/graphics/Paint$Join;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeJoin(Landroid/graphics/Paint$Join;)V
 
-    .line 96
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mTipPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
-    .line 97
     return-void
 .end method
 
@@ -1151,7 +1041,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 337
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleArcPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleRingColor:I
@@ -1168,16 +1057,12 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 338
     iput v3, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mLineOffsetScale:I
 
-    .line 339
     iput v3, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mRingWidthInc:I
 
-    .line 340
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->invalidate()V
 
-    .line 341
     return-void
 .end method
 
@@ -1186,13 +1071,10 @@
     .param p1, "ringWidthInc"    # I
 
     .prologue
-    .line 332
     iput p1, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mRingWidthInc:I
 
-    .line 333
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->invalidate()V
 
-    .line 334
     return-void
 .end method
 
@@ -1201,13 +1083,10 @@
     .param p1, "lineOffsetScale"    # I
 
     .prologue
-    .line 327
     iput p1, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mLineOffsetScale:I
 
-    .line 328
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->invalidate()V
 
-    .line 329
     return-void
 .end method
 
@@ -1216,7 +1095,6 @@
     .param p1, "alpha"    # I
 
     .prologue
-    .line 322
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleArcPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleRingColor:I
@@ -1231,10 +1109,8 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 323
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->invalidate()V
 
-    .line 324
     return-void
 .end method
 
@@ -1244,25 +1120,20 @@
     .locals 1
 
     .prologue
-    .line 345
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->stopMarquee()V
 
-    .line 346
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleAnimator:Landroid/animation/ObjectAnimator;
 
     if-eqz v0, :cond_0
 
-    .line 347
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 348
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->removeAllListeners()V
 
-    .line 350
     :cond_0
     return-void
 .end method
@@ -1271,10 +1142,8 @@
     .locals 3
 
     .prologue
-    .line 155
     const/4 v0, 0x0
 
-    .line 156
     .local v0, "tipWidth":I
     iget-object v1, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mTipMsg:Ljava/lang/String;
 
@@ -1284,7 +1153,6 @@
 
     if-nez v1, :cond_0
 
-    .line 157
     iget-object v1, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mTipPaint:Landroid/graphics/Paint;
 
     iget-object v2, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mTipMsg:Ljava/lang/String;
@@ -1299,7 +1167,6 @@
 
     float-to-int v0, v1
 
-    .line 159
     :cond_0
     iget v1, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleRingWH:I
 
@@ -1315,7 +1182,6 @@
     .param p1, "animation"    # Z
 
     .prologue
-    .line 412
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
@@ -1366,7 +1232,6 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 416
     return-void
 .end method
 
@@ -1379,16 +1244,13 @@
 
     const/4 v9, 0x0
 
-    .line 190
     const/4 v4, 0x2
 
     new-array v3, v4, [I
 
-    .line 191
     .local v3, "location":[I
     invoke-virtual {p0, v3}, Lcom/android/server/policy/global/GlobalActionBottomBar;->getLocationInWindow([I)V
 
-    .line 193
     new-instance v2, Landroid/graphics/Rect;
 
     aget v4, v3, v9
@@ -1413,7 +1275,6 @@
 
     invoke-direct {v2, v4, v5, v6, v7}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 195
     .local v2, "frame":Landroid/graphics/Rect;
     invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
 
@@ -1423,7 +1284,6 @@
 
     if-le v4, v5, :cond_0
 
-    .line 196
     invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
 
     move-result v4
@@ -1434,7 +1294,6 @@
 
     div-int/lit8 v0, v4, 0x2
 
-    .line 197
     .local v0, "bottomOffsetY":I
     iget v4, v2, Landroid/graphics/Rect;->bottom:I
 
@@ -1442,7 +1301,6 @@
 
     iput v4, v2, Landroid/graphics/Rect;->bottom:I
 
-    .line 199
     .end local v0    # "bottomOffsetY":I
     :cond_0
     invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
@@ -1453,7 +1311,6 @@
 
     if-le v4, v5, :cond_1
 
-    .line 200
     invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
 
     move-result v4
@@ -1464,11 +1321,9 @@
 
     div-int/lit8 v1, v4, 0x2
 
-    .line 202
     .local v1, "dx":I
     invoke-virtual {v2, v1, v9}, Landroid/graphics/Rect;->inset(II)V
 
-    .line 205
     .end local v1    # "dx":I
     :cond_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
@@ -1495,10 +1350,8 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 214
     invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 215
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mTipMsg:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1519,25 +1372,19 @@
 
     if-gtz v0, :cond_1
 
-    .line 229
     :cond_0
     :goto_0
     return-void
 
-    .line 221
     :cond_1
     invoke-direct {p0, p1}, Lcom/android/server/policy/global/GlobalActionBottomBar;->drawScaleArc(Landroid/graphics/Canvas;)V
 
-    .line 222
     invoke-direct {p0, p1}, Lcom/android/server/policy/global/GlobalActionBottomBar;->drawArc(Landroid/graphics/Canvas;)V
 
-    .line 224
     invoke-direct {p0, p1}, Lcom/android/server/policy/global/GlobalActionBottomBar;->drawScaleCenterLine(Landroid/graphics/Canvas;)V
 
-    .line 225
     invoke-direct {p0, p1}, Lcom/android/server/policy/global/GlobalActionBottomBar;->drawCenterLine(Landroid/graphics/Canvas;)V
 
-    .line 227
     invoke-direct {p0, p1}, Lcom/android/server/policy/global/GlobalActionBottomBar;->drawTip(Landroid/graphics/Canvas;)V
 
     goto :goto_0
@@ -1548,12 +1395,10 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 178
     invoke-super {p0, p1}, Landroid/view/View;->onFilterTouchEventForSecurity(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
-    .line 179
     .local v0, "result":Z
     if-eqz v0, :cond_0
 
@@ -1563,7 +1408,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 181
     .end local v0    # "result":Z
     :cond_0
     :goto_0
@@ -1582,7 +1426,6 @@
     .locals 0
 
     .prologue
-    .line 439
     return-void
 .end method
 
@@ -1591,7 +1434,6 @@
     .param p1, "value"    # F
 
     .prologue
-    .line 163
     const/high16 v0, 0x3f800000    # 1.0f
 
     cmpl-float v0, p1, v0
@@ -1604,12 +1446,10 @@
 
     if-gez v0, :cond_1
 
-    .line 166
     :cond_0
     :goto_0
     return-void
 
-    .line 165
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/server/policy/global/GlobalActionBottomBar;->setAlpha(F)V
 
@@ -1621,17 +1461,14 @@
     .param p1, "angle"    # F
 
     .prologue
-    .line 249
     iget v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mArcBeginAngle:F
 
     add-float/2addr v0, p1
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->startAngle:F
 
-    .line 250
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->invalidate()V
 
-    .line 251
     return-void
 .end method
 
@@ -1640,7 +1477,6 @@
     .param p1, "res"    # I
 
     .prologue
-    .line 147
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -1653,7 +1489,6 @@
 
     iput-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mTipMsg:Ljava/lang/String;
 
-    .line 148
     return-void
 .end method
 
@@ -1662,13 +1497,10 @@
     .param p1, "lineOffset"    # I
 
     .prologue
-    .line 267
     iput p1, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mLineOffset:I
 
-    .line 268
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->invalidate()V
 
-    .line 269
     return-void
 .end method
 
@@ -1677,7 +1509,6 @@
     .param p1, "alapha"    # I
 
     .prologue
-    .line 258
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mTipPaint:Landroid/graphics/Paint;
 
     iget-object v1, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mTipPaint:Landroid/graphics/Paint;
@@ -1696,10 +1527,8 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 259
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->invalidate()V
 
-    .line 260
     return-void
 .end method
 
@@ -1710,7 +1539,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 404
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
@@ -1731,10 +1559,8 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->setTranslationY(F)V
 
-    .line 406
     invoke-virtual {p0, v4}, Lcom/android/server/policy/global/GlobalActionBottomBar;->setAlpha(F)V
 
-    .line 407
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
@@ -1767,7 +1593,6 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 409
     return-void
 .end method
 
@@ -1783,12 +1608,10 @@
 
     const/4 v8, 0x2
 
-    .line 422
     new-instance v4, Landroid/animation/AnimatorSet;
 
     invoke-direct {v4}, Landroid/animation/AnimatorSet;-><init>()V
 
-    .line 423
     .local v4, "set":Landroid/animation/AnimatorSet;
     const-string v5, "angleArc"
 
@@ -1800,7 +1623,6 @@
 
     move-result-object v0
 
-    .line 424
     .local v0, "angleArc":Landroid/animation/PropertyValuesHolder;
     const-string v5, "LineHeightOffset"
 
@@ -1816,7 +1638,6 @@
 
     move-result-object v1
 
-    .line 425
     .local v1, "lineOffset":Landroid/animation/PropertyValuesHolder;
     new-array v5, v8, [Landroid/animation/PropertyValuesHolder;
 
@@ -1828,11 +1649,9 @@
 
     move-result-object v2
 
-    .line 426
     .local v2, "objectAni":Landroid/animation/ObjectAnimator;
     invoke-virtual {v2, v12, v13}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 427
     new-instance v5, Landroid/view/animation/AccelerateInterpolator;
 
     const v6, 0x3f8ccccd    # 1.1f
@@ -1841,7 +1660,6 @@
 
     invoke-virtual {v2, v5}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 429
     const-string v5, "tipAlapha"
 
     new-array v6, v8, [I
@@ -1852,11 +1670,9 @@
 
     move-result-object v3
 
-    .line 430
     .local v3, "objectTip":Landroid/animation/ObjectAnimator;
     invoke-virtual {v3, v12, v13}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 431
     new-instance v5, Landroid/view/animation/DecelerateInterpolator;
 
     const v6, 0x3fe66666    # 1.8f
@@ -1865,20 +1681,16 @@
 
     invoke-virtual {v3, v5}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 433
     invoke-virtual {v4, v2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
     move-result-object v5
 
     invoke-virtual {v5, v3}, Landroid/animation/AnimatorSet$Builder;->with(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    .line 434
     invoke-virtual {v4}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 435
     return-void
 
-    .line 423
     nop
 
     :array_0
@@ -1887,7 +1699,6 @@
         0x43160000    # 150.0f
     .end array-data
 
-    .line 429
     :array_1
     .array-data 4
         0xc8
@@ -1899,30 +1710,25 @@
     .locals 4
 
     .prologue
-    .line 358
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleAnimator:Landroid/animation/ObjectAnimator;
 
     if-nez v0, :cond_1
 
-    .line 364
     :cond_0
     :goto_0
     return-void
 
-    .line 359
     :cond_1
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mCancel:Z
 
-    .line 360
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleAnimator:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v2, 0x41a
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
 
-    .line 361
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->isRunning()Z
@@ -1931,7 +1737,6 @@
 
     if-nez v0, :cond_0
 
-    .line 363
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
@@ -1943,16 +1748,13 @@
     .locals 1
 
     .prologue
-    .line 353
     iget-boolean v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mCancel:Z
 
     if-eqz v0, :cond_0
 
-    .line 355
     :goto_0
     return-void
 
-    .line 354
     :cond_0
     const/4 v0, 0x1
 

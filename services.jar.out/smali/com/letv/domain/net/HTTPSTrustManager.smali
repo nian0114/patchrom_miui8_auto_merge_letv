@@ -17,7 +17,6 @@
     .locals 1
 
     .prologue
-    .line 12
     const/4 v0, 0x0
 
     new-array v0, v0, [Ljava/security/cert/X509Certificate;
@@ -31,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,23 +41,19 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 44
     new-instance v3, Lcom/letv/domain/net/HTTPSTrustManager$1;
 
     invoke-direct {v3}, Lcom/letv/domain/net/HTTPSTrustManager$1;-><init>()V
 
     invoke-static {v3}, Ljavax/net/ssl/HttpsURLConnection;->setDefaultHostnameVerifier(Ljavax/net/ssl/HostnameVerifier;)V
 
-    .line 54
     const/4 v0, 0x0
 
-    .line 55
     .local v0, "context":Ljavax/net/ssl/SSLContext;
     sget-object v3, Lcom/letv/domain/net/HTTPSTrustManager;->trustManagers:[Ljavax/net/ssl/TrustManager;
 
     if-nez v3, :cond_0
 
-    .line 56
     const/4 v3, 0x1
 
     new-array v3, v3, [Ljavax/net/ssl/TrustManager;
@@ -74,7 +68,6 @@
 
     sput-object v3, Lcom/letv/domain/net/HTTPSTrustManager;->trustManagers:[Ljavax/net/ssl/TrustManager;
 
-    .line 60
     :cond_0
     :try_start_0
     const-string v3, "TLS"
@@ -83,7 +76,6 @@
 
     move-result-object v0
 
-    .line 61
     const/4 v3, 0x0
 
     sget-object v4, Lcom/letv/domain/net/HTTPSTrustManager;->trustManagers:[Ljavax/net/ssl/TrustManager;
@@ -97,7 +89,6 @@
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/security/KeyManagementException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 66
     :goto_0
     if-eqz v0, :cond_1
 
@@ -108,21 +99,17 @@
     :cond_1
     invoke-static {v2}, Ljavax/net/ssl/HttpsURLConnection;->setDefaultSSLSocketFactory(Ljavax/net/ssl/SSLSocketFactory;)V
 
-    .line 68
     return-void
 
-    .line 62
     :catch_0
     move-exception v1
 
-    .line 63
     .local v1, "e":Ljava/security/GeneralSecurityException;
     :goto_1
     invoke-virtual {v1}, Ljava/security/GeneralSecurityException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 62
     .end local v1    # "e":Ljava/security/GeneralSecurityException;
     :catch_1
     move-exception v1
@@ -143,7 +130,6 @@
     .end annotation
 
     .prologue
-    .line 20
     return-void
 .end method
 
@@ -158,7 +144,6 @@
     .end annotation
 
     .prologue
-    .line 28
     return-void
 .end method
 
@@ -166,7 +151,6 @@
     .locals 1
 
     .prologue
-    .line 40
     sget-object v0, Lcom/letv/domain/net/HTTPSTrustManager;->_AcceptedIssuers:[Ljava/security/cert/X509Certificate;
 
     return-object v0
@@ -177,7 +161,6 @@
     .param p1, "chain"    # [Ljava/security/cert/X509Certificate;
 
     .prologue
-    .line 31
     const/4 v0, 0x1
 
     return v0
@@ -188,7 +171,6 @@
     .param p1, "chain"    # [Ljava/security/cert/X509Certificate;
 
     .prologue
-    .line 35
     const/4 v0, 0x1
 
     return v0

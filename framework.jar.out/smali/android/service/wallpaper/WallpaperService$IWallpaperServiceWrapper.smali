@@ -26,15 +26,12 @@
     .param p2, "context"    # Landroid/service/wallpaper/WallpaperService;
 
     .prologue
-    .line 1253
     iput-object p1, p0, Landroid/service/wallpaper/WallpaperService$IWallpaperServiceWrapper;->this$0:Landroid/service/wallpaper/WallpaperService;
 
     invoke-direct {p0}, Landroid/service/wallpaper/IWallpaperService$Stub;-><init>()V
 
-    .line 1254
     iput-object p2, p0, Landroid/service/wallpaper/WallpaperService$IWallpaperServiceWrapper;->mTarget:Landroid/service/wallpaper/WallpaperService;
 
-    .line 1255
     return-void
 .end method
 
@@ -51,7 +48,6 @@
     .param p7, "padding"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 1260
     new-instance v0, Landroid/service/wallpaper/WallpaperService$IWallpaperEngineWrapper;
 
     iget-object v1, p0, Landroid/service/wallpaper/WallpaperService$IWallpaperServiceWrapper;->this$0:Landroid/service/wallpaper/WallpaperService;
@@ -74,7 +70,6 @@
 
     invoke-direct/range {v0 .. v9}, Landroid/service/wallpaper/WallpaperService$IWallpaperEngineWrapper;-><init>(Landroid/service/wallpaper/WallpaperService;Landroid/service/wallpaper/WallpaperService;Landroid/service/wallpaper/IWallpaperConnection;Landroid/os/IBinder;IZIILandroid/graphics/Rect;)V
 
-    .line 1262
     return-void
 .end method
 
@@ -87,7 +82,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 1266
     const-string v0, "enable"
 
     aget-object v1, p3, v2
@@ -98,19 +92,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 1267
     sput-boolean v2, Landroid/service/wallpaper/WallpaperService;->DEBUG:Z
 
-    .line 1270
     :goto_0
     iget-object v0, p0, Landroid/service/wallpaper/WallpaperService$IWallpaperServiceWrapper;->this$0:Landroid/service/wallpaper/WallpaperService;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/service/wallpaper/WallpaperService;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 1271
     return-void
 
-    .line 1269
     :cond_0
     const/4 v0, 0x0
 

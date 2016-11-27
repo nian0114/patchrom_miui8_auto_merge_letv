@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 360
     iput-object p1, p0, Lcom/letv/leui/widget/LeLoadingView$EmptyAnimatorListener;->this$0:Lcom/letv/leui/widget/LeLoadingView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 375
     return-void
 .end method
 
@@ -50,7 +48,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 370
     return-void
 .end method
 
@@ -59,7 +56,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 380
     return-void
 .end method
 
@@ -68,6 +64,5 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 365
     return-void
 .end method

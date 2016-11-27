@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 914
     iput-object p1, p0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup$1$1;->this$2:Lcom/letv/leui/preference/LeListPreference$DropdownPopup$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 3
 
     .prologue
-    .line 917
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup$1$1;->this$2:Lcom/letv/leui/preference/LeListPreference$DropdownPopup$1;
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup$1;->this$1:Lcom/letv/leui/preference/LeListPreference$DropdownPopup;
@@ -78,7 +76,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 918
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup$1$1;->this$2:Lcom/letv/leui/preference/LeListPreference$DropdownPopup$1;
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup$1;->this$1:Lcom/letv/leui/preference/LeListPreference$DropdownPopup;
@@ -88,7 +85,6 @@
     # invokes: Lcom/letv/leui/preference/LeListPreference;->notifyChanged()V
     invoke-static {v0}, Lcom/letv/leui/preference/LeListPreference;->access$1500(Lcom/letv/leui/preference/LeListPreference;)V
 
-    .line 920
     :cond_0
     return-void
 .end method

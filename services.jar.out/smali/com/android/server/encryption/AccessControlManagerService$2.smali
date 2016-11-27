@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 107
     iput-object p1, p0, Lcom/android/server/encryption/AccessControlManagerService$2;->this$0:Lcom/android/server/encryption/AccessControlManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 4
 
     .prologue
-    .line 111
     iget-object v0, p0, Lcom/android/server/encryption/AccessControlManagerService$2;->this$0:Lcom/android/server/encryption/AccessControlManagerService;
 
     iget-object v0, v0, Lcom/android/server/encryption/AccessControlManagerService;->intent:Landroid/content/Intent;
@@ -56,7 +54,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putParcelableArrayListExtra(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;
 
-    .line 112
     iget-object v0, p0, Lcom/android/server/encryption/AccessControlManagerService$2;->this$0:Lcom/android/server/encryption/AccessControlManagerService;
 
     iget-object v0, v0, Lcom/android/server/encryption/AccessControlManagerService;->mContext:Landroid/content/Context;
@@ -69,7 +66,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 113
     iget-object v0, p0, Lcom/android/server/encryption/AccessControlManagerService$2;->this$0:Lcom/android/server/encryption/AccessControlManagerService;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -79,7 +75,6 @@
     # setter for: Lcom/android/server/encryption/AccessControlManagerService;->sendTime:J
     invoke-static {v0, v2, v3}, Lcom/android/server/encryption/AccessControlManagerService;->access$102(Lcom/android/server/encryption/AccessControlManagerService;J)J
 
-    .line 114
     iget-object v0, p0, Lcom/android/server/encryption/AccessControlManagerService$2;->this$0:Lcom/android/server/encryption/AccessControlManagerService;
 
     # getter for: Lcom/android/server/encryption/AccessControlManagerService;->mLock:Ljava/lang/Object;
@@ -89,7 +84,6 @@
 
     monitor-enter v1
 
-    .line 115
     :try_start_0
     iget-object v0, p0, Lcom/android/server/encryption/AccessControlManagerService$2;->this$0:Lcom/android/server/encryption/AccessControlManagerService;
 
@@ -100,13 +94,10 @@
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 116
     monitor-exit v1
 
-    .line 117
     return-void
 
-    .line 116
     :catchall_0
     move-exception v0
 

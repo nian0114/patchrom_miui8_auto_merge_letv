@@ -22,19 +22,14 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 10
     iput v0, p0, Lcom/letv/tracker/msg/bean/Version;->major:I
 
-    .line 15
     iput v0, p0, Lcom/letv/tracker/msg/bean/Version;->minor:I
 
-    .line 20
     iput v0, p0, Lcom/letv/tracker/msg/bean/Version;->patch:I
 
-    .line 37
     return-void
 .end method
 
@@ -44,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 125
     iget-object v0, p0, Lcom/letv/tracker/msg/bean/Version;->build:Ljava/lang/String;
 
     return-object v0
@@ -54,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 98
     iget v0, p0, Lcom/letv/tracker/msg/bean/Version;->major:I
 
     return v0
@@ -64,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 107
     iget v0, p0, Lcom/letv/tracker/msg/bean/Version;->minor:I
 
     return v0
@@ -74,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 116
     iget v0, p0, Lcom/letv/tracker/msg/bean/Version;->patch:I
 
     return v0
@@ -84,7 +75,6 @@
     .locals 1
 
     .prologue
-    .line 134
     iget-object v0, p0, Lcom/letv/tracker/msg/bean/Version;->version:Ljava/lang/String;
 
     return-object v0
@@ -96,7 +86,6 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 158
     iget-object v0, p0, Lcom/letv/tracker/msg/bean/Version;->version:Ljava/lang/String;
 
     if-nez v0, :cond_0
@@ -134,22 +123,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 50
     iput p1, p0, Lcom/letv/tracker/msg/bean/Version;->major:I
 
-    .line 51
     iput p2, p0, Lcom/letv/tracker/msg/bean/Version;->minor:I
 
-    .line 52
     iput p3, p0, Lcom/letv/tracker/msg/bean/Version;->patch:I
 
-    .line 53
     iput-object v0, p0, Lcom/letv/tracker/msg/bean/Version;->build:Ljava/lang/String;
 
-    .line 54
     iput-object v0, p0, Lcom/letv/tracker/msg/bean/Version;->version:Ljava/lang/String;
 
-    .line 55
     return-void
 .end method
 
@@ -161,24 +144,18 @@
     .param p4, "build"    # Ljava/lang/String;
 
     .prologue
-    .line 71
     iput p1, p0, Lcom/letv/tracker/msg/bean/Version;->major:I
 
-    .line 72
     iput p2, p0, Lcom/letv/tracker/msg/bean/Version;->minor:I
 
-    .line 73
     iput p3, p0, Lcom/letv/tracker/msg/bean/Version;->patch:I
 
-    .line 74
     iput-object p4, p0, Lcom/letv/tracker/msg/bean/Version;->build:Ljava/lang/String;
 
-    .line 75
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/letv/tracker/msg/bean/Version;->version:Ljava/lang/String;
 
-    .line 76
     return-void
 .end method
 
@@ -189,24 +166,18 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 85
     iput v0, p0, Lcom/letv/tracker/msg/bean/Version;->major:I
 
-    .line 86
     iput v0, p0, Lcom/letv/tracker/msg/bean/Version;->minor:I
 
-    .line 87
     iput v0, p0, Lcom/letv/tracker/msg/bean/Version;->patch:I
 
-    .line 88
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/letv/tracker/msg/bean/Version;->build:Ljava/lang/String;
 
-    .line 89
     iput-object p1, p0, Lcom/letv/tracker/msg/bean/Version;->version:Ljava/lang/String;
 
-    .line 90
     return-void
 .end method
 
@@ -222,17 +193,14 @@
 
     const/4 v3, 0x0
 
-    .line 139
     iget-object v0, p0, Lcom/letv/tracker/msg/bean/Version;->version:Ljava/lang/String;
 
     if-nez v0, :cond_1
 
-    .line 140
     iget-object v0, p0, Lcom/letv/tracker/msg/bean/Version;->build:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 141
     const-string v0, "%d.%d.%d"
 
     new-array v1, v6, [Ljava/lang/Object;
@@ -265,11 +233,9 @@
 
     move-result-object v0
 
-    .line 146
     :goto_0
     return-object v0
 
-    .line 143
     :cond_0
     const-string v0, "%d.%d.%d.%s"
 
@@ -311,7 +277,6 @@
 
     goto :goto_0
 
-    .line 146
     :cond_1
     iget-object v0, p0, Lcom/letv/tracker/msg/bean/Version;->version:Ljava/lang/String;
 

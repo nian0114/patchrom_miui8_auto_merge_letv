@@ -18,7 +18,6 @@
     .locals 1
 
     .prologue
-    .line 28
     const/16 v0, 0xd
 
     new-array v0, v0, [I
@@ -27,7 +26,6 @@
 
     sput-object v0, Lcom/letv/leui/widget/picker/LunarCalendar;->DAYS_BEFORE_MONTH:[I
 
-    .line 36
     const/16 v0, 0xc8
 
     new-array v0, v0, [I
@@ -38,7 +36,6 @@
 
     return-void
 
-    .line 28
     nop
 
     :array_0
@@ -58,7 +55,6 @@
         0x16d
     .end array-data
 
-    .line 36
     :array_1
     .array-data 4
         0x84b6bf
@@ -268,7 +264,6 @@
     .locals 0
 
     .prologue
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -280,7 +275,6 @@
     .param p1, "month"    # I
 
     .prologue
-    .line 261
     sget-object v0, Lcom/letv/leui/widget/picker/LunarCalendar;->LUNAR_INFO:[I
 
     add-int/lit16 v1, p0, -0x76c
@@ -295,10 +289,8 @@
 
     if-nez v0, :cond_0
 
-    .line 262
     const/16 v0, 0x1d
 
-    .line 264
     :goto_0
     return v0
 
@@ -313,10 +305,8 @@
     .param p0, "year"    # I
 
     .prologue
-    .line 241
     const/16 v2, 0x15c
 
-    .line 242
     .local v2, "sum":I
     invoke-static {p0}, Lcom/letv/leui/widget/picker/LunarCalendar;->leapMonth(I)I
 
@@ -324,10 +314,8 @@
 
     if-eqz v3, :cond_0
 
-    .line 243
     const/16 v2, 0x179
 
-    .line 245
     :cond_0
     sget-object v3, Lcom/letv/leui/widget/picker/LunarCalendar;->LUNAR_INFO:[I
 
@@ -339,7 +327,6 @@
 
     and-int v1, v3, v4
 
-    .line 246
     .local v1, "monthInfo":I
     const/high16 v0, 0x80000
 
@@ -349,21 +336,17 @@
 
     if-le v0, v3, :cond_2
 
-    .line 247
     and-int v3, v1, v0
 
     if-eqz v3, :cond_1
 
-    .line 248
     add-int/lit8 v2, v2, 0x1
 
-    .line 246
     :cond_1
     shr-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 250
     :cond_2
     return v2
 .end method
@@ -374,7 +357,6 @@
     .param p1, "month"    # I
 
     .prologue
-    .line 205
     const/4 v0, 0x0
 
     invoke-static {p0, p1, v0}, Lcom/letv/leui/widget/picker/LunarCalendar;->daysInMonth(IIZ)I
@@ -391,46 +373,37 @@
     .param p2, "leap"    # Z
 
     .prologue
-    .line 216
     invoke-static {p0}, Lcom/letv/leui/widget/picker/LunarCalendar;->leapMonth(I)I
 
     move-result v0
 
-    .line 217
     .local v0, "leapMonth":I
     const/4 v1, 0x0
 
-    .line 219
     .local v1, "offset":I
     if-eqz v0, :cond_0
 
     if-le p1, v0, :cond_0
 
-    .line 220
     const/4 v1, 0x1
 
-    .line 223
     :cond_0
     if-nez p2, :cond_1
 
-    .line 224
     add-int v2, p1, v1
 
     invoke-static {p0, v2}, Lcom/letv/leui/widget/picker/LunarCalendar;->daysInLunarMonth(II)I
 
     move-result v2
 
-    .line 231
     :goto_0
     return v2
 
-    .line 226
     :cond_1
     if-eqz v0, :cond_2
 
     if-ne v0, p1, :cond_2
 
-    .line 227
     add-int/lit8 v2, p1, 0x1
 
     invoke-static {p0, v2}, Lcom/letv/leui/widget/picker/LunarCalendar;->daysInLunarMonth(II)I
@@ -439,7 +412,6 @@
 
     goto :goto_0
 
-    .line 231
     :cond_2
     const/4 v2, 0x0
 
@@ -451,7 +423,6 @@
     .param p0, "year"    # I
 
     .prologue
-    .line 274
     sget-object v0, Lcom/letv/leui/widget/picker/LunarCalendar;->LUNAR_INFO:[I
 
     add-int/lit16 v1, p0, -0x76c
@@ -473,68 +444,55 @@
     .param p1, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 283
     invoke-static/range {p1 .. p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v18
 
     if-eqz v18, :cond_0
 
-    .line 284
     const/4 v13, 0x0
 
-    .line 345
     :goto_0
     return-object v13
 
-    .line 286
     :cond_0
     invoke-virtual/range {p1 .. p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 287
     const/16 v18, 0x3
 
     move/from16 v0, v18
 
     new-array v13, v0, [I
 
-    .line 288
     .local v13, "solarInfo":[I
     const/4 v15, 0x0
 
-    .line 289
     .local v15, "tempyear":I
     const/4 v9, 0x0
 
-    .line 290
     .local v9, "monthIndex":I
     const/4 v3, 0x0
 
-    .line 291
     .local v3, "dayIndex":I
     const/4 v6, -0x1
 
-    .line 292
     .local v6, "indexofYear":I
     invoke-virtual/range {p1 .. p1}, Ljava/lang/String;->length()I
 
     move-result v14
 
-    .line 293
     .local v14, "strLength":I
     new-instance v10, Ljava/util/ArrayList;
 
     invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
 
-    .line 294
     .local v10, "monthList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 295
     .local v4, "dayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -546,7 +504,6 @@
 
     move-result-object v17
 
-    .line 296
     .local v17, "years":Ljava/lang/String;
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -558,7 +515,6 @@
 
     move-result-object v12
 
-    .line 297
     .local v12, "run":Ljava/lang/String;
     move-object/from16 v0, p1
 
@@ -570,12 +526,10 @@
 
     if-nez v18, :cond_1
 
-    .line 298
     const/4 v13, 0x0
 
     goto :goto_0
 
-    .line 300
     :cond_1
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -591,7 +545,6 @@
 
     invoke-static {v10, v0}, Lcom/letv/leui/widget/picker/LunarCalendar;->stringToArrayList(Ljava/util/ArrayList;[Ljava/lang/String;)V
 
-    .line 301
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v18
@@ -606,7 +559,6 @@
 
     invoke-static {v4, v0}, Lcom/letv/leui/widget/picker/LunarCalendar;->stringToArrayList(Ljava/util/ArrayList;[Ljava/lang/String;)V
 
-    .line 302
     move-object/from16 v0, p1
 
     move-object/from16 v1, v17
@@ -615,7 +567,6 @@
 
     move-result v6
 
-    .line 303
     if-ltz v6, :cond_2
 
     add-int/lit8 v18, v14, -0x3
@@ -624,13 +575,11 @@
 
     if-ge v0, v6, :cond_3
 
-    .line 304
     :cond_2
     const/4 v13, 0x0
 
     goto :goto_0
 
-    .line 307
     :cond_3
     const/16 v18, 0x0
 
@@ -646,7 +595,6 @@
 
     move-result-object v16
 
-    .line 313
     .local v16, "yearStr":Ljava/lang/String;
     add-int/lit8 v18, v6, 0x1
 
@@ -670,7 +618,6 @@
 
     move-result-object v11
 
-    .line 314
     .local v11, "monthStr":Ljava/lang/String;
     invoke-virtual/range {p1 .. p1}, Ljava/lang/String;->length()I
 
@@ -690,13 +637,11 @@
 
     move-result-object v5
 
-    .line 316
     .local v5, "dayStr":Ljava/lang/String;
     invoke-static/range {v16 .. v16}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v15
 
-    .line 317
     invoke-static {}, Lcom/letv/leui/pim/lunar/Lunar;->getInstance()Lcom/letv/leui/pim/lunar/Lunar;
 
     move-result-object v18
@@ -707,7 +652,6 @@
 
     move-result v8
 
-    .line 318
     .local v8, "mLeapMonth":I
     invoke-virtual {v11, v12}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -715,7 +659,6 @@
 
     if-eqz v18, :cond_7
 
-    .line 319
     const-string v18, ""
 
     move-object/from16 v0, v18
@@ -724,35 +667,29 @@
 
     move-result-object v11
 
-    .line 320
     invoke-virtual {v10, v11}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
 
     move-result v18
 
     add-int/lit8 v9, v18, 0x1
 
-    .line 327
     :cond_4
     :goto_1
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
 
     move-result v3
 
-    .line 328
     const/16 v18, -0x1
 
     move/from16 v0, v18
 
     if-eq v3, v0, :cond_5
 
-    .line 329
     add-int/lit8 v3, v3, 0x1
 
-    .line 331
     :cond_5
     const/4 v7, 0x0
 
-    .line 332
     .local v7, "isLeapMonth":Z
     const/16 v18, 0x1
 
@@ -768,10 +705,8 @@
 
     if-ne v9, v8, :cond_6
 
-    .line 333
     const/4 v7, 0x1
 
-    .line 336
     :cond_6
     const/16 v18, 0x1
 
@@ -785,10 +720,8 @@
 
     if-gt v8, v0, :cond_9
 
-    .line 337
     if-ge v9, v8, :cond_8
 
-    .line 338
     add-int/lit8 v18, v9, 0x1
 
     move/from16 v0, v18
@@ -799,24 +732,20 @@
 
     goto/16 :goto_0
 
-    .line 322
     .end local v7    # "isLeapMonth":Z
     :cond_7
     invoke-virtual {v10, v11}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
 
     move-result v9
 
-    .line 323
     if-lez v8, :cond_4
 
     if-lt v9, v8, :cond_4
 
-    .line 324
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_1
 
-    .line 340
     .restart local v7    # "isLeapMonth":Z
     :cond_8
     invoke-static {v15, v9, v3, v7}, Lcom/letv/leui/widget/picker/LunarCalendar;->lunarToSolar(IIIZ)[I
@@ -825,7 +754,6 @@
 
     goto/16 :goto_0
 
-    .line 343
     :cond_9
     add-int/lit8 v18, v9, 0x1
 
@@ -856,7 +784,6 @@
 
     const/4 v8, 0x2
 
-    .line 71
     if-lt p0, v7, :cond_0
 
     const/16 v5, 0x833
@@ -875,15 +802,12 @@
 
     if-le p2, v5, :cond_1
 
-    .line 72
     :cond_0
     new-array v4, v10, [I
 
-    .line 142
     :goto_0
     return-object v4
 
-    .line 75
     :cond_1
     sget-object v5, Lcom/letv/leui/widget/picker/LunarCalendar;->LUNAR_INFO:[I
 
@@ -895,7 +819,6 @@
 
     add-int/lit8 v0, v5, -0x1
 
-    .line 77
     .local v0, "dayOffset":I
     sget-object v5, Lcom/letv/leui/widget/picker/LunarCalendar;->LUNAR_INFO:[I
 
@@ -909,10 +832,8 @@
 
     if-ne v5, v8, :cond_2
 
-    .line 78
     add-int/lit8 v0, v0, 0x1f
 
-    .line 80
     :cond_2
     const/4 v1, 0x1
 
@@ -920,7 +841,6 @@
     :goto_1
     if-ge v1, p1, :cond_4
 
-    .line 81
     sget-object v5, Lcom/letv/leui/widget/picker/LunarCalendar;->LUNAR_INFO:[I
 
     add-int/lit16 v6, p0, -0x76c
@@ -935,26 +855,21 @@
 
     if-nez v5, :cond_3
 
-    .line 82
     add-int/lit8 v0, v0, 0x1d
 
-    .line 80
     :goto_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 84
     :cond_3
     add-int/lit8 v0, v0, 0x1e
 
     goto :goto_2
 
-    .line 86
     :cond_4
     add-int/2addr v0, p2
 
-    .line 87
     sget-object v5, Lcom/letv/leui/widget/picker/LunarCalendar;->LUNAR_INFO:[I
 
     add-int/lit16 v6, p0, -0x76c
@@ -967,18 +882,15 @@
 
     shr-int/lit8 v3, v5, 0x14
 
-    .line 90
     .local v3, "leapMonth":I
     if-eqz v3, :cond_6
 
-    .line 91
     if-gt p1, v3, :cond_5
 
     if-ne p1, v3, :cond_6
 
     if-eqz p3, :cond_6
 
-    .line 92
     :cond_5
     sget-object v5, Lcom/letv/leui/widget/picker/LunarCalendar;->LUNAR_INFO:[I
 
@@ -994,10 +906,8 @@
 
     if-nez v5, :cond_b
 
-    .line 93
     add-int/lit8 v0, v0, 0x1d
 
-    .line 99
     :cond_6
     :goto_3
     const/16 v5, 0x16e
@@ -1012,26 +922,21 @@
 
     if-le v0, v5, :cond_8
 
-    .line 100
     :cond_7
     add-int/lit8 p0, p0, 0x1
 
-    .line 101
     rem-int/lit8 v5, p0, 0x4
 
     if-nez v5, :cond_c
 
     if-eq p0, v7, :cond_c
 
-    .line 102
     add-int/lit16 v0, v0, -0x16e
 
-    .line 107
     :cond_8
     :goto_4
     new-array v4, v10, [I
 
-    .line 108
     .local v4, "solarInfo":[I
     const/4 v1, 0x1
 
@@ -1040,12 +945,10 @@
 
     if-ge v1, v5, :cond_a
 
-    .line 109
     sget-object v5, Lcom/letv/leui/widget/picker/LunarCalendar;->DAYS_BEFORE_MONTH:[I
 
     aget v2, v5, v1
 
-    .line 110
     .local v2, "iPos":I
     rem-int/lit8 v5, p0, 0x4
 
@@ -1055,10 +958,8 @@
 
     if-eq p0, v7, :cond_9
 
-    .line 111
     add-int/lit8 v2, v2, 0x1
 
-    .line 114
     :cond_9
     rem-int/lit8 v5, p0, 0x4
 
@@ -1072,15 +973,12 @@
 
     if-eq p0, v7, :cond_d
 
-    .line 115
     aput v1, v4, v9
 
-    .line 116
     add-int/lit8 v5, v0, -0x1f
 
     aput v5, v4, v8
 
-    .line 141
     .end local v2    # "iPos":I
     :cond_a
     :goto_6
@@ -1090,36 +988,30 @@
 
     goto/16 :goto_0
 
-    .line 95
     .end local v4    # "solarInfo":[I
     :cond_b
     add-int/lit8 v0, v0, 0x1e
 
     goto :goto_3
 
-    .line 104
     :cond_c
     add-int/lit16 v0, v0, -0x16d
 
     goto :goto_4
 
-    .line 120
     .restart local v2    # "iPos":I
     .restart local v4    # "solarInfo":[I
     :cond_d
     if-lt v2, v0, :cond_12
 
-    .line 121
     aput v1, v4, v9
 
-    .line 122
     sget-object v5, Lcom/letv/leui/widget/picker/LunarCalendar;->DAYS_BEFORE_MONTH:[I
 
     add-int/lit8 v6, v1, -0x1
 
     aget v2, v5, v6
 
-    .line 123
     rem-int/lit8 v5, p0, 0x4
 
     if-nez v5, :cond_e
@@ -1128,25 +1020,20 @@
 
     if-eq p0, v7, :cond_e
 
-    .line 124
     add-int/lit8 v2, v2, 0x1
 
-    .line 126
     :cond_e
     if-le v0, v2, :cond_f
 
-    .line 127
     sub-int v5, v0, v2
 
     aput v5, v4, v8
 
     goto :goto_6
 
-    .line 128
     :cond_f
     if-ne v0, v2, :cond_11
 
-    .line 129
     rem-int/lit8 v5, p0, 0x4
 
     if-nez v5, :cond_10
@@ -1155,7 +1042,6 @@
 
     if-eq p0, v7, :cond_10
 
-    .line 130
     sget-object v5, Lcom/letv/leui/widget/picker/LunarCalendar;->DAYS_BEFORE_MONTH:[I
 
     aget v5, v5, v1
@@ -1174,7 +1060,6 @@
 
     goto :goto_6
 
-    .line 132
     :cond_10
     sget-object v5, Lcom/letv/leui/widget/picker/LunarCalendar;->DAYS_BEFORE_MONTH:[I
 
@@ -1192,13 +1077,11 @@
 
     goto :goto_6
 
-    .line 136
     :cond_11
     aput v0, v4, v8
 
     goto :goto_6
 
-    .line 108
     :cond_12
     add-int/lit8 v1, v1, 0x1
 
@@ -1212,12 +1095,10 @@
     .param p2, "monthDay"    # I
 
     .prologue
-    .line 153
     const/4 v12, 0x5
 
     new-array v9, v12, [I
 
-    .line 154
     .local v9, "lunarDate":[I
     new-instance v12, Ljava/util/GregorianCalendar;
 
@@ -1233,7 +1114,6 @@
 
     move-result-object v2
 
-    .line 155
     .local v2, "baseDate":Ljava/util/Date;
     new-instance v12, Ljava/util/GregorianCalendar;
 
@@ -1249,7 +1129,6 @@
 
     move-result-object v10
 
-    .line 156
     .local v10, "objDate":Ljava/util/Date;
     invoke-virtual {v10}, Ljava/util/Date;->getTime()J
 
@@ -1267,11 +1146,9 @@
 
     long-to-int v11, v12
 
-    .line 159
     .local v11, "offset":I
     const/4 v4, 0x0
 
-    .line 160
     .local v4, "daysOfYear":I
     const/16 v6, 0x76c
 
@@ -1283,49 +1160,38 @@
 
     if-lez v11, :cond_0
 
-    .line 161
     invoke-static {v6}, Lcom/letv/leui/widget/picker/LunarCalendar;->daysInLunarYear(I)I
 
     move-result v4
 
-    .line 162
     sub-int/2addr v11, v4
 
-    .line 160
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
-    .line 164
     :cond_0
     if-gez v11, :cond_1
 
-    .line 165
     add-int/2addr v11, v4
 
-    .line 166
     add-int/lit8 v6, v6, -0x1
 
-    .line 169
     :cond_1
     const/4 v12, 0x0
 
     aput v6, v9, v12
 
-    .line 170
     invoke-static {v6}, Lcom/letv/leui/widget/picker/LunarCalendar;->leapMonth(I)I
 
     move-result v8
 
-    .line 171
     .local v8, "leapMonth":I
     const/4 v7, 0x0
 
-    .line 172
     .local v7, "isLeap":Z
     const/4 v3, 0x0
 
-    .line 173
     .local v3, "daysOfMonth":I
     const/4 v5, 0x1
 
@@ -1337,58 +1203,45 @@
 
     if-lez v11, :cond_2
 
-    .line 174
     invoke-static {v6, v5}, Lcom/letv/leui/widget/picker/LunarCalendar;->daysInLunarMonth(II)I
 
     move-result v3
 
-    .line 175
     sub-int/2addr v11, v3
 
-    .line 173
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_1
 
-    .line 177
     :cond_2
     if-eqz v8, :cond_3
 
     if-le v5, v8, :cond_3
 
-    .line 178
     add-int/lit8 v5, v5, -0x1
 
-    .line 180
     if-ne v5, v8, :cond_3
 
-    .line 181
     const/4 v7, 0x1
 
-    .line 185
     :cond_3
     if-gez v11, :cond_4
 
-    .line 186
     add-int/2addr v11, v3
 
-    .line 187
     add-int/lit8 v5, v5, -0x1
 
-    .line 190
     :cond_4
     const/4 v12, 0x1
 
     aput v5, v9, v12
 
-    .line 191
     const/4 v12, 0x2
 
     add-int/lit8 v13, v11, 0x1
 
     aput v13, v9, v12
 
-    .line 192
     const/4 v13, 0x3
 
     if-eqz v7, :cond_5
@@ -1398,15 +1251,12 @@
     :goto_2
     aput v12, v9, v13
 
-    .line 193
     const/4 v12, 0x4
 
     aput v8, v9, v12
 
-    .line 195
     return-object v9
 
-    .line 192
     :cond_5
     const/4 v12, 0x0
 
@@ -1429,7 +1279,6 @@
     .end annotation
 
     .prologue
-    .line 349
     .local p0, "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-virtual {p0}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -1437,10 +1286,8 @@
 
     if-nez v1, :cond_0
 
-    .line 350
     invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
 
-    .line 351
     :cond_0
     const/4 v0, 0x0
 
@@ -1450,17 +1297,14 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 352
     aget-object v1, p1, v0
 
     invoke-virtual {p0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 351
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 353
     :cond_1
     return-void
 .end method

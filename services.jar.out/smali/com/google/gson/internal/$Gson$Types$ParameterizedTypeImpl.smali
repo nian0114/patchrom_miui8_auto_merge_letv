@@ -42,20 +42,16 @@
 
     const/4 v3, 0x0
 
-    .line 440
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 442
     instance-of v5, p2, Ljava/lang/Class;
 
     if-eqz v5, :cond_3
 
     move-object v1, p2
 
-    .line 443
     check-cast v1, Ljava/lang/Class;
 
-    .line 444
     .local v1, "rawTypeAsClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {v1}, Ljava/lang/Class;->getModifiers()I
 
@@ -76,7 +72,6 @@
     :cond_0
     move v0, v4
 
-    .line 446
     .local v0, "isStaticOrTopLevelClass":Z
     :goto_0
     if-nez p1, :cond_1
@@ -89,7 +84,6 @@
     :cond_2
     invoke-static {v3}, Lcom/google/gson/internal/$Gson$Preconditions;->checkArgument(Z)V
 
-    .line 449
     .end local v0    # "isStaticOrTopLevelClass":Z
     .end local v1    # "rawTypeAsClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :cond_3
@@ -100,14 +94,12 @@
     :goto_1
     iput-object v3, p0, Lcom/google/gson/internal/$Gson$Types$ParameterizedTypeImpl;->ownerType:Ljava/lang/reflect/Type;
 
-    .line 450
     invoke-static {p2}, Lcom/google/gson/internal/$Gson$Types;->canonicalize(Ljava/lang/reflect/Type;)Ljava/lang/reflect/Type;
 
     move-result-object v3
 
     iput-object v3, p0, Lcom/google/gson/internal/$Gson$Types$ParameterizedTypeImpl;->rawType:Ljava/lang/reflect/Type;
 
-    .line 451
     invoke-virtual {p3}, [Ljava/lang/reflect/Type;->clone()Ljava/lang/Object;
 
     move-result-object v3
@@ -116,7 +108,6 @@
 
     iput-object v3, p0, Lcom/google/gson/internal/$Gson$Types$ParameterizedTypeImpl;->typeArguments:[Ljava/lang/reflect/Type;
 
-    .line 452
     const/4 v2, 0x0
 
     .local v2, "t":I
@@ -127,14 +118,12 @@
 
     if-ge v2, v3, :cond_6
 
-    .line 453
     iget-object v3, p0, Lcom/google/gson/internal/$Gson$Types$ParameterizedTypeImpl;->typeArguments:[Ljava/lang/reflect/Type;
 
     aget-object v3, v3, v2
 
     invoke-static {v3}, Lcom/google/gson/internal/$Gson$Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 454
     iget-object v3, p0, Lcom/google/gson/internal/$Gson$Types$ParameterizedTypeImpl;->typeArguments:[Ljava/lang/reflect/Type;
 
     aget-object v3, v3, v2
@@ -142,7 +131,6 @@
     # invokes: Lcom/google/gson/internal/$Gson$Types;->checkNotPrimitive(Ljava/lang/reflect/Type;)V
     invoke-static {v3}, Lcom/google/gson/internal/$Gson$Types;->access$000(Ljava/lang/reflect/Type;)V
 
-    .line 455
     iget-object v3, p0, Lcom/google/gson/internal/$Gson$Types$ParameterizedTypeImpl;->typeArguments:[Ljava/lang/reflect/Type;
 
     iget-object v4, p0, Lcom/google/gson/internal/$Gson$Types$ParameterizedTypeImpl;->typeArguments:[Ljava/lang/reflect/Type;
@@ -155,7 +143,6 @@
 
     aput-object v4, v3, v2
 
-    .line 452
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
@@ -165,10 +152,8 @@
     :cond_4
     move v0, v3
 
-    .line 444
     goto :goto_0
 
-    .line 449
     .end local v1    # "rawTypeAsClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :cond_5
     invoke-static {p1}, Lcom/google/gson/internal/$Gson$Types;->canonicalize(Ljava/lang/reflect/Type;)Ljava/lang/reflect/Type;
@@ -177,7 +162,6 @@
 
     goto :goto_1
 
-    .line 457
     .restart local v2    # "t":I
     :cond_6
     return-void
@@ -190,7 +174,6 @@
     .param p1, "other"    # Ljava/lang/Object;
 
     .prologue
-    .line 472
     instance-of v0, p1, Ljava/lang/reflect/ParameterizedType;
 
     if-eqz v0, :cond_0
@@ -219,7 +202,6 @@
     .locals 1
 
     .prologue
-    .line 460
     iget-object v0, p0, Lcom/google/gson/internal/$Gson$Types$ParameterizedTypeImpl;->typeArguments:[Ljava/lang/reflect/Type;
 
     invoke-virtual {v0}, [Ljava/lang/reflect/Type;->clone()Ljava/lang/Object;
@@ -235,7 +217,6 @@
     .locals 1
 
     .prologue
-    .line 468
     iget-object v0, p0, Lcom/google/gson/internal/$Gson$Types$ParameterizedTypeImpl;->ownerType:Ljava/lang/reflect/Type;
 
     return-object v0
@@ -245,7 +226,6 @@
     .locals 1
 
     .prologue
-    .line 464
     iget-object v0, p0, Lcom/google/gson/internal/$Gson$Types$ParameterizedTypeImpl;->rawType:Ljava/lang/reflect/Type;
 
     return-object v0
@@ -255,7 +235,6 @@
     .locals 2
 
     .prologue
-    .line 477
     iget-object v0, p0, Lcom/google/gson/internal/$Gson$Types$ParameterizedTypeImpl;->typeArguments:[Ljava/lang/reflect/Type;
 
     invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
@@ -286,7 +265,6 @@
     .locals 5
 
     .prologue
-    .line 483
     new-instance v1, Ljava/lang/StringBuilder;
 
     iget-object v2, p0, Lcom/google/gson/internal/$Gson$Types$ParameterizedTypeImpl;->typeArguments:[Ljava/lang/reflect/Type;
@@ -299,7 +277,6 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 484
     .local v1, "stringBuilder":Ljava/lang/StringBuilder;
     iget-object v2, p0, Lcom/google/gson/internal/$Gson$Types$ParameterizedTypeImpl;->rawType:Ljava/lang/reflect/Type;
 
@@ -309,23 +286,19 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 486
     iget-object v2, p0, Lcom/google/gson/internal/$Gson$Types$ParameterizedTypeImpl;->typeArguments:[Ljava/lang/reflect/Type;
 
     array-length v2, v2
 
     if-nez v2, :cond_0
 
-    .line 487
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 494
     :goto_0
     return-object v2
 
-    .line 490
     :cond_0
     const-string v2, "<"
 
@@ -345,7 +318,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 491
     const/4 v0, 0x1
 
     .local v0, "i":I
@@ -356,7 +328,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 492
     const-string v2, ", "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -373,12 +344,10 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 491
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 494
     :cond_1
     const-string v2, ">"
 

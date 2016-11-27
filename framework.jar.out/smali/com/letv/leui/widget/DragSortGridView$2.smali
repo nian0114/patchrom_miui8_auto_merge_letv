@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 579
     iput-object p1, p0, Lcom/letv/leui/widget/DragSortGridView$2;->this$0:Lcom/letv/leui/widget/DragSortGridView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +52,6 @@
     .param p3, "endValue"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 581
     new-instance v0, Landroid/graphics/Rect;
 
     iget v1, p2, Landroid/graphics/Rect;->left:I
@@ -97,7 +95,6 @@
     .locals 1
 
     .prologue
-    .line 579
     check-cast p2, Landroid/graphics/Rect;
 
     check-cast p3, Landroid/graphics/Rect;
@@ -116,7 +113,6 @@
     .param p3, "fraction"    # F
 
     .prologue
-    .line 588
     int-to-float v0, p1
 
     sub-int v1, p2, p1

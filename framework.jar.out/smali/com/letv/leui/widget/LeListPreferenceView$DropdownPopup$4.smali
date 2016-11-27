@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 873
     iput-object p1, p0, Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup$4;->this$1:Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 877
     iget-object v0, p0, Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup$4;->this$1:Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup;->isShowing()Z
@@ -49,7 +47,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 878
     iget-object v0, p0, Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup$4;->this$1:Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup;
 
     iget-object v0, v0, Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup;->this$0:Lcom/letv/leui/widget/LeListPreferenceView;
@@ -105,12 +102,10 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 886
     :cond_0
     :goto_0
     return-void
 
-    .line 881
     :cond_1
     iget-object v0, p0, Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup$4;->this$1:Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup;
 
@@ -137,7 +132,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 882
     iget-object v0, p0, Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup$4;->this$1:Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup;
 
     iget-object v0, v0, Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup;->this$0:Lcom/letv/leui/widget/LeListPreferenceView;
@@ -158,7 +152,6 @@
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup;->setAnchorView(Landroid/view/View;)V
 
-    .line 883
     iget-object v0, p0, Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup$4;->this$1:Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup;
 
     iget-object v0, v0, Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup;->this$0:Lcom/letv/leui/widget/LeListPreferenceView;

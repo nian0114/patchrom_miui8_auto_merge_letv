@@ -39,7 +39,6 @@
 
     const/4 v3, 0x0
 
-    .line 4
     new-instance v0, Lcom/letv/tracker/enums/UserType;
 
     const-string v1, "Male"
@@ -50,7 +49,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/UserType;->Male:Lcom/letv/tracker/enums/UserType;
 
-    .line 5
     new-instance v0, Lcom/letv/tracker/enums/UserType;
 
     const-string v1, "Female"
@@ -61,7 +59,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/UserType;->Female:Lcom/letv/tracker/enums/UserType;
 
-    .line 6
     new-instance v0, Lcom/letv/tracker/enums/UserType;
 
     const-string v1, "Child"
@@ -72,7 +69,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/UserType;->Child:Lcom/letv/tracker/enums/UserType;
 
-    .line 3
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/letv/tracker/enums/UserType;
@@ -106,13 +102,10 @@
     .end annotation
 
     .prologue
-    .line 10
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 11
     iput-object p3, p0, Lcom/letv/tracker/enums/UserType;->id:Ljava/lang/String;
 
-    .line 12
     return-void
 .end method
 
@@ -121,7 +114,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 3
     const-class v0, Lcom/letv/tracker/enums/UserType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -137,7 +129,6 @@
     .locals 1
 
     .prologue
-    .line 3
     sget-object v0, Lcom/letv/tracker/enums/UserType;->$VALUES:[Lcom/letv/tracker/enums/UserType;
 
     invoke-virtual {v0}, [Lcom/letv/tracker/enums/UserType;->clone()Ljava/lang/Object;
@@ -155,7 +146,6 @@
     .locals 1
 
     .prologue
-    .line 15
     iget-object v0, p0, Lcom/letv/tracker/enums/UserType;->id:Ljava/lang/String;
 
     return-object v0

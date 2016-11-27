@@ -19,7 +19,6 @@
     .locals 1
 
     .prologue
-    .line 36
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/gson/FieldNamingPolicy;-><init>(Ljava/lang/String;ILcom/google/gson/FieldNamingPolicy$1;)V
@@ -34,7 +33,6 @@
     .param p1, "f"    # Ljava/lang/reflect/Field;
 
     .prologue
-    .line 38
     invoke-virtual {p1}, Ljava/lang/reflect/Field;->getName()Ljava/lang/String;
 
     move-result-object v0

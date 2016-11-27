@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 62
     iput-object p1, p0, Lcom/letv/leui/preference/LeEditDialogPreference$1;->this$0:Lcom/letv/leui/preference/LeEditDialogPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 66
     iget-object v0, p0, Lcom/letv/leui/preference/LeEditDialogPreference$1;->this$0:Lcom/letv/leui/preference/LeEditDialogPreference;
 
     iget-object v1, p0, Lcom/letv/leui/preference/LeEditDialogPreference$1;->this$0:Lcom/letv/leui/preference/LeEditDialogPreference;
@@ -62,7 +60,6 @@
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/preference/LeEditDialogPreference;->setText(Ljava/lang/CharSequence;)V
 
-    .line 67
     iget-object v0, p0, Lcom/letv/leui/preference/LeEditDialogPreference$1;->this$0:Lcom/letv/leui/preference/LeEditDialogPreference;
 
     # invokes: Lcom/letv/leui/preference/LeEditDialogPreference;->shouldPersist()Z
@@ -72,7 +69,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 68
     iget-object v0, p0, Lcom/letv/leui/preference/LeEditDialogPreference$1;->this$0:Lcom/letv/leui/preference/LeEditDialogPreference;
 
     iget-object v1, p0, Lcom/letv/leui/preference/LeEditDialogPreference$1;->this$0:Lcom/letv/leui/preference/LeEditDialogPreference;
@@ -88,31 +84,26 @@
     # invokes: Lcom/letv/leui/preference/LeEditDialogPreference;->persistString(Ljava/lang/String;)Z
     invoke-static {v0, v1}, Lcom/letv/leui/preference/LeEditDialogPreference;->access$200(Lcom/letv/leui/preference/LeEditDialogPreference;Ljava/lang/String;)Z
 
-    .line 70
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/preference/LeEditDialogPreference$1;->this$0:Lcom/letv/leui/preference/LeEditDialogPreference;
 
     # invokes: Lcom/letv/leui/preference/LeEditDialogPreference;->notifyChanged()V
     invoke-static {v0}, Lcom/letv/leui/preference/LeEditDialogPreference;->access$300(Lcom/letv/leui/preference/LeEditDialogPreference;)V
 
-    .line 71
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 72
     iget-object v0, p0, Lcom/letv/leui/preference/LeEditDialogPreference$1;->this$0:Lcom/letv/leui/preference/LeEditDialogPreference;
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeEditDialogPreference;->positiveClickListener:Landroid/content/DialogInterface$OnClickListener;
 
     if-eqz v0, :cond_1
 
-    .line 73
     iget-object v0, p0, Lcom/letv/leui/preference/LeEditDialogPreference$1;->this$0:Lcom/letv/leui/preference/LeEditDialogPreference;
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeEditDialogPreference;->positiveClickListener:Landroid/content/DialogInterface$OnClickListener;
 
     invoke-interface {v0, p1, p2}, Landroid/content/DialogInterface$OnClickListener;->onClick(Landroid/content/DialogInterface;I)V
 
-    .line 75
     :cond_1
     return-void
 .end method

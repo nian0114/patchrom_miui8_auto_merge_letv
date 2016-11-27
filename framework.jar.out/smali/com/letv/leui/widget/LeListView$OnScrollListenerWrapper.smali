@@ -28,12 +28,10 @@
     .locals 0
 
     .prologue
-    .line 170
     iput-object p1, p0, Lcom/letv/leui/widget/LeListView$OnScrollListenerWrapper;->this$0:Lcom/letv/leui/widget/LeListView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 171
     return-void
 .end method
 
@@ -42,15 +40,12 @@
     .param p2, "onScrollListener"    # Landroid/widget/AbsListView$OnScrollListener;
 
     .prologue
-    .line 173
     iput-object p1, p0, Lcom/letv/leui/widget/LeListView$OnScrollListenerWrapper;->this$0:Lcom/letv/leui/widget/LeListView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 174
     iput-object p2, p0, Lcom/letv/leui/widget/LeListView$OnScrollListenerWrapper;->onScrollListener:Landroid/widget/AbsListView$OnScrollListener;
 
-    .line 175
     return-void
 .end method
 
@@ -64,7 +59,6 @@
     .param p4, "totalItemCount"    # I
 
     .prologue
-    .line 191
     iget-object v0, p0, Lcom/letv/leui/widget/LeListView$OnScrollListenerWrapper;->this$0:Lcom/letv/leui/widget/LeListView;
 
     # getter for: Lcom/letv/leui/widget/LeListView;->mSwipeHelper:Lcom/letv/leui/widget/SwipeListViewHelper;
@@ -74,7 +68,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 192
     iget-object v0, p0, Lcom/letv/leui/widget/LeListView$OnScrollListenerWrapper;->this$0:Lcom/letv/leui/widget/LeListView;
 
     # getter for: Lcom/letv/leui/widget/LeListView;->mSwipeHelper:Lcom/letv/leui/widget/SwipeListViewHelper;
@@ -84,18 +77,15 @@
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/letv/leui/widget/SwipeListViewHelper;->onScroll(Landroid/widget/AbsListView;III)V
 
-    .line 196
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/LeListView$OnScrollListenerWrapper;->onScrollListener:Landroid/widget/AbsListView$OnScrollListener;
 
     if-eqz v0, :cond_1
 
-    .line 197
     iget-object v0, p0, Lcom/letv/leui/widget/LeListView$OnScrollListenerWrapper;->onScrollListener:Landroid/widget/AbsListView$OnScrollListener;
 
     invoke-interface {v0, p1, p2, p3, p4}, Landroid/widget/AbsListView$OnScrollListener;->onScroll(Landroid/widget/AbsListView;III)V
 
-    .line 199
     :cond_1
     return-void
 .end method
@@ -106,7 +96,6 @@
     .param p2, "scrollState"    # I
 
     .prologue
-    .line 179
     iget-object v0, p0, Lcom/letv/leui/widget/LeListView$OnScrollListenerWrapper;->this$0:Lcom/letv/leui/widget/LeListView;
 
     # getter for: Lcom/letv/leui/widget/LeListView;->mSwipeHelper:Lcom/letv/leui/widget/SwipeListViewHelper;
@@ -116,7 +105,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 180
     iget-object v0, p0, Lcom/letv/leui/widget/LeListView$OnScrollListenerWrapper;->this$0:Lcom/letv/leui/widget/LeListView;
 
     # getter for: Lcom/letv/leui/widget/LeListView;->mSwipeHelper:Lcom/letv/leui/widget/SwipeListViewHelper;
@@ -126,18 +114,15 @@
 
     invoke-virtual {v0, p1, p2}, Lcom/letv/leui/widget/SwipeListViewHelper;->onScrollStateChanged(Landroid/widget/AbsListView;I)V
 
-    .line 184
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/LeListView$OnScrollListenerWrapper;->onScrollListener:Landroid/widget/AbsListView$OnScrollListener;
 
     if-eqz v0, :cond_1
 
-    .line 185
     iget-object v0, p0, Lcom/letv/leui/widget/LeListView$OnScrollListenerWrapper;->onScrollListener:Landroid/widget/AbsListView$OnScrollListener;
 
     invoke-interface {v0, p1, p2}, Landroid/widget/AbsListView$OnScrollListener;->onScrollStateChanged(Landroid/widget/AbsListView;I)V
 
-    .line 187
     :cond_1
     return-void
 .end method

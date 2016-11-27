@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 223
     iput-object p1, p0, Lcom/letv/leui/widget/LeActionBarBottomSlider$7;->this$0:Lcom/letv/leui/widget/LeActionBarBottomSlider;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -38,10 +37,8 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 232
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
 
-    .line 233
     iget-object v0, p0, Lcom/letv/leui/widget/LeActionBarBottomSlider$7;->this$0:Lcom/letv/leui/widget/LeActionBarBottomSlider;
 
     # getter for: Lcom/letv/leui/widget/LeActionBarBottomSlider;->mMenuView:Lcom/letv/leui/widget/LeTransLinearLayout;
@@ -57,7 +54,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/letv/leui/widget/LeTransLinearLayout;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 244
     return-void
 .end method
 
@@ -66,10 +62,8 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 226
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
 
-    .line 227
     iget-object v0, p0, Lcom/letv/leui/widget/LeActionBarBottomSlider$7;->this$0:Lcom/letv/leui/widget/LeActionBarBottomSlider;
 
     # getter for: Lcom/letv/leui/widget/LeActionBarBottomSlider;->mMenuView:Lcom/letv/leui/widget/LeTransLinearLayout;
@@ -81,6 +75,5 @@
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/widget/LeTransLinearLayout;->setIntercept(Z)V
 
-    .line 228
     return-void
 .end method

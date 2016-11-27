@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 161
     iput-object p1, p0, Lcom/letv/storage/OtgGuideDialog$cancelListener;->this$0:Lcom/letv/storage/OtgGuideDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/letv/storage/OtgGuideDialog$1;
 
     .prologue
-    .line 161
     invoke-direct {p0, p1}, Lcom/letv/storage/OtgGuideDialog$cancelListener;-><init>(Lcom/letv/storage/OtgGuideDialog;)V
 
     return-void
@@ -53,7 +51,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 163
     iget-object v0, p0, Lcom/letv/storage/OtgGuideDialog$cancelListener;->this$0:Lcom/letv/storage/OtgGuideDialog;
 
     iget-object v0, v0, Lcom/letv/storage/OtgGuideDialog;->mHandler:Lcom/letv/storage/OtgGuideDialog$OTGDialogHandler;
@@ -62,6 +59,5 @@
 
     invoke-virtual {v0, v1}, Lcom/letv/storage/OtgGuideDialog$OTGDialogHandler;->sendEmptyMessage(I)Z
 
-    .line 164
     return-void
 .end method

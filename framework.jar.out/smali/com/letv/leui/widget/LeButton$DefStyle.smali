@@ -48,7 +48,6 @@
 
     const/4 v2, 0x0
 
-    .line 22
     new-instance v0, Lcom/letv/leui/widget/LeButton$DefStyle;
 
     const-string v1, "DEF"
@@ -57,7 +56,6 @@
 
     sput-object v0, Lcom/letv/leui/widget/LeButton$DefStyle;->DEF:Lcom/letv/leui/widget/LeButton$DefStyle;
 
-    .line 24
     new-instance v0, Lcom/letv/leui/widget/LeButton$DefStyle;
 
     const-string v1, "BLUE_BG"
@@ -66,7 +64,6 @@
 
     sput-object v0, Lcom/letv/leui/widget/LeButton$DefStyle;->BLUE_BG:Lcom/letv/leui/widget/LeButton$DefStyle;
 
-    .line 26
     new-instance v0, Lcom/letv/leui/widget/LeButton$DefStyle;
 
     const-string v1, "WHITE_BG"
@@ -75,7 +72,6 @@
 
     sput-object v0, Lcom/letv/leui/widget/LeButton$DefStyle;->WHITE_BG:Lcom/letv/leui/widget/LeButton$DefStyle;
 
-    .line 28
     new-instance v0, Lcom/letv/leui/widget/LeButton$DefStyle;
 
     const-string v1, "WHITE_BG_BLK"
@@ -84,7 +80,6 @@
 
     sput-object v0, Lcom/letv/leui/widget/LeButton$DefStyle;->WHITE_BG_BLK:Lcom/letv/leui/widget/LeButton$DefStyle;
 
-    .line 20
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/letv/leui/widget/LeButton$DefStyle;
@@ -119,7 +114,6 @@
     .end annotation
 
     .prologue
-    .line 20
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -130,7 +124,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 20
     const-class v0, Lcom/letv/leui/widget/LeButton$DefStyle;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -146,7 +139,6 @@
     .locals 1
 
     .prologue
-    .line 20
     sget-object v0, Lcom/letv/leui/widget/LeButton$DefStyle;->$VALUES:[Lcom/letv/leui/widget/LeButton$DefStyle;
 
     invoke-virtual {v0}, [Lcom/letv/leui/widget/LeButton$DefStyle;->clone()Ljava/lang/Object;

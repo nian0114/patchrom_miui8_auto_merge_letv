@@ -24,7 +24,6 @@
     .locals 0
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,21 +34,17 @@
     .param p0, "closeable"    # Ljava/io/Closeable;
 
     .prologue
-    .line 225
     :try_start_0
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 229
     :goto_0
     return-void
 
-    .line 226
     :catch_0
     move-exception v0
 
-    .line 227
     .local v0, "e":Ljava/io/IOException;
     const-string v1, "DexExtractorUtils"
 
@@ -74,16 +69,13 @@
     .end annotation
 
     .prologue
-    .line 124
     invoke-virtual {p0, p1}, Ljava/util/zip/ZipFile;->getInputStream(Ljava/util/zip/ZipEntry;)Ljava/io/InputStream;
 
     move-result-object v2
 
-    .line 125
     .local v2, "in":Ljava/io/InputStream;
     const/4 v4, 0x0
 
-    .line 126
     .local v4, "out":Ljava/util/zip/ZipOutputStream;
     const-string v7, ".zip"
 
@@ -95,7 +87,6 @@
 
     move-result-object v6
 
-    .line 128
     .local v6, "tmp":Ljava/io/File;
     const-string v7, "DexExtractorUtils"
 
@@ -123,7 +114,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 130
     :try_start_0
     new-instance v5, Ljava/util/zip/ZipOutputStream;
 
@@ -139,7 +129,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 132
     .end local v4    # "out":Ljava/util/zip/ZipOutputStream;
     .local v5, "out":Ljava/util/zip/ZipOutputStream;
     :try_start_1
@@ -149,7 +138,6 @@
 
     invoke-direct {v1, v7}, Ljava/util/zip/ZipEntry;-><init>(Ljava/lang/String;)V
 
-    .line 134
     .local v1, "classesDex":Ljava/util/zip/ZipEntry;
     invoke-virtual {p1}, Ljava/util/zip/ZipEntry;->getTime()J
 
@@ -157,50 +145,41 @@
 
     invoke-virtual {v1, v8, v9}, Ljava/util/zip/ZipEntry;->setTime(J)V
 
-    .line 135
     invoke-virtual {v5, v1}, Ljava/util/zip/ZipOutputStream;->putNextEntry(Ljava/util/zip/ZipEntry;)V
 
-    .line 137
     const/16 v7, 0x4000
 
     new-array v0, v7, [B
 
-    .line 138
     .local v0, "buffer":[B
     invoke-virtual {v2, v0}, Ljava/io/InputStream;->read([B)I
 
     move-result v3
 
-    .line 139
     .local v3, "length":I
     :goto_0
     const/4 v7, -0x1
 
     if-eq v3, v7, :cond_0
 
-    .line 140
     const/4 v7, 0x0
 
     invoke-virtual {v5, v0, v7, v3}, Ljava/util/zip/ZipOutputStream;->write([BII)V
 
-    .line 141
     invoke-virtual {v2, v0}, Ljava/io/InputStream;->read([B)I
 
     move-result v3
 
     goto :goto_0
 
-    .line 143
     :cond_0
     invoke-virtual {v5}, Ljava/util/zip/ZipOutputStream;->closeEntry()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 145
     :try_start_2
     invoke-virtual {v5}, Ljava/util/zip/ZipOutputStream;->close()V
 
-    .line 147
     const-string v7, "DexExtractorUtils"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -227,14 +206,12 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 148
     invoke-virtual {v6, p2}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
     move-result v7
 
     if-nez v7, :cond_1
 
-    .line 149
     new-instance v7, Ljava/io/IOException;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -285,7 +262,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 153
     .end local v0    # "buffer":[B
     .end local v1    # "classesDex":Ljava/util/zip/ZipEntry;
     .end local v3    # "length":I
@@ -299,12 +275,10 @@
     :goto_1
     invoke-static {v2}, Lcom/android/server/pm/handmultidexclass/DexExtractorUtils;->closeQuietly(Ljava/io/Closeable;)V
 
-    .line 154
     invoke-virtual {v6}, Ljava/io/File;->delete()Z
 
     throw v7
 
-    .line 145
     .end local v4    # "out":Ljava/util/zip/ZipOutputStream;
     .restart local v5    # "out":Ljava/util/zip/ZipOutputStream;
     :catchall_1
@@ -317,20 +291,16 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 153
     .restart local v0    # "buffer":[B
     .restart local v1    # "classesDex":Ljava/util/zip/ZipEntry;
     .restart local v3    # "length":I
     :cond_1
     invoke-static {v2}, Lcom/android/server/pm/handmultidexclass/DexExtractorUtils;->closeQuietly(Ljava/io/Closeable;)V
 
-    .line 154
     invoke-virtual {v6}, Ljava/io/File;->delete()Z
 
-    .line 156
     return-void
 
-    .line 153
     .end local v0    # "buffer":[B
     .end local v1    # "classesDex":Ljava/util/zip/ZipEntry;
     .end local v3    # "length":I
@@ -353,12 +323,10 @@
     .end annotation
 
     .prologue
-    .line 50
     if-eqz p0, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 51
     :cond_0
     const-string v10, "DexExtractorUtils"
 
@@ -366,7 +334,6 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 53
     :cond_1
     const-string v10, "DexExtractorUtils"
 
@@ -408,7 +375,6 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 55
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -431,26 +397,21 @@
 
     move-result-object v4
 
-    .line 61
     .local v4, "extractedFilePrefix":Ljava/lang/String;
     invoke-static {p1, v4}, Lcom/android/server/pm/handmultidexclass/DexExtractorUtils;->prepareDexDir(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 63
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 65
     .local v6, "files":Ljava/util/List;, "Ljava/util/List<Ljava/io/File;>;"
     new-instance v0, Ljava/util/zip/ZipFile;
 
     invoke-direct {v0, p0}, Ljava/util/zip/ZipFile;-><init>(Ljava/io/File;)V
 
-    .line 67
     .local v0, "apk":Ljava/util/zip/ZipFile;
     const/4 v9, 0x2
 
-    .line 68
     .local v9, "secondaryNumber":I
     :try_start_0
     new-instance v10, Ljava/lang/StringBuilder;
@@ -481,11 +442,9 @@
 
     move-result-object v1
 
-    .line 69
     .local v1, "dexFile":Ljava/util/zip/ZipEntry;
     if-nez v1, :cond_3
 
-    .line 70
     const-string v10, "DexExtractorUtils"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -522,24 +481,19 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 71
     const/4 v10, 0x0
 
-    .line 113
     :try_start_1
     invoke-virtual {v0}, Ljava/util/zip/ZipFile;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 118
     :goto_0
     return v10
 
-    .line 114
     :catch_0
     move-exception v2
 
-    .line 115
     .local v2, "e":Ljava/io/IOException;
     const-string v11, "DexExtractorUtils"
 
@@ -549,7 +503,6 @@
 
     goto :goto_0
 
-    .line 108
     .end local v2    # "e":Ljava/io/IOException;
     .local v3, "extractedFile":Ljava/io/File;
     .local v5, "fileName":Ljava/lang/String;
@@ -558,7 +511,6 @@
     :cond_2
     add-int/lit8 v9, v9, 0x1
 
-    .line 109
     :try_start_2
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -588,7 +540,6 @@
 
     move-result-object v1
 
-    .line 74
     .end local v3    # "extractedFile":Ljava/io/File;
     .end local v5    # "fileName":Ljava/lang/String;
     .end local v7    # "isExtractionSuccessful":Z
@@ -596,7 +547,6 @@
     :cond_3
     if-eqz v1, :cond_7
 
-    .line 75
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -619,17 +569,14 @@
 
     move-result-object v5
 
-    .line 76
     .restart local v5    # "fileName":Ljava/lang/String;
     new-instance v3, Ljava/io/File;
 
     invoke-direct {v3, p1, v5}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 77
     .restart local v3    # "extractedFile":Ljava/io/File;
     invoke-interface {v6, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 79
     const-string v10, "DexExtractorUtils"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -656,14 +603,11 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 80
     const/4 v8, 0x0
 
-    .line 81
     .restart local v8    # "numAttempts":I
     const/4 v7, 0x0
 
-    .line 82
     .restart local v7    # "isExtractionSuccessful":Z
     :cond_4
     :goto_1
@@ -673,13 +617,10 @@
 
     if-nez v7, :cond_6
 
-    .line 83
     add-int/lit8 v8, v8, 0x1
 
-    .line 87
     invoke-static {v0, v1, v3, v4}, Lcom/android/server/pm/handmultidexclass/DexExtractorUtils;->extract(Ljava/util/zip/ZipFile;Ljava/util/zip/ZipEntry;Ljava/io/File;Ljava/lang/String;)V
 
-    .line 88
     const-string v10, "DexExtractorUtils"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -726,12 +667,10 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 91
     invoke-static {v3}, Lcom/android/server/pm/handmultidexclass/DexExtractorUtils;->verifyZipFile(Ljava/io/File;)Z
 
     move-result v7
 
-    .line 94
     const-string v11, "DexExtractorUtils"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -787,20 +726,16 @@
 
     invoke-static {v11, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 96
     if-nez v7, :cond_4
 
-    .line 98
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
 
-    .line 99
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
     move-result v10
 
     if-eqz v10, :cond_4
 
-    .line 100
     const-string v10, "DexExtractorUtils"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -837,7 +772,6 @@
 
     goto/16 :goto_1
 
-    .line 112
     .end local v1    # "dexFile":Ljava/util/zip/ZipEntry;
     .end local v3    # "extractedFile":Ljava/io/File;
     .end local v5    # "fileName":Ljava/lang/String;
@@ -846,17 +780,14 @@
     :catchall_0
     move-exception v10
 
-    .line 113
     :try_start_3
     invoke-virtual {v0}, Ljava/util/zip/ZipFile;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_3
 
-    .line 116
     :goto_3
     throw v10
 
-    .line 94
     .restart local v1    # "dexFile":Ljava/util/zip/ZipEntry;
     .restart local v3    # "extractedFile":Ljava/io/File;
     .restart local v5    # "fileName":Ljava/lang/String;
@@ -870,14 +801,11 @@
 
     goto :goto_2
 
-    .line 105
     :cond_6
     if-nez v7, :cond_2
 
-    .line 106
     const/4 v10, 0x0
 
-    .line 113
     :try_start_5
     invoke-virtual {v0}, Ljava/util/zip/ZipFile;->close()V
     :try_end_5
@@ -885,11 +813,9 @@
 
     goto/16 :goto_0
 
-    .line 114
     :catch_1
     move-exception v2
 
-    .line 115
     .restart local v2    # "e":Ljava/io/IOException;
     const-string v11, "DexExtractorUtils"
 
@@ -899,7 +825,6 @@
 
     goto/16 :goto_0
 
-    .line 113
     .end local v2    # "e":Ljava/io/IOException;
     .end local v3    # "extractedFile":Ljava/io/File;
     .end local v5    # "fileName":Ljava/lang/String;
@@ -911,17 +836,14 @@
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_2
 
-    .line 118
     :goto_4
     const/4 v10, 0x1
 
     goto/16 :goto_0
 
-    .line 114
     :catch_2
     move-exception v2
 
-    .line 115
     .restart local v2    # "e":Ljava/io/IOException;
     const-string v10, "DexExtractorUtils"
 
@@ -931,13 +853,11 @@
 
     goto :goto_4
 
-    .line 114
     .end local v1    # "dexFile":Ljava/util/zip/ZipEntry;
     .end local v2    # "e":Ljava/io/IOException;
     :catch_3
     move-exception v2
 
-    .line 115
     .restart local v2    # "e":Ljava/io/IOException;
     const-string v11, "DexExtractorUtils"
 
@@ -959,12 +879,10 @@
     .end annotation
 
     .prologue
-    .line 184
     if-eqz p0, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 185
     :cond_0
     const-string v7, "DexExtractorUtils"
 
@@ -972,13 +890,11 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 188
     :cond_1
     invoke-virtual {p0}, Ljava/io/File;->mkdirs()Z
 
     move-result v5
 
-    .line 189
     .local v5, "mkdir":Z
     const-string v7, "DexExtractorUtils"
 
@@ -1026,14 +942,12 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 191
     invoke-virtual {p0}, Ljava/io/File;->isDirectory()Z
 
     move-result v7
 
     if-nez v7, :cond_2
 
-    .line 192
     const-string v7, "DexExtractorUtils"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1056,7 +970,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 193
     new-instance v7, Ljava/io/IOException;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1085,23 +998,19 @@
 
     throw v7
 
-    .line 197
     :cond_2
     new-instance v2, Lcom/android/server/pm/handmultidexclass/DexExtractorUtils$1;
 
     invoke-direct {v2, p1}, Lcom/android/server/pm/handmultidexclass/DexExtractorUtils$1;-><init>(Ljava/lang/String;)V
 
-    .line 205
     .local v2, "filter":Ljava/io/FileFilter;
     invoke-virtual {p0, v2}, Ljava/io/File;->listFiles(Ljava/io/FileFilter;)[Ljava/io/File;
 
     move-result-object v1
 
-    .line 206
     .local v1, "files":[Ljava/io/File;
     if-nez v1, :cond_4
 
-    .line 207
     const-string v7, "DexExtractorUtils"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1134,11 +1043,9 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 218
     :cond_3
     return-void
 
-    .line 210
     :cond_4
     move-object v0, v1
 
@@ -1154,7 +1061,6 @@
 
     aget-object v6, v0, v3
 
-    .line 211
     .local v6, "oldFile":Ljava/io/File;
     invoke-virtual {v6}, Ljava/io/File;->delete()Z
 
@@ -1162,7 +1068,6 @@
 
     if-nez v7, :cond_5
 
-    .line 212
     const-string v7, "DexExtractorUtils"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1189,13 +1094,11 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 210
     :goto_1
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 214
     :cond_5
     const-string v7, "DexExtractorUtils"
 
@@ -1231,7 +1134,6 @@
     .param p0, "file"    # Ljava/io/File;
 
     .prologue
-    .line 163
     :try_start_0
     new-instance v2, Ljava/util/zip/ZipFile;
 
@@ -1240,7 +1142,6 @@
     .catch Ljava/util/zip/ZipException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 165
     .local v2, "zipFile":Ljava/util/zip/ZipFile;
     :try_start_1
     invoke-virtual {v2}, Ljava/util/zip/ZipFile;->close()V
@@ -1248,20 +1149,16 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/util/zip/ZipException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 166
     const/4 v3, 0x1
 
-    .line 175
     .end local v2    # "zipFile":Ljava/util/zip/ZipFile;
     :goto_0
     return v3
 
-    .line 167
     .restart local v2    # "zipFile":Ljava/util/zip/ZipFile;
     :catch_0
     move-exception v0
 
-    .line 168
     .local v0, "e":Ljava/io/IOException;
     :try_start_2
     const-string v3, "DexExtractorUtils"
@@ -1293,7 +1190,6 @@
     .catch Ljava/util/zip/ZipException; {:try_start_2 .. :try_end_2} :catch_1
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 175
     .end local v0    # "e":Ljava/io/IOException;
     .end local v2    # "zipFile":Ljava/util/zip/ZipFile;
     :goto_1
@@ -1301,11 +1197,9 @@
 
     goto :goto_0
 
-    .line 170
     :catch_1
     move-exception v1
 
-    .line 171
     .local v1, "ex":Ljava/util/zip/ZipException;
     const-string v3, "DexExtractorUtils"
 
@@ -1341,12 +1235,10 @@
 
     goto :goto_1
 
-    .line 172
     .end local v1    # "ex":Ljava/util/zip/ZipException;
     :catch_2
     move-exception v1
 
-    .line 173
     .local v1, "ex":Ljava/io/IOException;
     const-string v3, "DexExtractorUtils"
 

@@ -30,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 100
     const-string v0, "&#([0-9]{3,5});"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -56,30 +55,22 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 25
     iput-boolean v1, p0, Lcom/android/server/pm/http/Response;->DEBUG:Z
 
-    .line 27
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/pm/http/Response;->responseAsString:Ljava/lang/String;
 
-    .line 29
     iput-boolean v1, p0, Lcom/android/server/pm/http/Response;->streamConsumed:Z
 
-    .line 36
     iput p1, p0, Lcom/android/server/pm/http/Response;->mStatusCode:I
 
-    .line 37
     iput-object p2, p0, Lcom/android/server/pm/http/Response;->is:Ljava/io/InputStream;
 
-    .line 39
     invoke-direct {p0}, Lcom/android/server/pm/http/Response;->fetchResponse()V
 
-    .line 40
     return-void
 .end method
 
@@ -91,27 +82,20 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 25
     iput-boolean v1, p0, Lcom/android/server/pm/http/Response;->DEBUG:Z
 
-    .line 27
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/pm/http/Response;->responseAsString:Ljava/lang/String;
 
-    .line 29
     iput-boolean v1, p0, Lcom/android/server/pm/http/Response;->streamConsumed:Z
 
-    .line 43
     iput-object p1, p0, Lcom/android/server/pm/http/Response;->responseAsString:Ljava/lang/String;
 
-    .line 44
     iput p2, p0, Lcom/android/server/pm/http/Response;->mStatusCode:I
 
-    .line 45
     return-void
 .end method
 
@@ -119,12 +103,10 @@
     .locals 2
 
     .prologue
-    .line 84
     iget-boolean v0, p0, Lcom/android/server/pm/http/Response;->streamConsumed:Z
 
     if-eqz v0, :cond_0
 
-    .line 85
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Stream has already been consumed."
@@ -133,7 +115,6 @@
 
     throw v0
 
-    .line 87
     :cond_0
     iget-object v0, p0, Lcom/android/server/pm/http/Response;->is:Ljava/io/InputStream;
 
@@ -149,21 +130,17 @@
     .end annotation
 
     .prologue
-    .line 50
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/pm/http/Response;->asStream()Ljava/io/InputStream;
 
     move-result-object v4
 
-    .line 51
     .local v4, "stream":Ljava/io/InputStream;
     if-nez v4, :cond_0
 
-    .line 67
     :goto_0
     return-void
 
-    .line 54
     :cond_0
     new-instance v0, Ljava/io/BufferedReader;
 
@@ -175,13 +152,11 @@
 
     invoke-direct {v0, v5}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 55
     .local v0, "br":Ljava/io/BufferedReader;
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 57
     .local v1, "buf":Ljava/lang/StringBuffer;
     :goto_1
     invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -191,7 +166,6 @@
     .local v2, "line":Ljava/lang/String;
     if-eqz v2, :cond_1
 
-    .line 58
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     move-result-object v5
@@ -204,7 +178,6 @@
 
     goto :goto_1
 
-    .line 63
     .end local v0    # "br":Ljava/io/BufferedReader;
     .end local v1    # "buf":Ljava/lang/StringBuffer;
     .end local v2    # "line":Ljava/lang/String;
@@ -212,7 +185,6 @@
     :catch_0
     move-exception v3
 
-    .line 65
     .local v3, "npe":Ljava/lang/NullPointerException;
     new-instance v5, Ljava/io/IOException;
 
@@ -224,7 +196,6 @@
 
     throw v5
 
-    .line 60
     .end local v3    # "npe":Ljava/lang/NullPointerException;
     .restart local v0    # "br":Ljava/io/BufferedReader;
     .restart local v1    # "buf":Ljava/lang/StringBuffer;
@@ -238,10 +209,8 @@
 
     iput-object v5, p0, Lcom/android/server/pm/http/Response;->responseAsString:Ljava/lang/String;
 
-    .line 61
     invoke-virtual {v4}, Ljava/io/InputStream;->close()V
 
-    .line 62
     const/4 v5, 0x1
 
     iput-boolean v5, p0, Lcom/android/server/pm/http/Response;->streamConsumed:Z
@@ -256,12 +225,10 @@
     .param p1, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 130
     iget-boolean v0, p0, Lcom/android/server/pm/http/Response;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 131
     const-string v0, "Area"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -284,7 +251,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 133
     :cond_0
     return-void
 .end method
@@ -294,20 +260,17 @@
     .param p0, "original"    # Ljava/lang/String;
 
     .prologue
-    .line 108
     sget-object v2, Lcom/android/server/pm/http/Response;->escaped:Ljava/util/regex/Pattern;
 
     invoke-virtual {v2, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
-    .line 109
     .local v0, "mm":Ljava/util/regex/Matcher;
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 110
     .local v1, "unescaped":Ljava/lang/StringBuffer;
     :goto_0
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
@@ -316,7 +279,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 111
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
@@ -339,11 +301,9 @@
 
     goto :goto_0
 
-    .line 114
     :cond_0
     invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->appendTail(Ljava/lang/StringBuffer;)Ljava/lang/StringBuffer;
 
-    .line 115
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -357,7 +317,6 @@
     .locals 1
 
     .prologue
-    .line 97
     iget-object v0, p0, Lcom/android/server/pm/http/Response;->responseAsString:Ljava/lang/String;
 
     return-object v0
@@ -367,7 +326,6 @@
     .locals 1
 
     .prologue
-    .line 70
     iget v0, p0, Lcom/android/server/pm/http/Response;->mStatusCode:I
 
     return v0
@@ -377,15 +335,12 @@
     .locals 2
 
     .prologue
-    .line 119
     iget-object v0, p0, Lcom/android/server/pm/http/Response;->responseAsString:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 120
     iget-object v0, p0, Lcom/android/server/pm/http/Response;->responseAsString:Ljava/lang/String;
 
-    .line 122
     :goto_0
     return-object v0
 

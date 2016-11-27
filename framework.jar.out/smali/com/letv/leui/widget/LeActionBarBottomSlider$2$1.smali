@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 111
     iput-object p1, p0, Lcom/letv/leui/widget/LeActionBarBottomSlider$2$1;->this$1:Lcom/letv/leui/widget/LeActionBarBottomSlider$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 115
     iget-object v0, p0, Lcom/letv/leui/widget/LeActionBarBottomSlider$2$1;->this$1:Lcom/letv/leui/widget/LeActionBarBottomSlider$2;
 
     iget-object v0, v0, Lcom/letv/leui/widget/LeActionBarBottomSlider$2;->this$0:Lcom/letv/leui/widget/LeActionBarBottomSlider;
@@ -48,6 +46,5 @@
     # invokes: Lcom/letv/leui/widget/LeActionBarBottomSlider;->doEnterAnimation()V
     invoke-static {v0}, Lcom/letv/leui/widget/LeActionBarBottomSlider;->access$100(Lcom/letv/leui/widget/LeActionBarBottomSlider;)V
 
-    .line 116
     return-void
 .end method

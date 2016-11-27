@@ -21,22 +21,18 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 19
     invoke-direct {p0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    .line 16
     sget-object v0, Landroid/widget/TextView$BufferType;->SPANNABLE:Landroid/widget/TextView$BufferType;
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeTextView;->mTextBufferType:Landroid/widget/TextView$BufferType;
 
-    .line 20
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-direct {p0, p1, v0, v1}, Lcom/letv/leui/widget/LeTextView;->init(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 21
     return-void
 .end method
 
@@ -46,20 +42,16 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 24
     invoke-direct {p0, p1, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 16
     sget-object v0, Landroid/widget/TextView$BufferType;->SPANNABLE:Landroid/widget/TextView$BufferType;
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeTextView;->mTextBufferType:Landroid/widget/TextView$BufferType;
 
-    .line 25
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/letv/leui/widget/LeTextView;->init(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 26
     return-void
 .end method
 
@@ -70,18 +62,14 @@
     .param p3, "defStyle"    # I
 
     .prologue
-    .line 29
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 16
     sget-object v0, Landroid/widget/TextView$BufferType;->SPANNABLE:Landroid/widget/TextView$BufferType;
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeTextView;->mTextBufferType:Landroid/widget/TextView$BufferType;
 
-    .line 30
     invoke-direct {p0, p1, p2, p3}, Lcom/letv/leui/widget/LeTextView;->init(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 31
     return-void
 .end method
 
@@ -93,18 +81,14 @@
     .param p4, "defStyleRes"    # I
 
     .prologue
-    .line 34
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 16
     sget-object v0, Landroid/widget/TextView$BufferType;->SPANNABLE:Landroid/widget/TextView$BufferType;
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeTextView;->mTextBufferType:Landroid/widget/TextView$BufferType;
 
-    .line 35
     invoke-direct {p0, p1, p2, p3}, Lcom/letv/leui/widget/LeTextView;->init(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 36
     return-void
 .end method
 
@@ -115,10 +99,8 @@
     .param p3, "defStyle"    # I
 
     .prologue
-    .line 39
     iput-object p1, p0, Lcom/letv/leui/widget/LeTextView;->mContext:Landroid/content/Context;
 
-    .line 40
     return-void
 .end method
 
@@ -130,7 +112,6 @@
     .param p2, "mask"    # I
 
     .prologue
-    .line 71
     const/4 v0, 0x1
 
     invoke-static {p1, p2, v0}, Lcom/letv/leui/util/LeLinkify;->addLinks(Landroid/text/Spannable;IZ)Z
@@ -144,12 +125,10 @@
     .locals 1
 
     .prologue
-    .line 75
     const v0, 0x1020021
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/LeTextView;->onTextContextMenuItem(I)Z
 
-    .line 76
     return-void
 .end method
 
@@ -157,7 +136,6 @@
     .locals 0
 
     .prologue
-    .line 47
     return-void
 .end method
 
@@ -165,7 +143,6 @@
     .locals 0
 
     .prologue
-    .line 56
     return-void
 .end method
 
@@ -176,7 +153,6 @@
     .param p3, "slop"    # F
 
     .prologue
-    .line 66
     neg-float v0, p3
 
     cmpl-float v0, p1, v0
@@ -228,12 +204,10 @@
     .locals 1
 
     .prologue
-    .line 79
     const v0, 0x102001f
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/LeTextView;->onTextContextMenuItem(I)Z
 
-    .line 80
     return-void
 .end method
 
@@ -243,7 +217,6 @@
     .param p2, "type"    # Landroid/widget/TextView$BufferType;
 
     .prologue
-    .line 60
     sget-object v0, Landroid/widget/TextView$BufferType;->NORMAL:Landroid/widget/TextView$BufferType;
 
     if-ne p2, v0, :cond_0
@@ -254,11 +227,9 @@
     :cond_0
     iput-object p2, p0, Lcom/letv/leui/widget/LeTextView;->mTextBufferType:Landroid/widget/TextView$BufferType;
 
-    .line 62
     iget-object v0, p0, Lcom/letv/leui/widget/LeTextView;->mTextBufferType:Landroid/widget/TextView$BufferType;
 
     invoke-super {p0, p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
 
-    .line 63
     return-void
 .end method

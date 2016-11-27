@@ -42,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 34
     new-instance v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView$1;
 
     invoke-direct {v0}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView$1;-><init>()V
@@ -57,22 +56,18 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 55
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;-><init>(Landroid/content/Context;)V
 
-    .line 43
     new-instance v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView$2;
 
     invoke-direct {v0, p0}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView$2;-><init>(Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;)V
 
     iput-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;->defaultWebChromeClient:Landroid/webkit/WebChromeClient;
 
-    .line 60
     sget-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;->defaultOnRefreshListener:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$OnRefreshListener;
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;->setOnRefreshListener(Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$OnRefreshListener;)V
 
-    .line 61
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;->mRefreshableView:Landroid/view/View;
 
     check-cast v0, Landroid/webkit/WebView;
@@ -81,7 +76,6 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V
 
-    .line 62
     return-void
 .end method
 
@@ -91,22 +85,18 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 65
     invoke-direct {p0, p1, p2}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 43
     new-instance v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView$2;
 
     invoke-direct {v0, p0}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView$2;-><init>(Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;)V
 
     iput-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;->defaultWebChromeClient:Landroid/webkit/WebChromeClient;
 
-    .line 70
     sget-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;->defaultOnRefreshListener:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$OnRefreshListener;
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;->setOnRefreshListener(Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$OnRefreshListener;)V
 
-    .line 71
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;->mRefreshableView:Landroid/view/View;
 
     check-cast v0, Landroid/webkit/WebView;
@@ -115,7 +105,6 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V
 
-    .line 72
     return-void
 .end method
 
@@ -125,22 +114,18 @@
     .param p2, "mode"    # Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
 
     .prologue
-    .line 75
     invoke-direct {p0, p1, p2}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;-><init>(Landroid/content/Context;Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;)V
 
-    .line 43
     new-instance v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView$2;
 
     invoke-direct {v0, p0}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView$2;-><init>(Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;)V
 
     iput-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;->defaultWebChromeClient:Landroid/webkit/WebChromeClient;
 
-    .line 80
     sget-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;->defaultOnRefreshListener:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$OnRefreshListener;
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;->setOnRefreshListener(Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$OnRefreshListener;)V
 
-    .line 81
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;->mRefreshableView:Landroid/view/View;
 
     check-cast v0, Landroid/webkit/WebView;
@@ -149,7 +134,6 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V
 
-    .line 82
     return-void
 .end method
 
@@ -160,22 +144,18 @@
     .param p3, "style"    # Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$AnimationStyle;
 
     .prologue
-    .line 85
     invoke-direct {p0, p1, p2, p3}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;-><init>(Landroid/content/Context;Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$AnimationStyle;)V
 
-    .line 43
     new-instance v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView$2;
 
     invoke-direct {v0, p0}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView$2;-><init>(Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;)V
 
     iput-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;->defaultWebChromeClient:Landroid/webkit/WebChromeClient;
 
-    .line 90
     sget-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;->defaultOnRefreshListener:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$OnRefreshListener;
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;->setOnRefreshListener(Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$OnRefreshListener;)V
 
-    .line 91
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;->mRefreshableView:Landroid/view/View;
 
     check-cast v0, Landroid/webkit/WebView;
@@ -184,7 +164,6 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V
 
-    .line 92
     return-void
 .end method
 
@@ -194,7 +173,6 @@
     .locals 1
 
     .prologue
-    .line 32
     invoke-virtual {p0, p1, p2}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;->createRefreshableView(Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/webkit/WebView;
 
     move-result-object v0
@@ -210,54 +188,45 @@
     .prologue
     const v5, 0x102005c
 
-    .line 101
     iget v3, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;->mRefreshableViewLayout:I
 
     const/4 v4, -0x1
 
     if-ne v3, v4, :cond_1
 
-    .line 103
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v4, 0x9
 
     if-lt v3, v4, :cond_0
 
-    .line 104
     new-instance v2, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView$InternalWebViewSDK9;
 
     invoke-direct {v2, p0, p1, p2}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView$InternalWebViewSDK9;-><init>(Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 105
     .local v2, "webView":Landroid/webkit/WebView;
     invoke-virtual {v2, v5}, Landroid/webkit/WebView;->setId(I)V
 
-    .line 115
     .end local v2    # "webView":Landroid/webkit/WebView;
     :goto_0
     return-object v2
 
-    .line 107
     :cond_0
     new-instance v2, Landroid/webkit/WebView;
 
     invoke-direct {v2, p1, p2}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 108
     .restart local v2    # "webView":Landroid/webkit/WebView;
     invoke-virtual {v2, v5}, Landroid/webkit/WebView;->setId(I)V
 
     goto :goto_0
 
-    .line 112
     .end local v2    # "webView":Landroid/webkit/WebView;
     :cond_1
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    .line 113
     .local v0, "inflater":Landroid/view/LayoutInflater;
     iget v3, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;->mRefreshableViewLayout:I
 
@@ -269,13 +238,11 @@
 
     check-cast v1, Landroid/view/ViewGroup;
 
-    .line 114
     .local v1, "view":Landroid/view/View;
     instance-of v3, v1, Landroid/webkit/WebView;
 
     if-eqz v3, :cond_2
 
-    .line 115
     check-cast v1, Landroid/webkit/WebView;
 
     .end local v1    # "view":Landroid/view/View;
@@ -283,7 +250,6 @@
 
     goto :goto_0
 
-    .line 117
     .restart local v1    # "view":Landroid/view/View;
     :cond_2
     new-instance v3, Ljava/lang/UnsupportedOperationException;
@@ -299,7 +265,6 @@
     .locals 1
 
     .prologue
-    .line 96
     sget-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Orientation;->VERTICAL:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Orientation;
 
     return-object v0
@@ -309,7 +274,6 @@
     .locals 3
 
     .prologue
-    .line 129
     iget-object v1, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;->mRefreshableView:Landroid/view/View;
 
     check-cast v1, Landroid/webkit/WebView;
@@ -334,7 +298,6 @@
 
     move-result v0
 
-    .line 130
     .local v0, "exactContentHeight":F
     iget-object v1, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;->mRefreshableView:Landroid/view/View;
 
@@ -377,7 +340,6 @@
     .locals 1
 
     .prologue
-    .line 124
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;->mRefreshableView:Landroid/view/View;
 
     check-cast v0, Landroid/webkit/WebView;
@@ -404,17 +366,14 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 135
     invoke-super {p0, p1}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;->onPtrRestoreInstanceState(Landroid/os/Bundle;)V
 
-    .line 136
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;->mRefreshableView:Landroid/view/View;
 
     check-cast v0, Landroid/webkit/WebView;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebView;->restoreState(Landroid/os/Bundle;)Landroid/webkit/WebBackForwardList;
 
-    .line 137
     return-void
 .end method
 
@@ -423,16 +382,13 @@
     .param p1, "saveState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 141
     invoke-super {p0, p1}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;->onPtrSaveInstanceState(Landroid/os/Bundle;)V
 
-    .line 142
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;->mRefreshableView:Landroid/view/View;
 
     check-cast v0, Landroid/webkit/WebView;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebView;->saveState(Landroid/os/Bundle;)Landroid/webkit/WebBackForwardList;
 
-    .line 143
     return-void
 .end method

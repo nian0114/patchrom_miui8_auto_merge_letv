@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 771
     iput-object p1, p0, Lcom/letv/leui/text/LeTextOpt$LeMarquee$2;->this$0:Lcom/letv/leui/text/LeTextOpt$LeMarquee;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "frameTimeNanos"    # J
 
     .prologue
-    .line 774
     iget-object v0, p0, Lcom/letv/leui/text/LeTextOpt$LeMarquee$2;->this$0:Lcom/letv/leui/text/LeTextOpt$LeMarquee;
 
     const/4 v1, 0x2
@@ -49,7 +47,6 @@
     # setter for: Lcom/letv/leui/text/LeTextOpt$LeMarquee;->mStatus:B
     invoke-static {v0, v1}, Lcom/letv/leui/text/LeTextOpt$LeMarquee;->access$202(Lcom/letv/leui/text/LeTextOpt$LeMarquee;B)B
 
-    .line 775
     iget-object v0, p0, Lcom/letv/leui/text/LeTextOpt$LeMarquee$2;->this$0:Lcom/letv/leui/text/LeTextOpt$LeMarquee;
 
     iget-object v1, p0, Lcom/letv/leui/text/LeTextOpt$LeMarquee$2;->this$0:Lcom/letv/leui/text/LeTextOpt$LeMarquee;
@@ -66,11 +63,9 @@
     # setter for: Lcom/letv/leui/text/LeTextOpt$LeMarquee;->mLastAnimationMs:J
     invoke-static {v0, v2, v3}, Lcom/letv/leui/text/LeTextOpt$LeMarquee;->access$302(Lcom/letv/leui/text/LeTextOpt$LeMarquee;J)J
 
-    .line 776
     iget-object v0, p0, Lcom/letv/leui/text/LeTextOpt$LeMarquee$2;->this$0:Lcom/letv/leui/text/LeTextOpt$LeMarquee;
 
     invoke-virtual {v0}, Lcom/letv/leui/text/LeTextOpt$LeMarquee;->tick()V
 
-    .line 777
     return-void
 .end method

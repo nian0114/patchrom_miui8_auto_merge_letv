@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 8083
     iput-object p1, p0, Landroid/view/ViewRootImpl$8;->this$0:Landroid/view/ViewRootImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "resultCode"    # I
 
     .prologue
-    .line 8110
     const-string v0, "ViewRootImpl"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -64,7 +62,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8111
     return-void
 .end method
 
@@ -73,7 +70,6 @@
     .param p1, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 8098
     const-string v0, "ViewRootImpl"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -110,14 +106,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8099
     iget-object v0, p0, Landroid/view/ViewRootImpl$8;->this$0:Landroid/view/ViewRootImpl;
 
     iget-object v0, v0, Landroid/view/ViewRootImpl;->mCurrentWatcher:Lcom/letv/eui/appsnapshot/IAppSnapshotWatcher;
 
     if-eqz v0, :cond_0
 
-    .line 8101
     :try_start_0
     iget-object v0, p0, Landroid/view/ViewRootImpl$8;->this$0:Landroid/view/ViewRootImpl;
 
@@ -125,7 +119,6 @@
 
     invoke-interface {v0, p1}, Lcom/letv/eui/appsnapshot/IAppSnapshotWatcher;->onSnapshotFinished(Landroid/graphics/Bitmap;)V
 
-    .line 8102
     iget-object v0, p0, Landroid/view/ViewRootImpl$8;->this$0:Landroid/view/ViewRootImpl;
 
     const/4 v1, 0x0
@@ -134,12 +127,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 8106
     :cond_0
     :goto_0
     return-void
 
-    .line 8103
     :catch_0
     move-exception v0
 
@@ -150,14 +141,12 @@
     .locals 1
 
     .prologue
-    .line 8087
     iget-object v0, p0, Landroid/view/ViewRootImpl$8;->this$0:Landroid/view/ViewRootImpl;
 
     iget-object v0, v0, Landroid/view/ViewRootImpl;->mCurrentWatcher:Lcom/letv/eui/appsnapshot/IAppSnapshotWatcher;
 
     if-eqz v0, :cond_0
 
-    .line 8089
     :try_start_0
     iget-object v0, p0, Landroid/view/ViewRootImpl$8;->this$0:Landroid/view/ViewRootImpl;
 
@@ -167,12 +156,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 8093
     :cond_0
     :goto_0
     return-void
 
-    .line 8090
     :catch_0
     move-exception v0
 

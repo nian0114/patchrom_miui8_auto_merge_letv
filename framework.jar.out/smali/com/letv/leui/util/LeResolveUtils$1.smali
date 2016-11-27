@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 220
     iput-object p1, p0, Lcom/letv/leui/util/LeResolveUtils$1;->val$mGvAnimLayout:Landroid/widget/LinearLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "animation"    # Landroid/animation/ValueAnimator;
 
     .prologue
-    .line 223
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v2
@@ -52,7 +50,6 @@
 
     move-result v0
 
-    .line 224
     .local v0, "marginBottom":I
     iget-object v2, p0, Lcom/letv/leui/util/LeResolveUtils$1;->val$mGvAnimLayout:Landroid/widget/LinearLayout;
 
@@ -62,15 +59,12 @@
 
     check-cast v1, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 225
     .local v1, "params":Landroid/widget/LinearLayout$LayoutParams;
     iput v0, v1, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
 
-    .line 226
     iget-object v2, p0, Lcom/letv/leui/util/LeResolveUtils$1;->val$mGvAnimLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v2, v1}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 227
     return-void
 .end method

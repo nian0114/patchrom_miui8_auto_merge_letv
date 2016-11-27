@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 1490
     iput-object p1, p0, Lcom/letv/leui/widget/StaggeredGridView$5;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     iput-object p2, p0, Lcom/letv/leui/widget/StaggeredGridView$5;->val$view:Landroid/view/View;
@@ -44,10 +43,8 @@
     .prologue
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 1493
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
 
-    .line 1494
     iget-object v0, p0, Lcom/letv/leui/widget/StaggeredGridView$5;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     # getter for: Lcom/letv/leui/widget/StaggeredGridView;->mInLayout:Z
@@ -57,30 +54,25 @@
 
     if-eqz v0, :cond_0
 
-    .line 1495
     iget-object v0, p0, Lcom/letv/leui/widget/StaggeredGridView$5;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     iget-object v1, p0, Lcom/letv/leui/widget/StaggeredGridView$5;->val$view:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/widget/StaggeredGridView;->removeViewInLayout(Landroid/view/View;)V
 
-    .line 1500
     :goto_0
     iget-object v0, p0, Lcom/letv/leui/widget/StaggeredGridView$5;->val$view:Landroid/view/View;
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setAlpha(F)V
 
-    .line 1501
     iget-object v0, p0, Lcom/letv/leui/widget/StaggeredGridView$5;->val$view:Landroid/view/View;
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setScaleX(F)V
 
-    .line 1502
     iget-object v0, p0, Lcom/letv/leui/widget/StaggeredGridView$5;->val$view:Landroid/view/View;
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setScaleY(F)V
 
-    .line 1503
     iget-object v0, p0, Lcom/letv/leui/widget/StaggeredGridView$5;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     # getter for: Lcom/letv/leui/widget/StaggeredGridView;->mRecycler:Lcom/letv/leui/widget/StaggeredGridView$RecycleBin;
@@ -92,10 +84,8 @@
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/widget/StaggeredGridView$RecycleBin;->addScrap(Landroid/view/View;)V
 
-    .line 1504
     return-void
 
-    .line 1497
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/StaggeredGridView$5;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 

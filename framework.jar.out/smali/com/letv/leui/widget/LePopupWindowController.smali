@@ -114,7 +114,6 @@
     .locals 1
 
     .prologue
-    .line 129
     const v0, 0x10900bf
 
     sput v0, Lcom/letv/leui/widget/LePopupWindowController;->m_MyAlertContentViewId:I
@@ -133,51 +132,38 @@
 
     const/4 v0, -0x1
 
-    .line 180
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 80
     iput-boolean v1, p0, Lcom/letv/leui/widget/LePopupWindowController;->mViewSpacingSpecified:Z
 
-    .line 92
     iput v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonPositiveColor:I
 
-    .line 98
     iput v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNegativeColor:I
 
-    .line 103
     iput v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNeutralColor:I
 
-    .line 109
     iput v1, p0, Lcom/letv/leui/widget/LePopupWindowController;->mIconId:I
 
-    .line 125
     iput v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mCheckedItem:I
 
-    .line 133
     new-instance v0, Lcom/letv/leui/widget/LePopupWindowController$1;
 
     invoke-direct {v0, p0}, Lcom/letv/leui/widget/LePopupWindowController$1;-><init>(Lcom/letv/leui/widget/LePopupWindowController;)V
 
     iput-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonHandler:Landroid/view/View$OnClickListener;
 
-    .line 181
     iput-object p1, p0, Lcom/letv/leui/widget/LePopupWindowController;->mContext:Landroid/content/Context;
 
-    .line 182
     iput-object p2, p0, Lcom/letv/leui/widget/LePopupWindowController;->mDialogInterface:Landroid/content/DialogInterface;
 
-    .line 183
     iput-object p3, p0, Lcom/letv/leui/widget/LePopupWindowController;->mWindow:Landroid/view/Window;
 
-    .line 184
     new-instance v0, Lcom/letv/leui/widget/LePopupWindowController$ButtonHandler;
 
     invoke-direct {v0, p2}, Lcom/letv/leui/widget/LePopupWindowController$ButtonHandler;-><init>(Landroid/content/DialogInterface;)V
 
     iput-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mHandler:Landroid/os/Handler;
 
-    .line 185
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -192,7 +178,6 @@
 
     sput v0, Lcom/letv/leui/widget/LePopupWindowController;->density:F
 
-    .line 186
     return-void
 .end method
 
@@ -201,7 +186,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LePopupWindowController;
 
     .prologue
-    .line 61
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonPositive:Lcom/letv/leui/widget/LeButton;
 
     return-object v0
@@ -212,7 +196,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LePopupWindowController;
 
     .prologue
-    .line 61
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonPositiveMessage:Landroid/os/Message;
 
     return-object v0
@@ -223,7 +206,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LePopupWindowController;
 
     .prologue
-    .line 61
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mAdapter:Landroid/widget/ListAdapter;
 
     return-object v0
@@ -235,7 +217,6 @@
     .param p1, "x1"    # Landroid/widget/ListAdapter;
 
     .prologue
-    .line 61
     iput-object p1, p0, Lcom/letv/leui/widget/LePopupWindowController;->mAdapter:Landroid/widget/ListAdapter;
 
     return-object p1
@@ -247,7 +228,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 61
     iput p1, p0, Lcom/letv/leui/widget/LePopupWindowController;->mCheckedItem:I
 
     return p1
@@ -259,7 +239,6 @@
     .param p1, "x1"    # Landroid/widget/ListView;
 
     .prologue
-    .line 61
     iput-object p1, p0, Lcom/letv/leui/widget/LePopupWindowController;->mListView:Landroid/widget/ListView;
 
     return-object p1
@@ -270,7 +249,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LePopupWindowController;
 
     .prologue
-    .line 61
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNegative:Lcom/letv/leui/widget/LeButton;
 
     return-object v0
@@ -281,7 +259,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LePopupWindowController;
 
     .prologue
-    .line 61
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNegativeMessage:Landroid/os/Message;
 
     return-object v0
@@ -292,7 +269,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LePopupWindowController;
 
     .prologue
-    .line 61
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNeutral:Lcom/letv/leui/widget/LeButton;
 
     return-object v0
@@ -303,7 +279,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LePopupWindowController;
 
     .prologue
-    .line 61
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNeutralMessage:Landroid/os/Message;
 
     return-object v0
@@ -314,7 +289,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LePopupWindowController;
 
     .prologue
-    .line 61
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mDialogInterface:Landroid/content/DialogInterface;
 
     return-object v0
@@ -325,7 +299,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LePopupWindowController;
 
     .prologue
-    .line 61
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -336,7 +309,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LePopupWindowController;
 
     .prologue
-    .line 61
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mLicenceCheckBox:Lcom/letv/leui/widget/LeCheckBox;
 
     return-object v0
@@ -348,7 +320,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 61
     iput p1, p0, Lcom/letv/leui/widget/LePopupWindowController;->mListViewItemnum:I
 
     return p1
@@ -363,18 +334,15 @@
 
     const/4 v3, 0x0
 
-    .line 193
     invoke-virtual {p0}, Landroid/view/View;->onCheckIsTextEditor()Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 211
     :goto_0
     return v2
 
-    .line 197
     :cond_0
     instance-of v4, p0, Landroid/view/ViewGroup;
 
@@ -382,35 +350,28 @@
 
     move v2, v3
 
-    .line 198
     goto :goto_0
 
     :cond_1
     move-object v1, p0
 
-    .line 201
     check-cast v1, Landroid/view/ViewGroup;
 
-    .line 202
     .local v1, "vg":Landroid/view/ViewGroup;
     invoke-virtual {v1}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
 
-    .line 203
     .local v0, "i":I
     :cond_2
     if-lez v0, :cond_3
 
-    .line 204
     add-int/lit8 v0, v0, -0x1
 
-    .line 205
     invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object p0
 
-    .line 206
     invoke-static {p0}, Lcom/letv/leui/widget/LePopupWindowController;->canTextInput(Landroid/view/View;)Z
 
     move-result v4
@@ -422,7 +383,6 @@
     :cond_3
     move v2, v3
 
-    .line 211
     goto :goto_0
 .end method
 
@@ -431,7 +391,6 @@
     .param p0, "dp"    # F
 
     .prologue
-    .line 189
     sget v0, Lcom/letv/leui/widget/LePopupWindowController;->density:F
 
     mul-float/2addr v0, p0
@@ -460,7 +419,6 @@
 
     const/4 v6, 0x0
 
-    .line 636
     iget-object v3, p0, Lcom/letv/leui/widget/LePopupWindowController;->mListView:Landroid/widget/ListView;
 
     if-eqz v3, :cond_1
@@ -469,41 +427,35 @@
 
     if-eqz v3, :cond_1
 
-    .line 637
     iget-object v3, p0, Lcom/letv/leui/widget/LePopupWindowController;->mListView:Landroid/widget/ListView;
 
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mAdapter:Landroid/widget/ListAdapter;
 
     invoke-virtual {v3, v4}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 638
     iget v3, p0, Lcom/letv/leui/widget/LePopupWindowController;->mCheckedItem:I
 
     const/4 v4, -0x1
 
     if-le v3, v4, :cond_0
 
-    .line 639
     iget-object v3, p0, Lcom/letv/leui/widget/LePopupWindowController;->mListView:Landroid/widget/ListView;
 
     iget v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mCheckedItem:I
 
     invoke-virtual {v3, v4, v5}, Landroid/widget/ListView;->setItemChecked(IZ)V
 
-    .line 640
     iget-object v3, p0, Lcom/letv/leui/widget/LePopupWindowController;->mListView:Landroid/widget/ListView;
 
     iget v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mCheckedItem:I
 
     invoke-virtual {v3, v4}, Landroid/widget/ListView;->setSelection(I)V
 
-    .line 643
     :cond_0
     iget-object v3, p0, Lcom/letv/leui/widget/LePopupWindowController;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v3, v5}, Landroid/widget/ListView;->setVerticalFadingEdgeEnabled(Z)V
 
-    .line 644
     iget-object v3, p0, Lcom/letv/leui/widget/LePopupWindowController;->mListView:Landroid/widget/ListView;
 
     const/high16 v4, 0x41600000    # 14.0f
@@ -514,14 +466,12 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/ListView;->setFadingEdgeLength(I)V
 
-    .line 647
     iget v3, p0, Lcom/letv/leui/widget/LePopupWindowController;->mListViewItemnum:I
 
     const/4 v4, 0x5
 
     if-le v3, v4, :cond_1
 
-    .line 648
     iget-object v3, p0, Lcom/letv/leui/widget/LePopupWindowController;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v3}, Landroid/widget/ListView;->getAdapter()Landroid/widget/ListAdapter;
@@ -536,7 +486,6 @@
 
     move-result-object v2
 
-    .line 649
     .local v2, "mView":Landroid/view/View;
     invoke-static {v6, v6}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
@@ -548,14 +497,12 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/view/View;->measure(II)V
 
-    .line 652
     invoke-virtual {v2}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v3
 
     int-to-float v0, v3
 
-    .line 653
     .local v0, "height":F
     iget-object v3, p0, Lcom/letv/leui/widget/LePopupWindowController;->mListView:Landroid/widget/ListView;
 
@@ -563,7 +510,6 @@
 
     move-result-object v1
 
-    .line 654
     .local v1, "lp":Landroid/view/ViewGroup$LayoutParams;
     const/high16 v3, 0x40b00000    # 5.5f
 
@@ -573,12 +519,10 @@
 
     iput v3, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 655
     iget-object v3, p0, Lcom/letv/leui/widget/LePopupWindowController;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v3, v1}, Landroid/widget/ListView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 658
     .end local v0    # "height":F
     .end local v1    # "lp":Landroid/view/ViewGroup$LayoutParams;
     .end local v2    # "mView":Landroid/view/View;
@@ -596,22 +540,17 @@
 
     const/4 v5, 0x0
 
-    .line 563
     const/4 v2, 0x1
 
-    .line 564
     .local v2, "BIT_BUTTON_POSITIVE":I
     const/4 v0, 0x2
 
-    .line 565
     .local v0, "BIT_BUTTON_NEGATIVE":I
     const/4 v1, 0x4
 
-    .line 566
     .local v1, "BIT_BUTTON_NEUTRAL":I
     const/4 v3, 0x0
 
-    .line 567
     .local v3, "whichButtons":I
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mWindow:Landroid/view/Window;
 
@@ -625,26 +564,22 @@
 
     iput-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonPositive:Lcom/letv/leui/widget/LeButton;
 
-    .line 568
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonPositive:Lcom/letv/leui/widget/LeButton;
 
     iget-object v6, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonHandler:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v4, v6}, Lcom/letv/leui/widget/LeButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 569
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonPositive:Lcom/letv/leui/widget/LeButton;
 
     invoke-virtual {v4, v5}, Lcom/letv/leui/widget/LeButton;->setHasStroke(Z)V
 
-    .line 570
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonPositive:Lcom/letv/leui/widget/LeButton;
 
     sget-object v6, Lcom/letv/leui/widget/LeButton$DefStyle;->WHITE_BG_BLK:Lcom/letv/leui/widget/LeButton$DefStyle;
 
     invoke-virtual {v4, v6}, Lcom/letv/leui/widget/LeButton;->setDefBGStyleMode(Lcom/letv/leui/widget/LeButton$DefStyle;)V
 
-    .line 571
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mWindow:Landroid/view/Window;
 
     const v6, 0x102047f
@@ -657,7 +592,6 @@
 
     iput-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->PositiveGapline:Landroid/widget/ImageView;
 
-    .line 573
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonPositiveText:Ljava/lang/CharSequence;
 
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -666,17 +600,14 @@
 
     if-eqz v4, :cond_0
 
-    .line 574
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonPositive:Lcom/letv/leui/widget/LeButton;
 
     invoke-virtual {v4, v7}, Lcom/letv/leui/widget/LeButton;->setVisibility(I)V
 
-    .line 575
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->PositiveGapline:Landroid/widget/ImageView;
 
     invoke-virtual {v4, v7}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 586
     :goto_0
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mWindow:Landroid/view/Window;
 
@@ -690,26 +621,22 @@
 
     iput-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNegative:Lcom/letv/leui/widget/LeButton;
 
-    .line 587
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNegative:Lcom/letv/leui/widget/LeButton;
 
     iget-object v6, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonHandler:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v4, v6}, Lcom/letv/leui/widget/LeButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 588
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNegative:Lcom/letv/leui/widget/LeButton;
 
     invoke-virtual {v4, v5}, Lcom/letv/leui/widget/LeButton;->setHasStroke(Z)V
 
-    .line 589
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNegative:Lcom/letv/leui/widget/LeButton;
 
     sget-object v6, Lcom/letv/leui/widget/LeButton$DefStyle;->WHITE_BG_BLK:Lcom/letv/leui/widget/LeButton$DefStyle;
 
     invoke-virtual {v4, v6}, Lcom/letv/leui/widget/LeButton;->setDefBGStyleMode(Lcom/letv/leui/widget/LeButton$DefStyle;)V
 
-    .line 590
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mWindow:Landroid/view/Window;
 
     const v6, 0x1020481
@@ -722,7 +649,6 @@
 
     iput-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->NegativeGapline:Landroid/widget/ImageView;
 
-    .line 592
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNegativeText:Ljava/lang/CharSequence;
 
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -731,17 +657,14 @@
 
     if-eqz v4, :cond_2
 
-    .line 593
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNegative:Lcom/letv/leui/widget/LeButton;
 
     invoke-virtual {v4, v7}, Lcom/letv/leui/widget/LeButton;->setVisibility(I)V
 
-    .line 594
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->NegativeGapline:Landroid/widget/ImageView;
 
     invoke-virtual {v4, v7}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 605
     :goto_1
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mWindow:Landroid/view/Window;
 
@@ -755,26 +678,22 @@
 
     iput-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNeutral:Lcom/letv/leui/widget/LeButton;
 
-    .line 606
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNeutral:Lcom/letv/leui/widget/LeButton;
 
     iget-object v6, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonHandler:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v4, v6}, Lcom/letv/leui/widget/LeButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 607
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNeutral:Lcom/letv/leui/widget/LeButton;
 
     invoke-virtual {v4, v5}, Lcom/letv/leui/widget/LeButton;->setHasStroke(Z)V
 
-    .line 608
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNeutral:Lcom/letv/leui/widget/LeButton;
 
     sget-object v6, Lcom/letv/leui/widget/LeButton$DefStyle;->WHITE_BG_BLK:Lcom/letv/leui/widget/LeButton$DefStyle;
 
     invoke-virtual {v4, v6}, Lcom/letv/leui/widget/LeButton;->setDefBGStyleMode(Lcom/letv/leui/widget/LeButton$DefStyle;)V
 
-    .line 609
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mWindow:Landroid/view/Window;
 
     const v6, 0x102047d
@@ -787,7 +706,6 @@
 
     iput-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->NeutralGapline:Landroid/widget/ImageView;
 
-    .line 611
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNeutralText:Ljava/lang/CharSequence;
 
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -796,17 +714,14 @@
 
     if-eqz v4, :cond_4
 
-    .line 612
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNeutral:Lcom/letv/leui/widget/LeButton;
 
     invoke-virtual {v4, v7}, Lcom/letv/leui/widget/LeButton;->setVisibility(I)V
 
-    .line 613
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->NeutralGapline:Landroid/widget/ImageView;
 
     invoke-virtual {v4, v7}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 624
     :goto_2
     if-eqz v3, :cond_6
 
@@ -815,7 +730,6 @@
     :goto_3
     return v4
 
-    .line 577
     :cond_0
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonPositive:Lcom/letv/leui/widget/LeButton;
 
@@ -823,30 +737,25 @@
 
     invoke-virtual {v4, v6}, Lcom/letv/leui/widget/LeButton;->setText(Ljava/lang/CharSequence;)V
 
-    .line 578
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonPositive:Lcom/letv/leui/widget/LeButton;
 
     invoke-virtual {v4, v5}, Lcom/letv/leui/widget/LeButton;->setVisibility(I)V
 
-    .line 579
     iget v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonPositiveColor:I
 
     if-eq v4, v8, :cond_1
 
-    .line 580
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonPositive:Lcom/letv/leui/widget/LeButton;
 
     iget v6, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonPositiveColor:I
 
     invoke-virtual {v4, v6}, Lcom/letv/leui/widget/LeButton;->setTextColor(I)V
 
-    .line 583
     :cond_1
     or-int/2addr v3, v2
 
     goto/16 :goto_0
 
-    .line 596
     :cond_2
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNegative:Lcom/letv/leui/widget/LeButton;
 
@@ -854,30 +763,25 @@
 
     invoke-virtual {v4, v6}, Lcom/letv/leui/widget/LeButton;->setText(Ljava/lang/CharSequence;)V
 
-    .line 597
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNegative:Lcom/letv/leui/widget/LeButton;
 
     invoke-virtual {v4, v5}, Lcom/letv/leui/widget/LeButton;->setVisibility(I)V
 
-    .line 598
     iget v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNegativeColor:I
 
     if-eq v4, v8, :cond_3
 
-    .line 599
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNegative:Lcom/letv/leui/widget/LeButton;
 
     iget v6, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNegativeColor:I
 
     invoke-virtual {v4, v6}, Lcom/letv/leui/widget/LeButton;->setTextColor(I)V
 
-    .line 602
     :cond_3
     or-int/2addr v3, v0
 
     goto :goto_1
 
-    .line 615
     :cond_4
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNeutral:Lcom/letv/leui/widget/LeButton;
 
@@ -885,24 +789,20 @@
 
     invoke-virtual {v4, v6}, Lcom/letv/leui/widget/LeButton;->setText(Ljava/lang/CharSequence;)V
 
-    .line 616
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNeutral:Lcom/letv/leui/widget/LeButton;
 
     invoke-virtual {v4, v5}, Lcom/letv/leui/widget/LeButton;->setVisibility(I)V
 
-    .line 617
     iget v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNeutralColor:I
 
     if-eq v4, v8, :cond_5
 
-    .line 618
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNeutral:Lcom/letv/leui/widget/LeButton;
 
     iget v6, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNeutralColor:I
 
     invoke-virtual {v4, v6}, Lcom/letv/leui/widget/LeButton;->setTextColor(I)V
 
-    .line 621
     :cond_5
     or-int/2addr v3, v1
 
@@ -911,7 +811,6 @@
     :cond_6
     move v4, v5
 
-    .line 624
     goto :goto_3
 .end method
 
@@ -928,7 +827,6 @@
 
     const/4 v2, -0x1
 
-    .line 514
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mWindow:Landroid/view/Window;
 
     invoke-virtual {v0, v5}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
@@ -939,12 +837,10 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mScrollView:Landroid/widget/ScrollView;
 
-    .line 515
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mScrollView:Landroid/widget/ScrollView;
 
     invoke-virtual {v0, v3}, Landroid/widget/ScrollView;->setFocusable(Z)V
 
-    .line 518
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mWindow:Landroid/view/Window;
 
     const v1, 0x102047a
@@ -957,22 +853,18 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mMessageView:Landroid/widget/TextView;
 
-    .line 519
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mMessageView:Landroid/widget/TextView;
 
     if-nez v0, :cond_0
 
-    .line 538
     :goto_0
     return-void
 
-    .line 523
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mMessage:Ljava/lang/CharSequence;
 
     if-eqz v0, :cond_1
 
-    .line 524
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mMessageView:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/letv/leui/widget/LePopupWindowController;->mMessage:Ljava/lang/CharSequence;
@@ -981,25 +873,21 @@
 
     goto :goto_0
 
-    .line 526
     :cond_1
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mMessageView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 527
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mScrollView:Landroid/widget/ScrollView;
 
     iget-object v1, p0, Lcom/letv/leui/widget/LePopupWindowController;->mMessageView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ScrollView;->removeView(Landroid/view/View;)V
 
-    .line 529
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mListView:Landroid/widget/ListView;
 
     if-eqz v0, :cond_2
 
-    .line 530
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mWindow:Landroid/view/Window;
 
     invoke-virtual {v0, v5}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
@@ -1008,7 +896,6 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/LinearLayout;->removeView(Landroid/view/View;)V
 
-    .line 531
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mListView:Landroid/widget/ListView;
 
     new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
@@ -1017,7 +904,6 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 533
     new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -1028,7 +914,6 @@
 
     goto :goto_0
 
-    .line 535
     :cond_2
     invoke-virtual {p1, v4}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
@@ -1039,10 +924,8 @@
     .locals 3
 
     .prologue
-    .line 541
     const/4 v0, 0x1
 
-    .line 542
     .local v0, "hasLicence":Z
     iget-object v1, p0, Lcom/letv/leui/widget/LePopupWindowController;->mWindow:Landroid/view/Window;
 
@@ -1056,31 +939,26 @@
 
     iput-object v1, p0, Lcom/letv/leui/widget/LePopupWindowController;->mLicenceCheckBox:Lcom/letv/leui/widget/LeCheckBox;
 
-    .line 543
     iget-object v1, p0, Lcom/letv/leui/widget/LePopupWindowController;->mLicenceMessage:Ljava/lang/CharSequence;
 
     if-eqz v1, :cond_1
 
-    .line 544
     iget-object v1, p0, Lcom/letv/leui/widget/LePopupWindowController;->mLicenceCheckBox:Lcom/letv/leui/widget/LeCheckBox;
 
     iget-object v2, p0, Lcom/letv/leui/widget/LePopupWindowController;->mLicenceMessage:Ljava/lang/CharSequence;
 
     invoke-virtual {v1, v2}, Lcom/letv/leui/widget/LeCheckBox;->setText(Ljava/lang/CharSequence;)V
 
-    .line 547
     iget-object v1, p0, Lcom/letv/leui/widget/LePopupWindowController;->mLicenceListener:Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
     if-nez v1, :cond_0
 
-    .line 548
     new-instance v1, Lcom/letv/leui/widget/LePopupWindowController$3;
 
     invoke-direct {v1, p0}, Lcom/letv/leui/widget/LePopupWindowController$3;-><init>(Lcom/letv/leui/widget/LePopupWindowController;)V
 
     iput-object v1, p0, Lcom/letv/leui/widget/LePopupWindowController;->mLicenceListener:Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
-    .line 553
     :cond_0
     iget-object v1, p0, Lcom/letv/leui/widget/LePopupWindowController;->mLicenceCheckBox:Lcom/letv/leui/widget/LeCheckBox;
 
@@ -1088,11 +966,9 @@
 
     invoke-virtual {v1, v2}, Lcom/letv/leui/widget/LeCheckBox;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    .line 559
     :goto_0
     return v0
 
-    .line 555
     :cond_1
     iget-object v1, p0, Lcom/letv/leui/widget/LePopupWindowController;->mLicenceCheckBox:Lcom/letv/leui/widget/LeCheckBox;
 
@@ -1100,7 +976,6 @@
 
     invoke-virtual {v1, v2}, Lcom/letv/leui/widget/LeCheckBox;->setVisibility(I)V
 
-    .line 556
     const/4 v0, 0x0
 
     goto :goto_0
@@ -1115,16 +990,13 @@
 
     const/16 v9, 0x8
 
-    .line 458
     const/4 v1, 0x1
 
-    .line 460
     .local v1, "hasTitle":Z
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mCustomTitleView:Landroid/view/View;
 
     if-eqz v4, :cond_1
 
-    .line 462
     new-instance v2, Landroid/widget/LinearLayout$LayoutParams;
 
     const/4 v4, -0x1
@@ -1133,31 +1005,26 @@
 
     invoke-direct {v2, v4, v5}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    .line 465
     .local v2, "lp":Landroid/widget/LinearLayout$LayoutParams;
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mCustomTitleView:Landroid/view/View;
 
     invoke-virtual {p1, v4, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 468
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mWindow:Landroid/view/Window;
 
     invoke-virtual {v4, v6}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
-    .line 469
     .local v3, "titleTemplate":Landroid/view/View;
     invoke-virtual {v3, v9}, Landroid/view/View;->setVisibility(I)V
 
-    .line 510
     .end local v2    # "lp":Landroid/widget/LinearLayout$LayoutParams;
     .end local v3    # "titleTemplate":Landroid/view/View;
     :cond_0
     :goto_0
     return v1
 
-    .line 471
     :cond_1
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mTitle:Ljava/lang/CharSequence;
 
@@ -1169,7 +1036,6 @@
 
     const/4 v0, 0x1
 
-    .line 473
     .local v0, "hasTextTitle":Z
     :goto_1
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mWindow:Landroid/view/Window;
@@ -1184,10 +1050,8 @@
 
     iput-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mIconView:Landroid/widget/ImageView;
 
-    .line 474
     if-eqz v0, :cond_5
 
-    .line 477
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mWindow:Landroid/view/Window;
 
     const v5, 0x1020473
@@ -1200,19 +1064,16 @@
 
     iput-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mTitleView:Landroid/widget/TextView;
 
-    .line 479
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mTitleView:Landroid/widget/TextView;
 
     iget-object v5, p0, Lcom/letv/leui/widget/LePopupWindowController;->mTitle:Ljava/lang/CharSequence;
 
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 486
     iget v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mIconId:I
 
     if-lez v4, :cond_3
 
-    .line 487
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mIconView:Landroid/widget/ImageView;
 
     iget v5, p0, Lcom/letv/leui/widget/LePopupWindowController;->mIconId:I
@@ -1221,21 +1082,18 @@
 
     goto :goto_0
 
-    .line 471
     .end local v0    # "hasTextTitle":Z
     :cond_2
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 488
     .restart local v0    # "hasTextTitle":Z
     :cond_3
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mIcon:Landroid/graphics/drawable/Drawable;
 
     if-eqz v4, :cond_4
 
-    .line 489
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mIconView:Landroid/widget/ImageView;
 
     iget-object v5, p0, Lcom/letv/leui/widget/LePopupWindowController;->mIcon:Landroid/graphics/drawable/Drawable;
@@ -1244,13 +1102,11 @@
 
     goto :goto_0
 
-    .line 490
     :cond_4
     iget v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mIconId:I
 
     if-nez v4, :cond_0
 
-    .line 495
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mTitleView:Landroid/widget/TextView;
 
     iget-object v5, p0, Lcom/letv/leui/widget/LePopupWindowController;->mIconView:Landroid/widget/ImageView;
@@ -1279,14 +1135,12 @@
 
     invoke-virtual {v4, v5, v6, v7, v8}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 499
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mIconView:Landroid/widget/ImageView;
 
     invoke-virtual {v4, v9}, Landroid/widget/ImageView;->setVisibility(I)V
 
     goto :goto_0
 
-    .line 504
     :cond_5
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mWindow:Landroid/view/Window;
 
@@ -1294,16 +1148,13 @@
 
     move-result-object v3
 
-    .line 505
     .restart local v3    # "titleTemplate":Landroid/view/View;
     invoke-virtual {v3, v9}, Landroid/view/View;->setVisibility(I)V
 
-    .line 506
     iget-object v4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mIconView:Landroid/widget/ImageView;
 
     invoke-virtual {v4, v9}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 507
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1313,10 +1164,8 @@
     .locals 17
 
     .prologue
-    .line 394
     const/4 v4, 0x0
 
-    .line 395
     .local v4, "customPanel":Landroid/widget/FrameLayout;
     move-object/from16 v0, p0
 
@@ -1324,7 +1173,6 @@
 
     if-eqz v1, :cond_7
 
-    .line 396
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/letv/leui/widget/LePopupWindowController;->mWindow:Landroid/view/Window;
@@ -1338,7 +1186,6 @@
     .end local v4    # "customPanel":Landroid/widget/FrameLayout;
     check-cast v4, Landroid/widget/FrameLayout;
 
-    .line 397
     .restart local v4    # "customPanel":Landroid/widget/FrameLayout;
     move-object/from16 v0, p0
 
@@ -1352,7 +1199,6 @@
 
     check-cast v10, Landroid/widget/FrameLayout;
 
-    .line 398
     .local v10, "custom":Landroid/widget/FrameLayout;
     move-object/from16 v0, p0
 
@@ -1368,14 +1214,12 @@
 
     invoke-virtual {v10, v1, v14}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 399
     move-object/from16 v0, p0
 
     iget-boolean v1, v0, Lcom/letv/leui/widget/LePopupWindowController;->mViewSpacingSpecified:Z
 
     if-eqz v1, :cond_0
 
-    .line 400
     move-object/from16 v0, p0
 
     iget v1, v0, Lcom/letv/leui/widget/LePopupWindowController;->mViewSpacingLeft:I
@@ -1398,7 +1242,6 @@
 
     invoke-virtual {v10, v1, v14, v15, v0}, Landroid/widget/FrameLayout;->setPadding(IIII)V
 
-    .line 403
     :cond_0
     move-object/from16 v0, p0
 
@@ -1406,7 +1249,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 404
     invoke-virtual {v4}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
@@ -1417,7 +1259,6 @@
 
     iput v14, v1, Landroid/widget/LinearLayout$LayoutParams;->weight:F
 
-    .line 410
     .end local v10    # "custom":Landroid/widget/FrameLayout;
     :cond_1
     :goto_0
@@ -1433,18 +1274,15 @@
 
     check-cast v3, Landroid/widget/LinearLayout;
 
-    .line 411
     .local v3, "contentPanel":Landroid/widget/LinearLayout;
     move-object/from16 v0, p0
 
     invoke-direct {v0, v3}, Lcom/letv/leui/widget/LePopupWindowController;->setupContent(Landroid/widget/LinearLayout;)V
 
-    .line 412
     invoke-direct/range {p0 .. p0}, Lcom/letv/leui/widget/LePopupWindowController;->setupButtons()Z
 
     move-result v5
 
-    .line 414
     .local v5, "hasButtons":Z
     move-object/from16 v0, p0
 
@@ -1458,11 +1296,9 @@
 
     check-cast v2, Landroid/widget/LinearLayout;
 
-    .line 417
     .local v2, "topPanel":Landroid/widget/LinearLayout;
     const/4 v6, 0x0
 
-    .line 418
     .local v6, "a":Landroid/content/res/TypedArray;
     move-object/from16 v0, p0
 
@@ -1470,13 +1306,11 @@
 
     move-result v7
 
-    .line 420
     .local v7, "hasTitle":Z
     invoke-direct/range {p0 .. p0}, Lcom/letv/leui/widget/LePopupWindowController;->setupLicence()Z
 
     move-result v11
 
-    .line 421
     .local v11, "hasLicence":Z
     move-object/from16 v0, p0
 
@@ -1490,11 +1324,9 @@
 
     check-cast v12, Landroid/widget/LinearLayout;
 
-    .line 422
     .local v12, "licencePanel":Landroid/widget/LinearLayout;
     if-eqz v11, :cond_8
 
-    .line 423
     new-instance v1, Lcom/letv/leui/widget/LePopupWindowController$2;
 
     move-object/from16 v0, p0
@@ -1503,7 +1335,6 @@
 
     invoke-virtual {v12, v1}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 437
     :goto_1
     move-object/from16 v0, p0
 
@@ -1515,16 +1346,13 @@
 
     move-result-object v8
 
-    .line 438
     .local v8, "buttonPanel":Landroid/view/View;
     if-nez v5, :cond_2
 
-    .line 439
     const/16 v1, 0x8
 
     invoke-virtual {v8, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 442
     :cond_2
     move-object/from16 v0, p0
 
@@ -1551,7 +1379,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 443
     :cond_4
     move-object/from16 v0, p0
 
@@ -1565,13 +1392,11 @@
 
     check-cast v13, Landroid/widget/ImageView;
 
-    .line 444
     .local v13, "titleGapLine":Landroid/widget/ImageView;
     const/4 v1, 0x0
 
     invoke-virtual {v13, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 447
     .end local v13    # "titleGapLine":Landroid/widget/ImageView;
     :cond_5
     move-object/from16 v0, p0
@@ -1598,7 +1423,6 @@
 
     if-eqz v1, :cond_6
 
-    .line 448
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/letv/leui/widget/LePopupWindowController;->mWindow:Landroid/view/Window;
@@ -1611,7 +1435,6 @@
 
     check-cast v9, Landroid/widget/ImageView;
 
-    .line 449
     .local v9, "contentGapLine":Landroid/widget/ImageView;
     const/4 v1, 0x0
 
@@ -1621,13 +1444,10 @@
     :cond_6
     move-object/from16 v1, p0
 
-    .line 453
     invoke-direct/range {v1 .. v8}, Lcom/letv/leui/widget/LePopupWindowController;->setBackground(Landroid/widget/LinearLayout;Landroid/widget/LinearLayout;Landroid/view/View;ZLandroid/content/res/TypedArray;ZLandroid/view/View;)V
 
-    .line 455
     return-void
 
-    .line 407
     .end local v2    # "topPanel":Landroid/widget/LinearLayout;
     .end local v3    # "contentPanel":Landroid/widget/LinearLayout;
     .end local v5    # "hasButtons":Z
@@ -1653,7 +1473,6 @@
 
     goto/16 :goto_0
 
-    .line 434
     .restart local v2    # "topPanel":Landroid/widget/LinearLayout;
     .restart local v3    # "contentPanel":Landroid/widget/LinearLayout;
     .restart local v5    # "hasButtons":Z
@@ -1676,34 +1495,28 @@
     .param p1, "whichButton"    # I
 
     .prologue
-    .line 372
     packed-switch p1, :pswitch_data_0
 
-    .line 380
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 374
     :pswitch_0
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonPositive:Lcom/letv/leui/widget/LeButton;
 
     goto :goto_0
 
-    .line 376
     :pswitch_1
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNegative:Lcom/letv/leui/widget/LeButton;
 
     goto :goto_0
 
-    .line 378
     :pswitch_2
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNeutral:Lcom/letv/leui/widget/LeButton;
 
     goto :goto_0
 
-    .line 372
     :pswitch_data_0
     .packed-switch -0x3
         :pswitch_2
@@ -1716,7 +1529,6 @@
     .locals 1
 
     .prologue
-    .line 368
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mLicenceCheckBox:Lcom/letv/leui/widget/LeCheckBox;
 
     return-object v0
@@ -1726,7 +1538,6 @@
     .locals 1
 
     .prologue
-    .line 364
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mListView:Landroid/widget/ListView;
 
     return-object v0
@@ -1738,14 +1549,12 @@
     .prologue
     const/high16 v2, 0x20000
 
-    .line 216
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mWindow:Landroid/view/Window;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->requestFeature(I)Z
 
-    .line 218
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mView:Landroid/view/View;
 
     if-eqz v0, :cond_0
@@ -1758,13 +1567,11 @@
 
     if-nez v0, :cond_1
 
-    .line 219
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mWindow:Landroid/view/Window;
 
     invoke-virtual {v0, v2, v2}, Landroid/view/Window;->setFlags(II)V
 
-    .line 222
     :cond_1
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mWindow:Landroid/view/Window;
 
@@ -1772,17 +1579,14 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->setContentView(I)V
 
-    .line 223
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mWindow:Landroid/view/Window;
 
     const/16 v1, 0x50
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->setGravity(I)V
 
-    .line 225
     invoke-direct {p0}, Lcom/letv/leui/widget/LePopupWindowController;->setupView()V
 
-    .line 226
     return-void
 .end method
 
@@ -1792,7 +1596,6 @@
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 385
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mScrollView:Landroid/widget/ScrollView;
 
     if-eqz v0, :cond_0
@@ -1822,7 +1625,6 @@
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 389
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mScrollView:Landroid/widget/ScrollView;
 
     if-eqz v0, :cond_0
@@ -1854,23 +1656,19 @@
     .param p4, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 293
     if-nez p4, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 294
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, p1, p3}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object p4
 
-    .line 297
     :cond_0
     packed-switch p1, :pswitch_data_0
 
-    .line 315
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Button does not exist"
@@ -1879,36 +1677,28 @@
 
     throw v0
 
-    .line 300
     :pswitch_0
     iput-object p2, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonPositiveText:Ljava/lang/CharSequence;
 
-    .line 301
     iput-object p4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonPositiveMessage:Landroid/os/Message;
 
-    .line 317
     :goto_0
     return-void
 
-    .line 305
     :pswitch_1
     iput-object p2, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNegativeText:Ljava/lang/CharSequence;
 
-    .line 306
     iput-object p4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNegativeMessage:Landroid/os/Message;
 
     goto :goto_0
 
-    .line 310
     :pswitch_2
     iput-object p2, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNeutralText:Ljava/lang/CharSequence;
 
-    .line 311
     iput-object p4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNeutralMessage:Landroid/os/Message;
 
     goto :goto_0
 
-    .line 297
     :pswitch_data_0
     .packed-switch -0x3
         :pswitch_2
@@ -1923,10 +1713,8 @@
     .param p2, "color"    # I
 
     .prologue
-    .line 320
     packed-switch p1, :pswitch_data_0
 
-    .line 332
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Button does not exist"
@@ -1935,27 +1723,22 @@
 
     throw v0
 
-    .line 323
     :pswitch_0
     iput p2, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonPositiveColor:I
 
-    .line 334
     :goto_0
     return-void
 
-    .line 326
     :pswitch_1
     iput p2, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNegativeColor:I
 
     goto :goto_0
 
-    .line 329
     :pswitch_2
     iput p2, p0, Lcom/letv/leui/widget/LePopupWindowController;->mButtonNeutralColor:I
 
     goto :goto_0
 
-    .line 320
     :pswitch_data_0
     .packed-switch -0x3
         :pswitch_2
@@ -1969,10 +1752,8 @@
     .param p1, "customTitleView"    # Landroid/view/View;
 
     .prologue
-    .line 239
     iput-object p1, p0, Lcom/letv/leui/widget/LePopupWindowController;->mCustomTitleView:Landroid/view/View;
 
-    .line 240
     return-void
 .end method
 
@@ -1981,34 +1762,27 @@
     .param p1, "resId"    # I
 
     .prologue
-    .line 342
     iput p1, p0, Lcom/letv/leui/widget/LePopupWindowController;->mIconId:I
 
-    .line 343
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mIconView:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_0
 
-    .line 344
     if-lez p1, :cond_1
 
-    .line 345
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mIconView:Landroid/widget/ImageView;
 
     iget v1, p0, Lcom/letv/leui/widget/LePopupWindowController;->mIconId:I
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 350
     :cond_0
     :goto_0
     return-void
 
-    .line 346
     :cond_1
     if-nez p1, :cond_0
 
-    .line 347
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mIconView:Landroid/widget/ImageView;
 
     const/16 v1, 0x8
@@ -2023,10 +1797,8 @@
     .param p1, "icon"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 353
     iput-object p1, p0, Lcom/letv/leui/widget/LePopupWindowController;->mIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 354
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mIconView:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_0
@@ -2035,12 +1807,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 355
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mIconView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 357
     :cond_0
     return-void
 .end method
@@ -2050,10 +1820,8 @@
     .param p1, "forceInverseBackground"    # Z
 
     .prologue
-    .line 360
     iput-boolean p1, p0, Lcom/letv/leui/widget/LePopupWindowController;->mForceInverseBackground:Z
 
-    .line 361
     return-void
 .end method
 
@@ -2063,23 +1831,18 @@
     .param p2, "licenceListener"    # Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
     .prologue
-    .line 250
     iput-object p1, p0, Lcom/letv/leui/widget/LePopupWindowController;->mLicenceMessage:Ljava/lang/CharSequence;
 
-    .line 251
     iput-object p2, p0, Lcom/letv/leui/widget/LePopupWindowController;->mLicenceListener:Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
-    .line 252
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mLicenceCheckBox:Lcom/letv/leui/widget/LeCheckBox;
 
     if-eqz v0, :cond_0
 
-    .line 253
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mLicenceCheckBox:Lcom/letv/leui/widget/LeCheckBox;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/LeCheckBox;->setText(Ljava/lang/CharSequence;)V
 
-    .line 255
     :cond_0
     return-void
 .end method
@@ -2089,20 +1852,16 @@
     .param p1, "message"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 243
     iput-object p1, p0, Lcom/letv/leui/widget/LePopupWindowController;->mMessage:Ljava/lang/CharSequence;
 
-    .line 244
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mMessageView:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
 
-    .line 245
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mMessageView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 247
     :cond_0
     return-void
 .end method
@@ -2112,20 +1871,16 @@
     .param p1, "title"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 229
     iput-object p1, p0, Lcom/letv/leui/widget/LePopupWindowController;->mTitle:Ljava/lang/CharSequence;
 
-    .line 230
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mTitleView:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
 
-    .line 231
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mTitleView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 233
     :cond_0
     return-void
 .end method
@@ -2135,15 +1890,12 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 261
     iput-object p1, p0, Lcom/letv/leui/widget/LePopupWindowController;->mView:Landroid/view/View;
 
-    .line 262
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mViewSpacingSpecified:Z
 
-    .line 263
     return-void
 .end method
 
@@ -2156,26 +1908,19 @@
     .param p5, "viewSpacingBottom"    # I
 
     .prologue
-    .line 270
     iput-object p1, p0, Lcom/letv/leui/widget/LePopupWindowController;->mView:Landroid/view/View;
 
-    .line 271
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/LePopupWindowController;->mViewSpacingSpecified:Z
 
-    .line 272
     iput p2, p0, Lcom/letv/leui/widget/LePopupWindowController;->mViewSpacingLeft:I
 
-    .line 273
     iput p3, p0, Lcom/letv/leui/widget/LePopupWindowController;->mViewSpacingTop:I
 
-    .line 274
     iput p4, p0, Lcom/letv/leui/widget/LePopupWindowController;->mViewSpacingRight:I
 
-    .line 275
     iput p5, p0, Lcom/letv/leui/widget/LePopupWindowController;->mViewSpacingBottom:I
 
-    .line 276
     return-void
 .end method

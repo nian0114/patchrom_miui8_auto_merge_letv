@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 213
     iput-object p1, p0, Lcom/android/server/BatteryService$1$1;->this$1:Lcom/android/server/BatteryService$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 216
     iget-object v0, p0, Lcom/android/server/BatteryService$1$1;->this$1:Lcom/android/server/BatteryService$1;
 
     iget-object v0, v0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
@@ -52,6 +50,5 @@
 
     invoke-virtual {v0}, Lcom/android/server/BatteryService$Led;->updateLightsLocked()V
 
-    .line 217
     return-void
 .end method

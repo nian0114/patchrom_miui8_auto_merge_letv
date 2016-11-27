@@ -23,28 +23,22 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 28
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 24
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/power/ui/ShutdownWelcomeView;->mTipColor:I
 
-    .line 25
     const/16 v0, 0x48
 
     iput v0, p0, Lcom/android/server/power/ui/ShutdownWelcomeView;->mTipTextSize:I
 
-    .line 29
     invoke-direct {p0}, Lcom/android/server/power/ui/ShutdownWelcomeView;->initView()V
 
-    .line 30
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/android/server/power/ui/ShutdownWelcomeView;->setFocusable(Z)V
 
-    .line 31
     return-void
 .end method
 
@@ -54,31 +48,26 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 49
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/power/ui/ShutdownWelcomeView;->mTipPaint:Landroid/graphics/Paint;
 
-    .line 50
     iget-object v0, p0, Lcom/android/server/power/ui/ShutdownWelcomeView;->mTipPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 51
     iget-object v0, p0, Lcom/android/server/power/ui/ShutdownWelcomeView;->mTipPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setDither(Z)V
 
-    .line 52
     iget-object v0, p0, Lcom/android/server/power/ui/ShutdownWelcomeView;->mTipPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/power/ui/ShutdownWelcomeView;->mTipColor:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 53
     iget-object v0, p0, Lcom/android/server/power/ui/ShutdownWelcomeView;->mTipPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/power/ui/ShutdownWelcomeView;->mTipTextSize:I
@@ -87,28 +76,24 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    .line 54
     iget-object v0, p0, Lcom/android/server/power/ui/ShutdownWelcomeView;->mTipPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 55
     iget-object v0, p0, Lcom/android/server/power/ui/ShutdownWelcomeView;->mTipPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Join;->ROUND:Landroid/graphics/Paint$Join;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeJoin(Landroid/graphics/Paint$Join;)V
 
-    .line 56
     iget-object v0, p0, Lcom/android/server/power/ui/ShutdownWelcomeView;->mTipPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
-    .line 57
     return-void
 .end method
 
@@ -116,12 +101,10 @@
     .locals 2
 
     .prologue
-    .line 35
     const v0, 0x104062d
 
     invoke-virtual {p0, v0}, Lcom/android/server/power/ui/ShutdownWelcomeView;->setWords(I)V
 
-    .line 36
     invoke-virtual {p0}, Lcom/android/server/power/ui/ShutdownWelcomeView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -134,7 +117,6 @@
 
     iput v0, p0, Lcom/android/server/power/ui/ShutdownWelcomeView;->mTipColor:I
 
-    .line 37
     invoke-virtual {p0}, Lcom/android/server/power/ui/ShutdownWelcomeView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -147,10 +129,8 @@
 
     iput v0, p0, Lcom/android/server/power/ui/ShutdownWelcomeView;->mTipTextSize:I
 
-    .line 41
     invoke-direct {p0}, Lcom/android/server/power/ui/ShutdownWelcomeView;->initTipPen()V
 
-    .line 45
     return-void
 .end method
 
@@ -163,15 +143,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 89
     invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 91
     const/16 v2, 0xff
 
     invoke-virtual {p1, v2, v3, v3, v3}, Landroid/graphics/Canvas;->drawARGB(IIII)V
 
-    .line 92
     iget-object v2, p0, Lcom/android/server/power/ui/ShutdownWelcomeView;->mTipMsg:Ljava/lang/String;
 
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -192,12 +169,10 @@
 
     if-lez v2, :cond_0
 
-    .line 93
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v0
 
-    .line 94
     .local v0, "seq":I
     iget-object v2, p0, Lcom/android/server/power/ui/ShutdownWelcomeView;->mTipPaint:Landroid/graphics/Paint;
 
@@ -207,7 +182,6 @@
 
     move-result v1
 
-    .line 96
     .local v1, "textWidth":F
     iget-object v2, p0, Lcom/android/server/power/ui/ShutdownWelcomeView;->mTipMsg:Ljava/lang/String;
 
@@ -249,10 +223,8 @@
 
     invoke-virtual {p1, v2, v3, v4, v5}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    .line 97
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    .line 99
     .end local v0    # "seq":I
     .end local v1    # "textWidth":F
     :cond_0
@@ -264,7 +236,6 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 106
     const/4 v0, 0x1
 
     return v0
@@ -275,7 +246,6 @@
     .param p1, "alpha"    # I
 
     .prologue
-    .line 79
     iget-object v0, p0, Lcom/android/server/power/ui/ShutdownWelcomeView;->mTipPaint:Landroid/graphics/Paint;
 
     iget-object v1, p0, Lcom/android/server/power/ui/ShutdownWelcomeView;->mTipPaint:Landroid/graphics/Paint;
@@ -294,10 +264,8 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 80
     invoke-virtual {p0}, Lcom/android/server/power/ui/ShutdownWelcomeView;->invalidate()V
 
-    .line 81
     return-void
 .end method
 
@@ -306,7 +274,6 @@
     .param p1, "res"    # I
 
     .prologue
-    .line 60
     invoke-virtual {p0}, Lcom/android/server/power/ui/ShutdownWelcomeView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -317,7 +284,6 @@
 
     iput-object v0, p0, Lcom/android/server/power/ui/ShutdownWelcomeView;->mTipMsg:Ljava/lang/String;
 
-    .line 62
     return-void
 .end method
 
@@ -325,7 +291,6 @@
     .locals 4
 
     .prologue
-    .line 65
     const-string v2, "tipAlpha"
 
     const/4 v3, 0x2
@@ -338,7 +303,6 @@
 
     move-result-object v1
 
-    .line 66
     .local v1, "value":Landroid/animation/PropertyValuesHolder;
     const/4 v2, 0x1
 
@@ -352,19 +316,15 @@
 
     move-result-object v0
 
-    .line 67
     .local v0, "objectTip":Landroid/animation/ObjectAnimator;
     const-wide/16 v2, 0xe10
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 71
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 72
     return-void
 
-    .line 65
     nop
 
     :array_0

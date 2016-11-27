@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 592
     iput-object p1, p0, Lcom/android/server/policy/global/GlobalActionHostView$2;->this$0:Lcom/android/server/policy/global/GlobalActionHostView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,19 +40,16 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 610
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHostView$2;->this$0:Lcom/android/server/policy/global/GlobalActionHostView;
 
     iget-object v0, v0, Lcom/android/server/policy/global/GlobalActionHostView;->mMediatorCallback:Lcom/android/server/policy/global/GlobalActionViewMediator$MediatorCallback;
 
     invoke-interface {v0}, Lcom/android/server/policy/global/GlobalActionViewMediator$MediatorCallback;->shutdown()V
 
-    .line 611
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHostView$2;->this$0:Lcom/android/server/policy/global/GlobalActionHostView;
 
     invoke-virtual {v0}, Lcom/android/server/policy/global/GlobalActionHostView;->removeAllViews()V
 
-    .line 612
     return-void
 .end method
 
@@ -62,19 +58,16 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 604
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHostView$2;->this$0:Lcom/android/server/policy/global/GlobalActionHostView;
 
     iget-object v0, v0, Lcom/android/server/policy/global/GlobalActionHostView;->mMediatorCallback:Lcom/android/server/policy/global/GlobalActionViewMediator$MediatorCallback;
 
     invoke-interface {v0}, Lcom/android/server/policy/global/GlobalActionViewMediator$MediatorCallback;->shutdown()V
 
-    .line 605
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHostView$2;->this$0:Lcom/android/server/policy/global/GlobalActionHostView;
 
     invoke-virtual {v0}, Lcom/android/server/policy/global/GlobalActionHostView;->removeAllViews()V
 
-    .line 606
     return-void
 .end method
 
@@ -83,7 +76,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 600
     return-void
 .end method
 
@@ -92,6 +84,5 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 596
     return-void
 .end method

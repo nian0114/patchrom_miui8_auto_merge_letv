@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 52
     iput-object p1, p0, Lcom/letv/leui/preference/LeDialogPreference$2;->this$0:Lcom/letv/leui/preference/LeDialogPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,26 +41,22 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 56
     iget-object v0, p0, Lcom/letv/leui/preference/LeDialogPreference$2;->this$0:Lcom/letv/leui/preference/LeDialogPreference;
 
     invoke-virtual {v0, p1, p2}, Lcom/letv/leui/preference/LeDialogPreference;->onPositiveClick(Landroid/content/DialogInterface;I)V
 
-    .line 57
     iget-object v0, p0, Lcom/letv/leui/preference/LeDialogPreference$2;->this$0:Lcom/letv/leui/preference/LeDialogPreference;
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeDialogPreference;->positiveClickListener:Landroid/content/DialogInterface$OnClickListener;
 
     if-eqz v0, :cond_0
 
-    .line 58
     iget-object v0, p0, Lcom/letv/leui/preference/LeDialogPreference$2;->this$0:Lcom/letv/leui/preference/LeDialogPreference;
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeDialogPreference;->positiveClickListener:Landroid/content/DialogInterface$OnClickListener;
 
     invoke-interface {v0, p1, p2}, Landroid/content/DialogInterface$OnClickListener;->onClick(Landroid/content/DialogInterface;I)V
 
-    .line 61
     :cond_0
     return-void
 .end method

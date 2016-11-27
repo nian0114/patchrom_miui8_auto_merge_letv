@@ -27,23 +27,18 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 108
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->x:F
 
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->y:F
 
-    .line 33
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->alpha:F
 
-    .line 109
     iput-object p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->shape:Landroid/graphics/drawable/ShapeDrawable;
 
-    .line 110
     return-void
 .end method
 
@@ -53,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 69
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->color:I
 
     return v0
@@ -63,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 82
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->gradient:Landroid/graphics/RadialGradient;
 
     return-object v0
@@ -73,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 100
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->shape:Landroid/graphics/drawable/ShapeDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getShape()Landroid/graphics/drawable/shapes/Shape;
@@ -91,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 41
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->paint:Landroid/graphics/Paint;
 
     return-object v0
@@ -101,7 +92,6 @@
     .locals 1
 
     .prologue
-    .line 65
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->shape:Landroid/graphics/drawable/ShapeDrawable;
 
     return-object v0
@@ -111,7 +101,6 @@
     .locals 1
 
     .prologue
-    .line 91
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->shape:Landroid/graphics/drawable/ShapeDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getShape()Landroid/graphics/drawable/shapes/Shape;
@@ -129,7 +118,6 @@
     .locals 1
 
     .prologue
-    .line 49
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->x:F
 
     return v0
@@ -139,7 +127,6 @@
     .locals 1
 
     .prologue
-    .line 57
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->y:F
 
     return v0
@@ -150,10 +137,8 @@
     .param p1, "alpha"    # F
 
     .prologue
-    .line 86
     iput p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->alpha:F
 
-    .line 87
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->shape:Landroid/graphics/drawable/ShapeDrawable;
 
     const/high16 v1, 0x437f0000    # 255.0f
@@ -168,7 +153,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/ShapeDrawable;->setAlpha(I)V
 
-    .line 88
     return-void
 .end method
 
@@ -177,7 +161,6 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 73
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->shape:Landroid/graphics/drawable/ShapeDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
@@ -186,10 +169,8 @@
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 74
     iput p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->color:I
 
-    .line 75
     return-void
 .end method
 
@@ -198,10 +179,8 @@
     .param p1, "value"    # Landroid/graphics/RadialGradient;
 
     .prologue
-    .line 78
     iput-object p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->gradient:Landroid/graphics/RadialGradient;
 
-    .line 79
     return-void
 .end method
 
@@ -210,14 +189,12 @@
     .param p1, "height"    # F
 
     .prologue
-    .line 104
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->shape:Landroid/graphics/drawable/ShapeDrawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/ShapeDrawable;->getShape()Landroid/graphics/drawable/shapes/Shape;
 
     move-result-object v0
 
-    .line 105
     .local v0, "s":Landroid/graphics/drawable/shapes/Shape;
     invoke-virtual {v0}, Landroid/graphics/drawable/shapes/Shape;->getWidth()F
 
@@ -225,7 +202,6 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/graphics/drawable/shapes/Shape;->resize(FF)V
 
-    .line 106
     return-void
 .end method
 
@@ -234,10 +210,8 @@
     .param p1, "value"    # Landroid/graphics/Paint;
 
     .prologue
-    .line 37
     iput-object p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->paint:Landroid/graphics/Paint;
 
-    .line 38
     return-void
 .end method
 
@@ -246,10 +220,8 @@
     .param p1, "value"    # Landroid/graphics/drawable/ShapeDrawable;
 
     .prologue
-    .line 61
     iput-object p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->shape:Landroid/graphics/drawable/ShapeDrawable;
 
-    .line 62
     return-void
 .end method
 
@@ -258,14 +230,12 @@
     .param p1, "width"    # F
 
     .prologue
-    .line 95
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->shape:Landroid/graphics/drawable/ShapeDrawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/ShapeDrawable;->getShape()Landroid/graphics/drawable/shapes/Shape;
 
     move-result-object v0
 
-    .line 96
     .local v0, "s":Landroid/graphics/drawable/shapes/Shape;
     invoke-virtual {v0}, Landroid/graphics/drawable/shapes/Shape;->getHeight()F
 
@@ -273,7 +243,6 @@
 
     invoke-virtual {v0, p1, v1}, Landroid/graphics/drawable/shapes/Shape;->resize(FF)V
 
-    .line 97
     return-void
 .end method
 
@@ -282,10 +251,8 @@
     .param p1, "value"    # F
 
     .prologue
-    .line 45
     iput p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->x:F
 
-    .line 46
     return-void
 .end method
 
@@ -294,9 +261,7 @@
     .param p1, "value"    # F
 
     .prologue
-    .line 53
     iput p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->y:F
 
-    .line 54
     return-void
 .end method

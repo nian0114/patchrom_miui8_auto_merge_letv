@@ -38,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 37
     const-class v0, Lcom/android/server/LeuiLockSettingsServiceHelper;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -57,24 +56,18 @@
     .param p3, "cb"    # Lcom/android/server/LeuiLockSettingsServiceHelper$LockSettingsServiceCallback;
 
     .prologue
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 64
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/LeuiLockSettingsServiceHelper;->mPasswordTryTimes:I
 
-    .line 43
     iput-object p1, p0, Lcom/android/server/LeuiLockSettingsServiceHelper;->mContext:Landroid/content/Context;
 
-    .line 44
     iput-object p2, p0, Lcom/android/server/LeuiLockSettingsServiceHelper;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    .line 45
     iput-object p3, p0, Lcom/android/server/LeuiLockSettingsServiceHelper;->mLockSettingsServiceCallback:Lcom/android/server/LeuiLockSettingsServiceHelper$LockSettingsServiceCallback;
 
-    .line 46
     return-void
 .end method
 
@@ -86,20 +79,16 @@
     .prologue
     const/16 v0, 0x7530
 
-    .line 154
     if-lez p1, :cond_1
 
-    .line 155
     invoke-static {p1, v0}, Ljava/lang/Math;->min(II)I
 
     move-result v0
 
-    .line 160
     :cond_0
     :goto_0
     return v0
 
-    .line 157
     :cond_1
     const/4 v1, 0x5
 
@@ -109,7 +98,6 @@
 
     if-ge p0, v1, :cond_0
 
-    .line 160
     const/4 v0, 0x0
 
     goto :goto_0
@@ -121,12 +109,10 @@
     .param p2, "leuiPwdType"    # Ljava/lang/String;
 
     .prologue
-    .line 189
     invoke-direct {p0, p1}, Lcom/android/server/LeuiLockSettingsServiceHelper;->getUserParentOrSelfId(I)I
 
     move-result p1
 
-    .line 190
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -153,11 +139,9 @@
 
     move-result-object v0
 
-    .line 193
     .local v0, "dataSystemDirectory":Ljava/lang/String;
     if-nez p1, :cond_0
 
-    .line 195
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -180,7 +164,6 @@
 
     move-result-object v1
 
-    .line 197
     :goto_0
     return-object v1
 
@@ -224,7 +207,6 @@
     .param p2, "leuiPwdType"    # Ljava/lang/String;
 
     .prologue
-    .line 175
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -251,16 +233,13 @@
 
     move-result-object v0
 
-    .line 178
     .local v0, "dataSystemDirectory":Ljava/lang/String;
     invoke-direct {p0, p1}, Lcom/android/server/LeuiLockSettingsServiceHelper;->getUserParentOrSelfId(I)I
 
     move-result p1
 
-    .line 179
     if-nez p1, :cond_0
 
-    .line 181
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -283,7 +262,6 @@
 
     move-result-object v1
 
-    .line 183
     :goto_0
     return-object v1
 
@@ -327,7 +305,6 @@
     .param p2, "leuiPwdType"    # Ljava/lang/String;
 
     .prologue
-    .line 146
     iget-object v0, p0, Lcom/android/server/LeuiLockSettingsServiceHelper;->mLockSettingsServiceCallback:Lcom/android/server/LeuiLockSettingsServiceHelper$LockSettingsServiceCallback;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -364,7 +341,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 138
     iget-object v0, p0, Lcom/android/server/LeuiLockSettingsServiceHelper;->mLockSettingsServiceCallback:Lcom/android/server/LeuiLockSettingsServiceHelper$LockSettingsServiceCallback;
 
     const-string v1, "lockscreen.password_try_count"
@@ -385,10 +361,8 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 164
     if-eqz p1, :cond_0
 
-    .line 165
     iget-object v2, p0, Lcom/android/server/LeuiLockSettingsServiceHelper;->mContext:Landroid/content/Context;
 
     const-string v3, "user"
@@ -399,20 +373,16 @@
 
     check-cast v1, Landroid/os/UserManager;
 
-    .line 166
     .local v1, "um":Landroid/os/UserManager;
     invoke-virtual {v1, p1}, Landroid/os/UserManager;->getProfileParent(I)Landroid/content/pm/UserInfo;
 
     move-result-object v0
 
-    .line 167
     .local v0, "pi":Landroid/content/pm/UserInfo;
     if-eqz v0, :cond_0
 
-    .line 168
     iget p1, v0, Landroid/content/pm/UserInfo;->id:I
 
-    .line 171
     .end local v0    # "pi":Landroid/content/pm/UserInfo;
     .end local v1    # "um":Landroid/os/UserManager;
     .end local p1    # "userId":I
@@ -427,7 +397,6 @@
     .param p3, "leuiPwdType"    # Ljava/lang/String;
 
     .prologue
-    .line 150
     iget-object v0, p0, Lcom/android/server/LeuiLockSettingsServiceHelper;->mLockSettingsServiceCallback:Lcom/android/server/LeuiLockSettingsServiceHelper$LockSettingsServiceCallback;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -452,7 +421,6 @@
 
     invoke-interface {v0, v1, v2, v3, p1}, Lcom/android/server/LeuiLockSettingsServiceHelper$LockSettingsServiceCallback;->setLong(Ljava/lang/String;JI)V
 
-    .line 151
     return-void
 .end method
 
@@ -462,7 +430,6 @@
     .param p2, "tryTimes"    # I
 
     .prologue
-    .line 142
     iget-object v0, p0, Lcom/android/server/LeuiLockSettingsServiceHelper;->mLockSettingsServiceCallback:Lcom/android/server/LeuiLockSettingsServiceHelper$LockSettingsServiceCallback;
 
     const-string v1, "lockscreen.password_try_count"
@@ -471,7 +438,6 @@
 
     invoke-interface {v0, v1, v2, v3, p1}, Lcom/android/server/LeuiLockSettingsServiceHelper$LockSettingsServiceCallback;->setLong(Ljava/lang/String;JI)V
 
-    .line 143
     return-void
 .end method
 
@@ -481,7 +447,6 @@
     .param p2, "hash"    # [B
 
     .prologue
-    .line 205
     :try_start_0
     new-instance v1, Ljava/io/RandomAccessFile;
 
@@ -489,7 +454,6 @@
 
     invoke-direct {v1, p1, v2}, Ljava/io/RandomAccessFile;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 207
     .local v1, "raf":Ljava/io/RandomAccessFile;
     if-eqz p2, :cond_0
 
@@ -497,22 +461,18 @@
 
     if-nez v2, :cond_1
 
-    .line 208
     :cond_0
     const-wide/16 v2, 0x0
 
     invoke-virtual {v1, v2, v3}, Ljava/io/RandomAccessFile;->setLength(J)V
 
-    .line 212
     :goto_0
     invoke-virtual {v1}, Ljava/io/RandomAccessFile;->close()V
 
-    .line 216
     .end local v1    # "raf":Ljava/io/RandomAccessFile;
     :goto_1
     return-void
 
-    .line 210
     .restart local v1    # "raf":Ljava/io/RandomAccessFile;
     :cond_1
     const/4 v2, 0x0
@@ -525,12 +485,10 @@
 
     goto :goto_0
 
-    .line 213
     .end local v1    # "raf":Ljava/io/RandomAccessFile;
     :catch_0
     move-exception v0
 
-    .line 214
     .local v0, "ioe":Ljava/io/IOException;
     sget-object v2, Lcom/android/server/LeuiLockSettingsServiceHelper;->TAG:Ljava/lang/String;
 
@@ -571,15 +529,12 @@
     .end annotation
 
     .prologue
-    .line 266
     iget-object v8, p0, Lcom/android/server/LeuiLockSettingsServiceHelper;->mLockSettingsServiceCallback:Lcom/android/server/LeuiLockSettingsServiceHelper$LockSettingsServiceCallback;
 
     invoke-interface {v8, p2}, Lcom/android/server/LeuiLockSettingsServiceHelper$LockSettingsServiceCallback;->checkPasswordReadPermission(I)V
 
-    .line 267
     sget-object v6, Lcom/android/internal/widget/VerifyCredentialResponse;->OK:Lcom/android/internal/widget/VerifyCredentialResponse;
 
-    .line 268
     .local v6, "response":Lcom/android/internal/widget/VerifyCredentialResponse;
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -587,10 +542,8 @@
 
     if-eqz v8, :cond_0
 
-    .line 269
     sget-object v6, Lcom/android/internal/widget/VerifyCredentialResponse;->ERROR:Lcom/android/internal/widget/VerifyCredentialResponse;
 
-    .line 291
     :goto_0
     invoke-virtual {p0, p3, p2, v6}, Lcom/android/server/LeuiLockSettingsServiceHelper;->checkVeryfyResponseForLeui(Ljava/lang/String;ILcom/android/internal/widget/VerifyCredentialResponse;)Lcom/android/internal/widget/VerifyCredentialResponse;
 
@@ -598,7 +551,6 @@
 
     return-object v8
 
-    .line 273
     :cond_0
     :try_start_0
     new-instance v5, Ljava/io/RandomAccessFile;
@@ -611,7 +563,6 @@
 
     invoke-direct {v5, v8, v9}, Ljava/io/RandomAccessFile;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 274
     .local v5, "raf":Ljava/io/RandomAccessFile;
     invoke-virtual {v5}, Ljava/io/RandomAccessFile;->length()J
 
@@ -621,7 +572,6 @@
 
     new-array v7, v8, [B
 
-    .line 275
     .local v7, "stored":[B
     const/4 v8, 0x0
 
@@ -631,19 +581,15 @@
 
     move-result v1
 
-    .line 276
     .local v1, "got":I
     invoke-virtual {v5}, Ljava/io/RandomAccessFile;->close()V
 
-    .line 277
     if-gtz v1, :cond_1
 
-    .line 278
     sget-object v6, Lcom/android/internal/widget/VerifyCredentialResponse;->OK:Lcom/android/internal/widget/VerifyCredentialResponse;
 
     goto :goto_0
 
-    .line 281
     :cond_1
     iget-object v8, p0, Lcom/android/server/LeuiLockSettingsServiceHelper;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
@@ -651,13 +597,11 @@
 
     move-result-object v2
 
-    .line 282
     .local v2, "hash":[B
     invoke-static {v7, v2}, Ljava/util/Arrays;->equals([B[B)Z
 
     move-result v4
 
-    .line 283
     .local v4, "matched":Z
     if-eqz v4, :cond_2
 
@@ -674,7 +618,6 @@
 
     goto :goto_1
 
-    .line 285
     .end local v1    # "got":I
     .end local v2    # "hash":[B
     .end local v4    # "matched":Z
@@ -683,7 +626,6 @@
     :catch_0
     move-exception v0
 
-    .line 286
     .local v0, "fnfe":Ljava/io/FileNotFoundException;
     sget-object v8, Lcom/android/server/LeuiLockSettingsServiceHelper;->TAG:Ljava/lang/String;
 
@@ -709,12 +651,10 @@
 
     goto :goto_0
 
-    .line 287
     .end local v0    # "fnfe":Ljava/io/FileNotFoundException;
     :catch_1
     move-exception v3
 
-    .line 288
     .local v3, "ioe":Ljava/io/IOException;
     sget-object v8, Lcom/android/server/LeuiLockSettingsServiceHelper;->TAG:Ljava/lang/String;
 
@@ -753,15 +693,12 @@
     .end annotation
 
     .prologue
-    .line 235
     iget-object v8, p0, Lcom/android/server/LeuiLockSettingsServiceHelper;->mLockSettingsServiceCallback:Lcom/android/server/LeuiLockSettingsServiceHelper$LockSettingsServiceCallback;
 
     invoke-interface {v8, p2}, Lcom/android/server/LeuiLockSettingsServiceHelper$LockSettingsServiceCallback;->checkPasswordReadPermission(I)V
 
-    .line 236
     sget-object v6, Lcom/android/internal/widget/VerifyCredentialResponse;->OK:Lcom/android/internal/widget/VerifyCredentialResponse;
 
-    .line 237
     .local v6, "response":Lcom/android/internal/widget/VerifyCredentialResponse;
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -769,10 +706,8 @@
 
     if-eqz v8, :cond_0
 
-    .line 238
     sget-object v6, Lcom/android/internal/widget/VerifyCredentialResponse;->ERROR:Lcom/android/internal/widget/VerifyCredentialResponse;
 
-    .line 261
     :goto_0
     invoke-virtual {p0, p3, p2, v6}, Lcom/android/server/LeuiLockSettingsServiceHelper;->checkVeryfyResponseForLeui(Ljava/lang/String;ILcom/android/internal/widget/VerifyCredentialResponse;)Lcom/android/internal/widget/VerifyCredentialResponse;
 
@@ -780,7 +715,6 @@
 
     return-object v8
 
-    .line 242
     :cond_0
     :try_start_0
     new-instance v5, Ljava/io/RandomAccessFile;
@@ -793,7 +727,6 @@
 
     invoke-direct {v5, v8, v9}, Ljava/io/RandomAccessFile;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 243
     .local v5, "raf":Ljava/io/RandomAccessFile;
     invoke-virtual {v5}, Ljava/io/RandomAccessFile;->length()J
 
@@ -803,7 +736,6 @@
 
     new-array v7, v8, [B
 
-    .line 244
     .local v7, "stored":[B
     const/4 v8, 0x0
 
@@ -813,19 +745,15 @@
 
     move-result v1
 
-    .line 245
     .local v1, "got":I
     invoke-virtual {v5}, Ljava/io/RandomAccessFile;->close()V
 
-    .line 246
     if-gtz v1, :cond_1
 
-    .line 247
     sget-object v6, Lcom/android/internal/widget/VerifyCredentialResponse;->OK:Lcom/android/internal/widget/VerifyCredentialResponse;
 
     goto :goto_0
 
-    .line 250
     :cond_1
     invoke-static {p1}, Lcom/android/internal/widget/LockPatternUtils;->stringToPattern(Ljava/lang/String;)Ljava/util/List;
 
@@ -835,13 +763,11 @@
 
     move-result-object v2
 
-    .line 252
     .local v2, "hash":[B
     invoke-static {v7, v2}, Ljava/util/Arrays;->equals([B[B)Z
 
     move-result v4
 
-    .line 253
     .local v4, "matched":Z
     if-eqz v4, :cond_2
 
@@ -858,7 +784,6 @@
 
     goto :goto_1
 
-    .line 255
     .end local v1    # "got":I
     .end local v2    # "hash":[B
     .end local v4    # "matched":Z
@@ -867,7 +792,6 @@
     :catch_0
     move-exception v0
 
-    .line 256
     .local v0, "fnfe":Ljava/io/FileNotFoundException;
     sget-object v8, Lcom/android/server/LeuiLockSettingsServiceHelper;->TAG:Ljava/lang/String;
 
@@ -893,12 +817,10 @@
 
     goto :goto_0
 
-    .line 257
     .end local v0    # "fnfe":Ljava/io/FileNotFoundException;
     :catch_1
     move-exception v3
 
-    .line 258
     .local v3, "ioe":Ljava/io/IOException;
     sget-object v8, Lcom/android/server/LeuiLockSettingsServiceHelper;->TAG:Ljava/lang/String;
 
@@ -933,18 +855,15 @@
     .prologue
     const-wide/16 v6, 0x0
 
-    .line 70
     invoke-virtual {p2}, Lcom/android/internal/widget/VerifyCredentialResponse;->getResponseCode()I
 
     move-result v1
 
-    .line 71
     .local v1, "responseCode":I
     invoke-virtual {p2}, Lcom/android/internal/widget/VerifyCredentialResponse;->getTimeout()I
 
     move-result v2
 
-    .line 72
     .local v2, "timeout":I
     invoke-direct {p0, p1}, Lcom/android/server/LeuiLockSettingsServiceHelper;->getPasswordTryTimes(I)I
 
@@ -952,7 +871,6 @@
 
     iput v3, p0, Lcom/android/server/LeuiLockSettingsServiceHelper;->mPasswordTryTimes:I
 
-    .line 73
     iget-object v3, p0, Lcom/android/server/LeuiLockSettingsServiceHelper;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v3, p1}, Lcom/android/internal/widget/LockPatternUtils;->getLockoutAttemptDeadline(I)J
@@ -963,7 +881,6 @@
 
     move-result-object v0
 
-    .line 74
     .local v0, "deadLine":Ljava/lang/Long;
     sget-object v3, Lcom/android/server/LeuiLockSettingsServiceHelper;->TAG:Ljava/lang/String;
 
@@ -1019,12 +936,10 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
     const/4 v3, 0x1
 
     if-ne v1, v3, :cond_1
 
-    .line 78
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v4
@@ -1033,33 +948,27 @@
 
     if-nez v3, :cond_0
 
-    .line 79
     iget v3, p0, Lcom/android/server/LeuiLockSettingsServiceHelper;->mPasswordTryTimes:I
 
     add-int/lit8 v3, v3, 0x1
 
     iput v3, p0, Lcom/android/server/LeuiLockSettingsServiceHelper;->mPasswordTryTimes:I
 
-    .line 98
     :cond_0
     :goto_0
     iget-object v3, p0, Lcom/android/server/LeuiLockSettingsServiceHelper;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v3, p1, v2}, Lcom/android/internal/widget/LockPatternUtils;->setLockoutAttemptDeadline(II)J
 
-    .line 99
     iget v3, p0, Lcom/android/server/LeuiLockSettingsServiceHelper;->mPasswordTryTimes:I
 
     invoke-direct {p0, p1, v3}, Lcom/android/server/LeuiLockSettingsServiceHelper;->setPasswordTryTimes(II)V
 
-    .line 100
     return-object p2
 
-    .line 80
     :cond_1
     if-nez v1, :cond_3
 
-    .line 82
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v4
@@ -1068,7 +977,6 @@
 
     if-lez v3, :cond_2
 
-    .line 83
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v4
@@ -1081,7 +989,6 @@
 
     long-to-int v2, v4
 
-    .line 84
     new-instance p2, Lcom/android/internal/widget/VerifyCredentialResponse;
 
     .end local p2    # "response":Lcom/android/internal/widget/VerifyCredentialResponse;
@@ -1090,7 +997,6 @@
     .restart local p2    # "response":Lcom/android/internal/widget/VerifyCredentialResponse;
     goto :goto_0
 
-    .line 86
     :cond_2
     const/4 v3, 0x0
 
@@ -1098,7 +1004,6 @@
 
     goto :goto_0
 
-    .line 89
     :cond_3
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
@@ -1108,7 +1013,6 @@
 
     if-lez v3, :cond_5
 
-    .line 90
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v4
@@ -1121,7 +1025,6 @@
 
     long-to-int v2, v4
 
-    .line 95
     :goto_1
     if-lez v2, :cond_4
 
@@ -1134,7 +1037,6 @@
     :cond_4
     goto :goto_0
 
-    .line 92
     :cond_5
     iget v3, p0, Lcom/android/server/LeuiLockSettingsServiceHelper;->mPasswordTryTimes:I
 
@@ -1142,7 +1044,6 @@
 
     iput v3, p0, Lcom/android/server/LeuiLockSettingsServiceHelper;->mPasswordTryTimes:I
 
-    .line 93
     iget v3, p0, Lcom/android/server/LeuiLockSettingsServiceHelper;->mPasswordTryTimes:I
 
     invoke-static {v3, v2}, Lcom/android/server/LeuiLockSettingsServiceHelper;->computeRetryTimeout(II)I
@@ -1161,24 +1062,20 @@
     .prologue
     const-wide/16 v8, 0x0
 
-    .line 104
     invoke-virtual {p3}, Lcom/android/internal/widget/VerifyCredentialResponse;->getResponseCode()I
 
     move-result v2
 
-    .line 105
     .local v2, "responseCode":I
     invoke-virtual {p3}, Lcom/android/internal/widget/VerifyCredentialResponse;->getTimeout()I
 
     move-result v3
 
-    .line 106
     .local v3, "timeout":I
     invoke-direct {p0, p2, p1}, Lcom/android/server/LeuiLockSettingsServiceHelper;->getLeuiTryTimes(ILjava/lang/String;)I
 
     move-result v1
 
-    .line 107
     .local v1, "mPasswordTryTimes":I
     iget-object v4, p0, Lcom/android/server/LeuiLockSettingsServiceHelper;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
@@ -1190,7 +1087,6 @@
 
     move-result-object v0
 
-    .line 108
     .local v0, "deadLine":Ljava/lang/Long;
     sget-object v4, Lcom/android/server/LeuiLockSettingsServiceHelper;->TAG:Ljava/lang/String;
 
@@ -1244,12 +1140,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 110
     const/4 v4, 0x1
 
     if-ne v2, v4, :cond_1
 
-    .line 112
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v4
@@ -1258,27 +1152,21 @@
 
     if-nez v4, :cond_0
 
-    .line 113
     add-int/lit8 v1, v1, 0x1
 
-    .line 132
     :cond_0
     :goto_0
     iget-object v4, p0, Lcom/android/server/LeuiLockSettingsServiceHelper;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v4, p2, v3, p1}, Lcom/android/internal/widget/LockPatternUtils;->setLeuiAttemptDeadline(IILjava/lang/String;)J
 
-    .line 133
     invoke-direct {p0, p2, v1, p1}, Lcom/android/server/LeuiLockSettingsServiceHelper;->setLeuiTryTimes(IILjava/lang/String;)V
 
-    .line 134
     return-object p3
 
-    .line 114
     :cond_1
     if-nez v2, :cond_3
 
-    .line 116
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v4
@@ -1287,7 +1175,6 @@
 
     if-lez v4, :cond_2
 
-    .line 117
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v4
@@ -1300,7 +1187,6 @@
 
     long-to-int v3, v4
 
-    .line 118
     new-instance p3, Lcom/android/internal/widget/VerifyCredentialResponse;
 
     .end local p3    # "response":Lcom/android/internal/widget/VerifyCredentialResponse;
@@ -1309,13 +1195,11 @@
     .restart local p3    # "response":Lcom/android/internal/widget/VerifyCredentialResponse;
     goto :goto_0
 
-    .line 120
     :cond_2
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 123
     :cond_3
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
@@ -1325,7 +1209,6 @@
 
     if-lez v4, :cond_5
 
-    .line 124
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v4
@@ -1338,7 +1221,6 @@
 
     long-to-int v3, v4
 
-    .line 129
     :goto_1
     if-lez v3, :cond_4
 
@@ -1351,11 +1233,9 @@
     :cond_4
     goto :goto_0
 
-    .line 126
     :cond_5
     add-int/lit8 v1, v1, 0x1
 
-    .line 127
     invoke-static {v1, v3}, Lcom/android/server/LeuiLockSettingsServiceHelper;->computeRetryTimeout(II)I
 
     move-result v3
@@ -1372,7 +1252,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 49
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1435,7 +1314,6 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 53
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -1448,7 +1326,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 54
     sget-object v1, Lcom/android/internal/widget/LockPatternUtils;->LEUI_PWD_TYPES:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1459,7 +1336,6 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 55
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1542,12 +1418,10 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 53
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 59
     :cond_0
     return-void
 .end method
@@ -1563,7 +1437,6 @@
     .end annotation
 
     .prologue
-    .line 301
     new-instance v0, Ljava/io/File;
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/LeuiLockSettingsServiceHelper;->getLeuiPasswordFilename(ILjava/lang/String;)Ljava/lang/String;
@@ -1604,7 +1477,6 @@
     .end annotation
 
     .prologue
-    .line 296
     new-instance v0, Ljava/io/File;
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/LeuiLockSettingsServiceHelper;->getLeuiPatternFilename(ILjava/lang/String;)Ljava/lang/String;
@@ -1646,12 +1518,10 @@
     .end annotation
 
     .prologue
-    .line 220
     iget-object v0, p0, Lcom/android/server/LeuiLockSettingsServiceHelper;->mLockSettingsServiceCallback:Lcom/android/server/LeuiLockSettingsServiceHelper$LockSettingsServiceCallback;
 
     invoke-interface {v0, p2}, Lcom/android/server/LeuiLockSettingsServiceHelper$LockSettingsServiceCallback;->checkWritePermission(I)V
 
-    .line 221
     invoke-direct {p0, p2, p3}, Lcom/android/server/LeuiLockSettingsServiceHelper;->getLeuiPasswordFilename(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -1664,7 +1534,6 @@
 
     invoke-direct {p0, v0, v1}, Lcom/android/server/LeuiLockSettingsServiceHelper;->writeFile(Ljava/lang/String;[B)V
 
-    .line 223
     return-void
 .end method
 
@@ -1680,12 +1549,10 @@
     .end annotation
 
     .prologue
-    .line 227
     iget-object v1, p0, Lcom/android/server/LeuiLockSettingsServiceHelper;->mLockSettingsServiceCallback:Lcom/android/server/LeuiLockSettingsServiceHelper$LockSettingsServiceCallback;
 
     invoke-interface {v1, p2}, Lcom/android/server/LeuiLockSettingsServiceHelper$LockSettingsServiceCallback;->checkWritePermission(I)V
 
-    .line 228
     invoke-static {p1}, Lcom/android/internal/widget/LockPatternUtils;->stringToPattern(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v1
@@ -1694,7 +1561,6 @@
 
     move-result-object v0
 
-    .line 230
     .local v0, "hash":[B
     invoke-direct {p0, p2, p3}, Lcom/android/server/LeuiLockSettingsServiceHelper;->getLeuiPatternFilename(ILjava/lang/String;)Ljava/lang/String;
 
@@ -1702,6 +1568,5 @@
 
     invoke-direct {p0, v1, v0}, Lcom/android/server/LeuiLockSettingsServiceHelper;->writeFile(Ljava/lang/String;[B)V
 
-    .line 231
     return-void
 .end method

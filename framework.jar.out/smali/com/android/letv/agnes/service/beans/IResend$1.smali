@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 49
     new-instance v0, Lcom/android/letv/agnes/service/beans/IResend;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -66,7 +64,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 46
     invoke-virtual {p0, p1}, Lcom/android/letv/agnes/service/beans/IResend$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/letv/agnes/service/beans/IResend;
 
     move-result-object v0
@@ -79,7 +76,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 54
     new-array v0, p1, [Lcom/android/letv/agnes/service/beans/IResend;
 
     return-object v0
@@ -90,7 +86,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 46
     invoke-virtual {p0, p1}, Lcom/android/letv/agnes/service/beans/IResend$1;->newArray(I)[Lcom/android/letv/agnes/service/beans/IResend;
 
     move-result-object v0

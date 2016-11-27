@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 597
     iput-object p1, p0, Lcom/letv/leui/widget/LeListPopupWindow$ResizePopupRunnable;->this$0:Lcom/letv/leui/widget/LeListPopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/letv/leui/widget/LeListPopupWindow$1;
 
     .prologue
-    .line 597
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/LeListPopupWindow$ResizePopupRunnable;-><init>(Lcom/letv/leui/widget/LeListPopupWindow;)V
 
     return-void
@@ -52,7 +50,6 @@
     .locals 2
 
     .prologue
-    .line 599
     iget-object v0, p0, Lcom/letv/leui/widget/LeListPopupWindow$ResizePopupRunnable;->this$0:Lcom/letv/leui/widget/LeListPopupWindow;
 
     # getter for: Lcom/letv/leui/widget/LeListPopupWindow;->mDropDownResizeOnTouch:Z
@@ -112,19 +109,16 @@
 
     if-gt v0, v1, :cond_0
 
-    .line 602
     iget-object v0, p0, Lcom/letv/leui/widget/LeListPopupWindow$ResizePopupRunnable;->this$0:Lcom/letv/leui/widget/LeListPopupWindow;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/widget/LeListPopupWindow;->setInputMethodMode(I)V
 
-    .line 603
     iget-object v0, p0, Lcom/letv/leui/widget/LeListPopupWindow$ResizePopupRunnable;->this$0:Lcom/letv/leui/widget/LeListPopupWindow;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/LeListPopupWindow;->show()V
 
-    .line 605
     :cond_0
     return-void
 .end method

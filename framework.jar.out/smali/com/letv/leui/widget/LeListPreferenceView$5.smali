@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 573
     iput-object p1, p0, Lcom/letv/leui/widget/LeListPreferenceView$5;->this$0:Lcom/letv/leui/widget/LeListPreferenceView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 587
     return-void
 .end method
 
@@ -50,14 +48,12 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 581
     iget-object v0, p0, Lcom/letv/leui/widget/LeListPreferenceView$5;->this$0:Lcom/letv/leui/widget/LeListPreferenceView;
 
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Lcom/letv/leui/widget/LeListPreferenceView;->isAnimate:Z
 
-    .line 582
     return-void
 .end method
 
@@ -66,7 +62,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 592
     return-void
 .end method
 
@@ -75,13 +70,11 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 576
     iget-object v0, p0, Lcom/letv/leui/widget/LeListPreferenceView$5;->this$0:Lcom/letv/leui/widget/LeListPreferenceView;
 
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcom/letv/leui/widget/LeListPreferenceView;->isAnimate:Z
 
-    .line 577
     return-void
 .end method

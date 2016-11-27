@@ -35,10 +35,8 @@
     .locals 2
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 12
     new-instance v0, Ljava/util/ArrayList;
 
     const/16 v1, 0xf
@@ -47,12 +45,10 @@
 
     iput-object v0, p0, Lcom/android/server/am/ActivityStackListener;->mTaskHistorys:Ljava/util/ArrayList;
 
-    .line 13
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/am/ActivityStackListener;->mRun:Z
 
-    .line 32
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/android/server/am/ActivityStackListener$DumpHistoryThread;
@@ -63,7 +59,6 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 33
     return-void
 .end method
 
@@ -72,7 +67,6 @@
     .param p0, "x0"    # Lcom/android/server/am/ActivityStackListener;
 
     .prologue
-    .line 10
     iget-boolean v0, p0, Lcom/android/server/am/ActivityStackListener;->mRun:Z
 
     return v0
@@ -84,12 +78,10 @@
     .locals 1
 
     .prologue
-    .line 39
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/am/ActivityStackListener;->mRun:Z
 
-    .line 40
     return-void
 .end method
 
@@ -97,7 +89,6 @@
     .locals 10
 
     .prologue
-    .line 46
     monitor-enter p0
 
     :goto_0
@@ -112,7 +103,6 @@
 
     if-nez v7, :cond_0
 
-    .line 48
     :try_start_1
     invoke-virtual {p0}, Ljava/lang/Object;->wait()V
     :try_end_1
@@ -121,11 +111,9 @@
 
     goto :goto_0
 
-    .line 49
     :catch_0
     move-exception v2
 
-    .line 50
     .local v2, "e":Ljava/lang/InterruptedException;
     :try_start_2
     invoke-virtual {v2}, Ljava/lang/InterruptedException;->printStackTrace()V
@@ -134,7 +122,6 @@
 
     goto :goto_0
 
-    .line 46
     .end local v2    # "e":Ljava/lang/InterruptedException;
     :catchall_0
     move-exception v7
@@ -143,7 +130,6 @@
 
     throw v7
 
-    .line 53
     :cond_0
     :try_start_3
     const-string v7, "ActivityStackListener"
@@ -152,7 +138,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 54
     iget-object v7, p0, Lcom/android/server/am/ActivityStackListener;->mTaskHistorys:Ljava/util/ArrayList;
 
     const/4 v8, 0x0
@@ -163,7 +148,6 @@
 
     check-cast v4, Ljava/util/ArrayList;
 
-    .line 55
     .local v4, "mTaskHistory":Ljava/util/ArrayList;
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
@@ -175,18 +159,15 @@
     :goto_1
     if-ltz v6, :cond_2
 
-    .line 56
     invoke-virtual {v4, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Lcom/android/server/am/TaskRecord;
 
-    .line 57
     .local v5, "task":Lcom/android/server/am/TaskRecord;
     iget-object v0, v5, Lcom/android/server/am/TaskRecord;->mActivities:Ljava/util/ArrayList;
 
-    .line 58
     .local v0, "activities":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/am/ActivityRecord;>;"
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -198,14 +179,12 @@
     :goto_2
     if-ltz v3, :cond_1
 
-    .line 59
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/server/am/ActivityRecord;
 
-    .line 60
     .local v1, "ar":Lcom/android/server/am/ActivityRecord;
     const-string v7, "ActivityStackListener"
 
@@ -231,7 +210,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 61
     const-string v7, "ActivityStackListener"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -256,7 +234,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 62
     const-string v7, "ActivityStackListener"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -281,7 +258,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 63
     const-string v7, "ActivityStackListener"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -306,7 +282,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 64
     const-string v7, "ActivityStackListener"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -331,7 +306,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 65
     const-string v7, "ActivityStackListener"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -356,7 +330,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 66
     const-string v7, "ActivityStackListener"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -381,7 +354,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 67
     const-string v7, "ActivityStackListener"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -406,7 +378,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 68
     const-string v7, "ActivityStackListener"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -431,7 +402,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 69
     const-string v7, "ActivityStackListener"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -456,7 +426,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 70
     const-string v7, "ActivityStackListener"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -481,19 +450,16 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 58
     add-int/lit8 v3, v3, -0x1
 
     goto/16 :goto_2
 
-    .line 55
     .end local v1    # "ar":Lcom/android/server/am/ActivityRecord;
     :cond_1
     add-int/lit8 v6, v6, -0x1
 
     goto/16 :goto_1
 
-    .line 73
     .end local v0    # "activities":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/am/ActivityRecord;>;"
     .end local v3    # "i":I
     .end local v5    # "task":Lcom/android/server/am/TaskRecord;
@@ -504,7 +470,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 74
     iget-object v7, p0, Lcom/android/server/am/ActivityStackListener;->mTaskHistorys:Ljava/util/ArrayList;
 
     const/4 v8, 0x0
@@ -513,7 +478,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 75
     monitor-exit p0
 
     return-void
@@ -524,7 +488,6 @@
     .param p1, "mTaskHistory"    # Ljava/util/ArrayList;
 
     .prologue
-    .line 83
     monitor-enter p0
 
     :try_start_0
@@ -532,7 +495,6 @@
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 84
     iget-object v0, p0, Lcom/android/server/am/ActivityStackListener;->mTaskHistorys:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -543,18 +505,15 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 85
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 87
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 83
     :catchall_0
     move-exception v0
 

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 800
     iput-object p1, p0, Lcom/letv/leui/widget/LcSearchView$4;->this$0:Lcom/letv/leui/widget/LcSearchView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "s"    # Landroid/text/Editable;
 
     .prologue
-    .line 819
     iget-object v0, p0, Lcom/letv/leui/widget/LcSearchView$4;->this$0:Lcom/letv/leui/widget/LcSearchView;
 
     # getter for: Lcom/letv/leui/widget/LcSearchView;->mTextChangerListener:Landroid/text/TextWatcher;
@@ -51,7 +49,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 820
     iget-object v0, p0, Lcom/letv/leui/widget/LcSearchView$4;->this$0:Lcom/letv/leui/widget/LcSearchView;
 
     # getter for: Lcom/letv/leui/widget/LcSearchView;->mTextChangerListener:Landroid/text/TextWatcher;
@@ -61,7 +58,6 @@
 
     invoke-interface {v0, p1}, Landroid/text/TextWatcher;->afterTextChanged(Landroid/text/Editable;)V
 
-    .line 822
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/LcSearchView$4;->this$0:Lcom/letv/leui/widget/LcSearchView;
 
@@ -72,7 +68,6 @@
 
     if-nez v0, :cond_1
 
-    .line 823
     iget-object v0, p0, Lcom/letv/leui/widget/LcSearchView$4;->this$0:Lcom/letv/leui/widget/LcSearchView;
 
     iget-object v1, p0, Lcom/letv/leui/widget/LcSearchView$4;->this$0:Lcom/letv/leui/widget/LcSearchView;
@@ -84,7 +79,6 @@
     # invokes: Lcom/letv/leui/widget/LcSearchView;->setPadding(Z)V
     invoke-static {v0, v1}, Lcom/letv/leui/widget/LcSearchView;->access$600(Lcom/letv/leui/widget/LcSearchView;Z)V
 
-    .line 825
     :cond_1
     iget-object v0, p0, Lcom/letv/leui/widget/LcSearchView$4;->this$0:Lcom/letv/leui/widget/LcSearchView;
 
@@ -115,7 +109,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/letv/leui/widget/LcSearchView;->invalidate(IIII)V
 
-    .line 826
     return-void
 .end method
 
@@ -127,7 +120,6 @@
     .param p4, "after"    # I
 
     .prologue
-    .line 804
     iget-object v0, p0, Lcom/letv/leui/widget/LcSearchView$4;->this$0:Lcom/letv/leui/widget/LcSearchView;
 
     # getter for: Lcom/letv/leui/widget/LcSearchView;->mTextChangerListener:Landroid/text/TextWatcher;
@@ -137,7 +129,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 805
     iget-object v0, p0, Lcom/letv/leui/widget/LcSearchView$4;->this$0:Lcom/letv/leui/widget/LcSearchView;
 
     # getter for: Lcom/letv/leui/widget/LcSearchView;->mTextChangerListener:Landroid/text/TextWatcher;
@@ -147,7 +138,6 @@
 
     invoke-interface {v0, p1, p2, p3, p4}, Landroid/text/TextWatcher;->beforeTextChanged(Ljava/lang/CharSequence;III)V
 
-    .line 807
     :cond_0
     return-void
 .end method
@@ -160,13 +150,11 @@
     .param p4, "after"    # I
 
     .prologue
-    .line 811
     iget-object v0, p0, Lcom/letv/leui/widget/LcSearchView$4;->this$0:Lcom/letv/leui/widget/LcSearchView;
 
     # invokes: Lcom/letv/leui/widget/LcSearchView;->onTextChanged(Ljava/lang/CharSequence;)V
     invoke-static {v0, p1}, Lcom/letv/leui/widget/LcSearchView;->access$400(Lcom/letv/leui/widget/LcSearchView;Ljava/lang/CharSequence;)V
 
-    .line 813
     iget-object v0, p0, Lcom/letv/leui/widget/LcSearchView$4;->this$0:Lcom/letv/leui/widget/LcSearchView;
 
     # getter for: Lcom/letv/leui/widget/LcSearchView;->mTextChangerListener:Landroid/text/TextWatcher;
@@ -176,7 +164,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 814
     iget-object v0, p0, Lcom/letv/leui/widget/LcSearchView$4;->this$0:Lcom/letv/leui/widget/LcSearchView;
 
     # getter for: Lcom/letv/leui/widget/LcSearchView;->mTextChangerListener:Landroid/text/TextWatcher;
@@ -186,7 +173,6 @@
 
     invoke-interface {v0, p1, p2, p3, p4}, Landroid/text/TextWatcher;->onTextChanged(Ljava/lang/CharSequence;III)V
 
-    .line 816
     :cond_0
     return-void
 .end method

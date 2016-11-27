@@ -23,7 +23,6 @@
     .locals 2
 
     .prologue
-    .line 39
     new-instance v0, Lcom/letv/tracker/agnes/Agnes;
 
     const/4 v1, 0x0
@@ -39,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,7 +47,6 @@
     .locals 1
 
     .prologue
-    .line 35
     sget-object v0, Lcom/letv/tracker/agnes/Agnes$SingletonHolder;->INSTANCE:Lcom/letv/tracker/agnes/Agnes;
 
     return-object v0

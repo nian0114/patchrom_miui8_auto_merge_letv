@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1899
     iput-object p1, p0, Lcom/letv/leui/widget/DragSortHelper$2;->this$0:Lcom/letv/leui/widget/DragSortHelper;
 
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
@@ -35,7 +34,6 @@
     .locals 2
 
     .prologue
-    .line 1901
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortHelper$2;->this$0:Lcom/letv/leui/widget/DragSortHelper;
 
     # getter for: Lcom/letv/leui/widget/DragSortHelper;->mDragState:I
@@ -47,12 +45,10 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 1902
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortHelper$2;->this$0:Lcom/letv/leui/widget/DragSortHelper;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/DragSortHelper;->cancelDrag()V
 
-    .line 1904
     :cond_0
     return-void
 .end method
@@ -63,10 +59,8 @@
     .locals 0
 
     .prologue
-    .line 1908
     invoke-direct {p0}, Lcom/letv/leui/widget/DragSortHelper$2;->cancel()V
 
-    .line 1909
     return-void
 .end method
 
@@ -74,9 +68,7 @@
     .locals 0
 
     .prologue
-    .line 1913
     invoke-direct {p0}, Lcom/letv/leui/widget/DragSortHelper$2;->cancel()V
 
-    .line 1914
     return-void
 .end method

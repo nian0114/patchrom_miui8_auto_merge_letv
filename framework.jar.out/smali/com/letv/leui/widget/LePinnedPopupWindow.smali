@@ -94,7 +94,6 @@
     .locals 3
 
     .prologue
-    .line 40
     const/4 v0, 0x1
 
     new-array v0, v0, [I
@@ -125,49 +124,40 @@
 
     const/4 v3, 0x1
 
-    .line 64
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/letv/leui/widget/LeBasePopupWindow;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 44
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mDividerCache:Ljava/util/ArrayList;
 
-    .line 45
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mCacheViews:Ljava/util/ArrayList;
 
-    .line 47
     const/16 v1, 0x11
 
     iput v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mPopupItemGravity:I
 
-    .line 50
     const/high16 v1, -0x40800000    # -1.0f
 
     iput v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mItemTextSize:F
 
-    .line 184
     const/4 v1, 0x2
 
     new-array v1, v1, [I
 
     iput-object v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mScreenLocation:[I
 
-    .line 65
     iput-boolean p5, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mLayoutHorizontal:Z
 
-    .line 67
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 68
     .local v0, "res":Landroid/content/res/Resources;
     const v1, 0x1050166
 
@@ -177,7 +167,6 @@
 
     iput v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mItemHeight:I
 
-    .line 69
     const v1, 0x1050164
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -186,7 +175,6 @@
 
     iput v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mLayoutPadding:I
 
-    .line 70
     const v1, 0x105016b
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -195,7 +183,6 @@
 
     iput v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mItemVerticalMinWidth:I
 
-    .line 71
     const v1, 0x10601a1
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColorStateList(I)Landroid/content/res/ColorStateList;
@@ -204,7 +191,6 @@
 
     iput-object v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mItemTextColorList:Landroid/content/res/ColorStateList;
 
-    .line 73
     iget-object v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mContext:Landroid/content/Context;
 
     const-string v2, "layout_inflater"
@@ -217,29 +203,24 @@
 
     iput-object v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 75
     new-instance v1, Landroid/view/ViewGroup$LayoutParams;
 
     invoke-direct {v1, v3, v5}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
     iput-object v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mDividerParamsHorizontal:Landroid/view/ViewGroup$LayoutParams;
 
-    .line 76
     new-instance v1, Landroid/view/ViewGroup$LayoutParams;
 
     invoke-direct {v1, v5, v3}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
     iput-object v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mDividerParamsVertical:Landroid/view/ViewGroup$LayoutParams;
 
-    .line 77
     invoke-virtual {p0, v3}, Lcom/letv/leui/widget/LePinnedPopupWindow;->setClippingEnabled(Z)V
 
-    .line 79
     const/16 v1, 0x3ea
 
     invoke-static {p0, v1}, Lcom/letv/leui/widget/LeBasePopupWindow;->setWindowLayoutType(Landroid/widget/PopupWindow;I)V
 
-    .line 82
     new-instance v1, Landroid/graphics/drawable/ColorDrawable;
 
     const v2, 0x106000d
@@ -248,23 +229,18 @@
 
     invoke-virtual {p0, v1}, Lcom/letv/leui/widget/LePinnedPopupWindow;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 84
     invoke-virtual {p0, v4}, Lcom/letv/leui/widget/LePinnedPopupWindow;->setWidth(I)V
 
-    .line 85
     invoke-virtual {p0, v4}, Lcom/letv/leui/widget/LePinnedPopupWindow;->setHeight(I)V
 
-    .line 87
     invoke-virtual {p0}, Lcom/letv/leui/widget/LePinnedPopupWindow;->initPopupDrawable()V
 
-    .line 88
     invoke-virtual {p0, p1}, Lcom/letv/leui/widget/LePinnedPopupWindow;->getContainView(Landroid/content/Context;)Landroid/view/ViewGroup;
 
     move-result-object v1
 
     invoke-virtual {p0, v1}, Lcom/letv/leui/widget/LePinnedPopupWindow;->setContainView(Landroid/view/View;)V
 
-    .line 89
     return-void
 .end method
 
@@ -274,7 +250,6 @@
     .param p2, "isLayoutHorizontal"    # Z
 
     .prologue
-    .line 60
     const/4 v2, 0x0
 
     const v3, 0x10102c8
@@ -289,7 +264,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/letv/leui/widget/LePinnedPopupWindow;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IIZ)V
 
-    .line 61
     return-void
 .end method
 
@@ -299,12 +273,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 430
     invoke-direct {p0}, Lcom/letv/leui/widget/LePinnedPopupWindow;->getCacheDivider()Landroid/widget/ImageView;
 
     move-result-object v0
 
-    .line 431
     .local v0, "divider":Landroid/widget/ImageView;
     iget-boolean v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mLayoutHorizontal:Z
 
@@ -315,7 +287,6 @@
     :goto_0
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 432
     iget-boolean v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mLayoutHorizontal:Z
 
     if-eqz v1, :cond_2
@@ -346,21 +317,17 @@
     :cond_0
     invoke-virtual {v0, v1, v3, v4, v2}, Landroid/widget/ImageView;->setPadding(IIII)V
 
-    .line 438
     iget-object v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
     invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    .line 439
     return-object v0
 
-    .line 431
     :cond_1
     iget-object v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mDividerParamsVertical:Landroid/view/ViewGroup$LayoutParams;
 
     goto :goto_0
 
-    .line 432
     :cond_2
     iget v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mLayoutPadding:I
 
@@ -381,10 +348,8 @@
     .locals 4
 
     .prologue
-    .line 466
     const/4 v0, 0x0
 
-    .line 467
     .local v0, "imageView":Landroid/widget/ImageView;
     iget-object v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mDividerCache:Ljava/util/ArrayList;
 
@@ -394,7 +359,6 @@
 
     if-lez v1, :cond_0
 
-    .line 468
     iget-object v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mDividerCache:Ljava/util/ArrayList;
 
     iget-object v2, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mDividerCache:Ljava/util/ArrayList;
@@ -418,12 +382,10 @@
     .end local v0    # "imageView":Landroid/widget/ImageView;
     check-cast v0, Landroid/widget/ImageView;
 
-    .line 471
     .restart local v0    # "imageView":Landroid/widget/ImageView;
     :cond_0
     if-nez v0, :cond_1
 
-    .line 472
     iget-object v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mInflater:Landroid/view/LayoutInflater;
 
     const v2, 0x10900e8
@@ -437,7 +399,6 @@
     .end local v0    # "imageView":Landroid/widget/ImageView;
     check-cast v0, Landroid/widget/ImageView;
 
-    .line 475
     .restart local v0    # "imageView":Landroid/widget/ImageView;
     :cond_1
     return-object v0
@@ -448,7 +409,6 @@
     .param p1, "view"    # Landroid/widget/ImageView;
 
     .prologue
-    .line 479
     iget-object v0, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mDividerCache:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -459,7 +419,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 480
     iget-object v0, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mDividerCache:Ljava/util/ArrayList;
 
     new-instance v1, Ljava/lang/ref/SoftReference;
@@ -468,7 +427,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 482
     :cond_0
     return-void
 .end method
@@ -478,7 +436,6 @@
     .param p1, "view"    # Landroid/widget/TextView;
 
     .prologue
-    .line 460
     iget-object v0, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mCacheViews:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -489,7 +446,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 461
     iget-object v0, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mCacheViews:Ljava/util/ArrayList;
 
     new-instance v1, Ljava/lang/ref/SoftReference;
@@ -498,7 +454,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 463
     :cond_0
     return-void
 .end method
@@ -510,10 +465,8 @@
     .param p3, "onItemClickListener"    # Lcom/letv/leui/widget/LePinnedPopupWindow$OnItemClickListener;
 
     .prologue
-    .line 501
     const/4 v0, 0x0
 
-    .line 502
     .local v0, "holder":Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;
     invoke-virtual {p1}, Landroid/widget/TextView;->getTag()Ljava/lang/Object;
 
@@ -523,7 +476,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 503
     invoke-virtual {p1}, Landroid/widget/TextView;->getTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -531,21 +483,16 @@
     .end local v0    # "holder":Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;
     check-cast v0, Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;
 
-    .line 509
     .restart local v0    # "holder":Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;
     :goto_0
     iput p2, v0, Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;->itemId:I
 
-    .line 510
     iput-object p3, v0, Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;->listener:Lcom/letv/leui/widget/LePinnedPopupWindow$OnItemClickListener;
 
-    .line 512
     invoke-virtual {p1, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 513
     return-void
 
-    .line 505
     :cond_0
     new-instance v0, Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;
 
@@ -554,7 +501,6 @@
 
     invoke-direct {v0, v1}, Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;-><init>(Lcom/letv/leui/widget/LePinnedPopupWindow$1;)V
 
-    .line 506
     .restart local v0    # "holder":Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
@@ -566,7 +512,6 @@
     .param p1, "isOnAnchorTop"    # Z
 
     .prologue
-    .line 157
     iget-object v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
     if-eqz p1, :cond_0
@@ -576,25 +521,20 @@
     :goto_0
     invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 161
     if-eqz p1, :cond_1
 
-    .line 162
     iget-object v0, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mAboveAnchorBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
     iput-object v0, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mCurrentBgDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 166
     :goto_1
     return-void
 
-    .line 157
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mBelowAnchorBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
     goto :goto_0
 
-    .line 164
     :cond_1
     iget-object v0, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mBelowAnchorBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -611,27 +551,22 @@
     .param p4, "layoutHorizontal"    # Z
 
     .prologue
-    .line 394
     if-nez p2, :cond_0
 
     const/4 v0, 0x1
 
     if-ne p3, v0, :cond_0
 
-    .line 395
     const v0, 0x10805fb
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
-    .line 407
     :goto_0
     return-void
 
-    .line 396
     :cond_0
     if-nez p2, :cond_2
 
-    .line 397
     if-eqz p4, :cond_1
 
     const v0, 0x10805f7
@@ -646,13 +581,11 @@
 
     goto :goto_1
 
-    .line 400
     :cond_2
     add-int/lit8 v0, p3, -0x1
 
     if-ne p2, v0, :cond_4
 
-    .line 401
     if-eqz p4, :cond_3
 
     const v0, 0x10805f9
@@ -667,7 +600,6 @@
 
     goto :goto_2
 
-    .line 405
     :cond_4
     const v0, 0x10805f5
 
@@ -684,7 +616,6 @@
     .param p2, "onClickListener"    # Landroid/view/View$OnClickListener;
 
     .prologue
-    .line 231
     iget-object v0, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -706,7 +637,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 242
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -723,11 +653,9 @@
 
     move-result-object v6
 
-    .line 243
     .local v6, "textView":Landroid/widget/TextView;
     invoke-virtual {v6, p2}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 244
     return-object p0
 .end method
 
@@ -738,10 +666,8 @@
     .param p3, "onClickListener"    # Lcom/letv/leui/widget/LePinnedPopupWindow$OnItemClickListener;
 
     .prologue
-    .line 259
     invoke-virtual {p0, p2}, Lcom/letv/leui/widget/LePinnedPopupWindow;->setPopupItemGravity(I)V
 
-    .line 260
     iget-object v0, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -765,7 +691,6 @@
     .param p2, "onClickListener"    # Lcom/letv/leui/widget/LePinnedPopupWindow$OnItemClickListener;
 
     .prologue
-    .line 255
     iget-object v0, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -790,7 +715,6 @@
     .param p3, "onClickListener"    # Lcom/letv/leui/widget/LePinnedPopupWindow$OnItemClickListener;
 
     .prologue
-    .line 304
     iget-object v0, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -815,18 +739,14 @@
     .param p3, "onClickListener"    # Lcom/letv/leui/widget/LePinnedPopupWindow$OnItemClickListener;
 
     .prologue
-    .line 317
     const/4 v7, 0x0
 
-    .line 318
     .local v7, "dividerOnTop":Landroid/widget/ImageView;
     const/4 v6, 0x0
 
-    .line 319
     .local v6, "dividerOnBottom":Landroid/widget/ImageView;
     const/4 v8, 0x0
 
-    .line 320
     .local v8, "holder":Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;
     const/4 v3, 0x0
 
@@ -836,7 +756,6 @@
 
     if-ge v3, v0, :cond_2
 
-    .line 321
     aget-object v1, p1, v3
 
     aget v2, p2, v3
@@ -851,7 +770,6 @@
 
     move-result-object v9
 
-    .line 323
     .local v9, "textView":Landroid/widget/TextView;
     array-length v0, p1
 
@@ -859,12 +777,10 @@
 
     if-ge v3, v0, :cond_0
 
-    .line 324
     invoke-direct {p0}, Lcom/letv/leui/widget/LePinnedPopupWindow;->addDivider()Landroid/widget/ImageView;
 
     move-result-object v6
 
-    .line 329
     :goto_1
     invoke-virtual {v9}, Landroid/widget/TextView;->getTag()Ljava/lang/Object;
 
@@ -874,7 +790,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 330
     invoke-virtual {v9}, Landroid/widget/TextView;->getTag()Ljava/lang/Object;
 
     move-result-object v8
@@ -882,26 +797,21 @@
     .end local v8    # "holder":Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;
     check-cast v8, Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;
 
-    .line 334
     .restart local v8    # "holder":Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;
     :goto_2
     invoke-virtual {v8, v7, v6}, Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;->addDivider(Landroid/widget/ImageView;Landroid/widget/ImageView;)V
 
-    .line 335
     move-object v7, v6
 
-    .line 320
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 326
     :cond_0
     const/4 v6, 0x0
 
     goto :goto_1
 
-    .line 332
     :cond_1
     new-instance v8, Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;
 
@@ -913,7 +823,6 @@
     .restart local v8    # "holder":Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;
     goto :goto_2
 
-    .line 337
     .end local v9    # "textView":Landroid/widget/TextView;
     :cond_2
     return-object p0
@@ -925,18 +834,14 @@
     .param p2, "onClickListener"    # Lcom/letv/leui/widget/LePinnedPopupWindow$OnItemClickListener;
 
     .prologue
-    .line 271
     const/4 v7, 0x0
 
-    .line 272
     .local v7, "dividerOnTop":Landroid/widget/ImageView;
     const/4 v6, 0x0
 
-    .line 273
     .local v6, "dividerOnBottom":Landroid/widget/ImageView;
     const/4 v8, 0x0
 
-    .line 274
     .local v8, "holder":Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;
     const/4 v2, 0x0
 
@@ -946,7 +851,6 @@
 
     if-ge v2, v0, :cond_2
 
-    .line 275
     aget-object v1, p1, v2
 
     array-length v4, p1
@@ -961,7 +865,6 @@
 
     move-result-object v9
 
-    .line 276
     .local v9, "textView":Landroid/widget/TextView;
     array-length v0, p1
 
@@ -969,12 +872,10 @@
 
     if-ge v2, v0, :cond_0
 
-    .line 277
     invoke-direct {p0}, Lcom/letv/leui/widget/LePinnedPopupWindow;->addDivider()Landroid/widget/ImageView;
 
     move-result-object v6
 
-    .line 282
     :goto_1
     invoke-virtual {v9}, Landroid/widget/TextView;->getTag()Ljava/lang/Object;
 
@@ -984,7 +885,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 283
     invoke-virtual {v9}, Landroid/widget/TextView;->getTag()Ljava/lang/Object;
 
     move-result-object v8
@@ -992,26 +892,21 @@
     .end local v8    # "holder":Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;
     check-cast v8, Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;
 
-    .line 287
     .restart local v8    # "holder":Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;
     :goto_2
     invoke-virtual {v8, v7, v6}, Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;->addDivider(Landroid/widget/ImageView;Landroid/widget/ImageView;)V
 
-    .line 288
     move-object v7, v6
 
-    .line 274
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 279
     :cond_0
     const/4 v6, 0x0
 
     goto :goto_1
 
-    .line 285
     :cond_1
     new-instance v8, Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;
 
@@ -1023,7 +918,6 @@
     .restart local v8    # "holder":Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;
     goto :goto_2
 
-    .line 290
     .end local v9    # "textView":Landroid/widget/TextView;
     :cond_2
     return-object p0
@@ -1038,39 +932,32 @@
     .param p5, "listener"    # Lcom/letv/leui/widget/LePinnedPopupWindow$OnItemClickListener;
 
     .prologue
-    .line 410
     invoke-virtual {p0}, Lcom/letv/leui/widget/LePinnedPopupWindow;->getCacheView()Landroid/widget/TextView;
 
     move-result-object v0
 
-    .line 411
     .local v0, "textView":Landroid/widget/TextView;
     iget-boolean v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mLayoutHorizontal:Z
 
     if-nez v1, :cond_0
 
-    .line 412
     iget v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mItemVerticalMinWidth:I
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setMinWidth(I)V
 
-    .line 414
     :cond_0
     iget v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mItemHeight:I
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setHeight(I)V
 
-    .line 415
     iget-object v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mItemTextColorList:Landroid/content/res/ColorStateList;
 
     if-eqz v1, :cond_1
 
-    .line 416
     iget-object v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mItemTextColorList:Landroid/content/res/ColorStateList;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(Landroid/content/res/ColorStateList;)V
 
-    .line 417
     :cond_1
     iget v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mItemTextSize:F
 
@@ -1080,42 +967,33 @@
 
     if-lez v1, :cond_2
 
-    .line 418
     const/4 v1, 0x0
 
     iget v2, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mItemTextSize:F
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 419
     :cond_2
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 420
     iget v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mPopupItemGravity:I
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 421
     iget-boolean v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mLayoutHorizontal:Z
 
     invoke-direct {p0, v0, p3, p4, v1}, Lcom/letv/leui/widget/LePinnedPopupWindow;->setTextViewSelector(Landroid/widget/TextView;IIZ)V
 
-    .line 422
     invoke-direct {p0, v0, p2, p5}, Lcom/letv/leui/widget/LePinnedPopupWindow;->setItemClickListener(Landroid/widget/TextView;ILcom/letv/leui/widget/LePinnedPopupWindow$OnItemClickListener;)V
 
-    .line 423
     invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 424
     invoke-virtual {v0, p2}, Landroid/widget/TextView;->setId(I)V
 
-    .line 425
     iget-object v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
     invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    .line 426
     return-object v0
 .end method
 
@@ -1125,13 +1003,10 @@
     .param p2, "onItemClickListener"    # Lcom/letv/leui/widget/LePinnedPopupWindow$OnItemClickListener;
 
     .prologue
-    .line 342
     invoke-virtual {p0}, Lcom/letv/leui/widget/LePinnedPopupWindow;->removeAllChildViews()V
 
-    .line 343
     invoke-virtual {p0, p1, p2}, Lcom/letv/leui/widget/LePinnedPopupWindow;->addItems([Ljava/lang/String;Lcom/letv/leui/widget/LePinnedPopupWindow$OnItemClickListener;)Lcom/letv/leui/widget/LePinnedPopupWindow;
 
-    .line 344
     return-object p0
 .end method
 
@@ -1142,13 +1017,10 @@
     .param p3, "onItemClickListener"    # Lcom/letv/leui/widget/LePinnedPopupWindow$OnItemClickListener;
 
     .prologue
-    .line 349
     invoke-virtual {p0}, Lcom/letv/leui/widget/LePinnedPopupWindow;->removeAllChildViews()V
 
-    .line 350
     invoke-virtual {p0, p1, p2, p3}, Lcom/letv/leui/widget/LePinnedPopupWindow;->addItems([Ljava/lang/CharSequence;[ILcom/letv/leui/widget/LePinnedPopupWindow$OnItemClickListener;)Lcom/letv/leui/widget/LePinnedPopupWindow;
 
-    .line 351
     return-object p0
 .end method
 
@@ -1156,7 +1028,6 @@
     .locals 1
 
     .prologue
-    .line 149
     const/4 v0, 0x0
 
     return v0
@@ -1166,10 +1037,8 @@
     .locals 4
 
     .prologue
-    .line 443
     const/4 v0, 0x0
 
-    .line 444
     .local v0, "textView":Landroid/widget/TextView;
     iget-object v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mCacheViews:Ljava/util/ArrayList;
 
@@ -1179,7 +1048,6 @@
 
     if-lez v1, :cond_0
 
-    .line 445
     iget-object v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mCacheViews:Ljava/util/ArrayList;
 
     iget-object v2, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mCacheViews:Ljava/util/ArrayList;
@@ -1203,12 +1071,10 @@
     .end local v0    # "textView":Landroid/widget/TextView;
     check-cast v0, Landroid/widget/TextView;
 
-    .line 448
     .restart local v0    # "textView":Landroid/widget/TextView;
     :cond_0
     if-nez v0, :cond_1
 
-    .line 449
     iget-object v1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mInflater:Landroid/view/LayoutInflater;
 
     invoke-virtual {p0}, Lcom/letv/leui/widget/LePinnedPopupWindow;->getPopupItemLayoutResId()I
@@ -1224,7 +1090,6 @@
     .end local v0    # "textView":Landroid/widget/TextView;
     check-cast v0, Landroid/widget/TextView;
 
-    .line 452
     .restart local v0    # "textView":Landroid/widget/TextView;
     :cond_1
     return-object v0
@@ -1239,23 +1104,19 @@
 
     const/4 v5, -0x2
 
-    .line 92
     iget-object v3, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
     if-nez v3, :cond_0
 
-    .line 93
     invoke-virtual {p0}, Lcom/letv/leui/widget/LePinnedPopupWindow;->isLayoutHorizontal()Z
 
     move-result v1
 
-    .line 94
     .local v1, "isHorizontal":Z
     new-instance v2, Landroid/widget/LinearLayout;
 
     invoke-direct {v2, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    .line 95
     .local v2, "linearLayout":Landroid/widget/LinearLayout;
     if-eqz v1, :cond_1
 
@@ -1264,22 +1125,17 @@
     :goto_0
     invoke-virtual {v2, v3}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 96
     new-instance v0, Landroid/view/ViewGroup$LayoutParams;
 
     invoke-direct {v0, v5, v5}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    .line 98
     .local v0, "contentParams":Landroid/view/ViewGroup$LayoutParams;
     invoke-virtual {v2, v0}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 101
     iput-object v2, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
-    .line 102
     invoke-direct {p0, v4}, Lcom/letv/leui/widget/LePinnedPopupWindow;->setPopupBackground(Z)V
 
-    .line 104
     .end local v0    # "contentParams":Landroid/view/ViewGroup$LayoutParams;
     .end local v1    # "isHorizontal":Z
     .end local v2    # "linearLayout":Landroid/widget/LinearLayout;
@@ -1293,7 +1149,6 @@
     :cond_1
     move v3, v4
 
-    .line 95
     goto :goto_0
 .end method
 
@@ -1304,18 +1159,15 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 116
     iget-object v2, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
     if-nez v2, :cond_0
 
     move-object v0, v1
 
-    .line 124
     :goto_0
     return-object v0
 
-    .line 119
     :cond_0
     iget-object v2, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
@@ -1323,13 +1175,11 @@
 
     move-result-object v0
 
-    .line 120
     .local v0, "childView":Landroid/view/View;
     instance-of v2, v0, Landroid/widget/TextView;
 
     if-eqz v2, :cond_1
 
-    .line 121
     check-cast v0, Landroid/widget/TextView;
 
     goto :goto_0
@@ -1337,7 +1187,6 @@
     :cond_1
     move-object v0, v1
 
-    .line 124
     goto :goto_0
 .end method
 
@@ -1345,7 +1194,6 @@
     .locals 1
 
     .prologue
-    .line 456
     const v0, 0x10900e9
 
     return v0
@@ -1359,12 +1207,10 @@
 
     const/high16 v2, 0x41000000    # 8.0f
 
-    .line 178
     iget-object v0, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mAboveAnchorBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
     if-nez v0, :cond_0
 
-    .line 179
     new-instance v0, Lcom/letv/leui/widget/LePopupDrawable;
 
     const/4 v1, 0x0
@@ -1373,13 +1219,11 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mAboveAnchorBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 180
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mBelowAnchorBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
     if-nez v0, :cond_1
 
-    .line 181
     new-instance v0, Lcom/letv/leui/widget/LePopupDrawable;
 
     const/4 v1, 0x1
@@ -1388,7 +1232,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mBelowAnchorBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 182
     :cond_1
     return-void
 .end method
@@ -1397,7 +1240,6 @@
     .locals 1
 
     .prologue
-    .line 128
     iget-boolean v0, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mLayoutHorizontal:Z
 
     return v0
@@ -1408,27 +1250,23 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 517
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;
 
-    .line 518
     .local v0, "holder":Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;
     iget-object v1, v0, Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;->listener:Lcom/letv/leui/widget/LePinnedPopupWindow$OnItemClickListener;
 
     if-eqz v1, :cond_0
 
-    .line 519
     iget-object v1, v0, Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;->listener:Lcom/letv/leui/widget/LePinnedPopupWindow$OnItemClickListener;
 
     iget v2, v0, Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;->itemId:I
 
     invoke-interface {v1, v2}, Lcom/letv/leui/widget/LePinnedPopupWindow$OnItemClickListener;->onClick(I)V
 
-    .line 520
     :cond_0
     return-void
 .end method
@@ -1438,10 +1276,8 @@
     .param p1, "isOnAnchorTop"    # Z
 
     .prologue
-    .line 153
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/LePinnedPopupWindow;->setPopupBackground(Z)V
 
-    .line 154
     return-void
 .end method
 
@@ -1453,33 +1289,27 @@
     .param p4, "contentWidth"    # I
 
     .prologue
-    .line 187
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result v2
 
-    .line 188
     .local v2, "anchorWidth":I
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
     move-result v1
 
-    .line 189
     .local v1, "anchorHeight":I
     iget-object v6, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mScreenLocation:[I
 
     invoke-virtual {p1, v6}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 191
     new-instance v5, Landroid/graphics/Rect;
 
     invoke-direct {v5}, Landroid/graphics/Rect;-><init>()V
 
-    .line 192
     .local v5, "displayFrame":Landroid/graphics/Rect;
     invoke-virtual {p1, v5}, Landroid/view/View;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
 
-    .line 194
     add-int v6, p2, p4
 
     iget v7, v5, Landroid/graphics/Rect;->right:I
@@ -1492,12 +1322,10 @@
 
     if-eqz v6, :cond_0
 
-    .line 195
     iget v6, v5, Landroid/graphics/Rect;->right:I
 
     sub-int p2, v6, p4
 
-    .line 198
     :cond_0
     iget-object v6, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mScreenLocation:[I
 
@@ -1509,17 +1337,14 @@
 
     add-int v0, v6, v7
 
-    .line 199
     .local v0, "anchorCenterX":I
     div-int/lit8 v6, p4, 0x2
 
     add-int v4, p2, v6
 
-    .line 201
     .local v4, "contentCenterX":I
     sub-int v3, v0, v4
 
-    .line 202
     .local v3, "arrowOffset":I
     sget v6, Lcom/letv/leui/widget/LePopupDrawable;->DEFAULT_ARROW_WIDTH:I
 
@@ -1531,7 +1356,6 @@
 
     if-le v3, v6, :cond_1
 
-    .line 203
     sget v6, Lcom/letv/leui/widget/LePopupDrawable;->DEFAULT_ARROW_WIDTH:I
 
     sub-int v6, p4, v6
@@ -1540,7 +1364,6 @@
 
     add-int/lit8 v3, v6, -0x8
 
-    .line 205
     :cond_1
     sget v6, Lcom/letv/leui/widget/LePopupDrawable;->DEFAULT_ARROW_WIDTH:I
 
@@ -1554,7 +1377,6 @@
 
     if-ge v3, v6, :cond_2
 
-    .line 206
     sget v6, Lcom/letv/leui/widget/LePopupDrawable;->DEFAULT_ARROW_WIDTH:I
 
     sub-int v6, p4, v6
@@ -1565,20 +1387,17 @@
 
     neg-int v3, v6
 
-    .line 209
     :cond_2
     iget-object v6, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mCurrentBgDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v6, :cond_3
 
-    .line 210
     iget-object v6, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mCurrentBgDrawable:Landroid/graphics/drawable/Drawable;
 
     check-cast v6, Lcom/letv/leui/widget/LePopupDrawable;
 
     invoke-virtual {v6, v3}, Lcom/letv/leui/widget/LePopupDrawable;->setArrowOffset(I)V
 
-    .line 213
     :cond_3
     return-void
 .end method
@@ -1593,12 +1412,10 @@
 
     const/4 v6, 0x0
 
-    .line 356
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    .line 357
     .local v0, "action":I
     instance-of v4, p1, Landroid/widget/TextView;
 
@@ -1606,27 +1423,22 @@
 
     move-object v3, p1
 
-    .line 358
     check-cast v3, Landroid/widget/TextView;
 
-    .line 359
     .local v3, "textView":Landroid/widget/TextView;
     invoke-virtual {p1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    .line 360
     .local v2, "res":Landroid/content/res/Resources;
     packed-switch v0, :pswitch_data_0
 
-    .line 390
     .end local v2    # "res":Landroid/content/res/Resources;
     .end local v3    # "textView":Landroid/widget/TextView;
     :cond_0
     :goto_0
     return v6
 
-    .line 362
     .restart local v2    # "res":Landroid/content/res/Resources;
     .restart local v3    # "textView":Landroid/widget/TextView;
     :pswitch_0
@@ -1636,7 +1448,6 @@
 
     iput-boolean v4, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mTextPress:Z
 
-    .line 363
     invoke-virtual {v3}, Landroid/widget/TextView;->getTag()Ljava/lang/Object;
 
     move-result-object v4
@@ -1645,14 +1456,12 @@
 
     if-eqz v4, :cond_0
 
-    .line 364
     invoke-virtual {v3}, Landroid/widget/TextView;->getTag()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;
 
-    .line 365
     .local v1, "holder":Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;
     iget-boolean v4, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mLayoutHorizontal:Z
 
@@ -1662,7 +1471,6 @@
 
     goto :goto_0
 
-    .line 369
     .end local v1    # "holder":Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;
     :pswitch_1
     invoke-virtual {v3}, Landroid/widget/TextView;->isPressed()Z
@@ -1671,12 +1479,10 @@
 
     if-eqz v4, :cond_1
 
-    .line 370
     iput-boolean v7, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mTextPress:Z
 
     goto :goto_0
 
-    .line 371
     :cond_1
     iget-boolean v4, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mTextPress:Z
 
@@ -1688,10 +1494,8 @@
 
     if-nez v4, :cond_0
 
-    .line 372
     iput-boolean v6, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mTextPress:Z
 
-    .line 373
     invoke-virtual {v3}, Landroid/widget/TextView;->getTag()Ljava/lang/Object;
 
     move-result-object v4
@@ -1700,14 +1504,12 @@
 
     if-eqz v4, :cond_0
 
-    .line 374
     invoke-virtual {v3}, Landroid/widget/TextView;->getTag()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;
 
-    .line 375
     .restart local v1    # "holder":Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;
     iget-boolean v4, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mLayoutHorizontal:Z
 
@@ -1717,7 +1519,6 @@
 
     goto :goto_0
 
-    .line 382
     .end local v1    # "holder":Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;
     :pswitch_2
     invoke-virtual {v3}, Landroid/widget/TextView;->getTag()Ljava/lang/Object;
@@ -1728,14 +1529,12 @@
 
     if-eqz v4, :cond_0
 
-    .line 383
     invoke-virtual {v3}, Landroid/widget/TextView;->getTag()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;
 
-    .line 384
     .restart local v1    # "holder":Lcom/letv/leui/widget/LePinnedPopupWindow$ActionItemHolder;
     iget-boolean v4, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mLayoutHorizontal:Z
 
@@ -1745,7 +1544,6 @@
 
     goto :goto_0
 
-    .line 360
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -1759,14 +1557,12 @@
     .locals 4
 
     .prologue
-    .line 486
     iget-object v3, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
     invoke-virtual {v3}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v1
 
-    .line 488
     .local v1, "size":I
     add-int/lit8 v0, v1, -0x1
 
@@ -1774,45 +1570,38 @@
     :goto_0
     if-ltz v0, :cond_2
 
-    .line 489
     iget-object v3, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
     invoke-virtual {v3, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 490
     .local v2, "view":Landroid/view/View;
     instance-of v3, v2, Landroid/widget/TextView;
 
     if-eqz v3, :cond_1
 
-    .line 491
     check-cast v2, Landroid/widget/TextView;
 
     .end local v2    # "view":Landroid/view/View;
     invoke-direct {p0, v2}, Lcom/letv/leui/widget/LePinnedPopupWindow;->recycleView(Landroid/widget/TextView;)V
 
-    .line 495
     :cond_0
     :goto_1
     iget-object v3, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
     invoke-virtual {v3, v0}, Landroid/view/ViewGroup;->removeViewAt(I)V
 
-    .line 488
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 492
     .restart local v2    # "view":Landroid/view/View;
     :cond_1
     instance-of v3, v2, Landroid/widget/ImageView;
 
     if-eqz v3, :cond_0
 
-    .line 493
     check-cast v2, Landroid/widget/ImageView;
 
     .end local v2    # "view":Landroid/view/View;
@@ -1820,7 +1609,6 @@
 
     goto :goto_1
 
-    .line 497
     :cond_2
     return-void
 .end method
@@ -1830,7 +1618,6 @@
     .param p1, "show"    # Z
 
     .prologue
-    .line 169
     iget-object v0, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mAboveAnchorBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
@@ -1841,14 +1628,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 170
     iget-object v0, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mAboveAnchorBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
     check-cast v0, Lcom/letv/leui/widget/LePopupDrawable;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/LePopupDrawable;->setArrowVisible(Z)V
 
-    .line 172
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mBelowAnchorBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -1860,14 +1645,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 173
     iget-object v0, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mBelowAnchorBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
     check-cast v0, Lcom/letv/leui/widget/LePopupDrawable;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/LePopupDrawable;->setArrowVisible(Z)V
 
-    .line 175
     :cond_1
     return-void
 .end method
@@ -1878,19 +1661,15 @@
     .param p2, "enabled"    # Z
 
     .prologue
-    .line 108
     invoke-virtual {p0, p1}, Lcom/letv/leui/widget/LePinnedPopupWindow;->getItem(I)Landroid/widget/TextView;
 
     move-result-object v0
 
-    .line 110
     .local v0, "item":Landroid/widget/TextView;
     if-eqz v0, :cond_0
 
-    .line 111
     invoke-virtual {v0, p2}, Landroid/widget/TextView;->setEnabled(Z)V
 
-    .line 113
     :cond_0
     return-void
 .end method
@@ -1900,10 +1679,8 @@
     .param p1, "itemColor"    # Landroid/content/res/ColorStateList;
 
     .prologue
-    .line 135
     iput-object p1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mItemTextColorList:Landroid/content/res/ColorStateList;
 
-    .line 136
     return-void
 .end method
 
@@ -1912,10 +1689,8 @@
     .param p1, "size"    # F
 
     .prologue
-    .line 145
     iput p1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mItemTextSize:F
 
-    .line 146
     return-void
 .end method
 
@@ -1924,9 +1699,7 @@
     .param p1, "gravity"    # I
 
     .prologue
-    .line 220
     iput p1, p0, Lcom/letv/leui/widget/LePinnedPopupWindow;->mPopupItemGravity:I
 
-    .line 221
     return-void
 .end method

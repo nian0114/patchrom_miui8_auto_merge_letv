@@ -24,13 +24,10 @@
     .param p1, "signature"    # Ljava/security/Signature;
 
     .prologue
-    .line 209
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 210
     iput-object p1, p0, Landroid/hardware/fingerprint/FingerprintManager$CryptoObject;->mCrypto:Ljava/lang/Object;
 
-    .line 211
     return-void
 .end method
 
@@ -39,13 +36,10 @@
     .param p1, "cipher"    # Ljavax/crypto/Cipher;
 
     .prologue
-    .line 213
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 214
     iput-object p1, p0, Landroid/hardware/fingerprint/FingerprintManager$CryptoObject;->mCrypto:Ljava/lang/Object;
 
-    .line 215
     return-void
 .end method
 
@@ -54,13 +48,10 @@
     .param p1, "mac"    # Ljavax/crypto/Mac;
 
     .prologue
-    .line 217
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 218
     iput-object p1, p0, Landroid/hardware/fingerprint/FingerprintManager$CryptoObject;->mCrypto:Ljava/lang/Object;
 
-    .line 219
     return-void
 .end method
 
@@ -70,7 +61,6 @@
     .locals 1
 
     .prologue
-    .line 234
     iget-object v0, p0, Landroid/hardware/fingerprint/FingerprintManager$CryptoObject;->mCrypto:Ljava/lang/Object;
 
     instance-of v0, v0, Ljavax/crypto/Cipher;
@@ -94,7 +84,6 @@
     .locals 1
 
     .prologue
-    .line 242
     iget-object v0, p0, Landroid/hardware/fingerprint/FingerprintManager$CryptoObject;->mCrypto:Ljava/lang/Object;
 
     instance-of v0, v0, Ljavax/crypto/Mac;
@@ -118,7 +107,6 @@
     .locals 2
 
     .prologue
-    .line 250
     iget-object v0, p0, Landroid/hardware/fingerprint/FingerprintManager$CryptoObject;->mCrypto:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
@@ -142,7 +130,6 @@
     .locals 1
 
     .prologue
-    .line 226
     iget-object v0, p0, Landroid/hardware/fingerprint/FingerprintManager$CryptoObject;->mCrypto:Ljava/lang/Object;
 
     instance-of v0, v0, Ljava/security/Signature;

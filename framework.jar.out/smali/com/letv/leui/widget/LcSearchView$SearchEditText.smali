@@ -26,13 +26,10 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 838
     iput-object p1, p0, Lcom/letv/leui/widget/LcSearchView$SearchEditText;->this$0:Lcom/letv/leui/widget/LcSearchView;
 
-    .line 839
     invoke-direct {p0, p2}, Landroid/widget/EditText;-><init>(Landroid/content/Context;)V
 
-    .line 840
     return-void
 .end method
 
@@ -42,13 +39,10 @@
     .param p3, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 842
     iput-object p1, p0, Lcom/letv/leui/widget/LcSearchView$SearchEditText;->this$0:Lcom/letv/leui/widget/LcSearchView;
 
-    .line 843
     invoke-direct {p0, p2, p3}, Landroid/widget/EditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 844
     return-void
 .end method
 
@@ -59,13 +53,10 @@
     .param p4, "defStyle"    # I
 
     .prologue
-    .line 847
     iput-object p1, p0, Lcom/letv/leui/widget/LcSearchView$SearchEditText;->this$0:Lcom/letv/leui/widget/LcSearchView;
 
-    .line 848
     invoke-direct {p0, p2, p3, p4}, Landroid/widget/EditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 849
     return-void
 .end method
 
@@ -78,15 +69,12 @@
     .param p3, "previouslyFocusedRect"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 873
     invoke-super {p0, p1, p2, p3}, Landroid/widget/EditText;->onFocusChanged(ZILandroid/graphics/Rect;)V
 
-    .line 874
     iget-object v0, p0, Lcom/letv/leui/widget/LcSearchView$SearchEditText;->mSearchView:Lcom/letv/leui/widget/LcSearchView;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/LcSearchView;->onTextFocusChanged()V
 
-    .line 875
     return-void
 .end method
 
@@ -95,10 +83,8 @@
     .param p1, "hasWindowFocus"    # Z
 
     .prologue
-    .line 861
     invoke-super {p0, p1}, Landroid/widget/EditText;->onWindowFocusChanged(Z)V
 
-    .line 862
     if-eqz p1, :cond_0
 
     iget-object v1, p0, Lcom/letv/leui/widget/LcSearchView$SearchEditText;->mSearchView:Lcom/letv/leui/widget/LcSearchView;
@@ -115,7 +101,6 @@
 
     if-nez v1, :cond_0
 
-    .line 864
     invoke-virtual {p0}, Lcom/letv/leui/widget/LcSearchView$SearchEditText;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -128,13 +113,11 @@
 
     check-cast v0, Landroid/view/inputmethod/InputMethodManager;
 
-    .line 866
     .local v0, "inputManager":Landroid/view/inputmethod/InputMethodManager;
     const/4 v1, 0x0
 
     invoke-virtual {v0, p0, v1}, Landroid/view/inputmethod/InputMethodManager;->showSoftInput(Landroid/view/View;I)Z
 
-    .line 868
     .end local v0    # "inputManager":Landroid/view/inputmethod/InputMethodManager;
     :cond_0
     return-void
@@ -145,9 +128,7 @@
     .param p1, "searchView"    # Lcom/letv/leui/widget/LcSearchView;
 
     .prologue
-    .line 852
     iput-object p1, p0, Lcom/letv/leui/widget/LcSearchView$SearchEditText;->mSearchView:Lcom/letv/leui/widget/LcSearchView;
 
-    .line 853
     return-void
 .end method

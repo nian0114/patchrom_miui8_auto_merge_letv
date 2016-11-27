@@ -31,7 +31,6 @@
     .locals 0
 
     .prologue
-    .line 796
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,18 +44,15 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 820
     new-instance v0, Landroid/service/notification/ZenModeConfig$ScheduleInfo;
 
     invoke-direct {v0}, Landroid/service/notification/ZenModeConfig$ScheduleInfo;-><init>()V
 
-    .line 821
     .local v0, "rt":Landroid/service/notification/ZenModeConfig$ScheduleInfo;
     iget-object v1, p0, Landroid/service/notification/ZenModeConfig$ScheduleInfo;->days:[I
 
     if-eqz v1, :cond_0
 
-    .line 822
     iget-object v1, p0, Landroid/service/notification/ZenModeConfig$ScheduleInfo;->days:[I
 
     array-length v1, v1
@@ -65,7 +61,6 @@
 
     iput-object v1, v0, Landroid/service/notification/ZenModeConfig$ScheduleInfo;->days:[I
 
-    .line 823
     iget-object v1, p0, Landroid/service/notification/ZenModeConfig$ScheduleInfo;->days:[I
 
     iget-object v2, v0, Landroid/service/notification/ZenModeConfig$ScheduleInfo;->days:[I
@@ -76,28 +71,23 @@
 
     invoke-static {v1, v4, v2, v4, v3}, Ljava/lang/System;->arraycopy([II[III)V
 
-    .line 825
     :cond_0
     iget v1, p0, Landroid/service/notification/ZenModeConfig$ScheduleInfo;->startHour:I
 
     iput v1, v0, Landroid/service/notification/ZenModeConfig$ScheduleInfo;->startHour:I
 
-    .line 826
     iget v1, p0, Landroid/service/notification/ZenModeConfig$ScheduleInfo;->startMinute:I
 
     iput v1, v0, Landroid/service/notification/ZenModeConfig$ScheduleInfo;->startMinute:I
 
-    .line 827
     iget v1, p0, Landroid/service/notification/ZenModeConfig$ScheduleInfo;->endHour:I
 
     iput v1, v0, Landroid/service/notification/ZenModeConfig$ScheduleInfo;->endHour:I
 
-    .line 828
     iget v1, p0, Landroid/service/notification/ZenModeConfig$ScheduleInfo;->endMinute:I
 
     iput v1, v0, Landroid/service/notification/ZenModeConfig$ScheduleInfo;->endMinute:I
 
-    .line 829
     return-object v0
 .end method
 
@@ -108,12 +98,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 810
     instance-of v2, p1, Landroid/service/notification/ZenModeConfig$ScheduleInfo;
 
     if-nez v2, :cond_1
 
-    .line 812
     :cond_0
     :goto_0
     return v1
@@ -121,10 +109,8 @@
     :cond_1
     move-object v0, p1
 
-    .line 811
     check-cast v0, Landroid/service/notification/ZenModeConfig$ScheduleInfo;
 
-    .line 812
     .local v0, "other":Landroid/service/notification/ZenModeConfig$ScheduleInfo;
     iget-object v2, p0, Landroid/service/notification/ZenModeConfig$ScheduleInfo;->days:[I
 
@@ -179,7 +165,6 @@
     .locals 1
 
     .prologue
-    .line 805
     const/4 v0, 0x0
 
     return v0

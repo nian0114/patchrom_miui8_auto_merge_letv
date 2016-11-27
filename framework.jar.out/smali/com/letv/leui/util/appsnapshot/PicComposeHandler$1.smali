@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 195
     iput-object p1, p0, Lcom/letv/leui/util/appsnapshot/PicComposeHandler$1;->this$0:Lcom/letv/leui/util/appsnapshot/PicComposeHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 0
 
     .prologue
-    .line 202
     return-void
 .end method
 
@@ -49,12 +47,10 @@
     .param p1, "picInfo"    # Lcom/letv/leui/util/appsnapshot/CropPicInfo;
 
     .prologue
-    .line 198
     iget-object v0, p0, Lcom/letv/leui/util/appsnapshot/PicComposeHandler$1;->this$0:Lcom/letv/leui/util/appsnapshot/PicComposeHandler;
 
     # invokes: Lcom/letv/leui/util/appsnapshot/PicComposeHandler;->composeFinish(Lcom/letv/leui/util/appsnapshot/CropPicInfo;)V
     invoke-static {v0, p1}, Lcom/letv/leui/util/appsnapshot/PicComposeHandler;->access$000(Lcom/letv/leui/util/appsnapshot/PicComposeHandler;Lcom/letv/leui/util/appsnapshot/CropPicInfo;)V
 
-    .line 199
     return-void
 .end method

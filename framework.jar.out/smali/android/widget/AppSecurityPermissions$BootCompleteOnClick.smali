@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1289
     iput-object p1, p0, Landroid/widget/AppSecurityPermissions$BootCompleteOnClick;->this$0:Landroid/widget/AppSecurityPermissions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 1291
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/widget/AppSecurityPermissions$BootCompleteOnClick;->this$0:Landroid/widget/AppSecurityPermissions;
@@ -59,7 +57,6 @@
 
     check-cast v12, Landroid/view/LayoutInflater;
 
-    .line 1292
     .local v12, "mInflater":Landroid/view/LayoutInflater;
     move-object/from16 v0, p0
 
@@ -74,7 +71,6 @@
 
     move-result-object v14
 
-    .line 1294
     .local v14, "pm":Landroid/content/pm/PackageManager;
     const v15, 0x109007a
 
@@ -88,7 +84,6 @@
 
     check-cast v9, Landroid/view/ViewGroup;
 
-    .line 1295
     .local v9, "lePermBottemSheet":Landroid/view/ViewGroup;
     const v15, 0x1020066
 
@@ -98,7 +93,6 @@
 
     check-cast v6, Landroid/widget/TextView;
 
-    .line 1296
     .local v6, "bottemSheetPermTitle":Landroid/widget/TextView;
     const v15, 0x1020067
 
@@ -108,15 +102,12 @@
 
     check-cast v7, Landroid/view/ViewGroup;
 
-    .line 1298
     .local v7, "bottemSheetPermViewGroup":Landroid/view/ViewGroup;
     const/4 v3, 0x0
 
-    .line 1299
     .local v3, "PermInfo":Ljava/lang/CharSequence;
     const/4 v2, 0x0
 
-    .line 1301
     .local v2, "PermDes":Ljava/lang/CharSequence;
     const v15, 0x109007b
 
@@ -130,7 +121,6 @@
 
     check-cast v10, Landroid/view/ViewGroup;
 
-    .line 1302
     .local v10, "lePermBottemSheetItem":Landroid/view/ViewGroup;
     const v15, 0x1020068
 
@@ -140,7 +130,6 @@
 
     check-cast v5, Landroid/widget/TextView;
 
-    .line 1303
     .local v5, "bottemSheetPermInfo":Landroid/widget/TextView;
     const v15, 0x1020069
 
@@ -150,22 +139,18 @@
 
     check-cast v4, Landroid/widget/TextView;
 
-    .line 1304
     .local v4, "bottemSheetPermDes":Landroid/widget/TextView;
     const/4 v15, 0x0
 
     invoke-virtual {v5, v15}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1305
     const/4 v15, 0x0
 
     invoke-virtual {v4, v15}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1308
     :try_start_0
     const-string v1, "android.permission.RECEIVE_BOOT_COMPLETED"
 
-    .line 1309
     .local v1, "BootCompletePerm":Ljava/lang/String;
     const-string v15, "android.permission.RECEIVE_BOOT_COMPLETED"
 
@@ -175,35 +160,28 @@
 
     move-result-object v13
 
-    .line 1310
     .local v13, "permInfoItem":Landroid/content/pm/PermissionInfo;
     invoke-virtual {v13, v14}, Landroid/content/pm/PermissionInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
 
     move-result-object v3
 
-    .line 1311
     invoke-virtual {v13, v14}, Landroid/content/pm/PermissionInfo;->loadDescription(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v2
 
-    .line 1315
     .end local v1    # "BootCompletePerm":Ljava/lang/String;
     .end local v13    # "permInfoItem":Landroid/content/pm/PermissionInfo;
     :goto_0
     invoke-virtual {v6, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1316
     invoke-virtual {v5, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1317
     invoke-virtual {v4, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1318
     invoke-virtual {v7, v10}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    .line 1320
     new-instance v11, Lcom/letv/leui/widget/LeBottomSheet;
 
     move-object/from16 v0, p0
@@ -217,27 +195,21 @@
 
     invoke-direct {v11, v15}, Lcom/letv/leui/widget/LeBottomSheet;-><init>(Landroid/content/Context;)V
 
-    .line 1321
     .local v11, "mBottomSheet":Lcom/letv/leui/widget/LeBottomSheet;
     const/16 v15, 0x5a0
 
     invoke-virtual {v11, v15}, Lcom/letv/leui/widget/LeBottomSheet;->setMaxHeightInPixel(I)V
 
-    .line 1322
     invoke-virtual {v11, v9}, Lcom/letv/leui/widget/LeBottomSheet;->setStyle(Landroid/view/View;)V
 
-    .line 1323
     invoke-virtual {v11}, Lcom/letv/leui/widget/LeBottomSheet;->appear()V
 
-    .line 1324
     return-void
 
-    .line 1312
     .end local v11    # "mBottomSheet":Lcom/letv/leui/widget/LeBottomSheet;
     :catch_0
     move-exception v8
 
-    .line 1313
     .local v8, "e":Ljava/lang/Exception;
     const-string v15, "AppSecurityPermissions"
 

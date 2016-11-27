@@ -32,7 +32,6 @@
     .locals 1
 
     .prologue
-    .line 39
     const-class v0, Lcom/letv/leui/util/MedianCutQuantizer;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -52,23 +51,18 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     iput-object v0, p0, Lcom/letv/leui/util/MedianCutQuantizer;->imageColors:[Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
-    .line 42
     iput-object v0, p0, Lcom/letv/leui/util/MedianCutQuantizer;->quantColors:[Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
-    .line 45
     invoke-virtual {p0, p1, p2}, Lcom/letv/leui/util/MedianCutQuantizer;->findRepresentativeColors([II)[Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/letv/leui/util/MedianCutQuantizer;->quantColors:[Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
-    .line 46
     return-void
 .end method
 
@@ -77,7 +71,6 @@
     .param p0, "x0"    # Lcom/letv/leui/util/MedianCutQuantizer;
 
     .prologue
-    .line 37
     iget-object v0, p0, Lcom/letv/leui/util/MedianCutQuantizer;->imageColors:[Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
     return-object v0
@@ -97,21 +90,17 @@
     .end annotation
 
     .prologue
-    .line 138
     .local p1, "colorBoxes":Ljava/util/List;, "Ljava/util/List<Lcom/letv/leui/util/MedianCutQuantizer$ColorBox;>;"
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v4
 
-    .line 139
     .local v4, "n":I
     new-array v0, v4, [Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
-    .line 140
     .local v0, "avgColors":[Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
     const/4 v2, 0x0
 
-    .line 141
     .local v2, "i":I
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -131,7 +120,6 @@
 
     check-cast v1, Lcom/letv/leui/util/MedianCutQuantizer$ColorBox;
 
-    .line 142
     .local v1, "box":Lcom/letv/leui/util/MedianCutQuantizer$ColorBox;
     invoke-virtual {v1}, Lcom/letv/leui/util/MedianCutQuantizer$ColorBox;->getAverageColor()Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
@@ -139,13 +127,10 @@
 
     aput-object v5, v0, v2
 
-    .line 143
     add-int/lit8 v2, v2, 0x1
 
-    .line 144
     goto :goto_0
 
-    .line 145
     .end local v1    # "box":Lcom/letv/leui/util/MedianCutQuantizer$ColorBox;
     :cond_0
     return-object v0
@@ -165,15 +150,12 @@
     .end annotation
 
     .prologue
-    .line 122
     .local p1, "colorBoxes":Ljava/util/List;, "Ljava/util/List<Lcom/letv/leui/util/MedianCutQuantizer$ColorBox;>;"
     const/4 v1, 0x0
 
-    .line 125
     .local v1, "boxToSplit":Lcom/letv/leui/util/MedianCutQuantizer$ColorBox;
     const v3, 0x7fffffff
 
-    .line 126
     .local v3, "minLevel":I
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -194,7 +176,6 @@
 
     check-cast v0, Lcom/letv/leui/util/MedianCutQuantizer$ColorBox;
 
-    .line 127
     .local v0, "box":Lcom/letv/leui/util/MedianCutQuantizer$ColorBox;
     invoke-virtual {v0}, Lcom/letv/leui/util/MedianCutQuantizer$ColorBox;->colorCount()I
 
@@ -204,20 +185,16 @@
 
     if-lt v4, v5, :cond_0
 
-    .line 128
     iget v4, v0, Lcom/letv/leui/util/MedianCutQuantizer$ColorBox;->level:I
 
     if-ge v4, v3, :cond_0
 
-    .line 129
     move-object v1, v0
 
-    .line 130
     iget v3, v0, Lcom/letv/leui/util/MedianCutQuantizer$ColorBox;->level:I
 
     goto :goto_0
 
-    .line 134
     .end local v0    # "box":Lcom/letv/leui/util/MedianCutQuantizer$ColorBox;
     :cond_1
     return-object v1
@@ -229,7 +206,6 @@
     .locals 1
 
     .prologue
-    .line 49
     iget-object v0, p0, Lcom/letv/leui/util/MedianCutQuantizer;->quantColors:[Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
     array-length v0, v0
@@ -242,12 +218,10 @@
     .param p1, "rgb"    # I
 
     .prologue
-    .line 100
     invoke-virtual {p0, p1}, Lcom/letv/leui/util/MedianCutQuantizer;->findClosestColorIndex(I)I
 
     move-result v0
 
-    .line 101
     .local v0, "idx":I
     iget-object v1, p0, Lcom/letv/leui/util/MedianCutQuantizer;->quantColors:[Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
@@ -261,32 +235,26 @@
     .param p1, "rgb"    # I
 
     .prologue
-    .line 105
     invoke-static {p1}, Landroid/graphics/Color;->red(I)I
 
     move-result v7
 
-    .line 106
     .local v7, "red":I
     invoke-static {p1}, Landroid/graphics/Color;->green(I)I
 
     move-result v3
 
-    .line 107
     .local v3, "grn":I
     invoke-static {p1}, Landroid/graphics/Color;->blue(I)I
 
     move-result v0
 
-    .line 108
     .local v0, "blu":I
     const/4 v6, 0x0
 
-    .line 109
     .local v6, "minIdx":I
     const v5, 0x7fffffff
 
-    .line 110
     .local v5, "minDistance":I
     const/4 v4, 0x0
 
@@ -298,34 +266,27 @@
 
     if-ge v4, v8, :cond_1
 
-    .line 111
     iget-object v8, p0, Lcom/letv/leui/util/MedianCutQuantizer;->quantColors:[Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
     aget-object v1, v8, v4
 
-    .line 112
     .local v1, "color":Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
     invoke-virtual {v1, v7, v3, v0}, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->distance2(III)I
 
     move-result v2
 
-    .line 113
     .local v2, "d2":I
     if-ge v2, v5, :cond_0
 
-    .line 114
     move v5, v2
 
-    .line 115
     move v6, v4
 
-    .line 110
     :cond_0
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 118
     .end local v1    # "color":Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
     .end local v2    # "d2":I
     :cond_1
@@ -338,24 +299,20 @@
     .param p2, "Kmax"    # I
 
     .prologue
-    .line 57
     new-instance v3, Lcom/letv/leui/util/MedianCutQuantizer$ColorHistogram;
 
     move-object/from16 v0, p1
 
     invoke-direct {v3, v0}, Lcom/letv/leui/util/MedianCutQuantizer$ColorHistogram;-><init>([I)V
 
-    .line 58
     .local v3, "colorHist":Lcom/letv/leui/util/MedianCutQuantizer$ColorHistogram;
     invoke-virtual {v3}, Lcom/letv/leui/util/MedianCutQuantizer$ColorHistogram;->getNumberOfColors()I
 
     move-result v1
 
-    .line 59
     .local v1, "K":I
     const/4 v11, 0x0
 
-    .line 61
     .local v11, "rCols":[Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
     new-array v13, v1, [Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
@@ -363,25 +320,21 @@
 
     iput-object v13, v0, Lcom/letv/leui/util/MedianCutQuantizer;->imageColors:[Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
-    .line 62
     const/4 v6, 0x0
 
     .local v6, "i":I
     :goto_0
     if-ge v6, v1, :cond_0
 
-    .line 63
     invoke-virtual {v3, v6}, Lcom/letv/leui/util/MedianCutQuantizer$ColorHistogram;->getColor(I)I
 
     move-result v12
 
-    .line 64
     .local v12, "rgb":I
     invoke-virtual {v3, v6}, Lcom/letv/leui/util/MedianCutQuantizer$ColorHistogram;->getCount(I)I
 
     move-result v2
 
-    .line 65
     .local v2, "cnt":I
     move-object/from16 v0, p0
 
@@ -393,12 +346,10 @@
 
     aput-object v14, v13, v6
 
-    .line 62
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
-    .line 68
     .end local v2    # "cnt":I
     .end local v12    # "rgb":I
     :cond_0
@@ -406,16 +357,13 @@
 
     if-gt v1, v0, :cond_1
 
-    .line 70
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/letv/leui/util/MedianCutQuantizer;->imageColors:[Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
-    .line 89
     :goto_1
     return-object v11
 
-    .line 72
     :cond_1
     new-instance v7, Lcom/letv/leui/util/MedianCutQuantizer$ColorBox;
 
@@ -429,24 +377,19 @@
 
     invoke-direct {v7, v0, v13, v14, v15}, Lcom/letv/leui/util/MedianCutQuantizer$ColorBox;-><init>(Lcom/letv/leui/util/MedianCutQuantizer;III)V
 
-    .line 73
     .local v7, "initialBox":Lcom/letv/leui/util/MedianCutQuantizer$ColorBox;
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 74
     .local v4, "colorSet":Ljava/util/List;, "Ljava/util/List<Lcom/letv/leui/util/MedianCutQuantizer$ColorBox;>;"
     invoke-interface {v4, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 75
     const/4 v8, 0x1
 
-    .line 76
     .local v8, "k":I
     const/4 v5, 0x0
 
-    .line 77
     .local v5, "done":Z
     :goto_2
     move/from16 v0, p2
@@ -455,40 +398,32 @@
 
     if-nez v5, :cond_3
 
-    .line 78
     move-object/from16 v0, p0
 
     invoke-direct {v0, v4}, Lcom/letv/leui/util/MedianCutQuantizer;->findBoxToSplit(Ljava/util/List;)Lcom/letv/leui/util/MedianCutQuantizer$ColorBox;
 
     move-result-object v10
 
-    .line 79
     .local v10, "nextBox":Lcom/letv/leui/util/MedianCutQuantizer$ColorBox;
     if-eqz v10, :cond_2
 
-    .line 80
     invoke-virtual {v10}, Lcom/letv/leui/util/MedianCutQuantizer$ColorBox;->splitBox()Lcom/letv/leui/util/MedianCutQuantizer$ColorBox;
 
     move-result-object v9
 
-    .line 81
     .local v9, "newBox":Lcom/letv/leui/util/MedianCutQuantizer$ColorBox;
     invoke-interface {v4, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 82
     add-int/lit8 v8, v8, 0x1
 
-    .line 83
     goto :goto_2
 
-    .line 84
     .end local v9    # "newBox":Lcom/letv/leui/util/MedianCutQuantizer$ColorBox;
     :cond_2
     const/4 v5, 0x1
 
     goto :goto_2
 
-    .line 87
     .end local v10    # "nextBox":Lcom/letv/leui/util/MedianCutQuantizer$ColorBox;
     :cond_3
     move-object/from16 v0, p0
@@ -504,7 +439,6 @@
     .locals 1
 
     .prologue
-    .line 53
     iget-object v0, p0, Lcom/letv/leui/util/MedianCutQuantizer;->quantColors:[Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
     return-object v0
@@ -515,10 +449,8 @@
     .param p1, "nodes"    # [Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
     .prologue
-    .line 388
     const/4 v2, 0x0
 
-    .line 389
     .local v2, "i":I
     move-object v0, p1
 
@@ -534,7 +466,6 @@
 
     aget-object v1, v0, v3
 
-    .line 390
     .local v1, "color":Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
     sget-object v5, Lcom/letv/leui/util/MedianCutQuantizer;->LOG_TAG:Ljava/lang/String;
 
@@ -572,15 +503,12 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 391
     add-int/lit8 v2, v2, 0x1
 
-    .line 389
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 393
     .end local v1    # "color":Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
     :cond_0
     return-void
@@ -591,7 +519,6 @@
     .param p1, "pixels"    # [I
 
     .prologue
-    .line 93
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -600,14 +527,12 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 94
     aget v2, p1, v1
 
     invoke-virtual {p0, v2}, Lcom/letv/leui/util/MedianCutQuantizer;->findClosestColor(I)Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
     move-result-object v0
 
-    .line 95
     .local v0, "color":Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
     # getter for: Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->red:I
     invoke-static {v0}, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->access$000(Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;)I
@@ -630,12 +555,10 @@
 
     aput v2, p1, v1
 
-    .line 93
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 97
     .end local v0    # "color":Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
     :cond_0
     return-void

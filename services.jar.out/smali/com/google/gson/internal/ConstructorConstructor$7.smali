@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 160
     iput-object p1, p0, Lcom/google/gson/internal/ConstructorConstructor$7;->this$0:Lcom/google/gson/internal/ConstructorConstructor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +52,6 @@
     .end annotation
 
     .prologue
-    .line 162
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V

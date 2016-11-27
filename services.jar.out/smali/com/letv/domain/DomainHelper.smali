@@ -42,10 +42,8 @@
     .locals 0
 
     .prologue
-    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     return-void
 .end method
 
@@ -55,7 +53,6 @@
     .param p1, "x1"    # Lorg/json/JSONObject;
 
     .prologue
-    .line 20
     invoke-direct {p0, p1}, Lcom/letv/domain/DomainHelper;->handleSuccessResponse(Lorg/json/JSONObject;)V
 
     return-void
@@ -67,7 +64,6 @@
     .param p1, "x1"    # Lcom/android/volley/VolleyError;
 
     .prologue
-    .line 20
     invoke-direct {p0, p1}, Lcom/letv/domain/DomainHelper;->handleErrorResponse(Lcom/android/volley/VolleyError;)V
 
     return-void
@@ -78,7 +74,6 @@
     .param p0, "x0"    # Lcom/letv/domain/DomainHelper;
 
     .prologue
-    .line 20
     iget-object v0, p0, Lcom/letv/domain/DomainHelper;->mDeviceInfo:Lcom/letv/domain/bean/DeviceInfo;
 
     return-object v0
@@ -88,22 +83,18 @@
     .locals 1
 
     .prologue
-    .line 141
     iget-object v0, p0, Lcom/letv/domain/DomainHelper;->mRequestQueue:Lcom/android/volley/RequestQueue;
 
     if-eqz v0, :cond_0
 
-    .line 142
     iget-object v0, p0, Lcom/letv/domain/DomainHelper;->mRequestQueue:Lcom/android/volley/RequestQueue;
 
     invoke-virtual {v0}, Lcom/android/volley/RequestQueue;->stop()V
 
-    .line 143
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/letv/domain/DomainHelper;->mRequestQueue:Lcom/android/volley/RequestQueue;
 
-    .line 145
     :cond_0
     return-void
 .end method
@@ -113,7 +104,6 @@
     .param p1, "volleyError"    # Lcom/android/volley/VolleyError;
 
     .prologue
-    .line 132
     monitor-enter p0
 
     :try_start_0
@@ -121,20 +111,17 @@
 
     move-result-object v2
 
-    .line 133
     .local v2, "message":Ljava/lang/String;
     if-nez v2, :cond_0
 
     const-string v1, "Unknown Error."
 
-    .line 134
     .local v1, "errorMessage":Ljava/lang/String;
     :goto_0
     invoke-static {p1}, Lcom/letv/domain/net/VolleyErrorHelper;->getMessageCode(Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 135
     .local v0, "code":I
     const-string v3, "DomainHelper"
 
@@ -168,17 +155,14 @@
 
     invoke-static {v3, v4}, Lcom/letv/domain/utils/LogUtils;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 136
     iget-object v3, p0, Lcom/letv/domain/DomainHelper;->mCallback:Lcom/letv/domain/DomainHelper$ResponseListener;
 
     invoke-interface {v3, v0, v1}, Lcom/letv/domain/DomainHelper$ResponseListener;->onErrorResponse(ILjava/lang/String;)V
 
-    .line 137
     invoke-direct {p0}, Lcom/letv/domain/DomainHelper;->cancelRequest()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 138
     monitor-exit p0
 
     return-void
@@ -188,10 +172,8 @@
     :cond_0
     move-object v1, v2
 
-    .line 133
     goto :goto_0
 
-    .line 132
     .end local v2    # "message":Ljava/lang/String;
     :catchall_0
     move-exception v3
@@ -206,7 +188,6 @@
     .param p1, "jsonObject"    # Lorg/json/JSONObject;
 
     .prologue
-    .line 119
     monitor-enter p0
 
     :try_start_0
@@ -214,7 +195,6 @@
 
     move-result-object v0
 
-    .line 120
     .local v0, "responseInfo":Lcom/letv/domain/bean/ResponseInfo;
     const/16 v2, 0x2710
 
@@ -224,14 +204,12 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 121
     const-string v2, "DomainHelper"
 
     const-string v3, "success"
 
     invoke-static {v2, v3}, Lcom/letv/domain/utils/LogUtils;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 122
     iget-object v2, p0, Lcom/letv/domain/DomainHelper;->mCallback:Lcom/letv/domain/DomainHelper$ResponseListener;
 
     const/4 v3, 0x0
@@ -242,18 +220,15 @@
 
     invoke-interface {v2, v3, v4}, Lcom/letv/domain/DomainHelper$ResponseListener;->onResponse(ILorg/json/JSONObject;)V
 
-    .line 123
     invoke-direct {p0}, Lcom/letv/domain/DomainHelper;->cancelRequest()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 129
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 125
     :cond_0
     :try_start_1
     new-instance v1, Lcom/android/volley/VolleyError;
@@ -264,7 +239,6 @@
 
     invoke-direct {v1, v2}, Lcom/android/volley/VolleyError;-><init>(Ljava/lang/String;)V
 
-    .line 126
     .local v1, "volleyError":Lcom/android/volley/VolleyError;
     invoke-direct {p0, v1}, Lcom/letv/domain/DomainHelper;->handleErrorResponse(Lcom/android/volley/VolleyError;)V
     :try_end_1
@@ -272,7 +246,6 @@
 
     goto :goto_0
 
-    .line 119
     .end local v0    # "responseInfo":Lcom/letv/domain/bean/ResponseInfo;
     .end local v1    # "volleyError":Lcom/android/volley/VolleyError;
     :catchall_0
@@ -289,12 +262,10 @@
     .param p1, "callback"    # Lcom/letv/domain/DomainHelper$ResponseListener;
 
     .prologue
-    .line 73
     const/4 v0, 0x0
 
     invoke-static {p0, v0, p1}, Lcom/letv/domain/DomainHelper;->requestDomainAddress(Landroid/content/Context;Lcom/letv/domain/DomainRequest;Lcom/letv/domain/DomainHelper$ResponseListener;)V
 
-    .line 74
     return-void
 .end method
 
@@ -305,19 +276,16 @@
     .param p2, "callback"    # Lcom/letv/domain/DomainHelper$ResponseListener;
 
     .prologue
-    .line 46
     sget-object v1, Lcom/letv/domain/DomainHelper;->sHelper:Lcom/letv/domain/DomainHelper;
 
     if-nez v1, :cond_0
 
-    .line 47
     new-instance v1, Lcom/letv/domain/DomainHelper;
 
     invoke-direct {v1}, Lcom/letv/domain/DomainHelper;-><init>()V
 
     sput-object v1, Lcom/letv/domain/DomainHelper;->sHelper:Lcom/letv/domain/DomainHelper;
 
-    .line 50
     :cond_0
     sget-object v1, Lcom/letv/domain/DomainHelper;->sHelper:Lcom/letv/domain/DomainHelper;
 
@@ -325,7 +293,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 51
     sget-object v1, Lcom/letv/domain/DomainHelper;->sHelper:Lcom/letv/domain/DomainHelper;
 
     iget-object v1, v1, Lcom/letv/domain/DomainHelper;->mRequestQueue:Lcom/android/volley/RequestQueue;
@@ -338,31 +305,26 @@
 
     invoke-virtual {v1, v2}, Lcom/android/volley/RequestQueue;->cancelAll(Ljava/lang/Object;)V
 
-    .line 54
     :cond_1
     invoke-static {p0, p1}, Lcom/letv/domain/utils/DeviceInfoFactory;->getDefaultDeviceInfo(Landroid/content/Context;Lcom/letv/domain/DomainRequest;)Lcom/letv/domain/bean/DeviceInfo;
 
     move-result-object v0
 
-    .line 55
     .local v0, "deviceInfo":Lcom/letv/domain/bean/DeviceInfo;
     sget-object v1, Lcom/letv/domain/DomainHelper;->sHelper:Lcom/letv/domain/DomainHelper;
 
     iput-object v0, v1, Lcom/letv/domain/DomainHelper;->mDeviceInfo:Lcom/letv/domain/bean/DeviceInfo;
 
-    .line 56
     sget-object v1, Lcom/letv/domain/DomainHelper;->sHelper:Lcom/letv/domain/DomainHelper;
 
     iput-object p2, v1, Lcom/letv/domain/DomainHelper;->mCallback:Lcom/letv/domain/DomainHelper$ResponseListener;
 
-    .line 58
     invoke-virtual {v0}, Lcom/letv/domain/bean/DeviceInfo;->getImei()Ljava/lang/String;
 
     move-result-object v1
 
     if-nez v1, :cond_2
 
-    .line 59
     sget-object v1, Lcom/letv/domain/DomainHelper;->sHelper:Lcom/letv/domain/DomainHelper;
 
     new-instance v2, Lcom/android/volley/VolleyError;
@@ -373,11 +335,9 @@
 
     invoke-direct {v1, v2}, Lcom/letv/domain/DomainHelper;->handleErrorResponse(Lcom/android/volley/VolleyError;)V
 
-    .line 70
     :goto_0
     return-void
 
-    .line 63
     :cond_2
     invoke-virtual {v0}, Lcom/letv/domain/bean/DeviceInfo;->isOversea()Z
 
@@ -393,7 +353,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 64
     :cond_3
     const-string v1, "DomainHelper"
 
@@ -401,14 +360,12 @@
 
     invoke-static {v1, v2}, Lcom/letv/domain/utils/LogUtils;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 65
     sget-object v1, Lcom/letv/domain/DomainHelper;->sHelper:Lcom/letv/domain/DomainHelper;
 
     invoke-direct {v1}, Lcom/letv/domain/DomainHelper;->requestOverseaServer()V
 
     goto :goto_0
 
-    .line 67
     :cond_4
     const-string v1, "DomainHelper"
 
@@ -416,7 +373,6 @@
 
     invoke-static {v1, v2}, Lcom/letv/domain/utils/LogUtils;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 68
     sget-object v1, Lcom/letv/domain/DomainHelper;->sHelper:Lcom/letv/domain/DomainHelper;
 
     invoke-direct {v1}, Lcom/letv/domain/DomainHelper;->requestHomeServer()V
@@ -428,18 +384,15 @@
     .locals 2
 
     .prologue
-    .line 114
     iget-object v1, p0, Lcom/letv/domain/DomainHelper;->mDeviceInfo:Lcom/letv/domain/bean/DeviceInfo;
 
     invoke-static {v1}, Lcom/letv/domain/model/LocalDomain;->obtainResponse(Lcom/letv/domain/bean/DeviceInfo;)Lorg/json/JSONObject;
 
     move-result-object v0
 
-    .line 115
     .local v0, "jsonObject":Lorg/json/JSONObject;
     invoke-direct {p0, v0}, Lcom/letv/domain/DomainHelper;->handleSuccessResponse(Lorg/json/JSONObject;)V
 
-    .line 116
     return-void
 .end method
 
@@ -449,23 +402,19 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 78
     iget-object v1, p0, Lcom/letv/domain/DomainHelper;->mRequestQueue:Lcom/android/volley/RequestQueue;
 
     if-nez v1, :cond_0
 
-    .line 79
     new-instance v8, Lcom/android/volley/toolbox/HurlStack;
 
     invoke-direct {v8}, Lcom/android/volley/toolbox/HurlStack;-><init>()V
 
-    .line 80
     .local v8, "stack":Lcom/android/volley/toolbox/HttpStack;
     new-instance v7, Lcom/android/volley/toolbox/BasicNetwork;
 
     invoke-direct {v7, v8}, Lcom/android/volley/toolbox/BasicNetwork;-><init>(Lcom/android/volley/toolbox/HttpStack;)V
 
-    .line 81
     .local v7, "network":Lcom/android/volley/Network;
     new-instance v1, Lcom/android/volley/RequestQueue;
 
@@ -479,12 +428,10 @@
 
     iput-object v1, p0, Lcom/letv/domain/DomainHelper;->mRequestQueue:Lcom/android/volley/RequestQueue;
 
-    .line 82
     iget-object v1, p0, Lcom/letv/domain/DomainHelper;->mRequestQueue:Lcom/android/volley/RequestQueue;
 
     invoke-virtual {v1}, Lcom/android/volley/RequestQueue;->start()V
 
-    .line 85
     .end local v7    # "network":Lcom/android/volley/Network;
     .end local v8    # "stack":Lcom/android/volley/toolbox/HttpStack;
     :cond_0
@@ -492,13 +439,11 @@
 
     invoke-direct {v5, p0}, Lcom/letv/domain/DomainHelper$1;-><init>(Lcom/letv/domain/DomainHelper;)V
 
-    .line 92
     .local v5, "listener":Lcom/android/volley/Response$Listener;, "Lcom/android/volley/Response$Listener<Lorg/json/JSONObject;>;"
     new-instance v6, Lcom/letv/domain/DomainHelper$2;
 
     invoke-direct {v6, p0}, Lcom/letv/domain/DomainHelper$2;-><init>(Lcom/letv/domain/DomainHelper;)V
 
-    .line 99
     .local v6, "errorListener":Lcom/android/volley/Response$ErrorListener;
     iget-object v1, p0, Lcom/letv/domain/DomainHelper;->mDeviceInfo:Lcom/letv/domain/bean/DeviceInfo;
 
@@ -506,7 +451,6 @@
 
     move-result-object v3
 
-    .line 100
     .local v3, "url":Ljava/lang/String;
     const-string v1, "DomainHelper"
 
@@ -530,10 +474,8 @@
 
     invoke-static {v1, v4}, Lcom/letv/domain/utils/LogUtils;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 101
     invoke-static {}, Lcom/letv/domain/net/HTTPSTrustManager;->allowAllSSL()V
 
-    .line 102
     new-instance v0, Lcom/letv/domain/DomainHelper$3;
 
     const/4 v4, 0x0
@@ -542,7 +484,6 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/letv/domain/DomainHelper$3;-><init>(Lcom/letv/domain/DomainHelper;ILjava/lang/String;Lorg/json/JSONObject;Lcom/android/volley/Response$Listener;Lcom/android/volley/Response$ErrorListener;)V
 
-    .line 108
     .local v0, "request":Lcom/android/volley/toolbox/JsonObjectRequest;
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -550,11 +491,9 @@
 
     invoke-virtual {v0, v1}, Lcom/android/volley/toolbox/JsonObjectRequest;->setTag(Ljava/lang/Object;)Lcom/android/volley/Request;
 
-    .line 110
     iget-object v1, p0, Lcom/letv/domain/DomainHelper;->mRequestQueue:Lcom/android/volley/RequestQueue;
 
     invoke-virtual {v1, v0}, Lcom/android/volley/RequestQueue;->add(Lcom/android/volley/Request;)Lcom/android/volley/Request;
 
-    .line 111
     return-void
 .end method

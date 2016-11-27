@@ -11,7 +11,6 @@
     .locals 0
 
     .prologue
-    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +23,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 38
     const/4 v0, -0x1
 
     return v0
@@ -36,7 +34,6 @@
     .param p2, "fromRight"    # Z
 
     .prologue
-    .line 14
     return-void
 .end method
 
@@ -45,7 +42,6 @@
     .param p1, "reverseSortedPositions"    # [I
 
     .prologue
-    .line 34
     return-void
 .end method
 
@@ -53,7 +49,6 @@
     .locals 0
 
     .prologue
-    .line 43
     return-void
 .end method
 
@@ -61,7 +56,6 @@
     .locals 0
 
     .prologue
-    .line 47
     return-void
 .end method
 
@@ -69,7 +63,6 @@
     .locals 0
 
     .prologue
-    .line 18
     return-void
 .end method
 
@@ -79,7 +72,6 @@
     .param p2, "x"    # F
 
     .prologue
-    .line 22
     return-void
 .end method
 
@@ -89,7 +81,6 @@
     .param p2, "toRight"    # Z
 
     .prologue
-    .line 10
     return-void
 .end method
 
@@ -99,7 +90,6 @@
     .param p2, "right"    # Z
 
     .prologue
-    .line 30
     return-void
 .end method
 
@@ -110,6 +100,5 @@
     .param p3, "right"    # Z
 
     .prologue
-    .line 26
     return-void
 .end method

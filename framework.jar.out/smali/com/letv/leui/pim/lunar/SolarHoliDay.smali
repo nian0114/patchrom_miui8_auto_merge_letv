@@ -26,33 +26,26 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 11
     sput v0, Lcom/letv/leui/pim/lunar/SolarHoliDay;->SUNDAY:I
 
-    .line 12
     sput v0, Lcom/letv/leui/pim/lunar/SolarHoliDay;->FIRST_DAY_OF_MONTH:I
 
-    .line 13
     const/4 v0, 0x4
 
     sput v0, Lcom/letv/leui/pim/lunar/SolarHoliDay;->MAY:I
 
-    .line 14
     const/4 v0, 0x5
 
     sput v0, Lcom/letv/leui/pim/lunar/SolarHoliDay;->JUNE:I
 
-    .line 15
     const/16 v0, 0xe
 
     sput v0, Lcom/letv/leui/pim/lunar/SolarHoliDay;->DAYS_OF_TWO_WEEKS:I
 
-    .line 16
     const/4 v0, 0x7
 
     sput v0, Lcom/letv/leui/pim/lunar/SolarHoliDay;->DAYS_OF_ONE_WEEKS:I
 
-    .line 17
     const/16 v0, 0x15
 
     sput v0, Lcom/letv/leui/pim/lunar/SolarHoliDay;->DAYS_OF_THREE_WEEKS:I
@@ -64,7 +57,6 @@
     .locals 0
 
     .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -77,12 +69,10 @@
     .param p2, "currentDayForMonth"    # I
 
     .prologue
-    .line 19
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    .line 20
     .local v4, "res":Landroid/content/res/Resources;
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -144,7 +134,6 @@
 
     move-result-object v3
 
-    .line 22
     .local v3, "num_date":Ljava/lang/String;
     const v10, 0x1070073
 
@@ -152,7 +141,6 @@
 
     move-result-object v6
 
-    .line 24
     .local v6, "solarHolidayArray":[Ljava/lang/String;
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
@@ -162,7 +150,6 @@
 
     move-result-object v1
 
-    .line 25
     .local v1, "calendar":Ljava/util/Calendar;
     sget v10, Lcom/letv/leui/pim/lunar/SolarHoliDay;->FIRST_DAY_OF_MONTH:I
 
@@ -170,14 +157,12 @@
 
     invoke-virtual {v1, p0, v0, v10}, Ljava/util/Calendar;->set(III)V
 
-    .line 26
     const/4 v10, 0x7
 
     invoke-virtual {v1, v10}, Ljava/util/Calendar;->get(I)I
 
     move-result v9
 
-    .line 27
     .local v9, "weekDay":I
     sget v10, Lcom/letv/leui/pim/lunar/SolarHoliDay;->MAY:I
 
@@ -185,41 +170,34 @@
 
     if-ne v0, v10, :cond_1
 
-    .line 28
     const/4 v5, -0x1
 
-    .line 29
     .local v5, "secondSunday":I
     sget v10, Lcom/letv/leui/pim/lunar/SolarHoliDay;->SUNDAY:I
 
     if-ne v9, v10, :cond_0
 
-    .line 30
     sget v10, Lcom/letv/leui/pim/lunar/SolarHoliDay;->FIRST_DAY_OF_MONTH:I
 
     sget v11, Lcom/letv/leui/pim/lunar/SolarHoliDay;->DAYS_OF_ONE_WEEKS:I
 
     add-int v5, v10, v11
 
-    .line 34
     :goto_0
     move/from16 v0, p2
 
     if-ne v5, v0, :cond_1
 
-    .line 35
     const v10, 0x10405de
 
     invoke-virtual {v4, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v10
 
-    .line 55
     .end local v5    # "secondSunday":I
     :goto_1
     return-object v10
 
-    .line 32
     .restart local v5    # "secondSunday":I
     :cond_0
     sget v10, Lcom/letv/leui/pim/lunar/SolarHoliDay;->DAYS_OF_TWO_WEEKS:I
@@ -230,7 +208,6 @@
 
     goto :goto_0
 
-    .line 38
     .end local v5    # "secondSunday":I
     :cond_1
     sget v10, Lcom/letv/leui/pim/lunar/SolarHoliDay;->JUNE:I
@@ -239,29 +216,24 @@
 
     if-ne v0, v10, :cond_3
 
-    .line 39
     const/4 v8, -0x1
 
-    .line 40
     .local v8, "thirdSunday":I
     sget v10, Lcom/letv/leui/pim/lunar/SolarHoliDay;->SUNDAY:I
 
     if-ne v9, v10, :cond_2
 
-    .line 41
     sget v10, Lcom/letv/leui/pim/lunar/SolarHoliDay;->FIRST_DAY_OF_MONTH:I
 
     sget v11, Lcom/letv/leui/pim/lunar/SolarHoliDay;->DAYS_OF_TWO_WEEKS:I
 
     add-int v8, v10, v11
 
-    .line 45
     :goto_2
     move/from16 v0, p2
 
     if-ne v8, v0, :cond_3
 
-    .line 46
     const v10, 0x10405df
 
     invoke-virtual {v4, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -270,7 +242,6 @@
 
     goto :goto_1
 
-    .line 43
     :cond_2
     sget v10, Lcom/letv/leui/pim/lunar/SolarHoliDay;->DAYS_OF_THREE_WEEKS:I
 
@@ -280,7 +251,6 @@
 
     goto :goto_2
 
-    .line 49
     .end local v8    # "thirdSunday":I
     :cond_3
     const/4 v2, 0x0
@@ -291,7 +261,6 @@
 
     if-ge v2, v10, :cond_5
 
-    .line 50
     aget-object v10, v6, v2
 
     const-string v11, " "
@@ -300,7 +269,6 @@
 
     move-result-object v7
 
-    .line 51
     .local v7, "solarHolidayDateStr":[Ljava/lang/String;
     const/4 v10, 0x0
 
@@ -312,20 +280,17 @@
 
     if-eqz v10, :cond_4
 
-    .line 52
     const/4 v10, 0x1
 
     aget-object v10, v7, v10
 
     goto :goto_1
 
-    .line 49
     :cond_4
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_3
 
-    .line 55
     .end local v7    # "solarHolidayDateStr":[Ljava/lang/String;
     :cond_5
     const-string v10, ""

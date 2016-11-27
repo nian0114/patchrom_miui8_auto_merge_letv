@@ -60,7 +60,6 @@
 
     const/4 v4, 0x0
 
-    .line 1537
     new-instance v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;
 
     const-string v1, "RESET"
@@ -69,7 +68,6 @@
 
     sput-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;->RESET:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;
 
-    .line 1543
     new-instance v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;
 
     const-string v1, "PULL_TO_REFRESH"
@@ -78,7 +76,6 @@
 
     sput-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;->PULL_TO_REFRESH:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;
 
-    .line 1549
     new-instance v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;
 
     const-string v1, "RELEASE_TO_REFRESH"
@@ -87,7 +84,6 @@
 
     sput-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;->RELEASE_TO_REFRESH:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;
 
-    .line 1554
     new-instance v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;
 
     const-string v1, "REFRESHING"
@@ -98,7 +94,6 @@
 
     sput-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;->REFRESHING:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;
 
-    .line 1560
     new-instance v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;
 
     const-string v1, "MANUAL_REFRESHING"
@@ -109,7 +104,6 @@
 
     sput-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;->MANUAL_REFRESHING:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;
 
-    .line 1566
     new-instance v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;
 
     const-string v1, "OVERSCROLLING"
@@ -122,7 +116,6 @@
 
     sput-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;->OVERSCROLLING:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;
 
-    .line 1571
     new-instance v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;
 
     const-string v1, "SMOOTHSCROLLFINISHED"
@@ -135,7 +128,6 @@
 
     sput-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;->SMOOTHSCROLLFINISHED:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;
 
-    .line 1531
     const/4 v0, 0x7
 
     new-array v0, v0, [Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;
@@ -187,13 +179,10 @@
     .end annotation
 
     .prologue
-    .line 1592
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 1593
     iput p3, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;->mIntValue:I
 
-    .line 1594
     return-void
 .end method
 
@@ -202,7 +191,6 @@
     .param p0, "stateInt"    # I
 
     .prologue
-    .line 1580
     invoke-static {}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;->values()[Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;
 
     move-result-object v0
@@ -219,7 +207,6 @@
 
     aget-object v3, v0, v1
 
-    .line 1581
     .local v3, "value":Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;
     invoke-virtual {v3}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;->getIntValue()I
 
@@ -227,19 +214,16 @@
 
     if-ne p0, v4, :cond_0
 
-    .line 1587
     .end local v3    # "value":Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;
     :goto_1
     return-object v3
 
-    .line 1580
     .restart local v3    # "value":Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1587
     .end local v3    # "value":Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;
     :cond_1
     sget-object v3, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;->RESET:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;
@@ -252,7 +236,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 1531
     const-class v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -268,7 +251,6 @@
     .locals 1
 
     .prologue
-    .line 1531
     sget-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;->$VALUES:[Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;
 
     invoke-virtual {v0}, [Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;->clone()Ljava/lang/Object;
@@ -286,7 +268,6 @@
     .locals 1
 
     .prologue
-    .line 1597
     iget v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;->mIntValue:I
 
     return v0

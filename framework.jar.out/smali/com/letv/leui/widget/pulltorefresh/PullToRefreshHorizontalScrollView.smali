@@ -26,10 +26,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 33
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;-><init>(Landroid/content/Context;)V
 
-    .line 34
     return-void
 .end method
 
@@ -39,10 +37,8 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 37
     invoke-direct {p0, p1, p2}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 38
     return-void
 .end method
 
@@ -52,10 +48,8 @@
     .param p2, "mode"    # Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
 
     .prologue
-    .line 41
     invoke-direct {p0, p1, p2}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;-><init>(Landroid/content/Context;Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;)V
 
-    .line 42
     return-void
 .end method
 
@@ -66,10 +60,8 @@
     .param p3, "style"    # Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$AnimationStyle;
 
     .prologue
-    .line 45
     invoke-direct {p0, p1, p2, p3}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;-><init>(Landroid/content/Context;Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$AnimationStyle;)V
 
-    .line 46
     return-void
 .end method
 
@@ -79,7 +71,6 @@
     .locals 1
 
     .prologue
-    .line 30
     invoke-virtual {p0, p1, p2}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshHorizontalScrollView;->createRefreshableView(Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/widget/HorizontalScrollView;
 
     move-result-object v0
@@ -97,58 +88,48 @@
 
     const/4 v5, 0x2
 
-    .line 55
     iget v3, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshHorizontalScrollView;->mRefreshableViewLayout:I
 
     const/4 v4, -0x1
 
     if-eq v3, v4, :cond_1
 
-    .line 57
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v4, 0x9
 
     if-lt v3, v4, :cond_0
 
-    .line 58
     new-instance v1, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshHorizontalScrollView$InternalHorizontalScrollViewSDK9;
 
     invoke-direct {v1, p0, p1, p2}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshHorizontalScrollView$InternalHorizontalScrollViewSDK9;-><init>(Lcom/letv/leui/widget/pulltorefresh/PullToRefreshHorizontalScrollView;Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 59
     .local v1, "scrollView":Landroid/widget/HorizontalScrollView;
     invoke-virtual {v1, v6}, Landroid/widget/HorizontalScrollView;->setId(I)V
 
-    .line 64
     :goto_0
     invoke-virtual {v1, v5}, Landroid/widget/HorizontalScrollView;->setOverScrollMode(I)V
 
-    .line 71
     .end local v1    # "scrollView":Landroid/widget/HorizontalScrollView;
     :goto_1
     return-object v1
 
-    .line 61
     :cond_0
     new-instance v1, Landroid/widget/HorizontalScrollView;
 
     invoke-direct {v1, p1, p2}, Landroid/widget/HorizontalScrollView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 62
     .restart local v1    # "scrollView":Landroid/widget/HorizontalScrollView;
     invoke-virtual {v1, v6}, Landroid/widget/HorizontalScrollView;->setId(I)V
 
     goto :goto_0
 
-    .line 67
     .end local v1    # "scrollView":Landroid/widget/HorizontalScrollView;
     :cond_1
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    .line 68
     .local v0, "inflater":Landroid/view/LayoutInflater;
     iget v3, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshHorizontalScrollView;->mRefreshableViewLayout:I
 
@@ -160,16 +141,13 @@
 
     check-cast v2, Landroid/view/ViewGroup;
 
-    .line 69
     .local v2, "view":Landroid/view/View;
     instance-of v3, v2, Landroid/widget/HorizontalScrollView;
 
     if-eqz v3, :cond_2
 
-    .line 70
     invoke-virtual {v2, v5}, Landroid/view/View;->setOverScrollMode(I)V
 
-    .line 71
     check-cast v2, Landroid/widget/HorizontalScrollView;
 
     .end local v2    # "view":Landroid/view/View;
@@ -177,7 +155,6 @@
 
     goto :goto_1
 
-    .line 73
     .restart local v2    # "view":Landroid/view/View;
     :cond_2
     new-instance v3, Ljava/lang/UnsupportedOperationException;
@@ -193,7 +170,6 @@
     .locals 1
 
     .prologue
-    .line 50
     sget-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Orientation;->HORIZONTAL:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Orientation;
 
     return-object v0
@@ -205,7 +181,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 85
     iget-object v1, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshHorizontalScrollView;->mRefreshableView:Landroid/view/View;
 
     check-cast v1, Landroid/widget/HorizontalScrollView;
@@ -214,11 +189,9 @@
 
     move-result-object v0
 
-    .line 86
     .local v0, "scrollViewChild":Landroid/view/View;
     if-eqz v0, :cond_1
 
-    .line 87
     iget-object v1, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshHorizontalScrollView;->mRefreshableView:Landroid/view/View;
 
     check-cast v1, Landroid/widget/HorizontalScrollView;
@@ -241,20 +214,17 @@
 
     const/4 v1, 0x1
 
-    .line 89
     :goto_0
     return v1
 
     :cond_0
     move v1, v2
 
-    .line 87
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 89
     goto :goto_0
 .end method
 
@@ -262,7 +232,6 @@
     .locals 1
 
     .prologue
-    .line 80
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshHorizontalScrollView;->mRefreshableView:Landroid/view/View;
 
     check-cast v0, Landroid/widget/HorizontalScrollView;

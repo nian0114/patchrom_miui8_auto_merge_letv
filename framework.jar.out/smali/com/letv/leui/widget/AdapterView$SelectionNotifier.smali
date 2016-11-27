@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 849
     .local p0, "this":Lcom/letv/leui/widget/AdapterView$SelectionNotifier;, "Lcom/letv/leui/widget/AdapterView<TT;>.SelectionNotifier;"
     iput-object p1, p0, Lcom/letv/leui/widget/AdapterView$SelectionNotifier;->this$0:Lcom/letv/leui/widget/AdapterView;
 
@@ -41,7 +40,6 @@
     .param p2, "x1"    # Lcom/letv/leui/widget/AdapterView$1;
 
     .prologue
-    .line 849
     .local p0, "this":Lcom/letv/leui/widget/AdapterView$SelectionNotifier;, "Lcom/letv/leui/widget/AdapterView<TT;>.SelectionNotifier;"
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/AdapterView$SelectionNotifier;-><init>(Lcom/letv/leui/widget/AdapterView;)V
 
@@ -54,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 851
     .local p0, "this":Lcom/letv/leui/widget/AdapterView$SelectionNotifier;, "Lcom/letv/leui/widget/AdapterView<TT;>.SelectionNotifier;"
     iget-object v0, p0, Lcom/letv/leui/widget/AdapterView$SelectionNotifier;->this$0:Lcom/letv/leui/widget/AdapterView;
 
@@ -62,7 +59,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 855
     iget-object v0, p0, Lcom/letv/leui/widget/AdapterView$SelectionNotifier;->this$0:Lcom/letv/leui/widget/AdapterView;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
@@ -71,24 +67,20 @@
 
     if-eqz v0, :cond_0
 
-    .line 856
     iget-object v0, p0, Lcom/letv/leui/widget/AdapterView$SelectionNotifier;->this$0:Lcom/letv/leui/widget/AdapterView;
 
     invoke-virtual {v0, p0}, Lcom/letv/leui/widget/AdapterView;->post(Ljava/lang/Runnable;)Z
 
-    .line 862
     :cond_0
     :goto_0
     return-void
 
-    .line 859
     :cond_1
     iget-object v0, p0, Lcom/letv/leui/widget/AdapterView$SelectionNotifier;->this$0:Lcom/letv/leui/widget/AdapterView;
 
     # invokes: Lcom/letv/leui/widget/AdapterView;->fireOnSelected()V
     invoke-static {v0}, Lcom/letv/leui/widget/AdapterView;->access$200(Lcom/letv/leui/widget/AdapterView;)V
 
-    .line 860
     iget-object v0, p0, Lcom/letv/leui/widget/AdapterView$SelectionNotifier;->this$0:Lcom/letv/leui/widget/AdapterView;
 
     # invokes: Lcom/letv/leui/widget/AdapterView;->performAccessibilityActionsOnSelected()V

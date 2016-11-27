@@ -27,12 +27,10 @@
     .locals 0
 
     .prologue
-    .line 472
     iput-object p1, p0, Lcom/qualcomm/qti/biometrics/fingerprint/QFingerprintManager$InvalidListenerException;->this$0:Lcom/qualcomm/qti/biometrics/fingerprint/QFingerprintManager;
 
     invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
 
-    .line 473
     return-void
 .end method
 
@@ -41,12 +39,9 @@
     .param p2, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 475
     iput-object p1, p0, Lcom/qualcomm/qti/biometrics/fingerprint/QFingerprintManager$InvalidListenerException;->this$0:Lcom/qualcomm/qti/biometrics/fingerprint/QFingerprintManager;
 
-    .line 476
     invoke-direct {p0, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 477
     return-void
 .end method

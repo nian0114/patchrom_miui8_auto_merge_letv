@@ -28,13 +28,10 @@
     .param p3, "traceCounter"    # Ljava/lang/String;
 
     .prologue
-    .line 4261
     iput-object p1, p0, Landroid/view/ViewRootImpl$NativePreImeInputStage;->this$0:Landroid/view/ViewRootImpl;
 
-    .line 4262
     invoke-direct {p0, p1, p2, p3}, Landroid/view/ViewRootImpl$AsyncInputStage;-><init>(Landroid/view/ViewRootImpl;Landroid/view/ViewRootImpl$InputStage;Ljava/lang/String;)V
 
-    .line 4263
     return-void
 .end method
 
@@ -46,25 +43,20 @@
     .param p2, "handled"    # Z
 
     .prologue
-    .line 4277
     move-object v0, p1
 
     check-cast v0, Landroid/view/ViewRootImpl$QueuedInputEvent;
 
-    .line 4278
     .local v0, "q":Landroid/view/ViewRootImpl$QueuedInputEvent;
     if-eqz p2, :cond_0
 
-    .line 4279
     const/4 v1, 0x1
 
     invoke-virtual {p0, v0, v1}, Landroid/view/ViewRootImpl$NativePreImeInputStage;->finish(Landroid/view/ViewRootImpl$QueuedInputEvent;Z)V
 
-    .line 4283
     :goto_0
     return-void
 
-    .line 4282
     :cond_0
     invoke-virtual {p0, v0}, Landroid/view/ViewRootImpl$NativePreImeInputStage;->forward(Landroid/view/ViewRootImpl$QueuedInputEvent;)V
 
@@ -76,7 +68,6 @@
     .param p1, "q"    # Landroid/view/ViewRootImpl$QueuedInputEvent;
 
     .prologue
-    .line 4267
     iget-object v0, p0, Landroid/view/ViewRootImpl$NativePreImeInputStage;->this$0:Landroid/view/ViewRootImpl;
 
     iget-object v0, v0, Landroid/view/ViewRootImpl;->mInputQueue:Landroid/view/InputQueue;
@@ -89,7 +80,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 4268
     iget-object v0, p0, Landroid/view/ViewRootImpl$NativePreImeInputStage;->this$0:Landroid/view/ViewRootImpl;
 
     const-string v1, "5: Native pre IME stage"
@@ -97,7 +87,6 @@
     # setter for: Landroid/view/ViewRootImpl;->mKeyEventStatus:Ljava/lang/String;
     invoke-static {v0, v1}, Landroid/view/ViewRootImpl;->access$1102(Landroid/view/ViewRootImpl;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 4269
     iget-object v0, p0, Landroid/view/ViewRootImpl$NativePreImeInputStage;->this$0:Landroid/view/ViewRootImpl;
 
     iget-object v0, v0, Landroid/view/ViewRootImpl;->mInputQueue:Landroid/view/InputQueue;
@@ -108,10 +97,8 @@
 
     invoke-virtual {v0, v1, p1, v2, p0}, Landroid/view/InputQueue;->sendInputEvent(Landroid/view/InputEvent;Ljava/lang/Object;ZLandroid/view/InputQueue$FinishedInputEventCallback;)V
 
-    .line 4270
     const/4 v0, 0x3
 
-    .line 4272
     :goto_0
     return v0
 

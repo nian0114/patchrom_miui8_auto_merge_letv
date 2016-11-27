@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 56
     iput-object p1, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout$AdapterOnScrollListener;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout$1;
 
     .prologue
-    .line 56
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout$AdapterOnScrollListener;-><init>(Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout;)V
 
     return-void
@@ -56,7 +54,6 @@
     .param p4, "totalItemCount"    # I
 
     .prologue
-    .line 70
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout$AdapterOnScrollListener;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout;
 
     # getter for: Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout;->mOnLastItemVisibleListener:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$OnLastItemVisibleListener;
@@ -66,7 +63,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 71
     iget-object v1, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout$AdapterOnScrollListener;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout;
 
     if-lez p4, :cond_2
@@ -83,7 +79,6 @@
     # setter for: Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout;->mLastItemVisible:Z
     invoke-static {v1, v0}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout;->access$102(Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout;Z)Z
 
-    .line 75
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout$AdapterOnScrollListener;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout;
 
@@ -94,7 +89,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 76
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout$AdapterOnScrollListener;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout;
 
     # getter for: Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout;->mOnScrollListener:Landroid/widget/AbsListView$OnScrollListener;
@@ -104,11 +98,9 @@
 
     invoke-interface {v0, p1, p2, p3, p4}, Landroid/widget/AbsListView$OnScrollListener;->onScroll(Landroid/widget/AbsListView;III)V
 
-    .line 78
     :cond_1
     return-void
 
-    .line 71
     :cond_2
     const/4 v0, 0x0
 
@@ -121,7 +113,6 @@
     .param p2, "state"    # I
 
     .prologue
-    .line 85
     if-nez p2, :cond_0
 
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout$AdapterOnScrollListener;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout;
@@ -142,7 +133,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 86
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout$AdapterOnScrollListener;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout;
 
     # getter for: Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout;->mOnLastItemVisibleListener:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$OnLastItemVisibleListener;
@@ -152,7 +142,6 @@
 
     invoke-interface {v0}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$OnLastItemVisibleListener;->onLastItemVisible()V
 
-    .line 89
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout$AdapterOnScrollListener;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout;
 
@@ -163,7 +152,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 90
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout$AdapterOnScrollListener;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout;
 
     # getter for: Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout;->mOnScrollListener:Landroid/widget/AbsListView$OnScrollListener;
@@ -173,7 +161,6 @@
 
     invoke-interface {v0, p1, p2}, Landroid/widget/AbsListView$OnScrollListener;->onScrollStateChanged(Landroid/widget/AbsListView;I)V
 
-    .line 92
     :cond_1
     return-void
 .end method

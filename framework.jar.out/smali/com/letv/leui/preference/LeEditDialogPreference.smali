@@ -15,12 +15,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 36
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/letv/leui/preference/LeEditDialogPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 37
     return-void
 .end method
 
@@ -30,17 +28,14 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 31
     invoke-direct {p0, p1, p2}, Lcom/letv/leui/preference/LeDialogPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 32
     new-instance v0, Landroid/widget/EditText;
 
     invoke-direct {v0, p1, p2}, Landroid/widget/EditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     iput-object v0, p0, Lcom/letv/leui/preference/LeEditDialogPreference;->editText:Landroid/widget/EditText;
 
-    .line 33
     return-void
 .end method
 
@@ -51,17 +46,14 @@
     .param p3, "defStyle"    # I
 
     .prologue
-    .line 26
     invoke-direct {p0, p1, p2, p3}, Lcom/letv/leui/preference/LeDialogPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 27
     new-instance v0, Landroid/widget/EditText;
 
     invoke-direct {v0, p1, p2}, Landroid/widget/EditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     iput-object v0, p0, Lcom/letv/leui/preference/LeEditDialogPreference;->editText:Landroid/widget/EditText;
 
-    .line 28
     return-void
 .end method
 
@@ -70,7 +62,6 @@
     .param p0, "x0"    # Lcom/letv/leui/preference/LeEditDialogPreference;
 
     .prologue
-    .line 11
     iget-object v0, p0, Lcom/letv/leui/preference/LeEditDialogPreference;->editText:Landroid/widget/EditText;
 
     return-object v0
@@ -81,7 +72,6 @@
     .param p0, "x0"    # Lcom/letv/leui/preference/LeEditDialogPreference;
 
     .prologue
-    .line 11
     invoke-virtual {p0}, Lcom/letv/leui/preference/LeEditDialogPreference;->shouldPersist()Z
 
     move-result v0
@@ -95,7 +85,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 11
     invoke-virtual {p0, p1}, Lcom/letv/leui/preference/LeEditDialogPreference;->persistString(Ljava/lang/String;)Z
 
     move-result v0
@@ -108,7 +97,6 @@
     .param p0, "x0"    # Lcom/letv/leui/preference/LeEditDialogPreference;
 
     .prologue
-    .line 11
     invoke-virtual {p0}, Lcom/letv/leui/preference/LeEditDialogPreference;->notifyChanged()V
 
     return-void
@@ -120,7 +108,6 @@
     .locals 1
 
     .prologue
-    .line 18
     iget-object v0, p0, Lcom/letv/leui/preference/LeEditDialogPreference;->text:Ljava/lang/CharSequence;
 
     if-nez v0, :cond_0
@@ -141,17 +128,14 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 41
     invoke-virtual {p0}, Lcom/letv/leui/preference/LeEditDialogPreference;->getText()Ljava/lang/CharSequence;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/preference/LeEditDialogPreference;->setSummary(Ljava/lang/CharSequence;)V
 
-    .line 42
     invoke-super {p0, p1}, Lcom/letv/leui/preference/LeDialogPreference;->onBindView(Landroid/view/View;)V
 
-    .line 43
     return-void
 .end method
 
@@ -161,10 +145,8 @@
     .param p2, "defaultValue"    # Ljava/lang/Object;
 
     .prologue
-    .line 51
     if-eqz p1, :cond_0
 
-    .line 52
     const-string v0, ""
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/preference/LeEditDialogPreference;->getPersistedString(Ljava/lang/String;)Ljava/lang/String;
@@ -173,11 +155,9 @@
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/preference/LeEditDialogPreference;->setText(Ljava/lang/CharSequence;)V
 
-    .line 54
     :cond_0
     invoke-super {p0, p1, p2}, Lcom/letv/leui/preference/LeDialogPreference;->onSetInitialValue(ZLjava/lang/Object;)V
 
-    .line 55
     return-void
 .end method
 
@@ -186,12 +166,10 @@
     .param p1, "dialog"    # Lcom/letv/leui/widget/LeAlertDialog;
 
     .prologue
-    .line 59
     iget-object v0, p0, Lcom/letv/leui/preference/LeEditDialogPreference;->editText:Landroid/widget/EditText;
 
     invoke-virtual {p1, v0}, Lcom/letv/leui/widget/LeAlertDialog;->setContentView(Landroid/view/View;)V
 
-    .line 60
     iget-object v0, p0, Lcom/letv/leui/preference/LeEditDialogPreference;->editText:Landroid/widget/EditText;
 
     invoke-virtual {p0}, Lcom/letv/leui/preference/LeEditDialogPreference;->getText()Ljava/lang/CharSequence;
@@ -200,7 +178,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 62
     invoke-virtual {p0}, Lcom/letv/leui/preference/LeEditDialogPreference;->getPositiveCharSequence()Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -211,7 +188,6 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/letv/leui/widget/LeAlertDialog;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 77
     return-void
 .end method
 
@@ -220,10 +196,8 @@
     .param p1, "text"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 22
     iput-object p1, p0, Lcom/letv/leui/preference/LeEditDialogPreference;->text:Ljava/lang/CharSequence;
 
-    .line 23
     return-void
 .end method
 
@@ -231,7 +205,6 @@
     .locals 1
 
     .prologue
-    .line 46
     const/4 v0, 0x1
 
     return v0

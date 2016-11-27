@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 141
     iput-object p1, p0, Lcom/letv/leui/widget/CustomViewAbove$2;->this$0:Lcom/letv/leui/widget/CustomViewAbove;
 
     invoke-direct {p0}, Lcom/letv/leui/widget/CustomViewAbove$SimpleOnPageChangeListener;-><init>()V
@@ -40,7 +39,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 143
     iget-object v0, p0, Lcom/letv/leui/widget/CustomViewAbove$2;->this$0:Lcom/letv/leui/widget/CustomViewAbove;
 
     # getter for: Lcom/letv/leui/widget/CustomViewAbove;->mViewBehind:Lcom/letv/leui/widget/CustomViewBehind;
@@ -50,15 +48,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 144
     packed-switch p1, :pswitch_data_0
 
-    .line 154
     :cond_0
     :goto_0
     return-void
 
-    .line 147
     :pswitch_0
     iget-object v0, p0, Lcom/letv/leui/widget/CustomViewAbove$2;->this$0:Lcom/letv/leui/widget/CustomViewAbove;
 
@@ -71,7 +66,6 @@
 
     goto :goto_0
 
-    .line 150
     :pswitch_1
     iget-object v0, p0, Lcom/letv/leui/widget/CustomViewAbove$2;->this$0:Lcom/letv/leui/widget/CustomViewAbove;
 
@@ -84,7 +78,6 @@
 
     goto :goto_0
 
-    .line 144
     nop
 
     :pswitch_data_0

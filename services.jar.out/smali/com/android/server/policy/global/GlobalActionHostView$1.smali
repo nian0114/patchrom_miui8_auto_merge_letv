@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 423
     iput-object p1, p0, Lcom/android/server/policy/global/GlobalActionHostView$1;->this$0:Lcom/android/server/policy/global/GlobalActionHostView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,14 +40,12 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 428
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHostView$1;->this$0:Lcom/android/server/policy/global/GlobalActionHostView;
 
     iget-object v0, v0, Lcom/android/server/policy/global/GlobalActionHostView;->mMediatorCallback:Lcom/android/server/policy/global/GlobalActionViewMediator$MediatorCallback;
 
     invoke-interface {v0}, Lcom/android/server/policy/global/GlobalActionViewMediator$MediatorCallback;->onActionStart()V
 
-    .line 430
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHostView$1;->this$0:Lcom/android/server/policy/global/GlobalActionHostView;
 
     # getter for: Lcom/android/server/policy/global/GlobalActionHostView;->mRebootView:Lcom/android/server/policy/global/RebootButton;
@@ -58,7 +55,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 431
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHostView$1;->this$0:Lcom/android/server/policy/global/GlobalActionHostView;
 
     new-instance v1, Lcom/android/server/policy/global/GlobalActionHostView$1$1;
@@ -68,12 +64,10 @@
     # invokes: Lcom/android/server/policy/global/GlobalActionHostView;->reboot(Landroid/animation/Animator$AnimatorListener;)V
     invoke-static {v0, v1}, Lcom/android/server/policy/global/GlobalActionHostView;->access$100(Lcom/android/server/policy/global/GlobalActionHostView;Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 464
     :cond_0
     :goto_0
     return-void
 
-    .line 455
     :cond_1
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHostView$1;->this$0:Lcom/android/server/policy/global/GlobalActionHostView;
 
@@ -84,13 +78,11 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 456
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHostView$1;->this$0:Lcom/android/server/policy/global/GlobalActionHostView;
 
     # invokes: Lcom/android/server/policy/global/GlobalActionHostView;->cancel()V
     invoke-static {v0}, Lcom/android/server/policy/global/GlobalActionHostView;->access$300(Lcom/android/server/policy/global/GlobalActionHostView;)V
 
-    .line 457
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V

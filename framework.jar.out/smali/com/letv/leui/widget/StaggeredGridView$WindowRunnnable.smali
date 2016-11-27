@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 3296
     iput-object p1, p0, Lcom/letv/leui/widget/StaggeredGridView$WindowRunnnable;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "x1"    # Lcom/letv/leui/widget/StaggeredGridView$1;
 
     .prologue
-    .line 3296
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/StaggeredGridView$WindowRunnnable;-><init>(Lcom/letv/leui/widget/StaggeredGridView;)V
 
     return-void
@@ -51,7 +49,6 @@
     .locals 1
 
     .prologue
-    .line 3300
     iget-object v0, p0, Lcom/letv/leui/widget/StaggeredGridView$WindowRunnnable;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     # invokes: Lcom/letv/leui/widget/StaggeredGridView;->getWindowAttachCount()I
@@ -61,7 +58,6 @@
 
     iput v0, p0, Lcom/letv/leui/widget/StaggeredGridView$WindowRunnnable;->mOriginalAttachCount:I
 
-    .line 3301
     return-void
 .end method
 
@@ -69,7 +65,6 @@
     .locals 2
 
     .prologue
-    .line 3304
     iget-object v0, p0, Lcom/letv/leui/widget/StaggeredGridView$WindowRunnnable;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/StaggeredGridView;->hasWindowFocus()Z

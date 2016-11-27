@@ -38,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 17
     const/4 v0, 0x1
 
     sput-boolean v0, Landroid/app/AccessControlManager;->DEBUG:Z
@@ -52,16 +51,12 @@
     .param p2, "service"    # Landroid/app/IAccessControlManager;
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     iput-object p1, p0, Landroid/app/AccessControlManager;->mContext:Landroid/content/Context;
 
-    .line 41
     iput-object p2, p0, Landroid/app/AccessControlManager;->mService:Landroid/app/IAccessControlManager;
 
-    .line 42
     return-void
 .end method
 
@@ -73,7 +68,6 @@
     .param p2, "type"    # I
 
     .prologue
-    .line 84
     :try_start_0
     iget-object v1, p0, Landroid/app/AccessControlManager;->mService:Landroid/app/IAccessControlManager;
 
@@ -81,15 +75,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 89
     :goto_0
     return-void
 
-    .line 85
     :catch_0
     move-exception v0
 
-    .line 86
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "AccessControlManager"
 
@@ -97,7 +88,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 87
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
@@ -108,7 +98,6 @@
     .param p1, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 65
     :try_start_0
     iget-object v1, p0, Landroid/app/AccessControlManager;->mService:Landroid/app/IAccessControlManager;
 
@@ -118,15 +107,12 @@
 
     move-result v1
 
-    .line 70
     :goto_0
     return v1
 
-    .line 66
     :catch_0
     move-exception v0
 
-    .line 67
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "AccessControlManager"
 
@@ -134,10 +120,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 68
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 70
     const/4 v1, 0x0
 
     goto :goto_0
@@ -156,7 +140,6 @@
     .end annotation
 
     .prologue
-    .line 112
     :try_start_0
     iget-object v1, p0, Landroid/app/AccessControlManager;->mService:Landroid/app/IAccessControlManager;
 
@@ -166,15 +149,12 @@
 
     move-result-object v1
 
-    .line 117
     :goto_0
     return-object v1
 
-    .line 113
     :catch_0
     move-exception v0
 
-    .line 114
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "AccessControlManager"
 
@@ -182,10 +162,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 115
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 117
     const/4 v1, 0x0
 
     goto :goto_0
@@ -204,7 +182,6 @@
     .end annotation
 
     .prologue
-    .line 102
     :try_start_0
     iget-object v1, p0, Landroid/app/AccessControlManager;->mService:Landroid/app/IAccessControlManager;
 
@@ -214,15 +191,12 @@
 
     move-result-object v1
 
-    .line 107
     :goto_0
     return-object v1
 
-    .line 103
     :catch_0
     move-exception v0
 
-    .line 104
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "AccessControlManager"
 
@@ -230,10 +204,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 105
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 107
     const/4 v1, 0x0
 
     goto :goto_0
@@ -243,7 +215,6 @@
     .locals 3
 
     .prologue
-    .line 55
     :try_start_0
     iget-object v1, p0, Landroid/app/AccessControlManager;->mService:Landroid/app/IAccessControlManager;
 
@@ -253,26 +224,21 @@
 
     move-result v1
 
-    .line 60
     :goto_0
     return v1
 
-    .line 56
     :catch_0
     move-exception v0
 
-    .line 57
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "AccessControlManager"
 
-    const-string/jumbo v2, "isAccessControlEnable got an exception"
+    const-string v2, "isAccessControlEnable got an exception"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 58
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 60
     const/4 v1, 0x0
 
     goto :goto_0
@@ -282,7 +248,6 @@
     .locals 3
 
     .prologue
-    .line 122
     :try_start_0
     iget-object v1, p0, Landroid/app/AccessControlManager;->mService:Landroid/app/IAccessControlManager;
 
@@ -290,23 +255,19 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 127
     :goto_0
     return-void
 
-    .line 123
     :catch_0
     move-exception v0
 
-    .line 124
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "AccessControlManager"
 
-    const-string/jumbo v2, "lockScreen got an exception"
+    const-string v2, "lockScreen got an exception"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 125
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
@@ -317,7 +278,6 @@
     .param p1, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 93
     :try_start_0
     iget-object v1, p0, Landroid/app/AccessControlManager;->mService:Landroid/app/IAccessControlManager;
 
@@ -325,23 +285,19 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 98
     :goto_0
     return-void
 
-    .line 94
     :catch_0
     move-exception v0
 
-    .line 95
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "AccessControlManager"
 
-    const-string/jumbo v2, "removeAccessControlPackage got an exception"
+    const-string v2, "removeAccessControlPackage got an exception"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 96
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
@@ -351,7 +307,6 @@
     .locals 3
 
     .prologue
-    .line 131
     :try_start_0
     iget-object v1, p0, Landroid/app/AccessControlManager;->mService:Landroid/app/IAccessControlManager;
 
@@ -359,23 +314,19 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 136
     :goto_0
     return-void
 
-    .line 132
     :catch_0
     move-exception v0
 
-    .line 133
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "AccessControlManager"
 
-    const-string/jumbo v2, "screenTurnOn got an exception"
+    const-string v2, "screenTurnOn got an exception"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 134
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
@@ -386,7 +337,6 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 46
     :try_start_0
     iget-object v1, p0, Landroid/app/AccessControlManager;->mService:Landroid/app/IAccessControlManager;
 
@@ -394,23 +344,19 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 51
     :goto_0
     return-void
 
-    .line 47
     :catch_0
     move-exception v0
 
-    .line 48
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "AccessControlManager"
 
-    const-string/jumbo v2, "setAccessControlEnable got an exception"
+    const-string v2, "setAccessControlEnable got an exception"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 49
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
@@ -422,7 +368,6 @@
     .param p2, "ignore"    # Z
 
     .prologue
-    .line 75
     :try_start_0
     iget-object v1, p0, Landroid/app/AccessControlManager;->mService:Landroid/app/IAccessControlManager;
 
@@ -430,23 +375,19 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 80
     :goto_0
     return-void
 
-    .line 76
     :catch_0
     move-exception v0
 
-    .line 77
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "AccessControlManager"
 
-    const-string/jumbo v2, "setAppIgnoreCheckAccess got an exception"
+    const-string v2, "setAppIgnoreCheckAccess got an exception"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 78
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0

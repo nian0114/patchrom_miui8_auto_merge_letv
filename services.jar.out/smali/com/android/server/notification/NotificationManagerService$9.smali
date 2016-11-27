@@ -50,7 +50,6 @@
     .locals 0
 
     .prologue
-    .line 3041
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$9;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iput-object p2, p0, Lcom/android/server/notification/NotificationManagerService$9;->val$listener:Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;
@@ -88,7 +87,6 @@
     .locals 18
 
     .prologue
-    .line 3044
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$9;->val$listener:Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;
@@ -97,7 +95,6 @@
 
     const/4 v10, 0x0
 
-    .line 3045
     .local v10, "listenerName":Ljava/lang/String;
     :goto_0
     sget-boolean v1, Lcom/android/server/notification/NotificationManagerService;->DBG:Z
@@ -142,7 +139,6 @@
 
     invoke-static/range {v1 .. v10}, Lcom/android/server/EventLogTags;->writeNotificationCancel(IILjava/lang/String;ILjava/lang/String;IIIILjava/lang/String;)V
 
-    .line 3048
     :cond_0
     move-object/from16 v0, p0
 
@@ -152,10 +148,8 @@
 
     monitor-enter v7
 
-    .line 3049
     const/16 v17, -0x1
 
-    .line 3052
     .local v17, "index":I
     :try_start_0
     move-object/from16 v0, p0
@@ -182,7 +176,6 @@
     :cond_1
     const/4 v6, 0x1
 
-    .line 3054
     .local v6, "isShadowProc":Z
     :goto_1
     move-object/from16 v0, p0
@@ -209,7 +202,6 @@
 
     move-result v17
 
-    .line 3055
     sget-boolean v1, Lcom/android/server/notification/NotificationManagerService;->DBG:Z
 
     if-eqz v1, :cond_2
@@ -276,11 +268,9 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3057
     :cond_2
     if-ltz v17, :cond_8
 
-    .line 3058
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$9;->this$0:Lcom/android/server/notification/NotificationManagerService;
@@ -295,7 +285,6 @@
 
     check-cast v12, Lcom/android/server/notification/NotificationRecord;
 
-    .line 3062
     .local v12, "r":Lcom/android/server/notification/NotificationRecord;
     move-object/from16 v0, p0
 
@@ -305,7 +294,6 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 3063
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$9;->this$0:Lcom/android/server/notification/NotificationManagerService;
@@ -317,7 +305,6 @@
 
     invoke-virtual {v1, v12}, Lcom/android/server/notification/NotificationUsageStats;->registerClickedByUser(Lcom/android/server/notification/NotificationRecord;)V
 
-    .line 3066
     :cond_3
     invoke-virtual {v12}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
@@ -337,17 +324,14 @@
 
     if-eq v1, v2, :cond_6
 
-    .line 3067
     monitor-exit v7
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3081
     .end local v12    # "r":Lcom/android/server/notification/NotificationRecord;
     :goto_2
     return-void
 
-    .line 3044
     .end local v6    # "isShadowProc":Z
     .end local v10    # "listenerName":Ljava/lang/String;
     .end local v17    # "index":I
@@ -364,7 +348,6 @@
 
     goto/16 :goto_0
 
-    .line 3052
     .restart local v10    # "listenerName":Ljava/lang/String;
     .restart local v17    # "index":I
     :cond_5
@@ -372,7 +355,6 @@
 
     goto/16 :goto_1
 
-    .line 3069
     .restart local v6    # "isShadowProc":Z
     .restart local v12    # "r":Lcom/android/server/notification/NotificationRecord;
     :cond_6
@@ -391,12 +373,10 @@
 
     if-eqz v1, :cond_7
 
-    .line 3070
     monitor-exit v7
 
     goto :goto_2
 
-    .line 3080
     .end local v6    # "isShadowProc":Z
     .end local v12    # "r":Lcom/android/server/notification/NotificationRecord;
     :catchall_0
@@ -408,7 +388,6 @@
 
     throw v1
 
-    .line 3073
     .restart local v6    # "isShadowProc":Z
     .restart local v12    # "r":Lcom/android/server/notification/NotificationRecord;
     :cond_7
@@ -423,7 +402,6 @@
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 3075
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$9;->this$0:Lcom/android/server/notification/NotificationManagerService;
@@ -439,7 +417,6 @@
     # invokes: Lcom/android/server/notification/NotificationManagerService;->cancelNotificationLocked(Lcom/android/server/notification/NotificationRecord;ZI)V
     invoke-static {v1, v12, v2, v3}, Lcom/android/server/notification/NotificationManagerService;->access$5600(Lcom/android/server/notification/NotificationManagerService;Lcom/android/server/notification/NotificationRecord;ZI)V
 
-    .line 3076
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/server/notification/NotificationManagerService$9;->this$0:Lcom/android/server/notification/NotificationManagerService;
@@ -459,14 +436,12 @@
     # invokes: Lcom/android/server/notification/NotificationManagerService;->cancelGroupChildrenLocked(Lcom/android/server/notification/NotificationRecord;IILjava/lang/String;I)V
     invoke-static/range {v11 .. v16}, Lcom/android/server/notification/NotificationManagerService;->access$5700(Lcom/android/server/notification/NotificationManagerService;Lcom/android/server/notification/NotificationRecord;IILjava/lang/String;I)V
 
-    .line 3078
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/notification/NotificationManagerService$9;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-virtual {v1}, Lcom/android/server/notification/NotificationManagerService;->updateLightsLocked()V
 
-    .line 3080
     .end local v12    # "r":Lcom/android/server/notification/NotificationRecord;
     :cond_8
     monitor-exit v7

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 62
     iput-object p1, p0, Lcom/letv/leui/widget/LcSearchView$1;->this$0:Lcom/letv/leui/widget/LcSearchView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 1
 
     .prologue
-    .line 64
     iget-object v0, p0, Lcom/letv/leui/widget/LcSearchView$1;->this$0:Lcom/letv/leui/widget/LcSearchView;
 
     # invokes: Lcom/letv/leui/widget/LcSearchView;->updateFocusedState()V
     invoke-static {v0}, Lcom/letv/leui/widget/LcSearchView;->access$000(Lcom/letv/leui/widget/LcSearchView;)V
 
-    .line 65
     return-void
 .end method

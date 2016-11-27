@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 83
     invoke-static {}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;->values()[Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
 
     move-result-object v0

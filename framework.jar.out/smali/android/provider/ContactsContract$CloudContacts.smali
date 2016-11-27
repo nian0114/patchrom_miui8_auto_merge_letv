@@ -53,7 +53,6 @@
     .locals 2
 
     .prologue
-    .line 10265
     const-string v0, "content://com.leui.provider.cloudcontacts"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -62,7 +61,6 @@
 
     sput-object v0, Landroid/provider/ContactsContract$CloudContacts;->AUTHORITY_URI:Landroid/net/Uri;
 
-    .line 10266
     sget-object v0, Landroid/provider/ContactsContract$CloudContacts;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "directories"
@@ -73,7 +71,6 @@
 
     sput-object v0, Landroid/provider/ContactsContract$CloudContacts;->DIRECTOR_URI:Landroid/net/Uri;
 
-    .line 10267
     sget-object v0, Landroid/provider/ContactsContract$CloudContacts;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "contacts"
@@ -84,7 +81,6 @@
 
     sput-object v0, Landroid/provider/ContactsContract$CloudContacts;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 10269
     sget-object v0, Landroid/provider/ContactsContract$CloudContacts;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "filter"
@@ -95,10 +91,9 @@
 
     sput-object v0, Landroid/provider/ContactsContract$CloudContacts;->CONTENT_FILTER_URI:Landroid/net/Uri;
 
-    .line 10270
     sget-object v0, Landroid/provider/ContactsContract$CloudContacts;->CONTENT_URI:Landroid/net/Uri;
 
-    const-string/jumbo v1, "number"
+    const-string v1, "number"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -113,7 +108,6 @@
     .locals 0
 
     .prologue
-    .line 10261
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -128,7 +122,6 @@
 
     const/4 v5, 0x0
 
-    .line 10305
     sget-object v1, Landroid/provider/ContactsContract$CloudContacts;->DIRECTOR_URI:Landroid/net/Uri;
 
     new-array v2, v4, [Ljava/lang/String;
@@ -153,7 +146,6 @@
 
     move-result-object v6
 
-    .line 10307
     .local v6, "c":Landroid/database/Cursor;
     invoke-interface {v6}, Landroid/database/Cursor;->getCount()I
 
@@ -161,18 +153,14 @@
 
     if-nez v0, :cond_0
 
-    .line 10308
     const-wide/16 v0, -0x1
 
-    .line 10314
     :goto_0
     return-wide v0
 
-    .line 10310
     :cond_0
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 10312
     const/4 v0, 0x0
 
     :try_start_0
@@ -182,7 +170,6 @@
 
     move-result-wide v0
 
-    .line 10314
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     goto :goto_0

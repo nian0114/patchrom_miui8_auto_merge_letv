@@ -30,18 +30,14 @@
     .param p3, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 301
     iput-object p1, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView$InternalListView;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;
 
-    .line 302
     invoke-direct {p0, p2, p3}, Landroid/widget/ListView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 299
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView$InternalListView;->mAddedLvFooter:Z
 
-    .line 303
     return-void
 .end method
 
@@ -52,21 +48,17 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 313
     :try_start_0
     invoke-super {p0, p1}, Landroid/widget/ListView;->dispatchDraw(Landroid/graphics/Canvas;)V
     :try_end_0
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 317
     :goto_0
     return-void
 
-    .line 314
     :catch_0
     move-exception v0
 
-    .line 315
     .local v0, "e":Ljava/lang/IndexOutOfBoundsException;
     invoke-virtual {v0}, Ljava/lang/IndexOutOfBoundsException;->printStackTrace()V
 
@@ -78,7 +70,6 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 327
     :try_start_0
     invoke-super {p0, p1}, Landroid/widget/ListView;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
     :try_end_0
@@ -86,19 +77,15 @@
 
     move-result v1
 
-    .line 330
     :goto_0
     return v1
 
-    .line 328
     :catch_0
     move-exception v0
 
-    .line 329
     .local v0, "e":Ljava/lang/IndexOutOfBoundsException;
     invoke-virtual {v0}, Ljava/lang/IndexOutOfBoundsException;->printStackTrace()V
 
-    .line 330
     const/4 v1, 0x0
 
     goto :goto_0
@@ -108,7 +95,6 @@
     .locals 0
 
     .prologue
-    .line 297
     check-cast p1, Landroid/widget/ListAdapter;
 
     invoke-virtual {p0, p1}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView$InternalListView;->setAdapter(Landroid/widget/ListAdapter;)V
@@ -121,7 +107,6 @@
     .param p1, "adapter"    # Landroid/widget/ListAdapter;
 
     .prologue
-    .line 337
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView$InternalListView;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;
 
     # getter for: Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->mLvFooterLoadingFrame:Landroid/widget/FrameLayout;
@@ -135,7 +120,6 @@
 
     if-nez v0, :cond_0
 
-    .line 338
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView$InternalListView;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;
 
     # getter for: Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->mLvFooterLoadingFrame:Landroid/widget/FrameLayout;
@@ -149,16 +133,13 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView$InternalListView;->addFooterView(Landroid/view/View;Ljava/lang/Object;Z)V
 
-    .line 339
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView$InternalListView;->mAddedLvFooter:Z
 
-    .line 342
     :cond_0
     invoke-super {p0, p1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 343
     return-void
 .end method
 
@@ -167,12 +148,10 @@
     .param p1, "emptyView"    # Landroid/view/View;
 
     .prologue
-    .line 347
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView$InternalListView;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->setEmptyView(Landroid/view/View;)V
 
-    .line 348
     return-void
 .end method
 
@@ -181,9 +160,7 @@
     .param p1, "emptyView"    # Landroid/view/View;
 
     .prologue
-    .line 352
     invoke-super {p0, p1}, Landroid/widget/ListView;->setEmptyView(Landroid/view/View;)V
 
-    .line 353
     return-void
 .end method

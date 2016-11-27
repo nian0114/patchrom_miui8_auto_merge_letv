@@ -259,7 +259,6 @@
 
     const/4 v3, 0x0
 
-    .line 4
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "flv_350"
@@ -268,7 +267,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->flv_350:Lcom/letv/tracker/enums/StreamType;
 
-    .line 5
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_3gp_320X240"
@@ -277,7 +275,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_3gp_320X240:Lcom/letv/tracker/enums/StreamType;
 
-    .line 6
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "flv_enp"
@@ -286,7 +283,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->flv_enp:Lcom/letv/tracker/enums/StreamType;
 
-    .line 7
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "chinafilm_350"
@@ -295,7 +291,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->chinafilm_350:Lcom/letv/tracker/enums/StreamType;
 
-    .line 8
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "flv_vip"
@@ -304,7 +299,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->flv_vip:Lcom/letv/tracker/enums/StreamType;
 
-    .line 9
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "flv_live"
@@ -315,7 +309,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->flv_live:Lcom/letv/tracker/enums/StreamType;
 
-    .line 10
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "union_low"
@@ -326,7 +319,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->union_low:Lcom/letv/tracker/enums/StreamType;
 
-    .line 11
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "union_high"
@@ -337,7 +329,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->union_high:Lcom/letv/tracker/enums/StreamType;
 
-    .line 12
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "mp4_800"
@@ -348,7 +339,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->mp4_800:Lcom/letv/tracker/enums/StreamType;
 
-    .line 13
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "flv_1000"
@@ -359,7 +349,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->flv_1000:Lcom/letv/tracker/enums/StreamType;
 
-    .line 14
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "flv_1300"
@@ -370,7 +359,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->flv_1300:Lcom/letv/tracker/enums/StreamType;
 
-    .line 15
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "flv_720p"
@@ -381,7 +369,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->flv_720p:Lcom/letv/tracker/enums/StreamType;
 
-    .line 16
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "mp4_1080p"
@@ -392,7 +379,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->mp4_1080p:Lcom/letv/tracker/enums/StreamType;
 
-    .line 17
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "flv_1080p6m"
@@ -403,7 +389,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->flv_1080p6m:Lcom/letv/tracker/enums/StreamType;
 
-    .line 18
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "mp4_350"
@@ -414,7 +399,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->mp4_350:Lcom/letv/tracker/enums/StreamType;
 
-    .line 19
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "mp4_1300"
@@ -425,7 +409,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->mp4_1300:Lcom/letv/tracker/enums/StreamType;
 
-    .line 20
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "mp4_800_db"
@@ -436,7 +419,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->mp4_800_db:Lcom/letv/tracker/enums/StreamType;
 
-    .line 21
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "mp4_1300_db"
@@ -447,7 +429,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->mp4_1300_db:Lcom/letv/tracker/enums/StreamType;
 
-    .line 22
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "mp4_720p_db"
@@ -458,7 +439,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->mp4_720p_db:Lcom/letv/tracker/enums/StreamType;
 
-    .line 23
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "mp4_1080p6m_db"
@@ -469,7 +449,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->mp4_1080p6m_db:Lcom/letv/tracker/enums/StreamType;
 
-    .line 24
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "flv_yuanhua"
@@ -480,7 +459,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->flv_yuanhua:Lcom/letv/tracker/enums/StreamType;
 
-    .line 25
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "mp4_yuanhua"
@@ -491,7 +469,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->mp4_yuanhua:Lcom/letv/tracker/enums/StreamType;
 
-    .line 26
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "flv_720p_3d"
@@ -502,7 +479,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->flv_720p_3d:Lcom/letv/tracker/enums/StreamType;
 
-    .line 27
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "mp4_720p_3d"
@@ -513,7 +489,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->mp4_720p_3d:Lcom/letv/tracker/enums/StreamType;
 
-    .line 28
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "flv_1080p6m_3d"
@@ -524,7 +499,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->flv_1080p6m_3d:Lcom/letv/tracker/enums/StreamType;
 
-    .line 29
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "mp4_1080p6m_3d"
@@ -535,7 +509,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->mp4_1080p6m_3d:Lcom/letv/tracker/enums/StreamType;
 
-    .line 30
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "flv_1080p_3d"
@@ -546,7 +519,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->flv_1080p_3d:Lcom/letv/tracker/enums/StreamType;
 
-    .line 31
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "mp4_1080p_3d"
@@ -557,7 +529,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->mp4_1080p_3d:Lcom/letv/tracker/enums/StreamType;
 
-    .line 32
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "flv_1080p3m"
@@ -568,7 +539,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->flv_1080p3m:Lcom/letv/tracker/enums/StreamType;
 
-    .line 33
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "flv_4k"
@@ -579,7 +549,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->flv_4k:Lcom/letv/tracker/enums/StreamType;
 
-    .line 34
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "flv_4k_265"
@@ -590,7 +559,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->flv_4k_265:Lcom/letv/tracker/enums/StreamType;
 
-    .line 35
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "flv_3m_3d"
@@ -601,7 +569,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->flv_3m_3d:Lcom/letv/tracker/enums/StreamType;
 
-    .line 36
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "h265_flv_800"
@@ -612,7 +579,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->h265_flv_800:Lcom/letv/tracker/enums/StreamType;
 
-    .line 37
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "h265_flv_1300"
@@ -623,7 +589,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->h265_flv_1300:Lcom/letv/tracker/enums/StreamType;
 
-    .line 38
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "h265_flv_720p"
@@ -634,7 +599,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->h265_flv_720p:Lcom/letv/tracker/enums/StreamType;
 
-    .line 39
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "h265_flv_1080p"
@@ -645,7 +609,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->h265_flv_1080p:Lcom/letv/tracker/enums/StreamType;
 
-    .line 40
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "mp4_720p"
@@ -656,7 +619,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->mp4_720p:Lcom/letv/tracker/enums/StreamType;
 
-    .line 41
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "mp4_1080p3m"
@@ -667,7 +629,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->mp4_1080p3m:Lcom/letv/tracker/enums/StreamType;
 
-    .line 42
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "mp4_1080p6m"
@@ -678,7 +639,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->mp4_1080p6m:Lcom/letv/tracker/enums/StreamType;
 
-    .line 43
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "mp4_4k"
@@ -689,7 +649,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->mp4_4k:Lcom/letv/tracker/enums/StreamType;
 
-    .line 44
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "mp4_4k_15m"
@@ -700,7 +659,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->mp4_4k_15m:Lcom/letv/tracker/enums/StreamType;
 
-    .line 45
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "flv_180"
@@ -711,7 +669,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->flv_180:Lcom/letv/tracker/enums/StreamType;
 
-    .line 46
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "mp4_180"
@@ -722,7 +679,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->mp4_180:Lcom/letv/tracker/enums/StreamType;
 
-    .line 47
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "mp4_4k_db"
@@ -733,7 +689,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->mp4_4k_db:Lcom/letv/tracker/enums/StreamType;
 
-    .line 48
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "baseline_marlin"
@@ -744,7 +699,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->baseline_marlin:Lcom/letv/tracker/enums/StreamType;
 
-    .line 49
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "baseline_access"
@@ -755,7 +709,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->baseline_access:Lcom/letv/tracker/enums/StreamType;
 
-    .line 50
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_180_marlin"
@@ -766,7 +719,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_180_marlin:Lcom/letv/tracker/enums/StreamType;
 
-    .line 51
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_180_access"
@@ -777,7 +729,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_180_access:Lcom/letv/tracker/enums/StreamType;
 
-    .line 52
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_350_marlin"
@@ -788,7 +739,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_350_marlin:Lcom/letv/tracker/enums/StreamType;
 
-    .line 53
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_350_access"
@@ -799,7 +749,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_350_access:Lcom/letv/tracker/enums/StreamType;
 
-    .line 54
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_800_marlin"
@@ -810,7 +759,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_800_marlin:Lcom/letv/tracker/enums/StreamType;
 
-    .line 55
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_800_access"
@@ -821,7 +769,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_800_access:Lcom/letv/tracker/enums/StreamType;
 
-    .line 56
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_1300_marlin"
@@ -832,7 +779,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_1300_marlin:Lcom/letv/tracker/enums/StreamType;
 
-    .line 57
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_1300_access"
@@ -843,7 +789,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_1300_access:Lcom/letv/tracker/enums/StreamType;
 
-    .line 58
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_720p_marlin"
@@ -854,7 +799,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_720p_marlin:Lcom/letv/tracker/enums/StreamType;
 
-    .line 59
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_720p_access"
@@ -865,7 +809,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_720p_access:Lcom/letv/tracker/enums/StreamType;
 
-    .line 60
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_1080p3m_marlin"
@@ -876,7 +819,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_1080p3m_marlin:Lcom/letv/tracker/enums/StreamType;
 
-    .line 61
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_1080p3m_access"
@@ -887,7 +829,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_1080p3m_access:Lcom/letv/tracker/enums/StreamType;
 
-    .line 62
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_1080p6m_marlin"
@@ -898,7 +839,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_1080p6m_marlin:Lcom/letv/tracker/enums/StreamType;
 
-    .line 63
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_1080p6m_access"
@@ -909,7 +849,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_1080p6m_access:Lcom/letv/tracker/enums/StreamType;
 
-    .line 64
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_1080p15m_marlin"
@@ -920,7 +859,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_1080p15m_marlin:Lcom/letv/tracker/enums/StreamType;
 
-    .line 65
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_1080p15m_access"
@@ -931,7 +869,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_1080p15m_access:Lcom/letv/tracker/enums/StreamType;
 
-    .line 66
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_4k_marlin"
@@ -942,7 +879,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_4k_marlin:Lcom/letv/tracker/enums/StreamType;
 
-    .line 67
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_4k_access"
@@ -953,7 +889,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_4k_access:Lcom/letv/tracker/enums/StreamType;
 
-    .line 68
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_4k15m_marlin"
@@ -964,7 +899,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_4k15m_marlin:Lcom/letv/tracker/enums/StreamType;
 
-    .line 69
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_4k15m_access"
@@ -975,7 +909,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_4k15m_access:Lcom/letv/tracker/enums/StreamType;
 
-    .line 70
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_4k30m_marlin"
@@ -986,7 +919,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_4k30m_marlin:Lcom/letv/tracker/enums/StreamType;
 
-    .line 71
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_4k30m_access"
@@ -997,7 +929,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_4k30m_access:Lcom/letv/tracker/enums/StreamType;
 
-    .line 72
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_800_db_marlin"
@@ -1008,7 +939,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_800_db_marlin:Lcom/letv/tracker/enums/StreamType;
 
-    .line 73
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_800_db_access"
@@ -1019,7 +949,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_800_db_access:Lcom/letv/tracker/enums/StreamType;
 
-    .line 74
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_1300_db_marlin"
@@ -1030,7 +959,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_1300_db_marlin:Lcom/letv/tracker/enums/StreamType;
 
-    .line 75
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_1300_db_access"
@@ -1041,7 +969,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_1300_db_access:Lcom/letv/tracker/enums/StreamType;
 
-    .line 76
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_720p_db_marlin"
@@ -1052,7 +979,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_720p_db_marlin:Lcom/letv/tracker/enums/StreamType;
 
-    .line 77
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_720p_db_access"
@@ -1063,7 +989,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_720p_db_access:Lcom/letv/tracker/enums/StreamType;
 
-    .line 78
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_1080p3m_db_marlin"
@@ -1074,7 +999,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_1080p3m_db_marlin:Lcom/letv/tracker/enums/StreamType;
 
-    .line 79
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_1080p3m_db_access"
@@ -1085,7 +1009,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_1080p3m_db_access:Lcom/letv/tracker/enums/StreamType;
 
-    .line 80
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_1080p6m_db_marlin"
@@ -1096,7 +1019,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_1080p6m_db_marlin:Lcom/letv/tracker/enums/StreamType;
 
-    .line 81
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_1080p6m_db_access"
@@ -1107,7 +1029,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_1080p6m_db_access:Lcom/letv/tracker/enums/StreamType;
 
-    .line 82
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_1080p15m_db_marlin"
@@ -1118,7 +1039,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_1080p15m_db_marlin:Lcom/letv/tracker/enums/StreamType;
 
-    .line 83
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_1080p15m_db_access"
@@ -1129,7 +1049,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_1080p15m_db_access:Lcom/letv/tracker/enums/StreamType;
 
-    .line 84
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_4k_db_marlin"
@@ -1140,7 +1059,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_4k_db_marlin:Lcom/letv/tracker/enums/StreamType;
 
-    .line 85
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_4k_db_access"
@@ -1151,7 +1069,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_4k_db_access:Lcom/letv/tracker/enums/StreamType;
 
-    .line 86
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_4k15m_db_marlin"
@@ -1162,7 +1079,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_4k15m_db_marlin:Lcom/letv/tracker/enums/StreamType;
 
-    .line 87
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_4k15m_db_access"
@@ -1173,7 +1089,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_4k15m_db_access:Lcom/letv/tracker/enums/StreamType;
 
-    .line 88
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_4k30m_db_marlin"
@@ -1184,7 +1099,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_4k30m_db_marlin:Lcom/letv/tracker/enums/StreamType;
 
-    .line 89
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_4k30m_db_access"
@@ -1195,7 +1109,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_4k30m_db_access:Lcom/letv/tracker/enums/StreamType;
 
-    .line 90
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_720p_3d_marlin"
@@ -1206,7 +1119,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_720p_3d_marlin:Lcom/letv/tracker/enums/StreamType;
 
-    .line 91
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_720p_3d_access"
@@ -1217,7 +1129,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_720p_3d_access:Lcom/letv/tracker/enums/StreamType;
 
-    .line 92
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_1080p3m_3d_marlin"
@@ -1228,7 +1139,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_1080p3m_3d_marlin:Lcom/letv/tracker/enums/StreamType;
 
-    .line 93
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_1080p3m_3d_access"
@@ -1239,7 +1149,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_1080p3m_3d_access:Lcom/letv/tracker/enums/StreamType;
 
-    .line 94
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_1080p6m_3d_marlin"
@@ -1250,7 +1159,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_1080p6m_3d_marlin:Lcom/letv/tracker/enums/StreamType;
 
-    .line 95
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_1080p6m_3d_access"
@@ -1261,7 +1169,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_1080p6m_3d_access:Lcom/letv/tracker/enums/StreamType;
 
-    .line 96
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_1080p15m_3d_marlin"
@@ -1272,7 +1179,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_1080p15m_3d_marlin:Lcom/letv/tracker/enums/StreamType;
 
-    .line 97
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_1080p15m_3d_access"
@@ -1283,7 +1189,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_1080p15m_3d_access:Lcom/letv/tracker/enums/StreamType;
 
-    .line 98
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_4k_3d_marlin"
@@ -1294,7 +1199,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_4k_3d_marlin:Lcom/letv/tracker/enums/StreamType;
 
-    .line 99
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_4k_3d_access"
@@ -1305,7 +1209,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_4k_3d_access:Lcom/letv/tracker/enums/StreamType;
 
-    .line 100
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_4k15m_3d_marlin"
@@ -1316,7 +1219,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_4k15m_3d_marlin:Lcom/letv/tracker/enums/StreamType;
 
-    .line 101
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_4k15m_3d_access"
@@ -1327,7 +1229,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_4k15m_3d_access:Lcom/letv/tracker/enums/StreamType;
 
-    .line 102
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_4k30m_3d_marlin"
@@ -1338,7 +1239,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_4k30m_3d_marlin:Lcom/letv/tracker/enums/StreamType;
 
-    .line 103
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "_4k30m_3d_access"
@@ -1349,7 +1249,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->_4k30m_3d_access:Lcom/letv/tracker/enums/StreamType;
 
-    .line 104
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "mp4_180_logo"
@@ -1360,7 +1259,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->mp4_180_logo:Lcom/letv/tracker/enums/StreamType;
 
-    .line 105
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "mp4_350_logo"
@@ -1371,7 +1269,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->mp4_350_logo:Lcom/letv/tracker/enums/StreamType;
 
-    .line 106
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "mp4_800_logo"
@@ -1382,7 +1279,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->mp4_800_logo:Lcom/letv/tracker/enums/StreamType;
 
-    .line 107
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "mp4_180_h265"
@@ -1393,7 +1289,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->mp4_180_h265:Lcom/letv/tracker/enums/StreamType;
 
-    .line 108
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "mp4_350_h265"
@@ -1404,7 +1299,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->mp4_350_h265:Lcom/letv/tracker/enums/StreamType;
 
-    .line 109
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "mp4_800_h265"
@@ -1415,7 +1309,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->mp4_800_h265:Lcom/letv/tracker/enums/StreamType;
 
-    .line 110
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "mp4_1300_h265"
@@ -1426,7 +1319,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->mp4_1300_h265:Lcom/letv/tracker/enums/StreamType;
 
-    .line 111
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "mp4_720p_h265"
@@ -1437,7 +1329,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->mp4_720p_h265:Lcom/letv/tracker/enums/StreamType;
 
-    .line 112
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "mp4_1080p3m_h265"
@@ -1448,7 +1339,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->mp4_1080p3m_h265:Lcom/letv/tracker/enums/StreamType;
 
-    .line 113
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "mp4_1080p6m_h265"
@@ -1459,7 +1349,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->mp4_1080p6m_h265:Lcom/letv/tracker/enums/StreamType;
 
-    .line 114
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "mp4_2k_h265"
@@ -1470,7 +1359,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->mp4_2k_h265:Lcom/letv/tracker/enums/StreamType;
 
-    .line 115
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "mp4_4k_m_h265"
@@ -1481,7 +1369,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->mp4_4k_m_h265:Lcom/letv/tracker/enums/StreamType;
 
-    .line 116
     new-instance v0, Lcom/letv/tracker/enums/StreamType;
 
     const-string v1, "mp4_4k_h_h2h65"
@@ -1492,7 +1379,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/StreamType;->mp4_4k_h_h2h65:Lcom/letv/tracker/enums/StreamType;
 
-    .line 3
     const/16 v0, 0x71
 
     new-array v0, v0, [Lcom/letv/tracker/enums/StreamType;
@@ -2179,7 +2065,6 @@
     .end annotation
 
     .prologue
-    .line 3
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -2190,7 +2075,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 3
     const-class v0, Lcom/letv/tracker/enums/StreamType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -2206,7 +2090,6 @@
     .locals 1
 
     .prologue
-    .line 3
     sget-object v0, Lcom/letv/tracker/enums/StreamType;->$VALUES:[Lcom/letv/tracker/enums/StreamType;
 
     invoke-virtual {v0}, [Lcom/letv/tracker/enums/StreamType;->clone()Ljava/lang/Object;

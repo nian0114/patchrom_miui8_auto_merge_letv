@@ -35,26 +35,20 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2508
     iput-object p1, p0, Landroid/app/ApplicationPackageManager$InstallPackageObserver;->this$0:Landroid/app/ApplicationPackageManager;
 
     invoke-direct {p0}, Landroid/app/PackageInstallObserver;-><init>()V
 
-    .line 2510
     iput-object v1, p0, Landroid/app/ApplicationPackageManager$InstallPackageObserver;->mPackageName:Ljava/lang/String;
 
-    .line 2511
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/app/ApplicationPackageManager$InstallPackageObserver;->isNew:Z
 
-    .line 2514
     iput-object v1, p0, Landroid/app/ApplicationPackageManager$InstallPackageObserver;->extraPackage:Ljava/lang/String;
 
-    .line 2515
     iput-object v1, p0, Landroid/app/ApplicationPackageManager$InstallPackageObserver;->extraPermission:Ljava/lang/String;
 
-    .line 2519
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/app/ApplicationPackageManager$InstallPackageObserver;->mFlags:I
@@ -68,7 +62,6 @@
     .param p2, "x1"    # Landroid/app/ApplicationPackageManager$1;
 
     .prologue
-    .line 2508
     invoke-direct {p0, p1}, Landroid/app/ApplicationPackageManager$InstallPackageObserver;-><init>(Landroid/app/ApplicationPackageManager;)V
 
     return-void
@@ -81,7 +74,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 2527
     :try_start_0
     iget-object v1, p0, Landroid/app/ApplicationPackageManager$InstallPackageObserver;->this$0:Landroid/app/ApplicationPackageManager;
 
@@ -91,11 +83,9 @@
 
     move-result-object v0
 
-    .line 2528
     .local v0, "mAppInfo":Landroid/content/pm/ApplicationInfo;
     if-eqz v0, :cond_0
 
-    .line 2529
     iget v1, v0, Landroid/content/pm/ApplicationInfo;->flags:I
 
     const/high16 v2, 0x800000
@@ -104,20 +94,17 @@
 
     if-eqz v1, :cond_0
 
-    .line 2530
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Landroid/app/ApplicationPackageManager$InstallPackageObserver;->isNew:Z
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2535
     .end local v0    # "mAppInfo":Landroid/content/pm/ApplicationInfo;
     :cond_0
     :goto_0
     return-void
 
-    .line 2533
     :catch_0
     move-exception v1
 
@@ -132,17 +119,14 @@
     .param p4, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 2549
     const/4 v8, 0x1
 
     if-eq p2, v8, :cond_6
 
-    .line 2550
     iget-object v8, p0, Landroid/app/ApplicationPackageManager$InstallPackageObserver;->mPackageName:Ljava/lang/String;
 
     if-eqz v8, :cond_5
 
-    .line 2551
     const-string v8, "ApplicationPackageManager"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -167,12 +151,10 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2552
     new-instance v5, Landroid/content/Intent;
 
     invoke-direct {v5}, Landroid/content/Intent;-><init>()V
 
-    .line 2553
     .local v5, "intent":Landroid/content/Intent;
     const-string v8, "PackageName"
 
@@ -180,7 +162,6 @@
 
     invoke-virtual {v5, v8, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2554
     const-string v8, "InstallResult"
 
     invoke-static {p2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -189,19 +170,16 @@
 
     invoke-virtual {v5, v8, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2557
     const/16 v8, -0x70
 
     if-ne p2, v8, :cond_3
 
-    .line 2558
     const-string v8, "android.content.pm.extra.FAILURE_EXISTING_PACKAGE"
 
     invoke-virtual {p4, v8}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 2559
     .local v2, "duplicatePermPackage":Ljava/lang/String;
     const-string v8, "android.content.pm.extra.FAILURE_EXISTING_PERMISSION"
 
@@ -211,10 +189,8 @@
 
     iput-object v8, p0, Landroid/app/ApplicationPackageManager$InstallPackageObserver;->extraPermission:Ljava/lang/String;
 
-    .line 2560
     if-eqz v2, :cond_0
 
-    .line 2562
     :try_start_0
     iget-object v8, p0, Landroid/app/ApplicationPackageManager$InstallPackageObserver;->this$0:Landroid/app/ApplicationPackageManager;
 
@@ -224,7 +200,6 @@
 
     move-result-object v1
 
-    .line 2563
     .local v1, "duplicatePermApplication":Landroid/content/pm/ApplicationInfo;
     iget-object v8, p0, Landroid/app/ApplicationPackageManager$InstallPackageObserver;->this$0:Landroid/app/ApplicationPackageManager;
 
@@ -240,7 +215,6 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2568
     .end local v1    # "duplicatePermApplication":Landroid/content/pm/ApplicationInfo;
     :cond_0
     :goto_0
@@ -248,14 +222,13 @@
 
     if-eqz v8, :cond_1
 
-    .line 2569
     const-string v8, "ApplicationPackageManager"
 
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "install : package LeuiPackageInstallObserver extraPermission is :"
+    const-string v10, "install : package LeuiPackageInstallObserver extraPermission is :"
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -273,20 +246,18 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2571
     :cond_1
     iget-object v8, p0, Landroid/app/ApplicationPackageManager$InstallPackageObserver;->extraPackage:Ljava/lang/String;
 
     if-eqz v8, :cond_2
 
-    .line 2572
     const-string v8, "ApplicationPackageManager"
 
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "install : package LeuiPackageInstallObserver extraPackage is :"
+    const-string v10, "install : package LeuiPackageInstallObserver extraPackage is :"
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -304,7 +275,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2575
     :cond_2
     const-string v8, "android.content.pm.extra.FAILURE_EXISTING_PACKAGE"
 
@@ -312,21 +282,18 @@
 
     invoke-virtual {v5, v8, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2576
     const-string v8, "android.content.pm.extra.FAILURE_EXISTING_PERMISSION"
 
     iget-object v9, p0, Landroid/app/ApplicationPackageManager$InstallPackageObserver;->extraPermission:Ljava/lang/String;
 
     invoke-virtual {v5, v8, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2579
     .end local v2    # "duplicatePermPackage":Ljava/lang/String;
     :cond_3
     const-string v8, "android.intent.action.PACKAGE_ADDED_FAILED"
 
     invoke-virtual {v5, v8}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2580
     iget-object v8, p0, Landroid/app/ApplicationPackageManager$InstallPackageObserver;->this$0:Landroid/app/ApplicationPackageManager;
 
     # getter for: Landroid/app/ApplicationPackageManager;->mContext:Landroid/app/ContextImpl;
@@ -338,25 +305,21 @@
 
     invoke-virtual {v8, v5, v9}, Landroid/app/ContextImpl;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
-    .line 2615
     .end local v5    # "intent":Landroid/content/Intent;
     :cond_4
     :goto_1
     return-void
 
-    .line 2564
     .restart local v2    # "duplicatePermPackage":Ljava/lang/String;
     .restart local v5    # "intent":Landroid/content/Intent;
     :catch_0
     move-exception v3
 
-    .line 2565
     .local v3, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     iput-object v2, p0, Landroid/app/ApplicationPackageManager$InstallPackageObserver;->extraPackage:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 2582
     .end local v2    # "duplicatePermPackage":Ljava/lang/String;
     .end local v3    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     .end local v5    # "intent":Landroid/content/Intent;
@@ -369,7 +332,6 @@
 
     goto :goto_1
 
-    .line 2585
     :cond_6
     iget-object v8, p0, Landroid/app/ApplicationPackageManager$InstallPackageObserver;->this$0:Landroid/app/ApplicationPackageManager;
 
@@ -377,10 +339,8 @@
 
     invoke-virtual {v8, p1, v9}, Landroid/app/ApplicationPackageManager;->setPermByList(Ljava/lang/String;Z)Z
 
-    .line 2588
     const/4 v0, 0x0
 
-    .line 2589
     .local v0, "allow":Z
     iget v8, p0, Landroid/app/ApplicationPackageManager$InstallPackageObserver;->mFlags:I
 
@@ -392,7 +352,6 @@
 
     const/4 v0, 0x1
 
-    .line 2590
     :goto_2
     const-string v8, "ApplicationPackageManager"
 
@@ -400,7 +359,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "install : success allow is "
+    const-string v10, "install : success allow is "
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -428,32 +387,26 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2591
     if-eqz v0, :cond_4
 
-    .line 2592
     iget-object v8, p0, Landroid/app/ApplicationPackageManager$InstallPackageObserver;->this$0:Landroid/app/ApplicationPackageManager;
 
     invoke-virtual {v8, p1}, Landroid/app/ApplicationPackageManager;->getLaunchIntentForPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v7
 
-    .line 2593
     .local v7, "mLaunchIntent":Landroid/content/Intent;
     const/4 v4, 0x0
 
-    .line 2594
     .local v4, "enabled":Z
     if-eqz v7, :cond_7
 
-    .line 2595
     const-string v8, "ApplicationPackageManager"
 
-    const-string/jumbo v9, "install : success mLaunchIntent is not null "
+    const-string v9, "install : success mLaunchIntent is not null "
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2596
     iget-object v8, p0, Landroid/app/ApplicationPackageManager$InstallPackageObserver;->this$0:Landroid/app/ApplicationPackageManager;
 
     const/4 v9, 0x0
@@ -462,7 +415,6 @@
 
     move-result-object v6
 
-    .line 2597
     .local v6, "list":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     if-eqz v6, :cond_7
 
@@ -472,10 +424,8 @@
 
     if-lez v8, :cond_7
 
-    .line 2598
     const/4 v4, 0x1
 
-    .line 2601
     .end local v6    # "list":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     :cond_7
     const-string v8, "ApplicationPackageManager"
@@ -484,7 +434,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "install : success enabled is "
+    const-string v10, "install : success enabled is "
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -500,15 +450,12 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2602
     if-eqz v4, :cond_9
 
-    .line 2605
     const/high16 v8, 0x10200000
 
     invoke-virtual {v7, v8}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 2607
     iget-object v8, p0, Landroid/app/ApplicationPackageManager$InstallPackageObserver;->this$0:Landroid/app/ApplicationPackageManager;
 
     # getter for: Landroid/app/ApplicationPackageManager;->mContext:Landroid/app/ContextImpl;
@@ -518,14 +465,13 @@
 
     invoke-virtual {v8, v7}, Landroid/app/ContextImpl;->startActivity(Landroid/content/Intent;)V
 
-    .line 2608
     const-string v8, "ApplicationPackageManager"
 
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "install : LeuiPackageInstallObserver startActivity packageName is :"
+    const-string v10, "install : LeuiPackageInstallObserver startActivity packageName is :"
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -543,7 +489,6 @@
 
     goto/16 :goto_1
 
-    .line 2589
     .end local v4    # "enabled":Z
     .end local v7    # "mLaunchIntent":Landroid/content/Intent;
     :cond_8
@@ -551,13 +496,12 @@
 
     goto/16 :goto_2
 
-    .line 2610
     .restart local v4    # "enabled":Z
     .restart local v7    # "mLaunchIntent":Landroid/content/Intent;
     :cond_9
     const-string v8, "ApplicationPackageManager"
 
-    const-string/jumbo v9, "install : LeuiPackageInstallObserver startActivity queryIntentActivities is null"
+    const-string v9, "install : LeuiPackageInstallObserver startActivity queryIntentActivities is null"
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -569,10 +513,8 @@
     .param p1, "flags"    # I
 
     .prologue
-    .line 2540
     iput p1, p0, Landroid/app/ApplicationPackageManager$InstallPackageObserver;->mFlags:I
 
-    .line 2541
     return-void
 .end method
 
@@ -581,9 +523,7 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 2523
     iput-object p1, p0, Landroid/app/ApplicationPackageManager$InstallPackageObserver;->mPackageName:Ljava/lang/String;
 
-    .line 2524
     return-void
 .end method

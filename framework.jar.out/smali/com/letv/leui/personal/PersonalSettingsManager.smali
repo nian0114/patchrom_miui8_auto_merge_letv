@@ -50,10 +50,8 @@
     .locals 0
 
     .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 136
     return-void
 .end method
 
@@ -64,12 +62,10 @@
     .param p2, "defaultValue"    # Z
 
     .prologue
-    .line 235
     invoke-static {p0, p1}, Lcom/letv/leui/personal/PersonalSettingsManager;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 236
     .local v0, "value":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -114,7 +110,6 @@
     .locals 2
 
     .prologue
-    .line 183
     invoke-static {}, Lcom/letv/leui/personal/PersonalSettingsManager$CalendarUtil;->getCurrentTime()J
 
     move-result-wide v0
@@ -127,7 +122,6 @@
     .param p0, "resolver"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 165
     const-string v0, "leui_disturbmode_contactmode"
 
     const/4 v1, 0x0
@@ -144,7 +138,6 @@
     .param p0, "resolver"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 157
     const-string v0, "leui_disturbmode_endtime"
 
     const-wide/16 v2, 0x0
@@ -161,7 +154,6 @@
     .param p0, "resolver"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 153
     const-string v0, "leui_disturbmode_starttime"
 
     const-wide/16 v2, 0x0
@@ -180,7 +172,6 @@
     .param p2, "def"    # I
 
     .prologue
-    .line 248
     invoke-static {p0, p1, p2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v0
@@ -195,7 +186,6 @@
     .param p2, "defaultValue"    # J
 
     .prologue
-    .line 240
     invoke-static {p0, p1, p2, p3}, Landroid/provider/Settings$System;->getLong(Landroid/content/ContentResolver;Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -209,7 +199,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 244
     invoke-static {p0, p1}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -222,7 +211,6 @@
     .param p0, "resolver"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 133
     invoke-static {p0}, Lcom/letv/leui/personal/PersonalSettingsManager;->isDisturbModeEnabled(Landroid/content/ContentResolver;)Z
 
     move-result v0
@@ -258,7 +246,6 @@
     .param p0, "resolver"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 173
     invoke-static {p0}, Lcom/letv/leui/personal/PersonalSettingsManager;->getDisturbModeStartTime(Landroid/content/ContentResolver;)J
 
     move-result-wide v6
@@ -267,7 +254,6 @@
 
     move-result-wide v4
 
-    .line 174
     .local v4, "startTime":J
     invoke-static {p0}, Lcom/letv/leui/personal/PersonalSettingsManager;->getDisturbModeEndTime(Landroid/content/ContentResolver;)J
 
@@ -277,7 +263,6 @@
 
     move-result-wide v2
 
-    .line 175
     .local v2, "endTime":J
     invoke-static {}, Lcom/letv/leui/personal/PersonalSettingsManager$CalendarUtil;->getCurrentTime()J
 
@@ -287,7 +272,6 @@
 
     move-result-wide v0
 
-    .line 176
     .local v0, "currentTime":J
     const-string v6, "PersionalService"
 
@@ -331,7 +315,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 178
     cmp-long v6, v4, v0
 
     if-gtz v6, :cond_0
@@ -356,7 +339,6 @@
     .param p0, "resolver"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 125
     const-string v0, "leui_disturbmode_enabled"
 
     const/4 v1, 0x0
@@ -373,7 +355,6 @@
     .param p0, "resolver"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 161
     const-string v0, "leui_disturbmode_repeat_enabled"
 
     const/4 v1, 0x0
@@ -390,7 +371,6 @@
     .param p0, "resolver"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 129
     const-string v0, "leui_disturbmode_timeset_enabled"
 
     const/4 v1, 0x0
@@ -407,7 +387,6 @@
     .param p0, "time"    # J
 
     .prologue
-    .line 169
     const-wide/16 v0, 0x0
 
     cmp-long v0, p0, v0
@@ -432,7 +411,6 @@
     .param p2, "enabled"    # Z
 
     .prologue
-    .line 218
     if-eqz p2, :cond_0
 
     const/4 v0, 0x1
@@ -440,10 +418,8 @@
     :goto_0
     invoke-static {p0, p1, v0}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 219
     return-void
 
-    .line 218
     :cond_0
     const/4 v0, 0x0
 
@@ -456,12 +432,10 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 212
     const-string v0, "leui_disturbmode_contactmode"
 
     invoke-static {p0, v0, p1}, Lcom/letv/leui/personal/PersonalSettingsManager;->setInt(Landroid/content/ContentResolver;Ljava/lang/String;I)V
 
-    .line 213
     return-void
 .end method
 
@@ -471,12 +445,10 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 187
     const-string v0, "leui_disturbmode_enabled"
 
     invoke-static {p0, v0, p1}, Lcom/letv/leui/personal/PersonalSettingsManager;->setBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)V
 
-    .line 188
     return-void
 .end method
 
@@ -486,12 +458,10 @@
     .param p1, "time"    # J
 
     .prologue
-    .line 199
     const-string v0, "leui_disturbmode_endtime"
 
     invoke-static {p0, v0, p1, p2}, Lcom/letv/leui/personal/PersonalSettingsManager;->setLong(Landroid/content/ContentResolver;Ljava/lang/String;J)V
 
-    .line 200
     return-void
 .end method
 
@@ -501,12 +471,10 @@
     .param p1, "repeat"    # Z
 
     .prologue
-    .line 203
     const-string v0, "leui_disturbmode_repeat_enabled"
 
     invoke-static {p0, v0, p1}, Lcom/letv/leui/personal/PersonalSettingsManager;->setBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)V
 
-    .line 204
     return-void
 .end method
 
@@ -516,12 +484,10 @@
     .param p1, "time"    # J
 
     .prologue
-    .line 195
     const-string v0, "leui_disturbmode_starttime"
 
     invoke-static {p0, v0, p1, p2}, Lcom/letv/leui/personal/PersonalSettingsManager;->setLong(Landroid/content/ContentResolver;Ljava/lang/String;J)V
 
-    .line 196
     return-void
 .end method
 
@@ -531,12 +497,10 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 191
     const-string v0, "leui_disturbmode_timeset_enabled"
 
     invoke-static {p0, v0, p1}, Lcom/letv/leui/personal/PersonalSettingsManager;->setBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)V
 
-    .line 192
     return-void
 .end method
 
@@ -547,10 +511,8 @@
     .param p2, "value"    # I
 
     .prologue
-    .line 230
     invoke-static {p0, p1, p2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 231
     return-void
 .end method
 
@@ -561,10 +523,8 @@
     .param p2, "value"    # J
 
     .prologue
-    .line 222
     invoke-static {p0, p1, p2, p3}, Landroid/provider/Settings$System;->putLong(Landroid/content/ContentResolver;Ljava/lang/String;J)Z
 
-    .line 223
     return-void
 .end method
 
@@ -575,9 +535,7 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 226
     invoke-static {p0, p1, p2}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 227
     return-void
 .end method

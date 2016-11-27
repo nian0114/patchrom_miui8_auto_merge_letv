@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 808
     iput-object p1, p0, Lcom/letv/leui/widget/LeBottomSheet$8;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,14 +51,12 @@
     .end annotation
 
     .prologue
-    .line 811
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     iget-object v0, p0, Lcom/letv/leui/widget/LeBottomSheet$8;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # setter for: Lcom/letv/leui/widget/LeBottomSheet;->checkPos:I
     invoke-static {v0, p3}, Lcom/letv/leui/widget/LeBottomSheet;->access$102(Lcom/letv/leui/widget/LeBottomSheet;I)I
 
-    .line 812
     iget-object v0, p0, Lcom/letv/leui/widget/LeBottomSheet$8;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # getter for: Lcom/letv/leui/widget/LeBottomSheet;->isSinglebox:Z
@@ -69,7 +66,6 @@
 
     if-nez v0, :cond_1
 
-    .line 813
     iget-object v0, p0, Lcom/letv/leui/widget/LeBottomSheet$8;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # getter for: Lcom/letv/leui/widget/LeBottomSheet;->checkedIndexList:Ljava/util/ArrayList;
@@ -79,7 +75,6 @@
 
     if-nez v0, :cond_0
 
-    .line 814
     iget-object v0, p0, Lcom/letv/leui/widget/LeBottomSheet$8;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     new-instance v1, Ljava/util/ArrayList;
@@ -89,7 +84,6 @@
     # setter for: Lcom/letv/leui/widget/LeBottomSheet;->checkedIndexList:Ljava/util/ArrayList;
     invoke-static {v0, v1}, Lcom/letv/leui/widget/LeBottomSheet;->access$802(Lcom/letv/leui/widget/LeBottomSheet;Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
-    .line 816
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/LeBottomSheet$8;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
@@ -108,7 +102,6 @@
 
     if-nez v0, :cond_2
 
-    .line 817
     iget-object v0, p0, Lcom/letv/leui/widget/LeBottomSheet$8;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # getter for: Lcom/letv/leui/widget/LeBottomSheet;->checkedIndexList:Ljava/util/ArrayList;
@@ -122,7 +115,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 822
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/letv/leui/widget/LeBottomSheet$8;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
@@ -134,10 +126,8 @@
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->notifyDataSetChanged()V
 
-    .line 823
     return-void
 
-    .line 819
     :cond_2
     iget-object v0, p0, Lcom/letv/leui/widget/LeBottomSheet$8;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 

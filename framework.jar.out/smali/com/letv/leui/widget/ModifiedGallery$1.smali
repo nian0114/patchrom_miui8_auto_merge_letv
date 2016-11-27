@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 125
     iput-object p1, p0, Lcom/letv/leui/widget/ModifiedGallery$1;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 128
     iget-object v0, p0, Lcom/letv/leui/widget/ModifiedGallery$1;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
     const/4 v1, 0x0
@@ -48,11 +46,9 @@
     # setter for: Lcom/letv/leui/widget/ModifiedGallery;->mSuppressSelectionChanged:Z
     invoke-static {v0, v1}, Lcom/letv/leui/widget/ModifiedGallery;->access$002(Lcom/letv/leui/widget/ModifiedGallery;Z)Z
 
-    .line 129
     iget-object v0, p0, Lcom/letv/leui/widget/ModifiedGallery$1;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/ModifiedGallery;->selectionChanged()V
 
-    .line 130
     return-void
 .end method

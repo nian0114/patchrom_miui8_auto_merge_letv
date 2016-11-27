@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1781
     iput-object p1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$PopupScrollListener;->this$0:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$1;
 
     .prologue
-    .line 1781
     invoke-direct {p0, p1}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$PopupScrollListener;-><init>(Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;)V
 
     return-void
@@ -56,7 +54,6 @@
     .param p4, "totalItemCount"    # I
 
     .prologue
-    .line 1785
     return-void
 .end method
 
@@ -66,7 +63,6 @@
     .param p2, "scrollState"    # I
 
     .prologue
-    .line 1788
     const/4 v0, 0x1
 
     if-ne p2, v0, :cond_0
@@ -92,7 +88,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1790
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$PopupScrollListener;->this$0:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;
 
     # getter for: Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mHandler:Landroid/os/Handler;
@@ -109,7 +104,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1791
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$PopupScrollListener;->this$0:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;
 
     # getter for: Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mResizePopupRunnable:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$ResizePopupRunnable;
@@ -119,7 +113,6 @@
 
     invoke-virtual {v0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$ResizePopupRunnable;->run()V
 
-    .line 1793
     :cond_0
     return-void
 .end method

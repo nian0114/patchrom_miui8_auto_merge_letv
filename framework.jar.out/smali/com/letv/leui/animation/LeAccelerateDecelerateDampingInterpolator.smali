@@ -29,7 +29,6 @@
     .locals 1
 
     .prologue
-    .line 21
     const v0, 0x3e99999a    # 0.3f
 
     sput v0, Lcom/letv/leui/animation/LeAccelerateDecelerateDampingInterpolator;->mAdjustTime:F
@@ -45,35 +44,28 @@
     .prologue
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
     iput p1, p0, Lcom/letv/leui/animation/LeAccelerateDecelerateDampingInterpolator;->mDivideTime:F
 
-    .line 29
     iput p2, p0, Lcom/letv/leui/animation/LeAccelerateDecelerateDampingInterpolator;->mExtend:F
 
-    .line 31
     new-instance v0, Landroid/view/animation/AccelerateDecelerateInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/AccelerateDecelerateInterpolator;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/animation/LeAccelerateDecelerateDampingInterpolator;->mInterpolator1:Landroid/view/animation/Interpolator;
 
-    .line 32
     new-instance v0, Lcom/letv/leui/animation/LeDampingInterpolator;
 
     invoke-direct {v0}, Lcom/letv/leui/animation/LeDampingInterpolator;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/animation/LeAccelerateDecelerateDampingInterpolator;->mInterpolator2:Landroid/view/animation/Interpolator;
 
-    .line 34
     const v0, 0x3e12d949
 
     iput v0, p0, Lcom/letv/leui/animation/LeAccelerateDecelerateDampingInterpolator;->mAdjustFactor:F
 
-    .line 36
     iget v0, p0, Lcom/letv/leui/animation/LeAccelerateDecelerateDampingInterpolator;->mAdjustFactor:F
 
     sub-float v0, v2, v0
@@ -86,7 +78,6 @@
 
     iput v0, p0, Lcom/letv/leui/animation/LeAccelerateDecelerateDampingInterpolator;->mFactor:F
 
-    .line 37
     return-void
 .end method
 
@@ -98,17 +89,14 @@
     .prologue
     const/high16 v3, 0x3f800000    # 1.0f
 
-    .line 60
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 61
     sget-object v1, Lcom/android/internal/R$styleable;->LeAccelerateDecelerateDampingInterpolator:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 63
     .local v0, "a":Landroid/content/res/TypedArray;
     const/4 v1, 0x0
 
@@ -120,7 +108,6 @@
 
     iput v1, p0, Lcom/letv/leui/animation/LeAccelerateDecelerateDampingInterpolator;->mDivideTime:F
 
-    .line 64
     const/4 v1, 0x1
 
     const v2, 0x3dcccccd    # 0.1f
@@ -131,29 +118,24 @@
 
     iput v1, p0, Lcom/letv/leui/animation/LeAccelerateDecelerateDampingInterpolator;->mExtend:F
 
-    .line 66
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 68
     new-instance v1, Landroid/view/animation/AccelerateDecelerateInterpolator;
 
     invoke-direct {v1}, Landroid/view/animation/AccelerateDecelerateInterpolator;-><init>()V
 
     iput-object v1, p0, Lcom/letv/leui/animation/LeAccelerateDecelerateDampingInterpolator;->mInterpolator1:Landroid/view/animation/Interpolator;
 
-    .line 69
     new-instance v1, Lcom/letv/leui/animation/LeDampingInterpolator;
 
     invoke-direct {v1}, Lcom/letv/leui/animation/LeDampingInterpolator;-><init>()V
 
     iput-object v1, p0, Lcom/letv/leui/animation/LeAccelerateDecelerateDampingInterpolator;->mInterpolator2:Landroid/view/animation/Interpolator;
 
-    .line 71
     const v1, 0x3e12d949
 
     iput v1, p0, Lcom/letv/leui/animation/LeAccelerateDecelerateDampingInterpolator;->mAdjustFactor:F
 
-    .line 73
     iget v1, p0, Lcom/letv/leui/animation/LeAccelerateDecelerateDampingInterpolator;->mAdjustFactor:F
 
     sub-float v1, v3, v1
@@ -166,7 +148,6 @@
 
     iput v1, p0, Lcom/letv/leui/animation/LeAccelerateDecelerateDampingInterpolator;->mFactor:F
 
-    .line 74
     return-void
 .end method
 
@@ -181,20 +162,16 @@
 
     const/4 v2, 0x0
 
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     if-eqz p2, :cond_0
 
-    .line 42
     sget-object v1, Lcom/android/internal/R$styleable;->LeAccelerateDecelerateDampingInterpolator:[I
 
     invoke-virtual {p2, p3, v1, v2, v2}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 47
     .local v0, "a":Landroid/content/res/TypedArray;
     :goto_0
     const/high16 v1, 0x3f000000    # 0.5f
@@ -205,7 +182,6 @@
 
     iput v1, p0, Lcom/letv/leui/animation/LeAccelerateDecelerateDampingInterpolator;->mDivideTime:F
 
-    .line 48
     const/4 v1, 0x1
 
     const v2, 0x3dcccccd    # 0.1f
@@ -216,29 +192,24 @@
 
     iput v1, p0, Lcom/letv/leui/animation/LeAccelerateDecelerateDampingInterpolator;->mExtend:F
 
-    .line 50
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 52
     new-instance v1, Landroid/view/animation/AccelerateDecelerateInterpolator;
 
     invoke-direct {v1}, Landroid/view/animation/AccelerateDecelerateInterpolator;-><init>()V
 
     iput-object v1, p0, Lcom/letv/leui/animation/LeAccelerateDecelerateDampingInterpolator;->mInterpolator1:Landroid/view/animation/Interpolator;
 
-    .line 53
     new-instance v1, Lcom/letv/leui/animation/LeDampingInterpolator;
 
     invoke-direct {v1}, Lcom/letv/leui/animation/LeDampingInterpolator;-><init>()V
 
     iput-object v1, p0, Lcom/letv/leui/animation/LeAccelerateDecelerateDampingInterpolator;->mInterpolator2:Landroid/view/animation/Interpolator;
 
-    .line 55
     const v1, 0x3e12d949
 
     iput v1, p0, Lcom/letv/leui/animation/LeAccelerateDecelerateDampingInterpolator;->mAdjustFactor:F
 
-    .line 57
     iget v1, p0, Lcom/letv/leui/animation/LeAccelerateDecelerateDampingInterpolator;->mAdjustFactor:F
 
     sub-float v1, v3, v1
@@ -251,10 +222,8 @@
 
     iput v1, p0, Lcom/letv/leui/animation/LeAccelerateDecelerateDampingInterpolator;->mFactor:F
 
-    .line 58
     return-void
 
-    .line 44
     .end local v0    # "a":Landroid/content/res/TypedArray;
     :cond_0
     sget-object v1, Lcom/android/internal/R$styleable;->LeAccelerateDecelerateDampingInterpolator:[I
@@ -271,7 +240,6 @@
     .locals 3
 
     .prologue
-    .line 24
     new-instance v0, Lcom/letv/leui/animation/LeAccelerateDecelerateDampingInterpolator;
 
     const/high16 v1, 0x3f000000    # 0.5f
@@ -292,14 +260,12 @@
     .prologue
     const/high16 v4, 0x3f800000    # 1.0f
 
-    .line 78
     iget v0, p0, Lcom/letv/leui/animation/LeAccelerateDecelerateDampingInterpolator;->mDivideTime:F
 
     cmpg-float v0, p1, v0
 
     if-gez v0, :cond_0
 
-    .line 79
     iget v0, p0, Lcom/letv/leui/animation/LeAccelerateDecelerateDampingInterpolator;->mExtend:F
 
     add-float/2addr v0, v4
@@ -316,7 +282,6 @@
 
     mul-float/2addr v0, v1
 
-    .line 81
     :goto_0
     return v0
 

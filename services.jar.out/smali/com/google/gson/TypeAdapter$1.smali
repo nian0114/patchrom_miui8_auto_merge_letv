@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 186
     .local p0, "this":Lcom/google/gson/TypeAdapter$1;, "Lcom/google/gson/TypeAdapter.1;"
     iput-object p1, p0, Lcom/google/gson/TypeAdapter$1;->this$0:Lcom/google/gson/TypeAdapter;
 
@@ -59,7 +58,6 @@
     .end annotation
 
     .prologue
-    .line 195
     .local p0, "this":Lcom/google/gson/TypeAdapter$1;, "Lcom/google/gson/TypeAdapter.1;"
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->peek()Lcom/google/gson/stream/JsonToken;
 
@@ -69,13 +67,10 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 196
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->nextNull()V
 
-    .line 197
     const/4 v0, 0x0
 
-    .line 199
     :goto_0
     return-object v0
 
@@ -107,19 +102,15 @@
     .end annotation
 
     .prologue
-    .line 188
     .local p0, "this":Lcom/google/gson/TypeAdapter$1;, "Lcom/google/gson/TypeAdapter.1;"
     .local p2, "value":Ljava/lang/Object;, "TT;"
     if-nez p2, :cond_0
 
-    .line 189
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonWriter;->nullValue()Lcom/google/gson/stream/JsonWriter;
 
-    .line 193
     :goto_0
     return-void
 
-    .line 191
     :cond_0
     iget-object v0, p0, Lcom/google/gson/TypeAdapter$1;->this$0:Lcom/google/gson/TypeAdapter;
 

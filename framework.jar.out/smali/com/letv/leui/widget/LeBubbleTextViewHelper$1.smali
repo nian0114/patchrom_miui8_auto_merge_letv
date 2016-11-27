@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 67
     invoke-static {}, Lcom/letv/leui/widget/LeBubbleView$ArrowDirection;->values()[Lcom/letv/leui/widget/LeBubbleView$ArrowDirection;
 
     move-result-object v0

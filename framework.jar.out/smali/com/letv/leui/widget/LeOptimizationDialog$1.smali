@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 54
     iput-object p1, p0, Lcom/letv/leui/widget/LeOptimizationDialog$1;->this$0:Lcom/letv/leui/widget/LeOptimizationDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "dialog"    # Landroid/content/DialogInterface;
 
     .prologue
-    .line 57
     iget-object v0, p0, Lcom/letv/leui/widget/LeOptimizationDialog$1;->this$0:Lcom/letv/leui/widget/LeOptimizationDialog;
 
     # getter for: Lcom/letv/leui/widget/LeOptimizationDialog;->mLeLoadingView:Lcom/letv/leui/widget/LeLoadingView;
@@ -55,6 +53,5 @@
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/widget/LeLoadingView;->appearAnim(Ljava/lang/Runnable;)Z
 
-    .line 63
     return-void
 .end method

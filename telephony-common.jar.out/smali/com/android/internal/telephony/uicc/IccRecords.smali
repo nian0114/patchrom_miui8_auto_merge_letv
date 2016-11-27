@@ -140,114 +140,88 @@
 
     const/4 v2, 0x0
 
-    .line 173
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 48
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v0, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mDestroyed:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 55
     new-instance v0, Landroid/os/RegistrantList;
 
     invoke-direct {v0}, Landroid/os/RegistrantList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mRecordsLoadedRegistrants:Landroid/os/RegistrantList;
 
-    .line 56
     new-instance v0, Landroid/os/RegistrantList;
 
     invoke-direct {v0}, Landroid/os/RegistrantList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mImsiReadyRegistrants:Landroid/os/RegistrantList;
 
-    .line 57
     new-instance v0, Landroid/os/RegistrantList;
 
     invoke-direct {v0}, Landroid/os/RegistrantList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mRecordsEventsRegistrants:Landroid/os/RegistrantList;
 
-    .line 58
     new-instance v0, Landroid/os/RegistrantList;
 
     invoke-direct {v0}, Landroid/os/RegistrantList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mNewSmsRegistrants:Landroid/os/RegistrantList;
 
-    .line 59
     new-instance v0, Landroid/os/RegistrantList;
 
     invoke-direct {v0}, Landroid/os/RegistrantList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mNetworkSelectionModeAutomaticRegistrants:Landroid/os/RegistrantList;
 
-    .line 67
     iput-boolean v1, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mRecordsRequested:Z
 
-    .line 70
     iput-object v2, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mMsisdn:Ljava/lang/String;
 
-    .line 71
     iput-object v2, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mMsisdnTag:Ljava/lang/String;
 
-    .line 72
     iput-object v2, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mNewMsisdn:Ljava/lang/String;
 
-    .line 73
     iput-object v2, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mNewMsisdnTag:Ljava/lang/String;
 
-    .line 74
     iput-object v2, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mVoiceMailNum:Ljava/lang/String;
 
-    .line 75
     iput-object v2, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mVoiceMailTag:Ljava/lang/String;
 
-    .line 76
     iput-object v2, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mNewVoiceMailNum:Ljava/lang/String;
 
-    .line 77
     iput-object v2, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mNewVoiceMailTag:Ljava/lang/String;
 
-    .line 78
     iput-boolean v1, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mIsVoiceMailFixed:Z
 
-    .line 82
     iput v3, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mMncLength:I
 
-    .line 83
     iput v1, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mMailboxIndex:I
 
-    .line 85
     iput v3, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mSmsCountOnIcc:I
 
-    .line 93
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mLock:Ljava/lang/Object;
 
-    .line 174
     iput-object p2, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mContext:Landroid/content/Context;
 
-    .line 175
     iput-object p3, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
-    .line 176
     invoke-virtual {p1}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->getIccFileHandler()Lcom/android/internal/telephony/uicc/IccFileHandler;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mFh:Lcom/android/internal/telephony/uicc/IccFileHandler;
 
-    .line 177
     iput-object p1, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mParentApp:Lcom/android/internal/telephony/uicc/UiccCardApplication;
 
-    .line 178
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mContext:Landroid/content/Context;
 
     const-string v1, "phone"
@@ -260,14 +234,12 @@
 
     iput-object v0, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
-    .line 180
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     const/16 v1, 0x1f
 
     invoke-interface {v0, p0, v1, v2}, Lcom/android/internal/telephony/CommandsInterface;->registerForIccRefresh(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 181
     return-void
 .end method
 
@@ -286,7 +258,6 @@
 
     const/4 v6, 0x2
 
-    .line 582
     if-eqz p0, :cond_0
 
     if-nez p1, :cond_2
@@ -294,12 +265,10 @@
     :cond_0
     move-object v2, v3
 
-    .line 596
     :cond_1
     :goto_0
     return-object v2
 
-    .line 585
     :cond_2
     const/4 v0, 0x0
 
@@ -311,14 +280,12 @@
 
     if-ge v4, v5, :cond_5
 
-    .line 586
     new-instance v2, Ljava/lang/String;
 
     const-string v4, "ISO-8859-1"
 
     invoke-direct {v2, p0, v0, v6, v4}, Ljava/lang/String;-><init>([BIILjava/lang/String;)V
 
-    .line 587
     .local v2, "lang":Ljava/lang/String;
     const/4 v1, 0x0
 
@@ -328,7 +295,6 @@
 
     if-ge v1, v4, :cond_4
 
-    .line 588
     aget-object v4, p1, v1
 
     if-eqz v4, :cond_3
@@ -355,13 +321,11 @@
 
     if-nez v4, :cond_1
 
-    .line 587
     :cond_3
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 585
     :cond_4
     add-int/lit8 v0, v0, 0x2
 
@@ -372,7 +336,6 @@
     :cond_5
     move-object v2, v3
 
-    .line 596
     goto :goto_0
 .end method
 
@@ -382,7 +345,6 @@
     .locals 0
 
     .prologue
-    .line 602
     return-void
 .end method
 
@@ -392,31 +354,24 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 187
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mDestroyed:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 188
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     invoke-interface {v0, p0}, Lcom/android/internal/telephony/CommandsInterface;->unregisterForIccRefresh(Landroid/os/Handler;)V
 
-    .line 189
     iput-object v2, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mParentApp:Lcom/android/internal/telephony/uicc/UiccCardApplication;
 
-    .line 190
     iput-object v2, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mFh:Lcom/android/internal/telephony/uicc/IccFileHandler;
 
-    .line 191
     iput-object v2, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
-    .line 192
     iput-object v2, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mContext:Landroid/content/Context;
 
-    .line 193
     return-void
 .end method
 
@@ -427,7 +382,6 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 797
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -448,7 +402,6 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 798
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -471,7 +424,6 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 799
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -494,7 +446,6 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 800
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -517,7 +468,6 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 801
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -540,7 +490,6 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 802
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -567,7 +516,6 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 803
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -580,7 +528,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 804
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -623,12 +570,10 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 803
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 807
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -656,7 +601,6 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 808
     const/4 v0, 0x0
 
     :goto_1
@@ -668,7 +612,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 809
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -711,12 +654,10 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 808
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 812
     :cond_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -744,7 +685,6 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 813
     const/4 v0, 0x0
 
     :goto_2
@@ -756,7 +696,6 @@
 
     if-ge v0, v2, :cond_2
 
-    .line 814
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -799,12 +738,10 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 813
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    .line 817
     :cond_2
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -832,7 +769,6 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 818
     const/4 v0, 0x0
 
     :goto_3
@@ -844,7 +780,6 @@
 
     if-ge v0, v2, :cond_3
 
-    .line 819
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -887,12 +822,10 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 818
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_3
 
-    .line 822
     :cond_3
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -920,7 +853,6 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 824
     const/4 v0, 0x0
 
     :goto_4
@@ -932,7 +864,6 @@
 
     if-ge v0, v2, :cond_4
 
-    .line 825
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -975,12 +906,10 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 824
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_4
 
-    .line 828
     :cond_4
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1004,7 +933,6 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 829
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1027,7 +955,6 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 830
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1050,14 +977,12 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 831
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mIccId:Ljava/lang/String;
 
     invoke-static {v2}, Landroid/telephony/SubscriptionInfo;->givePrintableIccid(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 833
     .local v1, "iccIdToPrint":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1079,7 +1004,6 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 834
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mMsisdn:Ljava/lang/String;
 
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1088,12 +1012,10 @@
 
     if-eqz v2, :cond_5
 
-    .line 835
     const-string v2, " mMsisdn=null"
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 839
     :goto_5
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1117,7 +1039,6 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 840
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1140,7 +1061,6 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 841
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1163,7 +1083,6 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 842
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1186,7 +1105,6 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 843
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1209,7 +1127,6 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 844
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1232,7 +1149,6 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 846
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1255,7 +1171,6 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 847
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1278,7 +1193,6 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 848
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1301,13 +1215,10 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 849
     invoke-virtual {p2}, Ljava/io/PrintWriter;->flush()V
 
-    .line 850
     return-void
 
-    .line 837
     :cond_5
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1338,7 +1249,6 @@
     .locals 1
 
     .prologue
-    .line 199
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mAdnCache:Lcom/android/internal/telephony/uicc/AdnRecordCache;
 
     return-object v0
@@ -1351,7 +1261,6 @@
     .locals 1
 
     .prologue
-    .line 315
     const/4 v0, 0x0
 
     return-object v0
@@ -1361,7 +1270,6 @@
     .locals 1
 
     .prologue
-    .line 323
     const/4 v0, 0x0
 
     return-object v0
@@ -1371,7 +1279,6 @@
     .locals 1
 
     .prologue
-    .line 284
     const/4 v0, 0x0
 
     return-object v0
@@ -1381,7 +1288,6 @@
     .locals 1
 
     .prologue
-    .line 203
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mIccId:Ljava/lang/String;
 
     return-object v0
@@ -1395,12 +1301,10 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 754
     const-string v4, "getIccSimChallengeResponse:"
 
     invoke-virtual {p0, v4}, Lcom/android/internal/telephony/uicc/IccRecords;->log(Ljava/lang/String;)V
 
-    .line 757
     :try_start_0
     iget-object v5, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mLock:Ljava/lang/Object;
 
@@ -1408,21 +1312,17 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 758
     :try_start_1
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
-    .line 759
     .local v0, "ci":Lcom/android/internal/telephony/CommandsInterface;
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mParentApp:Lcom/android/internal/telephony/uicc/UiccCardApplication;
 
-    .line 760
     .local v2, "parentApp":Lcom/android/internal/telephony/uicc/UiccCardApplication;
     if-eqz v0, :cond_0
 
     if-eqz v2, :cond_0
 
-    .line 761
     invoke-virtual {v2}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->getAid()Ljava/lang/String;
 
     move-result-object v4
@@ -1437,7 +1337,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 765
     :try_start_2
     iget-object v4, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mLock:Ljava/lang/Object;
 
@@ -1446,18 +1345,15 @@
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 776
     :try_start_3
     monitor-exit v5
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 783
     const-string v3, "getIccSimChallengeResponse: return auth_rsp"
 
     invoke-virtual {p0, v3}, Lcom/android/internal/telephony/uicc/IccRecords;->log(Ljava/lang/String;)V
 
-    .line 785
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/IccRecords;->auth_rsp:Lcom/android/internal/telephony/uicc/IccIoResult;
 
     iget-object v3, v3, Lcom/android/internal/telephony/uicc/IccIoResult;->payload:[B
@@ -1473,25 +1369,21 @@
     :goto_0
     return-object v3
 
-    .line 766
     .restart local v0    # "ci":Lcom/android/internal/telephony/CommandsInterface;
     .restart local v2    # "parentApp":Lcom/android/internal/telephony/uicc/UiccCardApplication;
     :catch_0
     move-exception v1
 
-    .line 767
     .local v1, "e":Ljava/lang/InterruptedException;
     :try_start_4
     const-string v4, "getIccSimChallengeResponse: Fail, interrupted while trying to request Icc Sim Auth"
 
     invoke-virtual {p0, v4}, Lcom/android/internal/telephony/uicc/IccRecords;->loge(Ljava/lang/String;)V
 
-    .line 769
     monitor-exit v5
 
     goto :goto_0
 
-    .line 776
     .end local v0    # "ci":Lcom/android/internal/telephony/CommandsInterface;
     .end local v1    # "e":Ljava/lang/InterruptedException;
     .end local v2    # "parentApp":Lcom/android/internal/telephony/uicc/UiccCardApplication;
@@ -1507,11 +1399,9 @@
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
 
-    .line 777
     :catch_1
     move-exception v1
 
-    .line 778
     .local v1, "e":Ljava/lang/Exception;
     const-string v4, "getIccSimChallengeResponse: Fail while trying to request Icc Sim Auth"
 
@@ -1519,7 +1409,6 @@
 
     goto :goto_0
 
-    .line 772
     .end local v1    # "e":Ljava/lang/Exception;
     .restart local v0    # "ci":Lcom/android/internal/telephony/CommandsInterface;
     .restart local v2    # "parentApp":Lcom/android/internal/telephony/uicc/UiccCardApplication;
@@ -1529,7 +1418,6 @@
 
     invoke-virtual {p0, v4}, Lcom/android/internal/telephony/uicc/IccRecords;->loge(Ljava/lang/String;)V
 
-    .line 774
     monitor-exit v5
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
@@ -1541,7 +1429,6 @@
     .locals 1
 
     .prologue
-    .line 730
     const/4 v0, 0x0
 
     return-object v0
@@ -1551,7 +1438,6 @@
     .locals 1
 
     .prologue
-    .line 357
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mMsisdnTag:Ljava/lang/String;
 
     return-object v0
@@ -1561,7 +1447,6 @@
     .locals 1
 
     .prologue
-    .line 307
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mMsisdn:Ljava/lang/String;
 
     return-object v0
@@ -1571,7 +1456,6 @@
     .locals 1
 
     .prologue
-    .line 303
     const/4 v0, 0x0
 
     return-object v0
@@ -1581,7 +1465,6 @@
     .locals 1
 
     .prologue
-    .line 671
     const/4 v0, 0x0
 
     return-object v0
@@ -1593,7 +1476,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 452
     iget v1, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mRecordsToLoad:I
 
     if-nez v1, :cond_0
@@ -1602,7 +1484,6 @@
 
     if-ne v1, v0, :cond_0
 
-    .line 455
     :goto_0
     return v0
 
@@ -1616,44 +1497,34 @@
     .locals 6
 
     .prologue
-    .line 370
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mSpn:Ljava/lang/String;
 
-    .line 374
     .local v3, "providerName":Ljava/lang/String;
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mParentApp:Lcom/android/internal/telephony/uicc/UiccCardApplication;
 
-    .line 375
     .local v2, "parentApp":Lcom/android/internal/telephony/uicc/UiccCardApplication;
     if-eqz v2, :cond_2
 
-    .line 376
     invoke-virtual {v2}, Lcom/android/internal/telephony/uicc/UiccCardApplication;->getUiccCard()Lcom/android/internal/telephony/uicc/UiccCard;
 
     move-result-object v1
 
-    .line 377
     .local v1, "card":Lcom/android/internal/telephony/uicc/UiccCard;
     if-eqz v1, :cond_1
 
-    .line 378
     invoke-virtual {v1}, Lcom/android/internal/telephony/uicc/UiccCard;->getOperatorBrandOverride()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 379
     .local v0, "brandOverride":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 380
     const-string v4, "getServiceProviderName: override"
 
     invoke-virtual {p0, v4}, Lcom/android/internal/telephony/uicc/IccRecords;->log(Ljava/lang/String;)V
 
-    .line 381
     move-object v3, v0
 
-    .line 391
     .end local v0    # "brandOverride":Ljava/lang/String;
     .end local v1    # "card":Lcom/android/internal/telephony/uicc/UiccCard;
     :goto_0
@@ -1677,10 +1548,8 @@
 
     invoke-virtual {p0, v4}, Lcom/android/internal/telephony/uicc/IccRecords;->log(Ljava/lang/String;)V
 
-    .line 392
     return-object v3
 
-    .line 383
     .restart local v0    # "brandOverride":Ljava/lang/String;
     .restart local v1    # "card":Lcom/android/internal/telephony/uicc/UiccCard;
     :cond_0
@@ -1690,7 +1559,6 @@
 
     goto :goto_0
 
-    .line 386
     .end local v0    # "brandOverride":Ljava/lang/String;
     :cond_1
     const-string v4, "getServiceProviderName: card is null"
@@ -1699,7 +1567,6 @@
 
     goto :goto_0
 
-    .line 389
     .end local v1    # "card":Lcom/android/internal/telephony/uicc/UiccCard;
     :cond_2
     const-string v4, "getServiceProviderName: mParentApp is null"
@@ -1713,7 +1580,6 @@
     .locals 1
 
     .prologue
-    .line 560
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mPrefLang:Ljava/lang/String;
 
     return-object v0
@@ -1723,7 +1589,6 @@
     .locals 2
 
     .prologue
-    .line 792
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1746,7 +1611,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/uicc/IccRecords;->log(Ljava/lang/String;)V
 
-    .line 793
     iget v0, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mSmsCountOnIcc:I
 
     return v0
@@ -1756,7 +1620,6 @@
     .locals 1
 
     .prologue
-    .line 734
     const/4 v0, 0x0
 
     return-object v0
@@ -1766,7 +1629,6 @@
     .locals 1
 
     .prologue
-    .line 688
     const/4 v0, -0x1
 
     return v0
@@ -1776,7 +1638,6 @@
     .locals 1
 
     .prologue
-    .line 427
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mVoiceMailTag:Ljava/lang/String;
 
     return-object v0
@@ -1786,7 +1647,6 @@
     .locals 1
 
     .prologue
-    .line 361
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mVoiceMailNum:Ljava/lang/String;
 
     return-object v0
@@ -1803,33 +1663,27 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 464
     iget v5, p1, Landroid/os/Message;->what:I
 
     sparse-switch v5, :sswitch_data_0
 
-    .line 552
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 554
     :cond_0
     :goto_0
     return-void
 
-    .line 467
     :sswitch_0
     :try_start_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 468
     .local v0, "ar":Landroid/os/AsyncResult;
     iget-object v3, v0, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
     check-cast v3, Lcom/android/internal/telephony/uicc/IccRecords$IccRecordLoaded;
 
-    .line 469
     .local v3, "recordLoaded":Lcom/android/internal/telephony/uicc/IccRecords$IccRecordLoaded;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1855,12 +1709,10 @@
 
     invoke-virtual {p0, v5}, Lcom/android/internal/telephony/uicc/IccRecords;->log(Ljava/lang/String;)V
 
-    .line 471
     iget-object v5, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v5, :cond_1
 
-    .line 472
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1886,13 +1738,11 @@
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 481
     :goto_1
     invoke-virtual {p0}, Lcom/android/internal/telephony/uicc/IccRecords;->onRecordLoaded()V
 
     goto :goto_0
 
-    .line 474
     :cond_1
     :try_start_1
     invoke-interface {v3, v0}, Lcom/android/internal/telephony/uicc/IccRecords$IccRecordLoaded;->onRecordLoaded(Landroid/os/AsyncResult;)V
@@ -1902,13 +1752,11 @@
 
     goto :goto_1
 
-    .line 476
     .end local v0    # "ar":Landroid/os/AsyncResult;
     .end local v3    # "recordLoaded":Lcom/android/internal/telephony/uicc/IccRecords$IccRecordLoaded;
     :catch_0
     move-exception v2
 
-    .line 478
     .local v2, "exc":Ljava/lang/RuntimeException;
     :try_start_2
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1933,7 +1781,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 481
     invoke-virtual {p0}, Lcom/android/internal/telephony/uicc/IccRecords;->onRecordLoaded()V
 
     goto :goto_0
@@ -1946,27 +1793,22 @@
 
     throw v5
 
-    .line 486
     :sswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 487
     .restart local v0    # "ar":Landroid/os/AsyncResult;
     const-string v5, "Card REFRESH occurred: "
 
     invoke-virtual {p0, v5}, Lcom/android/internal/telephony/uicc/IccRecords;->log(Ljava/lang/String;)V
 
-    .line 488
     iget-object v5, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v5, :cond_2
 
-    .line 489
     invoke-virtual {p0}, Lcom/android/internal/telephony/uicc/IccRecords;->broadcastRefresh()V
 
-    .line 490
     iget-object v5, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v5, Lcom/android/internal/telephony/uicc/IccRefreshResponse;
@@ -1975,7 +1817,6 @@
 
     goto :goto_0
 
-    .line 492
     :cond_2
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -2001,30 +1842,25 @@
 
     goto/16 :goto_0
 
-    .line 497
     .end local v0    # "ar":Landroid/os/AsyncResult;
     :sswitch_2
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 498
     .restart local v0    # "ar":Landroid/os/AsyncResult;
     const/4 v5, 0x0
 
     iput-object v5, p0, Lcom/android/internal/telephony/uicc/IccRecords;->auth_rsp:Lcom/android/internal/telephony/uicc/IccIoResult;
 
-    .line 499
     const-string v5, "EVENT_AKA_AUTHENTICATE_DONE"
 
     invoke-virtual {p0, v5}, Lcom/android/internal/telephony/uicc/IccRecords;->log(Ljava/lang/String;)V
 
-    .line 500
     iget-object v5, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v5, :cond_3
 
-    .line 501
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -2047,19 +1883,16 @@
 
     invoke-virtual {p0, v5}, Lcom/android/internal/telephony/uicc/IccRecords;->loge(Ljava/lang/String;)V
 
-    .line 510
     :goto_2
     iget-object v6, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mLock:Ljava/lang/Object;
 
     monitor-enter v6
 
-    .line 511
     :try_start_3
     iget-object v5, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mLock:Ljava/lang/Object;
 
     invoke-virtual {v5}, Ljava/lang/Object;->notifyAll()V
 
-    .line 512
     monitor-exit v6
 
     goto/16 :goto_0
@@ -2073,7 +1906,6 @@
 
     throw v5
 
-    .line 504
     :cond_3
     :try_start_4
     iget-object v5, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
@@ -2082,7 +1914,6 @@
 
     iput-object v5, p0, Lcom/android/internal/telephony/uicc/IccRecords;->auth_rsp:Lcom/android/internal/telephony/uicc/IccIoResult;
 
-    .line 505
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -2109,11 +1940,9 @@
 
     goto :goto_2
 
-    .line 506
     :catch_1
     move-exception v1
 
-    .line 507
     .local v1, "e":Ljava/lang/Exception;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -2137,7 +1966,6 @@
 
     goto :goto_2
 
-    .line 516
     .end local v0    # "ar":Landroid/os/AsyncResult;
     .end local v1    # "e":Ljava/lang/Exception;
     :sswitch_3
@@ -2145,13 +1973,11 @@
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 518
     .restart local v0    # "ar":Landroid/os/AsyncResult;
     iget-object v5, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v5, :cond_4
 
-    .line 519
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -2176,7 +2002,6 @@
 
     goto/16 :goto_0
 
-    .line 523
     :cond_4
     iget-object v5, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
@@ -2186,7 +2011,6 @@
 
     check-cast v4, [I
 
-    .line 528
     .local v4, "recordSize":[I
     const/4 v5, 0x2
 
@@ -2195,7 +2019,6 @@
 
     iput v5, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mSmsCountOnIcc:I
 
-    .line 529
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -2252,11 +2075,9 @@
 
     goto/16 :goto_0
 
-    .line 532
     :catch_2
     move-exception v2
 
-    .line 533
     .local v2, "exc":Ljava/lang/ArrayIndexOutOfBoundsException;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -2284,7 +2105,6 @@
 
     goto/16 :goto_0
 
-    .line 540
     .end local v0    # "ar":Landroid/os/AsyncResult;
     .end local v2    # "exc":Ljava/lang/ArrayIndexOutOfBoundsException;
     .end local v4    # "recordSize":[I
@@ -2293,18 +2113,15 @@
 
     invoke-virtual {p0, v5}, Lcom/android/internal/telephony/uicc/IccRecords;->log(Ljava/lang/String;)V
 
-    .line 541
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 543
     .restart local v0    # "ar":Landroid/os/AsyncResult;
     iget-object v5, v0, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
     if-eqz v5, :cond_0
 
-    .line 544
     iget-object v5, v0, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
     check-cast v5, Landroid/os/Message;
@@ -2317,7 +2134,6 @@
 
     iput-object v6, v5, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
-    .line 546
     iget-object v5, v0, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
     check-cast v5, Landroid/os/Message;
@@ -2326,7 +2142,6 @@
 
     goto/16 :goto_0
 
-    .line 464
     :sswitch_data_0
     .sparse-switch
         0x1c -> :sswitch_3
@@ -2342,20 +2157,16 @@
     .param p1, "refreshResponse"    # Lcom/android/internal/telephony/uicc/IccRefreshResponse;
 
     .prologue
-    .line 605
     if-nez p1, :cond_1
 
-    .line 606
     const-string v0, "handleRefresh received without input"
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/uicc/IccRecords;->log(Ljava/lang/String;)V
 
-    .line 639
     :cond_0
     :goto_0
     return-void
 
-    .line 610
     :cond_1
     iget-object v0, p1, Lcom/android/internal/telephony/uicc/IccRefreshResponse;->aid:Ljava/lang/String;
 
@@ -2375,51 +2186,43 @@
 
     if-eqz v0, :cond_0
 
-    .line 616
     :cond_2
     iget v0, p1, Lcom/android/internal/telephony/uicc/IccRefreshResponse;->refreshResult:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 636
     const-string v0, "handleRefresh with unknown operation"
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/uicc/IccRecords;->log(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 618
     :pswitch_0
     const-string v0, "handleRefresh with SIM_FILE_UPDATED"
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/uicc/IccRecords;->log(Ljava/lang/String;)V
 
-    .line 619
     iget v0, p1, Lcom/android/internal/telephony/uicc/IccRefreshResponse;->efId:I
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/uicc/IccRecords;->handleFileUpdate(I)V
 
     goto :goto_0
 
-    .line 622
     :pswitch_1
     const-string v0, "handleRefresh with SIM_REFRESH_INIT"
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/uicc/IccRecords;->log(Ljava/lang/String;)V
 
-    .line 624
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mAdnCache:Lcom/android/internal/telephony/uicc/AdnRecordCache;
 
     if-eqz v0, :cond_0
 
-    .line 625
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mAdnCache:Lcom/android/internal/telephony/uicc/AdnRecordCache;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/uicc/AdnRecordCache;->reset()V
 
     goto :goto_0
 
-    .line 632
     :pswitch_2
     const-string v0, "handleRefresh with SIM_REFRESH_RESET"
 
@@ -2427,7 +2230,6 @@
 
     goto :goto_0
 
-    .line 616
     nop
 
     :pswitch_data_0
@@ -2442,7 +2244,6 @@
     .locals 1
 
     .prologue
-    .line 679
     const/4 v0, 0x0
 
     return v0
@@ -2452,7 +2253,6 @@
     .locals 1
 
     .prologue
-    .line 661
     const/4 v0, 0x0
 
     return v0
@@ -2462,7 +2262,6 @@
     .locals 1
 
     .prologue
-    .line 708
     const/4 v0, 0x1
 
     return v0
@@ -2495,7 +2294,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 231
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mDestroyed:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -2504,29 +2302,24 @@
 
     if-eqz v1, :cond_1
 
-    .line 241
     :cond_0
     :goto_0
     return-void
 
-    .line 235
     :cond_1
     new-instance v0, Landroid/os/Registrant;
 
     invoke-direct {v0, p1, p2, p3}, Landroid/os/Registrant;-><init>(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 236
     .local v0, "r":Landroid/os/Registrant;
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mImsiReadyRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v1, v0}, Landroid/os/RegistrantList;->add(Landroid/os/Registrant;)V
 
-    .line 238
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mImsi:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    .line 239
     new-instance v1, Landroid/os/AsyncResult;
 
     invoke-direct {v1, v2, v2, v2}, Landroid/os/AsyncResult;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Throwable;)V
@@ -2543,18 +2336,15 @@
     .param p3, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 269
     new-instance v0, Landroid/os/Registrant;
 
     invoke-direct {v0, p1, p2, p3}, Landroid/os/Registrant;-><init>(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 270
     .local v0, "r":Landroid/os/Registrant;
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mNetworkSelectionModeAutomaticRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v1, v0}, Landroid/os/RegistrantList;->add(Landroid/os/Registrant;)V
 
-    .line 271
     return-void
 .end method
 
@@ -2565,18 +2355,15 @@
     .param p3, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 260
     new-instance v0, Landroid/os/Registrant;
 
     invoke-direct {v0, p1, p2, p3}, Landroid/os/Registrant;-><init>(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 261
     .local v0, "r":Landroid/os/Registrant;
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mNewSmsRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v1, v0}, Landroid/os/RegistrantList;->add(Landroid/os/Registrant;)V
 
-    .line 262
     return-void
 .end method
 
@@ -2587,18 +2374,15 @@
     .param p3, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 247
     new-instance v0, Landroid/os/Registrant;
 
     invoke-direct {v0, p1, p2, p3}, Landroid/os/Registrant;-><init>(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 248
     .local v0, "r":Landroid/os/Registrant;
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mRecordsEventsRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v1, v0}, Landroid/os/RegistrantList;->add(Landroid/os/Registrant;)V
 
-    .line 252
     const/4 v1, 0x0
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2607,7 +2391,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Registrant;->notifyResult(Ljava/lang/Object;)V
 
-    .line 253
     const/4 v1, 0x1
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2616,7 +2399,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Registrant;->notifyResult(Ljava/lang/Object;)V
 
-    .line 254
     return-void
 .end method
 
@@ -2629,7 +2411,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 207
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mDestroyed:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -2638,12 +2419,10 @@
 
     if-eqz v3, :cond_1
 
-    .line 225
     :cond_0
     :goto_0
     return-void
 
-    .line 211
     :cond_1
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mRecordsLoadedRegistrants:Landroid/os/RegistrantList;
 
@@ -2657,7 +2436,6 @@
     :goto_1
     if-ltz v0, :cond_3
 
-    .line 212
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mRecordsLoadedRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v3, v0}, Landroid/os/RegistrantList;->get(I)Ljava/lang/Object;
@@ -2666,25 +2444,21 @@
 
     check-cast v1, Landroid/os/Registrant;
 
-    .line 213
     .local v1, "r":Landroid/os/Registrant;
     invoke-virtual {v1}, Landroid/os/Registrant;->getHandler()Landroid/os/Handler;
 
     move-result-object v2
 
-    .line 215
     .local v2, "rH":Landroid/os/Handler;
     if-eqz v2, :cond_2
 
     if-eq v2, p1, :cond_0
 
-    .line 211
     :cond_2
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_1
 
-    .line 219
     .end local v1    # "r":Landroid/os/Registrant;
     .end local v2    # "rH":Landroid/os/Handler;
     :cond_3
@@ -2692,13 +2466,11 @@
 
     invoke-direct {v1, p1, p2, p3}, Landroid/os/Registrant;-><init>(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 220
     .restart local v1    # "r":Landroid/os/Registrant;
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mRecordsLoadedRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v3, v1}, Landroid/os/RegistrantList;->add(Landroid/os/Registrant;)V
 
-    .line 222
     iget v3, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mRecordsToLoad:I
 
     if-nez v3, :cond_0
@@ -2709,7 +2481,6 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 223
     new-instance v3, Landroid/os/AsyncResult;
 
     invoke-direct {v3, v5, v5, v5}, Landroid/os/AsyncResult;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Throwable;)V
@@ -2724,15 +2495,12 @@
     .param p1, "imsi"    # Ljava/lang/String;
 
     .prologue
-    .line 292
     iput-object p1, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mImsi:Ljava/lang/String;
 
-    .line 293
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mImsiReadyRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v0}, Landroid/os/RegistrantList;->notifyRegistrants()V
 
-    .line 294
     return-void
 .end method
 
@@ -2743,13 +2511,10 @@
     .param p3, "onComplete"    # Landroid/os/Message;
 
     .prologue
-    .line 344
     iput-object p2, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mMsisdn:Ljava/lang/String;
 
-    .line 345
     iput-object p1, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mMsisdnTag:Ljava/lang/String;
 
-    .line 347
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2784,7 +2549,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/uicc/IccRecords;->log(Ljava/lang/String;)V
 
-    .line 350
     new-instance v1, Lcom/android/internal/telephony/uicc/AdnRecord;
 
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mMsisdnTag:Ljava/lang/String;
@@ -2793,7 +2557,6 @@
 
     invoke-direct {v1, v0, v2}, Lcom/android/internal/telephony/uicc/AdnRecord;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 352
     .local v1, "adn":Lcom/android/internal/telephony/uicc/AdnRecord;
     new-instance v0, Lcom/android/internal/telephony/uicc/AdnRecordLoader;
 
@@ -2817,7 +2580,6 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/android/internal/telephony/uicc/AdnRecordLoader;->updateEF(Lcom/android/internal/telephony/uicc/AdnRecord;IIILjava/lang/String;Landroid/os/Message;)V
 
-    .line 354
     return-void
 .end method
 
@@ -2826,10 +2588,8 @@
     .param p1, "spn"    # Ljava/lang/String;
 
     .prologue
-    .line 396
     iput-object p1, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mSpn:Ljava/lang/String;
 
-    .line 397
     return-void
 .end method
 
@@ -2839,7 +2599,6 @@
     .param p2, "efPl"    # [B
 
     .prologue
-    .line 564
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
@@ -2850,7 +2609,6 @@
 
     move-result-object v0
 
-    .line 566
     .local v0, "locales":[Ljava/lang/String;
     :try_start_0
     invoke-static {p1, v0}, Lcom/android/internal/telephony/uicc/IccRecords;->findBestLanguage([B[Ljava/lang/String;)Ljava/lang/String;
@@ -2861,13 +2619,11 @@
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 571
     :goto_0
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mPrefLang:Ljava/lang/String;
 
     if-nez v2, :cond_0
 
-    .line 573
     :try_start_1
     invoke-static {p2, v0}, Lcom/android/internal/telephony/uicc/IccRecords;->findBestLanguage([B[Ljava/lang/String;)Ljava/lang/String;
 
@@ -2877,16 +2633,13 @@
     :try_end_1
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 578
     :cond_0
     :goto_1
     return-void
 
-    .line 567
     :catch_0
     move-exception v1
 
-    .line 568
     .local v1, "uee":Ljava/io/UnsupportedEncodingException;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -2914,12 +2667,10 @@
 
     goto :goto_0
 
-    .line 574
     .end local v1    # "uee":Ljava/io/UnsupportedEncodingException;
     :catch_1
     move-exception v1
 
-    .line 575
     .restart local v1    # "uee":Ljava/io/UnsupportedEncodingException;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -2954,7 +2705,6 @@
     .param p2, "val"    # Ljava/lang/String;
 
     .prologue
-    .line 738
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mParentApp:Lcom/android/internal/telephony/uicc/UiccCardApplication;
@@ -2965,7 +2715,6 @@
 
     invoke-static {v0, p1, p2}, Landroid/telephony/TelephonyManager;->setTelephonyProperty(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 740
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2996,7 +2745,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/uicc/IccRecords;->log(Ljava/lang/String;)V
 
-    .line 741
     return-void
 .end method
 
@@ -3007,7 +2755,6 @@
     .param p3, "number"    # Ljava/lang/String;
 
     .prologue
-    .line 699
     return-void
 .end method
 
@@ -3021,14 +2768,12 @@
     .locals 3
 
     .prologue
-    .line 127
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mIccId:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/telephony/SubscriptionInfo;->givePrintableIccid(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 128
     .local v0, "iccIdToPrint":Ljava/lang/String;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3326,12 +3071,10 @@
     .param p1, "h"    # Landroid/os/Handler;
 
     .prologue
-    .line 243
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mImsiReadyRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v0, p1}, Landroid/os/RegistrantList;->remove(Landroid/os/Handler;)V
 
-    .line 244
     return-void
 .end method
 
@@ -3340,12 +3083,10 @@
     .param p1, "h"    # Landroid/os/Handler;
 
     .prologue
-    .line 273
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mNetworkSelectionModeAutomaticRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v0, p1}, Landroid/os/RegistrantList;->remove(Landroid/os/Handler;)V
 
-    .line 274
     return-void
 .end method
 
@@ -3354,12 +3095,10 @@
     .param p1, "h"    # Landroid/os/Handler;
 
     .prologue
-    .line 264
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mNewSmsRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v0, p1}, Landroid/os/RegistrantList;->remove(Landroid/os/Handler;)V
 
-    .line 265
     return-void
 .end method
 
@@ -3368,12 +3107,10 @@
     .param p1, "h"    # Landroid/os/Handler;
 
     .prologue
-    .line 256
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mRecordsEventsRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v0, p1}, Landroid/os/RegistrantList;->remove(Landroid/os/Handler;)V
 
-    .line 257
     return-void
 .end method
 
@@ -3382,11 +3119,9 @@
     .param p1, "h"    # Landroid/os/Handler;
 
     .prologue
-    .line 227
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/IccRecords;->mRecordsLoadedRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v0, p1}, Landroid/os/RegistrantList;->remove(Landroid/os/Handler;)V
 
-    .line 228
     return-void
 .end method

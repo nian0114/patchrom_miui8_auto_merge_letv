@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 1093
     iput-object p1, p0, Lcom/letv/leui/widget/BaseSwipeHelper$3;->this$0:Lcom/letv/leui/widget/BaseSwipeHelper;
 
     iput-boolean p2, p0, Lcom/letv/leui/widget/BaseSwipeHelper$3;->val$swap:Z
@@ -50,7 +49,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 1096
     iget-object v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper$3;->this$0:Lcom/letv/leui/widget/BaseSwipeHelper;
 
     iget-boolean v1, p0, Lcom/letv/leui/widget/BaseSwipeHelper$3;->val$swap:Z
@@ -65,6 +63,5 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/letv/leui/widget/BaseSwipeHelper;->onSwipeRevealed(ZZLjava/lang/Object;)V
 
-    .line 1097
     return-void
 .end method

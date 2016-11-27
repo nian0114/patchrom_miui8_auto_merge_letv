@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 429
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$3;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 433
     sget-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->DEBUG_WAKEUP:Z
 
     if-eqz v0, :cond_0
@@ -51,7 +49,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 434
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$3;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -59,6 +56,5 @@
 
     invoke-virtual {v0}, Landroid/view/WindowManagerInternal;->hideKeyguardWallpaper()V
 
-    .line 435
     return-void
 .end method

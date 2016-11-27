@@ -67,18 +67,14 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/LeAlertParams;->isTitleSetted:Z
 
-    .line 49
     iput-object p1, p0, Lcom/letv/leui/widget/LeAlertParams;->mContext:Landroid/content/Context;
 
-    .line 50
     const-string v0, "layout_inflater"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -89,7 +85,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 51
     return-void
 .end method
 
@@ -98,7 +93,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LeAlertParams;
 
     .prologue
-    .line 15
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->checkBox:Landroid/widget/CheckBox;
 
     return-object v0
@@ -108,12 +102,10 @@
     .locals 3
 
     .prologue
-    .line 73
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->menuContainer:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
 
-    .line 74
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->mInflater:Landroid/view/LayoutInflater;
 
     const v1, 0x1090092
@@ -126,7 +118,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->mMenuView:Landroid/view/View;
 
-    .line 75
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->mMenuView:Landroid/view/View;
 
     const v1, 0x10203e7
@@ -139,7 +130,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->titleView:Landroid/widget/TextView;
 
-    .line 76
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->mMenuView:Landroid/view/View;
 
     const v1, 0x10203e8
@@ -152,7 +142,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->contentView:Landroid/widget/TextView;
 
-    .line 79
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->mMenuView:Landroid/view/View;
 
     const v1, 0x10203ed
@@ -165,7 +154,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->checkBox:Landroid/widget/CheckBox;
 
-    .line 80
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->mMenuView:Landroid/view/View;
 
     const v1, 0x10203ec
@@ -178,7 +166,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->checkbox_ctn:Landroid/widget/LinearLayout;
 
-    .line 81
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->mMenuView:Landroid/view/View;
 
     const v1, 0x10203ee
@@ -191,7 +178,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->gapLine_1:Landroid/widget/ImageView;
 
-    .line 82
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->mMenuView:Landroid/view/View;
 
     const v1, 0x10203f0
@@ -204,7 +190,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->gapLine_2:Landroid/widget/ImageView;
 
-    .line 83
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->mMenuView:Landroid/view/View;
 
     const v1, 0x10203ef
@@ -217,7 +202,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->btn_confirm:Landroid/widget/Button;
 
-    .line 84
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->mMenuView:Landroid/view/View;
 
     const v1, 0x10203f1
@@ -230,7 +214,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->btn_cancel:Landroid/widget/Button;
 
-    .line 85
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->mMenuView:Landroid/view/View;
 
     const v1, 0x10203ea
@@ -243,7 +226,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->layoutForDiy:Landroid/widget/LinearLayout;
 
-    .line 86
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->mMenuView:Landroid/view/View;
 
     const v1, 0x10203e9
@@ -256,7 +238,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->diyLine1:Landroid/widget/ImageView;
 
-    .line 87
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->mMenuView:Landroid/view/View;
 
     const v1, 0x10203eb
@@ -269,7 +250,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->diyLine2:Landroid/widget/ImageView;
 
-    .line 88
     return-void
 .end method
 
@@ -291,7 +271,6 @@
 
     const/16 v2, 0x8
 
-    .line 101
     if-eqz p2, :cond_0
 
     if-nez p6, :cond_1
@@ -303,12 +282,10 @@
 
     if-nez p8, :cond_1
 
-    .line 102
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->gapLine_1:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 104
     :cond_1
     if-nez p4, :cond_2
 
@@ -316,31 +293,25 @@
 
     if-eqz p8, :cond_2
 
-    .line 105
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->diyLine1:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 107
     :cond_2
     if-nez p8, :cond_9
 
-    .line 108
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->layoutForDiy:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 109
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->diyLine1:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 110
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->diyLine2:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 115
     :goto_0
     if-eqz p4, :cond_3
 
@@ -350,13 +321,11 @@
 
     if-eqz v0, :cond_a
 
-    .line 116
     :cond_3
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->titleView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 121
     :goto_1
     if-eqz p5, :cond_4
 
@@ -366,13 +335,11 @@
 
     if-eqz v0, :cond_b
 
-    .line 122
     :cond_4
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->contentView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 127
     :goto_2
     if-eqz p2, :cond_5
 
@@ -384,53 +351,43 @@
 
     if-eqz v0, :cond_c
 
-    .line 128
     :cond_5
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->checkBox:Landroid/widget/CheckBox;
 
     invoke-virtual {v0, v2}, Landroid/widget/CheckBox;->setVisibility(I)V
 
-    .line 129
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->checkbox_ctn:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 130
     if-eqz p8, :cond_6
 
-    .line 131
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->gapLine_1:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 156
     :cond_6
     :goto_3
     if-eqz p3, :cond_8
 
-    .line 157
     array-length v0, p3
 
     if-lt v0, v3, :cond_7
 
-    .line 158
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->btn_confirm:Landroid/widget/Button;
 
     aget-object v1, p3, v4
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    .line 159
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->btn_confirm:Landroid/widget/Button;
 
     aget v1, p7, v4
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setTextColor(I)V
 
-    .line 160
     if-eqz p1, :cond_7
 
-    .line 161
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->btn_confirm:Landroid/widget/Button;
 
     new-instance v1, Lcom/letv/leui/widget/LeAlertParams$2;
@@ -439,23 +396,19 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 169
     :cond_7
     array-length v0, p3
 
     if-ne v0, v3, :cond_e
 
-    .line 170
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->btn_cancel:Landroid/widget/Button;
 
     invoke-virtual {v0, v2}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 171
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->gapLine_2:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 187
     :cond_8
     :goto_4
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->menuContainer:Landroid/view/ViewGroup;
@@ -464,10 +417,8 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    .line 189
     return-void
 
-    .line 112
     :cond_9
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->layoutForDiy:Landroid/widget/LinearLayout;
 
@@ -475,7 +426,6 @@
 
     goto :goto_0
 
-    .line 118
     :cond_a
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->titleView:Landroid/widget/TextView;
 
@@ -483,7 +433,6 @@
 
     goto :goto_1
 
-    .line 124
     :cond_b
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->contentView:Landroid/widget/TextView;
 
@@ -491,21 +440,17 @@
 
     goto :goto_2
 
-    .line 136
     :cond_c
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->checkBox:Landroid/widget/CheckBox;
 
     invoke-virtual {v0, p6}, Landroid/widget/CheckBox;->setText(Ljava/lang/CharSequence;)V
 
-    .line 137
     if-eqz p2, :cond_d
 
-    .line 138
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->checkBox:Landroid/widget/CheckBox;
 
     invoke-virtual {v0, p2}, Landroid/widget/CheckBox;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    .line 141
     :cond_d
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->checkbox_ctn:Landroid/widget/LinearLayout;
 
@@ -517,7 +462,6 @@
 
     goto :goto_3
 
-    .line 173
     :cond_e
     array-length v0, p3
 
@@ -525,24 +469,20 @@
 
     if-ne v0, v1, :cond_8
 
-    .line 174
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->btn_cancel:Landroid/widget/Button;
 
     aget-object v1, p3, v3
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    .line 175
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->btn_cancel:Landroid/widget/Button;
 
     aget v1, p7, v3
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setTextColor(I)V
 
-    .line 176
     if-eqz p1, :cond_8
 
-    .line 177
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->btn_cancel:Landroid/widget/Button;
 
     new-instance v1, Lcom/letv/leui/widget/LeAlertParams$3;
@@ -561,7 +501,6 @@
     .param p1, "controller"    # Lcom/letv/leui/widget/LeAlertController;
 
     .prologue
-    .line 61
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->mInflater:Landroid/view/LayoutInflater;
 
     const v1, 0x109008e
@@ -576,22 +515,18 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->menuContainer:Landroid/view/ViewGroup;
 
-    .line 62
     invoke-direct {p0}, Lcom/letv/leui/widget/LeAlertParams;->getWidget()V
 
-    .line 63
     iget-boolean v0, p0, Lcom/letv/leui/widget/LeAlertParams;->isTitleSetted:Z
 
     if-nez v0, :cond_0
 
-    .line 64
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->titleView:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/letv/leui/widget/LeAlertParams;->titleText:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 65
     :cond_0
     iget-object v1, p0, Lcom/letv/leui/widget/LeAlertParams;->onClickListener:Landroid/content/DialogInterface$OnClickListener;
 
@@ -613,12 +548,10 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/letv/leui/widget/LeAlertParams;->setStyle(Landroid/content/DialogInterface$OnClickListener;Landroid/widget/CompoundButton$OnCheckedChangeListener;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[ILandroid/view/View;)V
 
-    .line 68
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->menuContainer:Landroid/view/ViewGroup;
 
     invoke-virtual {p1, v0}, Lcom/letv/leui/widget/LeAlertController;->setContentView(Landroid/view/View;)V
 
-    .line 70
     return-void
 .end method
 
@@ -627,27 +560,22 @@
     .param p1, "newTitle"    # Ljava/lang/String;
 
     .prologue
-    .line 54
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/LeAlertParams;->isTitleSetted:Z
 
-    .line 55
     iput-object p1, p0, Lcom/letv/leui/widget/LeAlertParams;->titleText:Ljava/lang/String;
 
-    .line 56
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->titleView:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
 
-    .line 57
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams;->titleView:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/letv/leui/widget/LeAlertParams;->titleText:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 58
     :cond_0
     return-void
 .end method

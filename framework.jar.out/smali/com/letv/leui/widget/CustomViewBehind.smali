@@ -77,12 +77,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 47
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/letv/leui/widget/CustomViewBehind;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 48
     return-void
 .end method
 
@@ -96,31 +94,24 @@
 
     const/4 v1, 0x0
 
-    .line 51
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 25
     iput v1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mTouchMode:I
 
-    .line 33
     iput-boolean v1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mVisibleAlways:Z
 
-    .line 35
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mActivePointerId:I
 
-    .line 420
     new-instance v1, Landroid/graphics/Paint;
 
     invoke-direct {v1}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mFadePaint:Landroid/graphics/Paint;
 
-    .line 690
     iput-boolean v3, p0, Lcom/letv/leui/widget/CustomViewBehind;->mSelectorEnabled:Z
 
-    .line 52
     const/high16 v1, 0x42400000    # 48.0f
 
     invoke-virtual {p0}, Lcom/letv/leui/widget/CustomViewBehind;->getResources()Landroid/content/res/Resources;
@@ -139,7 +130,6 @@
 
     iput v1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMarginThreshold:I
 
-    .line 55
     invoke-virtual {p0}, Lcom/letv/leui/widget/CustomViewBehind;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -148,7 +138,6 @@
 
     move-result-object v0
 
-    .line 57
     .local v0, "configuration":Landroid/view/ViewConfiguration;
     invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
 
@@ -156,14 +145,12 @@
 
     iput v1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mTouchSlop:I
 
-    .line 59
     invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledMaximumFlingVelocity()I
 
     move-result v1
 
     iput v1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMaximumVelocity:I
 
-    .line 60
     return-void
 .end method
 
@@ -171,14 +158,12 @@
     .locals 3
 
     .prologue
-    .line 736
     iget-object v1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mSelectedView:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getTop()I
 
     move-result v0
 
-    .line 737
     .local v0, "y":I
     iget-object v1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mSelectedView:Landroid/view/View;
 
@@ -198,7 +183,6 @@
 
     add-int/2addr v0, v1
 
-    .line 738
     return v0
 .end method
 
@@ -206,23 +190,19 @@
     .locals 1
 
     .prologue
-    .line 344
     iget-object v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     if-nez v0, :cond_0
 
-    .line 345
     invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mVelocityTracker:Landroid/view/VelocityTracker;
 
-    .line 349
     :goto_0
     return-void
 
-    .line 347
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mVelocityTracker:Landroid/view/VelocityTracker;
 
@@ -235,19 +215,16 @@
     .locals 1
 
     .prologue
-    .line 352
     iget-object v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     if-nez v0, :cond_0
 
-    .line 353
     invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mVelocityTracker:Landroid/view/VelocityTracker;
 
-    .line 355
     :cond_0
     return-void
 .end method
@@ -257,29 +234,24 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 329
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
     move-result v2
 
-    .line 330
     .local v2, "pointerIndex":I
     invoke-virtual {p1, v2}, Landroid/view/MotionEvent;->getPointerId(I)I
 
     move-result v1
 
-    .line 331
     .local v1, "pointerId":I
     iget v3, p0, Lcom/letv/leui/widget/CustomViewBehind;->mActivePointerId:I
 
     if-ne v1, v3, :cond_0
 
-    .line 333
     if-nez v2, :cond_1
 
     const/4 v0, 0x1
 
-    .line 334
     .local v0, "newPointerIndex":I
     :goto_0
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getX(I)F
@@ -288,22 +260,18 @@
 
     iput v3, p0, Lcom/letv/leui/widget/CustomViewBehind;->mLastMotionX:F
 
-    .line 335
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getPointerId(I)I
 
     move-result v3
 
     iput v3, p0, Lcom/letv/leui/widget/CustomViewBehind;->mActivePointerId:I
 
-    .line 336
     invoke-direct {p0}, Lcom/letv/leui/widget/CustomViewBehind;->recycleVelocityTracker()V
 
-    .line 338
     .end local v0    # "newPointerIndex":I
     :cond_0
     return-void
 
-    .line 333
     :cond_1
     const/4 v0, 0x0
 
@@ -314,22 +282,18 @@
     .locals 1
 
     .prologue
-    .line 361
     iget-object v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     if-eqz v0, :cond_0
 
-    .line 362
     iget-object v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0}, Landroid/view/VelocityTracker;->recycle()V
 
-    .line 363
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mVelocityTracker:Landroid/view/VelocityTracker;
 
-    .line 365
     :cond_0
     return-void
 .end method
@@ -340,7 +304,6 @@
     .locals 1
 
     .prologue
-    .line 317
     iget-boolean v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mIsBeingDragged:Z
 
     return v0
@@ -351,15 +314,12 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 369
     iget-object v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mTransformer:Lcom/letv/leui/widget/SlidingMenu$CanvasTransformer;
 
     if-eqz v0, :cond_0
 
-    .line 371
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 372
     iget-object v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mTransformer:Lcom/letv/leui/widget/SlidingMenu$CanvasTransformer;
 
     iget-object v1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
@@ -370,17 +330,13 @@
 
     invoke-interface {v0, p1, v1}, Lcom/letv/leui/widget/SlidingMenu$CanvasTransformer;->transformCanvas(Landroid/graphics/Canvas;F)V
 
-    .line 373
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->dispatchDraw(Landroid/graphics/Canvas;)V
 
-    .line 374
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 378
     :goto_0
     return-void
 
-    .line 377
     :cond_0
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->dispatchDraw(Landroid/graphics/Canvas;)V
 
@@ -398,16 +354,13 @@
 
     const/4 v3, 0x0
 
-    .line 668
     iget-boolean v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mFadeEnabled:Z
 
     if-nez v0, :cond_0
 
-    .line 688
     :goto_0
     return-void
 
-    .line 670
     :cond_0
     iget v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mFadeDegree:F
 
@@ -427,7 +380,6 @@
 
     float-to-int v6, v0
 
-    .line 671
     .local v6, "alpha":I
     iget-object v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mFadePaint:Landroid/graphics/Paint;
 
@@ -437,20 +389,16 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 672
     const/4 v7, 0x0
 
-    .line 673
     .local v7, "left":I
     const/4 v8, 0x0
 
-    .line 674
     .local v8, "right":I
     iget v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMode:I
 
     if-nez v0, :cond_2
 
-    .line 675
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
     move-result v0
@@ -461,12 +409,10 @@
 
     sub-int v7, v0, v1
 
-    .line 676
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
     move-result v8
 
-    .line 687
     :cond_1
     :goto_1
     int-to-float v1, v7
@@ -487,7 +433,6 @@
 
     goto :goto_0
 
-    .line 677
     :cond_2
     iget v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMode:I
 
@@ -495,12 +440,10 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 678
     invoke-virtual {p1}, Landroid/view/View;->getRight()I
 
     move-result v7
 
-    .line 679
     invoke-virtual {p1}, Landroid/view/View;->getRight()I
 
     move-result v0
@@ -513,7 +456,6 @@
 
     goto :goto_1
 
-    .line 680
     :cond_3
     iget v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMode:I
 
@@ -521,7 +463,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 681
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
     move-result v0
@@ -532,12 +473,10 @@
 
     sub-int v7, v0, v1
 
-    .line 682
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
     move-result v8
 
-    .line 683
     int-to-float v1, v7
 
     int-to-float v3, v8
@@ -554,12 +493,10 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 684
     invoke-virtual {p1}, Landroid/view/View;->getRight()I
 
     move-result v7
 
-    .line 685
     invoke-virtual {p1}, Landroid/view/View;->getRight()I
 
     move-result v0
@@ -584,17 +521,14 @@
 
     const/4 v6, 0x0
 
-    .line 695
     iget-boolean v4, p0, Lcom/letv/leui/widget/CustomViewBehind;->mSelectorEnabled:Z
 
     if-nez v4, :cond_1
 
-    .line 717
     :cond_0
     :goto_0
     return-void
 
-    .line 697
     :cond_1
     iget-object v4, p0, Lcom/letv/leui/widget/CustomViewBehind;->mSelectorDrawable:Landroid/graphics/Bitmap;
 
@@ -604,7 +538,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 698
     iget-object v4, p0, Lcom/letv/leui/widget/CustomViewBehind;->mSelectedView:Landroid/view/View;
 
     invoke-virtual {v4}, Landroid/view/View;->getTag()Ljava/lang/Object;
@@ -613,7 +546,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 699
     .local v3, "tag":Ljava/lang/String;
     const-string v4, "CustomViewBehindSelectedView"
 
@@ -623,10 +555,8 @@
 
     if-eqz v4, :cond_0
 
-    .line 700
     invoke-virtual {p2}, Landroid/graphics/Canvas;->save()I
 
-    .line 702
     iget-object v4, p0, Lcom/letv/leui/widget/CustomViewBehind;->mSelectorDrawable:Landroid/graphics/Bitmap;
 
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->getWidth()I
@@ -639,22 +569,18 @@
 
     float-to-int v1, v4
 
-    .line 703
     .local v1, "offset":I
     iget v4, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMode:I
 
     if-nez v4, :cond_3
 
-    .line 704
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
     move-result v2
 
-    .line 705
     .local v2, "right":I
     sub-int v0, v2, v1
 
-    .line 706
     .local v0, "left":I
     invoke-virtual {p0}, Lcom/letv/leui/widget/CustomViewBehind;->getHeight()I
 
@@ -662,7 +588,6 @@
 
     invoke-virtual {p2, v0, v6, v2, v4}, Landroid/graphics/Canvas;->clipRect(IIII)Z
 
-    .line 707
     iget-object v4, p0, Lcom/letv/leui/widget/CustomViewBehind;->mSelectorDrawable:Landroid/graphics/Bitmap;
 
     int-to-float v5, v0
@@ -675,7 +600,6 @@
 
     invoke-virtual {p2, v4, v5, v6, v7}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 714
     .end local v0    # "left":I
     .end local v2    # "right":I
     :cond_2
@@ -684,7 +608,6 @@
 
     goto :goto_0
 
-    .line 708
     :cond_3
     iget v4, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMode:I
 
@@ -692,16 +615,13 @@
 
     if-ne v4, v5, :cond_2
 
-    .line 709
     invoke-virtual {p1}, Landroid/view/View;->getRight()I
 
     move-result v0
 
-    .line 710
     .restart local v0    # "left":I
     add-int v2, v0, v1
 
-    .line 711
     .restart local v2    # "right":I
     invoke-virtual {p0}, Lcom/letv/leui/widget/CustomViewBehind;->getHeight()I
 
@@ -709,7 +629,6 @@
 
     invoke-virtual {p2, v0, v6, v2, v4}, Landroid/graphics/Canvas;->clipRect(IIII)Z
 
-    .line 712
     iget-object v4, p0, Lcom/letv/leui/widget/CustomViewBehind;->mSelectorDrawable:Landroid/graphics/Bitmap;
 
     iget-object v5, p0, Lcom/letv/leui/widget/CustomViewBehind;->mSelectorDrawable:Landroid/graphics/Bitmap;
@@ -741,7 +660,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 640
     iget-object v1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mShadowDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_0
@@ -750,22 +668,18 @@
 
     if-gtz v1, :cond_1
 
-    .line 657
     :cond_0
     :goto_0
     return-void
 
-    .line 642
     :cond_1
     const/4 v0, 0x0
 
-    .line 643
     .local v0, "left":I
     iget v1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMode:I
 
     if-nez v1, :cond_3
 
-    .line 644
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
     move-result v1
@@ -774,7 +688,6 @@
 
     sub-int v0, v1, v2
 
-    .line 655
     :cond_2
     :goto_1
     iget-object v1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mShadowDrawable:Landroid/graphics/drawable/Drawable;
@@ -789,14 +702,12 @@
 
     invoke-virtual {v1, v0, v4, v2, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 656
     iget-object v1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mShadowDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, p2}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     goto :goto_0
 
-    .line 645
     :cond_3
     iget v1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMode:I
 
@@ -804,14 +715,12 @@
 
     if-ne v1, v2, :cond_4
 
-    .line 646
     invoke-virtual {p1}, Landroid/view/View;->getRight()I
 
     move-result v0
 
     goto :goto_1
 
-    .line 647
     :cond_4
     iget v1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMode:I
 
@@ -819,17 +728,14 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 648
     iget-object v1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mSecondaryShadowDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_5
 
-    .line 649
     invoke-virtual {p1}, Landroid/view/View;->getRight()I
 
     move-result v0
 
-    .line 650
     iget-object v1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mSecondaryShadowDrawable:Landroid/graphics/drawable/Drawable;
 
     iget v2, p0, Lcom/letv/leui/widget/CustomViewBehind;->mShadowWidth:I
@@ -842,12 +748,10 @@
 
     invoke-virtual {v1, v0, v4, v2, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 651
     iget-object v1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mSecondaryShadowDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, p2}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 653
     :cond_5
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
@@ -865,23 +769,19 @@
     .param p1, "content"    # Landroid/view/View;
 
     .prologue
-    .line 550
     const/4 v0, 0x0
 
-    .line 552
     .local v0, "widthOffset":I
     iget-object v1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     if-eqz v1, :cond_0
 
-    .line 553
     iget-object v1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     invoke-virtual {v1}, Lcom/letv/leui/widget/CustomViewAbove;->getAboveOffsetLeft()I
 
     move-result v0
 
-    .line 556
     :cond_0
     iget v1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMode:I
 
@@ -893,7 +793,6 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 557
     :cond_1
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
@@ -907,11 +806,9 @@
 
     add-int/2addr v1, v0
 
-    .line 562
     :goto_0
     return v1
 
-    .line 559
     :cond_2
     iget v1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMode:I
 
@@ -919,14 +816,12 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 560
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
     move-result v1
 
     goto :goto_0
 
-    .line 562
     :cond_3
     const/4 v1, 0x0
 
@@ -938,21 +833,17 @@
     .param p1, "content"    # Landroid/view/View;
 
     .prologue
-    .line 567
     iget v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMode:I
 
     if-nez v0, :cond_0
 
-    .line 568
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
     move-result v0
 
-    .line 572
     :goto_0
     return v0
 
-    .line 569
     :cond_0
     iget v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMode:I
 
@@ -966,7 +857,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 570
     :cond_1
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
@@ -980,7 +870,6 @@
 
     goto :goto_0
 
-    .line 572
     :cond_2
     const/4 v0, 0x0
 
@@ -991,7 +880,6 @@
     .locals 1
 
     .prologue
-    .line 77
     iget-object v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mContent:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getWidth()I
@@ -1005,7 +893,6 @@
     .locals 1
 
     .prologue
-    .line 88
     iget-object v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mContent:Landroid/view/View;
 
     return-object v0
@@ -1017,32 +904,26 @@
     .param p2, "page"    # I
 
     .prologue
-    .line 519
     const/4 v0, 0x0
 
-    .line 521
     .local v0, "widthOffset":I
     iget-object v1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     if-eqz v1, :cond_0
 
-    .line 522
     iget-object v1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     invoke-virtual {v1}, Lcom/letv/leui/widget/CustomViewAbove;->getAboveOffsetLeft()I
 
     move-result v0
 
-    .line 524
     :cond_0
     iget v1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMode:I
 
     if-nez v1, :cond_2
 
-    .line 525
     packed-switch p2, :pswitch_data_0
 
-    .line 546
     :cond_1
     :goto_0
     :pswitch_0
@@ -1053,7 +934,6 @@
     :goto_1
     return v1
 
-    .line 527
     :pswitch_1
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
@@ -1069,7 +949,6 @@
 
     goto :goto_1
 
-    .line 529
     :pswitch_2
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
@@ -1079,7 +958,6 @@
 
     goto :goto_1
 
-    .line 531
     :cond_2
     iget v1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMode:I
 
@@ -1087,13 +965,11 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 532
     packed-switch p2, :pswitch_data_1
 
     :pswitch_3
     goto :goto_0
 
-    .line 534
     :pswitch_4
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
@@ -1103,7 +979,6 @@
 
     goto :goto_1
 
-    .line 536
     :pswitch_5
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
@@ -1119,7 +994,6 @@
 
     goto :goto_1
 
-    .line 538
     :cond_3
     iget v1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMode:I
 
@@ -1127,13 +1001,11 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 539
     packed-switch p2, :pswitch_data_2
 
     :pswitch_6
     goto :goto_0
 
-    .line 541
     :pswitch_7
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
@@ -1149,7 +1021,6 @@
 
     goto :goto_1
 
-    .line 543
     :pswitch_8
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
@@ -1165,7 +1036,6 @@
 
     goto :goto_1
 
-    .line 525
     nop
 
     :pswitch_data_0
@@ -1175,7 +1045,6 @@
         :pswitch_2
     .end packed-switch
 
-    .line 532
     :pswitch_data_1
     .packed-switch 0x0
         :pswitch_4
@@ -1183,7 +1052,6 @@
         :pswitch_5
     .end packed-switch
 
-    .line 539
     :pswitch_data_2
     .packed-switch 0x0
         :pswitch_7
@@ -1203,12 +1071,10 @@
 
     const/4 v3, 0x1
 
-    .line 475
     if-le p1, v3, :cond_1
 
     move p1, v0
 
-    .line 476
     :cond_0
     :goto_0
     iget v2, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMode:I
@@ -1217,11 +1083,9 @@
 
     if-le p1, v3, :cond_2
 
-    .line 482
     :goto_1
     return v1
 
-    .line 475
     :cond_1
     if-ge p1, v3, :cond_0
 
@@ -1229,7 +1093,6 @@
 
     goto :goto_0
 
-    .line 479
     :cond_2
     iget v1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMode:I
 
@@ -1239,13 +1102,11 @@
 
     move v1, v0
 
-    .line 480
     goto :goto_1
 
     :cond_3
     move v1, p1
 
-    .line 482
     goto :goto_1
 .end method
 
@@ -1253,7 +1114,6 @@
     .locals 1
 
     .prologue
-    .line 438
     iget v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMode:I
 
     return v0
@@ -1263,7 +1123,6 @@
     .locals 1
 
     .prologue
-    .line 446
     iget v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mScrollScale:F
 
     return v0
@@ -1273,7 +1132,6 @@
     .locals 1
 
     .prologue
-    .line 103
     iget-object v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mSecondaryContent:Landroid/view/View;
 
     return-object v0
@@ -1289,24 +1147,20 @@
 
     const/4 v3, 0x0
 
-    .line 576
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
     move-result v0
 
-    .line 577
     .local v0, "left":I
     invoke-virtual {p1}, Landroid/view/View;->getRight()I
 
     move-result v1
 
-    .line 578
     .local v1, "right":I
     iget v4, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMode:I
 
     if-nez v4, :cond_2
 
-    .line 579
     if-lt p2, v0, :cond_1
 
     iget v4, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMarginThreshold:I
@@ -1315,7 +1169,6 @@
 
     if-gt p2, v4, :cond_1
 
-    .line 585
     :cond_0
     :goto_0
     return v2
@@ -1323,16 +1176,13 @@
     :cond_1
     move v2, v3
 
-    .line 579
     goto :goto_0
 
-    .line 580
     :cond_2
     iget v4, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMode:I
 
     if-ne v4, v2, :cond_4
 
-    .line 581
     if-gt p2, v1, :cond_3
 
     iget v4, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMarginThreshold:I
@@ -1346,7 +1196,6 @@
 
     goto :goto_0
 
-    .line 582
     :cond_4
     iget v4, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMode:I
 
@@ -1354,7 +1203,6 @@
 
     if-ne v4, v5, :cond_7
 
-    .line 583
     if-lt p2, v0, :cond_5
 
     iget v4, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMarginThreshold:I
@@ -1380,7 +1228,6 @@
     :cond_7
     move v2, v3
 
-    .line 585
     goto :goto_0
 .end method
 
@@ -1395,17 +1242,14 @@
 
     const/4 v0, 0x1
 
-    .line 612
     iget v2, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMode:I
 
     if-nez v2, :cond_2
 
-    .line 613
     cmpl-float v2, p1, v3
 
     if-lez v2, :cond_1
 
-    .line 619
     :cond_0
     :goto_0
     return v0
@@ -1413,16 +1257,13 @@
     :cond_1
     move v0, v1
 
-    .line 613
     goto :goto_0
 
-    .line 614
     :cond_2
     iget v2, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMode:I
 
     if-ne v2, v0, :cond_3
 
-    .line 615
     cmpg-float v2, p1, v3
 
     if-ltz v2, :cond_0
@@ -1431,7 +1272,6 @@
 
     goto :goto_0
 
-    .line 616
     :cond_3
     iget v2, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMode:I
 
@@ -1441,7 +1281,6 @@
 
     move v0, v1
 
-    .line 619
     goto :goto_0
 .end method
 
@@ -1456,17 +1295,14 @@
 
     const/4 v0, 0x1
 
-    .line 623
     iget v2, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMode:I
 
     if-nez v2, :cond_2
 
-    .line 624
     cmpg-float v2, p1, v3
 
     if-gez v2, :cond_1
 
-    .line 630
     :cond_0
     :goto_0
     return v0
@@ -1474,16 +1310,13 @@
     :cond_1
     move v0, v1
 
-    .line 624
     goto :goto_0
 
-    .line 625
     :cond_2
     iget v2, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMode:I
 
     if-ne v2, v0, :cond_3
 
-    .line 626
     cmpl-float v2, p1, v3
 
     if-gtz v2, :cond_0
@@ -1492,7 +1325,6 @@
 
     goto :goto_0
 
-    .line 627
     :cond_3
     iget v2, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMode:I
 
@@ -1502,7 +1334,6 @@
 
     move v0, v1
 
-    .line 630
     goto :goto_0
 .end method
 
@@ -1513,24 +1344,20 @@
     .param p3, "x"    # F
 
     .prologue
-    .line 593
     iget v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mTouchMode:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 599
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 595
     :pswitch_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 597
     :pswitch_1
     invoke-virtual {p0, p1, p2, p3}, Lcom/letv/leui/widget/CustomViewBehind;->menuTouchInQuickReturn(Landroid/view/View;IF)Z
 
@@ -1538,7 +1365,6 @@
 
     goto :goto_0
 
-    .line 593
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
@@ -1559,7 +1385,6 @@
 
     const/4 v1, 0x0
 
-    .line 603
     iget v2, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMode:I
 
     if-eqz v2, :cond_0
@@ -1570,7 +1395,6 @@
 
     if-nez p2, :cond_3
 
-    .line 604
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
@@ -1582,7 +1406,6 @@
 
     if-ltz v2, :cond_2
 
-    .line 608
     :cond_1
     :goto_0
     return v0
@@ -1590,10 +1413,8 @@
     :cond_2
     move v0, v1
 
-    .line 604
     goto :goto_0
 
-    .line 605
     :cond_3
     iget v2, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMode:I
 
@@ -1605,7 +1426,6 @@
 
     if-ne p2, v3, :cond_5
 
-    .line 606
     :cond_4
     invoke-virtual {p1}, Landroid/view/View;->getRight()I
 
@@ -1624,7 +1444,6 @@
     :cond_5
     move v0, v1
 
-    .line 608
     goto :goto_0
 .end method
 
@@ -1639,7 +1458,6 @@
 
     const/4 v8, 0x0
 
-    .line 123
     iget-object v10, p0, Lcom/letv/leui/widget/CustomViewBehind;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     invoke-virtual {v10}, Lcom/letv/leui/widget/CustomViewAbove;->isSlidingEnabled()Z
@@ -1648,11 +1466,9 @@
 
     if-nez v10, :cond_0
 
-    .line 203
     :goto_0
     return v8
 
-    .line 129
     :cond_0
     iget-object v10, p0, Lcom/letv/leui/widget/CustomViewBehind;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
@@ -1662,21 +1478,17 @@
 
     if-eqz v10, :cond_1
 
-    .line 130
     iput-boolean v8, p0, Lcom/letv/leui/widget/CustomViewBehind;->mIsBeingDragged:Z
 
     move v8, v9
 
-    .line 131
     goto :goto_0
 
-    .line 134
     :cond_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    .line 136
     .local v0, "action":I
     const/4 v10, 0x2
 
@@ -1688,16 +1500,13 @@
 
     move v8, v9
 
-    .line 138
     goto :goto_0
 
-    .line 141
     :cond_2
     and-int/lit16 v10, v0, 0xff
 
     packed-switch v10, :pswitch_data_0
 
-    .line 203
     :cond_3
     :goto_1
     :pswitch_0
@@ -1705,20 +1514,16 @@
 
     goto :goto_0
 
-    .line 143
     :pswitch_1
     iget v1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mActivePointerId:I
 
-    .line 144
     .local v1, "activePointerId":I
     if-eq v1, v11, :cond_3
 
-    .line 148
     invoke-virtual {p1, v1}, Landroid/view/MotionEvent;->findPointerIndex(I)I
 
     move-result v3
 
-    .line 149
     .local v3, "pointerIndex":I
     invoke-virtual {p1, v3}, Landroid/view/MotionEvent;->getX(I)F
 
@@ -1726,7 +1531,6 @@
 
     float-to-int v4, v8
 
-    .line 150
     .local v4, "x":I
     invoke-virtual {p1, v3}, Landroid/view/MotionEvent;->getY(I)F
 
@@ -1734,7 +1538,6 @@
 
     float-to-int v6, v8
 
-    .line 151
     .local v6, "y":I
     iget v8, p0, Lcom/letv/leui/widget/CustomViewBehind;->mLastMotionX:F
 
@@ -1748,7 +1551,6 @@
 
     float-to-int v5, v8
 
-    .line 152
     .local v5, "xDiff":I
     iget v8, p0, Lcom/letv/leui/widget/CustomViewBehind;->mLastMotionY:F
 
@@ -1762,7 +1564,6 @@
 
     float-to-int v7, v8
 
-    .line 154
     .local v7, "yDiff":I
     iget v8, p0, Lcom/letv/leui/widget/CustomViewBehind;->mTouchSlop:I
 
@@ -1786,35 +1587,28 @@
 
     if-eqz v8, :cond_3
 
-    .line 156
     iput-boolean v9, p0, Lcom/letv/leui/widget/CustomViewBehind;->mIsBeingDragged:Z
 
-    .line 157
     int-to-float v8, v4
 
     iput v8, p0, Lcom/letv/leui/widget/CustomViewBehind;->mLastMotionX:F
 
-    .line 158
     int-to-float v8, v6
 
     iput v8, p0, Lcom/letv/leui/widget/CustomViewBehind;->mLastMotionY:F
 
-    .line 160
     invoke-direct {p0}, Lcom/letv/leui/widget/CustomViewBehind;->initVelocityTrackerIfNotExists()V
 
-    .line 161
     iget-object v8, p0, Lcom/letv/leui/widget/CustomViewBehind;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {v8, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
-    .line 163
     invoke-virtual {p0}, Lcom/letv/leui/widget/CustomViewBehind;->getParent()Landroid/view/ViewParent;
 
     move-result-object v8
 
     if-eqz v8, :cond_3
 
-    .line 164
     invoke-virtual {p0}, Lcom/letv/leui/widget/CustomViewBehind;->getParent()Landroid/view/ViewParent;
 
     move-result-object v8
@@ -1823,7 +1617,6 @@
 
     goto :goto_1
 
-    .line 171
     .end local v1    # "activePointerId":I
     .end local v3    # "pointerIndex":I
     .end local v4    # "x":I
@@ -1837,11 +1630,9 @@
 
     float-to-int v6, v9
 
-    .line 172
     .restart local v6    # "y":I
     iput-boolean v8, p0, Lcom/letv/leui/widget/CustomViewBehind;->mIsBeingDragged:Z
 
-    .line 173
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v9
@@ -1854,48 +1645,39 @@
 
     iput v9, p0, Lcom/letv/leui/widget/CustomViewBehind;->mLastMotionX:F
 
-    .line 174
     int-to-float v9, v6
 
     iput v9, p0, Lcom/letv/leui/widget/CustomViewBehind;->mLastMotionY:F
 
-    .line 175
     invoke-virtual {p1, v8}, Landroid/view/MotionEvent;->getPointerId(I)I
 
     move-result v8
 
     iput v8, p0, Lcom/letv/leui/widget/CustomViewBehind;->mActivePointerId:I
 
-    .line 177
     invoke-direct {p0}, Lcom/letv/leui/widget/CustomViewBehind;->initOrResetVelocityTracker()V
 
-    .line 178
     iget-object v8, p0, Lcom/letv/leui/widget/CustomViewBehind;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {v8, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
     goto :goto_1
 
-    .line 185
     .end local v6    # "y":I
     :pswitch_3
     iput-boolean v8, p0, Lcom/letv/leui/widget/CustomViewBehind;->mIsBeingDragged:Z
 
-    .line 186
     iput v11, p0, Lcom/letv/leui/widget/CustomViewBehind;->mActivePointerId:I
 
-    .line 187
     invoke-direct {p0}, Lcom/letv/leui/widget/CustomViewBehind;->recycleVelocityTracker()V
 
     goto/16 :goto_1
 
-    .line 190
     :pswitch_4
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
     move-result v2
 
-    .line 191
     .local v2, "index":I
     invoke-virtual {p1, v2}, Landroid/view/MotionEvent;->getX(I)F
 
@@ -1907,7 +1689,6 @@
 
     iput v8, p0, Lcom/letv/leui/widget/CustomViewBehind;->mLastMotionX:F
 
-    .line 192
     invoke-virtual {p1, v2}, Landroid/view/MotionEvent;->getY(I)F
 
     move-result v8
@@ -1918,7 +1699,6 @@
 
     iput v8, p0, Lcom/letv/leui/widget/CustomViewBehind;->mLastMotionY:F
 
-    .line 193
     invoke-virtual {p1, v2}, Landroid/view/MotionEvent;->getPointerId(I)I
 
     move-result v8
@@ -1927,12 +1707,10 @@
 
     goto/16 :goto_1
 
-    .line 197
     .end local v2    # "index":I
     :pswitch_5
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/CustomViewBehind;->onSecondaryPointerUp(Landroid/view/MotionEvent;)V
 
-    .line 198
     iget v8, p0, Lcom/letv/leui/widget/CustomViewBehind;->mActivePointerId:I
 
     invoke-virtual {p1, v8}, Landroid/view/MotionEvent;->findPointerIndex(I)I
@@ -1949,7 +1727,6 @@
 
     iput v8, p0, Lcom/letv/leui/widget/CustomViewBehind;->mLastMotionX:F
 
-    .line 199
     iget v8, p0, Lcom/letv/leui/widget/CustomViewBehind;->mActivePointerId:I
 
     invoke-virtual {p1, v8}, Landroid/view/MotionEvent;->findPointerIndex(I)I
@@ -1968,7 +1745,6 @@
 
     goto/16 :goto_1
 
-    .line 141
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_2
@@ -1994,14 +1770,11 @@
 
     const/4 v5, 0x0
 
-    .line 382
     sub-int v2, p4, p2
 
-    .line 383
     .local v2, "width":I
     sub-int v1, p5, p3
 
-    .line 384
     .local v1, "height":I
     iget-object v3, p0, Lcom/letv/leui/widget/CustomViewBehind;->mContent:Landroid/view/View;
 
@@ -2011,12 +1784,10 @@
 
     invoke-virtual {v3, v5, v5, v4, v1}, Landroid/view/View;->layout(IIII)V
 
-    .line 385
     iget-object v3, p0, Lcom/letv/leui/widget/CustomViewBehind;->mSecondaryContent:Landroid/view/View;
 
     if-eqz v3, :cond_0
 
-    .line 386
     iget-object v3, p0, Lcom/letv/leui/widget/CustomViewBehind;->mSecondaryContent:Landroid/view/View;
 
     iget v4, p0, Lcom/letv/leui/widget/CustomViewBehind;->mWidthOffset:I
@@ -2025,34 +1796,28 @@
 
     invoke-virtual {v3, v5, v5, v4, v1}, Landroid/view/View;->layout(IIII)V
 
-    .line 389
     :cond_0
     iget-boolean v3, p0, Lcom/letv/leui/widget/CustomViewBehind;->mWidthChanged:Z
 
     if-eqz v3, :cond_1
 
-    .line 390
     iget-object v3, p0, Lcom/letv/leui/widget/CustomViewBehind;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     invoke-virtual {v3}, Lcom/letv/leui/widget/CustomViewAbove;->getCurrentItem()I
 
     move-result v0
 
-    .line 391
     .local v0, "currentPage":I
     packed-switch v0, :pswitch_data_0
 
-    .line 401
     :goto_0
     :pswitch_0
     iput-boolean v5, p0, Lcom/letv/leui/widget/CustomViewBehind;->mWidthChanged:Z
 
-    .line 404
     .end local v0    # "currentPage":I
     :cond_1
     return-void
 
-    .line 393
     .restart local v0    # "currentPage":I
     :pswitch_1
     iget-object v3, p0, Lcom/letv/leui/widget/CustomViewBehind;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
@@ -2061,7 +1826,6 @@
 
     goto :goto_0
 
-    .line 396
     :pswitch_2
     iget-object v3, p0, Lcom/letv/leui/widget/CustomViewBehind;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
@@ -2071,7 +1835,6 @@
 
     goto :goto_0
 
-    .line 391
     nop
 
     :pswitch_data_0
@@ -2090,22 +1853,18 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 408
     invoke-static {v5, p1}, Lcom/letv/leui/widget/CustomViewBehind;->getDefaultSize(II)I
 
     move-result v3
 
-    .line 409
     .local v3, "width":I
     invoke-static {v5, p2}, Lcom/letv/leui/widget/CustomViewBehind;->getDefaultSize(II)I
 
     move-result v2
 
-    .line 410
     .local v2, "height":I
     invoke-virtual {p0, v3, v2}, Lcom/letv/leui/widget/CustomViewBehind;->setMeasuredDimension(II)V
 
-    .line 411
     iget v4, p0, Lcom/letv/leui/widget/CustomViewBehind;->mWidthOffset:I
 
     sub-int v4, v3, v4
@@ -2114,29 +1873,24 @@
 
     move-result v1
 
-    .line 412
     .local v1, "contentWidth":I
     invoke-static {p2, v5, v2}, Lcom/letv/leui/widget/CustomViewBehind;->getChildMeasureSpec(III)I
 
     move-result v0
 
-    .line 413
     .local v0, "contentHeight":I
     iget-object v4, p0, Lcom/letv/leui/widget/CustomViewBehind;->mContent:Landroid/view/View;
 
     invoke-virtual {v4, v1, v0}, Landroid/view/View;->measure(II)V
 
-    .line 414
     iget-object v4, p0, Lcom/letv/leui/widget/CustomViewBehind;->mSecondaryContent:Landroid/view/View;
 
     if-eqz v4, :cond_0
 
-    .line 415
     iget-object v4, p0, Lcom/letv/leui/widget/CustomViewBehind;->mSecondaryContent:Landroid/view/View;
 
     invoke-virtual {v4, v1, v0}, Landroid/view/View;->measure(II)V
 
-    .line 416
     :cond_0
     return-void
 .end method
@@ -2146,7 +1900,6 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 213
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/widget/CustomViewBehind;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
@@ -2159,16 +1912,13 @@
 
     if-nez v21, :cond_0
 
-    .line 214
     invoke-super/range {p0 .. p1}, Landroid/view/ViewGroup;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v21
 
-    .line 309
     :goto_0
     return v21
 
-    .line 218
     :cond_0
     move-object/from16 v0, p0
 
@@ -2182,7 +1932,6 @@
 
     if-eqz v21, :cond_1
 
-    .line 219
     const/16 v21, 0x0
 
     move/from16 v0, v21
@@ -2191,16 +1940,13 @@
 
     iput-boolean v0, v1, Lcom/letv/leui/widget/CustomViewBehind;->mIsBeingDragged:Z
 
-    .line 220
     const/16 v21, 0x0
 
     goto :goto_0
 
-    .line 223
     :cond_1
     invoke-direct/range {p0 .. p0}, Lcom/letv/leui/widget/CustomViewBehind;->initVelocityTrackerIfNotExists()V
 
-    .line 224
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/widget/CustomViewBehind;->mVelocityTracker:Landroid/view/VelocityTracker;
@@ -2213,12 +1959,10 @@
 
     invoke-virtual {v0, v1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
-    .line 226
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v4
 
-    .line 227
     .local v4, "action":I
     and-int/lit16 v0, v4, 0xff
 
@@ -2226,7 +1970,6 @@
 
     packed-switch v21, :pswitch_data_0
 
-    .line 309
     :cond_2
     :goto_1
     :pswitch_0
@@ -2234,7 +1977,6 @@
 
     goto :goto_0
 
-    .line 229
     :pswitch_1
     invoke-virtual/range {p0 .. p0}, Lcom/letv/leui/widget/CustomViewBehind;->getChildCount()I
 
@@ -2242,12 +1984,10 @@
 
     if-nez v21, :cond_3
 
-    .line 230
     const/16 v21, 0x0
 
     goto :goto_0
 
-    .line 233
     :cond_3
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -2277,7 +2017,6 @@
 
     iput v0, v1, Lcom/letv/leui/widget/CustomViewBehind;->mLastMotionX:F
 
-    .line 234
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v21
@@ -2300,7 +2039,6 @@
 
     iput v0, v1, Lcom/letv/leui/widget/CustomViewBehind;->mLastMotionY:F
 
-    .line 235
     const/16 v21, 0x0
 
     move-object/from16 v0, p1
@@ -2319,7 +2057,6 @@
 
     goto :goto_1
 
-    .line 239
     :pswitch_2
     move-object/from16 v0, p0
 
@@ -2335,7 +2072,6 @@
 
     move-result v5
 
-    .line 240
     .local v5, "activePointerIndex":I
     move-object/from16 v0, p1
 
@@ -2349,7 +2085,6 @@
 
     move/from16 v19, v0
 
-    .line 241
     .local v19, "x":I
     move-object/from16 v0, p1
 
@@ -2363,7 +2098,6 @@
 
     move/from16 v20, v0
 
-    .line 242
     .local v20, "y":I
     move-object/from16 v0, p0
 
@@ -2379,7 +2113,6 @@
 
     sub-float v6, v21, v22
 
-    .line 243
     .local v6, "deltaX":F
     move-object/from16 v0, p0
 
@@ -2395,7 +2128,6 @@
 
     sub-float v7, v21, v22
 
-    .line 245
     .local v7, "deltaY":F
     move-object/from16 v0, p0
 
@@ -2469,23 +2201,19 @@
 
     if-eqz v21, :cond_5
 
-    .line 248
     invoke-virtual/range {p0 .. p0}, Lcom/letv/leui/widget/CustomViewBehind;->getParent()Landroid/view/ViewParent;
 
     move-result-object v13
 
-    .line 249
     .local v13, "parent":Landroid/view/ViewParent;
     if-eqz v13, :cond_4
 
-    .line 250
     const/16 v21, 0x1
 
     move/from16 v0, v21
 
     invoke-interface {v13, v0}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 252
     :cond_4
     const/16 v21, 0x1
 
@@ -2495,14 +2223,12 @@
 
     iput-boolean v0, v1, Lcom/letv/leui/widget/CustomViewBehind;->mIsBeingDragged:Z
 
-    .line 253
     const/16 v21, 0x0
 
     cmpl-float v21, v6, v21
 
     if-lez v21, :cond_7
 
-    .line 254
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/letv/leui/widget/CustomViewBehind;->mTouchSlop:I
@@ -2517,7 +2243,6 @@
 
     sub-float v6, v6, v21
 
-    .line 259
     .end local v13    # "parent":Landroid/view/ViewParent;
     :cond_5
     :goto_2
@@ -2529,7 +2254,6 @@
 
     if-eqz v21, :cond_2
 
-    .line 260
     move/from16 v0, v19
 
     int-to-float v0, v0
@@ -2542,7 +2266,6 @@
 
     iput v0, v1, Lcom/letv/leui/widget/CustomViewBehind;->mLastMotionX:F
 
-    .line 261
     move/from16 v0, v20
 
     int-to-float v0, v0
@@ -2555,7 +2278,6 @@
 
     iput v0, v1, Lcom/letv/leui/widget/CustomViewBehind;->mLastMotionY:F
 
-    .line 262
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/widget/CustomViewBehind;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
@@ -2570,11 +2292,9 @@
 
     int-to-float v11, v0
 
-    .line 263
     .local v11, "oldScrollX":F
     add-float v16, v11, v6
 
-    .line 265
     .local v16, "scrollX":F
     move-object/from16 v0, p0
 
@@ -2590,7 +2310,6 @@
 
     int-to-float v9, v0
 
-    .line 266
     .local v9, "leftBound":F
     move-object/from16 v0, p0
 
@@ -2606,16 +2325,13 @@
 
     int-to-float v15, v0
 
-    .line 268
     .local v15, "rightBound":F
     cmpg-float v21, v16, v9
 
     if-gez v21, :cond_8
 
-    .line 269
     move/from16 v16, v9
 
-    .line 274
     :cond_6
     :goto_3
     move-object/from16 v0, p0
@@ -2646,7 +2362,6 @@
 
     iput v0, v1, Lcom/letv/leui/widget/CustomViewBehind;->mLastMotionX:F
 
-    .line 275
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/widget/CustomViewBehind;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
@@ -2665,7 +2380,6 @@
 
     invoke-virtual/range {v21 .. v23}, Lcom/letv/leui/widget/CustomViewAbove;->scrollTo(II)V
 
-    .line 277
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/widget/CustomViewBehind;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
@@ -2682,7 +2396,6 @@
 
     goto/16 :goto_1
 
-    .line 256
     .end local v9    # "leftBound":F
     .end local v11    # "oldScrollX":F
     .end local v15    # "rightBound":F
@@ -2705,7 +2418,6 @@
 
     goto/16 :goto_2
 
-    .line 270
     .end local v13    # "parent":Landroid/view/ViewParent;
     .restart local v9    # "leftBound":F
     .restart local v11    # "oldScrollX":F
@@ -2716,12 +2428,10 @@
 
     if-lez v21, :cond_6
 
-    .line 271
     move/from16 v16, v15
 
     goto :goto_3
 
-    .line 282
     .end local v5    # "activePointerIndex":I
     .end local v6    # "deltaX":F
     .end local v7    # "deltaY":F
@@ -2740,14 +2450,12 @@
 
     if-eqz v21, :cond_2
 
-    .line 284
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/widget/CustomViewBehind;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     move-object/from16 v18, v0
 
-    .line 285
     .local v18, "velocityTracker":Landroid/view/VelocityTracker;
     const/16 v21, 0x3e8
 
@@ -2771,7 +2479,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/view/VelocityTracker;->computeCurrentVelocity(IF)V
 
-    .line 286
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/letv/leui/widget/CustomViewBehind;->mActivePointerId:I
@@ -2790,7 +2497,6 @@
 
     float-to-int v8, v0
 
-    .line 287
     .local v8, "initialVelocity":I
     move-object/from16 v0, p0
 
@@ -2802,7 +2508,6 @@
 
     move-result v16
 
-    .line 288
     .local v16, "scrollX":I
     move-object/from16 v0, p0
 
@@ -2844,7 +2549,6 @@
 
     div-float v12, v21, v22
 
-    .line 290
     .local v12, "pageOffset":F
     move-object/from16 v0, p0
 
@@ -2860,7 +2564,6 @@
 
     move-result v14
 
-    .line 291
     .local v14, "pointerIndex":I
     move-object/from16 v0, p0
 
@@ -2876,7 +2579,6 @@
 
     if-eq v0, v1, :cond_9
 
-    .line 292
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v14}, Landroid/view/MotionEvent;->getX(I)F
@@ -2897,7 +2599,6 @@
 
     move/from16 v17, v0
 
-    .line 294
     .local v17, "totalDelta":I
     move-object/from16 v0, p0
 
@@ -2913,7 +2614,6 @@
 
     move-result v10
 
-    .line 295
     .local v10, "nextPage":I
     move-object/from16 v0, p0
 
@@ -2933,7 +2633,6 @@
 
     invoke-virtual {v0, v10, v1, v2, v8}, Lcom/letv/leui/widget/CustomViewAbove;->setCurrentItemInternal(IZZI)V
 
-    .line 299
     .end local v10    # "nextPage":I
     .end local v17    # "totalDelta":I
     :goto_4
@@ -2945,7 +2644,6 @@
 
     iput v0, v1, Lcom/letv/leui/widget/CustomViewBehind;->mActivePointerId:I
 
-    .line 300
     const/16 v21, 0x0
 
     move/from16 v0, v21
@@ -2954,12 +2652,10 @@
 
     iput-boolean v0, v1, Lcom/letv/leui/widget/CustomViewBehind;->mIsBeingDragged:Z
 
-    .line 301
     invoke-direct/range {p0 .. p0}, Lcom/letv/leui/widget/CustomViewBehind;->recycleVelocityTracker()V
 
     goto/16 :goto_1
 
-    .line 297
     :cond_9
     move-object/from16 v0, p0
 
@@ -2993,7 +2689,6 @@
 
     goto :goto_4
 
-    .line 305
     .end local v8    # "initialVelocity":I
     .end local v12    # "pageOffset":F
     .end local v14    # "pointerIndex":I
@@ -3004,7 +2699,6 @@
 
     goto/16 :goto_1
 
-    .line 227
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
@@ -3028,16 +2722,13 @@
 
     const/4 v2, 0x4
 
-    .line 494
     const/4 v0, 0x0
 
-    .line 495
     .local v0, "vis":I
     iget v1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMode:I
 
     if-nez v1, :cond_3
 
-    .line 496
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
     move-result v1
@@ -3048,10 +2739,8 @@
 
     if-nez v1, :cond_0
 
-    .line 497
     const/4 v0, 0x4
 
-    .line 498
     :cond_0
     invoke-virtual {p0}, Lcom/letv/leui/widget/CustomViewBehind;->getBehindWidth()I
 
@@ -3069,26 +2758,21 @@
 
     invoke-virtual {p0, v1, p3}, Lcom/letv/leui/widget/CustomViewBehind;->scrollTo(II)V
 
-    .line 513
     :cond_1
     :goto_0
     if-ne v0, v2, :cond_2
 
-    .line 514
     const-string v1, "CustomViewBehind"
 
     const-string v2, "behind INVISIBLE"
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 515
     :cond_2
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/CustomViewBehind;->setVisibility(I)V
 
-    .line 516
     return-void
 
-    .line 499
     :cond_3
     iget v1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMode:I
 
@@ -3096,7 +2780,6 @@
 
     if-ne v1, v4, :cond_5
 
-    .line 500
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
     move-result v1
@@ -3107,10 +2790,8 @@
 
     if-nez v1, :cond_4
 
-    .line 501
     const/4 v0, 0x4
 
-    .line 502
     :cond_4
     invoke-virtual {p0}, Lcom/letv/leui/widget/CustomViewBehind;->getBehindWidth()I
 
@@ -3144,7 +2825,6 @@
 
     goto :goto_0
 
-    .line 503
     :cond_5
     iget v1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMode:I
 
@@ -3152,7 +2832,6 @@
 
     if-ne v1, v4, :cond_1
 
-    .line 504
     iget-object v4, p0, Lcom/letv/leui/widget/CustomViewBehind;->mContent:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
@@ -3166,7 +2845,6 @@
     :goto_1
     invoke-virtual {v4, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 505
     iget-object v4, p0, Lcom/letv/leui/widget/CustomViewBehind;->mSecondaryContent:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
@@ -3184,12 +2862,10 @@
     :goto_2
     invoke-virtual {v4, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 506
     if-nez p2, :cond_8
 
     move v0, v2
 
-    .line 507
     :goto_3
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
@@ -3197,7 +2873,6 @@
 
     if-gt p2, v1, :cond_9
 
-    .line 508
     invoke-virtual {p0}, Lcom/letv/leui/widget/CustomViewBehind;->getBehindWidth()I
 
     move-result v1
@@ -3219,22 +2894,18 @@
     :cond_6
     move v1, v3
 
-    .line 504
     goto :goto_1
 
     :cond_7
     move v1, v3
 
-    .line 505
     goto :goto_2
 
     :cond_8
     move v0, v3
 
-    .line 506
     goto :goto_3
 
-    .line 510
     :cond_9
     invoke-virtual {p0}, Lcom/letv/leui/widget/CustomViewBehind;->getBehindWidth()I
 
@@ -3275,18 +2946,14 @@
     .param p2, "y"    # I
 
     .prologue
-    .line 112
     invoke-super {p0, p1, p2}, Landroid/view/ViewGroup;->scrollTo(II)V
 
-    .line 113
     iget-object v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mTransformer:Lcom/letv/leui/widget/SlidingMenu$CanvasTransformer;
 
     if-eqz v0, :cond_0
 
-    .line 114
     invoke-virtual {p0}, Lcom/letv/leui/widget/CustomViewBehind;->invalidate()V
 
-    .line 115
     :cond_0
     return-void
 .end method
@@ -3296,10 +2963,8 @@
     .param p1, "t"    # Lcom/letv/leui/widget/SlidingMenu$CanvasTransformer;
 
     .prologue
-    .line 67
     iput-object p1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mTransformer:Lcom/letv/leui/widget/SlidingMenu$CanvasTransformer;
 
-    .line 68
     return-void
 .end method
 
@@ -3308,10 +2973,8 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 107
     iput-boolean p1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mChildrenEnabled:Z
 
-    .line 108
     return-void
 .end method
 
@@ -3320,26 +2983,21 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 81
     iget-object v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mContent:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 82
     iget-object v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mContent:Landroid/view/View;
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/CustomViewBehind;->removeView(Landroid/view/View;)V
 
-    .line 83
     :cond_0
     iput-object p1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mContent:Landroid/view/View;
 
-    .line 84
     iget-object v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mContent:Landroid/view/View;
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/CustomViewBehind;->addView(Landroid/view/View;)V
 
-    .line 85
     return-void
 .end method
 
@@ -3348,10 +3006,8 @@
     .param p1, "customViewAbove"    # Lcom/letv/leui/widget/CustomViewAbove;
 
     .prologue
-    .line 63
     iput-object p1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
-    .line 64
     return-void
 .end method
 
@@ -3360,7 +3016,6 @@
     .param p1, "degree"    # F
 
     .prologue
-    .line 469
     const/high16 v0, 0x3f800000    # 1.0f
 
     cmpl-float v0, p1, v0
@@ -3373,7 +3028,6 @@
 
     if-gez v0, :cond_1
 
-    .line 470
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -3383,11 +3037,9 @@
 
     throw v0
 
-    .line 471
     :cond_1
     iput p1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mFadeDegree:F
 
-    .line 472
     return-void
 .end method
 
@@ -3396,10 +3048,8 @@
     .param p1, "b"    # Z
 
     .prologue
-    .line 465
     iput-boolean p1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mFadeEnabled:Z
 
-    .line 466
     return-void
 .end method
 
@@ -3408,10 +3058,8 @@
     .param p1, "visibleAlways"    # Z
 
     .prologue
-    .line 747
     iput-boolean p1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mVisibleAlways:Z
 
-    .line 748
     return-void
 .end method
 
@@ -3420,44 +3068,37 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 428
     if-eqz p1, :cond_0
 
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_2
 
-    .line 429
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mContent:Landroid/view/View;
 
     if-eqz v0, :cond_1
 
-    .line 430
     iget-object v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mContent:Landroid/view/View;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 431
     :cond_1
     iget-object v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mSecondaryContent:Landroid/view/View;
 
     if-eqz v0, :cond_2
 
-    .line 432
     iget-object v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mSecondaryContent:Landroid/view/View;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 434
     :cond_2
     iput p1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mMode:I
 
-    .line 435
     return-void
 .end method
 
@@ -3466,10 +3107,8 @@
     .param p1, "scrollScale"    # F
 
     .prologue
-    .line 442
     iput p1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mScrollScale:F
 
-    .line 443
     return-void
 .end method
 
@@ -3478,26 +3117,21 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 96
     iget-object v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mSecondaryContent:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 97
     iget-object v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mSecondaryContent:Landroid/view/View;
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/CustomViewBehind;->removeView(Landroid/view/View;)V
 
-    .line 98
     :cond_0
     iput-object p1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mSecondaryContent:Landroid/view/View;
 
-    .line 99
     iget-object v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mSecondaryContent:Landroid/view/View;
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/CustomViewBehind;->addView(Landroid/view/View;)V
 
-    .line 100
     return-void
 .end method
 
@@ -3506,13 +3140,10 @@
     .param p1, "shadow"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 455
     iput-object p1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mSecondaryShadowDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 456
     invoke-virtual {p0}, Lcom/letv/leui/widget/CustomViewBehind;->invalidate()V
 
-    .line 457
     return-void
 .end method
 
@@ -3521,24 +3152,20 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 724
     iget-object v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mSelectedView:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 725
     iget-object v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mSelectedView:Landroid/view/View;
 
     const-string v1, ""
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 726
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mSelectedView:Landroid/view/View;
 
-    .line 728
     :cond_0
     if-eqz p1, :cond_1
 
@@ -3548,20 +3175,16 @@
 
     if-eqz v0, :cond_1
 
-    .line 729
     iput-object p1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mSelectedView:Landroid/view/View;
 
-    .line 730
     iget-object v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mSelectedView:Landroid/view/View;
 
     const-string v1, "CustomViewBehindSelectedView"
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 731
     invoke-virtual {p0}, Lcom/letv/leui/widget/CustomViewBehind;->invalidate()V
 
-    .line 733
     :cond_1
     return-void
 .end method
@@ -3571,13 +3194,10 @@
     .param p1, "b"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 742
     iput-object p1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mSelectorDrawable:Landroid/graphics/Bitmap;
 
-    .line 743
     invoke-virtual {p0}, Lcom/letv/leui/widget/CustomViewBehind;->refreshDrawableState()V
 
-    .line 744
     return-void
 .end method
 
@@ -3586,10 +3206,8 @@
     .param p1, "b"    # Z
 
     .prologue
-    .line 720
     iput-boolean p1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mSelectorEnabled:Z
 
-    .line 721
     return-void
 .end method
 
@@ -3598,13 +3216,10 @@
     .param p1, "shadow"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 450
     iput-object p1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mShadowDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 451
     invoke-virtual {p0}, Lcom/letv/leui/widget/CustomViewBehind;->invalidate()V
 
-    .line 452
     return-void
 .end method
 
@@ -3613,13 +3228,10 @@
     .param p1, "width"    # I
 
     .prologue
-    .line 460
     iput p1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mShadowWidth:I
 
-    .line 461
     invoke-virtual {p0}, Lcom/letv/leui/widget/CustomViewBehind;->invalidate()V
 
-    .line 462
     return-void
 .end method
 
@@ -3628,10 +3240,8 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 589
     iput p1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mTouchMode:I
 
-    .line 590
     return-void
 .end method
 
@@ -3640,10 +3250,8 @@
     .param p1, "visible"    # Z
 
     .prologue
-    .line 325
     iput-boolean p1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mVisibleAlways:Z
 
-    .line 326
     return-void
 .end method
 
@@ -3652,7 +3260,6 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 71
     iget v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mWidthOffset:I
 
     if-eq v0, p1, :cond_0
@@ -3662,16 +3269,12 @@
     :goto_0
     iput-boolean v0, p0, Lcom/letv/leui/widget/CustomViewBehind;->mWidthChanged:Z
 
-    .line 72
     iput p1, p0, Lcom/letv/leui/widget/CustomViewBehind;->mWidthOffset:I
 
-    .line 73
     invoke-virtual {p0}, Lcom/letv/leui/widget/CustomViewBehind;->requestLayout()V
 
-    .line 74
     return-void
 
-    .line 71
     :cond_0
     const/4 v0, 0x0
 

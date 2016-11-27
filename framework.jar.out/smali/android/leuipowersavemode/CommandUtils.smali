@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,7 +20,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 24
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -48,19 +46,16 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 14
     invoke-static {p0}, Landroid/leuipowersavemode/CommandUtils;->isAirplaneModeOn(Landroid/content/Context;)Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    .line 20
     :cond_0
     :goto_0
     return v1
 
-    .line 18
     :cond_1
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -72,7 +67,6 @@
 
     move-result-object v0
 
-    .line 20
     .local v0, "toggleable":Ljava/lang/String;
     if-eqz v0, :cond_2
 

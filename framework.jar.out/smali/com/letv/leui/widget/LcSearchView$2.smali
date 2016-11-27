@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 229
     iput-object p1, p0, Lcom/letv/leui/widget/LcSearchView$2;->this$0:Lcom/letv/leui/widget/LcSearchView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +41,10 @@
     .param p2, "hasFocus"    # Z
 
     .prologue
-    .line 231
     iget-object v0, p0, Lcom/letv/leui/widget/LcSearchView$2;->this$0:Lcom/letv/leui/widget/LcSearchView;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/LcSearchView;->onTextFocusChanged()V
 
-    .line 232
     iget-object v0, p0, Lcom/letv/leui/widget/LcSearchView$2;->this$0:Lcom/letv/leui/widget/LcSearchView;
 
     # getter for: Lcom/letv/leui/widget/LcSearchView;->mOnTextFocusChangeListener:Landroid/view/View$OnFocusChangeListener;
@@ -57,7 +54,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 233
     iget-object v0, p0, Lcom/letv/leui/widget/LcSearchView$2;->this$0:Lcom/letv/leui/widget/LcSearchView;
 
     # getter for: Lcom/letv/leui/widget/LcSearchView;->mOnTextFocusChangeListener:Landroid/view/View$OnFocusChangeListener;
@@ -69,7 +65,6 @@
 
     invoke-interface {v0, v1, p2}, Landroid/view/View$OnFocusChangeListener;->onFocusChange(Landroid/view/View;Z)V
 
-    .line 236
     :cond_0
     return-void
 .end method

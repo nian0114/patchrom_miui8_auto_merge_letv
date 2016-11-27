@@ -32,7 +32,6 @@
     .locals 2
 
     .prologue
-    .line 832
     .local p0, "this":Lcom/google/gson/internal/LinkedHashTreeMap$KeySet$1;, "Lcom/google/gson/internal/LinkedHashTreeMap$KeySet.1;"
     iput-object p1, p0, Lcom/google/gson/internal/LinkedHashTreeMap$KeySet$1;->this$1:Lcom/google/gson/internal/LinkedHashTreeMap$KeySet;
 
@@ -56,7 +55,6 @@
     .end annotation
 
     .prologue
-    .line 834
     .local p0, "this":Lcom/google/gson/internal/LinkedHashTreeMap$KeySet$1;, "Lcom/google/gson/internal/LinkedHashTreeMap$KeySet.1;"
     invoke-virtual {p0}, Lcom/google/gson/internal/LinkedHashTreeMap$KeySet$1;->nextNode()Lcom/google/gson/internal/LinkedHashTreeMap$Node;
 

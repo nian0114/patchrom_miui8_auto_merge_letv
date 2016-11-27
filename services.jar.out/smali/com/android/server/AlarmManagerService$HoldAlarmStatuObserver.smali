@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 4153
     iput-object p1, p0, Lcom/android/server/AlarmManagerService$HoldAlarmStatuObserver;->this$0:Lcom/android/server/AlarmManagerService;
 
-    .line 4154
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 4155
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 4158
     # getter for: Lcom/android/server/AlarmManagerService;->HOLD_ALARM_CONSTANT_OPEN:Z
     invoke-static {}, Lcom/android/server/AlarmManagerService;->access$2900()Z
 
@@ -51,12 +47,10 @@
 
     if-nez v3, :cond_1
 
-    .line 4182
     :cond_0
     :goto_0
     return-void
 
-    .line 4162
     :cond_1
     :try_start_0
     iget-object v3, p0, Lcom/android/server/AlarmManagerService$HoldAlarmStatuObserver;->this$0:Lcom/android/server/AlarmManagerService;
@@ -83,12 +77,10 @@
 
     if-ne v3, v2, :cond_3
 
-    .line 4165
     .local v2, "tempHoldAlarm":Z
     :goto_1
     const/4 v1, 0x0
 
-    .line 4166
     .local v1, "flags":I
     iget-object v3, p0, Lcom/android/server/AlarmManagerService$HoldAlarmStatuObserver;->this$0:Lcom/android/server/AlarmManagerService;
 
@@ -98,7 +90,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4167
     :try_start_1
     iget-object v3, p0, Lcom/android/server/AlarmManagerService$HoldAlarmStatuObserver;->this$0:Lcom/android/server/AlarmManagerService;
 
@@ -109,25 +100,20 @@
 
     if-eq v3, v2, :cond_2
 
-    .line 4168
     iget-object v3, p0, Lcom/android/server/AlarmManagerService$HoldAlarmStatuObserver;->this$0:Lcom/android/server/AlarmManagerService;
 
     # setter for: Lcom/android/server/AlarmManagerService;->mHoldAlarmEnable:Z
     invoke-static {v3, v2}, Lcom/android/server/AlarmManagerService;->access$3002(Lcom/android/server/AlarmManagerService;Z)Z
 
-    .line 4169
     or-int/lit8 v1, v1, 0x4
 
-    .line 4173
     :cond_2
     monitor-exit v4
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 4175
     if-eqz v1, :cond_0
 
-    .line 4176
     :try_start_2
     iget-object v3, p0, Lcom/android/server/AlarmManagerService$HoldAlarmStatuObserver;->this$0:Lcom/android/server/AlarmManagerService;
 
@@ -138,13 +124,11 @@
 
     goto :goto_0
 
-    .line 4179
     .end local v1    # "flags":I
     .end local v2    # "tempHoldAlarm":Z
     :catch_0
     move-exception v0
 
-    .line 4180
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "AlarmManager"
 
@@ -174,14 +158,12 @@
 
     goto :goto_0
 
-    .line 4162
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_3
     const/4 v2, 0x0
 
     goto :goto_1
 
-    .line 4173
     .restart local v1    # "flags":I
     .restart local v2    # "tempHoldAlarm":Z
     :catchall_0

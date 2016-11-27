@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 236
     iput-object p1, p0, Lcom/letv/leui/widget/LeListView$1;->this$0:Lcom/letv/leui/widget/LeListView;
 
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
@@ -37,10 +36,8 @@
     .locals 1
 
     .prologue
-    .line 239
     invoke-super {p0}, Landroid/database/DataSetObserver;->onChanged()V
 
-    .line 240
     iget-object v0, p0, Lcom/letv/leui/widget/LeListView$1;->this$0:Lcom/letv/leui/widget/LeListView;
 
     # getter for: Lcom/letv/leui/widget/LeListView;->mSwipeHelper:Lcom/letv/leui/widget/SwipeListViewHelper;
@@ -50,7 +47,6 @@
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/SwipeListViewHelper;->onListChanged()V
 
-    .line 241
     iget-object v0, p0, Lcom/letv/leui/widget/LeListView$1;->this$0:Lcom/letv/leui/widget/LeListView;
 
     # getter for: Lcom/letv/leui/widget/LeListView;->mSwipeHelper:Lcom/letv/leui/widget/SwipeListViewHelper;
@@ -60,6 +56,5 @@
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/SwipeListViewHelper;->resetItems()V
 
-    .line 242
     return-void
 .end method

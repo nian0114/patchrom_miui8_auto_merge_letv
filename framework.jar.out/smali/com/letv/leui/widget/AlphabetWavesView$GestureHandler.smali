@@ -29,13 +29,10 @@
     .locals 0
 
     .prologue
-    .line 252
     iput-object p1, p0, Lcom/letv/leui/widget/AlphabetWavesView$GestureHandler;->this$0:Lcom/letv/leui/widget/AlphabetWavesView;
 
-    .line 253
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 254
     return-void
 .end method
 
@@ -46,12 +43,10 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 258
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 264
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -76,7 +71,6 @@
 
     throw v0
 
-    .line 260
     :pswitch_0
     iget-object v0, p0, Lcom/letv/leui/widget/AlphabetWavesView$GestureHandler;->this$0:Lcom/letv/leui/widget/AlphabetWavesView;
 
@@ -85,15 +79,12 @@
     # setter for: Lcom/letv/leui/widget/AlphabetWavesView;->mInSelect:Z
     invoke-static {v0, v1}, Lcom/letv/leui/widget/AlphabetWavesView;->access$002(Lcom/letv/leui/widget/AlphabetWavesView;Z)Z
 
-    .line 261
     iget-object v0, p0, Lcom/letv/leui/widget/AlphabetWavesView$GestureHandler;->this$0:Lcom/letv/leui/widget/AlphabetWavesView;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/AlphabetWavesView;->popAlphabet()V
 
-    .line 266
     return-void
 
-    .line 258
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

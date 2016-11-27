@@ -39,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 31
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/FrameworkInfo$1;
 
     invoke-direct {v0}, Lcom/qualcomm/qti/biometrics/fingerprintdebug/FrameworkInfo$1;-><init>()V
@@ -54,17 +53,14 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/FrameworkInfo;->mVersion:Ljava/util/List;
 
-    .line 46
     iget-object v0, p0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/FrameworkInfo;->mVersion:Ljava/util/List;
 
     const-class v1, Ljava/lang/Integer;
@@ -75,14 +71,12 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->readList(Ljava/util/List;Ljava/lang/ClassLoader;)V
 
-    .line 47
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/FrameworkInfo;->mCapabilities:Ljava/lang/String;
 
-    .line 48
     return-void
 .end method
 
@@ -92,7 +86,6 @@
     .param p2, "x1"    # Lcom/qualcomm/qti/biometrics/fingerprintdebug/FrameworkInfo$1;
 
     .prologue
-    .line 14
     invoke-direct {p0, p1}, Lcom/qualcomm/qti/biometrics/fingerprintdebug/FrameworkInfo;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -104,15 +97,12 @@
     .param p2, "capabilities"    # Ljava/lang/String;
 
     .prologue
-    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 23
     .local v4, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     move-object v0, p1
 
@@ -128,7 +118,6 @@
 
     aget v2, v0, v1
 
-    .line 24
     .local v2, "item":I
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -136,12 +125,10 @@
 
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 23
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 27
     .end local v2    # "item":I
     :cond_0
     invoke-static {v4}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
@@ -150,10 +137,8 @@
 
     iput-object v5, p0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/FrameworkInfo;->mVersion:Ljava/util/List;
 
-    .line 28
     iput-object p2, p0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/FrameworkInfo;->mCapabilities:Ljava/lang/String;
 
-    .line 29
     return-void
 .end method
 
@@ -163,7 +148,6 @@
     .locals 1
 
     .prologue
-    .line 52
     const/4 v0, 0x0
 
     return v0
@@ -175,16 +159,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 57
     iget-object v0, p0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/FrameworkInfo;->mVersion:Ljava/util/List;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeList(Ljava/util/List;)V
 
-    .line 58
     iget-object v0, p0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/FrameworkInfo;->mCapabilities:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 59
     return-void
 .end method

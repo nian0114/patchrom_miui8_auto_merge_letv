@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 629
     invoke-static {}, Lcom/letv/leui/widget/LeBlankPage$Mode;->values()[Lcom/letv/leui/widget/LeBlankPage$Mode;
 
     move-result-object v0

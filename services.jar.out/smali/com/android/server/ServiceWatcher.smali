@@ -84,7 +84,6 @@
     .param p8, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 144
     const/4 v3, 0x0
 
     move-object v0, p0
@@ -107,7 +106,6 @@
 
     invoke-direct/range {v0 .. v9}, Lcom/android/server/ServiceWatcher;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIILjava/lang/Runnable;Landroid/os/Handler;)V
 
-    .line 146
     return-void
 .end method
 
@@ -124,51 +122,40 @@
     .param p9, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 151
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 79
     new-instance v6, Ljava/lang/Object;
 
     invoke-direct {v6}, Ljava/lang/Object;-><init>()V
 
     iput-object v6, p0, Lcom/android/server/ServiceWatcher;->mLock:Ljava/lang/Object;
 
-    .line 84
     const/high16 v6, -0x80000000
 
     iput v6, p0, Lcom/android/server/ServiceWatcher;->mVersion:I
 
-    .line 89
     const/4 v6, 0x0
 
     iput-boolean v6, p0, Lcom/android/server/ServiceWatcher;->mIsMultiuser:Z
 
-    .line 91
     const/4 v6, 0x0
 
     iput-object v6, p0, Lcom/android/server/ServiceWatcher;->mObserver:Lcom/android/server/ServiceWatcher$NetWorkProviderSettingsObserver;
 
-    .line 353
     new-instance v6, Lcom/android/server/ServiceWatcher$2;
 
     invoke-direct {v6, p0}, Lcom/android/server/ServiceWatcher$2;-><init>(Lcom/android/server/ServiceWatcher;)V
 
     iput-object v6, p0, Lcom/android/server/ServiceWatcher;->mPackageMonitor:Lcom/android/internal/content/PackageMonitor;
 
-    .line 152
     iput-object p1, p0, Lcom/android/server/ServiceWatcher;->mContext:Landroid/content/Context;
 
-    .line 153
     iput-object p2, p0, Lcom/android/server/ServiceWatcher;->mTag:Ljava/lang/String;
 
-    .line 154
     iput-object p3, p0, Lcom/android/server/ServiceWatcher;->mName:Ljava/lang/String;
 
-    .line 155
     iput-object p4, p0, Lcom/android/server/ServiceWatcher;->mAction:Ljava/lang/String;
 
-    .line 156
     iget-object v6, p0, Lcom/android/server/ServiceWatcher;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -177,34 +164,28 @@
 
     iput-object v6, p0, Lcom/android/server/ServiceWatcher;->mPm:Landroid/content/pm/PackageManager;
 
-    .line 157
     move-object/from16 v0, p8
 
     iput-object v0, p0, Lcom/android/server/ServiceWatcher;->mNewServiceWork:Ljava/lang/Runnable;
 
-    .line 158
     move-object/from16 v0, p9
 
     iput-object v0, p0, Lcom/android/server/ServiceWatcher;->mHandler:Landroid/os/Handler;
 
-    .line 159
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    .line 162
     .local v4, "resources":Landroid/content/res/Resources;
     invoke-virtual {v4, p5}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v1
 
-    .line 163
     .local v1, "enableOverlay":Z
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 164
     .local v2, "initialPackageNames":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     if-nez v1, :cond_0
 
@@ -218,7 +199,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 168
     :cond_0
     move/from16 v0, p7
 
@@ -226,7 +206,6 @@
 
     move-result-object v3
 
-    .line 169
     .local v3, "pkgs":[Ljava/lang/String;
     if-eqz v3, :cond_1
 
@@ -236,13 +215,11 @@
 
     invoke-virtual {v2, v6}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 170
     :cond_1
     const/4 v6, 0x0
 
     iput-object v6, p0, Lcom/android/server/ServiceWatcher;->mServicePackageName:Ljava/lang/String;
 
-    .line 171
     iget-object v6, p0, Lcom/android/server/ServiceWatcher;->mTag:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -269,7 +246,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 180
     .end local v3    # "pkgs":[Ljava/lang/String;
     :goto_0
     invoke-static {p1, v2}, Lcom/android/server/ServiceWatcher;->getSignatureSets(Landroid/content/Context;Ljava/util/List;)Ljava/util/ArrayList;
@@ -278,26 +254,21 @@
 
     iput-object v6, p0, Lcom/android/server/ServiceWatcher;->mSignatureSets:Ljava/util/List;
 
-    .line 181
     return-void
 
-    .line 175
     :cond_2
     invoke-virtual {v4, p6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 176
     .local v5, "servicePackageName":Ljava/lang/String;
     if-eqz v5, :cond_3
 
     invoke-virtual {v2, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 177
     :cond_3
     iput-object v5, p0, Lcom/android/server/ServiceWatcher;->mServicePackageName:Ljava/lang/String;
 
-    .line 178
     iget-object v6, p0, Lcom/android/server/ServiceWatcher;->mTag:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -328,12 +299,10 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 57
     const-string v0, "ServiceWatcher"
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 59
     return-void
 .end method
 
@@ -342,7 +311,6 @@
     .param p0, "x0"    # Lcom/android/server/ServiceWatcher;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcom/android/server/ServiceWatcher;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -353,7 +321,6 @@
     .param p0, "x0"    # Lcom/android/server/ServiceWatcher;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcom/android/server/ServiceWatcher;->mName:Ljava/lang/String;
 
     return-object v0
@@ -364,7 +331,6 @@
     .param p0, "x0"    # Lcom/android/server/ServiceWatcher;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcom/android/server/ServiceWatcher;->mPackageName:Ljava/lang/String;
 
     return-object v0
@@ -375,7 +341,6 @@
     .param p0, "x0"    # Lcom/android/server/ServiceWatcher;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcom/android/server/ServiceWatcher;->mLock:Ljava/lang/Object;
 
     return-object v0
@@ -386,7 +351,6 @@
     .param p0, "x0"    # Lcom/android/server/ServiceWatcher;
 
     .prologue
-    .line 52
     invoke-direct {p0}, Lcom/android/server/ServiceWatcher;->unbindLocked()V
 
     return-void
@@ -398,7 +362,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     invoke-direct {p0, p1}, Lcom/android/server/ServiceWatcher;->bindBestPackageLocked(Ljava/lang/String;)Z
 
     move-result v0
@@ -411,7 +374,6 @@
     .param p1, "justCheckThisPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 220
     new-instance v6, Landroid/content/Intent;
 
     move-object/from16 v0, p0
@@ -420,16 +382,13 @@
 
     invoke-direct {v6, v13}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 221
     .local v6, "intent":Landroid/content/Intent;
     if-eqz p1, :cond_0
 
-    .line 222
     move-object/from16 v0, p1
 
     invoke-virtual {v6, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 224
     :cond_0
     move-object/from16 v0, p0
 
@@ -443,23 +402,18 @@
 
     move-result-object v11
 
-    .line 226
     .local v11, "rInfos":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     const/high16 v3, -0x80000000
 
-    .line 227
     .local v3, "bestVersion":I
     const/4 v2, 0x0
 
-    .line 228
     .local v2, "bestPackage":Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 229
     .local v1, "bestIsMultiuser":Z
     if-eqz v11, :cond_8
 
-    .line 230
     invoke-interface {v11}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -479,13 +433,11 @@
 
     check-cast v10, Landroid/content/pm/ResolveInfo;
 
-    .line 231
     .local v10, "rInfo":Landroid/content/pm/ResolveInfo;
     iget-object v13, v10, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
     iget-object v9, v13, Landroid/content/pm/ServiceInfo;->packageName:Ljava/lang/String;
 
-    .line 236
     .local v9, "packageName":Ljava/lang/String;
     :try_start_0
     move-object/from16 v0, p0
@@ -498,7 +450,6 @@
 
     move-result-object v8
 
-    .line 237
     .local v8, "pInfo":Landroid/content/pm/PackageInfo;
     iget-object v13, v8, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
@@ -510,7 +461,6 @@
 
     if-nez v13, :cond_2
 
-    .line 238
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/ServiceWatcher;->mTag:Ljava/lang/String;
@@ -553,12 +503,10 @@
 
     goto :goto_0
 
-    .line 242
     .end local v8    # "pInfo":Landroid/content/pm/PackageInfo;
     :catch_0
     move-exception v4
 
-    .line 243
     .local v4, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     move-object/from16 v0, p0
 
@@ -568,7 +516,6 @@
 
     goto :goto_0
 
-    .line 247
     .end local v4    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     .restart local v8    # "pInfo":Landroid/content/pm/PackageInfo;
     :cond_2
@@ -584,7 +531,6 @@
 
     if-nez v13, :cond_3
 
-    .line 248
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/ServiceWatcher;->mTag:Ljava/lang/String;
@@ -645,15 +591,12 @@
 
     goto/16 :goto_0
 
-    .line 254
     :cond_3
     const/high16 v12, -0x80000000
 
-    .line 255
     .local v12, "version":I
     const/4 v7, 0x0
 
-    .line 256
     .local v7, "isMultiuser":Z
     iget-object v13, v10, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
@@ -661,7 +604,6 @@
 
     if-eqz v13, :cond_4
 
-    .line 257
     iget-object v13, v10, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
     iget-object v13, v13, Landroid/content/pm/ServiceInfo;->metaData:Landroid/os/Bundle;
@@ -674,7 +616,6 @@
 
     move-result v12
 
-    .line 259
     iget-object v13, v10, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
     iget-object v13, v13, Landroid/content/pm/ServiceInfo;->metaData:Landroid/os/Bundle;
@@ -685,7 +626,6 @@
 
     move-result v7
 
-    .line 262
     :cond_4
     move-object/from16 v0, p0
 
@@ -693,18 +633,14 @@
 
     if-le v12, v13, :cond_1
 
-    .line 263
     move v3, v12
 
-    .line 264
     move-object v2, v9
 
-    .line 265
     move v1, v7
 
     goto/16 :goto_0
 
-    .line 270
     .end local v7    # "isMultiuser":Z
     .end local v8    # "pInfo":Landroid/content/pm/PackageInfo;
     .end local v9    # "packageName":Ljava/lang/String;
@@ -769,24 +705,19 @@
 
     invoke-static {v14, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 279
     .end local v5    # "i$":Ljava/util/Iterator;
     :goto_3
     if-eqz v2, :cond_9
 
-    .line 280
     move-object/from16 v0, p0
 
     invoke-direct {v0, v2, v3, v1}, Lcom/android/server/ServiceWatcher;->bindToPackageLocked(Ljava/lang/String;IZ)V
 
-    .line 281
     const/4 v13, 0x1
 
-    .line 283
     :goto_4
     return v13
 
-    .line 270
     .restart local v5    # "i$":Ljava/util/Iterator;
     :cond_6
     new-instance v13, Ljava/lang/StringBuilder;
@@ -844,7 +775,6 @@
 
     goto :goto_2
 
-    .line 277
     .end local v5    # "i$":Ljava/util/Iterator;
     :cond_8
     move-object/from16 v0, p0
@@ -877,7 +807,6 @@
 
     goto :goto_3
 
-    .line 283
     :cond_9
     const/4 v13, 0x0
 
@@ -891,30 +820,23 @@
     .param p3, "isMultiuser"    # Z
 
     .prologue
-    .line 299
     invoke-direct {p0}, Lcom/android/server/ServiceWatcher;->unbindLocked()V
 
-    .line 300
     new-instance v0, Landroid/content/Intent;
 
     iget-object v1, p0, Lcom/android/server/ServiceWatcher;->mAction:Ljava/lang/String;
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 301
     .local v0, "intent":Landroid/content/Intent;
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 302
     iput-object p1, p0, Lcom/android/server/ServiceWatcher;->mPackageName:Ljava/lang/String;
 
-    .line 303
     iput p2, p0, Lcom/android/server/ServiceWatcher;->mVersion:I
 
-    .line 304
     iput-boolean p3, p0, Lcom/android/server/ServiceWatcher;->mIsMultiuser:Z
 
-    .line 305
     iget-object v2, p0, Lcom/android/server/ServiceWatcher;->mTag:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -968,7 +890,6 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 307
     iget-object v2, p0, Lcom/android/server/ServiceWatcher;->mContext:Landroid/content/Context;
 
     const v3, 0x40000005    # 2.0000012f
@@ -982,16 +903,13 @@
     :goto_1
     invoke-virtual {v2, v0, p0, v3, v1}, Landroid/content/Context;->bindServiceAsUser(Landroid/content/Intent;Landroid/content/ServiceConnection;ILandroid/os/UserHandle;)Z
 
-    .line 309
     return-void
 
-    .line 305
     :cond_0
     const-string v1, "single"
 
     goto :goto_0
 
-    .line 307
     :cond_1
     sget-object v1, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
 
@@ -1019,19 +937,16 @@
     .end annotation
 
     .prologue
-    .line 96
     .local p1, "initialPackageNames":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v3
 
-    .line 97
     .local v3, "pm":Landroid/content/pm/PackageManager;
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 98
     .local v5, "sigSets":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/util/HashSet<Landroid/content/pm/Signature;>;>;"
     const/4 v1, 0x0
 
@@ -1044,21 +959,18 @@
     :goto_0
     if-ge v1, v7, :cond_0
 
-    .line 99
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
-    .line 101
     .local v2, "pkg":Ljava/lang/String;
     :try_start_0
     new-instance v4, Ljava/util/HashSet;
 
     invoke-direct {v4}, Ljava/util/HashSet;-><init>()V
 
-    .line 102
     .local v4, "set":Ljava/util/HashSet;, "Ljava/util/HashSet<Landroid/content/pm/Signature;>;"
     const/16 v8, 0x40
 
@@ -1068,7 +980,6 @@
 
     iget-object v6, v8, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
-    .line 103
     .local v6, "sigs":[Landroid/content/pm/Signature;
     invoke-static {v6}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
@@ -1076,12 +987,10 @@
 
     invoke-virtual {v4, v8}, Ljava/util/HashSet;->addAll(Ljava/util/Collection;)Z
 
-    .line 104
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 98
     .end local v4    # "set":Ljava/util/HashSet;, "Ljava/util/HashSet<Landroid/content/pm/Signature;>;"
     .end local v6    # "sigs":[Landroid/content/pm/Signature;
     :goto_1
@@ -1089,11 +998,9 @@
 
     goto :goto_0
 
-    .line 105
     :catch_0
     move-exception v0
 
-    .line 106
     .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v8, "ServiceWatcher"
 
@@ -1119,7 +1026,6 @@
 
     goto :goto_1
 
-    .line 109
     .end local v0    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     .end local v2    # "pkg":Ljava/lang/String;
     :cond_0
@@ -1132,10 +1038,8 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 335
     const/4 v1, 0x0
 
-    .line 336
     .local v1, "valid":Z
     if-eqz p1, :cond_3
 
@@ -1147,7 +1051,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 337
     iget-object v2, p0, Lcom/android/server/ServiceWatcher;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1160,11 +1063,9 @@
 
     move-result-object v0
 
-    .line 339
     .local v0, "settingPackage":Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 340
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1191,7 +1092,6 @@
 
     invoke-direct {p0, v2}, Lcom/android/server/ServiceWatcher;->LOGD(Ljava/lang/String;)V
 
-    .line 341
     iget-object v2, p0, Lcom/android/server/ServiceWatcher;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1202,7 +1102,6 @@
 
     invoke-static {v2, v3, p2}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 344
     :cond_0
     if-eqz v0, :cond_1
 
@@ -1212,17 +1111,14 @@
 
     if-eqz v2, :cond_2
 
-    .line 345
     :cond_1
     const/4 v1, 0x1
 
-    .line 350
     .end local v0    # "settingPackage":Ljava/lang/String;
     :cond_2
     :goto_0
     return v1
 
-    .line 348
     :cond_3
     const/4 v1, 0x1
 
@@ -1234,7 +1130,6 @@
     .param p1, "signatures"    # [Landroid/content/pm/Signature;
 
     .prologue
-    .line 331
     iget-object v0, p0, Lcom/android/server/ServiceWatcher;->mSignatureSets:Ljava/util/List;
 
     invoke-static {p1, v0}, Lcom/android/server/ServiceWatcher;->isSignatureMatch([Landroid/content/pm/Signature;Ljava/util/List;)Z
@@ -1264,21 +1159,17 @@
     .local p1, "sigSets":Ljava/util/List;, "Ljava/util/List<Ljava/util/HashSet<Landroid/content/pm/Signature;>;>;"
     const/4 v6, 0x0
 
-    .line 313
     if-nez p0, :cond_1
 
-    .line 327
     :cond_0
     :goto_0
     return v6
 
-    .line 316
     :cond_1
     new-instance v2, Ljava/util/HashSet;
 
     invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
 
-    .line 317
     .local v2, "inputSet":Ljava/util/HashSet;, "Ljava/util/HashSet<Landroid/content/pm/Signature;>;"
     move-object v0, p0
 
@@ -1294,16 +1185,13 @@
 
     aget-object v5, v0, v1
 
-    .line 318
     .local v5, "s":Landroid/content/pm/Signature;
     invoke-virtual {v2, v5}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 317
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 322
     .end local v5    # "s":Landroid/content/pm/Signature;
     :cond_2
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1324,7 +1212,6 @@
 
     check-cast v4, Ljava/util/HashSet;
 
-    .line 323
     .local v4, "referenceSet":Ljava/util/HashSet;, "Ljava/util/HashSet<Landroid/content/pm/Signature;>;"
     invoke-virtual {v4, v2}, Ljava/util/HashSet;->equals(Ljava/lang/Object;)Z
 
@@ -1332,7 +1219,6 @@
 
     if-eqz v7, :cond_3
 
-    .line 324
     const/4 v6, 0x1
 
     goto :goto_0
@@ -1342,29 +1228,23 @@
     .locals 4
 
     .prologue
-    .line 288
     iget-object v0, p0, Lcom/android/server/ServiceWatcher;->mPackageName:Ljava/lang/String;
 
-    .line 289
     .local v0, "pkg":Ljava/lang/String;
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/ServiceWatcher;->mPackageName:Ljava/lang/String;
 
-    .line 290
     const/high16 v1, -0x80000000
 
     iput v1, p0, Lcom/android/server/ServiceWatcher;->mVersion:I
 
-    .line 291
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/server/ServiceWatcher;->mIsMultiuser:Z
 
-    .line 292
     if-eqz v0, :cond_0
 
-    .line 293
     iget-object v1, p0, Lcom/android/server/ServiceWatcher;->mTag:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1387,12 +1267,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 294
     iget-object v1, p0, Lcom/android/server/ServiceWatcher;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, p0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 296
     :cond_0
     return-void
 .end method
@@ -1403,12 +1281,10 @@
     .locals 2
 
     .prologue
-    .line 438
     iget-object v1, p0, Lcom/android/server/ServiceWatcher;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 439
     :try_start_0
     iget-object v0, p0, Lcom/android/server/ServiceWatcher;->mPackageName:Ljava/lang/String;
 
@@ -1416,7 +1292,6 @@
 
     return-object v0
 
-    .line 440
     :catchall_0
     move-exception v0
 
@@ -1431,12 +1306,10 @@
     .locals 2
 
     .prologue
-    .line 444
     iget-object v1, p0, Lcom/android/server/ServiceWatcher;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 445
     :try_start_0
     iget v0, p0, Lcom/android/server/ServiceWatcher;->mVersion:I
 
@@ -1444,7 +1317,6 @@
 
     return v0
 
-    .line 446
     :catchall_0
     move-exception v0
 
@@ -1459,12 +1331,10 @@
     .locals 2
 
     .prologue
-    .line 450
     iget-object v1, p0, Lcom/android/server/ServiceWatcher;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 451
     :try_start_0
     iget-object v0, p0, Lcom/android/server/ServiceWatcher;->mBinder:Landroid/os/IBinder;
 
@@ -1472,7 +1342,6 @@
 
     return-object v0
 
-    .line 452
     :catchall_0
     move-exception v0
 
@@ -1489,18 +1358,15 @@
     .param p2, "binder"    # Landroid/os/IBinder;
 
     .prologue
-    .line 411
     iget-object v2, p0, Lcom/android/server/ServiceWatcher;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 412
     :try_start_0
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 413
     .local v0, "packageName":Ljava/lang/String;
     iget-object v1, p0, Lcom/android/server/ServiceWatcher;->mPackageName:Ljava/lang/String;
 
@@ -1510,7 +1376,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 414
     iget-object v1, p0, Lcom/android/server/ServiceWatcher;->mTag:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1533,10 +1398,8 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 415
     iput-object p2, p0, Lcom/android/server/ServiceWatcher;->mBinder:Landroid/os/IBinder;
 
-    .line 416
     iget-object v1, p0, Lcom/android/server/ServiceWatcher;->mHandler:Landroid/os/Handler;
 
     if-eqz v1, :cond_0
@@ -1545,22 +1408,18 @@
 
     if-eqz v1, :cond_0
 
-    .line 417
     iget-object v1, p0, Lcom/android/server/ServiceWatcher;->mHandler:Landroid/os/Handler;
 
     iget-object v3, p0, Lcom/android/server/ServiceWatcher;->mNewServiceWork:Ljava/lang/Runnable;
 
     invoke-virtual {v1, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 422
     :cond_0
     :goto_0
     monitor-exit v2
 
-    .line 423
     return-void
 
-    .line 420
     :cond_1
     iget-object v1, p0, Lcom/android/server/ServiceWatcher;->mTag:Ljava/lang/String;
 
@@ -1586,7 +1445,6 @@
 
     goto :goto_0
 
-    .line 422
     .end local v0    # "packageName":Ljava/lang/String;
     :catchall_0
     move-exception v1
@@ -1603,18 +1461,15 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 427
     iget-object v2, p0, Lcom/android/server/ServiceWatcher;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 428
     :try_start_0
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 429
     .local v0, "packageName":Ljava/lang/String;
     iget-object v1, p0, Lcom/android/server/ServiceWatcher;->mTag:Ljava/lang/String;
 
@@ -1638,7 +1493,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 431
     iget-object v1, p0, Lcom/android/server/ServiceWatcher;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1647,19 +1501,15 @@
 
     if-eqz v1, :cond_0
 
-    .line 432
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/ServiceWatcher;->mBinder:Landroid/os/IBinder;
 
-    .line 434
     :cond_0
     monitor-exit v2
 
-    .line 435
     return-void
 
-    .line 434
     .end local v0    # "packageName":Ljava/lang/String;
     :catchall_0
     move-exception v1
@@ -1679,12 +1529,10 @@
 
     const/4 v6, 0x1
 
-    .line 184
     iget-object v1, p0, Lcom/android/server/ServiceWatcher;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 185
     :try_start_0
     iget-object v0, p0, Lcom/android/server/ServiceWatcher;->mServicePackageName:Ljava/lang/String;
 
@@ -1698,28 +1546,23 @@
 
     monitor-exit v1
 
-    .line 209
     :goto_0
     return v0
 
-    .line 186
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 189
     new-instance v3, Landroid/content/IntentFilter;
 
     invoke-direct {v3}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 190
     .local v3, "intentFilter":Landroid/content/IntentFilter;
     const-string v0, "android.intent.action.USER_SWITCHED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 191
     iget-object v0, p0, Lcom/android/server/ServiceWatcher;->mContext:Landroid/content/Context;
 
     new-instance v1, Lcom/android/server/ServiceWatcher$1;
@@ -1732,12 +1575,10 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 202
     iget-object v0, p0, Lcom/android/server/ServiceWatcher;->mServicePackageName:Ljava/lang/String;
 
     if-nez v0, :cond_1
 
-    .line 203
     iget-object v0, p0, Lcom/android/server/ServiceWatcher;->mPackageMonitor:Lcom/android/internal/content/PackageMonitor;
 
     iget-object v1, p0, Lcom/android/server/ServiceWatcher;->mContext:Landroid/content/Context;
@@ -1746,7 +1587,6 @@
 
     invoke-virtual {v0, v1, v4, v2, v6}, Lcom/android/internal/content/PackageMonitor;->register(Landroid/content/Context;Landroid/os/Looper;Landroid/os/UserHandle;Z)V
 
-    .line 205
     :cond_1
     const-string v0, "network"
 
@@ -1758,7 +1598,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 206
     new-instance v0, Lcom/android/server/ServiceWatcher$NetWorkProviderSettingsObserver;
 
     iget-object v1, p0, Lcom/android/server/ServiceWatcher;->mHandler:Landroid/os/Handler;
@@ -1767,7 +1606,6 @@
 
     iput-object v0, p0, Lcom/android/server/ServiceWatcher;->mObserver:Lcom/android/server/ServiceWatcher$NetWorkProviderSettingsObserver;
 
-    .line 207
     iget-object v0, p0, Lcom/android/server/ServiceWatcher;->mObserver:Lcom/android/server/ServiceWatcher$NetWorkProviderSettingsObserver;
 
     invoke-virtual {v0}, Lcom/android/server/ServiceWatcher$NetWorkProviderSettingsObserver;->observer()V
@@ -1775,10 +1613,8 @@
     :cond_2
     move v0, v6
 
-    .line 209
     goto :goto_0
 
-    .line 186
     .end local v3    # "intentFilter":Landroid/content/IntentFilter;
     :catchall_0
     move-exception v0
@@ -1795,33 +1631,26 @@
     .locals 2
 
     .prologue
-    .line 456
     iget-object v1, p0, Lcom/android/server/ServiceWatcher;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 457
     :try_start_0
     iget-boolean v0, p0, Lcom/android/server/ServiceWatcher;->mIsMultiuser:Z
 
     if-nez v0, :cond_0
 
-    .line 458
     invoke-direct {p0}, Lcom/android/server/ServiceWatcher;->unbindLocked()V
 
-    .line 459
     iget-object v0, p0, Lcom/android/server/ServiceWatcher;->mServicePackageName:Ljava/lang/String;
 
     invoke-direct {p0, v0}, Lcom/android/server/ServiceWatcher;->bindBestPackageLocked(Ljava/lang/String;)Z
 
-    .line 461
     :cond_0
     monitor-exit v1
 
-    .line 462
     return-void
 
-    .line 461
     :catchall_0
     move-exception v0
 

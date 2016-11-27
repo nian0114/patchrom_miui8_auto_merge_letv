@@ -24,13 +24,10 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 529
     iput-object p1, p0, Lcom/android/server/am/TaskPersister$LazyTaskWriterThread;->this$0:Lcom/android/server/am/TaskPersister;
 
-    .line 530
     invoke-direct {p0, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
-    .line 531
     return-void
 .end method
 
@@ -40,17 +37,14 @@
     .locals 28
 
     .prologue
-    .line 535
     const/16 v21, 0xa
 
     invoke-static/range {v21 .. v21}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 536
     new-instance v16, Landroid/util/ArraySet;
 
     invoke-direct/range {v16 .. v16}, Landroid/util/ArraySet;-><init>()V
 
-    .line 542
     .local v16, "persistentTaskIds":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/Integer;>;"
     :cond_0
     :goto_0
@@ -62,7 +56,6 @@
 
     monitor-enter v22
 
-    .line 543
     :try_start_0
     move-object/from16 v0, p0
 
@@ -80,16 +73,13 @@
 
     move-result v17
 
-    .line 544
     .local v17, "probablyDone":Z
     monitor-exit v22
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 545
     if-eqz v17, :cond_a
 
-    .line 546
     sget-boolean v21, Lcom/android/server/am/TaskPersister;->DEBUG:Z
 
     if-eqz v21, :cond_1
@@ -100,11 +90,9 @@
 
     invoke-static/range {v21 .. v22}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 547
     :cond_1
     invoke-virtual/range {v16 .. v16}, Landroid/util/ArraySet;->clear()V
 
-    .line 548
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/TaskPersister$LazyTaskWriterThread;->this$0:Lcom/android/server/am/TaskPersister;
@@ -118,7 +106,6 @@
 
     monitor-enter v22
 
-    .line 549
     :try_start_1
     sget-boolean v21, Lcom/android/server/am/TaskPersister;->DEBUG:Z
 
@@ -161,7 +148,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 550
     :cond_2
     move-object/from16 v0, p0
 
@@ -184,7 +170,6 @@
     :goto_1
     if-ltz v20, :cond_9
 
-    .line 551
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/TaskPersister$LazyTaskWriterThread;->this$0:Lcom/android/server/am/TaskPersister;
@@ -206,7 +191,6 @@
 
     check-cast v19, Lcom/android/server/am/TaskRecord;
 
-    .line 552
     .local v19, "task":Lcom/android/server/am/TaskRecord;
     sget-boolean v21, Lcom/android/server/am/TaskPersister;->DEBUG:Z
 
@@ -258,7 +242,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 554
     :cond_3
     move-object/from16 v0, v19
 
@@ -297,7 +280,6 @@
 
     if-nez v21, :cond_8
 
-    .line 555
     :cond_5
     sget-boolean v21, Lcom/android/server/am/TaskPersister;->DEBUG:Z
 
@@ -333,7 +315,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 556
     :cond_6
     move-object/from16 v0, v19
 
@@ -353,14 +334,12 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 550
     :cond_7
     :goto_2
     add-int/lit8 v20, v20, -0x1
 
     goto/16 :goto_1
 
-    .line 544
     .end local v17    # "probablyDone":Z
     .end local v19    # "task":Lcom/android/server/am/TaskRecord;
     .end local v20    # "taskNdx":I
@@ -374,7 +353,6 @@
 
     throw v21
 
-    .line 558
     .restart local v17    # "probablyDone":Z
     .restart local v19    # "task":Lcom/android/server/am/TaskRecord;
     .restart local v20    # "taskNdx":I
@@ -416,7 +394,6 @@
 
     goto :goto_2
 
-    .line 562
     .end local v19    # "task":Lcom/android/server/am/TaskRecord;
     .end local v20    # "taskNdx":I
     :catchall_1
@@ -435,7 +412,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 563
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/TaskPersister$LazyTaskWriterThread;->this$0:Lcom/android/server/am/TaskPersister;
@@ -449,7 +425,6 @@
     # invokes: Lcom/android/server/am/TaskPersister;->removeObsoleteFiles(Landroid/util/ArraySet;)V
     invoke-static {v0, v1}, Lcom/android/server/am/TaskPersister;->access$300(Lcom/android/server/am/TaskPersister;Landroid/util/ArraySet;)V
 
-    .line 568
     .end local v20    # "taskNdx":I
     :cond_a
     move-object/from16 v0, p0
@@ -460,7 +435,6 @@
 
     monitor-enter v22
 
-    .line 569
     :try_start_5
     move-object/from16 v0, p0
 
@@ -479,7 +453,6 @@
 
     if-eqz v21, :cond_b
 
-    .line 571
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/TaskPersister$LazyTaskWriterThread;->this$0:Lcom/android/server/am/TaskPersister;
@@ -501,7 +474,6 @@
     # setter for: Lcom/android/server/am/TaskPersister;->mNextWriteTime:J
     invoke-static {v0, v1, v2}, Lcom/android/server/am/TaskPersister;->access$402(Lcom/android/server/am/TaskPersister;J)J
 
-    .line 572
     sget-boolean v21, Lcom/android/server/am/TaskPersister;->DEBUG:Z
 
     if-eqz v21, :cond_b
@@ -549,7 +521,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 577
     :cond_b
     :goto_3
     move-object/from16 v0, p0
@@ -570,7 +541,6 @@
 
     if-eqz v21, :cond_e
 
-    .line 578
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/TaskPersister$LazyTaskWriterThread;->this$0:Lcom/android/server/am/TaskPersister;
@@ -588,7 +558,6 @@
 
     if-eqz v21, :cond_c
 
-    .line 579
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/TaskPersister$LazyTaskWriterThread;->this$0:Lcom/android/server/am/TaskPersister;
@@ -604,7 +573,6 @@
     # setter for: Lcom/android/server/am/TaskPersister;->mNextWriteTime:J
     invoke-static {v0, v1, v2}, Lcom/android/server/am/TaskPersister;->access$402(Lcom/android/server/am/TaskPersister;J)J
 
-    .line 580
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/TaskPersister$LazyTaskWriterThread;->this$0:Lcom/android/server/am/TaskPersister;
@@ -615,7 +583,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    .line 583
     :cond_c
     :try_start_6
     sget-boolean v21, Lcom/android/server/am/TaskPersister;->DEBUG:Z
@@ -632,7 +599,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 584
     :cond_d
     move-object/from16 v0, p0
 
@@ -647,13 +613,11 @@
 
     goto :goto_3
 
-    .line 585
     :catch_0
     move-exception v21
 
     goto :goto_3
 
-    .line 590
     :cond_e
     :try_start_7
     move-object/from16 v0, p0
@@ -680,13 +644,11 @@
 
     check-cast v13, Lcom/android/server/am/TaskPersister$WriteQueueItem;
 
-    .line 592
     .local v13, "item":Lcom/android/server/am/TaskPersister$WriteQueueItem;
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v14
 
-    .line 593
     .local v14, "now":J
     sget-boolean v21, Lcom/android/server/am/TaskPersister;->DEBUG:Z
 
@@ -779,7 +741,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 595
     :cond_f
     :goto_4
     move-object/from16 v0, p0
@@ -799,7 +760,6 @@
 
     if-gez v21, :cond_11
 
-    .line 597
     :try_start_8
     sget-boolean v21, Lcom/android/server/am/TaskPersister;->DEBUG:Z
 
@@ -844,7 +804,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 599
     :cond_10
     move-object/from16 v0, p0
 
@@ -874,7 +833,6 @@
     .catch Ljava/lang/InterruptedException; {:try_start_8 .. :try_end_8} :catch_7
     .catchall {:try_start_8 .. :try_end_8} :catchall_2
 
-    .line 602
     :goto_5
     :try_start_9
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -883,13 +841,11 @@
 
     goto :goto_4
 
-    .line 606
     :cond_11
     monitor-exit v22
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_2
 
-    .line 608
     instance-of v0, v13, Lcom/android/server/am/TaskPersister$ImageWriteQueueItem;
 
     move/from16 v21, v0
@@ -898,18 +854,14 @@
 
     move-object v12, v13
 
-    .line 609
     check-cast v12, Lcom/android/server/am/TaskPersister$ImageWriteQueueItem;
 
-    .line 610
     .local v12, "imageWriteQueueItem":Lcom/android/server/am/TaskPersister$ImageWriteQueueItem;
     iget-object v9, v12, Lcom/android/server/am/TaskPersister$ImageWriteQueueItem;->mFilename:Ljava/lang/String;
 
-    .line 611
     .local v9, "filename":Ljava/lang/String;
     iget-object v6, v12, Lcom/android/server/am/TaskPersister$ImageWriteQueueItem;->mImage:Landroid/graphics/Bitmap;
 
-    .line 612
     .local v6, "bitmap":Landroid/graphics/Bitmap;
     sget-boolean v21, Lcom/android/server/am/TaskPersister;->DEBUG:Z
 
@@ -953,11 +905,9 @@
 
     invoke-static/range {v21 .. v22}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 613
     :cond_12
     const/4 v10, 0x0
 
-    .line 615
     .local v10, "imageFile":Ljava/io/FileOutputStream;
     :try_start_a
     new-instance v11, Ljava/io/FileOutputStream;
@@ -979,7 +929,6 @@
     .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_6
     .catchall {:try_start_a .. :try_end_a} :catchall_3
 
-    .line 616
     .end local v10    # "imageFile":Ljava/io/FileOutputStream;
     .local v11, "imageFile":Ljava/io/FileOutputStream;
     :try_start_b
@@ -989,7 +938,6 @@
 
     if-nez v21, :cond_14
 
-    .line 617
     invoke-virtual {v6}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v21
@@ -1004,7 +952,6 @@
 
     if-le v0, v1, :cond_13
 
-    .line 618
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/TaskPersister$LazyTaskWriterThread;->this$0:Lcom/android/server/am/TaskPersister;
@@ -1039,7 +986,6 @@
 
     move-result-object v6
 
-    .line 622
     :goto_6
     sget-object v21, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
@@ -1054,18 +1000,15 @@
     .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_1
     .catchall {:try_start_b .. :try_end_b} :catchall_5
 
-    .line 629
     :goto_7
     invoke-static {v11}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
     move-object v10, v11
 
-    .line 630
     .end local v11    # "imageFile":Ljava/io/FileOutputStream;
     .restart local v10    # "imageFile":Ljava/io/FileOutputStream;
     goto/16 :goto_0
 
-    .line 606
     .end local v6    # "bitmap":Landroid/graphics/Bitmap;
     .end local v9    # "filename":Ljava/lang/String;
     .end local v10    # "imageFile":Ljava/io/FileOutputStream;
@@ -1082,7 +1025,6 @@
 
     throw v21
 
-    .line 620
     .restart local v6    # "bitmap":Landroid/graphics/Bitmap;
     .restart local v9    # "filename":Ljava/lang/String;
     .restart local v11    # "imageFile":Ljava/io/FileOutputStream;
@@ -1127,7 +1069,6 @@
 
     goto :goto_6
 
-    .line 624
     :cond_14
     sget-object v21, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
 
@@ -1144,13 +1085,11 @@
 
     goto :goto_7
 
-    .line 626
     :catch_1
     move-exception v7
 
     move-object v10, v11
 
-    .line 627
     .end local v11    # "imageFile":Ljava/io/FileOutputStream;
     .local v7, "e":Ljava/lang/Exception;
     .restart local v10    # "imageFile":Ljava/io/FileOutputStream;
@@ -1186,7 +1125,6 @@
     :try_end_e
     .catchall {:try_start_e .. :try_end_e} :catchall_3
 
-    .line 629
     invoke-static {v10}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
     goto/16 :goto_0
@@ -1200,7 +1138,6 @@
 
     throw v21
 
-    .line 631
     .end local v6    # "bitmap":Landroid/graphics/Bitmap;
     .end local v9    # "filename":Ljava/lang/String;
     .end local v10    # "imageFile":Ljava/io/FileOutputStream;
@@ -1212,10 +1149,8 @@
 
     if-eqz v21, :cond_0
 
-    .line 633
     const/16 v18, 0x0
 
-    .line 634
     .local v18, "stringWriter":Ljava/io/StringWriter;
     check-cast v13, Lcom/android/server/am/TaskPersister$TaskWriteQueueItem;
 
@@ -1224,7 +1159,6 @@
 
     move-object/from16 v19, v0
 
-    .line 635
     .restart local v19    # "task":Lcom/android/server/am/TaskRecord;
     sget-boolean v21, Lcom/android/server/am/TaskPersister;->DEBUG:Z
 
@@ -1256,7 +1190,6 @@
 
     invoke-static/range {v21 .. v22}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 636
     :cond_16
     move-object/from16 v0, p0
 
@@ -1271,7 +1204,6 @@
 
     monitor-enter v22
 
-    .line 637
     :try_start_f
     move-object/from16 v0, v19
 
@@ -1283,7 +1215,6 @@
 
     if-eqz v21, :cond_18
 
-    .line 640
     :try_start_10
     sget-boolean v21, Lcom/android/server/am/TaskPersister;->DEBUG:Z
 
@@ -1319,7 +1250,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 641
     :cond_17
     move-object/from16 v0, p0
 
@@ -1340,7 +1270,6 @@
 
     move-result-object v18
 
-    .line 646
     :cond_18
     :goto_a
     :try_start_11
@@ -1348,17 +1277,13 @@
     :try_end_11
     .catchall {:try_start_11 .. :try_end_11} :catchall_4
 
-    .line 647
     if-eqz v18, :cond_0
 
-    .line 649
     const/4 v8, 0x0
 
-    .line 650
     .local v8, "file":Ljava/io/FileOutputStream;
     const/4 v4, 0x0
 
-    .line 652
     .local v4, "atomicFile":Landroid/util/AtomicFile;
     :try_start_12
     new-instance v5, Landroid/util/AtomicFile;
@@ -1409,7 +1334,6 @@
     :try_end_12
     .catch Ljava/io/IOException; {:try_start_12 .. :try_end_12} :catch_3
 
-    .line 654
     .end local v4    # "atomicFile":Landroid/util/AtomicFile;
     .local v5, "atomicFile":Landroid/util/AtomicFile;
     :try_start_13
@@ -1417,7 +1341,6 @@
 
     move-result-object v8
 
-    .line 655
     invoke-virtual/range {v18 .. v18}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
 
     move-result-object v21
@@ -1430,37 +1353,31 @@
 
     invoke-virtual {v8, v0}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 656
     const/16 v21, 0xa
 
     move/from16 v0, v21
 
     invoke-virtual {v8, v0}, Ljava/io/FileOutputStream;->write(I)V
 
-    .line 657
     invoke-virtual {v5, v8}, Landroid/util/AtomicFile;->finishWrite(Ljava/io/FileOutputStream;)V
     :try_end_13
     .catch Ljava/io/IOException; {:try_start_13 .. :try_end_13} :catch_2
 
     goto/16 :goto_0
 
-    .line 658
     :catch_2
     move-exception v7
 
     move-object v4, v5
 
-    .line 659
     .end local v5    # "atomicFile":Landroid/util/AtomicFile;
     .restart local v4    # "atomicFile":Landroid/util/AtomicFile;
     .local v7, "e":Ljava/io/IOException;
     :goto_b
     if-eqz v8, :cond_19
 
-    .line 660
     invoke-virtual {v4, v8}, Landroid/util/AtomicFile;->failWrite(Ljava/io/FileOutputStream;)V
 
-    .line 662
     :cond_19
     const-string v21, "TaskPersister"
 
@@ -1500,7 +1417,6 @@
 
     goto/16 :goto_0
 
-    .line 646
     .end local v4    # "atomicFile":Landroid/util/AtomicFile;
     .end local v7    # "e":Ljava/io/IOException;
     .end local v8    # "file":Ljava/io/FileOutputStream;
@@ -1514,7 +1430,6 @@
 
     throw v21
 
-    .line 658
     .restart local v4    # "atomicFile":Landroid/util/AtomicFile;
     .restart local v8    # "file":Ljava/io/FileOutputStream;
     :catch_3
@@ -1522,7 +1437,6 @@
 
     goto :goto_b
 
-    .line 643
     .end local v4    # "atomicFile":Landroid/util/AtomicFile;
     .end local v8    # "file":Ljava/io/FileOutputStream;
     :catch_4
@@ -1530,13 +1444,11 @@
 
     goto/16 :goto_a
 
-    .line 642
     :catch_5
     move-exception v21
 
     goto/16 :goto_a
 
-    .line 629
     .end local v18    # "stringWriter":Ljava/io/StringWriter;
     .end local v19    # "task":Lcom/android/server/am/TaskRecord;
     .restart local v6    # "bitmap":Landroid/graphics/Bitmap;
@@ -1553,13 +1465,11 @@
     .restart local v10    # "imageFile":Ljava/io/FileOutputStream;
     goto/16 :goto_9
 
-    .line 626
     :catch_6
     move-exception v7
 
     goto/16 :goto_8
 
-    .line 600
     .end local v6    # "bitmap":Landroid/graphics/Bitmap;
     .end local v9    # "filename":Ljava/lang/String;
     .end local v10    # "imageFile":Ljava/io/FileOutputStream;

@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 150
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,12 +44,10 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 153
     new-instance v0, Landroid/graphics/BlurParams;
 
     invoke-direct {v0}, Landroid/graphics/BlurParams;-><init>()V
 
-    .line 154
     .local v0, "bp":Landroid/graphics/BlurParams;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -58,7 +55,6 @@
 
     iput v1, v0, Landroid/graphics/BlurParams;->mode:I
 
-    .line 155
     sget-object v1, Landroid/graphics/Rect;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v1, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -69,42 +65,36 @@
 
     iput-object v1, v0, Landroid/graphics/BlurParams;->area:Landroid/graphics/Rect;
 
-    .line 156
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v1
 
     iput v1, v0, Landroid/graphics/BlurParams;->radius:F
 
-    .line 157
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v1
 
     iput v1, v0, Landroid/graphics/BlurParams;->lumaContrast:F
 
-    .line 158
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v1
 
     iput v1, v0, Landroid/graphics/BlurParams;->lumaBrightness:F
 
-    .line 159
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v1
 
     iput v1, v0, Landroid/graphics/BlurParams;->chromaContrast:F
 
-    .line 160
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, v0, Landroid/graphics/BlurParams;->blendColor:I
 
-    .line 161
     return-object v0
 .end method
 
@@ -112,7 +102,6 @@
     .locals 1
 
     .prologue
-    .line 150
     invoke-virtual {p0, p1}, Landroid/graphics/BlurParams$1;->createFromParcel(Landroid/os/Parcel;)Landroid/graphics/BlurParams;
 
     move-result-object v0
@@ -125,7 +114,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 166
     new-array v0, p1, [Landroid/graphics/BlurParams;
 
     return-object v0
@@ -135,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 150
     invoke-virtual {p0, p1}, Landroid/graphics/BlurParams$1;->newArray(I)[Landroid/graphics/BlurParams;
 
     move-result-object v0

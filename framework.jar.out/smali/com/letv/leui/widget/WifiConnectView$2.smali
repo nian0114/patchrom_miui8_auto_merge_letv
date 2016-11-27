@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 165
     iput-object p1, p0, Lcom/letv/leui/widget/WifiConnectView$2;->this$0:Lcom/letv/leui/widget/WifiConnectView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 3
 
     .prologue
-    .line 168
     iget-object v1, p0, Lcom/letv/leui/widget/WifiConnectView$2;->this$0:Lcom/letv/leui/widget/WifiConnectView;
 
     # getter for: Lcom/letv/leui/widget/WifiConnectView;->mHasConnect:Z
@@ -50,7 +48,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 169
     iget-object v1, p0, Lcom/letv/leui/widget/WifiConnectView$2;->this$0:Lcom/letv/leui/widget/WifiConnectView;
 
     # getter for: Lcom/letv/leui/widget/WifiConnectView;->wifiHasConnectAnimSet:Landroid/animation/AnimatorSet;
@@ -60,11 +57,9 @@
 
     invoke-virtual {v1}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 175
     :goto_0
     return-void
 
-    .line 171
     :cond_0
     iget-object v1, p0, Lcom/letv/leui/widget/WifiConnectView$2;->this$0:Lcom/letv/leui/widget/WifiConnectView;
 
@@ -78,13 +73,11 @@
 
     move-result-object v0
 
-    .line 172
     .local v0, "drawable":Landroid/graphics/drawable/Drawable;
     iget-object v1, p0, Lcom/letv/leui/widget/WifiConnectView$2;->this$0:Lcom/letv/leui/widget/WifiConnectView;
 
     invoke-virtual {v1, v0}, Lcom/letv/leui/widget/WifiConnectView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 173
     check-cast v0, Landroid/graphics/drawable/Animatable;
 
     .end local v0    # "drawable":Landroid/graphics/drawable/Drawable;

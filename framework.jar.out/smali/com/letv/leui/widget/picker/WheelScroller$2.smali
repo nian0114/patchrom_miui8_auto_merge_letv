@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 234
     iput-object p1, p0, Lcom/letv/leui/widget/picker/WheelScroller$2;->this$0:Lcom/letv/leui/widget/picker/WheelScroller;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -40,7 +39,6 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 236
     iget-object v3, p0, Lcom/letv/leui/widget/picker/WheelScroller$2;->this$0:Lcom/letv/leui/widget/picker/WheelScroller;
 
     # getter for: Lcom/letv/leui/widget/picker/WheelScroller;->scroller:Landroid/widget/Scroller;
@@ -50,7 +48,6 @@
 
     invoke-virtual {v3}, Landroid/widget/Scroller;->computeScrollOffset()Z
 
-    .line 237
     iget-object v3, p0, Lcom/letv/leui/widget/picker/WheelScroller$2;->this$0:Lcom/letv/leui/widget/picker/WheelScroller;
 
     # getter for: Lcom/letv/leui/widget/picker/WheelScroller;->isVertical:Z
@@ -60,7 +57,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 238
     iget-object v3, p0, Lcom/letv/leui/widget/picker/WheelScroller$2;->this$0:Lcom/letv/leui/widget/picker/WheelScroller;
 
     # getter for: Lcom/letv/leui/widget/picker/WheelScroller;->scroller:Landroid/widget/Scroller;
@@ -72,7 +68,6 @@
 
     move-result v1
 
-    .line 239
     .local v1, "currY":I
     iget-object v3, p0, Lcom/letv/leui/widget/picker/WheelScroller$2;->this$0:Lcom/letv/leui/widget/picker/WheelScroller;
 
@@ -83,17 +78,14 @@
 
     sub-int v2, v3, v1
 
-    .line 240
     .local v2, "delta":I
     iget-object v3, p0, Lcom/letv/leui/widget/picker/WheelScroller$2;->this$0:Lcom/letv/leui/widget/picker/WheelScroller;
 
     # setter for: Lcom/letv/leui/widget/picker/WheelScroller;->lastScrollY:I
     invoke-static {v3, v1}, Lcom/letv/leui/widget/picker/WheelScroller;->access$102(Lcom/letv/leui/widget/picker/WheelScroller;I)I
 
-    .line 241
     if-eqz v2, :cond_0
 
-    .line 242
     iget-object v3, p0, Lcom/letv/leui/widget/picker/WheelScroller$2;->this$0:Lcom/letv/leui/widget/picker/WheelScroller;
 
     # getter for: Lcom/letv/leui/widget/picker/WheelScroller;->listener:Lcom/letv/leui/widget/picker/WheelScroller$ScrollingListener;
@@ -103,7 +95,6 @@
 
     invoke-interface {v3, v2}, Lcom/letv/leui/widget/picker/WheelScroller$ScrollingListener;->onScroll(I)V
 
-    .line 247
     :cond_0
     iget-object v3, p0, Lcom/letv/leui/widget/picker/WheelScroller$2;->this$0:Lcom/letv/leui/widget/picker/WheelScroller;
 
@@ -124,7 +115,6 @@
 
     if-ge v3, v4, :cond_1
 
-    .line 248
     iget-object v3, p0, Lcom/letv/leui/widget/picker/WheelScroller$2;->this$0:Lcom/letv/leui/widget/picker/WheelScroller;
 
     # getter for: Lcom/letv/leui/widget/picker/WheelScroller;->scroller:Landroid/widget/Scroller;
@@ -136,7 +126,6 @@
 
     move-result v1
 
-    .line 249
     iget-object v3, p0, Lcom/letv/leui/widget/picker/WheelScroller$2;->this$0:Lcom/letv/leui/widget/picker/WheelScroller;
 
     # getter for: Lcom/letv/leui/widget/picker/WheelScroller;->scroller:Landroid/widget/Scroller;
@@ -146,7 +135,6 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/Scroller;->forceFinished(Z)V
 
-    .line 251
     :cond_1
     iget-object v3, p0, Lcom/letv/leui/widget/picker/WheelScroller$2;->this$0:Lcom/letv/leui/widget/picker/WheelScroller;
 
@@ -161,7 +149,6 @@
 
     if-nez v3, :cond_2
 
-    .line 252
     iget-object v3, p0, Lcom/letv/leui/widget/picker/WheelScroller$2;->this$0:Lcom/letv/leui/widget/picker/WheelScroller;
 
     # getter for: Lcom/letv/leui/widget/picker/WheelScroller;->animationHandler:Landroid/os/Handler;
@@ -173,19 +160,16 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 279
     .end local v1    # "currY":I
     :goto_0
     return-void
 
-    .line 253
     .restart local v1    # "currY":I
     :cond_2
     iget v3, p1, Landroid/os/Message;->what:I
 
     if-nez v3, :cond_3
 
-    .line 254
     iget-object v3, p0, Lcom/letv/leui/widget/picker/WheelScroller$2;->this$0:Lcom/letv/leui/widget/picker/WheelScroller;
 
     # invokes: Lcom/letv/leui/widget/picker/WheelScroller;->justify()V
@@ -193,7 +177,6 @@
 
     goto :goto_0
 
-    .line 256
     :cond_3
     iget-object v3, p0, Lcom/letv/leui/widget/picker/WheelScroller$2;->this$0:Lcom/letv/leui/widget/picker/WheelScroller;
 
@@ -201,7 +184,6 @@
 
     goto :goto_0
 
-    .line 259
     .end local v1    # "currY":I
     .end local v2    # "delta":I
     :cond_4
@@ -216,7 +198,6 @@
 
     move-result v0
 
-    .line 260
     .local v0, "currX":I
     iget-object v3, p0, Lcom/letv/leui/widget/picker/WheelScroller$2;->this$0:Lcom/letv/leui/widget/picker/WheelScroller;
 
@@ -227,17 +208,14 @@
 
     sub-int v2, v3, v0
 
-    .line 261
     .restart local v2    # "delta":I
     iget-object v3, p0, Lcom/letv/leui/widget/picker/WheelScroller$2;->this$0:Lcom/letv/leui/widget/picker/WheelScroller;
 
     # setter for: Lcom/letv/leui/widget/picker/WheelScroller;->lastScrollX:I
     invoke-static {v3, v0}, Lcom/letv/leui/widget/picker/WheelScroller;->access$502(Lcom/letv/leui/widget/picker/WheelScroller;I)I
 
-    .line 262
     if-eqz v2, :cond_5
 
-    .line 263
     iget-object v3, p0, Lcom/letv/leui/widget/picker/WheelScroller$2;->this$0:Lcom/letv/leui/widget/picker/WheelScroller;
 
     # getter for: Lcom/letv/leui/widget/picker/WheelScroller;->listener:Lcom/letv/leui/widget/picker/WheelScroller$ScrollingListener;
@@ -247,7 +225,6 @@
 
     invoke-interface {v3, v2}, Lcom/letv/leui/widget/picker/WheelScroller$ScrollingListener;->onScroll(I)V
 
-    .line 267
     :cond_5
     iget-object v3, p0, Lcom/letv/leui/widget/picker/WheelScroller$2;->this$0:Lcom/letv/leui/widget/picker/WheelScroller;
 
@@ -268,7 +245,6 @@
 
     if-ge v3, v4, :cond_6
 
-    .line 268
     iget-object v3, p0, Lcom/letv/leui/widget/picker/WheelScroller$2;->this$0:Lcom/letv/leui/widget/picker/WheelScroller;
 
     # getter for: Lcom/letv/leui/widget/picker/WheelScroller;->scroller:Landroid/widget/Scroller;
@@ -280,7 +256,6 @@
 
     move-result v0
 
-    .line 269
     iget-object v3, p0, Lcom/letv/leui/widget/picker/WheelScroller$2;->this$0:Lcom/letv/leui/widget/picker/WheelScroller;
 
     # getter for: Lcom/letv/leui/widget/picker/WheelScroller;->scroller:Landroid/widget/Scroller;
@@ -290,7 +265,6 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/Scroller;->forceFinished(Z)V
 
-    .line 271
     :cond_6
     iget-object v3, p0, Lcom/letv/leui/widget/picker/WheelScroller$2;->this$0:Lcom/letv/leui/widget/picker/WheelScroller;
 
@@ -305,7 +279,6 @@
 
     if-nez v3, :cond_7
 
-    .line 272
     iget-object v3, p0, Lcom/letv/leui/widget/picker/WheelScroller$2;->this$0:Lcom/letv/leui/widget/picker/WheelScroller;
 
     # getter for: Lcom/letv/leui/widget/picker/WheelScroller;->animationHandler:Landroid/os/Handler;
@@ -319,13 +292,11 @@
 
     goto :goto_0
 
-    .line 273
     :cond_7
     iget v3, p1, Landroid/os/Message;->what:I
 
     if-nez v3, :cond_8
 
-    .line 274
     iget-object v3, p0, Lcom/letv/leui/widget/picker/WheelScroller$2;->this$0:Lcom/letv/leui/widget/picker/WheelScroller;
 
     # invokes: Lcom/letv/leui/widget/picker/WheelScroller;->justify()V
@@ -333,7 +304,6 @@
 
     goto :goto_0
 
-    .line 276
     :cond_8
     iget-object v3, p0, Lcom/letv/leui/widget/picker/WheelScroller$2;->this$0:Lcom/letv/leui/widget/picker/WheelScroller;
 

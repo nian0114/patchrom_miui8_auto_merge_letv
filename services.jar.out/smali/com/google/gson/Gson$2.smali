@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 132
     iput-object p1, p0, Lcom/google/gson/Gson$2;->this$0:Lcom/google/gson/Gson;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "src"    # Ljava/lang/Object;
 
     .prologue
-    .line 134
     iget-object v0, p0, Lcom/google/gson/Gson$2;->this$0:Lcom/google/gson/Gson;
 
     invoke-virtual {v0, p1}, Lcom/google/gson/Gson;->toJsonTree(Ljava/lang/Object;)Lcom/google/gson/JsonElement;
@@ -57,7 +55,6 @@
     .param p2, "typeOfSrc"    # Ljava/lang/reflect/Type;
 
     .prologue
-    .line 137
     iget-object v0, p0, Lcom/google/gson/Gson$2;->this$0:Lcom/google/gson/Gson;
 
     invoke-virtual {v0, p1, p2}, Lcom/google/gson/Gson;->toJsonTree(Ljava/lang/Object;Ljava/lang/reflect/Type;)Lcom/google/gson/JsonElement;

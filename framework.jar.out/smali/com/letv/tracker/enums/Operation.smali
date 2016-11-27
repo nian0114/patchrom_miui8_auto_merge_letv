@@ -43,7 +43,6 @@
 
     const/4 v3, 0x0
 
-    .line 6
     new-instance v0, Lcom/letv/tracker/enums/Operation;
 
     const-string v1, "Click"
@@ -54,7 +53,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/Operation;->Click:Lcom/letv/tracker/enums/Operation;
 
-    .line 7
     new-instance v0, Lcom/letv/tracker/enums/Operation;
 
     const-string v1, "Slide"
@@ -65,7 +63,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/Operation;->Slide:Lcom/letv/tracker/enums/Operation;
 
-    .line 8
     new-instance v0, Lcom/letv/tracker/enums/Operation;
 
     const-string v1, "Drag"
@@ -76,7 +73,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/Operation;->Drag:Lcom/letv/tracker/enums/Operation;
 
-    .line 9
     new-instance v0, Lcom/letv/tracker/enums/Operation;
 
     const-string v1, "DoubleClick"
@@ -87,7 +83,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/Operation;->DoubleClick:Lcom/letv/tracker/enums/Operation;
 
-    .line 5
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/letv/tracker/enums/Operation;
@@ -125,13 +120,10 @@
     .end annotation
 
     .prologue
-    .line 13
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 14
     iput-object p3, p0, Lcom/letv/tracker/enums/Operation;->id:Ljava/lang/String;
 
-    .line 15
     return-void
 .end method
 
@@ -140,7 +132,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 5
     const-class v0, Lcom/letv/tracker/enums/Operation;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -156,7 +147,6 @@
     .locals 1
 
     .prologue
-    .line 5
     sget-object v0, Lcom/letv/tracker/enums/Operation;->$VALUES:[Lcom/letv/tracker/enums/Operation;
 
     invoke-virtual {v0}, [Lcom/letv/tracker/enums/Operation;->clone()Ljava/lang/Object;
@@ -174,7 +164,6 @@
     .locals 1
 
     .prologue
-    .line 11
     iget-object v0, p0, Lcom/letv/tracker/enums/Operation;->id:Ljava/lang/String;
 
     return-object v0

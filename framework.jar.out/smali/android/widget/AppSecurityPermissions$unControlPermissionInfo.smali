@@ -29,39 +29,31 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 947
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 943
     iput-object v0, p0, Landroid/widget/AppSecurityPermissions$unControlPermissionInfo;->uncontrolPermissionName:Ljava/lang/String;
 
-    .line 944
     iput-object v0, p0, Landroid/widget/AppSecurityPermissions$unControlPermissionInfo;->uncontrolPermissionLabel:Ljava/lang/String;
 
-    .line 945
     iput-object v0, p0, Landroid/widget/AppSecurityPermissions$unControlPermissionInfo;->uncontroldescriptionRes:Ljava/lang/String;
 
-    .line 948
     new-instance v0, Ljava/lang/String;
 
     invoke-direct {v0}, Ljava/lang/String;-><init>()V
 
     iput-object v0, p0, Landroid/widget/AppSecurityPermissions$unControlPermissionInfo;->uncontrolPermissionName:Ljava/lang/String;
 
-    .line 949
     new-instance v0, Ljava/lang/String;
 
     invoke-direct {v0}, Ljava/lang/String;-><init>()V
 
     iput-object v0, p0, Landroid/widget/AppSecurityPermissions$unControlPermissionInfo;->uncontrolPermissionLabel:Ljava/lang/String;
 
-    .line 950
     new-instance v0, Ljava/lang/String;
 
     invoke-direct {v0}, Ljava/lang/String;-><init>()V
 
     iput-object v0, p0, Landroid/widget/AppSecurityPermissions$unControlPermissionInfo;->uncontroldescriptionRes:Ljava/lang/String;
 
-    .line 951
     return-void
 .end method

@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 69
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 69
     check-cast p1, [B
 
     check-cast p2, [B
@@ -60,7 +58,6 @@
     .param p2, "rhs"    # [B
 
     .prologue
-    .line 72
     array-length v0, p1
 
     array-length v1, p2

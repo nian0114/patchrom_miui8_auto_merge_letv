@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 162
     iput-object p1, p0, Lcom/letv/leui/widget/LeLoadingView$2;->this$0:Lcom/letv/leui/widget/LeLoadingView;
 
     iput-object p2, p0, Lcom/letv/leui/widget/LeLoadingView$2;->val$disappearedCallBack:Ljava/lang/Runnable;
@@ -42,10 +41,8 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 175
     invoke-super {p0, p1}, Lcom/letv/leui/widget/LeLoadingView$EmptyAnimatorListener;->onAnimationEnd(Landroid/animation/Animator;)V
 
-    .line 176
     iget-object v0, p0, Lcom/letv/leui/widget/LeLoadingView$2;->this$0:Lcom/letv/leui/widget/LeLoadingView;
 
     const/4 v1, 0x0
@@ -53,7 +50,6 @@
     # setter for: Lcom/letv/leui/widget/LeLoadingView;->isAppearAnimRunning:Z
     invoke-static {v0, v1}, Lcom/letv/leui/widget/LeLoadingView;->access$102(Lcom/letv/leui/widget/LeLoadingView;Z)Z
 
-    .line 177
     iget-object v0, p0, Lcom/letv/leui/widget/LeLoadingView$2;->this$0:Lcom/letv/leui/widget/LeLoadingView;
 
     # getter for: Lcom/letv/leui/widget/LeLoadingView;->isCancelAnim:Z
@@ -63,14 +59,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 178
     iget-object v0, p0, Lcom/letv/leui/widget/LeLoadingView$2;->this$0:Lcom/letv/leui/widget/LeLoadingView;
 
     iget-object v1, p0, Lcom/letv/leui/widget/LeLoadingView$2;->val$disappearedCallBack:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/widget/LeLoadingView;->disappearAnim(Ljava/lang/Runnable;)V
 
-    .line 180
     :cond_0
     return-void
 .end method
@@ -80,10 +74,8 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 165
     invoke-super {p0, p1}, Lcom/letv/leui/widget/LeLoadingView$EmptyAnimatorListener;->onAnimationStart(Landroid/animation/Animator;)V
 
-    .line 166
     iget-object v0, p0, Lcom/letv/leui/widget/LeLoadingView$2;->this$0:Lcom/letv/leui/widget/LeLoadingView;
 
     # getter for: Lcom/letv/leui/widget/LeLoadingView;->mRotateAnim:Landroid/animation/ObjectAnimator;
@@ -93,7 +85,6 @@
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 167
     iget-object v0, p0, Lcom/letv/leui/widget/LeLoadingView$2;->this$0:Lcom/letv/leui/widget/LeLoadingView;
 
     const/4 v1, 0x1
@@ -101,7 +92,6 @@
     # setter for: Lcom/letv/leui/widget/LeLoadingView;->isAppearAnimRunning:Z
     invoke-static {v0, v1}, Lcom/letv/leui/widget/LeLoadingView;->access$102(Lcom/letv/leui/widget/LeLoadingView;Z)Z
 
-    .line 168
     iget-object v0, p0, Lcom/letv/leui/widget/LeLoadingView$2;->this$0:Lcom/letv/leui/widget/LeLoadingView;
 
     # getter for: Lcom/letv/leui/widget/LeLoadingView;->animListener:Lcom/letv/leui/widget/LeLoadingView$LeLoadingAnimListener;
@@ -111,7 +101,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 169
     iget-object v0, p0, Lcom/letv/leui/widget/LeLoadingView$2;->this$0:Lcom/letv/leui/widget/LeLoadingView;
 
     # getter for: Lcom/letv/leui/widget/LeLoadingView;->animListener:Lcom/letv/leui/widget/LeLoadingView$LeLoadingAnimListener;
@@ -121,7 +110,6 @@
 
     invoke-interface {v0}, Lcom/letv/leui/widget/LeLoadingView$LeLoadingAnimListener;->onLoadStart()V
 
-    .line 171
     :cond_0
     return-void
 .end method

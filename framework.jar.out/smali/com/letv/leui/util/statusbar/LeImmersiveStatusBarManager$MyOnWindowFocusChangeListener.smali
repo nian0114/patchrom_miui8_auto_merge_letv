@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 179
     iput-object p1, p0, Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager$MyOnWindowFocusChangeListener;->this$0:Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager$1;
 
     .prologue
-    .line 179
     invoke-direct {p0, p1}, Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager$MyOnWindowFocusChangeListener;-><init>(Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager;)V
 
     return-void
@@ -53,10 +51,8 @@
     .param p1, "b"    # Z
 
     .prologue
-    .line 184
     const-wide/16 v0, 0x0
 
-    .line 189
     .local v0, "focusChangeTime":J
     iget-object v2, p0, Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager$MyOnWindowFocusChangeListener;->this$0:Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager;
 
@@ -67,7 +63,6 @@
 
     if-nez v2, :cond_0
 
-    .line 190
     iget-object v2, p0, Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager$MyOnWindowFocusChangeListener;->this$0:Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager;
 
     iget-object v3, p0, Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager$MyOnWindowFocusChangeListener;->this$0:Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager;
@@ -80,7 +75,6 @@
     # setter for: Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager;->isSetStatusBar:Z
     invoke-static {v2, v3}, Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager;->access$302(Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager;Z)Z
 
-    .line 192
     :cond_0
     iget-object v2, p0, Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager$MyOnWindowFocusChangeListener;->this$0:Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager;
 
@@ -91,7 +85,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 193
     iget-object v2, p0, Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager$MyOnWindowFocusChangeListener;->this$0:Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager;
 
     # getter for: Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager;->mObserver:Landroid/view/ViewTreeObserver;
@@ -105,7 +98,6 @@
 
     if-nez v2, :cond_1
 
-    .line 194
     iget-object v2, p0, Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager$MyOnWindowFocusChangeListener;->this$0:Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager;
 
     iget-object v3, p0, Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager$MyOnWindowFocusChangeListener;->this$0:Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager;
@@ -122,7 +114,6 @@
     # setter for: Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager;->mObserver:Landroid/view/ViewTreeObserver;
     invoke-static {v2, v3}, Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager;->access$502(Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager;Landroid/view/ViewTreeObserver;)Landroid/view/ViewTreeObserver;
 
-    .line 196
     :cond_1
     iget-object v2, p0, Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager$MyOnWindowFocusChangeListener;->this$0:Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager;
 
@@ -140,7 +131,6 @@
 
     invoke-virtual {v2, v3}, Landroid/view/ViewTreeObserver;->removeOnWindowFocusChangeListener(Landroid/view/ViewTreeObserver$OnWindowFocusChangeListener;)V
 
-    .line 197
     iget-object v2, p0, Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager$MyOnWindowFocusChangeListener;->this$0:Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager;
 
     # getter for: Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager;->isSetStatusBar:Z
@@ -150,7 +140,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 198
     iget-object v2, p0, Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager$MyOnWindowFocusChangeListener;->this$0:Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager;
 
     # getter for: Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager;->mPickerColorUtils:Lcom/letv/leui/util/statusbar/PickerColorUtils;
@@ -169,7 +158,6 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/letv/leui/util/statusbar/PickerColorUtils;->SetStatusBarColor(Landroid/view/View;I)V
 
-    .line 206
     :cond_2
     return-void
 .end method

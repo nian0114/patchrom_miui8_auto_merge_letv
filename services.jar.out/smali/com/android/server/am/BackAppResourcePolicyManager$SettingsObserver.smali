@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 499
     iput-object p1, p0, Lcom/android/server/am/BackAppResourcePolicyManager$SettingsObserver;->this$0:Lcom/android/server/am/BackAppResourcePolicyManager;
 
-    .line 500
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 501
     return-void
 .end method
 
@@ -42,27 +39,22 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 505
     iget-object v0, p0, Lcom/android/server/am/BackAppResourcePolicyManager$SettingsObserver;->this$0:Lcom/android/server/am/BackAppResourcePolicyManager;
 
     iget-object v1, v0, Lcom/android/server/am/BackAppResourcePolicyManager;->mService:Lcom/android/server/am/ActivityManagerService;
 
     monitor-enter v1
 
-    .line 506
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/BackAppResourcePolicyManager$SettingsObserver;->this$0:Lcom/android/server/am/BackAppResourcePolicyManager;
 
     # invokes: Lcom/android/server/am/BackAppResourcePolicyManager;->handleSettingsChangedLocked()V
     invoke-static {v0}, Lcom/android/server/am/BackAppResourcePolicyManager;->access$000(Lcom/android/server/am/BackAppResourcePolicyManager;)V
 
-    .line 507
     monitor-exit v1
 
-    .line 508
     return-void
 
-    .line 507
     :catchall_0
     move-exception v0
 

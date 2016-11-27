@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 203
     iput-object p1, p0, Lcom/android/server/am/LetvAppErrorDialog$5;->this$0:Lcom/android/server/am/LetvAppErrorDialog;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 205
     iget-object v2, p0, Lcom/android/server/am/LetvAppErrorDialog$5;->this$0:Lcom/android/server/am/LetvAppErrorDialog;
 
     # getter for: Lcom/android/server/am/LetvAppErrorDialog;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -48,7 +46,6 @@
 
     monitor-enter v3
 
-    .line 206
     :try_start_0
     iget-object v2, p0, Lcom/android/server/am/LetvAppErrorDialog$5;->this$0:Lcom/android/server/am/LetvAppErrorDialog;
 
@@ -72,7 +69,6 @@
 
     if-ne v2, v4, :cond_0
 
-    .line 207
     iget-object v2, p0, Lcom/android/server/am/LetvAppErrorDialog$5;->this$0:Lcom/android/server/am/LetvAppErrorDialog;
 
     # getter for: Lcom/android/server/am/LetvAppErrorDialog;->mProc:Lcom/android/server/am/ProcessRecord;
@@ -84,13 +80,11 @@
 
     iput-object v4, v2, Lcom/android/server/am/ProcessRecord;->crashDialog:Landroid/app/Dialog;
 
-    .line 209
     :cond_0
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 210
     iget-object v2, p0, Lcom/android/server/am/LetvAppErrorDialog$5;->this$0:Lcom/android/server/am/LetvAppErrorDialog;
 
     # getter for: Lcom/android/server/am/LetvAppErrorDialog;->mResult:Lcom/android/server/am/AppErrorResult;
@@ -102,7 +96,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/am/AppErrorResult;->set(I)V
 
-    .line 213
     iget-object v2, p0, Lcom/android/server/am/LetvAppErrorDialog$5;->this$0:Lcom/android/server/am/LetvAppErrorDialog;
 
     # getter for: Lcom/android/server/am/LetvAppErrorDialog;->isSystemApp:Z
@@ -116,7 +109,6 @@
 
     if-nez v2, :cond_1
 
-    .line 216
     :try_start_1
     new-instance v1, Landroid/content/Intent;
 
@@ -124,13 +116,11 @@
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 217
     .local v1, "intent":Landroid/content/Intent;
     const/high16 v2, 0x10000000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 218
     const-string v2, "name"
 
     iget-object v3, p0, Lcom/android/server/am/LetvAppErrorDialog$5;->this$0:Lcom/android/server/am/LetvAppErrorDialog;
@@ -142,14 +132,12 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 219
     const-string v2, "type"
 
     const-string v3, "0"
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 220
     iget-object v2, p0, Lcom/android/server/am/LetvAppErrorDialog$5;->this$0:Lcom/android/server/am/LetvAppErrorDialog;
 
     # getter for: Lcom/android/server/am/LetvAppErrorDialog;->mContext:Landroid/content/Context;
@@ -161,7 +149,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 228
     .end local v1    # "intent":Landroid/content/Intent;
     :cond_1
     :goto_0
@@ -169,20 +156,16 @@
 
     invoke-virtual {p0, v2}, Lcom/android/server/am/LetvAppErrorDialog$5;->removeMessages(I)V
 
-    .line 229
     const/4 v2, 0x2
 
     invoke-virtual {p0, v2}, Lcom/android/server/am/LetvAppErrorDialog$5;->removeMessages(I)V
 
-    .line 233
     iget-object v2, p0, Lcom/android/server/am/LetvAppErrorDialog$5;->this$0:Lcom/android/server/am/LetvAppErrorDialog;
 
     invoke-virtual {v2}, Lcom/android/server/am/LetvAppErrorDialog;->disappear()V
 
-    .line 234
     return-void
 
-    .line 209
     :catchall_0
     move-exception v2
 
@@ -193,11 +176,9 @@
 
     throw v2
 
-    .line 221
     :catch_0
     move-exception v0
 
-    .line 222
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "LetvAppErrorDialog"
 

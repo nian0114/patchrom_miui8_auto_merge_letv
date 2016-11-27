@@ -43,7 +43,6 @@
 
     const/4 v3, 0x0
 
-    .line 10
     new-instance v0, Lcom/letv/tracker/enums/NetworkType;
 
     const-string v1, "PPPoE"
@@ -54,7 +53,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/NetworkType;->PPPoE:Lcom/letv/tracker/enums/NetworkType;
 
-    .line 14
     new-instance v0, Lcom/letv/tracker/enums/NetworkType;
 
     const-string v1, "DHCP"
@@ -65,7 +63,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/NetworkType;->DHCP:Lcom/letv/tracker/enums/NetworkType;
 
-    .line 18
     new-instance v0, Lcom/letv/tracker/enums/NetworkType;
 
     const-string v1, "StaticIP"
@@ -76,7 +73,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/NetworkType;->StaticIP:Lcom/letv/tracker/enums/NetworkType;
 
-    .line 22
     new-instance v0, Lcom/letv/tracker/enums/NetworkType;
 
     const-string v1, "Other"
@@ -87,7 +83,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/NetworkType;->Other:Lcom/letv/tracker/enums/NetworkType;
 
-    .line 6
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/letv/tracker/enums/NetworkType;
@@ -125,13 +120,10 @@
     .end annotation
 
     .prologue
-    .line 34
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 35
     iput-object p3, p0, Lcom/letv/tracker/enums/NetworkType;->type:Ljava/lang/String;
 
-    .line 36
     return-void
 .end method
 
@@ -140,7 +132,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 6
     const-class v0, Lcom/letv/tracker/enums/NetworkType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -156,7 +147,6 @@
     .locals 1
 
     .prologue
-    .line 6
     sget-object v0, Lcom/letv/tracker/enums/NetworkType;->$VALUES:[Lcom/letv/tracker/enums/NetworkType;
 
     invoke-virtual {v0}, [Lcom/letv/tracker/enums/NetworkType;->clone()Ljava/lang/Object;
@@ -174,7 +164,6 @@
     .locals 1
 
     .prologue
-    .line 44
     iget-object v0, p0, Lcom/letv/tracker/enums/NetworkType;->type:Ljava/lang/String;
 
     return-object v0

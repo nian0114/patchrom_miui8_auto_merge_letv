@@ -14,12 +14,10 @@
     .locals 1
 
     .prologue
-    .line 8
     const/16 v0, 0x7b2
 
     sput v0, Lcom/letv/leui/pim/lunar/SolarTerm;->START_YEAR:I
 
-    .line 10
     const/16 v0, 0x3cc
 
     new-array v0, v0, [I
@@ -1011,7 +1009,6 @@
     .locals 0
 
     .prologue
-    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -1030,12 +1027,10 @@
 
     const/4 v8, 0x1
 
-    .line 94
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 95
     .local v1, "res":Landroid/content/res/Resources;
     const v7, 0x1070072
 
@@ -1043,15 +1038,12 @@
 
     move-result-object v4
 
-    .line 96
     .local v4, "sSolarArrayStr":[Ljava/lang/String;
     const-string v5, ""
 
-    .line 98
     .local v5, "solarTermStr":Ljava/lang/String;
     const/4 v2, 0x0
 
-    .line 99
     .local v2, "result":I
     sget v7, Lcom/letv/leui/pim/lunar/SolarTerm;->START_YEAR:I
 
@@ -1061,7 +1053,6 @@
 
     add-int v0, v7, p1
 
-    .line 100
     .local v0, "index":I
     sget-object v7, Lcom/letv/leui/pim/lunar/SolarTerm;->arrays:[I
 
@@ -1071,11 +1062,9 @@
 
     move-result-object v3
 
-    .line 101
     .local v3, "s":Ljava/lang/String;
     if-ge p2, v9, :cond_1
 
-    .line 102
     const/4 v7, 0x0
 
     invoke-virtual {v3, v7, v8}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -1088,28 +1077,22 @@
 
     rsub-int/lit8 v6, v7, 0xf
 
-    .line 106
     .local v6, "temp":I
     :goto_0
     if-ne v6, p2, :cond_0
 
-    .line 107
     if-le p2, v9, :cond_2
 
-    .line 108
     mul-int/lit8 v7, p1, 0x2
 
     add-int/lit8 v2, v7, 0x2
 
-    .line 113
     :cond_0
     :goto_1
     aget-object v5, v4, v2
 
-    .line 114
     return-object v5
 
-    .line 104
     .end local v6    # "temp":I
     :cond_1
     const/4 v7, 0x2
@@ -1127,7 +1110,6 @@
     .restart local v6    # "temp":I
     goto :goto_0
 
-    .line 110
     :cond_2
     mul-int/lit8 v7, p1, 0x2
 

@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 300
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +35,6 @@
     .param p2, "item"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 313
     const/4 v0, 0x0
 
     return v0
@@ -48,7 +46,6 @@
     .param p2, "menu"    # Landroid/view/Menu;
 
     .prologue
-    .line 303
     const/4 v0, 0x0
 
     return v0
@@ -59,7 +56,6 @@
     .param p1, "mode"    # Landroid/view/ActionMode;
 
     .prologue
-    .line 318
     return-void
 .end method
 
@@ -69,7 +65,6 @@
     .param p2, "menu"    # Landroid/view/Menu;
 
     .prologue
-    .line 308
     const/4 v0, 0x0
 
     return v0

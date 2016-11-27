@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 1428
     invoke-static {}, Landroid/app/AlertDialog$ButtonPattern;->values()[Landroid/app/AlertDialog$ButtonPattern;
 
     move-result-object v0

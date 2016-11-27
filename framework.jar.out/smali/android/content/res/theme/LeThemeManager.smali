@@ -85,7 +85,6 @@
     .locals 1
 
     .prologue
-    .line 35
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -102,26 +101,20 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     new-instance v0, Landroid/content/res/Configuration;
 
     invoke-direct {v0}, Landroid/content/res/Configuration;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/theme/LeThemeManager;->mCurConfig:Landroid/content/res/Configuration;
 
-    .line 39
     iput-boolean v1, p0, Landroid/content/res/theme/LeThemeManager;->flag:Z
 
-    .line 47
     iput-boolean v1, p0, Landroid/content/res/theme/LeThemeManager;->reNameLetvThemeFileFail:Z
 
-    .line 64
     iput-object p1, p0, Landroid/content/res/theme/LeThemeManager;->mContext:Landroid/content/Context;
 
-    .line 65
     return-void
 .end method
 
@@ -130,19 +123,16 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 56
     sget-object v0, Landroid/content/res/theme/LeThemeManager;->mThemeManager:Landroid/content/res/theme/LeThemeManager;
 
     if-nez v0, :cond_0
 
-    .line 57
     new-instance v0, Landroid/content/res/theme/LeThemeManager;
 
     invoke-direct {v0, p0}, Landroid/content/res/theme/LeThemeManager;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Landroid/content/res/theme/LeThemeManager;->mThemeManager:Landroid/content/res/theme/LeThemeManager;
 
-    .line 60
     :cond_0
     sget-object v0, Landroid/content/res/theme/LeThemeManager;->mThemeManager:Landroid/content/res/theme/LeThemeManager;
 
@@ -162,12 +152,10 @@
     .end annotation
 
     .prologue
-    .line 103
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 104
     .local v5, "localThemeZipList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     new-instance v1, Ljava/io/File;
 
@@ -175,7 +163,6 @@
 
     invoke-direct {v1, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 105
     .local v1, "file":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -183,10 +170,8 @@
 
     if-nez v7, :cond_0
 
-    .line 106
     invoke-virtual {v1}, Ljava/io/File;->mkdirs()Z
 
-    .line 108
     :cond_0
     new-instance v2, Landroid/content/res/theme/LeThemeManager$FileFilterTest;
 
@@ -194,7 +179,6 @@
 
     invoke-direct {v2, v7}, Landroid/content/res/theme/LeThemeManager$FileFilterTest;-><init>(Ljava/lang/String;)V
 
-    .line 109
     .local v2, "fileFilter":Landroid/content/res/theme/LeThemeManager$FileFilterTest;
     invoke-virtual {v1, v2}, Ljava/io/File;->listFiles(Ljava/io/FileFilter;)[Ljava/io/File;
 
@@ -212,7 +196,6 @@
 
     aget-object v6, v0, v3
 
-    .line 110
     .local v6, "zipfile":Ljava/io/File;
     invoke-virtual {v6}, Ljava/io/File;->getPath()Ljava/lang/String;
 
@@ -220,12 +203,10 @@
 
     invoke-virtual {v5, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 109
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 112
     .end local v6    # "zipfile":Ljava/io/File;
     :cond_1
     return-object v5
@@ -235,14 +216,12 @@
     .locals 7
 
     .prologue
-    .line 92
     new-instance v1, Ljava/io/File;
 
     const-string v6, "/system/etc/"
 
     invoke-direct {v1, v6}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 93
     .local v1, "file":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -250,10 +229,8 @@
 
     if-nez v6, :cond_0
 
-    .line 94
     invoke-virtual {v1}, Ljava/io/File;->mkdirs()Z
 
-    .line 96
     :cond_0
     new-instance v2, Landroid/content/res/theme/LeThemeManager$FileFilterTest;
 
@@ -261,7 +238,6 @@
 
     invoke-direct {v2, v6}, Landroid/content/res/theme/LeThemeManager$FileFilterTest;-><init>(Ljava/lang/String;)V
 
-    .line 97
     .local v2, "fileFilter":Landroid/content/res/theme/LeThemeManager$FileFilterTest;
     invoke-virtual {v1, v2}, Ljava/io/File;->listFiles(Ljava/io/FileFilter;)[Ljava/io/File;
 
@@ -279,18 +255,15 @@
 
     aget-object v5, v0, v3
 
-    .line 98
     .local v5, "zipfile":Ljava/io/File;
     sget-object v6, Landroid/content/res/theme/LeThemeManager;->mThemeZips:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 97
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 100
     .end local v5    # "zipfile":Ljava/io/File;
     :cond_1
     return-void
@@ -302,12 +275,10 @@
     .param p2, "whichWallpaper"    # Ljava/lang/String;
 
     .prologue
-    .line 269
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 270
     .local v2, "file":Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -329,15 +300,12 @@
 
     if-nez v8, :cond_1
 
-    .line 271
     :cond_0
     const/4 v4, 0x0
 
-    .line 286
     :goto_0
     return-object v4
 
-    .line 273
     :cond_1
     invoke-virtual {v2}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
@@ -355,7 +323,6 @@
 
     aget-object v7, v0, v3
 
-    .line 274
     .local v7, "tempFile":Ljava/io/File;
     invoke-virtual {v7}, Ljava/io/File;->getName()Ljava/lang/String;
 
@@ -367,23 +334,19 @@
 
     if-eqz v8, :cond_2
 
-    .line 275
     invoke-virtual {v7}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 273
     :cond_2
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 279
     .end local v7    # "tempFile":Ljava/io/File;
     :cond_3
     const/4 v4, 0x0
 
-    .line 281
     .local v4, "is":Ljava/io/FileInputStream;
     :try_start_0
     new-instance v5, Ljava/io/FileInputStream;
@@ -396,16 +359,13 @@
     .local v5, "is":Ljava/io/FileInputStream;
     move-object v4, v5
 
-    .line 285
     .end local v5    # "is":Ljava/io/FileInputStream;
     .restart local v4    # "is":Ljava/io/FileInputStream;
     goto :goto_0
 
-    .line 282
     :catch_0
     move-exception v1
 
-    .line 284
     .local v1, "e":Ljava/io/FileNotFoundException;
     invoke-virtual {v1}, Ljava/io/FileNotFoundException;->printStackTrace()V
 
@@ -419,7 +379,6 @@
     .prologue
     const/4 v7, -0x1
 
-    .line 176
     invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
@@ -428,7 +387,6 @@
 
     invoke-static {v5, v6, v7, v7}, Landroid/os/FileUtils;->setPermissions(Ljava/lang/String;III)I
 
-    .line 177
     new-instance v5, Landroid/content/res/theme/LeThemeManager$1;
 
     invoke-direct {v5, p0}, Landroid/content/res/theme/LeThemeManager$1;-><init>(Landroid/content/res/theme/LeThemeManager;)V
@@ -437,7 +395,6 @@
 
     move-result-object v2
 
-    .line 183
     .local v2, "files":[Ljava/io/File;
     move-object v0, v2
 
@@ -453,7 +410,6 @@
 
     aget-object v1, v0, v3
 
-    .line 184
     .local v1, "f":Ljava/io/File;
     const-string v5, "ThemeSetPermissions"
 
@@ -481,15 +437,12 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 185
     invoke-direct {p0, v1}, Landroid/content/res/theme/LeThemeManager;->setDirPermissions(Ljava/io/File;)V
 
-    .line 183
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 188
     .end local v1    # "f":Ljava/io/File;
     :cond_0
     return-void
@@ -508,7 +461,6 @@
     .end annotation
 
     .prologue
-    .line 132
     new-instance v6, Ljava/util/zip/ZipInputStream;
 
     new-instance v14, Ljava/io/FileInputStream;
@@ -519,11 +471,9 @@
 
     invoke-direct {v6, v14}, Ljava/util/zip/ZipInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 134
     .local v6, "inZip":Ljava/util/zip/ZipInputStream;
     const-string v11, ""
 
-    .line 135
     .local v11, "szName":Ljava/lang/String;
     new-instance v9, Ljava/io/File;
 
@@ -531,7 +481,6 @@
 
     invoke-direct {v9, v14}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 136
     .local v9, "letvThemeFile1":Ljava/io/File;
     new-instance v8, Ljava/io/File;
 
@@ -539,7 +488,6 @@
 
     invoke-direct {v8, v14}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 137
     .local v8, "letvThemeFile":Ljava/io/File;
     invoke-virtual {v9}, Ljava/io/File;->exists()Z
 
@@ -557,14 +505,12 @@
 
     if-lez v14, :cond_0
 
-    .line 138
     const/4 v14, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v14, v0, Landroid/content/res/theme/LeThemeManager;->reNameLetvThemeFileFail:Z
 
-    .line 140
     :cond_0
     :goto_0
     invoke-virtual {v6}, Ljava/util/zip/ZipInputStream;->getNextEntry()Ljava/util/zip/ZipEntry;
@@ -574,7 +520,6 @@
     .local v13, "zipEntry":Ljava/util/zip/ZipEntry;
     if-eqz v13, :cond_5
 
-    .line 141
     invoke-virtual {v13}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
 
     move-result-object v14
@@ -587,17 +532,15 @@
 
     move-result-object v11
 
-    .line 142
     move-object/from16 v0, p0
 
     iget-boolean v14, v0, Landroid/content/res/theme/LeThemeManager;->reNameLetvThemeFileFail:Z
 
     if-nez v14, :cond_1
 
-    .line 143
     if-eqz v11, :cond_1
 
-    const-string/jumbo v14, "letvTheme"
+    const-string v14, "letvTheme"
 
     invoke-virtual {v11, v14}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -605,20 +548,17 @@
 
     if-eqz v14, :cond_1
 
-    .line 144
-    const-string/jumbo v14, "letvTheme"
+    const-string v14, "letvTheme"
 
-    const-string/jumbo v15, "letvTheme1"
+    const-string v15, "letvTheme1"
 
     invoke-virtual {v11, v14, v15}, Ljava/lang/String;->replaceFirst(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v12
 
-    .line 145
     .local v12, "szNameNew":Ljava/lang/String;
     move-object v11, v12
 
-    .line 148
     .end local v12    # "szNameNew":Ljava/lang/String;
     :cond_1
     invoke-virtual {v13}, Ljava/util/zip/ZipEntry;->isDirectory()Z
@@ -627,7 +567,6 @@
 
     if-eqz v14, :cond_2
 
-    .line 149
     const/4 v14, 0x0
 
     invoke-virtual {v11}, Ljava/lang/String;->length()I
@@ -640,7 +579,6 @@
 
     move-result-object v11
 
-    .line 150
     new-instance v5, Ljava/io/File;
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -669,13 +607,11 @@
 
     invoke-direct {v5, v14}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 151
     .local v5, "folder":Ljava/io/File;
     invoke-virtual {v5}, Ljava/io/File;->mkdirs()Z
 
     goto :goto_0
 
-    .line 153
     .end local v5    # "folder":Ljava/io/File;
     :cond_2
     new-instance v4, Ljava/io/File;
@@ -706,7 +642,6 @@
 
     invoke-direct {v4, v14}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 154
     .local v4, "file":Ljava/io/File;
     new-instance v3, Ljava/io/File;
 
@@ -716,7 +651,6 @@
 
     invoke-direct {v3, v14}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 155
     .local v3, "dir":Ljava/io/File;
     invoke-virtual {v4}, Ljava/io/File;->getParent()Ljava/lang/String;
 
@@ -730,22 +664,18 @@
 
     if-nez v14, :cond_3
 
-    .line 156
     invoke-virtual {v3}, Ljava/io/File;->mkdirs()Z
 
-    .line 158
     :cond_3
     new-instance v10, Ljava/io/FileOutputStream;
 
     invoke-direct {v10, v4}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    .line 160
     .local v10, "out":Ljava/io/FileOutputStream;
     const/16 v14, 0x400
 
     new-array v2, v14, [B
 
-    .line 161
     .local v2, "buffer":[B
     :goto_1
     invoke-virtual {v6, v2}, Ljava/util/zip/ZipInputStream;->read([B)I
@@ -757,21 +687,17 @@
 
     if-eq v7, v14, :cond_4
 
-    .line 162
     const/4 v14, 0x0
 
     invoke-virtual {v10, v2, v14, v7}, Ljava/io/FileOutputStream;->write([BII)V
 
-    .line 163
     invoke-virtual {v10}, Ljava/io/FileOutputStream;->flush()V
 
     goto :goto_1
 
-    .line 165
     :cond_4
     invoke-virtual {v10}, Ljava/io/FileOutputStream;->close()V
 
-    .line 167
     invoke-virtual {v4}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object v14
@@ -786,7 +712,6 @@
 
     goto/16 :goto_0
 
-    .line 170
     .end local v2    # "buffer":[B
     .end local v3    # "dir":Ljava/io/File;
     .end local v4    # "file":Ljava/io/File;
@@ -795,7 +720,6 @@
     :cond_5
     invoke-virtual {v6}, Ljava/util/zip/ZipInputStream;->close()V
 
-    .line 172
     new-instance v14, Ljava/io/File;
 
     const-string v15, "/data/letvTheme1"
@@ -806,7 +730,6 @@
 
     invoke-direct {v0, v14}, Landroid/content/res/theme/LeThemeManager;->setDirPermissions(Ljava/io/File;)V
 
-    .line 173
     return-void
 .end method
 
@@ -819,7 +742,6 @@
 
     const/4 v3, 0x0
 
-    .line 225
     sget-object v5, Ljava/io/File;->separator:Ljava/lang/String;
 
     invoke-virtual {p1, v5}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
@@ -828,7 +750,6 @@
 
     if-nez v5, :cond_0
 
-    .line 226
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -847,13 +768,11 @@
 
     move-result-object p1
 
-    .line 228
     :cond_0
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 229
     .local v0, "dirFile":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -867,21 +786,17 @@
 
     if-nez v5, :cond_2
 
-    .line 250
     :cond_1
     :goto_0
     return v3
 
-    .line 232
     :cond_2
     iput-boolean v4, p0, Landroid/content/res/theme/LeThemeManager;->flag:Z
 
-    .line 233
     invoke-virtual {v0}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v1
 
-    .line 234
     .local v1, "files":[Ljava/io/File;
     const/4 v2, 0x0
 
@@ -891,7 +806,6 @@
 
     if-ge v2, v5, :cond_3
 
-    .line 235
     aget-object v5, v1, v2
 
     invoke-virtual {v5}, Ljava/io/File;->isFile()Z
@@ -900,7 +814,6 @@
 
     if-eqz v5, :cond_4
 
-    .line 236
     aget-object v5, v1, v2
 
     invoke-virtual {v5}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
@@ -913,18 +826,15 @@
 
     iput-boolean v5, p0, Landroid/content/res/theme/LeThemeManager;->flag:Z
 
-    .line 237
     iget-boolean v5, p0, Landroid/content/res/theme/LeThemeManager;->flag:Z
 
     if-nez v5, :cond_5
 
-    .line 245
     :cond_3
     iget-boolean v5, p0, Landroid/content/res/theme/LeThemeManager;->flag:Z
 
     if-eqz v5, :cond_1
 
-    .line 247
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
     move-result v5
@@ -933,10 +843,8 @@
 
     move v3, v4
 
-    .line 248
     goto :goto_0
 
-    .line 240
     :cond_4
     aget-object v5, v1, v2
 
@@ -950,12 +858,10 @@
 
     iput-boolean v5, p0, Landroid/content/res/theme/LeThemeManager;->flag:Z
 
-    .line 241
     iget-boolean v5, p0, Landroid/content/res/theme/LeThemeManager;->flag:Z
 
     if-eqz v5, :cond_3
 
-    .line 234
     :cond_5
     add-int/lit8 v2, v2, 0x1
 
@@ -967,17 +873,14 @@
     .param p1, "sPath"    # Ljava/lang/String;
 
     .prologue
-    .line 215
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Landroid/content/res/theme/LeThemeManager;->flag:Z
 
-    .line 216
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 217
     .local v0, "deleteFile":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->isFile()Z
 
@@ -991,15 +894,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 218
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 219
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Landroid/content/res/theme/LeThemeManager;->flag:Z
 
-    .line 221
     :cond_0
     iget-boolean v1, p0, Landroid/content/res/theme/LeThemeManager;->flag:Z
 
@@ -1011,12 +911,10 @@
     .param p1, "targetFilePath"    # Ljava/lang/String;
 
     .prologue
-    .line 373
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 374
     .local v0, "deleteFile":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -1024,14 +922,11 @@
 
     if-nez v1, :cond_0
 
-    .line 375
     iget-boolean v1, p0, Landroid/content/res/theme/LeThemeManager;->flag:Z
 
-    .line 380
     :goto_0
     return v1
 
-    .line 377
     :cond_0
     invoke-virtual {v0}, Ljava/io/File;->isFile()Z
 
@@ -1039,14 +934,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 378
     invoke-virtual {p0, p1}, Landroid/content/res/theme/LeThemeManager;->deleteFile(Ljava/lang/String;)Z
 
     move-result v1
 
     goto :goto_0
 
-    .line 380
     :cond_1
     invoke-virtual {p0, p1}, Landroid/content/res/theme/LeThemeManager;->deleteDirectory(Ljava/lang/String;)Z
 
@@ -1064,14 +957,12 @@
 
     const/4 v3, 0x0
 
-    .line 191
     new-instance v2, Ljava/io/File;
 
     const-string v4, "/data/letvTheme1"
 
     invoke-direct {v2, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 192
     .local v2, "letvThemeFile1":Ljava/io/File;
     new-instance v1, Ljava/io/File;
 
@@ -1079,7 +970,6 @@
 
     invoke-direct {v1, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 193
     .local v1, "letvThemeFile":Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -1104,12 +994,10 @@
 
     if-nez v4, :cond_2
 
-    .line 209
     :cond_1
     :goto_0
     return v3
 
-    .line 196
     :cond_2
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -1139,15 +1027,12 @@
 
     if-lez v4, :cond_4
 
-    .line 197
     iget-boolean v4, p0, Landroid/content/res/theme/LeThemeManager;->reNameLetvThemeFileFail:Z
 
     if-eqz v4, :cond_4
 
-    .line 198
     const-string p1, "/data/letvTheme1"
 
-    .line 199
     iget-boolean v4, p0, Landroid/content/res/theme/LeThemeManager;->reNameLetvThemeFileFail:Z
 
     if-nez v4, :cond_3
@@ -1157,13 +1042,11 @@
     :cond_3
     iput-boolean v3, p0, Landroid/content/res/theme/LeThemeManager;->reNameLetvThemeFileFail:Z
 
-    .line 202
     :cond_4
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 203
     .local v0, "deleteFile":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -1171,12 +1054,10 @@
 
     if-nez v3, :cond_5
 
-    .line 204
     iget-boolean v3, p0, Landroid/content/res/theme/LeThemeManager;->flag:Z
 
     goto :goto_0
 
-    .line 206
     :cond_5
     invoke-virtual {v0}, Ljava/io/File;->isFile()Z
 
@@ -1184,14 +1065,12 @@
 
     if-eqz v3, :cond_6
 
-    .line 207
     invoke-virtual {p0, p1}, Landroid/content/res/theme/LeThemeManager;->deleteFile(Ljava/lang/String;)Z
 
     move-result v3
 
     goto :goto_0
 
-    .line 209
     :cond_6
     invoke-virtual {p0, p1}, Landroid/content/res/theme/LeThemeManager;->deleteDirectory(Ljava/lang/String;)Z
 
@@ -1204,14 +1083,12 @@
     .locals 6
 
     .prologue
-    .line 290
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/data/letvTheme1"
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 291
     .local v0, "letvTheme1File":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -1229,7 +1106,6 @@
 
     if-lez v1, :cond_0
 
-    .line 292
     new-instance v1, Ljava/io/File;
 
     const-string v2, "/data/letvTheme"
@@ -1238,7 +1114,6 @@
 
     invoke-virtual {v0, v1}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
-    .line 294
     :cond_0
     return-void
 .end method
@@ -1248,28 +1123,23 @@
     .param p1, "extraText"    # Ljava/lang/String;
 
     .prologue
-    .line 401
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 402
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "extra_Text"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 403
     const-string v1, "change.font.action"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 404
     iget-object v1, p0, Landroid/content/res/theme/LeThemeManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 405
     return-void
 .end method
 
@@ -1278,64 +1148,52 @@
     .param p1, "flag"    # I
 
     .prologue
-    .line 358
     const-string v0, ""
 
-    .line 359
     .local v0, "extraText":Ljava/lang/String;
     const/4 v2, 0x2
 
     if-ne p1, v2, :cond_1
 
-    .line 360
-    const-string/jumbo v0, "setWallpaperFail"
+    const-string v0, "setWallpaperFail"
 
-    .line 366
     :cond_0
     :goto_0
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 367
     .local v1, "intent":Landroid/content/Intent;
     const-string v2, "extra_Text"
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 368
     const-string v2, "change.theme.action"
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 369
     iget-object v2, p0, Landroid/content/res/theme/LeThemeManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 370
     return-void
 
-    .line 361
     .end local v1    # "intent":Landroid/content/Intent;
     :cond_1
     const/4 v2, 0x3
 
     if-ne p1, v2, :cond_2
 
-    .line 362
     const-string v0, "changeThemeComplete"
 
     goto :goto_0
 
-    .line 363
     :cond_2
     const/4 v2, 0x1
 
     if-ne p1, v2, :cond_0
 
-    .line 364
-    const-string/jumbo v0, "unThemeZipFail"
+    const-string v0, "unThemeZipFail"
 
     goto :goto_0
 .end method
@@ -1348,10 +1206,8 @@
     .prologue
     const/4 v6, -0x1
 
-    .line 412
     const/4 v4, 0x0
 
-    .line 414
     .local v4, "result":I
     :try_start_0
     new-instance v1, Ljava/io/File;
@@ -1360,31 +1216,25 @@
 
     invoke-direct {v1, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 415
     .local v1, "dir":Ljava/io/File;
     if-ne p2, v6, :cond_1
 
-    .line 416
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 417
     invoke-static {v1}, Landroid/os/FileUtils;->deleteContents(Ljava/io/File;)Z
 
-    .line 432
     :cond_0
     :goto_0
     const/4 v4, 0x1
 
-    .line 434
-    const-string/jumbo v5, "setFontSuccess"
+    const-string v5, "setFontSuccess"
 
     invoke-virtual {p0, v5}, Landroid/content/res/theme/LeThemeManager;->sendChangeFontBroadCast(Ljava/lang/String;)V
 
-    .line 435
     const-string v5, "changeFont"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1407,12 +1257,10 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 442
     .end local v1    # "dir":Ljava/io/File;
     :goto_1
     return v4
 
-    .line 420
     .restart local v1    # "dir":Ljava/io/File;
     :cond_1
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
@@ -1421,10 +1269,8 @@
 
     if-nez v5, :cond_2
 
-    .line 421
     invoke-virtual {v1}, Ljava/io/File;->mkdir()Z
 
-    .line 422
     invoke-virtual {v1}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object v5
@@ -1437,7 +1283,6 @@
 
     invoke-static {v5, v6, v7, v8}, Landroid/os/FileUtils;->setPermissions(Ljava/lang/String;III)I
 
-    .line 424
     :cond_2
     new-instance v0, Ljava/io/File;
 
@@ -1445,7 +1290,6 @@
 
     invoke-direct {v0, v1, v5}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 425
     .local v0, "dest":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -1453,20 +1297,16 @@
 
     if-nez v5, :cond_3
 
-    .line 426
     invoke-virtual {v0}, Ljava/io/File;->createNewFile()Z
 
-    .line 428
     :cond_3
     new-instance v3, Ljava/io/File;
 
     invoke-direct {v3, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 429
     .local v3, "file":Ljava/io/File;
     invoke-static {v3, v0}, Landroid/os/FileUtils;->copyFile(Ljava/io/File;Ljava/io/File;)Z
 
-    .line 430
     invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object v5
@@ -1483,18 +1323,15 @@
 
     goto :goto_0
 
-    .line 437
     .end local v0    # "dest":Ljava/io/File;
     .end local v1    # "dir":Ljava/io/File;
     .end local v3    # "file":Ljava/io/File;
     :catch_0
     move-exception v2
 
-    .line 438
     .local v2, "e":Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 439
     const-string v5, "changeFont"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1517,8 +1354,7 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 440
-    const-string/jumbo v5, "setFontFail"
+    const-string v5, "setFontFail"
 
     invoke-virtual {p0, v5}, Landroid/content/res/theme/LeThemeManager;->sendChangeFontBroadCast(Ljava/lang/String;)V
 
@@ -1531,23 +1367,20 @@
     .param p2, "isLockWallpaper"    # Z
 
     .prologue
-    .line 298
     :try_start_0
     iget-object v8, p0, Landroid/content/res/theme/LeThemeManager;->mContext:Landroid/content/Context;
 
     const-string v9, "android.permission.SET_WALLPAPER"
 
-    const-string/jumbo v10, "themeManagerSetWallpaper"
+    const-string v10, "themeManagerSetWallpaper"
 
     invoke-virtual {v8, v9, v10}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 303
     :goto_0
     const-string v3, ""
 
-    .line 304
     .local v3, "tempWallpaperFilePath":Ljava/lang/String;
     iget-object v8, p0, Landroid/content/res/theme/LeThemeManager;->mContext:Landroid/content/Context;
 
@@ -1565,7 +1398,6 @@
 
     if-eqz v8, :cond_3
 
-    .line 305
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -1590,13 +1422,11 @@
 
     move-result-object v6
 
-    .line 306
     .local v6, "wallpaperFilePath_2k":Ljava/lang/String;
     new-instance v4, Ljava/io/File;
 
     invoke-direct {v4, v6}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 307
     .local v4, "wallpaperFile":Ljava/io/File;
     invoke-virtual {v4}, Ljava/io/File;->exists()Z
 
@@ -1604,10 +1434,8 @@
 
     if-eqz v8, :cond_0
 
-    .line 308
     move-object v3, v6
 
-    .line 316
     .end local v4    # "wallpaperFile":Ljava/io/File;
     .end local v6    # "wallpaperFilePath_2k":Ljava/lang/String;
     :cond_0
@@ -1618,7 +1446,6 @@
 
     if-eqz v8, :cond_1
 
-    .line 317
     new-instance v8, Ljava/io/File;
 
     invoke-direct {v8, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -1629,10 +1456,8 @@
 
     if-eqz v8, :cond_1
 
-    .line 318
     move-object v3, p1
 
-    .line 321
     :cond_1
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1640,23 +1465,19 @@
 
     if-eqz v8, :cond_4
 
-    .line 355
     :cond_2
     :goto_2
     return-void
 
-    .line 300
     .end local v3    # "tempWallpaperFilePath":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 301
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 311
     .end local v0    # "e":Ljava/lang/Exception;
     .restart local v3    # "tempWallpaperFilePath":Ljava/lang/String;
     :cond_3
@@ -1684,7 +1505,6 @@
 
     move-result-object v5
 
-    .line 312
     .local v5, "wallpaperFilePath_1080p":Ljava/lang/String;
     new-instance v8, Ljava/io/File;
 
@@ -1696,12 +1516,10 @@
 
     if-eqz v8, :cond_0
 
-    .line 313
     move-object v3, v5
 
     goto :goto_1
 
-    .line 324
     .end local v5    # "wallpaperFilePath_1080p":Ljava/lang/String;
     :cond_4
     new-instance v8, Ljava/io/File;
@@ -1714,47 +1532,38 @@
 
     if-eqz v8, :cond_2
 
-    .line 327
     const/4 v2, 0x0
 
-    .line 328
     .local v2, "is":Ljava/io/InputStream;
     if-eqz p2, :cond_5
 
-    .line 329
     const-string v8, "default_lock_wallpaper"
 
     invoke-direct {p0, v3, v8}, Landroid/content/res/theme/LeThemeManager;->getWallpaperIs(Ljava/lang/String;Ljava/lang/String;)Ljava/io/FileInputStream;
 
     move-result-object v2
 
-    .line 333
     :goto_3
     if-eqz v2, :cond_2
 
-    .line 334
     iget-object v8, p0, Landroid/content/res/theme/LeThemeManager;->mContext:Landroid/content/Context;
 
     invoke-static {v8}, Landroid/app/WallpaperManager;->getInstance(Landroid/content/Context;)Landroid/app/WallpaperManager;
 
     move-result-object v7
 
-    .line 336
     .local v7, "wallpaperManager":Landroid/app/WallpaperManager;
     if-eqz p2, :cond_6
 
-    .line 337
     :try_start_1
     invoke-virtual {v7, v2}, Landroid/app/WallpaperManager;->setStreamToLockWallpaper(Ljava/io/InputStream;)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 346
     :goto_4
     if-eqz v2, :cond_2
 
-    .line 347
     :try_start_2
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_2
@@ -1762,17 +1571,14 @@
 
     goto :goto_2
 
-    .line 349
     :catch_1
     move-exception v1
 
-    .line 351
     .local v1, "e2":Ljava/io/IOException;
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 331
     .end local v1    # "e2":Ljava/io/IOException;
     .end local v7    # "wallpaperManager":Landroid/app/WallpaperManager;
     :cond_5
@@ -1784,7 +1590,6 @@
 
     goto :goto_3
 
-    .line 339
     .restart local v7    # "wallpaperManager":Landroid/app/WallpaperManager;
     :cond_6
     :try_start_3
@@ -1795,26 +1600,21 @@
 
     goto :goto_4
 
-    .line 341
     :catch_2
     move-exception v0
 
-    .line 342
     .local v0, "e":Ljava/io/IOException;
     :try_start_4
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 343
     const/4 v8, 0x2
 
     invoke-virtual {p0, v8}, Landroid/content/res/theme/LeThemeManager;->sendChangeThemeBroadCast(I)V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 346
     if-eqz v2, :cond_2
 
-    .line 347
     :try_start_5
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_5
@@ -1822,41 +1622,33 @@
 
     goto :goto_2
 
-    .line 349
     :catch_3
     move-exception v1
 
-    .line 351
     .restart local v1    # "e2":Ljava/io/IOException;
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 345
     .end local v0    # "e":Ljava/io/IOException;
     .end local v1    # "e2":Ljava/io/IOException;
     :catchall_0
     move-exception v8
 
-    .line 346
     if-eqz v2, :cond_7
 
-    .line 347
     :try_start_6
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_4
 
-    .line 352
     :cond_7
     :goto_5
     throw v8
 
-    .line 349
     :catch_4
     move-exception v1
 
-    .line 351
     .restart local v1    # "e2":Ljava/io/IOException;
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 

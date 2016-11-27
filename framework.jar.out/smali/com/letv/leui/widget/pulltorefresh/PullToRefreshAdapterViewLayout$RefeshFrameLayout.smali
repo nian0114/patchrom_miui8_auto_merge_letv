@@ -28,13 +28,10 @@
     .param p3, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 316
     iput-object p1, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout$RefeshFrameLayout;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout;
 
-    .line 317
     invoke-direct {p0, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 318
     return-void
 .end method
 
@@ -45,12 +42,10 @@
     .param p1, "emptyView"    # Landroid/view/View;
 
     .prologue
-    .line 322
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout$RefeshFrameLayout;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout;->setEmptyView(Landroid/view/View;)V
 
-    .line 323
     return-void
 .end method
 
@@ -59,9 +54,7 @@
     .param p1, "emptyView"    # Landroid/view/View;
 
     .prologue
-    .line 327
     invoke-virtual {p0, p1}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewLayout$RefeshFrameLayout;->setEmptyView(Landroid/view/View;)V
 
-    .line 328
     return-void
 .end method

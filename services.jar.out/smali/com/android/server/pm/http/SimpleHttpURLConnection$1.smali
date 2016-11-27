@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 320
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +35,6 @@
     .param p2, "session"    # Ljavax/net/ssl/SSLSession;
 
     .prologue
-    .line 322
     const/4 v0, 0x1
 
     return v0

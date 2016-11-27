@@ -29,14 +29,12 @@
 
     const/16 v5, 0xc
 
-    .line 15
     new-instance v3, Landroid/util/SparseArray;
 
     invoke-direct {v3}, Landroid/util/SparseArray;-><init>()V
 
     sput-object v3, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHousePath;->sPointList:Landroid/util/SparseArray;
 
-    .line 16
     const/16 v3, 0x1a
 
     new-array v0, v3, [[F
@@ -247,7 +245,6 @@
 
     aput-object v4, v0, v3
 
-    .line 222
     .local v0, "LETTERS":[[F
     const/16 v3, 0xa
 
@@ -329,7 +326,6 @@
 
     aput-object v4, v1, v3
 
-    .line 301
     .local v1, "NUMBERS":[[F
     const/4 v2, 0x0
 
@@ -339,7 +335,6 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 302
     sget-object v3, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHousePath;->sPointList:Landroid/util/SparseArray;
 
     add-int/lit8 v4, v2, 0x41
@@ -348,12 +343,10 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 301
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 305
     :cond_0
     const/4 v2, 0x0
 
@@ -362,7 +355,6 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 306
     sget-object v3, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHousePath;->sPointList:Landroid/util/SparseArray;
 
     add-int/lit8 v4, v2, 0x41
@@ -373,12 +365,10 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 305
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 309
     :cond_1
     const/4 v2, 0x0
 
@@ -387,7 +377,6 @@
 
     if-ge v2, v3, :cond_2
 
-    .line 310
     sget-object v3, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHousePath;->sPointList:Landroid/util/SparseArray;
 
     add-int/lit8 v4, v2, 0x30
@@ -396,12 +385,10 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 309
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 313
     :cond_2
     const/16 v3, 0x20
 
@@ -411,7 +398,6 @@
 
     invoke-static {v3, v4}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHousePath;->addChar(C[F)V
 
-    .line 315
     const/16 v3, 0x2d
 
     new-array v4, v9, [F
@@ -420,7 +406,6 @@
 
     invoke-static {v3, v4}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHousePath;->addChar(C[F)V
 
-    .line 319
     const/16 v3, 0x2e
 
     new-array v4, v9, [F
@@ -429,10 +414,8 @@
 
     invoke-static {v3, v4}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHousePath;->addChar(C[F)V
 
-    .line 322
     return-void
 
-    .line 16
     nop
 
     :array_0
@@ -943,7 +926,6 @@
         0x42900000    # 72.0f
     .end array-data
 
-    .line 222
     :array_1a
     .array-data 4
         0x0
@@ -1136,7 +1118,6 @@
         0x42900000    # 72.0f
     .end array-data
 
-    .line 315
     :array_24
     .array-data 4
         0x0
@@ -1145,7 +1126,6 @@
         0x42100000    # 36.0f
     .end array-data
 
-    .line 319
     :array_25
     .array-data 4
         0x41c00000    # 24.0f
@@ -1159,7 +1139,6 @@
     .locals 0
 
     .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -1171,12 +1150,10 @@
     .param p1, "points"    # [F
 
     .prologue
-    .line 325
     sget-object v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHousePath;->sPointList:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p0, p1}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 326
     return-void
 .end method
 
@@ -1194,7 +1171,6 @@
     .end annotation
 
     .prologue
-    .line 329
     const/high16 v0, 0x3f800000    # 1.0f
 
     const/16 v1, 0xe
@@ -1224,16 +1200,13 @@
     .prologue
     const/4 v12, 0x4
 
-    .line 339
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 340
     .local v6, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<[F>;"
     const/4 v7, 0x0
 
-    .line 341
     .local v7, "offsetForWidth":F
     const/4 v0, 0x0
 
@@ -1245,12 +1218,10 @@
 
     if-ge v0, v11, :cond_4
 
-    .line 342
     invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v10
 
-    .line 343
     .local v10, "pos":I
     sget-object v11, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHousePath;->sPointList:Landroid/util/SparseArray;
 
@@ -1258,19 +1229,16 @@
 
     move-result v3
 
-    .line 344
     .local v3, "key":I
     const/4 v11, -0x1
 
     if-ne v3, v11, :cond_0
 
-    .line 341
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 347
     :cond_0
     sget-object v11, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHousePath;->sPointList:Landroid/util/SparseArray;
 
@@ -1280,13 +1248,11 @@
 
     check-cast v9, [F
 
-    .line 348
     .local v9, "points":[F
     array-length v11, v9
 
     div-int/lit8 v8, v11, 0x4
 
-    .line 350
     .local v8, "pointCount":I
     const/4 v1, 0x0
 
@@ -1294,10 +1260,8 @@
     :goto_2
     if-ge v1, v8, :cond_3
 
-    .line 351
     new-array v5, v12, [F
 
-    .line 352
     .local v5, "line":[F
     const/4 v2, 0x0
 
@@ -1305,33 +1269,28 @@
     :goto_3
     if-ge v2, v12, :cond_2
 
-    .line 353
     mul-int/lit8 v11, v1, 0x4
 
     add-int/2addr v11, v2
 
     aget v4, v9, v11
 
-    .line 355
     .local v4, "l":F
     rem-int/lit8 v11, v2, 0x2
 
     if-nez v11, :cond_1
 
-    .line 356
     add-float v11, v4, v7
 
     mul-float/2addr v11, p1
 
     aput v11, v5, v2
 
-    .line 352
     :goto_4
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_3
 
-    .line 360
     :cond_1
     mul-float v11, v4, p1
 
@@ -1339,17 +1298,14 @@
 
     goto :goto_4
 
-    .line 363
     .end local v4    # "l":F
     :cond_2
     invoke-virtual {v6, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 350
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 365
     .end local v2    # "k":I
     .end local v5    # "line":[F
     :cond_3
@@ -1361,7 +1317,6 @@
 
     goto :goto_1
 
-    .line 367
     .end local v1    # "j":I
     .end local v3    # "key":I
     .end local v8    # "pointCount":I

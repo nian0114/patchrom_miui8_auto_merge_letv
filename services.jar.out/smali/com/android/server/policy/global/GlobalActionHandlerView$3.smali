@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 445
     iput-object p1, p0, Lcom/android/server/policy/global/GlobalActionHandlerView$3;->this$0:Lcom/android/server/policy/global/GlobalActionHandlerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 499
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView$3;->this$0:Lcom/android/server/policy/global/GlobalActionHandlerView;
 
     invoke-virtual {v0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->getAlpha()F
@@ -54,7 +52,6 @@
     .locals 2
 
     .prologue
-    .line 509
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView$3;->this$0:Lcom/android/server/policy/global/GlobalActionHandlerView;
 
     # getter for: Lcom/android/server/policy/global/GlobalActionHandlerView;->mHostCallback:Lcom/android/server/policy/global/GlobalActionHandlerView$HostViewCallback;
@@ -81,7 +78,6 @@
     .locals 2
 
     .prologue
-    .line 504
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView$3;->this$0:Lcom/android/server/policy/global/GlobalActionHandlerView;
 
     # getter for: Lcom/android/server/policy/global/GlobalActionHandlerView;->mInitBottom:I
@@ -104,7 +100,6 @@
     .locals 1
 
     .prologue
-    .line 454
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView$3;->this$0:Lcom/android/server/policy/global/GlobalActionHandlerView;
 
     invoke-virtual {v0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -124,7 +119,6 @@
     .locals 1
 
     .prologue
-    .line 449
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView$3;->this$0:Lcom/android/server/policy/global/GlobalActionHandlerView;
 
     invoke-virtual {v0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -145,7 +139,6 @@
     .param p1, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
-    .line 495
     return-void
 .end method
 
@@ -154,12 +147,10 @@
     .param p1, "alpha"    # F
 
     .prologue
-    .line 490
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHandlerView$3;->this$0:Lcom/android/server/policy/global/GlobalActionHandlerView;
 
     invoke-virtual {v0, p1}, Lcom/android/server/policy/global/GlobalActionHandlerView;->setAlpha(F)V
 
-    .line 491
     return-void
 .end method
 
@@ -168,7 +159,6 @@
     .param p1, "translationX"    # F
 
     .prologue
-    .line 483
     iget-object v1, p0, Lcom/android/server/policy/global/GlobalActionHandlerView$3;->this$0:Lcom/android/server/policy/global/GlobalActionHandlerView;
 
     invoke-virtual {v1}, Lcom/android/server/policy/global/GlobalActionHandlerView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -177,18 +167,15 @@
 
     check-cast v0, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 484
     .local v0, "params":Landroid/widget/FrameLayout$LayoutParams;
     float-to-int v1, p1
 
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
-    .line 485
     iget-object v1, p0, Lcom/android/server/policy/global/GlobalActionHandlerView$3;->this$0:Lcom/android/server/policy/global/GlobalActionHandlerView;
 
     invoke-virtual {v1, v0}, Lcom/android/server/policy/global/GlobalActionHandlerView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 486
     return-void
 .end method
 
@@ -199,7 +186,6 @@
     .prologue
     const/high16 v5, 0x3f800000    # 1.0f
 
-    .line 459
     iget-object v3, p0, Lcom/android/server/policy/global/GlobalActionHandlerView$3;->this$0:Lcom/android/server/policy/global/GlobalActionHandlerView;
 
     invoke-virtual {v3}, Lcom/android/server/policy/global/GlobalActionHandlerView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -208,7 +194,6 @@
 
     check-cast v2, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 460
     .local v2, "params":Landroid/widget/FrameLayout$LayoutParams;
     iget-object v3, p0, Lcom/android/server/policy/global/GlobalActionHandlerView$3;->this$0:Lcom/android/server/policy/global/GlobalActionHandlerView;
 
@@ -233,7 +218,6 @@
 
     if-gtz v3, :cond_0
 
-    .line 461
     iget-object v3, p0, Lcom/android/server/policy/global/GlobalActionHandlerView$3;->this$0:Lcom/android/server/policy/global/GlobalActionHandlerView;
 
     # getter for: Lcom/android/server/policy/global/GlobalActionHandlerView;->mHostCallback:Lcom/android/server/policy/global/GlobalActionHandlerView$HostViewCallback;
@@ -243,7 +227,6 @@
 
     invoke-interface {v3, v5}, Lcom/android/server/policy/global/GlobalActionHandlerView$HostViewCallback;->setAlaphaWhenDrag(F)V
 
-    .line 469
     :goto_0
     iget-object v3, p0, Lcom/android/server/policy/global/GlobalActionHandlerView$3;->this$0:Lcom/android/server/policy/global/GlobalActionHandlerView;
 
@@ -258,7 +241,6 @@
 
     if-gtz v3, :cond_1
 
-    .line 470
     iget-object v3, p0, Lcom/android/server/policy/global/GlobalActionHandlerView$3;->this$0:Lcom/android/server/policy/global/GlobalActionHandlerView;
 
     # getter for: Lcom/android/server/policy/global/GlobalActionHandlerView;->mHostCallback:Lcom/android/server/policy/global/GlobalActionHandlerView$HostViewCallback;
@@ -268,21 +250,17 @@
 
     invoke-interface {v3, v5}, Lcom/android/server/policy/global/GlobalActionHandlerView$HostViewCallback;->setBlackGrident(F)V
 
-    .line 477
     :goto_1
     float-to-int v3, p1
 
     iput v3, v2, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 478
     iget-object v3, p0, Lcom/android/server/policy/global/GlobalActionHandlerView$3;->this$0:Lcom/android/server/policy/global/GlobalActionHandlerView;
 
     invoke-virtual {v3, v2}, Lcom/android/server/policy/global/GlobalActionHandlerView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 479
     return-void
 
-    .line 463
     :cond_0
     iget-object v3, p0, Lcom/android/server/policy/global/GlobalActionHandlerView$3;->this$0:Lcom/android/server/policy/global/GlobalActionHandlerView;
 
@@ -306,7 +284,6 @@
 
     int-to-float v1, v3
 
-    .line 464
     .local v1, "maxDistance":F
     iget-object v3, p0, Lcom/android/server/policy/global/GlobalActionHandlerView$3;->this$0:Lcom/android/server/policy/global/GlobalActionHandlerView;
 
@@ -329,7 +306,6 @@
 
     sub-float v0, v3, v4
 
-    .line 465
     .local v0, "currentDistance":F
     iget-object v3, p0, Lcom/android/server/policy/global/GlobalActionHandlerView$3;->this$0:Lcom/android/server/policy/global/GlobalActionHandlerView;
 
@@ -350,7 +326,6 @@
 
     goto :goto_0
 
-    .line 472
     .end local v0    # "currentDistance":F
     .end local v1    # "maxDistance":F
     :cond_1
@@ -376,7 +351,6 @@
 
     int-to-float v1, v3
 
-    .line 473
     .restart local v1    # "maxDistance":F
     iget-object v3, p0, Lcom/android/server/policy/global/GlobalActionHandlerView$3;->this$0:Lcom/android/server/policy/global/GlobalActionHandlerView;
 
@@ -399,7 +373,6 @@
 
     sub-float v0, v3, v4
 
-    .line 474
     .restart local v0    # "currentDistance":F
     iget-object v3, p0, Lcom/android/server/policy/global/GlobalActionHandlerView$3;->this$0:Lcom/android/server/policy/global/GlobalActionHandlerView;
 

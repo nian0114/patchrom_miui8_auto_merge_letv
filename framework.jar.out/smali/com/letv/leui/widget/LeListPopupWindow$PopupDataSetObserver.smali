@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 857
     iput-object p1, p0, Lcom/letv/leui/widget/LeListPopupWindow$PopupDataSetObserver;->this$0:Lcom/letv/leui/widget/LeListPopupWindow;
 
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/letv/leui/widget/LeListPopupWindow$1;
 
     .prologue
-    .line 857
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/LeListPopupWindow$PopupDataSetObserver;-><init>(Lcom/letv/leui/widget/LeListPopupWindow;)V
 
     return-void
@@ -49,7 +47,6 @@
     .locals 1
 
     .prologue
-    .line 860
     iget-object v0, p0, Lcom/letv/leui/widget/LeListPopupWindow$PopupDataSetObserver;->this$0:Lcom/letv/leui/widget/LeListPopupWindow;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/LeListPopupWindow;->isShowing()Z
@@ -58,12 +55,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 862
     iget-object v0, p0, Lcom/letv/leui/widget/LeListPopupWindow$PopupDataSetObserver;->this$0:Lcom/letv/leui/widget/LeListPopupWindow;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/LeListPopupWindow;->show()V
 
-    .line 864
     :cond_0
     return-void
 .end method
@@ -72,11 +67,9 @@
     .locals 1
 
     .prologue
-    .line 868
     iget-object v0, p0, Lcom/letv/leui/widget/LeListPopupWindow$PopupDataSetObserver;->this$0:Lcom/letv/leui/widget/LeListPopupWindow;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/LeListPopupWindow;->dismiss()V
 
-    .line 869
     return-void
 .end method

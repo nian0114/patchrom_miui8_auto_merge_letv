@@ -32,19 +32,15 @@
     .end annotation
 
     .prologue
-    .line 27
     .local p2, "permissionInfoList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PermissionInfo;>;"
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/LeBottomSheet;-><init>(Landroid/content/Context;)V
 
-    .line 28
     iput-object p1, p0, Lcom/letv/leui/widget/LeNeverPermissionRequestDialog;->context:Landroid/content/Context;
 
-    .line 29
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    .line 30
     .local v0, "layoutInflater":Landroid/view/LayoutInflater;
     const v3, 0x10900a8
 
@@ -54,13 +50,11 @@
 
     move-result-object v2
 
-    .line 31
     .local v2, "view":Landroid/view/View;
     new-instance v1, Lcom/letv/leui/widget/LeNeverPermissionRequestDialog$1;
 
     invoke-direct {v1, p0, p1}, Lcom/letv/leui/widget/LeNeverPermissionRequestDialog$1;-><init>(Lcom/letv/leui/widget/LeNeverPermissionRequestDialog;Landroid/content/Context;)V
 
-    .line 42
     .local v1, "setPermissionListener":Landroid/view/View$OnClickListener;
     const v3, 0x1020432
 
@@ -70,7 +64,6 @@
 
     invoke-virtual {v3, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 43
     const v3, 0x1020433
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -79,7 +72,6 @@
 
     invoke-virtual {v3, p3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 46
     const v3, 0x1020431
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -100,10 +92,8 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 47
     invoke-virtual {p0, v2}, Lcom/letv/leui/widget/LeNeverPermissionRequestDialog;->setStyle(Landroid/view/View;)V
 
-    .line 48
     return-void
 .end method
 
@@ -133,19 +123,15 @@
     .end annotation
 
     .prologue
-    .line 50
     .local p2, "permissionInfoList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PermissionInfo;>;"
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/LeBottomSheet;-><init>(Landroid/content/Context;)V
 
-    .line 51
     iput-object p1, p0, Lcom/letv/leui/widget/LeNeverPermissionRequestDialog;->context:Landroid/content/Context;
 
-    .line 52
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    .line 53
     .local v0, "layoutInflater":Landroid/view/LayoutInflater;
     const v2, 0x10900a8
 
@@ -155,7 +141,6 @@
 
     move-result-object v1
 
-    .line 55
     .local v1, "view":Landroid/view/View;
     const v2, 0x1020432
 
@@ -165,7 +150,6 @@
 
     invoke-virtual {v2, p3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 56
     const v2, 0x1020433
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -174,7 +158,6 @@
 
     invoke-virtual {v2, p4}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 59
     const v2, 0x1020431
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -195,10 +178,8 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 60
     invoke-virtual {p0, v1}, Lcom/letv/leui/widget/LeNeverPermissionRequestDialog;->setStyle(Landroid/view/View;)V
 
-    .line 61
     return-void
 .end method
 
@@ -227,20 +208,17 @@
 
     const/4 v10, 0x0
 
-    .line 66
     iget-object v7, p0, Lcom/letv/leui/widget/LeNeverPermissionRequestDialog;->context:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v5
 
-    .line 68
     .local v5, "tPackageManager":Landroid/content/pm/PackageManager;
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 69
     .local v6, "tStringBuilder":Ljava/lang/StringBuilder;
     iget-object v7, p0, Lcom/letv/leui/widget/LeNeverPermissionRequestDialog;->context:Landroid/content/Context;
 
@@ -270,12 +248,10 @@
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 76
     new-instance v3, Ljava/util/HashSet;
 
     invoke-direct {v3}, Ljava/util/HashSet;-><init>()V
 
-    .line 77
     .local v3, "permissionGroupSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -295,7 +271,6 @@
 
     check-cast v4, Landroid/content/pm/PermissionInfo;
 
-    .line 78
     .local v4, "permissionInfo":Landroid/content/pm/PermissionInfo;
     iget-object v7, v4, Landroid/content/pm/PermissionInfo;->group:Ljava/lang/String;
 
@@ -315,7 +290,6 @@
 
     goto :goto_0
 
-    .line 83
     .end local v4    # "permissionInfo":Landroid/content/pm/PermissionInfo;
     :cond_0
     invoke-interface {v3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -330,14 +304,12 @@
 
     if-eqz v7, :cond_1
 
-    .line 84
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
-    .line 85
     .local v2, "permissionGroupLabel":Ljava/lang/String;
     iget-object v7, p0, Lcom/letv/leui/widget/LeNeverPermissionRequestDialog;->context:Landroid/content/Context;
 
@@ -357,7 +329,6 @@
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 92
     iget-object v7, p0, Lcom/letv/leui/widget/LeNeverPermissionRequestDialog;->context:Landroid/content/Context;
 
     const v8, 0x1040747
@@ -370,7 +341,6 @@
 
     goto :goto_1
 
-    .line 95
     .end local v2    # "permissionGroupLabel":Ljava/lang/String;
     :cond_1
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->length()I
@@ -381,7 +351,6 @@
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->deleteCharAt(I)Ljava/lang/StringBuilder;
 
-    .line 96
     iget-object v7, p0, Lcom/letv/leui/widget/LeNeverPermissionRequestDialog;->context:Landroid/content/Context;
 
     const v8, 0x1040745
@@ -392,7 +361,6 @@
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 97
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v7

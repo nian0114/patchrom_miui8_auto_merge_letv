@@ -19,14 +19,11 @@
     .param p1, "valueSize"    # I
 
     .prologue
-    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 18
     new-array v0, p1, [F
 
     iput-object v0, p0, Lcom/letv/extsensor/ExtSensorEvent;->values:[F
 
-    .line 19
     return-void
 .end method

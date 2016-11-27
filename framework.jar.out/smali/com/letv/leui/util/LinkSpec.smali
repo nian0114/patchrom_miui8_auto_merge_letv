@@ -22,10 +22,8 @@
     .locals 1
 
     .prologue
-    .line 837
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 841
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/letv/leui/util/LinkSpec;->color:I

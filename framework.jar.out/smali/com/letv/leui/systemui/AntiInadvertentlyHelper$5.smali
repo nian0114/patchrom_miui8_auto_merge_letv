@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 265
     iput-object p1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper$5;->this$0:Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,12 +42,10 @@
 
     const/4 v2, 0x0
 
-    .line 268
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 269
     .local v0, "action":Ljava/lang/String;
     # getter for: Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->access$400()Ljava/lang/String;
@@ -75,7 +72,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 270
     const-string v3, "android.intent.action.LOCALE_CHANGED"
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -84,7 +80,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 271
     iget-object v1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper$5;->this$0:Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     # getter for: Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mHandler:Landroid/os/Handler;
@@ -101,12 +96,10 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 282
     :cond_0
     :goto_0
     return-void
 
-    .line 272
     :cond_1
     const-string v3, "android.intent.action.lvr_hmd_in"
 
@@ -116,13 +109,11 @@
 
     if-eqz v3, :cond_3
 
-    .line 274
     iget-object v3, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper$5;->this$0:Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     # setter for: Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->isVrDeviceIn:Z
     invoke-static {v3, v1}, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->access$202(Lcom/letv/leui/systemui/AntiInadvertentlyHelper;Z)Z
 
-    .line 275
     iget-object v3, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper$5;->this$0:Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     # getter for: Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->isSettingEnable:Z
@@ -149,7 +140,6 @@
     # setter for: Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->ENABLE_ANTI_INADVERTENTLY:Ljava/lang/Boolean;
     invoke-static {v1}, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->access$102(Ljava/lang/Boolean;)Ljava/lang/Boolean;
 
-    .line 276
     iget-object v1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper$5;->this$0:Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     # invokes: Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->forceRelease()V
@@ -160,10 +150,8 @@
     :cond_2
     move v1, v2
 
-    .line 275
     goto :goto_1
 
-    .line 277
     :cond_3
     const-string v3, "android.intent.action.lvr_hmd_out"
 
@@ -173,13 +161,11 @@
 
     if-eqz v3, :cond_0
 
-    .line 279
     iget-object v3, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper$5;->this$0:Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     # setter for: Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->isVrDeviceIn:Z
     invoke-static {v3, v2}, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->access$202(Lcom/letv/leui/systemui/AntiInadvertentlyHelper;Z)Z
 
-    .line 280
     iget-object v3, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper$5;->this$0:Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     # getter for: Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->isSettingEnable:Z

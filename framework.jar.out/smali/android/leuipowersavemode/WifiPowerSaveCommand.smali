@@ -14,7 +14,6 @@
     .locals 0
 
     .prologue
-    .line 14
     invoke-direct {p0}, Landroid/leuipowersavemode/command/ALetvDeepPowerSaveCommand;-><init>()V
 
     return-void
@@ -25,26 +24,22 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 59
     invoke-direct {p0, p1}, Landroid/leuipowersavemode/WifiPowerSaveCommand;->getWifiManager(Landroid/content/Context;)Landroid/net/wifi/WifiManager;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/leuipowersavemode/WifiPowerSaveCommand;->mWifiManager:Landroid/net/wifi/WifiManager;
 
-    .line 60
     iget-object v1, p0, Landroid/leuipowersavemode/WifiPowerSaveCommand;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     if-eqz v1, :cond_1
 
-    .line 61
     iget-object v1, p0, Landroid/leuipowersavemode/WifiPowerSaveCommand;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v1}, Landroid/net/wifi/WifiManager;->getWifiState()I
 
     move-result v0
 
-    .line 62
     .local v0, "wifiState":I
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -72,8 +67,7 @@
 
     iput-object v1, p0, Landroid/leuipowersavemode/WifiPowerSaveCommand;->mCommandString:Ljava/lang/String;
 
-    .line 63
-    const-string/jumbo v1, "leuiDeepPowerSave"
+    const-string v1, "leuiDeepPowerSave"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -95,26 +89,22 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 64
     const/4 v1, 0x3
 
     if-ne v0, v1, :cond_0
 
     const/4 v1, 0x1
 
-    .line 68
     .end local v0    # "wifiState":I
     :goto_0
     return v1
 
-    .line 64
     .restart local v0    # "wifiState":I
     :cond_0
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 66
     .end local v0    # "wifiState":I
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
@@ -147,7 +137,6 @@
 
     iput-object v1, p0, Landroid/leuipowersavemode/WifiPowerSaveCommand;->mCommandString:Ljava/lang/String;
 
-    .line 68
     iget-boolean v1, p0, Landroid/leuipowersavemode/WifiPowerSaveCommand;->mWifiBeforeState:Z
 
     goto :goto_0
@@ -158,13 +147,11 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 72
     iget-object v0, p0, Landroid/leuipowersavemode/WifiPowerSaveCommand;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     if-nez v0, :cond_0
 
-    .line 73
-    const-string/jumbo v0, "wifi"
+    const-string v0, "wifi"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -174,7 +161,6 @@
 
     iput-object v0, p0, Landroid/leuipowersavemode/WifiPowerSaveCommand;->mWifiManager:Landroid/net/wifi/WifiManager;
 
-    .line 75
     :cond_0
     iget-object v0, p0, Landroid/leuipowersavemode/WifiPowerSaveCommand;->mWifiManager:Landroid/net/wifi/WifiManager;
 
@@ -187,17 +173,15 @@
     .param p2, "isChecked"    # Z
 
     .prologue
-    .line 79
     invoke-direct {p0, p1}, Landroid/leuipowersavemode/WifiPowerSaveCommand;->getWifiManager(Landroid/content/Context;)Landroid/net/wifi/WifiManager;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/leuipowersavemode/WifiPowerSaveCommand;->mWifiManager:Landroid/net/wifi/WifiManager;
 
-    .line 80
     if-eqz p2, :cond_0
 
-    const-string/jumbo v1, "wifi"
+    const-string v1, "wifi"
 
     invoke-static {p1, v1}, Landroid/leuipowersavemode/CommandUtils;->isRadioAllowed(Landroid/content/Context;Ljava/lang/String;)Z
 
@@ -205,14 +189,11 @@
 
     if-nez v1, :cond_0
 
-    .line 81
     const-string v1, "RadioNotAllow wifi "
 
-    .line 94
     :goto_0
     return-object v1
 
-    .line 85
     :cond_0
     iget-object v1, p0, Landroid/leuipowersavemode/WifiPowerSaveCommand;->mWifiManager:Landroid/net/wifi/WifiManager;
 
@@ -220,7 +201,6 @@
 
     move-result v0
 
-    .line 86
     .local v0, "wifiApState":I
     if-eqz p2, :cond_2
 
@@ -232,7 +212,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 88
     :cond_1
     iget-object v1, p0, Landroid/leuipowersavemode/WifiPowerSaveCommand;->mWifiManager:Landroid/net/wifi/WifiManager;
 
@@ -242,7 +221,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/net/wifi/WifiManager;->setWifiApEnabled(Landroid/net/wifi/WifiConfiguration;Z)Z
 
-    .line 91
     :cond_2
     iget-object v1, p0, Landroid/leuipowersavemode/WifiPowerSaveCommand;->mWifiManager:Landroid/net/wifi/WifiManager;
 
@@ -252,14 +230,12 @@
 
     if-nez v1, :cond_3
 
-    .line 92
-    const-string/jumbo v1, "setWifiEnabled error!!! "
+    const-string v1, "setWifiEnabled error!!! "
 
     goto :goto_0
 
-    .line 94
     :cond_3
-    const-string/jumbo v1, "setWifiEnabled success!!! "
+    const-string v1, "setWifiEnabled success!!! "
 
     goto :goto_0
 .end method
@@ -271,35 +247,29 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 40
     invoke-super {p0, p1}, Landroid/leuipowersavemode/command/ALetvDeepPowerSaveCommand;->disabled(Landroid/content/Context;)V
 
-    .line 41
     invoke-direct {p0, p1}, Landroid/leuipowersavemode/WifiPowerSaveCommand;->getWifiManager(Landroid/content/Context;)Landroid/net/wifi/WifiManager;
 
     move-result-object v2
 
     iput-object v2, p0, Landroid/leuipowersavemode/WifiPowerSaveCommand;->mWifiManager:Landroid/net/wifi/WifiManager;
 
-    .line 42
     iget-object v2, p0, Landroid/leuipowersavemode/WifiPowerSaveCommand;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     if-eqz v2, :cond_1
 
-    .line 44
     iget-object v2, p0, Landroid/leuipowersavemode/WifiPowerSaveCommand;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v2}, Landroid/net/wifi/WifiManager;->getWifiApState()I
 
     move-result v1
 
-    .line 45
     .local v1, "wifiApState":I
     invoke-direct {p0, p1}, Landroid/leuipowersavemode/WifiPowerSaveCommand;->getCurrentWifiState(Landroid/content/Context;)Z
 
     move-result v0
 
-    .line 46
     .local v0, "currentWifiState":Z
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -343,12 +313,10 @@
 
     iput-object v2, p0, Landroid/leuipowersavemode/WifiPowerSaveCommand;->mCommandString:Ljava/lang/String;
 
-    .line 49
     iget-boolean v2, p0, Landroid/leuipowersavemode/WifiPowerSaveCommand;->mWifiBeforeState:Z
 
     if-eq v2, v0, :cond_3
 
-    .line 50
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -383,7 +351,6 @@
 
     iput-object v2, p0, Landroid/leuipowersavemode/WifiPowerSaveCommand;->mCommandString:Ljava/lang/String;
 
-    .line 54
     :goto_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -415,13 +382,11 @@
 
     iput-object v2, p0, Landroid/leuipowersavemode/WifiPowerSaveCommand;->mCommandString:Ljava/lang/String;
 
-    .line 56
     .end local v0    # "currentWifiState":Z
     .end local v1    # "wifiApState":I
     :cond_1
     return-void
 
-    .line 50
     .restart local v0    # "currentWifiState":Z
     .restart local v1    # "wifiApState":I
     :cond_2
@@ -429,7 +394,6 @@
 
     goto :goto_0
 
-    .line 52
     :cond_3
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -441,7 +405,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "no action ,but success!!!"
+    const-string v3, "no action ,but success!!!"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -463,48 +427,40 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 20
     invoke-super {p0, p1}, Landroid/leuipowersavemode/command/ALetvDeepPowerSaveCommand;->enabled(Landroid/content/Context;)V
 
-    .line 21
     invoke-direct {p0, p1}, Landroid/leuipowersavemode/WifiPowerSaveCommand;->getWifiManager(Landroid/content/Context;)Landroid/net/wifi/WifiManager;
 
     move-result-object v2
 
     iput-object v2, p0, Landroid/leuipowersavemode/WifiPowerSaveCommand;->mWifiManager:Landroid/net/wifi/WifiManager;
 
-    .line 22
     iget-object v2, p0, Landroid/leuipowersavemode/WifiPowerSaveCommand;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     if-eqz v2, :cond_0
 
-    .line 23
     const-string v2, ""
 
     iput-object v2, p0, Landroid/leuipowersavemode/WifiPowerSaveCommand;->mCommandString:Ljava/lang/String;
 
-    .line 24
-    const-string/jumbo v2, "leuiDeepPowerSave"
+    const-string v2, "leuiDeepPowerSave"
 
     const-string v3, "WifiCommand enabled..."
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 25
     invoke-direct {p0, p1}, Landroid/leuipowersavemode/WifiPowerSaveCommand;->getCurrentWifiState(Landroid/content/Context;)Z
 
     move-result v2
 
     iput-boolean v2, p0, Landroid/leuipowersavemode/WifiPowerSaveCommand;->mWifiBeforeState:Z
 
-    .line 27
     iget-object v2, p0, Landroid/leuipowersavemode/WifiPowerSaveCommand;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v2, v4}, Landroid/net/wifi/WifiManager;->setWifiEnabled(Z)Z
 
     move-result v1
 
-    .line 29
     .local v1, "isSetWifiEnabled":Z
     iget-object v2, p0, Landroid/leuipowersavemode/WifiPowerSaveCommand;->mWifiManager:Landroid/net/wifi/WifiManager;
 
@@ -514,7 +470,6 @@
 
     move-result v0
 
-    .line 30
     .local v0, "isSetWifiApEnabled":Z
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -578,7 +533,6 @@
 
     iput-object v2, p0, Landroid/leuipowersavemode/WifiPowerSaveCommand;->mCommandString:Ljava/lang/String;
 
-    .line 36
     .end local v0    # "isSetWifiApEnabled":Z
     .end local v1    # "isSetWifiEnabled":Z
     :cond_0

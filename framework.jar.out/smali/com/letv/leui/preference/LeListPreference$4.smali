@@ -36,7 +36,6 @@
     .param p5, "x3"    # [Ljava/lang/CharSequence;
 
     .prologue
-    .line 695
     iput-object p1, p0, Lcom/letv/leui/preference/LeListPreference$4;->this$0:Lcom/letv/leui/preference/LeListPreference;
 
     invoke-direct {p0, p2, p3, p4, p5}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;II[Ljava/lang/Object;)V
@@ -55,12 +54,10 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 698
     invoke-super {p0, p1, p2, p3}, Landroid/widget/ArrayAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v2
 
-    .line 699
     .local v2, "view":Landroid/view/View;
     iget-object v3, p0, Lcom/letv/leui/preference/LeListPreference$4;->this$0:Lcom/letv/leui/preference/LeListPreference;
 
@@ -82,7 +79,6 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 700
     iget-object v3, p0, Lcom/letv/leui/preference/LeListPreference$4;->this$0:Lcom/letv/leui/preference/LeListPreference;
 
     # getter for: Lcom/letv/leui/preference/LeListPreference;->listViewSelector:I
@@ -92,7 +88,6 @@
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 702
     :cond_0
     const v3, 0x1020016
 
@@ -100,13 +95,11 @@
 
     move-result-object v1
 
-    .line 704
     .local v1, "title":Landroid/view/View;
     instance-of v3, v1, Landroid/widget/TextView;
 
     if-eqz v3, :cond_1
 
-    .line 706
     iget-object v3, p0, Lcom/letv/leui/preference/LeListPreference$4;->this$0:Lcom/letv/leui/preference/LeListPreference;
 
     # getter for: Lcom/letv/leui/preference/LeListPreference;->listTitleColorSelected:I
@@ -116,7 +109,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 707
     check-cast v1, Landroid/widget/TextView;
 
     .end local v1    # "title":Landroid/view/View;
@@ -129,7 +121,6 @@
 
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 710
     :cond_1
     const v3, 0x1020001
 
@@ -137,13 +128,11 @@
 
     move-result-object v0
 
-    .line 712
     .local v0, "checkbox":Landroid/view/View;
     instance-of v3, v0, Lcom/letv/leui/widget/LeCheckBox;
 
     if-eqz v3, :cond_2
 
-    .line 713
     iget-object v3, p0, Lcom/letv/leui/preference/LeListPreference$4;->this$0:Lcom/letv/leui/preference/LeListPreference;
 
     # invokes: Lcom/letv/leui/preference/LeListPreference;->getValueIndex()I
@@ -153,18 +142,15 @@
 
     if-ne p1, v3, :cond_3
 
-    .line 714
     check-cast v0, Lcom/letv/leui/widget/LeCheckBox;
 
     .end local v0    # "checkbox":Landroid/view/View;
     invoke-virtual {v0, v5, v5}, Lcom/letv/leui/widget/LeCheckBox;->setChecked(ZZ)V
 
-    .line 720
     :cond_2
     :goto_0
     return-object v2
 
-    .line 716
     .restart local v0    # "checkbox":Landroid/view/View;
     :cond_3
     check-cast v0, Lcom/letv/leui/widget/LeCheckBox;

@@ -117,7 +117,6 @@
 
     const/4 v4, 0x0
 
-    .line 4
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "Desktop"
@@ -128,7 +127,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->Desktop:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 5
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "Browser"
@@ -139,7 +137,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->Browser:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 6
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "FileManagement"
@@ -150,7 +147,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->FileManagement:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 7
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "Message"
@@ -161,7 +157,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->Message:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 8
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "Phone"
@@ -172,7 +167,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->Phone:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 9
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "Photo"
@@ -185,7 +179,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->Photo:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 10
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "LockBar"
@@ -198,7 +191,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->LockBar:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 11
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "NoticeBar"
@@ -211,7 +203,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->NoticeBar:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 12
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "ControlCenter"
@@ -224,7 +215,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->ControlCenter:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 13
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "SystemSetting"
@@ -237,7 +227,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->SystemSetting:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 14
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "AppManagement"
@@ -250,7 +239,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->AppManagement:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 15
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "DialPanel"
@@ -263,7 +251,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->DialPanel:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 16
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "Calendar"
@@ -276,7 +263,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->Calendar:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 17
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "Notepaper"
@@ -289,7 +275,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->Notepaper:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 18
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "Calculator"
@@ -302,7 +287,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->Calculator:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 19
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "Weather"
@@ -315,7 +299,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->Weather:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 20
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "Map"
@@ -328,7 +311,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->Map:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 21
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "Clock"
@@ -341,7 +323,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->Clock:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 22
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "Email"
@@ -354,7 +335,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->Email:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 23
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "Wallpaper"
@@ -367,7 +347,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->Wallpaper:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 24
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "Recorder"
@@ -380,7 +359,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->Recorder:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 25
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "Video"
@@ -393,7 +371,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->Video:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 26
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "Contacts"
@@ -406,7 +383,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->Contacts:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 27
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "Telectr"
@@ -419,7 +395,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->Telectr:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 28
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "Music"
@@ -432,7 +407,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->Music:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 29
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "SIMCardApp"
@@ -445,7 +419,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->SIMCardApp:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 30
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "Download"
@@ -458,7 +431,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->Download:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 31
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "Feedback"
@@ -471,7 +443,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->Feedback:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 32
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "SystemUpgrade"
@@ -484,7 +455,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->SystemUpgrade:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 33
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "RecordMemo"
@@ -497,7 +467,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->RecordMemo:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 34
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "Camera"
@@ -510,7 +479,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->Camera:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 35
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "Calling"
@@ -523,7 +491,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->Calling:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 36
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "VoiceAssist"
@@ -536,7 +503,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->VoiceAssist:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 37
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "Sports"
@@ -549,7 +515,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->Sports:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 38
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "LeStoreMobile"
@@ -562,7 +527,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->LeStoreMobile:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 39
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "Huangye"
@@ -575,7 +539,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->Huangye:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 40
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "PackageInstaller"
@@ -588,7 +551,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->PackageInstaller:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 41
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "LeCloud"
@@ -601,7 +563,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->LeCloud:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 42
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "LetvVoipPhone"
@@ -614,7 +575,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->LetvVoipPhone:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 43
     new-instance v0, Lcom/letv/tracker/enums/LeUIApp;
 
     const-string v1, "BatteryUsage"
@@ -627,7 +587,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/LeUIApp;->BatteryUsage:Lcom/letv/tracker/enums/LeUIApp;
 
-    .line 3
     const/16 v0, 0x28
 
     new-array v0, v0, [Lcom/letv/tracker/enums/LeUIApp;
@@ -879,13 +838,10 @@
     .end annotation
 
     .prologue
-    .line 47
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 48
     iput-object p3, p0, Lcom/letv/tracker/enums/LeUIApp;->id:Ljava/lang/String;
 
-    .line 49
     return-void
 .end method
 
@@ -894,7 +850,6 @@
     .param p0, "id"    # Ljava/lang/String;
 
     .prologue
-    .line 56
     invoke-static {}, Lcom/letv/tracker/enums/LeUIApp;->values()[Lcom/letv/tracker/enums/LeUIApp;
 
     move-result-object v0
@@ -911,7 +866,6 @@
 
     aget-object v2, v0, v1
 
-    .line 57
     .local v2, "la":Lcom/letv/tracker/enums/LeUIApp;
     invoke-virtual {v2}, Lcom/letv/tracker/enums/LeUIApp;->getId()Ljava/lang/String;
 
@@ -923,22 +877,18 @@
 
     if-eqz v4, :cond_0
 
-    .line 58
     const/4 v4, 0x1
 
-    .line 61
     .end local v2    # "la":Lcom/letv/tracker/enums/LeUIApp;
     :goto_1
     return v4
 
-    .line 56
     .restart local v2    # "la":Lcom/letv/tracker/enums/LeUIApp;
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 61
     .end local v2    # "la":Lcom/letv/tracker/enums/LeUIApp;
     :cond_1
     const/4 v4, 0x0
@@ -951,7 +901,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 3
     const-class v0, Lcom/letv/tracker/enums/LeUIApp;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -967,7 +916,6 @@
     .locals 1
 
     .prologue
-    .line 3
     sget-object v0, Lcom/letv/tracker/enums/LeUIApp;->$VALUES:[Lcom/letv/tracker/enums/LeUIApp;
 
     invoke-virtual {v0}, [Lcom/letv/tracker/enums/LeUIApp;->clone()Ljava/lang/Object;
@@ -985,7 +933,6 @@
     .locals 1
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcom/letv/tracker/enums/LeUIApp;->id:Ljava/lang/String;
 
     return-object v0

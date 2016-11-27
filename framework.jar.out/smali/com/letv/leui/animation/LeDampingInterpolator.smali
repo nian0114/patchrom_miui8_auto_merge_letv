@@ -25,31 +25,24 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
     iput v0, p0, Lcom/letv/leui/animation/LeDampingInterpolator;->mInputWhenMaxOutput:F
 
-    .line 16
     iput v0, p0, Lcom/letv/leui/animation/LeDampingInterpolator;->mMaxOutput:F
 
-    .line 20
     const/high16 v0, 0x3fc00000    # 1.5f
 
     iput v0, p0, Lcom/letv/leui/animation/LeDampingInterpolator;->mCycle:F
 
-    .line 21
     const v0, 0x400514e4    # 2.0794f
 
     iput v0, p0, Lcom/letv/leui/animation/LeDampingInterpolator;->mAttenFactor:F
 
-    .line 22
     const v0, 0x3fb0b33e
 
     iput v0, p0, Lcom/letv/leui/animation/LeDampingInterpolator;->mAmplitude:F
 
-    .line 23
     return-void
 .end method
 
@@ -61,19 +54,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
     iput v0, p0, Lcom/letv/leui/animation/LeDampingInterpolator;->mInputWhenMaxOutput:F
 
-    .line 16
     iput v0, p0, Lcom/letv/leui/animation/LeDampingInterpolator;->mMaxOutput:F
 
-    .line 28
     iput p1, p0, Lcom/letv/leui/animation/LeDampingInterpolator;->mCycle:F
 
-    .line 29
     const/high16 v0, -0x40000000    # -2.0f
 
     iget v1, p0, Lcom/letv/leui/animation/LeDampingInterpolator;->mCycle:F
@@ -94,7 +82,6 @@
 
     iput v0, p0, Lcom/letv/leui/animation/LeDampingInterpolator;->mAttenFactor:F
 
-    .line 30
     const-wide v0, 0x4005bf0a8b145769L    # Math.E
 
     iget v2, p0, Lcom/letv/leui/animation/LeDampingInterpolator;->mAttenFactor:F
@@ -119,7 +106,6 @@
 
     iput v0, p0, Lcom/letv/leui/animation/LeDampingInterpolator;->mAmplitude:F
 
-    .line 31
     return-void
 .end method
 
@@ -131,23 +117,18 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
     iput v2, p0, Lcom/letv/leui/animation/LeDampingInterpolator;->mInputWhenMaxOutput:F
 
-    .line 16
     iput v2, p0, Lcom/letv/leui/animation/LeDampingInterpolator;->mMaxOutput:F
 
-    .line 51
     sget-object v2, Lcom/android/internal/R$styleable;->LeDampingInterpolator:[I
 
     invoke-virtual {p1, p2, v2}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 53
     .local v0, "a":Landroid/content/res/TypedArray;
     const/4 v2, 0x0
 
@@ -159,7 +140,6 @@
 
     iput v2, p0, Lcom/letv/leui/animation/LeDampingInterpolator;->mCycle:F
 
-    .line 54
     const/4 v2, 0x1
 
     const/high16 v3, 0x3f000000    # 0.5f
@@ -168,11 +148,9 @@
 
     move-result v1
 
-    .line 56
     .local v1, "atten":F
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 58
     const/high16 v2, -0x40000000    # -2.0f
 
     iget v3, p0, Lcom/letv/leui/animation/LeDampingInterpolator;->mCycle:F
@@ -193,7 +171,6 @@
 
     iput v2, p0, Lcom/letv/leui/animation/LeDampingInterpolator;->mAttenFactor:F
 
-    .line 59
     const-wide v2, 0x4005bf0a8b145769L    # Math.E
 
     iget v4, p0, Lcom/letv/leui/animation/LeDampingInterpolator;->mAttenFactor:F
@@ -218,7 +195,6 @@
 
     iput v2, p0, Lcom/letv/leui/animation/LeDampingInterpolator;->mAmplitude:F
 
-    .line 60
     return-void
 .end method
 
@@ -233,26 +209,20 @@
 
     const/4 v3, 0x0
 
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
     iput v2, p0, Lcom/letv/leui/animation/LeDampingInterpolator;->mInputWhenMaxOutput:F
 
-    .line 16
     iput v2, p0, Lcom/letv/leui/animation/LeDampingInterpolator;->mMaxOutput:F
 
-    .line 35
     if-eqz p2, :cond_0
 
-    .line 36
     sget-object v2, Lcom/android/internal/R$styleable;->LeDampingInterpolator:[I
 
     invoke-virtual {p2, p3, v2, v3, v3}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 41
     .local v0, "a":Landroid/content/res/TypedArray;
     :goto_0
     const/high16 v2, 0x3fc00000    # 1.5f
@@ -263,7 +233,6 @@
 
     iput v2, p0, Lcom/letv/leui/animation/LeDampingInterpolator;->mCycle:F
 
-    .line 42
     const/4 v2, 0x1
 
     const/high16 v3, 0x3f000000    # 0.5f
@@ -272,11 +241,9 @@
 
     move-result v1
 
-    .line 44
     .local v1, "atten":F
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 46
     const/high16 v2, -0x40000000    # -2.0f
 
     iget v3, p0, Lcom/letv/leui/animation/LeDampingInterpolator;->mCycle:F
@@ -297,7 +264,6 @@
 
     iput v2, p0, Lcom/letv/leui/animation/LeDampingInterpolator;->mAttenFactor:F
 
-    .line 47
     const-wide v2, 0x4005bf0a8b145769L    # Math.E
 
     iget v4, p0, Lcom/letv/leui/animation/LeDampingInterpolator;->mAttenFactor:F
@@ -322,10 +288,8 @@
 
     iput v2, p0, Lcom/letv/leui/animation/LeDampingInterpolator;->mAmplitude:F
 
-    .line 48
     return-void
 
-    .line 38
     .end local v0    # "a":Landroid/content/res/TypedArray;
     .end local v1    # "atten":F
     :cond_0
@@ -345,7 +309,6 @@
     .locals 1
 
     .prologue
-    .line 79
     iget v0, p0, Lcom/letv/leui/animation/LeDampingInterpolator;->mInputWhenMaxOutput:F
 
     return v0
@@ -356,7 +319,6 @@
     .param p1, "t"    # F
 
     .prologue
-    .line 64
     iget v2, p0, Lcom/letv/leui/animation/LeDampingInterpolator;->mAmplitude:F
 
     float-to-double v2, v2
@@ -395,7 +357,6 @@
 
     mul-double v0, v2, v4
 
-    .line 66
     .local v0, "output":D
     iget v2, p0, Lcom/letv/leui/animation/LeDampingInterpolator;->mMaxOutput:F
 
@@ -411,15 +372,12 @@
 
     if-lez v2, :cond_0
 
-    .line 67
     double-to-float v2, v0
 
     iput v2, p0, Lcom/letv/leui/animation/LeDampingInterpolator;->mMaxOutput:F
 
-    .line 68
     iput p1, p0, Lcom/letv/leui/animation/LeDampingInterpolator;->mInputWhenMaxOutput:F
 
-    .line 71
     :cond_0
     double-to-float v2, v0
 
@@ -430,7 +388,6 @@
     .locals 1
 
     .prologue
-    .line 75
     iget v0, p0, Lcom/letv/leui/animation/LeDampingInterpolator;->mMaxOutput:F
 
     return v0

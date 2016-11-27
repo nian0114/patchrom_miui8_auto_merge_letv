@@ -33,7 +33,6 @@
     .locals 0
 
     .prologue
-    .line 343
     iput-object p1, p0, Lcom/letv/leui/widget/LePopupWindowAdapter$ViewHolderDoubleTextChbox;->this$0:Lcom/letv/leui/widget/LePopupWindowAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +45,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LePopupWindowAdapter$ViewHolderDoubleTextChbox;
 
     .prologue
-    .line 343
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowAdapter$ViewHolderDoubleTextChbox;->tvMainText:Landroid/widget/TextView;
 
     return-object v0
@@ -58,7 +56,6 @@
     .param p1, "x1"    # Landroid/widget/TextView;
 
     .prologue
-    .line 343
     iput-object p1, p0, Lcom/letv/leui/widget/LePopupWindowAdapter$ViewHolderDoubleTextChbox;->tvMainText:Landroid/widget/TextView;
 
     return-object p1
@@ -69,7 +66,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LePopupWindowAdapter$ViewHolderDoubleTextChbox;
 
     .prologue
-    .line 343
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowAdapter$ViewHolderDoubleTextChbox;->tvSubText:Landroid/widget/TextView;
 
     return-object v0
@@ -81,7 +77,6 @@
     .param p1, "x1"    # Landroid/widget/TextView;
 
     .prologue
-    .line 343
     iput-object p1, p0, Lcom/letv/leui/widget/LePopupWindowAdapter$ViewHolderDoubleTextChbox;->tvSubText:Landroid/widget/TextView;
 
     return-object p1
@@ -92,7 +87,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LePopupWindowAdapter$ViewHolderDoubleTextChbox;
 
     .prologue
-    .line 343
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowAdapter$ViewHolderDoubleTextChbox;->cbCheckBox:Lcom/letv/leui/widget/LeCheckBox;
 
     return-object v0
@@ -104,7 +98,6 @@
     .param p1, "x1"    # Lcom/letv/leui/widget/LeCheckBox;
 
     .prologue
-    .line 343
     iput-object p1, p0, Lcom/letv/leui/widget/LePopupWindowAdapter$ViewHolderDoubleTextChbox;->cbCheckBox:Lcom/letv/leui/widget/LeCheckBox;
 
     return-object p1
@@ -115,7 +108,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LePopupWindowAdapter$ViewHolderDoubleTextChbox;
 
     .prologue
-    .line 343
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowAdapter$ViewHolderDoubleTextChbox;->lsSweitch:Lcom/letv/leui/widget/LeSwitch;
 
     return-object v0
@@ -127,7 +119,6 @@
     .param p1, "x1"    # Lcom/letv/leui/widget/LeSwitch;
 
     .prologue
-    .line 343
     iput-object p1, p0, Lcom/letv/leui/widget/LePopupWindowAdapter$ViewHolderDoubleTextChbox;->lsSweitch:Lcom/letv/leui/widget/LeSwitch;
 
     return-object p1

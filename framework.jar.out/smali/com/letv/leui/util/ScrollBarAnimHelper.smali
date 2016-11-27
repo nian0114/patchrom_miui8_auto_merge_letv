@@ -36,10 +36,8 @@
     .locals 0
 
     .prologue
-    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 152
     return-void
 .end method
 
@@ -48,7 +46,6 @@
     .param p0, "x0"    # Lcom/letv/leui/util/ScrollBarAnimHelper;
 
     .prologue
-    .line 19
     iget v0, p0, Lcom/letv/leui/util/ScrollBarAnimHelper;->begin:F
 
     return v0
@@ -59,7 +56,6 @@
     .param p0, "x0"    # Lcom/letv/leui/util/ScrollBarAnimHelper;
 
     .prologue
-    .line 19
     iget v0, p0, Lcom/letv/leui/util/ScrollBarAnimHelper;->mColor:I
 
     return v0
@@ -70,7 +66,6 @@
     .param p0, "x0"    # Lcom/letv/leui/util/ScrollBarAnimHelper;
 
     .prologue
-    .line 19
     iget-object v0, p0, Lcom/letv/leui/util/ScrollBarAnimHelper;->actionBarColorDrawable:Landroid/graphics/drawable/ColorDrawable;
 
     return-object v0
@@ -81,7 +76,6 @@
     .param p0, "x0"    # Lcom/letv/leui/util/ScrollBarAnimHelper;
 
     .prologue
-    .line 19
     invoke-direct {p0}, Lcom/letv/leui/util/ScrollBarAnimHelper;->setStatusBarWithSameColor()V
 
     return-void
@@ -92,7 +86,6 @@
     .param p0, "x0"    # Lcom/letv/leui/util/ScrollBarAnimHelper;
 
     .prologue
-    .line 19
     iget v0, p0, Lcom/letv/leui/util/ScrollBarAnimHelper;->end:F
 
     return v0
@@ -103,7 +96,6 @@
     .param p0, "x0"    # Lcom/letv/leui/util/ScrollBarAnimHelper;
 
     .prologue
-    .line 19
     iget-object v0, p0, Lcom/letv/leui/util/ScrollBarAnimHelper;->changedListener:Lcom/letv/leui/util/ScrollBarAnimHelper$ScrollBarAnimChangedListener;
 
     return-object v0
@@ -117,7 +109,6 @@
     .param p3, "x3"    # I
 
     .prologue
-    .line 19
     invoke-direct {p0, p1, p2, p3}, Lcom/letv/leui/util/ScrollBarAnimHelper;->init(Landroid/view/Window;Landroid/app/ActionBar;I)V
 
     return-void
@@ -129,7 +120,6 @@
     .param p1, "x1"    # Landroid/view/View;
 
     .prologue
-    .line 19
     invoke-direct {p0, p1}, Lcom/letv/leui/util/ScrollBarAnimHelper;->make(Landroid/view/View;)V
 
     return-void
@@ -145,7 +135,6 @@
     .param p5, "x5"    # F
 
     .prologue
-    .line 19
     invoke-direct/range {p0 .. p5}, Lcom/letv/leui/util/ScrollBarAnimHelper;->init(Landroid/view/Window;Landroid/app/ActionBar;IFF)V
 
     return-void
@@ -157,12 +146,10 @@
     .param p2, "IdName"    # Ljava/lang/String;
 
     .prologue
-    .line 111
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 112
     .local v0, "resources":Landroid/content/res/Resources;
     const-string v2, "id"
 
@@ -172,7 +159,6 @@
 
     move-result v1
 
-    .line 114
     .local v1, "statusBarIdentifier":I
     return v1
 .end method
@@ -183,7 +169,6 @@
     .param p2, "color"    # I
 
     .prologue
-    .line 32
     invoke-virtual {p1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -194,7 +179,6 @@
 
     invoke-direct {p0, v0, v1, p2}, Lcom/letv/leui/util/ScrollBarAnimHelper;->init(Landroid/view/Window;Landroid/app/ActionBar;I)V
 
-    .line 33
     return-void
 .end method
 
@@ -205,7 +189,6 @@
     .param p3, "color"    # I
 
     .prologue
-    .line 36
     invoke-virtual {p1}, Landroid/view/Window;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -218,7 +201,6 @@
 
     iput v0, p0, Lcom/letv/leui/util/ScrollBarAnimHelper;->begin:F
 
-    .line 37
     invoke-virtual {p1}, Landroid/view/Window;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -231,7 +213,6 @@
 
     iput v0, p0, Lcom/letv/leui/util/ScrollBarAnimHelper;->end:F
 
-    .line 38
     iget v4, p0, Lcom/letv/leui/util/ScrollBarAnimHelper;->begin:F
 
     iget v5, p0, Lcom/letv/leui/util/ScrollBarAnimHelper;->end:F
@@ -246,7 +227,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/letv/leui/util/ScrollBarAnimHelper;->init(Landroid/view/Window;Landroid/app/ActionBar;IFF)V
 
-    .line 39
     return-void
 .end method
 
@@ -261,10 +241,8 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 42
     iput p3, p0, Lcom/letv/leui/util/ScrollBarAnimHelper;->mColor:I
 
-    .line 43
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x15
@@ -276,52 +254,41 @@
     :goto_0
     iput-boolean v0, p0, Lcom/letv/leui/util/ScrollBarAnimHelper;->isSupport:Z
 
-    .line 44
     new-instance v0, Landroid/graphics/drawable/ColorDrawable;
 
     invoke-direct {v0, v1}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
     iput-object v0, p0, Lcom/letv/leui/util/ScrollBarAnimHelper;->actionBarColorDrawable:Landroid/graphics/drawable/ColorDrawable;
 
-    .line 48
     iget-boolean v0, p0, Lcom/letv/leui/util/ScrollBarAnimHelper;->isSupport:Z
 
     if-eqz v0, :cond_0
 
-    .line 49
     iput-object p1, p0, Lcom/letv/leui/util/ScrollBarAnimHelper;->mWindow:Landroid/view/Window;
 
-    .line 50
     invoke-direct {p0}, Lcom/letv/leui/util/ScrollBarAnimHelper;->setStatusBarWithSameColor()V
 
-    .line 58
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 59
     const/4 v0, 0x0
 
     invoke-virtual {p2, v0}, Landroid/app/ActionBar;->setElevation(F)V
 
-    .line 60
     iget-object v0, p0, Lcom/letv/leui/util/ScrollBarAnimHelper;->actionBarColorDrawable:Landroid/graphics/drawable/ColorDrawable;
 
     invoke-virtual {p2, v0}, Landroid/app/ActionBar;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 63
     :cond_1
     iput p4, p0, Lcom/letv/leui/util/ScrollBarAnimHelper;->begin:F
 
-    .line 64
     iput p5, p0, Lcom/letv/leui/util/ScrollBarAnimHelper;->end:F
 
-    .line 66
     return-void
 
     :cond_2
     move v0, v1
 
-    .line 43
     goto :goto_0
 .end method
 
@@ -330,7 +297,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 74
     invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v0
@@ -341,7 +307,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnScrollChangedListener(Landroid/view/ViewTreeObserver$OnScrollChangedListener;)V
 
-    .line 108
     return-void
 .end method
 
@@ -349,7 +314,6 @@
     .locals 2
 
     .prologue
-    .line 69
     iget-object v0, p0, Lcom/letv/leui/util/ScrollBarAnimHelper;->mWindow:Landroid/view/Window;
 
     iget-object v1, p0, Lcom/letv/leui/util/ScrollBarAnimHelper;->actionBarColorDrawable:Landroid/graphics/drawable/ColorDrawable;
@@ -360,7 +324,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->setStatusBarColor(I)V
 
-    .line 70
     return-void
 .end method
 
@@ -372,7 +335,6 @@
     .param p2, "dipValue"    # F
 
     .prologue
-    .line 158
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -381,7 +343,6 @@
 
     move-result-object v0
 
-    .line 159
     .local v0, "metrics":Landroid/util/DisplayMetrics;
     const/4 v1, 0x1
 
@@ -396,7 +357,6 @@
     .locals 1
 
     .prologue
-    .line 145
     iget-object v0, p0, Lcom/letv/leui/util/ScrollBarAnimHelper;->changedListener:Lcom/letv/leui/util/ScrollBarAnimHelper$ScrollBarAnimChangedListener;
 
     return-object v0
@@ -409,7 +369,6 @@
     .param p3, "color"    # I
 
     .prologue
-    .line 118
     invoke-virtual {p1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -420,7 +379,6 @@
 
     invoke-virtual {p0, v0, v1, p2, p3}, Lcom/letv/leui/util/ScrollBarAnimHelper;->prepare(Landroid/view/Window;Landroid/app/ActionBar;Landroid/view/View;I)V
 
-    .line 119
     return-void
 .end method
 
@@ -432,7 +390,6 @@
     .param p4, "color"    # I
 
     .prologue
-    .line 122
     new-instance v0, Lcom/letv/leui/util/ScrollBarAnimHelper$2;
 
     move-object v1, p0
@@ -449,7 +406,6 @@
 
     invoke-virtual {p3, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
-    .line 130
     return-void
 .end method
 
@@ -463,7 +419,6 @@
     .param p6, "endPx"    # F
 
     .prologue
-    .line 133
     new-instance v0, Lcom/letv/leui/util/ScrollBarAnimHelper$3;
 
     move-object v1, p0
@@ -484,7 +439,6 @@
 
     invoke-virtual {p3, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
-    .line 141
     return-void
 .end method
 
@@ -493,9 +447,7 @@
     .param p1, "changedListener"    # Lcom/letv/leui/util/ScrollBarAnimHelper$ScrollBarAnimChangedListener;
 
     .prologue
-    .line 149
     iput-object p1, p0, Lcom/letv/leui/util/ScrollBarAnimHelper;->changedListener:Lcom/letv/leui/util/ScrollBarAnimHelper$ScrollBarAnimChangedListener;
 
-    .line 150
     return-void
 .end method

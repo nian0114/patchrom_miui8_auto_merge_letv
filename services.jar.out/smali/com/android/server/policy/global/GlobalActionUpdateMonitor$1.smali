@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 45
     iput-object p1, p0, Lcom/android/server/policy/global/GlobalActionUpdateMonitor$1;->this$0:Lcom/android/server/policy/global/GlobalActionUpdateMonitor;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,16 +37,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 48
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 53
     :goto_0
     return-void
 
-    .line 50
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionUpdateMonitor$1;->this$0:Lcom/android/server/policy/global/GlobalActionUpdateMonitor;
 
@@ -55,7 +51,6 @@
 
     goto :goto_0
 
-    .line 48
     :pswitch_data_0
     .packed-switch 0x14d
         :pswitch_0

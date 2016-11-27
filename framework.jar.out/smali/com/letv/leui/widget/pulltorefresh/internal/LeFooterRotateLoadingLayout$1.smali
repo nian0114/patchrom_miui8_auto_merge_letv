@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 23
     iput-object p1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeFooterRotateLoadingLayout$1;->this$0:Lcom/letv/leui/widget/pulltorefresh/internal/LeFooterRotateLoadingLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 32
     return-void
 .end method
 
@@ -50,28 +48,24 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 38
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeFooterRotateLoadingLayout$1;->this$0:Lcom/letv/leui/widget/pulltorefresh/internal/LeFooterRotateLoadingLayout;
 
     iget-boolean v0, v0, Lcom/letv/leui/widget/pulltorefresh/internal/LeFooterRotateLoadingLayout;->cancelAnimator:Z
 
     if-eqz v0, :cond_0
 
-    .line 39
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeFooterRotateLoadingLayout$1;->this$0:Lcom/letv/leui/widget/pulltorefresh/internal/LeFooterRotateLoadingLayout;
 
     iget-object v0, v0, Lcom/letv/leui/widget/pulltorefresh/internal/LeFooterRotateLoadingLayout;->refreshCompletedListener:Lcom/letv/leui/widget/pulltorefresh/internal/RefreshCompletedListener;
 
     if-eqz v0, :cond_0
 
-    .line 41
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeFooterRotateLoadingLayout$1;->this$0:Lcom/letv/leui/widget/pulltorefresh/internal/LeFooterRotateLoadingLayout;
 
     iget-object v0, v0, Lcom/letv/leui/widget/pulltorefresh/internal/LeFooterRotateLoadingLayout;->refreshCompletedListener:Lcom/letv/leui/widget/pulltorefresh/internal/RefreshCompletedListener;
 
     invoke-interface {v0}, Lcom/letv/leui/widget/pulltorefresh/internal/RefreshCompletedListener;->refreshFooterCompleteInternal()V
 
-    .line 44
     :cond_0
     return-void
 .end method
@@ -81,6 +75,5 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 27
     return-void
 .end method

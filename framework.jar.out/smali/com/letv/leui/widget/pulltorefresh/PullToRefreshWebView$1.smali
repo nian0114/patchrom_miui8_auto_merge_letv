@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -53,7 +52,6 @@
     .end annotation
 
     .prologue
-    .line 38
     .local p1, "refreshView":Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;, "Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase<Landroid/webkit/WebView;>;"
     invoke-virtual {p1}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;->getRefreshableView()Landroid/view/View;
 
@@ -63,6 +61,5 @@
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->reload()V
 
-    .line 39
     return-void
 .end method

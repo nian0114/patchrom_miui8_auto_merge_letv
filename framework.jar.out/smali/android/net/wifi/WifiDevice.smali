@@ -44,7 +44,6 @@
     .locals 1
 
     .prologue
-    .line 129
     new-instance v0, Landroid/net/wifi/WifiDevice$1;
 
     invoke-direct {v0}, Landroid/net/wifi/WifiDevice$1;-><init>()V
@@ -58,30 +57,24 @@
     .locals 1
 
     .prologue
-    .line 71
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     const-string v0, ""
 
     iput-object v0, p0, Landroid/net/wifi/WifiDevice;->deviceAddress:Ljava/lang/String;
 
-    .line 48
     const-string v0, ""
 
     iput-object v0, p0, Landroid/net/wifi/WifiDevice;->deviceIp:Ljava/lang/String;
 
-    .line 53
     const-string v0, ""
 
     iput-object v0, p0, Landroid/net/wifi/WifiDevice;->deviceName:Ljava/lang/String;
 
-    .line 58
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/net/wifi/WifiDevice;->deviceState:I
 
-    .line 71
     return-void
 .end method
 
@@ -101,35 +94,28 @@
 
     const/4 v3, 0x0
 
-    .line 82
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     const-string v1, ""
 
     iput-object v1, p0, Landroid/net/wifi/WifiDevice;->deviceAddress:Ljava/lang/String;
 
-    .line 48
     const-string v1, ""
 
     iput-object v1, p0, Landroid/net/wifi/WifiDevice;->deviceIp:Ljava/lang/String;
 
-    .line 53
     const-string v1, ""
 
     iput-object v1, p0, Landroid/net/wifi/WifiDevice;->deviceName:Ljava/lang/String;
 
-    .line 58
     iput v3, p0, Landroid/net/wifi/WifiDevice;->deviceState:I
 
-    .line 83
     const-string v1, " "
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 85
     .local v0, "tokens":[Ljava/lang/String;
     array-length v1, v0
 
@@ -137,14 +123,12 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 86
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {v1}, Ljava/lang/IllegalArgumentException;-><init>()V
 
     throw v1
 
-    .line 89
     :cond_0
     aget-object v1, v0, v3
 
@@ -156,19 +140,15 @@
 
     if-eq v1, v4, :cond_1
 
-    .line 90
     iput v5, p0, Landroid/net/wifi/WifiDevice;->deviceState:I
 
-    .line 97
     :goto_0
     aget-object v1, v0, v5
 
     iput-object v1, p0, Landroid/net/wifi/WifiDevice;->deviceAddress:Ljava/lang/String;
 
-    .line 98
     return-void
 
-    .line 91
     :cond_1
     aget-object v1, v0, v3
 
@@ -180,12 +160,10 @@
 
     if-eq v1, v4, :cond_2
 
-    .line 92
     iput v3, p0, Landroid/net/wifi/WifiDevice;->deviceState:I
 
     goto :goto_0
 
-    .line 94
     :cond_2
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -200,7 +178,6 @@
     .locals 1
 
     .prologue
-    .line 117
     const/4 v0, 0x0
 
     return v0
@@ -213,14 +190,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 102
     if-eqz p1, :cond_0
 
     instance-of v2, p1, Landroid/net/wifi/WifiDevice;
 
     if-nez v2, :cond_1
 
-    .line 111
     :cond_0
     :goto_0
     return v1
@@ -228,16 +203,13 @@
     :cond_1
     move-object v0, p1
 
-    .line 106
     check-cast v0, Landroid/net/wifi/WifiDevice;
 
-    .line 108
     .local v0, "other":Landroid/net/wifi/WifiDevice;
     iget-object v2, p0, Landroid/net/wifi/WifiDevice;->deviceAddress:Ljava/lang/String;
 
     if-nez v2, :cond_2
 
-    .line 109
     iget-object v2, v0, Landroid/net/wifi/WifiDevice;->deviceAddress:Ljava/lang/String;
 
     if-nez v2, :cond_0
@@ -246,7 +218,6 @@
 
     goto :goto_0
 
-    .line 111
     :cond_2
     iget-object v1, p0, Landroid/net/wifi/WifiDevice;->deviceAddress:Ljava/lang/String;
 
@@ -265,26 +236,21 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 122
     iget-object v0, p0, Landroid/net/wifi/WifiDevice;->deviceAddress:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 123
     iget-object v0, p0, Landroid/net/wifi/WifiDevice;->deviceIp:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 124
     iget-object v0, p0, Landroid/net/wifi/WifiDevice;->deviceName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 125
     iget v0, p0, Landroid/net/wifi/WifiDevice;->deviceState:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 126
     return-void
 .end method

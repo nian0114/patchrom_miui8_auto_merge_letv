@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 97
     iput-object p1, p0, Lcom/letv/leui/widget/picker/DateTimeWheel$1;->this$0:Lcom/letv/leui/widget/picker/DateTimeWheel;
 
     invoke-direct {p0}, Lcom/letv/leui/widget/picker/OnWheelChangedListener;-><init>()V
@@ -40,7 +39,6 @@
     .param p3, "newValue"    # I
 
     .prologue
-    .line 100
     iget-object v0, p0, Lcom/letv/leui/widget/picker/DateTimeWheel$1;->this$0:Lcom/letv/leui/widget/picker/DateTimeWheel;
 
     invoke-virtual {p1}, Lcom/letv/leui/widget/picker/WheelView;->getCurrentItem()I
@@ -50,7 +48,6 @@
     # setter for: Lcom/letv/leui/widget/picker/DateTimeWheel;->yearIndex:I
     invoke-static {v0, v1}, Lcom/letv/leui/widget/picker/DateTimeWheel;->access$002(Lcom/letv/leui/widget/picker/DateTimeWheel;I)I
 
-    .line 101
     iget-object v0, p0, Lcom/letv/leui/widget/picker/DateTimeWheel$1;->this$0:Lcom/letv/leui/widget/picker/DateTimeWheel;
 
     iget-object v1, p0, Lcom/letv/leui/widget/picker/DateTimeWheel$1;->this$0:Lcom/letv/leui/widget/picker/DateTimeWheel;
@@ -65,7 +62,6 @@
     # setter for: Lcom/letv/leui/widget/picker/DateTimeWheel;->curYear:I
     invoke-static {v0, v1}, Lcom/letv/leui/widget/picker/DateTimeWheel;->access$102(Lcom/letv/leui/widget/picker/DateTimeWheel;I)I
 
-    .line 102
     iget-object v0, p0, Lcom/letv/leui/widget/picker/DateTimeWheel$1;->this$0:Lcom/letv/leui/widget/picker/DateTimeWheel;
 
     # getter for: Lcom/letv/leui/widget/picker/DateTimeWheel;->mCurrentDate:Ljava/util/Calendar;
@@ -84,15 +80,12 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->set(II)V
 
-    .line 103
     if-eq p2, p3, :cond_0
 
-    .line 104
     iget-object v0, p0, Lcom/letv/leui/widget/picker/DateTimeWheel$1;->this$0:Lcom/letv/leui/widget/picker/DateTimeWheel;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/picker/DateTimeWheel;->onUpdateDate()V
 
-    .line 105
     :cond_0
     return-void
 .end method

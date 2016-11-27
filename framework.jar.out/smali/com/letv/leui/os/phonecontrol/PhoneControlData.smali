@@ -100,7 +100,6 @@
     .locals 1
 
     .prologue
-    .line 94
     new-instance v0, Lcom/letv/leui/os/phonecontrol/PhoneControlData$1;
 
     invoke-direct {v0}, Lcom/letv/leui/os/phonecontrol/PhoneControlData$1;-><init>()V
@@ -116,16 +115,12 @@
     .param p2, "describe"    # Ljava/lang/String;
 
     .prologue
-    .line 67
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 68
     iput p1, p0, Lcom/letv/leui/os/phonecontrol/PhoneControlData;->mResultCode:I
 
-    .line 69
     iput-object p2, p0, Lcom/letv/leui/os/phonecontrol/PhoneControlData;->mDescribe:Ljava/lang/String;
 
-    .line 70
     return-void
 .end method
 
@@ -135,7 +130,6 @@
     .locals 1
 
     .prologue
-    .line 91
     const/4 v0, 0x0
 
     return v0
@@ -145,23 +139,19 @@
     .locals 2
 
     .prologue
-    .line 73
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 74
     .local v0, "sb":Ljava/lang/StringBuffer;
     const-string v1, "PhoneControlData: {"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 75
     const-string v1, "ResultCode: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 76
     iget v1, p0, Lcom/letv/leui/os/phonecontrol/PhoneControlData;->mResultCode:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
@@ -170,22 +160,18 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 77
     const-string v1, "Describe: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 78
     iget-object v1, p0, Lcom/letv/leui/os/phonecontrol/PhoneControlData;->mDescribe:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 79
     const-string v1, "} "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 80
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -199,16 +185,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 85
     iget v0, p0, Lcom/letv/leui/os/phonecontrol/PhoneControlData;->mResultCode:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 86
     iget-object v0, p0, Lcom/letv/leui/os/phonecontrol/PhoneControlData;->mDescribe:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 87
     return-void
 .end method

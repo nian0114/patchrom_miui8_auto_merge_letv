@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 30
     iput-object p1, p0, Lcom/letv/leui/widget/LeBottomSheetImageAdapter$GridTemp;->this$0:Lcom/letv/leui/widget/LeBottomSheetImageAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "x1"    # Lcom/letv/leui/widget/LeBottomSheetImageAdapter$1;
 
     .prologue
-    .line 30
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/LeBottomSheetImageAdapter$GridTemp;-><init>(Lcom/letv/leui/widget/LeBottomSheetImageAdapter;)V
 
     return-void

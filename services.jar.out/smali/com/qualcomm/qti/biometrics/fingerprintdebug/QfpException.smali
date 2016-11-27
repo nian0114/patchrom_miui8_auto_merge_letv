@@ -17,7 +17,6 @@
     .param p1, "errorCode"    # I
 
     .prologue
-    .line 17
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -38,10 +37,8 @@
 
     invoke-direct {p0, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 18
     iput p1, p0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QfpException;->mErrorCode:I
 
-    .line 19
     return-void
 .end method
 
@@ -50,14 +47,11 @@
     .param p1, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 12
     invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 13
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QfpException;->mErrorCode:I
 
-    .line 14
     return-void
 .end method

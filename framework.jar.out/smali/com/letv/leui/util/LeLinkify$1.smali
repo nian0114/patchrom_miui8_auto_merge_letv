@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 130
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,17 +38,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 133
     if-lez p2, :cond_1
 
-    .line 134
     add-int/lit8 v3, p2, -0x1
 
     invoke-interface {p1, v3}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v0
 
-    .line 135
     .local v0, "codePoint":I
     # invokes: Lcom/letv/leui/util/LeLinkify;->isWord(I)Z
     invoke-static {v0}, Lcom/letv/leui/util/LeLinkify;->access$000(I)Z
@@ -58,28 +54,23 @@
 
     if-eqz v3, :cond_1
 
-    .line 152
     .end local v0    # "codePoint":I
     :cond_0
     :goto_0
     return v2
 
-    .line 140
     :cond_1
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result v1
 
-    .line 141
     .local v1, "length":I
     if-ge p3, v1, :cond_2
 
-    .line 142
     invoke-interface {p1, p3}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v0
 
-    .line 143
     .restart local v0    # "codePoint":I
     # invokes: Lcom/letv/leui/util/LeLinkify;->isWord(I)Z
     invoke-static {v0}, Lcom/letv/leui/util/LeLinkify;->access$000(I)Z
@@ -88,7 +79,6 @@
 
     if-nez v3, :cond_0
 
-    .line 148
     .end local v0    # "codePoint":I
     :cond_2
     invoke-interface {p1, p2, p3}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
@@ -115,7 +105,6 @@
 
     if-lt v3, v4, :cond_0
 
-    .line 152
     const/4 v2, 0x1
 
     goto :goto_0

@@ -44,7 +44,6 @@
 
     const/4 v2, 0x0
 
-    .line 132
     new-instance v0, Landroid/app/AlertDialog$ButtonPattern;
 
     const-string v1, "NORMAL"
@@ -69,7 +68,6 @@
 
     sput-object v0, Landroid/app/AlertDialog$ButtonPattern;->WARNING:Landroid/app/AlertDialog$ButtonPattern;
 
-    .line 131
     const/4 v0, 0x3
 
     new-array v0, v0, [Landroid/app/AlertDialog$ButtonPattern;
@@ -100,7 +98,6 @@
     .end annotation
 
     .prologue
-    .line 131
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -111,7 +108,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 131
     const-class v0, Landroid/app/AlertDialog$ButtonPattern;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -127,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 131
     sget-object v0, Landroid/app/AlertDialog$ButtonPattern;->$VALUES:[Landroid/app/AlertDialog$ButtonPattern;
 
     invoke-virtual {v0}, [Landroid/app/AlertDialog$ButtonPattern;->clone()Ljava/lang/Object;

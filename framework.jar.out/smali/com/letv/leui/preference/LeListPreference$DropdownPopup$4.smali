@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1116
     iput-object p1, p0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup$4;->this$1:Lcom/letv/leui/preference/LeListPreference$DropdownPopup;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 1120
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup$4;->this$1:Lcom/letv/leui/preference/LeListPreference$DropdownPopup;
 
     invoke-virtual {v0}, Lcom/letv/leui/preference/LeListPreference$DropdownPopup;->isShowing()Z
@@ -49,7 +47,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1121
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup$4;->this$1:Lcom/letv/leui/preference/LeListPreference$DropdownPopup;
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup;->this$0:Lcom/letv/leui/preference/LeListPreference;
@@ -90,18 +87,15 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 1123
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup$4;->this$1:Lcom/letv/leui/preference/LeListPreference$DropdownPopup;
 
     invoke-virtual {v0}, Lcom/letv/leui/preference/LeListPreference$DropdownPopup;->dismiss()V
 
-    .line 1129
     :cond_1
     :goto_0
     return-void
 
-    .line 1124
     :cond_2
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup$4;->this$1:Lcom/letv/leui/preference/LeListPreference$DropdownPopup;
 
@@ -128,7 +122,6 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 1125
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup$4;->this$1:Lcom/letv/leui/preference/LeListPreference$DropdownPopup;
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup;->this$0:Lcom/letv/leui/preference/LeListPreference;
@@ -149,7 +142,6 @@
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/preference/LeListPreference$DropdownPopup;->setAnchorView(Landroid/view/View;)V
 
-    .line 1126
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup$4;->this$1:Lcom/letv/leui/preference/LeListPreference$DropdownPopup;
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup;->this$0:Lcom/letv/leui/preference/LeListPreference;

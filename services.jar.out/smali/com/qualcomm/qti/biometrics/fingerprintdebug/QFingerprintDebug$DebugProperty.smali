@@ -120,7 +120,6 @@
 
     const/4 v4, 0x0
 
-    .line 44
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "DebugVersion"
@@ -131,7 +130,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->DebugVersion:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 52
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "NumBackgrounds"
@@ -142,7 +140,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->NumBackgrounds:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 59
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "Background1"
@@ -153,7 +150,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Background1:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 60
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "Background2"
@@ -164,7 +160,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Background2:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 61
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "Background3"
@@ -175,7 +170,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Background3:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 62
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "Background4"
@@ -188,7 +182,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Background4:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 63
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "Background5"
@@ -201,7 +194,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Background5:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 64
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "Background6"
@@ -214,7 +206,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Background6:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 65
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "Background7"
@@ -227,7 +218,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Background7:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 66
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "Background8"
@@ -240,7 +230,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Background8:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 67
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "Background9"
@@ -253,7 +242,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Background9:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 75
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "NumForegrounds"
@@ -266,7 +254,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->NumForegrounds:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 82
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "Foreground1"
@@ -279,7 +266,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Foreground1:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 83
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "Foreground2"
@@ -292,7 +278,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Foreground2:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 84
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "Foreground3"
@@ -305,7 +290,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Foreground3:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 85
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "Foreground4"
@@ -318,7 +302,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Foreground4:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 86
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "Foreground5"
@@ -331,7 +314,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Foreground5:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 87
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "Foreground6"
@@ -344,7 +326,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Foreground6:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 88
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "Foreground7"
@@ -357,7 +338,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Foreground7:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 89
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "Foreground8"
@@ -370,7 +350,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Foreground8:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 90
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "Foreground9"
@@ -383,7 +362,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Foreground9:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 98
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "NumProcs"
@@ -396,7 +374,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->NumProcs:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 105
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "Processed1"
@@ -409,7 +386,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Processed1:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 106
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "Processed2"
@@ -422,7 +398,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Processed2:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 107
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "Processed3"
@@ -435,7 +410,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Processed3:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 108
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "Processed4"
@@ -448,7 +422,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Processed4:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 109
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "Processed5"
@@ -461,7 +434,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Processed5:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 110
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "Processed6"
@@ -474,7 +446,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Processed6:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 111
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "Processed7"
@@ -487,7 +458,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Processed7:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 112
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "Processed8"
@@ -500,7 +470,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Processed8:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 113
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "Processed9"
@@ -513,7 +482,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Processed9:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 120
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "FinalImage"
@@ -526,7 +494,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->FinalImage:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 127
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "QfpConfig"
@@ -539,7 +506,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->QfpConfig:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 134
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "DeviceConfig"
@@ -552,7 +518,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->DeviceConfig:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 141
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "IvvJson"
@@ -565,7 +530,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->IvvJson:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 148
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "IvvUIJson"
@@ -578,7 +542,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->IvvUIJson:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 155
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     const-string v1, "BGEBasis"
@@ -591,7 +554,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->BGEBasis:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 37
     const/16 v0, 0x25
 
     new-array v0, v0, [Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
@@ -825,13 +787,10 @@
     .end annotation
 
     .prologue
-    .line 159
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 160
     iput-object p3, p0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->debugPropertyName:Ljava/lang/String;
 
-    .line 161
     return-void
 .end method
 
@@ -840,7 +799,6 @@
     .param p0, "x0"    # Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     .prologue
-    .line 37
     iget-object v0, p0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->debugPropertyName:Ljava/lang/String;
 
     return-object v0
@@ -851,10 +809,8 @@
     .param p0, "n"    # I
 
     .prologue
-    .line 164
     packed-switch p0, :pswitch_data_0
 
-    .line 176
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "n must be in the range 1..9"
@@ -863,63 +819,52 @@
 
     throw v0
 
-    .line 165
     :pswitch_0
     sget-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Background1:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 173
     :goto_0
     return-object v0
 
-    .line 166
     :pswitch_1
     sget-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Background2:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     goto :goto_0
 
-    .line 167
     :pswitch_2
     sget-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Background3:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     goto :goto_0
 
-    .line 168
     :pswitch_3
     sget-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Background4:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     goto :goto_0
 
-    .line 169
     :pswitch_4
     sget-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Background5:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     goto :goto_0
 
-    .line 170
     :pswitch_5
     sget-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Background6:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     goto :goto_0
 
-    .line 171
     :pswitch_6
     sget-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Background7:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     goto :goto_0
 
-    .line 172
     :pswitch_7
     sget-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Background8:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     goto :goto_0
 
-    .line 173
     :pswitch_8
     sget-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Background9:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     goto :goto_0
 
-    .line 164
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -939,10 +884,8 @@
     .param p0, "n"    # I
 
     .prologue
-    .line 182
     packed-switch p0, :pswitch_data_0
 
-    .line 194
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "n must be in the range 1..9"
@@ -951,63 +894,52 @@
 
     throw v0
 
-    .line 183
     :pswitch_0
     sget-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Foreground1:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 191
     :goto_0
     return-object v0
 
-    .line 184
     :pswitch_1
     sget-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Foreground2:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     goto :goto_0
 
-    .line 185
     :pswitch_2
     sget-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Foreground3:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     goto :goto_0
 
-    .line 186
     :pswitch_3
     sget-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Foreground4:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     goto :goto_0
 
-    .line 187
     :pswitch_4
     sget-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Foreground5:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     goto :goto_0
 
-    .line 188
     :pswitch_5
     sget-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Foreground6:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     goto :goto_0
 
-    .line 189
     :pswitch_6
     sget-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Foreground7:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     goto :goto_0
 
-    .line 190
     :pswitch_7
     sget-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Foreground8:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     goto :goto_0
 
-    .line 191
     :pswitch_8
     sget-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Foreground9:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     goto :goto_0
 
-    .line 182
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -1027,10 +959,8 @@
     .param p0, "n"    # I
 
     .prologue
-    .line 200
     packed-switch p0, :pswitch_data_0
 
-    .line 212
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "n must be in the range 1..9"
@@ -1039,63 +969,52 @@
 
     throw v0
 
-    .line 201
     :pswitch_0
     sget-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Processed1:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
-    .line 209
     :goto_0
     return-object v0
 
-    .line 202
     :pswitch_1
     sget-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Processed2:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     goto :goto_0
 
-    .line 203
     :pswitch_2
     sget-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Processed3:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     goto :goto_0
 
-    .line 204
     :pswitch_3
     sget-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Processed4:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     goto :goto_0
 
-    .line 205
     :pswitch_4
     sget-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Processed5:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     goto :goto_0
 
-    .line 206
     :pswitch_5
     sget-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Processed6:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     goto :goto_0
 
-    .line 207
     :pswitch_6
     sget-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Processed7:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     goto :goto_0
 
-    .line 208
     :pswitch_7
     sget-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Processed8:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     goto :goto_0
 
-    .line 209
     :pswitch_8
     sget-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->Processed9:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     goto :goto_0
 
-    .line 200
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -1115,7 +1034,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 37
     const-class v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -1131,7 +1049,6 @@
     .locals 1
 
     .prologue
-    .line 37
     sget-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->$VALUES:[Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;
 
     invoke-virtual {v0}, [Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$DebugProperty;->clone()Ljava/lang/Object;

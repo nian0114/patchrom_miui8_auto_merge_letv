@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 182
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,12 +44,10 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 185
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 186
     .local v1, "code":I
     sget-object v0, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -60,7 +57,6 @@
 
     check-cast v2, Ljava/lang/CharSequence;
 
-    .line 187
     .local v2, "label":Ljava/lang/CharSequence;
     sget-object v0, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -70,19 +66,16 @@
 
     check-cast v3, Ljava/lang/CharSequence;
 
-    .line 188
     .local v3, "description":Ljava/lang/CharSequence;
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 189
     .local v4, "reason":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 190
     .local v5, "tone":I
     new-instance v0, Landroid/telecom/DisconnectCause;
 
@@ -95,7 +88,6 @@
     .locals 1
 
     .prologue
-    .line 182
     invoke-virtual {p0, p1}, Landroid/telecom/DisconnectCause$1;->createFromParcel(Landroid/os/Parcel;)Landroid/telecom/DisconnectCause;
 
     move-result-object v0
@@ -108,7 +100,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 195
     new-array v0, p1, [Landroid/telecom/DisconnectCause;
 
     return-object v0
@@ -118,7 +109,6 @@
     .locals 1
 
     .prologue
-    .line 182
     invoke-virtual {p0, p1}, Landroid/telecom/DisconnectCause$1;->newArray(I)[Landroid/telecom/DisconnectCause;
 
     move-result-object v0

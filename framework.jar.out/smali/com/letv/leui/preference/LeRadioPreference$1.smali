@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 141
     iput-object p1, p0, Lcom/letv/leui/preference/LeRadioPreference$1;->this$0:Lcom/letv/leui/preference/LeRadioPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "isChecked"    # Z
 
     .prologue
-    .line 145
     iget-object v0, p0, Lcom/letv/leui/preference/LeRadioPreference$1;->this$0:Lcom/letv/leui/preference/LeRadioPreference;
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeRadioPreference;->changeListener:Lcom/letv/leui/preference/LeRadioGroupPreference$LeRadioPreferenceChangeListener;
@@ -51,7 +49,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 146
     iget-object v0, p0, Lcom/letv/leui/preference/LeRadioPreference$1;->this$0:Lcom/letv/leui/preference/LeRadioPreference;
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeRadioPreference;->changeListener:Lcom/letv/leui/preference/LeRadioGroupPreference$LeRadioPreferenceChangeListener;
@@ -66,7 +63,6 @@
 
     invoke-interface {v0, v1, v2}, Lcom/letv/leui/preference/LeRadioGroupPreference$LeRadioPreferenceChangeListener;->onRadioChanged(ZLjava/lang/String;)V
 
-    .line 148
     :cond_0
     return-void
 .end method

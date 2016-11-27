@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 60
     iput-object p1, p0, Lcom/letv/leui/widget/LeLoadingDialog$1;->this$0:Lcom/letv/leui/widget/LeLoadingDialog;
 
     iput-object p2, p0, Lcom/letv/leui/widget/LeLoadingDialog$1;->val$dismissCallBack:Ljava/lang/Runnable;
@@ -45,7 +44,6 @@
     .param p1, "dialog"    # Landroid/content/DialogInterface;
 
     .prologue
-    .line 63
     iget-object v0, p0, Lcom/letv/leui/widget/LeLoadingDialog$1;->this$0:Lcom/letv/leui/widget/LeLoadingDialog;
 
     # getter for: Lcom/letv/leui/widget/LeLoadingDialog;->mLeLoadingView:Lcom/letv/leui/widget/LeLoadingView;
@@ -59,6 +57,5 @@
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/widget/LeLoadingView;->appearAnim(Ljava/lang/Runnable;)Z
 
-    .line 72
     return-void
 .end method

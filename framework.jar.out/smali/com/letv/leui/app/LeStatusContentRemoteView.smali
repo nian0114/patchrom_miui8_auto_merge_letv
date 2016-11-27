@@ -13,12 +13,10 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 16
     const v0, 0x10900af
 
     invoke-direct {p0, p1, v0}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
 
-    .line 17
     return-void
 .end method
 
@@ -28,10 +26,8 @@
     .param p2, "layoutId"    # I
 
     .prologue
-    .line 12
     invoke-direct {p0, p1, p2}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
 
-    .line 13
     return-void
 .end method
 
@@ -41,14 +37,12 @@
     .locals 1
 
     .prologue
-    .line 59
     invoke-virtual {p0}, Lcom/letv/leui/app/LeStatusContentRemoteView;->getContentView()Landroid/widget/RemoteViews;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/app/LeStatusContentRemoteView;->addView(Landroid/widget/RemoteViews;)V
 
-    .line 60
     return-void
 .end method
 
@@ -57,15 +51,12 @@
     .param p1, "nestedView"    # Landroid/widget/RemoteViews;
 
     .prologue
-    .line 54
     iput-object p1, p0, Lcom/letv/leui/app/LeStatusContentRemoteView;->mActionRemoteView:Landroid/widget/RemoteViews;
 
-    .line 55
     const v0, 0x102008e
 
     invoke-super {p0, v0, p1}, Landroid/widget/RemoteViews;->addView(ILandroid/widget/RemoteViews;)V
 
-    .line 56
     return-void
 .end method
 
@@ -73,12 +64,10 @@
     .locals 3
 
     .prologue
-    .line 63
     iget-object v0, p0, Lcom/letv/leui/app/LeStatusContentRemoteView;->mActionRemoteView:Landroid/widget/RemoteViews;
 
     if-nez v0, :cond_0
 
-    .line 64
     new-instance v0, Landroid/widget/RemoteViews;
 
     invoke-virtual {p0}, Lcom/letv/leui/app/LeStatusContentRemoteView;->getPackage()Ljava/lang/String;
@@ -91,7 +80,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/app/LeStatusContentRemoteView;->mActionRemoteView:Landroid/widget/RemoteViews;
 
-    .line 68
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/app/LeStatusContentRemoteView;->mActionRemoteView:Landroid/widget/RemoteViews;
 
@@ -103,12 +91,10 @@
     .param p1, "srcId"    # I
 
     .prologue
-    .line 28
     const v0, 0x1020089
 
     invoke-virtual {p0, v0, p1}, Lcom/letv/leui/app/LeStatusContentRemoteView;->setImageViewResource(II)V
 
-    .line 29
     return-void
 .end method
 
@@ -119,33 +105,28 @@
     .prologue
     const v2, 0x102008c
 
-    .line 41
     const v0, 0x102008f
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1}, Lcom/letv/leui/app/LeStatusContentRemoteView;->setViewVisibility(II)V
 
-    .line 42
     const v0, 0x102008d
 
     const/16 v1, 0x8
 
     invoke-virtual {p0, v0, v1}, Lcom/letv/leui/app/LeStatusContentRemoteView;->setViewVisibility(II)V
 
-    .line 43
     const-string v0, "setBase"
 
     invoke-virtual {p0, v2, v0, p1, p2}, Lcom/letv/leui/app/LeStatusContentRemoteView;->setLong(ILjava/lang/String;J)V
 
-    .line 44
     const-string v0, "setStarted"
 
     const/4 v1, 0x1
 
     invoke-virtual {p0, v2, v0, v1}, Lcom/letv/leui/app/LeStatusContentRemoteView;->setBoolean(ILjava/lang/String;Z)V
 
-    .line 45
     return-void
 .end method
 
@@ -156,15 +137,12 @@
     .prologue
     const v1, 0x102008b
 
-    .line 36
     const/4 v0, 0x0
 
     invoke-virtual {p0, v1, v0}, Lcom/letv/leui/app/LeStatusContentRemoteView;->setViewVisibility(II)V
 
-    .line 37
     invoke-virtual {p0, v1, p1}, Lcom/letv/leui/app/LeStatusContentRemoteView;->setTextViewText(ILjava/lang/CharSequence;)V
 
-    .line 38
     return-void
 .end method
 
@@ -173,12 +151,10 @@
     .param p1, "name"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 20
     const v0, 0x1020087
 
     invoke-virtual {p0, v0, p1}, Lcom/letv/leui/app/LeStatusContentRemoteView;->setTextViewText(ILjava/lang/CharSequence;)V
 
-    .line 21
     return-void
 .end method
 
@@ -187,12 +163,10 @@
     .param p1, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 24
     const v0, 0x1020088
 
     invoke-virtual {p0, v0, p1}, Lcom/letv/leui/app/LeStatusContentRemoteView;->setImageViewBitmap(ILandroid/graphics/Bitmap;)V
 
-    .line 25
     return-void
 .end method
 
@@ -201,12 +175,10 @@
     .param p1, "state"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 32
     const v0, 0x102008a
 
     invoke-virtual {p0, v0, p1}, Lcom/letv/leui/app/LeStatusContentRemoteView;->setTextViewText(ILjava/lang/CharSequence;)V
 
-    .line 33
     return-void
 .end method
 
@@ -215,27 +187,23 @@
     .param p1, "time"    # J
 
     .prologue
-    .line 48
     const v0, 0x1020090
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1}, Lcom/letv/leui/app/LeStatusContentRemoteView;->setViewVisibility(II)V
 
-    .line 49
     const v0, 0x102008f
 
     const/16 v1, 0x8
 
     invoke-virtual {p0, v0, v1}, Lcom/letv/leui/app/LeStatusContentRemoteView;->setViewVisibility(II)V
 
-    .line 50
     const v0, 0x102008d
 
     const-string v1, "setTime"
 
     invoke-virtual {p0, v0, v1, p1, p2}, Lcom/letv/leui/app/LeStatusContentRemoteView;->setLong(ILjava/lang/String;J)V
 
-    .line 51
     return-void
 .end method

@@ -24,7 +24,6 @@
     .locals 1
 
     .prologue
-    .line 36
     const/4 v0, 0x4
 
     invoke-static {v0}, Landroid/telecom/Log;->isLoggable(I)Z
@@ -33,7 +32,6 @@
 
     sput-boolean v0, Landroid/telecom/Log;->INFO:Z
 
-    .line 37
     const/4 v0, 0x2
 
     invoke-static {v0}, Landroid/telecom/Log;->isLoggable(I)Z
@@ -49,7 +47,6 @@
     .locals 0
 
     .prologue
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -68,7 +65,6 @@
 
     const/4 v6, 0x0
 
-    .line 172
     if-eqz p2, :cond_0
 
     :try_start_0
@@ -81,7 +77,6 @@
     :cond_0
     move-object v1, p1
 
-    .line 179
     .local v1, "msg":Ljava/lang/String;
     :goto_0
     sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
@@ -100,7 +95,6 @@
 
     return-object v2
 
-    .line 172
     .end local v1    # "msg":Ljava/lang/String;
     :cond_1
     :try_start_1
@@ -114,11 +108,9 @@
 
     goto :goto_0
 
-    .line 174
     :catch_0
     move-exception v0
 
-    .line 175
     .local v0, "ife":Ljava/util/IllegalFormatException;
     const-string v2, "Log"
 
@@ -138,7 +130,6 @@
 
     invoke-static {v2, v0, v3, v4}, Landroid/telecom/Log;->wtf(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 177
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -168,7 +159,6 @@
     .param p2, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 55
     const-string v0, "TelecomFramework"
 
     invoke-static {p0}, Landroid/telecom/Log;->getPrefixFromObject(Ljava/lang/Object;)Ljava/lang/String;
@@ -181,7 +171,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 57
     return-void
 .end method
 
@@ -192,7 +181,6 @@
     .param p2, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 49
     const-string v0, "TelecomFramework"
 
     invoke-static {p0, p1, p2}, Landroid/telecom/Log;->buildMessage(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
@@ -201,7 +189,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 51
     return-void
 .end method
 
@@ -213,7 +200,6 @@
     .param p3, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 103
     const-string v0, "TelecomFramework"
 
     invoke-static {p0}, Landroid/telecom/Log;->getPrefixFromObject(Ljava/lang/Object;)Ljava/lang/String;
@@ -226,7 +212,6 @@
 
     invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 106
     return-void
 .end method
 
@@ -238,7 +223,6 @@
     .param p3, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 97
     const-string v0, "TelecomFramework"
 
     invoke-static {p0, p2, p3}, Landroid/telecom/Log;->buildMessage(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
@@ -247,7 +231,6 @@
 
     invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 99
     return-void
 .end method
 
@@ -258,7 +241,6 @@
     .prologue
     const/16 v4, 0x10
 
-    .line 152
     new-instance v1, Ljava/lang/StringBuffer;
 
     array-length v3, p0
@@ -267,7 +249,6 @@
 
     invoke-direct {v1, v3}, Ljava/lang/StringBuffer;-><init>(I)V
 
-    .line 154
     .local v1, "hex":Ljava/lang/StringBuffer;
     const/4 v2, 0x0
 
@@ -277,21 +258,17 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 155
     aget-byte v3, p0, v2
 
     and-int/lit16 v0, v3, 0xff
 
-    .line 156
     .local v0, "byteIntValue":I
     if-ge v0, v4, :cond_0
 
-    .line 157
     const-string v3, "0"
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 159
     :cond_0
     invoke-static {v0, v4}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
@@ -299,12 +276,10 @@
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 154
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 162
     .end local v0    # "byteIntValue":I
     :cond_1
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
@@ -319,7 +294,6 @@
     .param p0, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 166
     if-nez p0, :cond_0
 
     const-string v0, "<null>"
@@ -346,12 +320,10 @@
     .param p2, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 66
     sget-boolean v0, Landroid/telecom/Log;->INFO:Z
 
     if-eqz v0, :cond_0
 
-    .line 67
     const-string v0, "TelecomFramework"
 
     invoke-static {p0}, Landroid/telecom/Log;->getPrefixFromObject(Ljava/lang/Object;)Ljava/lang/String;
@@ -364,7 +336,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 69
     :cond_0
     return-void
 .end method
@@ -376,12 +347,10 @@
     .param p2, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 60
     sget-boolean v0, Landroid/telecom/Log;->INFO:Z
 
     if-eqz v0, :cond_0
 
-    .line 61
     const-string v0, "TelecomFramework"
 
     invoke-static {p0, p1, p2}, Landroid/telecom/Log;->buildMessage(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
@@ -390,7 +359,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 63
     :cond_0
     return-void
 .end method
@@ -400,7 +368,6 @@
     .param p0, "level"    # I
 
     .prologue
-    .line 44
     const-string v0, "TelecomFramework"
 
     invoke-static {v0, p0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
@@ -415,20 +382,17 @@
     .param p0, "pii"    # Ljava/lang/Object;
 
     .prologue
-    .line 133
     if-eqz p0, :cond_0
 
     sget-boolean v0, Landroid/telecom/Log;->VERBOSE:Z
 
     if-eqz v0, :cond_1
 
-    .line 134
     :cond_0
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 136
     :goto_0
     return-object v0
 
@@ -477,7 +441,6 @@
     .param p0, "input"    # [B
 
     .prologue
-    .line 142
     :try_start_0
     const-string v3, "SHA-1"
 
@@ -487,16 +450,13 @@
 
     move-result-object v1
 
-    .line 146
     .local v1, "messageDigest":Ljava/security/MessageDigest;
     invoke-virtual {v1, p0}, Ljava/security/MessageDigest;->update([B)V
 
-    .line 147
     invoke-virtual {v1}, Ljava/security/MessageDigest;->digest()[B
 
     move-result-object v2
 
-    .line 148
     .local v2, "result":[B
     invoke-static {v2}, Landroid/telecom/Log;->encodeHex([B)Ljava/lang/String;
 
@@ -507,11 +467,9 @@
     :goto_0
     return-object v3
 
-    .line 143
     :catch_0
     move-exception v0
 
-    .line 144
     .local v0, "e":Ljava/security/NoSuchAlgorithmException;
     const/4 v3, 0x0
 
@@ -525,12 +483,10 @@
     .param p2, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 78
     sget-boolean v0, Landroid/telecom/Log;->VERBOSE:Z
 
     if-eqz v0, :cond_0
 
-    .line 79
     const-string v0, "TelecomFramework"
 
     invoke-static {p0}, Landroid/telecom/Log;->getPrefixFromObject(Ljava/lang/Object;)Ljava/lang/String;
@@ -543,7 +499,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 81
     :cond_0
     return-void
 .end method
@@ -555,12 +510,10 @@
     .param p2, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 72
     sget-boolean v0, Landroid/telecom/Log;->VERBOSE:Z
 
     if-eqz v0, :cond_0
 
-    .line 73
     const-string v0, "TelecomFramework"
 
     invoke-static {p0, p1, p2}, Landroid/telecom/Log;->buildMessage(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
@@ -569,7 +522,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 75
     :cond_0
     return-void
 .end method
@@ -581,7 +533,6 @@
     .param p2, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 91
     const-string v0, "TelecomFramework"
 
     invoke-static {p0}, Landroid/telecom/Log;->getPrefixFromObject(Ljava/lang/Object;)Ljava/lang/String;
@@ -594,7 +545,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 93
     return-void
 .end method
 
@@ -605,7 +555,6 @@
     .param p2, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 85
     const-string v0, "TelecomFramework"
 
     invoke-static {p0, p1, p2}, Landroid/telecom/Log;->buildMessage(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
@@ -614,7 +563,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 87
     return-void
 .end method
 
@@ -625,7 +573,6 @@
     .param p2, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 123
     invoke-static {p0}, Landroid/telecom/Log;->getPrefixFromObject(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -634,7 +581,6 @@
 
     move-result-object v0
 
-    .line 124
     .local v0, "msg":Ljava/lang/String;
     const-string v1, "TelecomFramework"
 
@@ -644,7 +590,6 @@
 
     invoke-static {v1, v0, v2}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 125
     return-void
 .end method
 
@@ -656,7 +601,6 @@
     .param p3, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 113
     const-string v0, "TelecomFramework"
 
     invoke-static {p0}, Landroid/telecom/Log;->getPrefixFromObject(Ljava/lang/Object;)Ljava/lang/String;
@@ -669,7 +613,6 @@
 
     invoke-static {v0, v1, p1}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 115
     return-void
 .end method
 
@@ -680,12 +623,10 @@
     .param p2, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 118
     invoke-static {p0, p1, p2}, Landroid/telecom/Log;->buildMessage(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 119
     .local v0, "msg":Ljava/lang/String;
     const-string v1, "TelecomFramework"
 
@@ -695,7 +636,6 @@
 
     invoke-static {v1, v0, v2}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 120
     return-void
 .end method
 
@@ -707,7 +647,6 @@
     .param p3, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 109
     const-string v0, "TelecomFramework"
 
     invoke-static {p0, p2, p3}, Landroid/telecom/Log;->buildMessage(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
@@ -716,6 +655,5 @@
 
     invoke-static {v0, v1, p1}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 110
     return-void
 .end method

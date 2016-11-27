@@ -24,22 +24,16 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 39
     invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
 
-    .line 7
     iput v0, p0, Lcom/android/server/pm/http/exception/NetworkRequestException;->mExceptionTypeCode:I
 
-    .line 9
     iput v0, p0, Lcom/android/server/pm/http/exception/NetworkRequestException;->statusCode:I
 
-    .line 40
     iput p1, p0, Lcom/android/server/pm/http/exception/NetworkRequestException;->statusCode:I
 
-    .line 41
     iput p2, p0, Lcom/android/server/pm/http/exception/NetworkRequestException;->mExceptionTypeCode:I
 
-    .line 42
     return-void
 .end method
 
@@ -50,16 +44,12 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 16
     invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
 
-    .line 7
     iput v0, p0, Lcom/android/server/pm/http/exception/NetworkRequestException;->mExceptionTypeCode:I
 
-    .line 9
     iput v0, p0, Lcom/android/server/pm/http/exception/NetworkRequestException;->statusCode:I
 
-    .line 17
     return-void
 .end method
 
@@ -72,22 +62,16 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 34
     invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
 
-    .line 7
     iput v0, p0, Lcom/android/server/pm/http/exception/NetworkRequestException;->mExceptionTypeCode:I
 
-    .line 9
     iput v0, p0, Lcom/android/server/pm/http/exception/NetworkRequestException;->statusCode:I
 
-    .line 35
     iput p2, p0, Lcom/android/server/pm/http/exception/NetworkRequestException;->statusCode:I
 
-    .line 36
     iput p3, p0, Lcom/android/server/pm/http/exception/NetworkRequestException;->mExceptionTypeCode:I
 
-    .line 37
     return-void
 .end method
 
@@ -98,16 +82,12 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 12
     invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 7
     iput v0, p0, Lcom/android/server/pm/http/exception/NetworkRequestException;->mExceptionTypeCode:I
 
-    .line 9
     iput v0, p0, Lcom/android/server/pm/http/exception/NetworkRequestException;->statusCode:I
 
-    .line 13
     return-void
 .end method
 
@@ -119,19 +99,14 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 20
     invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 7
     iput v0, p0, Lcom/android/server/pm/http/exception/NetworkRequestException;->mExceptionTypeCode:I
 
-    .line 9
     iput v0, p0, Lcom/android/server/pm/http/exception/NetworkRequestException;->statusCode:I
 
-    .line 21
     iput p2, p0, Lcom/android/server/pm/http/exception/NetworkRequestException;->statusCode:I
 
-    .line 22
     return-void
 .end method
 
@@ -143,16 +118,12 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 25
     invoke-direct {p0, p1, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 7
     iput v0, p0, Lcom/android/server/pm/http/exception/NetworkRequestException;->mExceptionTypeCode:I
 
-    .line 9
     iput v0, p0, Lcom/android/server/pm/http/exception/NetworkRequestException;->statusCode:I
 
-    .line 26
     return-void
 .end method
 
@@ -165,19 +136,14 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 29
     invoke-direct {p0, p1, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 7
     iput v0, p0, Lcom/android/server/pm/http/exception/NetworkRequestException;->mExceptionTypeCode:I
 
-    .line 9
     iput v0, p0, Lcom/android/server/pm/http/exception/NetworkRequestException;->statusCode:I
 
-    .line 30
     iput p3, p0, Lcom/android/server/pm/http/exception/NetworkRequestException;->statusCode:I
 
-    .line 31
     return-void
 .end method
 
@@ -187,7 +153,6 @@
     .locals 1
 
     .prologue
-    .line 45
     iget v0, p0, Lcom/android/server/pm/http/exception/NetworkRequestException;->mExceptionTypeCode:I
 
     return v0
@@ -197,7 +162,6 @@
     .locals 1
 
     .prologue
-    .line 49
     iget v0, p0, Lcom/android/server/pm/http/exception/NetworkRequestException;->statusCode:I
 
     return v0

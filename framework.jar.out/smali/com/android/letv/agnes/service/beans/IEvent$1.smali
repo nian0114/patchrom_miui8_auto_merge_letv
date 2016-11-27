@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 107
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 110
     new-instance v1, Lcom/android/letv/agnes/service/beans/IEvent;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
@@ -92,7 +90,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 107
     invoke-virtual {p0, p1}, Lcom/android/letv/agnes/service/beans/IEvent$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/letv/agnes/service/beans/IEvent;
 
     move-result-object v0
@@ -105,7 +102,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 115
     new-array v0, p1, [Lcom/android/letv/agnes/service/beans/IEvent;
 
     return-object v0
@@ -116,7 +112,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 107
     invoke-virtual {p0, p1}, Lcom/android/letv/agnes/service/beans/IEvent$1;->newArray(I)[Lcom/android/letv/agnes/service/beans/IEvent;
 
     move-result-object v0

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 318
     iput-object p1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$3;->this$0:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
 
     const/high16 v7, 0x423c0000    # 47.0f
 
-    .line 321
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v3
@@ -56,7 +54,6 @@
 
     check-cast v2, Ljava/lang/Float;
 
-    .line 322
     .local v2, "value":Ljava/lang/Float;
     iget-object v3, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$3;->this$0:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
@@ -67,7 +64,6 @@
 
     invoke-virtual {v3, v4}, Landroid/graphics/Bitmap;->eraseColor(I)V
 
-    .line 323
     iget-object v3, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$3;->this$0:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
     # getter for: Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mCanvas:Landroid/graphics/Canvas;
@@ -77,7 +73,6 @@
 
     invoke-virtual {v3, v4}, Landroid/graphics/Canvas;->drawColor(I)V
 
-    .line 324
     invoke-virtual {v2}, Ljava/lang/Float;->floatValue()F
 
     move-result v3
@@ -90,7 +85,6 @@
 
     div-float v1, v3, v4
 
-    .line 325
     .local v1, "radius":F
     const/4 v0, 0x0
 
@@ -100,7 +94,6 @@
 
     if-ge v0, v3, :cond_1
 
-    .line 326
     iget-object v3, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$3;->this$0:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
     # getter for: Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->colorStyle:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$ColorStyle;
@@ -112,7 +105,6 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 327
     iget-object v3, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$3;->this$0:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
     # getter for: Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mPaint:Landroid/graphics/Paint;
@@ -124,7 +116,6 @@
 
     invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 331
     :goto_1
     iget-object v3, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$3;->this$0:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
@@ -188,12 +179,10 @@
 
     invoke-virtual {v4, v5, v3, v1, v6}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 325
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 329
     :cond_0
     iget-object v3, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$3;->this$0:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
@@ -215,7 +204,6 @@
 
     goto :goto_1
 
-    .line 335
     :cond_1
     iget-object v3, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$3;->this$0:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
@@ -230,6 +218,5 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 336
     return-void
 .end method

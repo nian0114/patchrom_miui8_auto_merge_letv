@@ -39,10 +39,8 @@
 
     const/4 v2, 0x0
 
-    .line 536
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 537
     array-length v0, p2
 
     if-gt v0, v1, :cond_0
@@ -52,7 +50,6 @@
     :goto_0
     invoke-static {v0}, Lcom/google/gson/internal/$Gson$Preconditions;->checkArgument(Z)V
 
-    .line 538
     array-length v0, p1
 
     if-ne v0, v1, :cond_1
@@ -62,23 +59,19 @@
     :goto_1
     invoke-static {v0}, Lcom/google/gson/internal/$Gson$Preconditions;->checkArgument(Z)V
 
-    .line 540
     array-length v0, p2
 
     if-ne v0, v1, :cond_3
 
-    .line 541
     aget-object v0, p2, v2
 
     invoke-static {v0}, Lcom/google/gson/internal/$Gson$Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 542
     aget-object v0, p2, v2
 
     # invokes: Lcom/google/gson/internal/$Gson$Types;->checkNotPrimitive(Ljava/lang/reflect/Type;)V
     invoke-static {v0}, Lcom/google/gson/internal/$Gson$Types;->access$000(Ljava/lang/reflect/Type;)V
 
-    .line 543
     aget-object v0, p1, v2
 
     const-class v3, Ljava/lang/Object;
@@ -88,7 +81,6 @@
     :goto_2
     invoke-static {v1}, Lcom/google/gson/internal/$Gson$Preconditions;->checkArgument(Z)V
 
-    .line 544
     aget-object v0, p2, v2
 
     invoke-static {v0}, Lcom/google/gson/internal/$Gson$Types;->canonicalize(Ljava/lang/reflect/Type;)Ljava/lang/reflect/Type;
@@ -97,51 +89,42 @@
 
     iput-object v0, p0, Lcom/google/gson/internal/$Gson$Types$WildcardTypeImpl;->lowerBound:Ljava/lang/reflect/Type;
 
-    .line 545
     const-class v0, Ljava/lang/Object;
 
     iput-object v0, p0, Lcom/google/gson/internal/$Gson$Types$WildcardTypeImpl;->upperBound:Ljava/lang/reflect/Type;
 
-    .line 553
     :goto_3
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 537
     goto :goto_0
 
     :cond_1
     move v0, v2
 
-    .line 538
     goto :goto_1
 
     :cond_2
     move v1, v2
 
-    .line 543
     goto :goto_2
 
-    .line 548
     :cond_3
     aget-object v0, p1, v2
 
     invoke-static {v0}, Lcom/google/gson/internal/$Gson$Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 549
     aget-object v0, p1, v2
 
     # invokes: Lcom/google/gson/internal/$Gson$Types;->checkNotPrimitive(Ljava/lang/reflect/Type;)V
     invoke-static {v0}, Lcom/google/gson/internal/$Gson$Types;->access$000(Ljava/lang/reflect/Type;)V
 
-    .line 550
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/gson/internal/$Gson$Types$WildcardTypeImpl;->lowerBound:Ljava/lang/reflect/Type;
 
-    .line 551
     aget-object v0, p1, v2
 
     invoke-static {v0}, Lcom/google/gson/internal/$Gson$Types;->canonicalize(Ljava/lang/reflect/Type;)Ljava/lang/reflect/Type;
@@ -160,7 +143,6 @@
     .param p1, "other"    # Ljava/lang/Object;
 
     .prologue
-    .line 564
     instance-of v0, p1, Ljava/lang/reflect/WildcardType;
 
     if-eqz v0, :cond_0
@@ -189,7 +171,6 @@
     .locals 3
 
     .prologue
-    .line 560
     iget-object v0, p0, Lcom/google/gson/internal/$Gson$Types$WildcardTypeImpl;->lowerBound:Ljava/lang/reflect/Type;
 
     if-eqz v0, :cond_0
@@ -217,7 +198,6 @@
     .locals 3
 
     .prologue
-    .line 556
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/reflect/Type;
@@ -235,7 +215,6 @@
     .locals 2
 
     .prologue
-    .line 570
     iget-object v0, p0, Lcom/google/gson/internal/$Gson$Types$WildcardTypeImpl;->lowerBound:Ljava/lang/reflect/Type;
 
     if-eqz v0, :cond_0
@@ -271,12 +250,10 @@
     .locals 2
 
     .prologue
-    .line 575
     iget-object v0, p0, Lcom/google/gson/internal/$Gson$Types$WildcardTypeImpl;->lowerBound:Ljava/lang/reflect/Type;
 
     if-eqz v0, :cond_0
 
-    .line 576
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -301,11 +278,9 @@
 
     move-result-object v0
 
-    .line 580
     :goto_0
     return-object v0
 
-    .line 577
     :cond_0
     iget-object v0, p0, Lcom/google/gson/internal/$Gson$Types$WildcardTypeImpl;->upperBound:Ljava/lang/reflect/Type;
 
@@ -313,12 +288,10 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 578
     const-string v0, "?"
 
     goto :goto_0
 
-    .line 580
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 

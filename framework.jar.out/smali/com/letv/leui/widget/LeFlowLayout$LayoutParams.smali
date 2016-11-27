@@ -37,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 314
     const/4 v0, -0x1
 
     sput v0, Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;->NO_SPACING:I
@@ -51,25 +50,20 @@
     .param p2, "height"    # I
 
     .prologue
-    .line 329
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    .line 318
     sget v0, Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;->NO_SPACING:I
 
     iput v0, p0, Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;->horizontalSpacing:I
 
-    .line 319
     sget v0, Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;->NO_SPACING:I
 
     iput v0, p0, Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;->verticalSpacing:I
 
-    .line 321
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;->newLine:Z
 
-    .line 330
     return-void
 .end method
 
@@ -79,28 +73,22 @@
     .param p2, "attributeSet"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 324
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$LayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 318
     sget v0, Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;->NO_SPACING:I
 
     iput v0, p0, Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;->horizontalSpacing:I
 
-    .line 319
     sget v0, Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;->NO_SPACING:I
 
     iput v0, p0, Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;->verticalSpacing:I
 
-    .line 321
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;->newLine:Z
 
-    .line 325
     invoke-direct {p0, p1, p2}, Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;->readStyleParameters(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 326
     return-void
 .end method
 
@@ -109,25 +97,20 @@
     .param p1, "layoutParams"    # Landroid/view/ViewGroup$LayoutParams;
 
     .prologue
-    .line 333
     invoke-direct {p0, p1}, Landroid/view/ViewGroup$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 318
     sget v0, Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;->NO_SPACING:I
 
     iput v0, p0, Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;->horizontalSpacing:I
 
-    .line 319
     sget v0, Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;->NO_SPACING:I
 
     iput v0, p0, Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;->verticalSpacing:I
 
-    .line 321
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;->newLine:Z
 
-    .line 334
     return-void
 .end method
 
@@ -136,7 +119,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;
 
     .prologue
-    .line 313
     iget-boolean v0, p0, Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;->newLine:Z
 
     return v0
@@ -147,7 +129,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;
 
     .prologue
-    .line 313
     iget v0, p0, Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;->verticalSpacing:I
 
     return v0
@@ -158,7 +139,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;
 
     .prologue
-    .line 313
     iget v0, p0, Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;->horizontalSpacing:I
 
     return v0
@@ -169,7 +149,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;
 
     .prologue
-    .line 313
     iget v0, p0, Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;->x:I
 
     return v0
@@ -180,7 +159,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;
 
     .prologue
-    .line 313
     iget v0, p0, Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;->y:I
 
     return v0
@@ -192,14 +170,12 @@
     .param p2, "attributeSet"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 350
     sget-object v1, Lcom/android/internal/R$styleable;->LeFlowLayout_LayoutParams:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 352
     .local v0, "a":Landroid/content/res/TypedArray;
     const/4 v1, 0x1
 
@@ -212,7 +188,6 @@
 
     iput v1, p0, Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;->horizontalSpacing:I
 
-    .line 353
     const/4 v1, 0x2
 
     sget v2, Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;->NO_SPACING:I
@@ -223,7 +198,6 @@
 
     iput v1, p0, Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;->verticalSpacing:I
 
-    .line 354
     const/4 v1, 0x0
 
     const/4 v2, 0x0
@@ -236,13 +210,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 356
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 358
     return-void
 
-    .line 356
     :catchall_0
     move-exception v1
 
@@ -257,7 +228,6 @@
     .locals 2
 
     .prologue
-    .line 337
     iget v0, p0, Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;->horizontalSpacing:I
 
     sget v1, Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;->NO_SPACING:I
@@ -279,7 +249,6 @@
     .locals 1
 
     .prologue
-    .line 365
     iget-boolean v0, p0, Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;->exceedMaxLineNum:Z
 
     return v0
@@ -290,10 +259,8 @@
     .param p1, "exceed"    # Z
 
     .prologue
-    .line 361
     iput-boolean p1, p0, Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;->exceedMaxLineNum:Z
 
-    .line 362
     return-void
 .end method
 
@@ -303,13 +270,10 @@
     .param p2, "y"    # I
 
     .prologue
-    .line 345
     iput p1, p0, Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;->x:I
 
-    .line 346
     iput p2, p0, Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;->y:I
 
-    .line 347
     return-void
 .end method
 
@@ -317,7 +281,6 @@
     .locals 2
 
     .prologue
-    .line 341
     iget v0, p0, Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;->verticalSpacing:I
 
     sget v1, Lcom/letv/leui/widget/LeFlowLayout$LayoutParams;->NO_SPACING:I

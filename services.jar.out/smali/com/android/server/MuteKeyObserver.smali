@@ -62,7 +62,6 @@
     .locals 1
 
     .prologue
-    .line 28
     const-class v0, Lcom/android/server/MuteKeyObserver;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -83,36 +82,28 @@
 
     const/4 v1, 0x0
 
-    .line 78
     invoke-direct {p0}, Landroid/os/UEventObserver;-><init>()V
 
-    .line 41
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/MuteKeyObserver;->mLock:Ljava/lang/Object;
 
-    .line 43
     iput v1, p0, Lcom/android/server/MuteKeyObserver;->mMuteKeyState:I
 
-    .line 44
     iput v1, p0, Lcom/android/server/MuteKeyObserver;->mPreviousMuteKeyState:I
 
-    .line 51
     iput-boolean v2, p0, Lcom/android/server/MuteKeyObserver;->mFirstComing:Z
 
-    .line 158
     new-instance v0, Lcom/android/server/MuteKeyObserver$1;
 
     invoke-direct {v0, p0, v2}, Lcom/android/server/MuteKeyObserver$1;-><init>(Lcom/android/server/MuteKeyObserver;Z)V
 
     iput-object v0, p0, Lcom/android/server/MuteKeyObserver;->mHandler:Landroid/os/Handler;
 
-    .line 79
     iput-object p1, p0, Lcom/android/server/MuteKeyObserver;->mContext:Landroid/content/Context;
 
-    .line 80
     const-string v0, "power"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -123,7 +114,6 @@
 
     iput-object v0, p0, Lcom/android/server/MuteKeyObserver;->mPowerManager:Landroid/os/PowerManager;
 
-    .line 81
     const-string v0, "audio"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -134,29 +124,24 @@
 
     iput-object v0, p0, Lcom/android/server/MuteKeyObserver;->mAudioManager:Landroid/media/AudioManager;
 
-    .line 82
     invoke-direct {p0}, Lcom/android/server/MuteKeyObserver;->init()V
 
-    .line 83
     const-string v0, "DEVPATH=/devices/virtual/switch/mute_key"
 
     invoke-virtual {p0, v0}, Lcom/android/server/MuteKeyObserver;->startObserving(Ljava/lang/String;)V
 
-    .line 84
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/MuteKeyObserver;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 85
     new-instance v0, Lcom/android/server/MuteKeyObserver$SettingsObserver;
 
     invoke-direct {v0, p0}, Lcom/android/server/MuteKeyObserver$SettingsObserver;-><init>(Lcom/android/server/MuteKeyObserver;)V
 
     iput-object v0, p0, Lcom/android/server/MuteKeyObserver;->mSettingsObserver:Lcom/android/server/MuteKeyObserver$SettingsObserver;
 
-    .line 87
     return-void
 .end method
 
@@ -166,7 +151,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 27
     invoke-direct {p0, p1}, Lcom/android/server/MuteKeyObserver;->handleHallStateChange(Z)V
 
     return-void
@@ -177,7 +161,6 @@
     .param p0, "x0"    # Lcom/android/server/MuteKeyObserver;
 
     .prologue
-    .line 27
     invoke-direct {p0}, Lcom/android/server/MuteKeyObserver;->handleHSreamsChange()V
 
     return-void
@@ -188,7 +171,6 @@
     .param p0, "x0"    # Lcom/android/server/MuteKeyObserver;
 
     .prologue
-    .line 27
     iget-boolean v0, p0, Lcom/android/server/MuteKeyObserver;->mSoftMuteKey:Z
 
     return v0
@@ -200,7 +182,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 27
     iput-boolean p1, p0, Lcom/android/server/MuteKeyObserver;->mSoftMuteKey:Z
 
     return p1
@@ -211,7 +192,6 @@
     .param p0, "x0"    # Lcom/android/server/MuteKeyObserver;
 
     .prologue
-    .line 27
     iget-object v0, p0, Lcom/android/server/MuteKeyObserver;->mContentResolver:Landroid/content/ContentResolver;
 
     return-object v0
@@ -222,7 +202,6 @@
     .param p0, "x0"    # Lcom/android/server/MuteKeyObserver;
 
     .prologue
-    .line 27
     invoke-direct {p0}, Lcom/android/server/MuteKeyObserver;->updateStreamLocked()V
 
     return-void
@@ -233,7 +212,6 @@
     .param p0, "x0"    # Lcom/android/server/MuteKeyObserver;
 
     .prologue
-    .line 27
     iget v0, p0, Lcom/android/server/MuteKeyObserver;->mMuteKeyState:I
 
     return v0
@@ -245,7 +223,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 27
     iput p1, p0, Lcom/android/server/MuteKeyObserver;->mMuteKeyState:I
 
     return p1
@@ -256,7 +233,6 @@
     .param p0, "x0"    # Lcom/android/server/MuteKeyObserver;
 
     .prologue
-    .line 27
     iget-object v0, p0, Lcom/android/server/MuteKeyObserver;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -267,7 +243,6 @@
     .param p0, "x0"    # Lcom/android/server/MuteKeyObserver;
 
     .prologue
-    .line 27
     iget-object v0, p0, Lcom/android/server/MuteKeyObserver;->mAudioManager:Landroid/media/AudioManager;
 
     return-object v0
@@ -277,12 +252,10 @@
     .locals 4
 
     .prologue
-    .line 151
     iget-object v1, p0, Lcom/android/server/MuteKeyObserver;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 152
     :try_start_0
     sget-object v0, Lcom/android/server/MuteKeyObserver;->TAG:Ljava/lang/String;
 
@@ -308,18 +281,14 @@
 
     invoke-static {v0, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 153
     iget-object v0, p0, Lcom/android/server/MuteKeyObserver;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v0}, Landroid/media/AudioManager;->updateMuteKeyAffectedStreams()Z
 
-    .line 155
     monitor-exit v1
 
-    .line 156
     return-void
 
-    .line 155
     :catchall_0
     move-exception v0
 
@@ -335,12 +304,10 @@
     .param p1, "isFirst"    # Z
 
     .prologue
-    .line 128
     iget-object v2, p0, Lcom/android/server/MuteKeyObserver;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 129
     :try_start_0
     sget-object v1, Lcom/android/server/MuteKeyObserver;->TAG:Ljava/lang/String;
 
@@ -366,7 +333,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 130
     iget-object v1, p0, Lcom/android/server/MuteKeyObserver;->mPowerManager:Landroid/os/PowerManager;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -375,12 +341,10 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/os/PowerManager;->wakeUp(J)V
 
-    .line 131
     iget-boolean v1, p0, Lcom/android/server/MuteKeyObserver;->mSoftMuteKey:Z
 
     if-eqz v1, :cond_0
 
-    .line 132
     iget-object v1, p0, Lcom/android/server/MuteKeyObserver;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -397,7 +361,6 @@
 
     iput v1, p0, Lcom/android/server/MuteKeyObserver;->mMuteKeyState:I
 
-    .line 135
     :cond_0
     iget-object v1, p0, Lcom/android/server/MuteKeyObserver;->mContext:Landroid/content/Context;
 
@@ -413,7 +376,6 @@
 
     move-result v0
 
-    .line 138
     .local v0, "zenMode":I
     const/4 v1, 0x2
 
@@ -423,7 +385,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 140
     :cond_1
     sget-object v1, Lcom/android/server/MuteKeyObserver;->TAG:Ljava/lang/String;
 
@@ -447,14 +408,11 @@
 
     invoke-static {v1, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 146
     :goto_0
     monitor-exit v2
 
-    .line 147
     return-void
 
-    .line 143
     :cond_2
     iget-object v1, p0, Lcom/android/server/MuteKeyObserver;->mAudioManager:Landroid/media/AudioManager;
 
@@ -466,7 +424,6 @@
 
     goto :goto_0
 
-    .line 146
     .end local v0    # "zenMode":I
     :catchall_0
     move-exception v1
@@ -482,18 +439,15 @@
     .locals 8
 
     .prologue
-    .line 90
     iget-object v5, p0, Lcom/android/server/MuteKeyObserver;->mLock:Ljava/lang/Object;
 
     monitor-enter v5
 
-    .line 92
     const/16 v4, 0x400
 
     :try_start_0
     new-array v0, v4, [C
 
-    .line 93
     .local v0, "buffer":[C
     new-instance v2, Ljava/io/FileReader;
 
@@ -505,7 +459,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 95
     .local v2, "file":Ljava/io/FileReader;
     const/4 v4, 0x0
 
@@ -516,7 +469,6 @@
 
     move-result v3
 
-    .line 96
     .local v3, "len":I
     new-instance v4, Ljava/lang/String;
 
@@ -538,12 +490,10 @@
 
     iput v4, p0, Lcom/android/server/MuteKeyObserver;->mMuteKeyState:I
 
-    .line 97
     iget v4, p0, Lcom/android/server/MuteKeyObserver;->mMuteKeyState:I
 
     iput v4, p0, Lcom/android/server/MuteKeyObserver;->mPreviousMuteKeyState:I
 
-    .line 98
     sget-object v4, Lcom/android/server/MuteKeyObserver;->TAG:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -570,7 +520,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 100
     :try_start_2
     invoke-virtual {v2}, Ljava/io/FileReader;->close()V
     :try_end_2
@@ -578,7 +527,6 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 107
     .end local v0    # "buffer":[C
     .end local v2    # "file":Ljava/io/FileReader;
     .end local v3    # "len":I
@@ -588,10 +536,8 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 108
     return-void
 
-    .line 100
     .restart local v0    # "buffer":[C
     .restart local v2    # "file":Ljava/io/FileReader;
     :catchall_0
@@ -606,13 +552,11 @@
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_1
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 102
     .end local v0    # "buffer":[C
     .end local v2    # "file":Ljava/io/FileReader;
     :catch_0
     move-exception v1
 
-    .line 103
     .local v1, "e":Ljava/io/FileNotFoundException;
     :try_start_5
     sget-object v4, Lcom/android/server/MuteKeyObserver;->TAG:Ljava/lang/String;
@@ -623,7 +567,6 @@
 
     goto :goto_0
 
-    .line 107
     .end local v1    # "e":Ljava/io/FileNotFoundException;
     :catchall_1
     move-exception v4
@@ -634,11 +577,9 @@
 
     throw v4
 
-    .line 104
     :catch_1
     move-exception v1
 
-    .line 105
     .local v1, "e":Ljava/lang/Exception;
     :try_start_6
     sget-object v4, Lcom/android/server/MuteKeyObserver;->TAG:Ljava/lang/String;
@@ -659,7 +600,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 119
     iget-object v2, p0, Lcom/android/server/MuteKeyObserver;->mHandler:Landroid/os/Handler;
 
     iget-object v3, p0, Lcom/android/server/MuteKeyObserver;->mHandler:Landroid/os/Handler;
@@ -675,13 +615,11 @@
 
     invoke-virtual {v2, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 120
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 119
     goto :goto_0
 .end method
 
@@ -689,14 +627,12 @@
     .locals 2
 
     .prologue
-    .line 123
     iget-object v0, p0, Lcom/android/server/MuteKeyObserver;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 124
     return-void
 .end method
 
@@ -707,7 +643,6 @@
     .param p1, "event"    # Landroid/os/UEventObserver$UEvent;
 
     .prologue
-    .line 57
     sget-object v2, Lcom/android/server/MuteKeyObserver;->TAG:Ljava/lang/String;
 
     const/4 v3, 0x2
@@ -718,7 +653,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 58
     sget-object v2, Lcom/android/server/MuteKeyObserver;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -745,13 +679,11 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 61
     :cond_0
     iget-object v3, p0, Lcom/android/server/MuteKeyObserver;->mLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 63
     :try_start_0
     const-string v2, "SWITCH_STATE"
 
@@ -763,26 +695,21 @@
 
     move-result v1
 
-    .line 64
     .local v1, "newState":I
     iget v2, p0, Lcom/android/server/MuteKeyObserver;->mMuteKeyState:I
 
     if-eq v1, v2, :cond_1
 
-    .line 65
     iget v2, p0, Lcom/android/server/MuteKeyObserver;->mMuteKeyState:I
 
     iput v2, p0, Lcom/android/server/MuteKeyObserver;->mPreviousMuteKeyState:I
 
-    .line 66
     iput v1, p0, Lcom/android/server/MuteKeyObserver;->mMuteKeyState:I
 
-    .line 67
     iget-boolean v2, p0, Lcom/android/server/MuteKeyObserver;->mSystemReady:Z
 
     if-eqz v2, :cond_1
 
-    .line 68
     iget-boolean v2, p0, Lcom/android/server/MuteKeyObserver;->mFirstComing:Z
 
     invoke-direct {p0, v2}, Lcom/android/server/MuteKeyObserver;->updateLocked(Z)V
@@ -790,21 +717,17 @@
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 74
     .end local v1    # "newState":I
     :cond_1
     :goto_0
     :try_start_1
     monitor-exit v3
 
-    .line 75
     return-void
 
-    .line 71
     :catch_0
     move-exception v0
 
-    .line 72
     .local v0, "e":Ljava/lang/NumberFormatException;
     sget-object v2, Lcom/android/server/MuteKeyObserver;->TAG:Ljava/lang/String;
 
@@ -830,7 +753,6 @@
 
     goto :goto_0
 
-    .line 74
     .end local v0    # "e":Ljava/lang/NumberFormatException;
     :catchall_0
     move-exception v2
@@ -846,34 +768,27 @@
     .locals 2
 
     .prologue
-    .line 111
     iget-object v1, p0, Lcom/android/server/MuteKeyObserver;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 112
     :try_start_0
     iget-boolean v0, p0, Lcom/android/server/MuteKeyObserver;->mFirstComing:Z
 
     invoke-direct {p0, v0}, Lcom/android/server/MuteKeyObserver;->updateLocked(Z)V
 
-    .line 113
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/MuteKeyObserver;->mFirstComing:Z
 
-    .line 114
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/MuteKeyObserver;->mSystemReady:Z
 
-    .line 115
     monitor-exit v1
 
-    .line 116
     return-void
 
-    .line 115
     :catchall_0
     move-exception v0
 

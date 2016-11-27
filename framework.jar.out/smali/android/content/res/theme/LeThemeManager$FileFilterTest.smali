@@ -27,18 +27,14 @@
     .param p1, "condition"    # Ljava/lang/String;
 
     .prologue
-    .line 117
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 116
     const-string v0, ""
 
     iput-object v0, p0, Landroid/content/res/theme/LeThemeManager$FileFilterTest;->condition:Ljava/lang/String;
 
-    .line 118
     iput-object p1, p0, Landroid/content/res/theme/LeThemeManager$FileFilterTest;->condition:Ljava/lang/String;
 
-    .line 119
     return-void
 .end method
 
@@ -49,12 +45,10 @@
     .param p1, "pathName"    # Ljava/io/File;
 
     .prologue
-    .line 123
     invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 124
     .local v0, "filename":Ljava/lang/String;
     iget-object v1, p0, Landroid/content/res/theme/LeThemeManager$FileFilterTest;->condition:Ljava/lang/String;
 
@@ -66,10 +60,8 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 125
     const/4 v1, 0x1
 
-    .line 127
     :goto_0
     return v1
 

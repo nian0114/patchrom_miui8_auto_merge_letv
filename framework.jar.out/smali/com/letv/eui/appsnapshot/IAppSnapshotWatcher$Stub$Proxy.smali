@@ -27,13 +27,10 @@
     .param p1, "remote"    # Landroid/os/IBinder;
 
     .prologue
-    .line 82
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 83
     iput-object p1, p0, Lcom/letv/eui/appsnapshot/IAppSnapshotWatcher$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    .line 84
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 87
     iget-object v0, p0, Lcom/letv/eui/appsnapshot/IAppSnapshotWatcher$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object v0
@@ -53,7 +49,6 @@
     .locals 1
 
     .prologue
-    .line 91
     const-string v0, "com.letv.eui.appsnapshot.IAppSnapshotWatcher"
 
     return-object v0
@@ -69,22 +64,18 @@
     .end annotation
 
     .prologue
-    .line 106
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 108
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
     const-string v1, "com.letv.eui.appsnapshot.IAppSnapshotWatcher"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 109
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 110
     iget-object v1, p0, Lcom/letv/eui/appsnapshot/IAppSnapshotWatcher$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x2
@@ -97,13 +88,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 113
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 115
     return-void
 
-    .line 113
     :catchall_0
     move-exception v1
 
@@ -122,32 +110,26 @@
     .end annotation
 
     .prologue
-    .line 118
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 120
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
     const-string v1, "com.letv.eui.appsnapshot.IAppSnapshotWatcher"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 121
     if-eqz p1, :cond_0
 
-    .line 122
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 123
     const/4 v1, 0x0
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Bitmap;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 128
     :goto_0
     iget-object v1, p0, Lcom/letv/eui/appsnapshot/IAppSnapshotWatcher$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
@@ -161,13 +143,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 131
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 133
     return-void
 
-    .line 126
     :cond_0
     const/4 v1, 0x0
 
@@ -178,7 +157,6 @@
 
     goto :goto_0
 
-    .line 131
     :catchall_0
     move-exception v1
 
@@ -196,19 +174,16 @@
     .end annotation
 
     .prologue
-    .line 95
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 97
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
     const-string v1, "com.letv.eui.appsnapshot.IAppSnapshotWatcher"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 98
     iget-object v1, p0, Lcom/letv/eui/appsnapshot/IAppSnapshotWatcher$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x1
@@ -221,13 +196,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 101
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 103
     return-void
 
-    .line 101
     :catchall_0
     move-exception v1
 

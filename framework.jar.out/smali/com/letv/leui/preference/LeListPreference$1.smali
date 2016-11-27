@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 416
     iput-object p1, p0, Lcom/letv/leui/preference/LeListPreference$1;->this$0:Lcom/letv/leui/preference/LeListPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,22 +41,18 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 418
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$1;->this$0:Lcom/letv/leui/preference/LeListPreference;
 
     # setter for: Lcom/letv/leui/preference/LeListPreference;->mClickedDialogEntryIndex:I
     invoke-static {v0, p2}, Lcom/letv/leui/preference/LeListPreference;->access$002(Lcom/letv/leui/preference/LeListPreference;I)I
 
-    .line 424
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$1;->this$0:Lcom/letv/leui/preference/LeListPreference;
 
     const/4 v1, -0x1
 
     invoke-virtual {v0, p1, v1}, Lcom/letv/leui/preference/LeListPreference;->onClick(Landroid/content/DialogInterface;I)V
 
-    .line 425
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 426
     return-void
 .end method

@@ -33,20 +33,16 @@
     .prologue
     const/16 v1, 0x10
 
-    .line 1366
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1368
     new-array v0, v1, [I
 
     iput-object v0, p0, Landroid/text/StaticLayout$LineBreaks;->breaks:[I
 
-    .line 1369
     new-array v0, v1, [F
 
     iput-object v0, p0, Landroid/text/StaticLayout$LineBreaks;->widths:[F
 
-    .line 1370
     new-array v0, v1, [I
 
     iput-object v0, p0, Landroid/text/StaticLayout$LineBreaks;->flags:[I

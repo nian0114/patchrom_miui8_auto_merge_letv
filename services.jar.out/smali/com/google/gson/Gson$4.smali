@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 277
     iput-object p1, p0, Lcom/google/gson/Gson$4;->this$0:Lcom/google/gson/Gson;
 
     invoke-direct {p0}, Lcom/google/gson/TypeAdapter;-><init>()V
@@ -52,7 +51,6 @@
     .end annotation
 
     .prologue
-    .line 279
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->peek()Lcom/google/gson/stream/JsonToken;
 
     move-result-object v0
@@ -61,13 +59,10 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 280
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->nextNull()V
 
-    .line 281
     const/4 v0, 0x0
 
-    .line 283
     :goto_0
     return-object v0
 
@@ -94,7 +89,6 @@
     .end annotation
 
     .prologue
-    .line 277
     invoke-virtual {p0, p1}, Lcom/google/gson/Gson$4;->read(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Float;
 
     move-result-object v0
@@ -113,23 +107,18 @@
     .end annotation
 
     .prologue
-    .line 286
     if-nez p2, :cond_0
 
-    .line 287
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonWriter;->nullValue()Lcom/google/gson/stream/JsonWriter;
 
-    .line 293
     :goto_0
     return-void
 
-    .line 290
     :cond_0
     invoke-virtual {p2}, Ljava/lang/Number;->floatValue()F
 
     move-result v0
 
-    .line 291
     .local v0, "floatValue":F
     iget-object v1, p0, Lcom/google/gson/Gson$4;->this$0:Lcom/google/gson/Gson;
 
@@ -138,7 +127,6 @@
     # invokes: Lcom/google/gson/Gson;->checkValidFloatingPoint(D)V
     invoke-static {v1, v2, v3}, Lcom/google/gson/Gson;->access$000(Lcom/google/gson/Gson;D)V
 
-    .line 292
     invoke-virtual {p1, p2}, Lcom/google/gson/stream/JsonWriter;->value(Ljava/lang/Number;)Lcom/google/gson/stream/JsonWriter;
 
     goto :goto_0
@@ -153,7 +141,6 @@
     .end annotation
 
     .prologue
-    .line 277
     check-cast p2, Ljava/lang/Number;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/gson/Gson$4;->write(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Number;)V

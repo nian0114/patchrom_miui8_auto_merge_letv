@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 74
     iput-object p1, p0, Lcom/letv/leui/util/ScrollBarAnimHelper$1;->this$0:Lcom/letv/leui/util/ScrollBarAnimHelper;
 
     iput-object p2, p0, Lcom/letv/leui/util/ScrollBarAnimHelper$1;->val$v:Landroid/view/View;
@@ -44,14 +43,12 @@
     .locals 7
 
     .prologue
-    .line 77
     iget-object v4, p0, Lcom/letv/leui/util/ScrollBarAnimHelper$1;->val$v:Landroid/view/View;
 
     invoke-virtual {v4}, Landroid/view/View;->getScrollY()I
 
     move-result v3
 
-    .line 80
     .local v3, "scrollY":I
     int-to-float v4, v3
 
@@ -66,7 +63,6 @@
 
     if-gez v4, :cond_1
 
-    .line 81
     iget-object v4, p0, Lcom/letv/leui/util/ScrollBarAnimHelper$1;->this$0:Lcom/letv/leui/util/ScrollBarAnimHelper;
 
     # getter for: Lcom/letv/leui/util/ScrollBarAnimHelper;->actionBarColorDrawable:Landroid/graphics/drawable/ColorDrawable;
@@ -83,7 +79,6 @@
 
     invoke-virtual {v4, v5}, Landroid/graphics/drawable/ColorDrawable;->setColor(I)V
 
-    .line 82
     iget-object v4, p0, Lcom/letv/leui/util/ScrollBarAnimHelper$1;->this$0:Lcom/letv/leui/util/ScrollBarAnimHelper;
 
     # getter for: Lcom/letv/leui/util/ScrollBarAnimHelper;->actionBarColorDrawable:Landroid/graphics/drawable/ColorDrawable;
@@ -95,18 +90,15 @@
 
     invoke-virtual {v4, v5}, Landroid/graphics/drawable/ColorDrawable;->setAlpha(I)V
 
-    .line 83
     iget-object v4, p0, Lcom/letv/leui/util/ScrollBarAnimHelper$1;->this$0:Lcom/letv/leui/util/ScrollBarAnimHelper;
 
     # invokes: Lcom/letv/leui/util/ScrollBarAnimHelper;->setStatusBarWithSameColor()V
     invoke-static {v4}, Lcom/letv/leui/util/ScrollBarAnimHelper;->access$300(Lcom/letv/leui/util/ScrollBarAnimHelper;)V
 
-    .line 106
     :cond_0
     :goto_0
     return-void
 
-    .line 87
     :cond_1
     int-to-float v4, v3
 
@@ -121,7 +113,6 @@
 
     if-gez v4, :cond_3
 
-    .line 88
     iget-object v4, p0, Lcom/letv/leui/util/ScrollBarAnimHelper$1;->this$0:Lcom/letv/leui/util/ScrollBarAnimHelper;
 
     # getter for: Lcom/letv/leui/util/ScrollBarAnimHelper;->actionBarColorDrawable:Landroid/graphics/drawable/ColorDrawable;
@@ -138,7 +129,6 @@
 
     invoke-virtual {v4, v5}, Landroid/graphics/drawable/ColorDrawable;->setColor(I)V
 
-    .line 90
     const/high16 v4, 0x43800000    # 256.0f
 
     iget-object v5, p0, Lcom/letv/leui/util/ScrollBarAnimHelper$1;->this$0:Lcom/letv/leui/util/ScrollBarAnimHelper;
@@ -172,7 +162,6 @@
 
     mul-float v1, v4, v5
 
-    .line 91
     .local v1, "alpha1":F
     const/4 v4, 0x0
 
@@ -182,7 +171,6 @@
 
     float-to-int v0, v1
 
-    .line 92
     .local v0, "alpha":I
     :goto_1
     iget-object v4, p0, Lcom/letv/leui/util/ScrollBarAnimHelper$1;->this$0:Lcom/letv/leui/util/ScrollBarAnimHelper;
@@ -194,20 +182,17 @@
 
     invoke-virtual {v4, v0}, Landroid/graphics/drawable/ColorDrawable;->setAlpha(I)V
 
-    .line 93
     iget-object v4, p0, Lcom/letv/leui/util/ScrollBarAnimHelper$1;->this$0:Lcom/letv/leui/util/ScrollBarAnimHelper;
 
     # invokes: Lcom/letv/leui/util/ScrollBarAnimHelper;->setStatusBarWithSameColor()V
     invoke-static {v4}, Lcom/letv/leui/util/ScrollBarAnimHelper;->access$300(Lcom/letv/leui/util/ScrollBarAnimHelper;)V
 
-    .line 94
     mul-int/lit8 v4, v0, 0x64
 
     div-int/lit16 v4, v4, 0x100
 
     int-to-float v2, v4
 
-    .line 96
     .local v2, "percent":F
     iget-object v4, p0, Lcom/letv/leui/util/ScrollBarAnimHelper$1;->this$0:Lcom/letv/leui/util/ScrollBarAnimHelper;
 
@@ -218,7 +203,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 97
     iget-object v4, p0, Lcom/letv/leui/util/ScrollBarAnimHelper$1;->this$0:Lcom/letv/leui/util/ScrollBarAnimHelper;
 
     # getter for: Lcom/letv/leui/util/ScrollBarAnimHelper;->changedListener:Lcom/letv/leui/util/ScrollBarAnimHelper$ScrollBarAnimChangedListener;
@@ -230,7 +214,6 @@
 
     goto :goto_0
 
-    .line 91
     .end local v0    # "alpha":I
     .end local v2    # "percent":F
     :cond_2
@@ -238,7 +221,6 @@
 
     goto :goto_1
 
-    .line 100
     .end local v1    # "alpha1":F
     :cond_3
     iget-object v4, p0, Lcom/letv/leui/util/ScrollBarAnimHelper$1;->this$0:Lcom/letv/leui/util/ScrollBarAnimHelper;
@@ -257,13 +239,11 @@
 
     invoke-virtual {v4, v5}, Landroid/graphics/drawable/ColorDrawable;->setColor(I)V
 
-    .line 101
     iget-object v4, p0, Lcom/letv/leui/util/ScrollBarAnimHelper$1;->this$0:Lcom/letv/leui/util/ScrollBarAnimHelper;
 
     # invokes: Lcom/letv/leui/util/ScrollBarAnimHelper;->setStatusBarWithSameColor()V
     invoke-static {v4}, Lcom/letv/leui/util/ScrollBarAnimHelper;->access$300(Lcom/letv/leui/util/ScrollBarAnimHelper;)V
 
-    .line 102
     iget-object v4, p0, Lcom/letv/leui/util/ScrollBarAnimHelper$1;->this$0:Lcom/letv/leui/util/ScrollBarAnimHelper;
 
     # getter for: Lcom/letv/leui/util/ScrollBarAnimHelper;->changedListener:Lcom/letv/leui/util/ScrollBarAnimHelper$ScrollBarAnimChangedListener;
@@ -273,7 +253,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 103
     iget-object v4, p0, Lcom/letv/leui/util/ScrollBarAnimHelper$1;->this$0:Lcom/letv/leui/util/ScrollBarAnimHelper;
 
     # getter for: Lcom/letv/leui/util/ScrollBarAnimHelper;->changedListener:Lcom/letv/leui/util/ScrollBarAnimHelper$ScrollBarAnimChangedListener;

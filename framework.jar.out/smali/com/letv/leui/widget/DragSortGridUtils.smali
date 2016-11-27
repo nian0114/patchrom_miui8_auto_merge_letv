@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,7 +18,6 @@
     .param p0, "view"    # Landroid/view/View;
 
     .prologue
-    .line 35
     invoke-virtual {p0}, Landroid/view/View;->getRight()I
 
     move-result v0
@@ -46,7 +44,6 @@
     .param p0, "view"    # Landroid/view/View;
 
     .prologue
-    .line 39
     invoke-virtual {p0}, Landroid/view/View;->getBottom()I
 
     move-result v0
@@ -83,17 +80,14 @@
     .end annotation
 
     .prologue
-    .line 16
     .local p0, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Object;>;"
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 17
     .local v0, "obj":Ljava/lang/Object;
     invoke-virtual {p0, p2, v0}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 18
     return-void
 .end method
 
@@ -112,25 +106,20 @@
     .end annotation
 
     .prologue
-    .line 28
     .local p0, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Object;>;"
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 29
     .local v0, "firstObject":Ljava/lang/Object;
     invoke-virtual {p0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 30
     .local v1, "secondObject":Ljava/lang/Object;
     invoke-virtual {p0, p1, v1}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 31
     invoke-virtual {p0, p2, v0}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 32
     return-void
 .end method

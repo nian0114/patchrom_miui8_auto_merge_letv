@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 653
     iput-object p1, p0, Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarMainPanel$1;->this$0:Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarMainPanel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 656
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -50,7 +48,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 657
     iget-object v0, p0, Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarMainPanel$1;->this$0:Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarMainPanel;
 
     # getter for: Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarMainPanel;->mOnMenuItemClickListener:Landroid/view/MenuItem$OnMenuItemClickListener;
@@ -60,7 +57,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 658
     iget-object v0, p0, Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarMainPanel$1;->this$0:Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarMainPanel;
 
     # getter for: Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarMainPanel;->mOnMenuItemClickListener:Landroid/view/MenuItem$OnMenuItemClickListener;
@@ -76,7 +72,6 @@
 
     invoke-interface {v1, v0}, Landroid/view/MenuItem$OnMenuItemClickListener;->onMenuItemClick(Landroid/view/MenuItem;)Z
 
-    .line 661
     :cond_0
     return-void
 .end method

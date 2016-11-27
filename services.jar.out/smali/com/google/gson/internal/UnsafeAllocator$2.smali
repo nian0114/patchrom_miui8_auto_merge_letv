@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 67
     iput-object p1, p0, Lcom/google/gson/internal/UnsafeAllocator$2;->val$newInstance:Ljava/lang/reflect/Method;
 
     iput p2, p0, Lcom/google/gson/internal/UnsafeAllocator$2;->val$constructorId:I
@@ -56,7 +55,6 @@
     .end annotation
 
     .prologue
-    .line 71
     .local p1, "c":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     iget-object v0, p0, Lcom/google/gson/internal/UnsafeAllocator$2;->val$newInstance:Ljava/lang/reflect/Method;
 

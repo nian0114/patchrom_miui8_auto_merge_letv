@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 216
     iput-object p1, p0, Lcom/letv/leui/widget/LePullToSearchListView$1;->this$0:Lcom/letv/leui/widget/LePullToSearchListView;
 
     iput-boolean p2, p0, Lcom/letv/leui/widget/LePullToSearchListView$1;->val$isShowHeader:Z
@@ -42,10 +41,8 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 219
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
 
-    .line 220
     iget-object v0, p0, Lcom/letv/leui/widget/LePullToSearchListView$1;->this$0:Lcom/letv/leui/widget/LePullToSearchListView;
 
     # getter for: Lcom/letv/leui/widget/LePullToSearchListView;->listener:Lcom/letv/leui/widget/LePullToSearchListView$PullToSearchListener;
@@ -55,12 +52,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 221
     iget-boolean v0, p0, Lcom/letv/leui/widget/LePullToSearchListView$1;->val$isShowHeader:Z
 
     if-eqz v0, :cond_1
 
-    .line 222
     iget-object v0, p0, Lcom/letv/leui/widget/LePullToSearchListView$1;->this$0:Lcom/letv/leui/widget/LePullToSearchListView;
 
     # getter for: Lcom/letv/leui/widget/LePullToSearchListView;->listener:Lcom/letv/leui/widget/LePullToSearchListView$PullToSearchListener;
@@ -70,12 +65,10 @@
 
     invoke-interface {v0}, Lcom/letv/leui/widget/LePullToSearchListView$PullToSearchListener;->showSearchBar()V
 
-    .line 228
     :cond_0
     :goto_0
     return-void
 
-    .line 224
     :cond_1
     iget-object v0, p0, Lcom/letv/leui/widget/LePullToSearchListView$1;->this$0:Lcom/letv/leui/widget/LePullToSearchListView;
 

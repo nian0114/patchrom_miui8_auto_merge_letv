@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2086
     iput-object p1, p0, Landroid/widget/ScrollView$1;->this$0:Landroid/widget/ScrollView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,11 +39,9 @@
     .locals 1
 
     .prologue
-    .line 2088
     iget-object v0, p0, Landroid/widget/ScrollView$1;->this$0:Landroid/widget/ScrollView;
 
     invoke-virtual {v0}, Landroid/widget/ScrollView;->requestLayout()V
 
-    .line 2089
     return-void
 .end method

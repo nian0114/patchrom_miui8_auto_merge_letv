@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 217
     iput-object p1, p0, Lcom/letv/leui/widget/LeActionBarBottomSlider$6;->this$0:Lcom/letv/leui/widget/LeActionBarBottomSlider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "animation"    # Landroid/animation/ValueAnimator;
 
     .prologue
-    .line 220
     iget-object v0, p0, Lcom/letv/leui/widget/LeActionBarBottomSlider$6;->this$0:Lcom/letv/leui/widget/LeActionBarBottomSlider;
 
     # getter for: Lcom/letv/leui/widget/LeActionBarBottomSlider;->mMenuView:Lcom/letv/leui/widget/LeTransLinearLayout;
@@ -51,6 +49,5 @@
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/LeTransLinearLayout;->invalidate()V
 
-    .line 221
     return-void
 .end method

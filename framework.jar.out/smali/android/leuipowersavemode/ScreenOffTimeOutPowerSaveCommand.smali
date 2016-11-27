@@ -16,7 +16,6 @@
     .locals 0
 
     .prologue
-    .line 12
     invoke-direct {p0}, Landroid/leuipowersavemode/command/ALetvDeepPowerSaveCommand;-><init>()V
 
     return-void
@@ -27,12 +26,11 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 50
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string/jumbo v1, "screen_off_timeout"
+    const-string v1, "screen_off_timeout"
 
     const/16 v2, 0x7530
 
@@ -50,15 +48,12 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 31
     invoke-super {p0, p1}, Landroid/leuipowersavemode/command/ALetvDeepPowerSaveCommand;->disabled(Landroid/content/Context;)V
 
-    .line 33
     invoke-direct {p0, p1}, Landroid/leuipowersavemode/ScreenOffTimeOutPowerSaveCommand;->getCurrentScreenTimeOutState(Landroid/content/Context;)I
 
     move-result v0
 
-    .line 34
     .local v0, "currentScreenTimeOutState":I
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -92,12 +87,10 @@
 
     iput-object v3, p0, Landroid/leuipowersavemode/ScreenOffTimeOutPowerSaveCommand;->mCommandString:Ljava/lang/String;
 
-    .line 37
     iget v3, p0, Landroid/leuipowersavemode/ScreenOffTimeOutPowerSaveCommand;->mScreentTimeOutBeforeState:I
 
     if-eq v3, v0, :cond_1
 
-    .line 38
     iget v3, p0, Landroid/leuipowersavemode/ScreenOffTimeOutPowerSaveCommand;->mScreentTimeOutBeforeState:I
 
     sub-int/2addr v3, v0
@@ -106,20 +99,18 @@
 
     iget v2, p0, Landroid/leuipowersavemode/ScreenOffTimeOutPowerSaveCommand;->mScreentTimeOutBeforeState:I
 
-    .line 40
     .local v2, "screenTimeOutMode":I
     :goto_0
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
-    const-string/jumbo v4, "screen_off_timeout"
+    const-string v4, "screen_off_timeout"
 
     invoke-static {v3, v4, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     move-result v1
 
-    .line 42
     .local v1, "isScreenTimeOutSetState":Z
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -147,7 +138,6 @@
 
     iput-object v3, p0, Landroid/leuipowersavemode/ScreenOffTimeOutPowerSaveCommand;->mCommandString:Ljava/lang/String;
 
-    .line 46
     .end local v1    # "isScreenTimeOutSetState":Z
     .end local v2    # "screenTimeOutMode":I
     :goto_1
@@ -181,16 +171,13 @@
 
     iput-object v3, p0, Landroid/leuipowersavemode/ScreenOffTimeOutPowerSaveCommand;->mCommandString:Ljava/lang/String;
 
-    .line 47
     return-void
 
     :cond_0
     move v2, v0
 
-    .line 38
     goto :goto_0
 
-    .line 44
     :cond_1
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -202,7 +189,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "no action ,but success!!!"
+    const-string v4, "no action ,but success!!!"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -222,22 +209,19 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 18
     invoke-super {p0, p1}, Landroid/leuipowersavemode/command/ALetvDeepPowerSaveCommand;->enabled(Landroid/content/Context;)V
 
-    .line 20
     invoke-direct {p0, p1}, Landroid/leuipowersavemode/ScreenOffTimeOutPowerSaveCommand;->getCurrentScreenTimeOutState(Landroid/content/Context;)I
 
     move-result v1
 
     iput v1, p0, Landroid/leuipowersavemode/ScreenOffTimeOutPowerSaveCommand;->mScreentTimeOutBeforeState:I
 
-    .line 21
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    const-string/jumbo v2, "screen_off_timeout"
+    const-string v2, "screen_off_timeout"
 
     const/16 v3, 0x3a98
 
@@ -245,7 +229,6 @@
 
     move-result v0
 
-    .line 23
     .local v0, "isScreenOffTimeOutSetState":Z
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -293,6 +276,5 @@
 
     iput-object v1, p0, Landroid/leuipowersavemode/ScreenOffTimeOutPowerSaveCommand;->mCommandString:Ljava/lang/String;
 
-    .line 27
     return-void
 .end method

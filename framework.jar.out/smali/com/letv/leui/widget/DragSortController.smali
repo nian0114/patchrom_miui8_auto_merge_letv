@@ -63,10 +63,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 74
     invoke-direct {p0, p1, v0, v0}, Lcom/letv/leui/widget/DragSortController;-><init>(Lcom/letv/leui/widget/LeListView;II)V
 
-    .line 75
     return-void
 .end method
 
@@ -77,12 +75,10 @@
     .param p3, "dragInitMode"    # I
 
     .prologue
-    .line 78
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/letv/leui/widget/DragSortController;-><init>(Lcom/letv/leui/widget/LeListView;III)V
 
-    .line 79
     return-void
 .end method
 
@@ -98,42 +94,32 @@
 
     const/4 v1, -0x1
 
-    .line 89
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/SimpleFloatViewManager;-><init>(Landroid/widget/ListView;)V
 
-    .line 32
     iput v2, p0, Lcom/letv/leui/widget/DragSortController;->mDragInitMode:I
 
-    .line 34
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/DragSortController;->mSortEnabled:Z
 
-    .line 42
     iput v1, p0, Lcom/letv/leui/widget/DragSortController;->mHitPos:I
 
-    .line 43
     iput v1, p0, Lcom/letv/leui/widget/DragSortController;->mFlingHitPos:I
 
-    .line 45
     const/4 v0, 0x2
 
     new-array v0, v0, [I
 
     iput-object v0, p0, Lcom/letv/leui/widget/DragSortController;->mTempLoc:[I
 
-    .line 53
     iput-boolean v2, p0, Lcom/letv/leui/widget/DragSortController;->mDragging:Z
 
-    .line 55
     const/high16 v0, 0x43fa0000    # 500.0f
 
     iput v0, p0, Lcom/letv/leui/widget/DragSortController;->mFlingSpeed:F
 
-    .line 90
     iput-object p1, p0, Lcom/letv/leui/widget/DragSortController;->mDslv:Lcom/letv/leui/widget/LeListView;
 
-    .line 91
     new-instance v0, Landroid/view/GestureDetector;
 
     invoke-virtual {p1}, Lcom/letv/leui/widget/LeListView;->getContext()Landroid/content/Context;
@@ -144,7 +130,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/DragSortController;->mDetector:Landroid/view/GestureDetector;
 
-    .line 92
     invoke-virtual {p1}, Lcom/letv/leui/widget/LeListView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -159,16 +144,12 @@
 
     iput v0, p0, Lcom/letv/leui/widget/DragSortController;->mTouchSlop:I
 
-    .line 93
     iput p2, p0, Lcom/letv/leui/widget/DragSortController;->mDragHandleId:I
 
-    .line 94
     iput p4, p0, Lcom/letv/leui/widget/DragSortController;->mFlingHandleId:I
 
-    .line 95
     invoke-virtual {p0, p3}, Lcom/letv/leui/widget/DragSortController;->setDragInitMode(I)V
 
-    .line 96
     return-void
 .end method
 
@@ -179,7 +160,6 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 233
     iget v0, p0, Lcom/letv/leui/widget/DragSortController;->mDragHandleId:I
 
     invoke-virtual {p0, p1, v0}, Lcom/letv/leui/widget/DragSortController;->viewIdHitPosition(Landroid/view/MotionEvent;I)I
@@ -194,7 +174,6 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 237
     iget v0, p0, Lcom/letv/leui/widget/DragSortController;->mFlingHandleId:I
 
     invoke-virtual {p0, p1, v0}, Lcom/letv/leui/widget/DragSortController;->viewIdHitPosition(Landroid/view/MotionEvent;I)I
@@ -208,7 +187,6 @@
     .locals 1
 
     .prologue
-    .line 100
     iget v0, p0, Lcom/letv/leui/widget/DragSortController;->mDragInitMode:I
 
     return v0
@@ -218,7 +196,6 @@
     .locals 1
 
     .prologue
-    .line 125
     iget-boolean v0, p0, Lcom/letv/leui/widget/DragSortController;->mSortEnabled:Z
 
     return v0
@@ -231,14 +208,12 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 280
     invoke-virtual {p0, p1}, Lcom/letv/leui/widget/DragSortController;->startDragPosition(Landroid/view/MotionEvent;)I
 
     move-result v0
 
     iput v0, p0, Lcom/letv/leui/widget/DragSortController;->mHitPos:I
 
-    .line 281
     iget v0, p0, Lcom/letv/leui/widget/DragSortController;->mHitPos:I
 
     const/4 v1, -0x1
@@ -249,7 +224,6 @@
 
     if-nez v0, :cond_0
 
-    .line 282
     iget v0, p0, Lcom/letv/leui/widget/DragSortController;->mHitPos:I
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
@@ -274,23 +248,19 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/letv/leui/widget/DragSortController;->startDrag(III)Z
 
-    .line 285
     :cond_0
     iput-boolean v4, p0, Lcom/letv/leui/widget/DragSortController;->mCanDrag:Z
 
-    .line 286
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/letv/leui/widget/DragSortController;->mPositionX:I
 
-    .line 287
     invoke-virtual {p0, p1}, Lcom/letv/leui/widget/DragSortController;->startFlingPosition(Landroid/view/MotionEvent;)I
 
     move-result v0
 
     iput v0, p0, Lcom/letv/leui/widget/DragSortController;->mFlingHitPos:I
 
-    .line 289
     return v4
 .end method
 
@@ -301,7 +271,6 @@
     .param p3, "touch"    # Landroid/graphics/Point;
 
     .prologue
-    .line 199
     return-void
 .end method
 
@@ -313,7 +282,6 @@
     .param p4, "velocityY"    # F
 
     .prologue
-    .line 330
     const/4 v0, 0x0
 
     return v0
@@ -324,7 +292,6 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 321
     iget v0, p0, Lcom/letv/leui/widget/DragSortController;->mHitPos:I
 
     const/4 v1, -0x1
@@ -337,14 +304,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 322
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortController;->mDslv:Lcom/letv/leui/widget/LeListView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/widget/LeListView;->performHapticFeedback(I)Z
 
-    .line 323
     iget v0, p0, Lcom/letv/leui/widget/DragSortController;->mHitPos:I
 
     iget v1, p0, Lcom/letv/leui/widget/DragSortController;->mCurrX:I
@@ -361,7 +326,6 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/letv/leui/widget/DragSortController;->startDrag(III)Z
 
-    .line 325
     :cond_0
     return-void
 .end method
@@ -378,14 +342,12 @@
 
     const/4 v7, -0x1
 
-    .line 295
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v6
 
     float-to-int v2, v6
 
-    .line 296
     .local v2, "x1":I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
@@ -393,7 +355,6 @@
 
     float-to-int v4, v6
 
-    .line 297
     .local v4, "y1":I
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
@@ -401,7 +362,6 @@
 
     float-to-int v3, v6
 
-    .line 298
     .local v3, "x2":I
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
@@ -409,19 +369,16 @@
 
     float-to-int v5, v6
 
-    .line 299
     .local v5, "y2":I
     iget v6, p0, Lcom/letv/leui/widget/DragSortController;->mItemX:I
 
     sub-int v0, v3, v6
 
-    .line 300
     .local v0, "deltaX":I
     iget v6, p0, Lcom/letv/leui/widget/DragSortController;->mItemY:I
 
     sub-int v1, v5, v6
 
-    .line 302
     .local v1, "deltaY":I
     iget-boolean v6, p0, Lcom/letv/leui/widget/DragSortController;->mCanDrag:Z
 
@@ -439,13 +396,11 @@
 
     if-eq v6, v7, :cond_1
 
-    .line 303
     :cond_0
     iget v6, p0, Lcom/letv/leui/widget/DragSortController;->mHitPos:I
 
     if-eq v6, v7, :cond_2
 
-    .line 304
     iget v6, p0, Lcom/letv/leui/widget/DragSortController;->mDragInitMode:I
 
     const/4 v7, 0x1
@@ -466,23 +421,19 @@
 
     if-eqz v6, :cond_1
 
-    .line 305
     iget v6, p0, Lcom/letv/leui/widget/DragSortController;->mHitPos:I
 
     invoke-virtual {p0, v6, v0, v1}, Lcom/letv/leui/widget/DragSortController;->startDrag(III)Z
 
-    .line 315
     :cond_1
     :goto_0
     return v8
 
-    .line 307
     :cond_2
     iget v6, p0, Lcom/letv/leui/widget/DragSortController;->mFlingHitPos:I
 
     if-eq v6, v7, :cond_1
 
-    .line 308
     sub-int v6, v5, v4
 
     invoke-static {v6}, Ljava/lang/Math;->abs(I)I
@@ -493,7 +444,6 @@
 
     if-le v6, v7, :cond_1
 
-    .line 309
     iput-boolean v8, p0, Lcom/letv/leui/widget/DragSortController;->mCanDrag:Z
 
     goto :goto_0
@@ -504,7 +454,6 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 343
     return-void
 .end method
 
@@ -513,7 +462,6 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 336
     const/4 v0, 0x1
 
     return v0
@@ -527,7 +475,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 173
     iget-object v1, p0, Lcom/letv/leui/widget/DragSortController;->mDslv:Lcom/letv/leui/widget/LeListView;
 
     invoke-virtual {v1}, Lcom/letv/leui/widget/LeListView;->getDragSortHelper()Lcom/letv/leui/widget/DragSortHelper;
@@ -552,32 +499,27 @@
 
     if-eqz v1, :cond_1
 
-    .line 191
     :cond_0
     :goto_0
     return v2
 
-    .line 177
     :cond_1
     iget-object v1, p0, Lcom/letv/leui/widget/DragSortController;->mDetector:Landroid/view/GestureDetector;
 
     invoke-virtual {v1, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 179
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v1
 
     and-int/lit16 v0, v1, 0xff
 
-    .line 180
     .local v0, "action":I
     packed-switch v0, :pswitch_data_0
 
     :pswitch_0
     goto :goto_0
 
-    .line 182
     :pswitch_1
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
@@ -587,7 +529,6 @@
 
     iput v1, p0, Lcom/letv/leui/widget/DragSortController;->mCurrX:I
 
-    .line 183
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
     move-result v1
@@ -598,13 +539,11 @@
 
     goto :goto_0
 
-    .line 187
     :pswitch_2
     iput-boolean v2, p0, Lcom/letv/leui/widget/DragSortController;->mDragging:Z
 
     goto :goto_0
 
-    .line 180
     nop
 
     :pswitch_data_0
@@ -621,10 +560,8 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 135
     iput p1, p0, Lcom/letv/leui/widget/DragSortController;->mDragHandleId:I
 
-    .line 136
     return-void
 .end method
 
@@ -633,10 +570,8 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 110
     iput p1, p0, Lcom/letv/leui/widget/DragSortController;->mDragInitMode:I
 
-    .line 111
     return-void
 .end method
 
@@ -645,10 +580,8 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 145
     iput p1, p0, Lcom/letv/leui/widget/DragSortController;->mFlingHandleId:I
 
-    .line 146
     return-void
 .end method
 
@@ -657,10 +590,8 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 121
     iput-boolean p1, p0, Lcom/letv/leui/widget/DragSortController;->mSortEnabled:Z
 
-    .line 122
     return-void
 .end method
 
@@ -671,19 +602,15 @@
     .param p3, "deltaY"    # I
 
     .prologue
-    .line 161
     const/4 v0, 0x0
 
-    .line 162
     .local v0, "dragFlags":I
     iget-boolean v1, p0, Lcom/letv/leui/widget/DragSortController;->mSortEnabled:Z
 
     if-eqz v1, :cond_0
 
-    .line 163
     or-int/lit8 v0, v0, 0xc
 
-    .line 166
     :cond_0
     iget-object v1, p0, Lcom/letv/leui/widget/DragSortController;->mDslv:Lcom/letv/leui/widget/LeListView;
 
@@ -705,7 +632,6 @@
 
     iput-boolean v1, p0, Lcom/letv/leui/widget/DragSortController;->mDragging:Z
 
-    .line 168
     iget-boolean v1, p0, Lcom/letv/leui/widget/DragSortController;->mDragging:Z
 
     return v1
@@ -716,7 +642,6 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 215
     invoke-virtual {p0, p1}, Lcom/letv/leui/widget/DragSortController;->dragHandleHitPosition(Landroid/view/MotionEvent;)I
 
     move-result v0
@@ -729,7 +654,6 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 219
     const/4 v0, -0x1
 
     return v0
@@ -741,14 +665,12 @@
     .param p2, "id"    # I
 
     .prologue
-    .line 241
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v10
 
     float-to-int v8, v10
 
-    .line 242
     .local v8, "x":I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
@@ -756,7 +678,6 @@
 
     float-to-int v9, v10
 
-    .line 244
     .local v9, "y":I
     iget-object v10, p0, Lcom/letv/leui/widget/DragSortController;->mDslv:Lcom/letv/leui/widget/LeListView;
 
@@ -764,7 +685,6 @@
 
     move-result v7
 
-    .line 246
     .local v7, "touchPos":I
     iget-object v10, p0, Lcom/letv/leui/widget/DragSortController;->mDslv:Lcom/letv/leui/widget/LeListView;
 
@@ -772,7 +692,6 @@
 
     move-result v4
 
-    .line 247
     .local v4, "numHeaders":I
     iget-object v10, p0, Lcom/letv/leui/widget/DragSortController;->mDslv:Lcom/letv/leui/widget/LeListView;
 
@@ -780,7 +699,6 @@
 
     move-result v3
 
-    .line 248
     .local v3, "numFooters":I
     iget-object v10, p0, Lcom/letv/leui/widget/DragSortController;->mDslv:Lcom/letv/leui/widget/LeListView;
 
@@ -788,7 +706,6 @@
 
     move-result v0
 
-    .line 253
     .local v0, "count":I
     const/4 v10, -0x1
 
@@ -800,7 +717,6 @@
 
     if-ge v7, v10, :cond_1
 
-    .line 255
     iget-object v10, p0, Lcom/letv/leui/widget/DragSortController;->mDslv:Lcom/letv/leui/widget/LeListView;
 
     iget-object v11, p0, Lcom/letv/leui/widget/DragSortController;->mDslv:Lcom/letv/leui/widget/LeListView;
@@ -815,7 +731,6 @@
 
     move-result-object v2
 
-    .line 256
     .local v2, "item":Landroid/view/View;
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
@@ -823,7 +738,6 @@
 
     float-to-int v5, v10
 
-    .line 257
     .local v5, "rawX":I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
@@ -831,23 +745,19 @@
 
     float-to-int v6, v10
 
-    .line 259
     .local v6, "rawY":I
     if-nez p2, :cond_0
 
     move-object v1, v2
 
-    .line 260
     .local v1, "dragBox":Landroid/view/View;
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 261
     iget-object v10, p0, Lcom/letv/leui/widget/DragSortController;->mTempLoc:[I
 
     invoke-virtual {v1, v10}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 263
     iget-object v10, p0, Lcom/letv/leui/widget/DragSortController;->mTempLoc:[I
 
     const/4 v11, 0x0
@@ -892,21 +802,18 @@
 
     if-ge v6, v10, :cond_1
 
-    .line 267
     invoke-virtual {v2}, Landroid/view/View;->getLeft()I
 
     move-result v10
 
     iput v10, p0, Lcom/letv/leui/widget/DragSortController;->mItemX:I
 
-    .line 268
     invoke-virtual {v2}, Landroid/view/View;->getTop()I
 
     move-result v10
 
     iput v10, p0, Lcom/letv/leui/widget/DragSortController;->mItemY:I
 
-    .line 275
     .end local v1    # "dragBox":Landroid/view/View;
     .end local v2    # "item":Landroid/view/View;
     .end local v5    # "rawX":I
@@ -915,7 +822,6 @@
     :goto_1
     return v7
 
-    .line 259
     .restart local v2    # "item":Landroid/view/View;
     .restart local v5    # "rawX":I
     .restart local v6    # "rawY":I
@@ -927,7 +833,6 @@
 
     goto :goto_0
 
-    .line 275
     .end local v2    # "item":Landroid/view/View;
     .end local v5    # "rawX":I
     .end local v6    # "rawY":I

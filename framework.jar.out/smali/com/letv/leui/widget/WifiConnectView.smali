@@ -76,7 +76,6 @@
     .locals 1
 
     .prologue
-    .line 21
     const-string v0, "#43AD69"
 
     invoke-static {v0}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
@@ -93,12 +92,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 58
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/letv/leui/widget/WifiConnectView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 59
     return-void
 .end method
 
@@ -108,12 +105,10 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 61
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/letv/leui/widget/WifiConnectView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 62
     return-void
 .end method
 
@@ -124,18 +119,14 @@
     .param p3, "defStyleAttr"    # I
 
     .prologue
-    .line 64
     invoke-direct {p0, p1, p2, p3}, Lcom/letv/leui/widget/BaseView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 30
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/letv/leui/widget/WifiConnectView;->WIFI_LINE_END_TRANSLATE_Y:F
 
-    .line 65
     invoke-virtual {p0}, Lcom/letv/leui/widget/WifiConnectView;->init()V
 
-    .line 66
     return-void
 .end method
 
@@ -144,7 +135,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/WifiConnectView;
 
     .prologue
-    .line 19
     iget-boolean v0, p0, Lcom/letv/leui/widget/WifiConnectView;->mHasConnect:Z
 
     return v0
@@ -155,7 +145,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/WifiConnectView;
 
     .prologue
-    .line 19
     iget-object v0, p0, Lcom/letv/leui/widget/WifiConnectView;->wifiHasConnectAnimSet:Landroid/animation/AnimatorSet;
 
     return-object v0
@@ -168,7 +157,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 201
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getOpacity()I
 
     move-result v3
@@ -179,7 +167,6 @@
 
     sget-object v2, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
-    .line 204
     .local v2, "config":Landroid/graphics/Bitmap$Config;
     :goto_0
     iget v3, p0, Lcom/letv/leui/widget/WifiConnectView;->width:I
@@ -190,13 +177,11 @@
 
     move-result-object v0
 
-    .line 205
     .local v0, "bitmap":Landroid/graphics/Bitmap;
     new-instance v1, Landroid/graphics/Canvas;
 
     invoke-direct {v1, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 206
     .local v1, "canvas":Landroid/graphics/Canvas;
     iget v3, p0, Lcom/letv/leui/widget/WifiConnectView;->width:I
 
@@ -204,13 +189,10 @@
 
     invoke-virtual {p1, v5, v5, v3, v4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 207
     invoke-virtual {p1, v1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 208
     return-object v0
 
-    .line 201
     .end local v0    # "bitmap":Landroid/graphics/Bitmap;
     .end local v1    # "canvas":Landroid/graphics/Canvas;
     .end local v2    # "config":Landroid/graphics/Bitmap$Config;
@@ -228,51 +210,40 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 180
     iget-object v0, p0, Lcom/letv/leui/widget/WifiConnectView;->mBackCircle:Lcom/letv/leui/widget/ShapeHolder;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/widget/ShapeHolder;->setRadius(F)V
 
-    .line 181
     invoke-virtual {p0, v2}, Lcom/letv/leui/widget/WifiConnectView;->setWifiLine1Alpha(I)V
 
-    .line 182
     invoke-virtual {p0, v2}, Lcom/letv/leui/widget/WifiConnectView;->setWifiLine2Alpha(I)V
 
-    .line 183
     invoke-virtual {p0, v2}, Lcom/letv/leui/widget/WifiConnectView;->setWifiLine3Alpha(I)V
 
-    .line 184
     iget v0, p0, Lcom/letv/leui/widget/WifiConnectView;->WIFI_LINE_START_TRANSLATE_Y:F
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/WifiConnectView;->setWifiLine1TranslateY(F)V
 
-    .line 185
     iget v0, p0, Lcom/letv/leui/widget/WifiConnectView;->WIFI_LINE_START_TRANSLATE_Y:F
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/WifiConnectView;->setWifiLine2TranslateY(F)V
 
-    .line 186
     iget v0, p0, Lcom/letv/leui/widget/WifiConnectView;->WIFI_LINE_START_TRANSLATE_Y:F
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/WifiConnectView;->setWifiLine3TranslateY(F)V
 
-    .line 188
     iget-object v0, p0, Lcom/letv/leui/widget/WifiConnectView;->wifiHasConnectAnimSet:Landroid/animation/AnimatorSet;
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/WifiConnectView;->setCancelAnimSet(Landroid/animation/Animator;)V
 
-    .line 190
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/WifiConnectView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 192
     invoke-virtual {p0}, Lcom/letv/leui/widget/WifiConnectView;->invalidate()V
 
-    .line 193
     return-void
 .end method
 
@@ -280,7 +251,6 @@
     .locals 1
 
     .prologue
-    .line 231
     iget v0, p0, Lcom/letv/leui/widget/WifiConnectView;->wifiLine1Alpha:I
 
     return v0
@@ -290,7 +260,6 @@
     .locals 1
 
     .prologue
-    .line 212
     iget v0, p0, Lcom/letv/leui/widget/WifiConnectView;->wifiLine1TranslateY:F
 
     return v0
@@ -300,7 +269,6 @@
     .locals 1
 
     .prologue
-    .line 238
     iget v0, p0, Lcom/letv/leui/widget/WifiConnectView;->wifiLine2Alpha:I
 
     return v0
@@ -310,7 +278,6 @@
     .locals 1
 
     .prologue
-    .line 218
     iget v0, p0, Lcom/letv/leui/widget/WifiConnectView;->wifiLine2TranslateY:F
 
     return v0
@@ -320,7 +287,6 @@
     .locals 1
 
     .prologue
-    .line 245
     iget v0, p0, Lcom/letv/leui/widget/WifiConnectView;->wifiLine3Alpha:I
 
     return v0
@@ -330,7 +296,6 @@
     .locals 1
 
     .prologue
-    .line 224
     iget v0, p0, Lcom/letv/leui/widget/WifiConnectView;->wifiLine3TranslateY:F
 
     return v0
@@ -340,7 +305,6 @@
     .locals 3
 
     .prologue
-    .line 70
     new-instance v0, Lcom/letv/leui/widget/ShapeHolder;
 
     new-instance v1, Landroid/graphics/drawable/ShapeDrawable;
@@ -355,38 +319,32 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/WifiConnectView;->mBackCircle:Lcom/letv/leui/widget/ShapeHolder;
 
-    .line 71
     iget-object v0, p0, Lcom/letv/leui/widget/WifiConnectView;->mBackCircle:Lcom/letv/leui/widget/ShapeHolder;
 
     sget v1, Lcom/letv/leui/widget/WifiConnectView;->BACK_CIRCLE_COLOR:I
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/widget/ShapeHolder;->setColor(I)V
 
-    .line 73
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/WifiConnectView;->mWifiLine1Paint:Landroid/graphics/Paint;
 
-    .line 74
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/WifiConnectView;->mWifiLine2Paint:Landroid/graphics/Paint;
 
-    .line 75
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/WifiConnectView;->mWifiLine3Paint:Landroid/graphics/Paint;
 
-    .line 77
     invoke-virtual {p0}, Lcom/letv/leui/widget/WifiConnectView;->cancelAnimation()V
 
-    .line 78
     return-void
 .end method
 
@@ -397,91 +355,72 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 96
     invoke-super {p0, p1}, Lcom/letv/leui/widget/BaseView;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 98
     iget-boolean v0, p0, Lcom/letv/leui/widget/WifiConnectView;->mHasConnect:Z
 
     if-eqz v0, :cond_2
 
-    .line 99
     iget-object v0, p0, Lcom/letv/leui/widget/WifiConnectView;->mBackCircle:Lcom/letv/leui/widget/ShapeHolder;
 
     invoke-virtual {p0, p1, v0}, Lcom/letv/leui/widget/WifiConnectView;->drawShape(Landroid/graphics/Canvas;Lcom/letv/leui/widget/ShapeHolder;)V
 
-    .line 101
     iget-object v0, p0, Lcom/letv/leui/widget/WifiConnectView;->wifiLine1:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
-    .line 102
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 103
     iget v0, p0, Lcom/letv/leui/widget/WifiConnectView;->wifiLine1TranslateY:F
 
     invoke-virtual {p1, v2, v0}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 104
     iget-object v0, p0, Lcom/letv/leui/widget/WifiConnectView;->wifiLine1:Landroid/graphics/Bitmap;
 
     iget-object v1, p0, Lcom/letv/leui/widget/WifiConnectView;->mWifiLine1Paint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v2, v2, v1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 105
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 107
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/WifiConnectView;->wifiLine2:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_1
 
-    .line 108
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 109
     iget v0, p0, Lcom/letv/leui/widget/WifiConnectView;->wifiLine2TranslateY:F
 
     invoke-virtual {p1, v2, v0}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 110
     iget-object v0, p0, Lcom/letv/leui/widget/WifiConnectView;->wifiLine2:Landroid/graphics/Bitmap;
 
     iget-object v1, p0, Lcom/letv/leui/widget/WifiConnectView;->mWifiLine2Paint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v2, v2, v1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 111
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 113
     :cond_1
     iget-object v0, p0, Lcom/letv/leui/widget/WifiConnectView;->wifiLine3:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_2
 
-    .line 114
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 115
     iget v0, p0, Lcom/letv/leui/widget/WifiConnectView;->wifiLine3TranslateY:F
 
     invoke-virtual {p1, v2, v0}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 116
     iget-object v0, p0, Lcom/letv/leui/widget/WifiConnectView;->wifiLine3:Landroid/graphics/Bitmap;
 
     iget-object v1, p0, Lcom/letv/leui/widget/WifiConnectView;->mWifiLine3Paint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v2, v2, v1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 117
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 120
     :cond_2
     return-void
 .end method
@@ -495,10 +434,8 @@
     .param p5, "bottom"    # I
 
     .prologue
-    .line 82
     invoke-super/range {p0 .. p5}, Lcom/letv/leui/widget/BaseView;->onLayout(ZIIII)V
 
-    .line 84
     iget v0, p0, Lcom/letv/leui/widget/WifiConnectView;->width:I
 
     int-to-float v0, v0
@@ -515,7 +452,6 @@
 
     iput v0, p0, Lcom/letv/leui/widget/WifiConnectView;->BACK_CIRCLE_WIDTH:F
 
-    .line 85
     iget-object v0, p0, Lcom/letv/leui/widget/WifiConnectView;->mBackCircle:Lcom/letv/leui/widget/ShapeHolder;
 
     iget v1, p0, Lcom/letv/leui/widget/WifiConnectView;->BACK_CIRCLE_WIDTH:F
@@ -524,7 +460,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/letv/leui/widget/ShapeHolder;->setXY(FF)V
 
-    .line 87
     invoke-virtual {p0}, Lcom/letv/leui/widget/WifiConnectView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -541,7 +476,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/WifiConnectView;->wifiLine1:Landroid/graphics/Bitmap;
 
-    .line 88
     invoke-virtual {p0}, Lcom/letv/leui/widget/WifiConnectView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -558,7 +492,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/WifiConnectView;->wifiLine2:Landroid/graphics/Bitmap;
 
-    .line 89
     invoke-virtual {p0}, Lcom/letv/leui/widget/WifiConnectView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -575,7 +508,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/WifiConnectView;->wifiLine3:Landroid/graphics/Bitmap;
 
-    .line 91
     iget v0, p0, Lcom/letv/leui/widget/WifiConnectView;->width:I
 
     int-to-float v0, v0
@@ -592,7 +524,6 @@
 
     iput v0, p0, Lcom/letv/leui/widget/WifiConnectView;->WIFI_LINE_START_TRANSLATE_Y:F
 
-    .line 92
     return-void
 .end method
 
@@ -601,15 +532,12 @@
     .param p1, "wifiLine1Alpha"    # I
 
     .prologue
-    .line 234
     iput p1, p0, Lcom/letv/leui/widget/WifiConnectView;->wifiLine1Alpha:I
 
-    .line 235
     iget-object v0, p0, Lcom/letv/leui/widget/WifiConnectView;->mWifiLine1Paint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 236
     return-void
 .end method
 
@@ -618,10 +546,8 @@
     .param p1, "wifiLine1TranslateY"    # F
 
     .prologue
-    .line 215
     iput p1, p0, Lcom/letv/leui/widget/WifiConnectView;->wifiLine1TranslateY:F
 
-    .line 216
     return-void
 .end method
 
@@ -630,15 +556,12 @@
     .param p1, "wifiLine2Alpha"    # I
 
     .prologue
-    .line 241
     iput p1, p0, Lcom/letv/leui/widget/WifiConnectView;->wifiLine2Alpha:I
 
-    .line 242
     iget-object v0, p0, Lcom/letv/leui/widget/WifiConnectView;->mWifiLine2Paint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 243
     return-void
 .end method
 
@@ -647,10 +570,8 @@
     .param p1, "wifiLine2TranslateY"    # F
 
     .prologue
-    .line 221
     iput p1, p0, Lcom/letv/leui/widget/WifiConnectView;->wifiLine2TranslateY:F
 
-    .line 222
     return-void
 .end method
 
@@ -659,15 +580,12 @@
     .param p1, "wifiLine3Alpha"    # I
 
     .prologue
-    .line 248
     iput p1, p0, Lcom/letv/leui/widget/WifiConnectView;->wifiLine3Alpha:I
 
-    .line 249
     iget-object v0, p0, Lcom/letv/leui/widget/WifiConnectView;->mWifiLine3Paint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 250
     return-void
 .end method
 
@@ -676,10 +594,8 @@
     .param p1, "wifiLine3TranslateY"    # F
 
     .prologue
-    .line 227
     iput p1, p0, Lcom/letv/leui/widget/WifiConnectView;->wifiLine3TranslateY:F
 
-    .line 228
     return-void
 .end method
 
@@ -688,17 +604,14 @@
     .param p1, "hasConnect"    # Z
 
     .prologue
-    .line 123
     invoke-virtual/range {p0 .. p0}, Lcom/letv/leui/widget/WifiConnectView;->cancelAnimation()V
 
-    .line 124
     move/from16 v0, p1
 
     move-object/from16 v1, p0
 
     iput-boolean v0, v1, Lcom/letv/leui/widget/WifiConnectView;->mHasConnect:Z
 
-    .line 126
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lcom/letv/leui/widget/WifiConnectView;->wifiHasConnectAnimSet:Landroid/animation/AnimatorSet;
@@ -711,7 +624,6 @@
 
     if-eqz v12, :cond_0
 
-    .line 127
     new-instance v12, Landroid/animation/AnimatorSet;
 
     invoke-direct {v12}, Landroid/animation/AnimatorSet;-><init>()V
@@ -720,7 +632,6 @@
 
     iput-object v12, v0, Lcom/letv/leui/widget/WifiConnectView;->wifiHasConnectAnimSet:Landroid/animation/AnimatorSet;
 
-    .line 129
     invoke-virtual/range {p0 .. p0}, Lcom/letv/leui/widget/WifiConnectView;->getContext()Landroid/content/Context;
 
     move-result-object v12
@@ -731,19 +642,16 @@
 
     move-result-object v3
 
-    .line 130
     .local v3, "cInterpolator":Landroid/view/animation/Interpolator;
     new-instance v2, Landroid/view/animation/AccelerateDecelerateInterpolator;
 
     invoke-direct {v2}, Landroid/view/animation/AccelerateDecelerateInterpolator;-><init>()V
 
-    .line 131
     .local v2, "bInterpolator":Landroid/view/animation/Interpolator;
     new-instance v4, Landroid/view/animation/OvershootInterpolator;
 
     invoke-direct {v4}, Landroid/view/animation/OvershootInterpolator;-><init>()V
 
-    .line 134
     .local v4, "hInterpolator":Landroid/view/animation/Interpolator;
     move-object/from16 v0, p0
 
@@ -775,7 +683,6 @@
 
     move-result-object v5
 
-    .line 135
     .local v5, "mCircleAnim":Landroid/animation/ObjectAnimator;
     const/16 v12, 0x3e8
 
@@ -783,7 +690,6 @@
 
     invoke-virtual {v0, v5, v3, v12}, Lcom/letv/leui/widget/WifiConnectView;->initAnimator(Landroid/animation/Animator;Landroid/view/animation/Interpolator;I)Landroid/animation/Animator;
 
-    .line 136
     new-instance v12, Lcom/letv/leui/widget/WifiConnectView$1;
 
     move-object/from16 v0, p0
@@ -792,7 +698,6 @@
 
     invoke-virtual {v5, v12}, Landroid/animation/ObjectAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 143
     const-string v12, "wifiLine1Alpha"
 
     const/4 v13, 0x2
@@ -807,7 +712,6 @@
 
     move-result-object v6
 
-    .line 144
     .local v6, "wifiLine1AlphaAnim":Landroid/animation/ObjectAnimator;
     const/16 v12, 0xaf
 
@@ -817,7 +721,6 @@
 
     invoke-virtual {v0, v6, v2, v12, v13}, Lcom/letv/leui/widget/WifiConnectView;->initAnimator(Landroid/animation/Animator;Landroid/view/animation/Interpolator;II)Landroid/animation/Animator;
 
-    .line 145
     const-string v12, "wifiLine1TranslateY"
 
     const/4 v13, 0x2
@@ -846,7 +749,6 @@
 
     move-result-object v7
 
-    .line 146
     .local v7, "wifiLine1TranslateYAnim":Landroid/animation/ObjectAnimator;
     const/16 v12, 0xaf
 
@@ -856,7 +758,6 @@
 
     invoke-virtual {v0, v7, v4, v12, v13}, Lcom/letv/leui/widget/WifiConnectView;->initAnimator(Landroid/animation/Animator;Landroid/view/animation/Interpolator;II)Landroid/animation/Animator;
 
-    .line 148
     const-string v12, "wifiLine2Alpha"
 
     const/4 v13, 0x2
@@ -871,7 +772,6 @@
 
     move-result-object v8
 
-    .line 149
     .local v8, "wifiLine2AlphaAnim":Landroid/animation/ObjectAnimator;
     const/16 v12, 0xf5
 
@@ -881,7 +781,6 @@
 
     invoke-virtual {v0, v8, v2, v12, v13}, Lcom/letv/leui/widget/WifiConnectView;->initAnimator(Landroid/animation/Animator;Landroid/view/animation/Interpolator;II)Landroid/animation/Animator;
 
-    .line 150
     const-string v12, "wifiLine2TranslateY"
 
     const/4 v13, 0x2
@@ -910,7 +809,6 @@
 
     move-result-object v9
 
-    .line 151
     .local v9, "wifiLine2TranslateYAnim":Landroid/animation/ObjectAnimator;
     const/16 v12, 0xf5
 
@@ -920,7 +818,6 @@
 
     invoke-virtual {v0, v9, v4, v12, v13}, Lcom/letv/leui/widget/WifiConnectView;->initAnimator(Landroid/animation/Animator;Landroid/view/animation/Interpolator;II)Landroid/animation/Animator;
 
-    .line 153
     const-string v12, "wifiLine3Alpha"
 
     const/4 v13, 0x2
@@ -935,7 +832,6 @@
 
     move-result-object v10
 
-    .line 154
     .local v10, "wifiLine3AlphaAnim":Landroid/animation/ObjectAnimator;
     const/16 v12, 0x13b
 
@@ -945,7 +841,6 @@
 
     invoke-virtual {v0, v10, v2, v12, v13}, Lcom/letv/leui/widget/WifiConnectView;->initAnimator(Landroid/animation/Animator;Landroid/view/animation/Interpolator;II)Landroid/animation/Animator;
 
-    .line 155
     const-string v12, "wifiLine3TranslateY"
 
     const/4 v13, 0x2
@@ -974,7 +869,6 @@
 
     move-result-object v11
 
-    .line 156
     .local v11, "wifiLine3TranslateYAnim":Landroid/animation/ObjectAnimator;
     const/16 v12, 0x13b
 
@@ -984,7 +878,6 @@
 
     invoke-virtual {v0, v11, v4, v12, v13}, Lcom/letv/leui/widget/WifiConnectView;->initAnimator(Landroid/animation/Animator;Landroid/view/animation/Interpolator;II)Landroid/animation/Animator;
 
-    .line 158
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lcom/letv/leui/widget/WifiConnectView;->wifiHasConnectAnimSet:Landroid/animation/AnimatorSet;
@@ -1023,7 +916,6 @@
 
     invoke-virtual {v12, v13}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 165
     .end local v2    # "bInterpolator":Landroid/view/animation/Interpolator;
     .end local v3    # "cInterpolator":Landroid/view/animation/Interpolator;
     .end local v4    # "hInterpolator":Landroid/view/animation/Interpolator;
@@ -1045,24 +937,20 @@
 
     invoke-virtual {v0, v12}, Lcom/letv/leui/widget/WifiConnectView;->post(Ljava/lang/Runnable;)Z
 
-    .line 177
     return-void
 
-    .line 143
     :array_0
     .array-data 4
         0x0
         0xff
     .end array-data
 
-    .line 148
     :array_1
     .array-data 4
         0x0
         0xff
     .end array-data
 
-    .line 153
     :array_2
     .array-data 4
         0x0

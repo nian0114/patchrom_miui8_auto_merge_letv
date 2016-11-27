@@ -24,17 +24,14 @@
     .locals 1
 
     .prologue
-    .line 1144
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1145
     new-instance v0, Ljava/util/Stack;
 
     invoke-direct {v0}, Ljava/util/Stack;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/DragSortGridModification;->transitions:Ljava/util/List;
 
-    .line 1146
     return-void
 .end method
 
@@ -46,7 +43,6 @@
     .param p2, "newPosition"    # I
 
     .prologue
-    .line 1153
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortGridModification;->transitions:Ljava/util/List;
 
     new-instance v1, Landroid/util/Pair;
@@ -63,7 +59,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1154
     return-void
 .end method
 
@@ -83,12 +78,10 @@
     .end annotation
 
     .prologue
-    .line 1157
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortGridModification;->transitions:Ljava/util/List;
 
     invoke-static {v0}, Ljava/util/Collections;->reverse(Ljava/util/List;)V
 
-    .line 1158
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortGridModification;->transitions:Ljava/util/List;
 
     return-object v0
@@ -98,7 +91,6 @@
     .locals 1
 
     .prologue
-    .line 1149
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortGridModification;->transitions:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z

@@ -85,7 +85,6 @@
 
     const/4 v2, 0x0
 
-    .line 72
     new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "contact_id"
@@ -98,7 +97,6 @@
 
     sput-object v0, Lcom/letv/leui/widget/LeQuickContactBadge;->EMAIL_LOOKUP_PROJECTION:[Ljava/lang/String;
 
-    .line 79
     new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "_id"
@@ -111,7 +109,6 @@
 
     sput-object v0, Lcom/letv/leui/widget/LeQuickContactBadge;->PHONE_LOOKUP_PROJECTION:[Ljava/lang/String;
 
-    .line 88
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -126,12 +123,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 161
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/letv/leui/widget/LeQuickContactBadge;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 162
     return-void
 .end method
 
@@ -141,12 +136,10 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 165
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/letv/leui/widget/LeQuickContactBadge;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 166
     return-void
 .end method
 
@@ -159,33 +152,26 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 169
     invoke-direct {p0, p1, p2, p3}, Lcom/letv/leui/widget/BorderedRoundedCornersImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 61
     iput-object v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mExtras:Landroid/os/Bundle;
 
-    .line 63
     iput-object v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mExcludeMimes:[Ljava/lang/String;
 
-    .line 447
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeTextColor:I
 
-    .line 451
     const v0, 0x3f1e353f    # 0.618f
 
     iput v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->DEFAULT_TEXT_SIZE_RATIO:F
 
-    .line 171
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeQuickContactBadge;->isInEditMode()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 172
     new-instance v0, Lcom/letv/leui/widget/LeQuickContactBadge$QueryHandler;
 
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeQuickContactBadge;->getContext()Landroid/content/Context;
@@ -200,11 +186,9 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mQueryHandler:Lcom/letv/leui/widget/LeQuickContactBadge$QueryHandler;
 
-    .line 174
     :cond_0
     invoke-virtual {p0, p0}, Lcom/letv/leui/widget/LeQuickContactBadge;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 175
     return-void
 .end method
 
@@ -213,7 +197,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LeQuickContactBadge;
 
     .prologue
-    .line 54
     iget-object v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mContactUri:Landroid/net/Uri;
 
     return-object v0
@@ -225,7 +208,6 @@
     .param p1, "x1"    # Landroid/net/Uri;
 
     .prologue
-    .line 54
     iput-object p1, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mContactUri:Landroid/net/Uri;
 
     return-object p1
@@ -236,7 +218,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LeQuickContactBadge;
 
     .prologue
-    .line 54
     invoke-direct {p0}, Lcom/letv/leui/widget/LeQuickContactBadge;->onContactUriChanged()V
 
     return-void
@@ -253,7 +234,6 @@
 
     const/4 v10, 0x0
 
-    .line 618
     iget-object v7, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeText:Ljava/lang/String;
 
     invoke-static {v7}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -262,17 +242,14 @@
 
     if-eqz v7, :cond_0
 
-    .line 653
     :goto_0
     return-void
 
-    .line 622
     :cond_0
     new-instance v6, Landroid/graphics/Rect;
 
     invoke-direct {v6}, Landroid/graphics/Rect;-><init>()V
 
-    .line 623
     .local v6, "rect":Landroid/graphics/Rect;
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeQuickContactBadge;->getWidth()I
 
@@ -308,45 +285,38 @@
 
     invoke-virtual {v6, v12, v12, v7, v8}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 628
     iget-object v7, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeTextPaint:Landroid/graphics/Paint;
 
     if-nez v7, :cond_2
 
-    .line 629
     new-instance v7, Landroid/graphics/Paint;
 
     invoke-direct {v7}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v7, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeTextPaint:Landroid/graphics/Paint;
 
-    .line 630
     iget-object v7, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeTextPaint:Landroid/graphics/Paint;
 
     const/4 v8, 0x1
 
     invoke-virtual {v7, v8}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 631
     iget-object v7, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeTextPaint:Landroid/graphics/Paint;
 
     sget-object v8, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
 
     invoke-virtual {v7, v8}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
 
-    .line 633
     iget-object v7, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeTextPaint:Landroid/graphics/Paint;
 
     iget v8, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeTextColor:I
 
     invoke-virtual {v7, v8}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 635
     iget v7, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeTextSize:I
 
     if-nez v7, :cond_1
 
-    .line 636
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeQuickContactBadge;->getWidth()I
 
     move-result v7
@@ -361,7 +331,6 @@
 
     iput v7, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeTextSize:I
 
-    .line 638
     :cond_1
     iget-object v7, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeTextPaint:Landroid/graphics/Paint;
 
@@ -371,7 +340,6 @@
 
     invoke-virtual {v7, v8}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    .line 640
     iget v7, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeTextShadowRadius:I
 
     if-eqz v7, :cond_2
@@ -380,7 +348,6 @@
 
     if-eqz v7, :cond_2
 
-    .line 641
     iget-object v7, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeTextPaint:Landroid/graphics/Paint;
 
     iget v8, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeTextShadowRadius:I
@@ -391,7 +358,6 @@
 
     invoke-virtual {v7, v8, v10, v10, v9}, Landroid/graphics/Paint;->setShadowLayer(FFFI)V
 
-    .line 646
     :cond_2
     iget v7, v6, Landroid/graphics/Rect;->left:I
 
@@ -403,7 +369,6 @@
 
     int-to-float v0, v7
 
-    .line 647
     .local v0, "baseX":F
     iget v7, v6, Landroid/graphics/Rect;->top:I
 
@@ -415,7 +380,6 @@
 
     int-to-float v1, v7
 
-    .line 648
     .local v1, "baseY":F
     iget-object v7, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeTextPaint:Landroid/graphics/Paint;
 
@@ -423,7 +387,6 @@
 
     move-result-object v2
 
-    .line 649
     .local v2, "fontMetrics":Landroid/graphics/Paint$FontMetrics;
     iget v7, v2, Landroid/graphics/Paint$FontMetrics;->bottom:F
 
@@ -431,7 +394,6 @@
 
     sub-float v3, v7, v8
 
-    .line 650
     .local v3, "fontTotalHeight":F
     div-float v7, v3, v11
 
@@ -439,13 +401,11 @@
 
     sub-float v5, v7, v8
 
-    .line 651
     .local v5, "offY":F
     add-float v7, v1, v5
 
     sub-float v4, v7, v11
 
-    .line 652
     .local v4, "newY":F
     iget-object v7, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeText:Ljava/lang/String;
 
@@ -464,45 +424,35 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 131
     if-nez p0, :cond_1
 
-    .line 157
     :cond_0
     :goto_0
     return v7
 
-    .line 135
     :cond_1
     invoke-static {p0}, Lcom/letv/leui/widget/LeQuickContactBadge;->getBackgroundColorList(Landroid/content/res/Resources;)[I
 
     move-result-object v2
 
-    .line 136
     .local v2, "colorsList":[I
     if-eqz v2, :cond_0
 
-    .line 139
     array-length v1, v2
 
-    .line 141
     .local v1, "colorSize":I
     const/4 v6, 0x0
 
-    .line 142
     .local v6, "position":I
     if-eqz p1, :cond_4
 
-    .line 143
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v4
 
-    .line 144
     .local v4, "length":I
     const/4 v5, 0x0
 
-    .line 145
     .local v5, "nameValue":C
     const/4 v3, 0x0
 
@@ -510,12 +460,10 @@
     :goto_1
     if-ge v3, v4, :cond_2
 
-    .line 146
     const/16 v7, 0xa
 
     if-le v3, v7, :cond_3
 
-    .line 151
     :cond_2
     mul-int/lit8 v7, v4, 0x11
 
@@ -523,11 +471,9 @@
 
     add-int v0, v7, v8
 
-    .line 152
     .local v0, "code":I
     rem-int v6, v0, v1
 
-    .line 157
     .end local v0    # "code":I
     .end local v3    # "i":I
     .end local v4    # "length":I
@@ -537,7 +483,6 @@
 
     goto :goto_0
 
-    .line 149
     .restart local v3    # "i":I
     .restart local v4    # "length":I
     .restart local v5    # "nameValue":C
@@ -550,12 +495,10 @@
 
     int-to-char v5, v7
 
-    .line 145
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 154
     .end local v3    # "i":I
     .end local v4    # "length":I
     .end local v5    # "nameValue":C
@@ -582,66 +525,54 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 91
     if-nez p0, :cond_0
 
-    .line 92
     const/4 v3, 0x0
 
-    .line 111
     :goto_0
     return-object v3
 
-    .line 95
     :cond_0
     sget-object v6, Lcom/letv/leui/widget/LeQuickContactBadge;->sObject:Ljava/lang/Object;
 
     monitor-enter v6
 
-    .line 96
     :try_start_0
     sget-object v5, Lcom/letv/leui/widget/LeQuickContactBadge;->sBackgroundColorList:[I
 
     if-nez v5, :cond_3
 
-    .line 97
     const v5, 0x107005f
 
     invoke-virtual {p0, v5}, Landroid/content/res/Resources;->obtainTypedArray(I)Landroid/content/res/TypedArray;
 
     move-result-object v4
 
-    .line 98
     .local v4, "ta":Landroid/content/res/TypedArray;
     invoke-virtual {v4}, Landroid/content/res/TypedArray;->length()I
 
     move-result v0
 
-    .line 99
     .local v0, "N":I
     new-array v5, v0, [I
 
     sput-object v5, Lcom/letv/leui/widget/LeQuickContactBadge;->sBackgroundColorList:[I
 
-    .line 100
     const/4 v1, 0x0
 
     .local v1, "i":I
     :goto_1
     if-ge v1, v0, :cond_2
 
-    .line 101
     const/4 v5, 0x0
 
     invoke-virtual {v4, v1, v5}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v2
 
-    .line 102
     .local v2, "id":I
     if-eqz v2, :cond_1
 
-    .line 103
     sget-object v5, Lcom/letv/leui/widget/LeQuickContactBadge;->sBackgroundColorList:[I
 
     invoke-virtual {p0, v2}, Landroid/content/res/Resources;->getColor(I)I
@@ -650,18 +581,15 @@
 
     aput v7, v5, v1
 
-    .line 100
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 105
     .end local v2    # "id":I
     :cond_2
     invoke-virtual {v4}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 107
     .end local v0    # "N":I
     .end local v1    # "i":I
     .end local v4    # "ta":Landroid/content/res/TypedArray;
@@ -670,14 +598,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 109
     sget-object v5, Lcom/letv/leui/widget/LeQuickContactBadge;->sBackgroundColorList:[I
 
     array-length v5, v5
 
     new-array v3, v5, [I
 
-    .line 110
     .local v3, "ret":[I
     sget-object v5, Lcom/letv/leui/widget/LeQuickContactBadge;->sBackgroundColorList:[I
 
@@ -689,7 +615,6 @@
 
     goto :goto_0
 
-    .line 107
     .end local v3    # "ret":[I
     :catchall_0
     move-exception v5
@@ -711,12 +636,10 @@
 
     const/4 v8, 0x0
 
-    .line 468
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v4
 
-    .line 470
     .local v4, "len":I
     add-int/lit8 v2, v4, -0x1
 
@@ -724,12 +647,10 @@
     :goto_0
     if-ltz v2, :cond_2
 
-    .line 471
     invoke-virtual {p1, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
-    .line 472
     .local v0, "c":C
     invoke-static {v0}, Lcom/letv/leui/widget/LeQuickContactBadge;->isChinese(C)Z
 
@@ -737,7 +658,6 @@
 
     if-eqz v7, :cond_1
 
-    .line 473
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -756,31 +676,26 @@
 
     move-result-object v1
 
-    .line 496
     :cond_0
     :goto_1
     return-object v1
 
-    .line 470
     :cond_1
     add-int/lit8 v2, v2, -0x1
 
     goto :goto_0
 
-    .line 477
     .end local v0    # "c":C
     :cond_2
     invoke-virtual {p1, v8, v9}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 478
     .local v1, "firstLetter":Ljava/lang/String;
     invoke-virtual {v1, v8}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
-    .line 479
     .restart local v0    # "c":C
     invoke-static {v0}, Ljava/lang/Character;->isLetter(C)Z
 
@@ -788,14 +703,12 @@
 
     if-eqz v7, :cond_3
 
-    .line 480
     const-string v7, "[ ]+"
 
     invoke-virtual {p1, v7}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v6
 
-    .line 481
     .local v6, "subString":[Ljava/lang/String;
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
@@ -805,36 +718,30 @@
 
     move-result-object v1
 
-    .line 482
     array-length v5, v6
 
-    .line 483
     .local v5, "length":I
     const/4 v7, 0x2
 
     if-lt v5, v7, :cond_0
 
-    .line 484
     aget-object v7, v6, v9
 
     invoke-virtual {v7, v8, v9}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 485
     .local v3, "lastLetter":Ljava/lang/String;
     invoke-virtual {v3, v8}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
-    .line 486
     invoke-static {v0}, Ljava/lang/Character;->isLetter(C)Z
 
     move-result v7
 
     if-eqz v7, :cond_0
 
-    .line 487
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v7
@@ -843,7 +750,6 @@
 
     move-result-object v3
 
-    .line 488
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -862,7 +768,6 @@
 
     goto :goto_1
 
-    .line 496
     .end local v3    # "lastLetter":Ljava/lang/String;
     .end local v5    # "length":I
     .end local v6    # "subString":[Ljava/lang/String;
@@ -879,25 +784,20 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 116
     if-nez p0, :cond_1
 
-    .line 127
     :cond_0
     :goto_0
     return v2
 
-    .line 120
     :cond_1
     invoke-static {p0}, Lcom/letv/leui/widget/LeQuickContactBadge;->getBackgroundColorList(Landroid/content/res/Resources;)[I
 
     move-result-object v0
 
-    .line 121
     .local v0, "colorsList":[I
     if-eqz v0, :cond_0
 
-    .line 126
     invoke-static {}, Ljava/lang/Math;->random()D
 
     move-result-wide v2
@@ -910,7 +810,6 @@
 
     double-to-int v1, v2
 
-    .line 127
     .local v1, "random":I
     aget v2, v0, v1
 
@@ -921,7 +820,6 @@
     .locals 1
 
     .prologue
-    .line 196
     iget-object v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mContactUri:Landroid/net/Uri;
 
     if-nez v0, :cond_0
@@ -951,12 +849,10 @@
     .param p0, "c"    # C
 
     .prologue
-    .line 455
     invoke-static {p0}, Ljava/lang/Character$UnicodeBlock;->of(C)Ljava/lang/Character$UnicodeBlock;
 
     move-result-object v0
 
-    .line 456
     .local v0, "ub":Ljava/lang/Character$UnicodeBlock;
     sget-object v1, Ljava/lang/Character$UnicodeBlock;->CJK_UNIFIED_IDEOGRAPHS:Ljava/lang/Character$UnicodeBlock;
 
@@ -970,11 +866,9 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 462
     :cond_0
     const/4 v1, 0x1
 
-    .line 464
     :goto_0
     return v1
 
@@ -988,14 +882,12 @@
     .locals 1
 
     .prologue
-    .line 308
     invoke-direct {p0}, Lcom/letv/leui/widget/LeQuickContactBadge;->isAssigned()Z
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/LeQuickContactBadge;->setEnabled(Z)V
 
-    .line 309
     return-void
 .end method
 
@@ -1007,12 +899,10 @@
     .param p2, "lazyLookup"    # Z
 
     .prologue
-    .line 237
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, v0}, Lcom/letv/leui/widget/LeQuickContactBadge;->assignContactFromEmail(Ljava/lang/String;ZLandroid/os/Bundle;)V
 
-    .line 238
     return-void
 .end method
 
@@ -1025,20 +915,16 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 255
     iput-object p1, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mContactEmail:Ljava/lang/String;
 
-    .line 256
     iput-object p3, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mExtras:Landroid/os/Bundle;
 
-    .line 257
     if-nez p2, :cond_0
 
     iget-object v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mQueryHandler:Lcom/letv/leui/widget/LeQuickContactBadge$QueryHandler;
 
     if-eqz v0, :cond_0
 
-    .line 258
     iget-object v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mQueryHandler:Lcom/letv/leui/widget/LeQuickContactBadge$QueryHandler;
 
     const/4 v1, 0x0
@@ -1065,15 +951,12 @@
 
     invoke-virtual/range {v0 .. v7}, Lcom/letv/leui/widget/LeQuickContactBadge$QueryHandler;->startQuery(ILjava/lang/Object;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 265
     :goto_0
     return-void
 
-    .line 262
     :cond_0
     iput-object v2, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mContactUri:Landroid/net/Uri;
 
-    .line 263
     invoke-direct {p0}, Lcom/letv/leui/widget/LeQuickContactBadge;->onContactUriChanged()V
 
     goto :goto_0
@@ -1085,14 +968,12 @@
     .param p2, "lazyLookup"    # Z
 
     .prologue
-    .line 278
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     invoke-virtual {p0, p1, p2, v0}, Lcom/letv/leui/widget/LeQuickContactBadge;->assignContactFromPhone(Ljava/lang/String;ZLandroid/os/Bundle;)V
 
-    .line 279
     return-void
 .end method
 
@@ -1105,20 +986,16 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 295
     iput-object p1, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mContactPhone:Ljava/lang/String;
 
-    .line 296
     iput-object p3, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mExtras:Landroid/os/Bundle;
 
-    .line 297
     if-nez p2, :cond_0
 
     iget-object v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mQueryHandler:Lcom/letv/leui/widget/LeQuickContactBadge$QueryHandler;
 
     if-eqz v0, :cond_0
 
-    .line 298
     iget-object v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mQueryHandler:Lcom/letv/leui/widget/LeQuickContactBadge$QueryHandler;
 
     const/4 v1, 0x1
@@ -1141,15 +1018,12 @@
 
     invoke-virtual/range {v0 .. v7}, Lcom/letv/leui/widget/LeQuickContactBadge$QueryHandler;->startQuery(ILjava/lang/Object;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 305
     :goto_0
     return-void
 
-    .line 302
     :cond_0
     iput-object v2, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mContactUri:Landroid/net/Uri;
 
-    .line 303
     invoke-direct {p0}, Lcom/letv/leui/widget/LeQuickContactBadge;->onContactUriChanged()V
 
     goto :goto_0
@@ -1162,19 +1036,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 221
     iput-object p1, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mContactUri:Landroid/net/Uri;
 
-    .line 222
     iput-object v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mContactEmail:Ljava/lang/String;
 
-    .line 223
     iput-object v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mContactPhone:Ljava/lang/String;
 
-    .line 224
     invoke-direct {p0}, Lcom/letv/leui/widget/LeQuickContactBadge;->onContactUriChanged()V
 
-    .line 225
     return-void
 .end method
 
@@ -1182,10 +1051,8 @@
     .locals 0
 
     .prologue
-    .line 179
     invoke-super {p0}, Lcom/letv/leui/widget/BorderedRoundedCornersImageView;->drawableStateChanged()V
 
-    .line 180
     return-void
 .end method
 
@@ -1196,7 +1063,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 316
     iget-object v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_1
@@ -1205,14 +1071,12 @@
 
     invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
-    .line 317
     .local v2, "extras":Landroid/os/Bundle;
     :goto_0
     iget-object v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mContactUri:Landroid/net/Uri;
 
     if-eqz v0, :cond_3
 
-    .line 322
     new-instance v8, Landroid/content/Intent;
 
     const-string v0, "android.intent.action.VIEW"
@@ -1221,7 +1085,6 @@
 
     invoke-direct {v8, v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 323
     .local v8, "intent":Landroid/content/Intent;
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeQuickContactBadge;->getContext()Landroid/content/Context;
 
@@ -1233,33 +1096,28 @@
 
     const/high16 v9, 0x80000
 
-    .line 326
     .local v9, "intentFlags":I
     :goto_1
     invoke-virtual {v8, v9}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 327
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeQuickContactBadge;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     invoke-virtual {v0, v8}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 342
     .end local v8    # "intent":Landroid/content/Intent;
     .end local v9    # "intentFlags":I
     :cond_0
     :goto_2
     return-void
 
-    .line 316
     .end local v2    # "extras":Landroid/os/Bundle;
     :cond_1
     iget-object v2, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mExtras:Landroid/os/Bundle;
 
     goto :goto_0
 
-    .line 323
     .restart local v2    # "extras":Landroid/os/Bundle;
     .restart local v8    # "intent":Landroid/content/Intent;
     :cond_2
@@ -1267,7 +1125,6 @@
 
     goto :goto_1
 
-    .line 328
     .end local v8    # "intent":Landroid/content/Intent;
     :cond_3
     iget-object v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mContactEmail:Ljava/lang/String;
@@ -1278,14 +1135,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 329
     const-string v0, "uri_content"
 
     iget-object v1, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mContactEmail:Ljava/lang/String;
 
     invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 330
     iget-object v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mQueryHandler:Lcom/letv/leui/widget/LeQuickContactBadge$QueryHandler;
 
     const/4 v1, 0x2
@@ -1312,7 +1167,6 @@
 
     goto :goto_2
 
-    .line 333
     :cond_4
     iget-object v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mContactPhone:Ljava/lang/String;
 
@@ -1322,14 +1176,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 334
     const-string v0, "uri_content"
 
     iget-object v1, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mContactPhone:Ljava/lang/String;
 
     invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 335
     iget-object v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mQueryHandler:Lcom/letv/leui/widget/LeQuickContactBadge$QueryHandler;
 
     const/4 v1, 0x3
@@ -1358,13 +1210,10 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 189
     invoke-super {p0, p1}, Lcom/letv/leui/widget/BorderedRoundedCornersImageView;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 191
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/LeQuickContactBadge;->drawBadgeText(Landroid/graphics/Canvas;)V
 
-    .line 192
     return-void
 .end method
 
@@ -1373,10 +1222,8 @@
     .param p1, "event"    # Landroid/view/accessibility/AccessibilityEvent;
 
     .prologue
-    .line 346
     invoke-super {p0, p1}, Lcom/letv/leui/widget/BorderedRoundedCornersImageView;->onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 347
     const-class v0, Lcom/letv/leui/widget/LeQuickContactBadge;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -1385,7 +1232,6 @@
 
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityEvent;->setClassName(Ljava/lang/CharSequence;)V
 
-    .line 348
     return-void
 .end method
 
@@ -1394,10 +1240,8 @@
     .param p1, "info"    # Landroid/view/accessibility/AccessibilityNodeInfo;
 
     .prologue
-    .line 352
     invoke-super {p0, p1}, Lcom/letv/leui/widget/BorderedRoundedCornersImageView;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    .line 353
     const-class v0, Lcom/letv/leui/widget/LeQuickContactBadge;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -1406,7 +1250,6 @@
 
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setClassName(Ljava/lang/CharSequence;)V
 
-    .line 354
     return-void
 .end method
 
@@ -1415,32 +1258,26 @@
     .param p1, "badgeText"    # Ljava/lang/String;
 
     .prologue
-    .line 504
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 505
     const-string v1, ""
 
     iput-object v1, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeText:Ljava/lang/String;
 
-    .line 514
     :goto_0
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeQuickContactBadge;->invalidate()V
 
-    .line 515
     return-void
 
-    .line 507
     :cond_0
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 508
     .local v0, "text":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1448,14 +1285,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 509
     const-string v1, ""
 
     iput-object v1, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeText:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 511
     :cond_1
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/LeQuickContactBadge;->getName(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1471,33 +1306,27 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 572
     iget v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeTextColor:I
 
     if-ne p1, v0, :cond_1
 
-    .line 584
     :cond_0
     :goto_0
     return-void
 
-    .line 576
     :cond_1
     iput p1, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeTextColor:I
 
-    .line 577
     iget-object v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeTextPaint:Landroid/graphics/Paint;
 
     if-eqz v0, :cond_0
 
-    .line 578
     iget-object v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeTextPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeTextColor:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 580
     iget-object v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeText:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1506,7 +1335,6 @@
 
     if-nez v0, :cond_0
 
-    .line 581
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeQuickContactBadge;->invalidate()V
 
     goto :goto_0
@@ -1517,7 +1345,6 @@
     .param p1, "res"    # I
 
     .prologue
-    .line 568
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeQuickContactBadge;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1532,7 +1359,6 @@
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/LeQuickContactBadge;->setContactBudageTextColor(I)V
 
-    .line 569
     return-void
 .end method
 
@@ -1544,7 +1370,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 600
     if-lez p1, :cond_0
 
     iget v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeTextShadowRadius:I
@@ -1555,24 +1380,19 @@
 
     if-ne v0, p2, :cond_1
 
-    .line 615
     :cond_0
     :goto_0
     return-void
 
-    .line 605
     :cond_1
     iput p1, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeTextShadowRadius:I
 
-    .line 606
     iput p2, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeTextShadowColor:I
 
-    .line 608
     iget-object v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeTextPaint:Landroid/graphics/Paint;
 
     if-eqz v0, :cond_0
 
-    .line 609
     iget-object v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeTextPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeTextShadowRadius:I
@@ -1583,7 +1403,6 @@
 
     invoke-virtual {v0, v1, v3, v3, v2}, Landroid/graphics/Paint;->setShadowLayer(FFFI)V
 
-    .line 611
     iget-object v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeText:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1592,7 +1411,6 @@
 
     if-nez v0, :cond_0
 
-    .line 612
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeQuickContactBadge;->invalidate()V
 
     goto :goto_0
@@ -1604,7 +1422,6 @@
     .param p2, "shdowColorRes"    # I
 
     .prologue
-    .line 587
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeQuickContactBadge;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -1613,7 +1430,6 @@
 
     move-result-object v0
 
-    .line 589
     .local v0, "res":Landroid/content/res/Resources;
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1625,7 +1441,6 @@
 
     invoke-virtual {p0, v1, v2}, Lcom/letv/leui/widget/LeQuickContactBadge;->setContactBudageTextShadow(II)V
 
-    .line 591
     return-void
 .end method
 
@@ -1634,28 +1449,23 @@
     .param p1, "badgeTextSize"    # I
 
     .prologue
-    .line 553
     if-lez p1, :cond_0
 
     iget v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeTextSize:I
 
     if-ne p1, v0, :cond_1
 
-    .line 565
     :cond_0
     :goto_0
     return-void
 
-    .line 557
     :cond_1
     iput p1, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeTextSize:I
 
-    .line 558
     iget-object v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeTextPaint:Landroid/graphics/Paint;
 
     if-eqz v0, :cond_0
 
-    .line 559
     iget-object v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeTextPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeTextSize:I
@@ -1664,7 +1474,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    .line 561
     iget-object v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mBadgeText:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1673,7 +1482,6 @@
 
     if-nez v0, :cond_0
 
-    .line 562
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeQuickContactBadge;->invalidate()V
 
     goto :goto_0
@@ -1684,7 +1492,6 @@
     .param p1, "res"    # I
 
     .prologue
-    .line 544
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeQuickContactBadge;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1699,7 +1506,6 @@
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/LeQuickContactBadge;->setContactBudageTextSize(I)V
 
-    .line 545
     return-void
 .end method
 
@@ -1708,10 +1514,8 @@
     .param p1, "excludeMimes"    # [Ljava/lang/String;
 
     .prologue
-    .line 362
     iput-object p1, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mExcludeMimes:[Ljava/lang/String;
 
-    .line 363
     return-void
 .end method
 
@@ -1721,12 +1525,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 203
     iget-object v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mDefaultAvatar:Landroid/graphics/drawable/Drawable;
 
     if-nez v0, :cond_0
 
-    .line 204
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeQuickContactBadge;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1739,19 +1541,15 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mDefaultAvatar:Landroid/graphics/drawable/Drawable;
 
-    .line 206
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/LeQuickContactBadge;->mDefaultAvatar:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/LeQuickContactBadge;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 207
     invoke-virtual {p0, v2}, Lcom/letv/leui/widget/LeQuickContactBadge;->setContactBadgeText(Ljava/lang/String;)V
 
-    .line 208
     invoke-virtual {p0, v2}, Lcom/letv/leui/widget/LeQuickContactBadge;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 209
     return-void
 .end method
 
@@ -1760,7 +1558,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 185
     return-void
 .end method
 
@@ -1773,25 +1570,21 @@
 
     const/4 v6, 0x0
 
-    .line 518
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v7
 
     if-eqz v7, :cond_1
 
-    .line 538
     :cond_0
     :goto_0
     return v5
 
-    .line 521
     :cond_1
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 522
     .local v4, "text":Ljava/lang/String;
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1799,12 +1592,10 @@
 
     if-nez v7, :cond_0
 
-    .line 525
     invoke-virtual {v4}, Ljava/lang/String;->length()I
 
     move-result v3
 
-    .line 527
     .local v3, "len":I
     add-int/lit8 v2, v3, -0x1
 
@@ -1812,12 +1603,10 @@
     :goto_1
     if-ltz v2, :cond_3
 
-    .line 528
     invoke-virtual {v4, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
-    .line 529
     .local v0, "c":C
     invoke-static {v0}, Lcom/letv/leui/widget/LeQuickContactBadge;->isChinese(C)Z
 
@@ -1827,29 +1616,24 @@
 
     move v5, v6
 
-    .line 530
     goto :goto_0
 
-    .line 527
     :cond_2
     add-int/lit8 v2, v2, -0x1
 
     goto :goto_1
 
-    .line 533
     .end local v0    # "c":C
     :cond_3
     invoke-virtual {v4, v6, v5}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 534
     .local v1, "firstLetter":Ljava/lang/String;
     invoke-virtual {v1, v6}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
-    .line 535
     .restart local v0    # "c":C
     invoke-static {v0}, Ljava/lang/Character;->isLetter(C)Z
 
@@ -1859,6 +1643,5 @@
 
     move v5, v6
 
-    .line 536
     goto :goto_0
 .end method

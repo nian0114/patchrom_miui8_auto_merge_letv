@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 127
     iput-object p1, p0, Lcom/letv/leui/widget/LeLicenceDialog$1;->this$0:Lcom/letv/leui/widget/LeLicenceDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +41,10 @@
     .param p2, "isChecked"    # Z
 
     .prologue
-    .line 130
     iget-object v0, p0, Lcom/letv/leui/widget/LeLicenceDialog$1;->this$0:Lcom/letv/leui/widget/LeLicenceDialog;
 
     # setter for: Lcom/letv/leui/widget/LeLicenceDialog;->checked:Z
     invoke-static {v0, p2}, Lcom/letv/leui/widget/LeLicenceDialog;->access$002(Lcom/letv/leui/widget/LeLicenceDialog;Z)Z
 
-    .line 131
     return-void
 .end method

@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 103
     iput-object p1, p0, Lcom/letv/leui/util/LeDomainManager$3;->this$0:Lcom/letv/leui/util/LeDomainManager;
 
     iput-object p2, p0, Lcom/letv/leui/util/LeDomainManager$3;->val$r:Lcom/letv/leui/util/LeDomainManager$DomainResult;
@@ -49,17 +48,14 @@
     .param p1, "exception"    # Ljava/lang/Exception;
 
     .prologue
-    .line 112
     iget-object v0, p0, Lcom/letv/leui/util/LeDomainManager$3;->val$r:Lcom/letv/leui/util/LeDomainManager$DomainResult;
 
     iput-object p1, v0, Lcom/letv/leui/util/LeDomainManager$DomainResult;->exception:Ljava/lang/Exception;
 
-    .line 113
     iget-object v0, p0, Lcom/letv/leui/util/LeDomainManager$3;->val$latch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 114
     return-void
 .end method
 
@@ -77,17 +73,14 @@
     .end annotation
 
     .prologue
-    .line 106
     .local p1, "result":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v0, p0, Lcom/letv/leui/util/LeDomainManager$3;->val$r:Lcom/letv/leui/util/LeDomainManager$DomainResult;
 
     iput-object p1, v0, Lcom/letv/leui/util/LeDomainManager$DomainResult;->map:Ljava/util/Map;
 
-    .line 107
     iget-object v0, p0, Lcom/letv/leui/util/LeDomainManager$3;->val$latch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 108
     return-void
 .end method

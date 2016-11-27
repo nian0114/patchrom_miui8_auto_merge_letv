@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 457
     iput-object p1, p0, Lcom/android/server/policy/global/GlobalActionHostView$1$2;->this$1:Lcom/android/server/policy/global/GlobalActionHostView$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 460
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHostView$1$2;->this$1:Lcom/android/server/policy/global/GlobalActionHostView$1;
 
     iget-object v0, v0, Lcom/android/server/policy/global/GlobalActionHostView$1;->this$0:Lcom/android/server/policy/global/GlobalActionHostView;
@@ -49,6 +47,5 @@
 
     invoke-interface {v0}, Lcom/android/server/policy/global/GlobalActionViewMediator$MediatorCallback;->hiddenWindow()V
 
-    .line 461
     return-void
 .end method

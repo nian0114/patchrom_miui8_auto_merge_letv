@@ -55,15 +55,12 @@
     .locals 1
 
     .prologue
-    .line 487
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 488
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/webkit/WebView$HitTestResult;->mType:I
 
-    .line 489
     return-void
 .end method
 
@@ -73,7 +70,6 @@
     .locals 1
 
     .prologue
-    .line 536
     iget-object v0, p0, Landroid/webkit/WebView$HitTestResult;->mExtra:Ljava/lang/String;
 
     return-object v0
@@ -83,7 +79,6 @@
     .locals 1
 
     .prologue
-    .line 548
     iget-object v0, p0, Landroid/webkit/WebView$HitTestResult;->mImageAnchorUrlExtra:Ljava/lang/String;
 
     return-object v0
@@ -93,7 +88,6 @@
     .locals 1
 
     .prologue
-    .line 525
     iget v0, p0, Landroid/webkit/WebView$HitTestResult;->mType:I
 
     return v0
@@ -104,10 +98,8 @@
     .param p1, "extra"    # Ljava/lang/String;
 
     .prologue
-    .line 515
     iput-object p1, p0, Landroid/webkit/WebView$HitTestResult;->mExtra:Ljava/lang/String;
 
-    .line 516
     return-void
 .end method
 
@@ -116,10 +108,8 @@
     .param p1, "imageAnchorUrl"    # Ljava/lang/String;
 
     .prologue
-    .line 507
     iput-object p1, p0, Landroid/webkit/WebView$HitTestResult;->mImageAnchorUrlExtra:Ljava/lang/String;
 
-    .line 508
     return-void
 .end method
 
@@ -128,9 +118,7 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 496
     iput p1, p0, Landroid/webkit/WebView$HitTestResult;->mType:I
 
-    .line 497
     return-void
 .end method

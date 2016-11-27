@@ -36,27 +36,22 @@
     .param p2, "strong"    # Z
 
     .prologue
-    .line 792
     invoke-direct {p0}, Landroid/content/IIntentReceiver$Stub;-><init>()V
 
-    .line 793
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Landroid/app/LoadedApk$ReceiverDispatcher$InnerReceiver;->mDispatcher:Ljava/lang/ref/WeakReference;
 
-    .line 794
     if-eqz p2, :cond_0
 
     .end local p1    # "rd":Landroid/app/LoadedApk$ReceiverDispatcher;
     :goto_0
     iput-object p1, p0, Landroid/app/LoadedApk$ReceiverDispatcher$InnerReceiver;->mStrongRef:Landroid/app/LoadedApk$ReceiverDispatcher;
 
-    .line 795
     return-void
 
-    .line 794
     .restart local p1    # "rd":Landroid/app/LoadedApk$ReceiverDispatcher;
     :cond_0
     const/4 p1, 0x0
@@ -77,7 +72,6 @@
     .param p7, "sendingUser"    # I
 
     .prologue
-    .line 798
     iget-object v2, p0, Landroid/app/LoadedApk$ReceiverDispatcher$InnerReceiver;->mDispatcher:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -86,14 +80,12 @@
 
     check-cast v0, Landroid/app/LoadedApk$ReceiverDispatcher;
 
-    .line 799
     .local v0, "rd":Landroid/app/LoadedApk$ReceiverDispatcher;
     sget-boolean v2, Landroid/app/ActivityThread;->DEBUG_BROADCAST:Z
 
     if-eqz v2, :cond_0
 
-    .line 800
-    const-string/jumbo v2, "seq"
+    const-string v2, "seq"
 
     const/4 v3, -0x1
 
@@ -101,7 +93,6 @@
 
     move-result v9
 
-    .line 801
     .local v9, "seq":I
     const-string v3, "ActivityThread"
 
@@ -154,7 +145,6 @@
 
     invoke-static {v3, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 804
     .end local v9    # "seq":I
     :cond_0
     if-eqz v0, :cond_2
@@ -173,21 +163,17 @@
 
     move/from16 v7, p7
 
-    .line 805
     invoke-virtual/range {v0 .. v7}, Landroid/app/LoadedApk$ReceiverDispatcher;->performReceive(Landroid/content/Intent;ILjava/lang/String;Landroid/os/Bundle;ZZI)V
 
-    .line 824
     :goto_1
     return-void
 
-    .line 801
     .restart local v9    # "seq":I
     :cond_1
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 812
     .end local v9    # "seq":I
     :cond_2
     sget-boolean v2, Landroid/app/ActivityThread;->DEBUG_BROADCAST:Z
@@ -200,23 +186,19 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 814
     :cond_3
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
     move-result-object v1
 
-    .line 816
     .local v1, "mgr":Landroid/app/IActivityManager;
     if-eqz p4, :cond_4
 
-    .line 817
     const/4 v2, 0x0
 
     :try_start_0
     invoke-virtual {p4, v2}, Landroid/os/Bundle;->setAllowFds(Z)Z
 
-    .line 819
     :cond_4
     const/4 v6, 0x0
 
@@ -238,11 +220,9 @@
 
     goto :goto_1
 
-    .line 820
     :catch_0
     move-exception v8
 
-    .line 821
     .local v8, "e":Landroid/os/RemoteException;
     const-string v2, "ActivityThread"
 

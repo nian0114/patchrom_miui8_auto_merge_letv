@@ -44,7 +44,6 @@
     .locals 0
 
     .prologue
-    .line 237
     iput-object p1, p0, Lcom/android/internal/widget/LockPatternChecker$6;->val$categoryPasswordType:Ljava/lang/String;
 
     iput-object p2, p0, Lcom/android/internal/widget/LockPatternChecker$6;->val$utils:Lcom/android/internal/widget/LockPatternUtils;
@@ -67,7 +66,6 @@
     .param p1, "args"    # [Ljava/lang/Void;
 
     .prologue
-    .line 243
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/widget/LockPatternChecker$6;->val$categoryPasswordType:Ljava/lang/String;
 
@@ -77,7 +75,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 244
     iget-object v1, p0, Lcom/android/internal/widget/LockPatternChecker$6;->val$utils:Lcom/android/internal/widget/LockPatternUtils;
 
     iget-object v2, p0, Lcom/android/internal/widget/LockPatternChecker$6;->val$password:Ljava/lang/String;
@@ -92,11 +89,9 @@
 
     move-result-object v1
 
-    .line 250
     :goto_0
     return-object v1
 
-    .line 246
     :cond_0
     iget-object v1, p0, Lcom/android/internal/widget/LockPatternChecker$6;->val$utils:Lcom/android/internal/widget/LockPatternUtils;
 
@@ -118,11 +113,9 @@
 
     goto :goto_0
 
-    .line 248
     :catch_0
     move-exception v0
 
-    .line 249
     .local v0, "ex":Lcom/android/internal/widget/LockPatternUtils$RequestThrottledException;
     invoke-virtual {v0}, Lcom/android/internal/widget/LockPatternUtils$RequestThrottledException;->getTimeoutMs()I
 
@@ -130,7 +123,6 @@
 
     iput v1, p0, Lcom/android/internal/widget/LockPatternChecker$6;->mThrottleTimeout:I
 
-    .line 250
     const/4 v1, 0x0
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -144,7 +136,6 @@
     .locals 1
 
     .prologue
-    .line 237
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/android/internal/widget/LockPatternChecker$6;->doInBackground([Ljava/lang/Void;)Ljava/lang/Boolean;
@@ -159,7 +150,6 @@
     .param p1, "result"    # Ljava/lang/Boolean;
 
     .prologue
-    .line 256
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternChecker$6;->val$callback:Lcom/android/internal/widget/LockPatternChecker$OnCheckCallback;
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
@@ -170,7 +160,6 @@
 
     invoke-interface {v0, v1, v2}, Lcom/android/internal/widget/LockPatternChecker$OnCheckCallback;->onChecked(ZI)V
 
-    .line 257
     return-void
 .end method
 
@@ -178,7 +167,6 @@
     .locals 0
 
     .prologue
-    .line 237
     check-cast p1, Ljava/lang/Boolean;
 
     invoke-virtual {p0, p1}, Lcom/android/internal/widget/LockPatternChecker$6;->onPostExecute(Ljava/lang/Boolean;)V

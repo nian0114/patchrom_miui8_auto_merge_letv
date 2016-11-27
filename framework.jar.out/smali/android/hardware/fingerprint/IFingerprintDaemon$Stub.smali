@@ -68,15 +68,12 @@
     .locals 1
 
     .prologue
-    .line 18
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 19
     const-string v0, "android.hardware.fingerprint.IFingerprintDaemon"
 
     invoke-virtual {p0, p0, v0}, Landroid/hardware/fingerprint/IFingerprintDaemon$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 20
     return-void
 .end method
 
@@ -85,17 +82,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 27
     if-nez p0, :cond_0
 
-    .line 28
     const/4 v0, 0x0
 
-    .line 34
     :goto_0
     return-object v0
 
-    .line 30
     :cond_0
     const-string v1, "android.hardware.fingerprint.IFingerprintDaemon"
 
@@ -103,7 +96,6 @@
 
     move-result-object v0
 
-    .line 31
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -111,12 +103,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 32
     check-cast v0, Landroid/hardware/fingerprint/IFingerprintDaemon;
 
     goto :goto_0
 
-    .line 34
     :cond_1
     new-instance v0, Landroid/hardware/fingerprint/IFingerprintDaemon$Stub$Proxy;
 
@@ -132,7 +122,6 @@
     .locals 0
 
     .prologue
-    .line 38
     return-object p0
 .end method
 
@@ -151,10 +140,8 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 42
     sparse-switch p1, :sswitch_data_0
 
-    .line 225
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v0
@@ -162,7 +149,6 @@
     :goto_0
     return v0
 
-    .line 46
     :sswitch_0
     const-string v1, "android.hardware.fingerprint.IFingerprintDaemon"
 
@@ -170,39 +156,32 @@
 
     goto :goto_0
 
-    .line 51
     :sswitch_1
     const-string v1, "android.hardware.fingerprint.IFingerprintDaemon"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 53
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v2
 
-    .line 55
     .local v2, "_arg0":J
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 56
     .local v4, "_arg1":I
     invoke-virtual {p0, v2, v3, v4}, Landroid/hardware/fingerprint/IFingerprintDaemon$Stub;->authenticate(JI)I
 
     move-result v8
 
-    .line 57
     .local v8, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 58
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 63
     .end local v2    # "_arg0":J
     .end local v4    # "_arg1":I
     .end local v8    # "_result":I
@@ -211,60 +190,49 @@
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 64
     invoke-virtual {p0}, Landroid/hardware/fingerprint/IFingerprintDaemon$Stub;->cancelAuthentication()I
 
     move-result v8
 
-    .line 65
     .restart local v8    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 66
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 71
     .end local v8    # "_result":I
     :sswitch_3
     const-string v1, "android.hardware.fingerprint.IFingerprintDaemon"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 73
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v2
 
-    .line 75
     .local v2, "_arg0":[B
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 77
     .restart local v4    # "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 78
     .local v5, "_arg2":I
     invoke-virtual {p0, v2, v4, v5}, Landroid/hardware/fingerprint/IFingerprintDaemon$Stub;->enroll([BII)I
 
     move-result v8
 
-    .line 79
     .restart local v8    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 80
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 85
     .end local v2    # "_arg0":[B
     .end local v4    # "_arg1":I
     .end local v5    # "_arg2":I
@@ -274,75 +242,61 @@
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 86
     invoke-virtual {p0}, Landroid/hardware/fingerprint/IFingerprintDaemon$Stub;->cancelEnrollment()I
 
     move-result v8
 
-    .line 87
     .restart local v8    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 88
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 93
     .end local v8    # "_result":I
     :sswitch_5
     const-string v1, "android.hardware.fingerprint.IFingerprintDaemon"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 94
     invoke-virtual {p0}, Landroid/hardware/fingerprint/IFingerprintDaemon$Stub;->preEnroll()J
 
     move-result-wide v8
 
-    .line 95
     .local v8, "_result":J
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 96
     invoke-virtual {p3, v8, v9}, Landroid/os/Parcel;->writeLong(J)V
 
     goto :goto_0
 
-    .line 101
     .end local v8    # "_result":J
     :sswitch_6
     const-string v1, "android.hardware.fingerprint.IFingerprintDaemon"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 103
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 105
     .local v2, "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 106
     .restart local v4    # "_arg1":I
     invoke-virtual {p0, v2, v4}, Landroid/hardware/fingerprint/IFingerprintDaemon$Stub;->remove(II)I
 
     move-result v8
 
-    .line 107
     .local v8, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 108
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 113
     .end local v2    # "_arg0":I
     .end local v4    # "_arg1":I
     .end local v8    # "_result":I
@@ -351,54 +305,44 @@
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 114
     invoke-virtual {p0}, Landroid/hardware/fingerprint/IFingerprintDaemon$Stub;->getAuthenticatorId()J
 
     move-result-wide v8
 
-    .line 115
     .local v8, "_result":J
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 116
     invoke-virtual {p3, v8, v9}, Landroid/os/Parcel;->writeLong(J)V
 
     goto/16 :goto_0
 
-    .line 121
     .end local v8    # "_result":J
     :sswitch_8
     const-string v1, "android.hardware.fingerprint.IFingerprintDaemon"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 123
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 125
     .restart local v2    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v4
 
-    .line 126
     .local v4, "_arg1":[B
     invoke-virtual {p0, v2, v4}, Landroid/hardware/fingerprint/IFingerprintDaemon$Stub;->setActiveGroup(I[B)I
 
     move-result v8
 
-    .line 127
     .local v8, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 128
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 133
     .end local v2    # "_arg0":I
     .end local v4    # "_arg1":[B
     .end local v8    # "_result":I
@@ -407,49 +351,40 @@
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 134
     invoke-virtual {p0}, Landroid/hardware/fingerprint/IFingerprintDaemon$Stub;->openHal()J
 
     move-result-wide v8
 
-    .line 135
     .local v8, "_result":J
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 136
     invoke-virtual {p3, v8, v9}, Landroid/os/Parcel;->writeLong(J)V
 
     goto/16 :goto_0
 
-    .line 141
     .end local v8    # "_result":J
     :sswitch_a
     const-string v1, "android.hardware.fingerprint.IFingerprintDaemon"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 142
     invoke-virtual {p0}, Landroid/hardware/fingerprint/IFingerprintDaemon$Stub;->closeHal()I
 
     move-result v8
 
-    .line 143
     .local v8, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 144
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 149
     .end local v8    # "_result":I
     :sswitch_b
     const-string v1, "android.hardware.fingerprint.IFingerprintDaemon"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 151
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v1
@@ -458,64 +393,52 @@
 
     move-result-object v2
 
-    .line 152
     .local v2, "_arg0":Landroid/hardware/fingerprint/IFingerprintDaemonCallback;
     invoke-virtual {p0, v2}, Landroid/hardware/fingerprint/IFingerprintDaemon$Stub;->init(Landroid/hardware/fingerprint/IFingerprintDaemonCallback;)V
 
-    .line 153
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 158
     .end local v2    # "_arg0":Landroid/hardware/fingerprint/IFingerprintDaemonCallback;
     :sswitch_c
     const-string v1, "android.hardware.fingerprint.IFingerprintDaemon"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 159
     invoke-virtual {p0}, Landroid/hardware/fingerprint/IFingerprintDaemon$Stub;->postEnroll()I
 
     move-result v8
 
-    .line 160
     .restart local v8    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 161
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 166
     .end local v8    # "_result":I
     :sswitch_d
     const-string v1, "android.hardware.fingerprint.IFingerprintDaemon"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 168
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 169
     .local v2, "_arg0":I
     invoke-virtual {p0, v2}, Landroid/hardware/fingerprint/IFingerprintDaemon$Stub;->startTakePicture(I)I
 
     move-result v8
 
-    .line 170
     .restart local v8    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 171
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 176
     .end local v2    # "_arg0":I
     .end local v8    # "_result":I
     :sswitch_e
@@ -523,90 +446,73 @@
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 177
     invoke-virtual {p0}, Landroid/hardware/fingerprint/IFingerprintDaemon$Stub;->stopTakePicture()I
 
     move-result v8
 
-    .line 178
     .restart local v8    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 179
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 184
     .end local v8    # "_result":I
     :sswitch_f
     const-string v1, "android.hardware.fingerprint.IFingerprintDaemon"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 185
     invoke-virtual {p0}, Landroid/hardware/fingerprint/IFingerprintDaemon$Stub;->enableFingerprint()I
 
     move-result v8
 
-    .line 186
     .restart local v8    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 187
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 192
     .end local v8    # "_result":I
     :sswitch_10
     const-string v1, "android.hardware.fingerprint.IFingerprintDaemon"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 193
     invoke-virtual {p0}, Landroid/hardware/fingerprint/IFingerprintDaemon$Stub;->disableFingerprint()I
 
     move-result v8
 
-    .line 194
     .restart local v8    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 195
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 200
     .end local v8    # "_result":I
     :sswitch_11
     const-string v1, "android.hardware.fingerprint.IFingerprintDaemon"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 202
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 203
     .restart local v2    # "_arg0":I
     invoke-virtual {p0, v2}, Landroid/hardware/fingerprint/IFingerprintDaemon$Stub;->setDefaultMode(I)I
 
     move-result v8
 
-    .line 204
     .restart local v8    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 205
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 210
     .end local v2    # "_arg0":I
     .end local v8    # "_result":I
     :sswitch_12
@@ -614,24 +520,20 @@
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 212
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v2
 
-    .line 214
     .local v2, "_arg0":J
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 216
     .local v4, "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v5
 
-    .line 218
     .local v5, "_arg2":[B
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
@@ -640,21 +542,17 @@
     .local v6, "_arg3":[B
     move-object v1, p0
 
-    .line 219
     invoke-virtual/range {v1 .. v6}, Landroid/hardware/fingerprint/IFingerprintDaemon$Stub;->authenticateFido(JI[B[B)I
 
     move-result v8
 
-    .line 220
     .restart local v8    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 221
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 42
     nop
 
     :sswitch_data_0

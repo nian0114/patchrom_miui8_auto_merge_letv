@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 263
     iput-object p1, p0, Lcom/android/server/am/LetvThermalSwitchManager$1;->this$0:Lcom/android/server/am/LetvThermalSwitchManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 265
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 266
     .local v0, "action":Ljava/lang/String;
     const-string v4, "ThermalSwitchManager"
 
@@ -68,7 +65,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 269
     const-string v4, "android.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -77,10 +73,8 @@
 
     if-eqz v4, :cond_2
 
-    .line 270
     const v1, 0x7fffffff
 
-    .line 273
     .local v1, "appTimeout":I
     sget-object v4, Lcom/android/server/am/LetvThermalSwitchConfig;->appConfig:Ljava/util/Map;
 
@@ -105,7 +99,6 @@
 
     move-result-object v3
 
-    .line 274
     .local v3, "o":Ljava/lang/Object;
     sget-object v4, Lcom/android/server/am/LetvThermalSwitchConfig;->appConfig:Ljava/util/Map;
 
@@ -121,7 +114,6 @@
 
     if-ge v4, v1, :cond_0
 
-    .line 275
     sget-object v4, Lcom/android/server/am/LetvThermalSwitchConfig;->appConfig:Ljava/util/Map;
 
     invoke-interface {v4, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -136,7 +128,6 @@
 
     goto :goto_0
 
-    .line 278
     .end local v3    # "o":Ljava/lang/Object;
     :cond_1
     const-string v4, "ThermalSwitchManager"
@@ -167,13 +158,11 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 280
     iget-object v4, p0, Lcom/android/server/am/LetvThermalSwitchManager$1;->this$0:Lcom/android/server/am/LetvThermalSwitchManager;
 
     # invokes: Lcom/android/server/am/LetvThermalSwitchManager;->changeToDynamicThermalManagement()V
     invoke-static {v4}, Lcom/android/server/am/LetvThermalSwitchManager;->access$700(Lcom/android/server/am/LetvThermalSwitchManager;)V
 
-    .line 281
     iget-object v4, p0, Lcom/android/server/am/LetvThermalSwitchManager$1;->this$0:Lcom/android/server/am/LetvThermalSwitchManager;
 
     sget-object v5, Lcom/android/server/am/LetvThermalSwitchManager$ThermalSwitchState;->Enabled:Lcom/android/server/am/LetvThermalSwitchManager$ThermalSwitchState;
@@ -181,7 +170,6 @@
     # setter for: Lcom/android/server/am/LetvThermalSwitchManager;->mState:Lcom/android/server/am/LetvThermalSwitchManager$ThermalSwitchState;
     invoke-static {v4, v5}, Lcom/android/server/am/LetvThermalSwitchManager;->access$202(Lcom/android/server/am/LetvThermalSwitchManager;Lcom/android/server/am/LetvThermalSwitchManager$ThermalSwitchState;)Lcom/android/server/am/LetvThermalSwitchManager$ThermalSwitchState;
 
-    .line 283
     const-string v4, "ThermalSwitchManager"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -211,7 +199,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 285
     .end local v1    # "appTimeout":I
     .end local v2    # "i$":Ljava/util/Iterator;
     :cond_2

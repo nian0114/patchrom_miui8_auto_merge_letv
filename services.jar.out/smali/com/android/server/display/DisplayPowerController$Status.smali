@@ -60,7 +60,6 @@
 
     const/4 v3, 0x0
 
-    .line 1558
     new-instance v0, Lcom/android/server/display/DisplayPowerController$Status;
 
     const-string v1, "UNKNOW_STATUS"
@@ -69,7 +68,6 @@
 
     sput-object v0, Lcom/android/server/display/DisplayPowerController$Status;->UNKNOW_STATUS:Lcom/android/server/display/DisplayPowerController$Status;
 
-    .line 1559
     new-instance v0, Lcom/android/server/display/DisplayPowerController$Status;
 
     const-string v1, "MANUAL_BACKLIGHT_BRIGHTEN"
@@ -78,7 +76,6 @@
 
     sput-object v0, Lcom/android/server/display/DisplayPowerController$Status;->MANUAL_BACKLIGHT_BRIGHTEN:Lcom/android/server/display/DisplayPowerController$Status;
 
-    .line 1560
     new-instance v0, Lcom/android/server/display/DisplayPowerController$Status;
 
     const-string v1, "MANUAL_BACKLIGHT_DARKEN"
@@ -87,7 +84,6 @@
 
     sput-object v0, Lcom/android/server/display/DisplayPowerController$Status;->MANUAL_BACKLIGHT_DARKEN:Lcom/android/server/display/DisplayPowerController$Status;
 
-    .line 1561
     new-instance v0, Lcom/android/server/display/DisplayPowerController$Status;
 
     const-string v1, "AUTO_BACKLIGHT_BRIGHTEN"
@@ -96,7 +92,6 @@
 
     sput-object v0, Lcom/android/server/display/DisplayPowerController$Status;->AUTO_BACKLIGHT_BRIGHTEN:Lcom/android/server/display/DisplayPowerController$Status;
 
-    .line 1562
     new-instance v0, Lcom/android/server/display/DisplayPowerController$Status;
 
     const-string v1, "AUTO_BACKLIGHT_DARKEN"
@@ -105,7 +100,6 @@
 
     sput-object v0, Lcom/android/server/display/DisplayPowerController$Status;->AUTO_BACKLIGHT_DARKEN:Lcom/android/server/display/DisplayPowerController$Status;
 
-    .line 1563
     new-instance v0, Lcom/android/server/display/DisplayPowerController$Status;
 
     const-string v1, "AUTO_BACKLIGHT_ADJUSTMENT_CHANGE"
@@ -116,7 +110,6 @@
 
     sput-object v0, Lcom/android/server/display/DisplayPowerController$Status;->AUTO_BACKLIGHT_ADJUSTMENT_CHANGE:Lcom/android/server/display/DisplayPowerController$Status;
 
-    .line 1564
     new-instance v0, Lcom/android/server/display/DisplayPowerController$Status;
 
     const-string v1, "SCREEN_ON"
@@ -127,7 +120,6 @@
 
     sput-object v0, Lcom/android/server/display/DisplayPowerController$Status;->SCREEN_ON:Lcom/android/server/display/DisplayPowerController$Status;
 
-    .line 1565
     new-instance v0, Lcom/android/server/display/DisplayPowerController$Status;
 
     const-string v1, "BRIGHT_TO_DIM"
@@ -138,7 +130,6 @@
 
     sput-object v0, Lcom/android/server/display/DisplayPowerController$Status;->BRIGHT_TO_DIM:Lcom/android/server/display/DisplayPowerController$Status;
 
-    .line 1566
     new-instance v0, Lcom/android/server/display/DisplayPowerController$Status;
 
     const-string v1, "DIM_TO_BRIGHT"
@@ -149,7 +140,6 @@
 
     sput-object v0, Lcom/android/server/display/DisplayPowerController$Status;->DIM_TO_BRIGHT:Lcom/android/server/display/DisplayPowerController$Status;
 
-    .line 1557
     const/16 v0, 0x9
 
     new-array v0, v0, [Lcom/android/server/display/DisplayPowerController$Status;
@@ -212,7 +202,6 @@
     .end annotation
 
     .prologue
-    .line 1557
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -223,7 +212,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 1557
     const-class v0, Lcom/android/server/display/DisplayPowerController$Status;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -239,7 +227,6 @@
     .locals 1
 
     .prologue
-    .line 1557
     sget-object v0, Lcom/android/server/display/DisplayPowerController$Status;->$VALUES:[Lcom/android/server/display/DisplayPowerController$Status;
 
     invoke-virtual {v0}, [Lcom/android/server/display/DisplayPowerController$Status;->clone()Ljava/lang/Object;

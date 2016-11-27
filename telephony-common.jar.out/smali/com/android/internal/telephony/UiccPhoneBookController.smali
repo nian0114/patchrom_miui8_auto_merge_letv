@@ -17,10 +17,8 @@
     .param p1, "phone"    # [Lcom/android/internal/telephony/Phone;
 
     .prologue
-    .line 40
     invoke-direct {p0}, Lcom/android/internal/telephony/IIccPhoneBook$Stub;-><init>()V
 
-    .line 41
     const-string v0, "simphonebook"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -29,16 +27,13 @@
 
     if-nez v0, :cond_0
 
-    .line 42
     const-string v0, "simphonebook"
 
     invoke-static {v0, p0}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 44
     :cond_0
     iput-object p1, p0, Lcom/android/internal/telephony/UiccPhoneBookController;->mPhone:[Lcom/android/internal/telephony/Phone;
 
-    .line 45
     return-void
 .end method
 
@@ -46,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 311
     invoke-static {}, Lcom/android/internal/telephony/PhoneFactory;->getDefaultSubscription()I
 
     move-result v0
@@ -61,7 +55,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 296
     invoke-static {}, Lcom/android/internal/telephony/SubscriptionController;->getInstance()Lcom/android/internal/telephony/SubscriptionController;
 
     move-result-object v2
@@ -70,7 +63,6 @@
 
     move-result v1
 
-    .line 298
     .local v1, "phoneId":I
     :try_start_0
     iget-object v2, p0, Lcom/android/internal/telephony/UiccPhoneBookController;->mPhone:[Lcom/android/internal/telephony/Phone;
@@ -86,15 +78,12 @@
 
     move-result-object v2
 
-    .line 306
     :goto_0
     return-object v2
 
-    .line 299
     :catch_0
     move-exception v0
 
-    .line 300
     .local v0, "e":Ljava/lang/NullPointerException;
     const-string v2, "UiccPhoneBookController"
 
@@ -132,20 +121,16 @@
 
     invoke-static {v2, v4}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 301
     invoke-virtual {v0}, Ljava/lang/NullPointerException;->printStackTrace()V
 
     move-object v2, v3
 
-    .line 302
     goto :goto_0
 
-    .line 303
     .end local v0    # "e":Ljava/lang/NullPointerException;
     :catch_1
     move-exception v0
 
-    .line 304
     .local v0, "e":Ljava/lang/ArrayIndexOutOfBoundsException;
     const-string v2, "UiccPhoneBookController"
 
@@ -183,12 +168,10 @@
 
     invoke-static {v2, v4}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 305
     invoke-virtual {v0}, Ljava/lang/ArrayIndexOutOfBoundsException;->printStackTrace()V
 
     move-object v2, v3
 
-    .line 306
     goto :goto_0
 .end method
 
@@ -203,7 +186,6 @@
     .end annotation
 
     .prologue
-    .line 211
     invoke-direct {p0}, Lcom/android/internal/telephony/UiccPhoneBookController;->getDefaultSubscription()I
 
     move-result v0
@@ -225,25 +207,20 @@
     .end annotation
 
     .prologue
-    .line 215
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/UiccPhoneBookController;->getIccPhoneBookInterfaceManagerProxy(I)Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
 
     move-result-object v0
 
-    .line 217
     .local v0, "iccPbkIntMgrProxy":Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
     if-eqz v0, :cond_0
 
-    .line 218
     invoke-virtual {v0}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;->getAdnCount()I
 
     move-result v1
 
-    .line 222
     :goto_0
     return v1
 
-    .line 220
     :cond_0
     const-string v1, "UiccPhoneBookController"
 
@@ -267,7 +244,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 222
     const/4 v1, 0x0
 
     goto :goto_0
@@ -293,7 +269,6 @@
     .end annotation
 
     .prologue
-    .line 135
     invoke-direct {p0}, Lcom/android/internal/telephony/UiccPhoneBookController;->getDefaultSubscription()I
 
     move-result v0
@@ -326,25 +301,20 @@
     .end annotation
 
     .prologue
-    .line 141
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/UiccPhoneBookController;->getIccPhoneBookInterfaceManagerProxy(I)Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
 
     move-result-object v0
 
-    .line 143
     .local v0, "iccPbkIntMgrProxy":Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
     if-eqz v0, :cond_0
 
-    .line 144
     invoke-virtual {v0, p2}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;->getAdnRecordsInEf(I)Ljava/util/List;
 
     move-result-object v1
 
-    .line 148
     :goto_0
     return-object v1
 
-    .line 146
     :cond_0
     const-string v1, "UiccPhoneBookController"
 
@@ -368,7 +338,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 148
     const/4 v1, 0x0
 
     goto :goto_0
@@ -384,7 +353,6 @@
     .end annotation
 
     .prologue
-    .line 116
     invoke-direct {p0}, Lcom/android/internal/telephony/UiccPhoneBookController;->getDefaultSubscription()I
 
     move-result v0
@@ -407,25 +375,20 @@
     .end annotation
 
     .prologue
-    .line 122
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/UiccPhoneBookController;->getIccPhoneBookInterfaceManagerProxy(I)Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
 
     move-result-object v0
 
-    .line 124
     .local v0, "iccPbkIntMgrProxy":Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
     if-eqz v0, :cond_0
 
-    .line 125
     invoke-virtual {v0, p2}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;->getAdnRecordsSize(I)[I
 
     move-result-object v1
 
-    .line 129
     :goto_0
     return-object v1
 
-    .line 127
     :cond_0
     const-string v1, "UiccPhoneBookController"
 
@@ -449,7 +412,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 129
     const/4 v1, 0x0
 
     goto :goto_0
@@ -464,7 +426,6 @@
     .end annotation
 
     .prologue
-    .line 227
     invoke-direct {p0}, Lcom/android/internal/telephony/UiccPhoneBookController;->getDefaultSubscription()I
 
     move-result v0
@@ -486,25 +447,20 @@
     .end annotation
 
     .prologue
-    .line 324
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/UiccPhoneBookController;->getIccPhoneBookInterfaceManagerProxy(I)Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
 
     move-result-object v0
 
-    .line 326
     .local v0, "iccPbkIntMgrProxy":Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
     if-eqz v0, :cond_0
 
-    .line 327
     invoke-virtual {v0}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;->getAnrCountEachRecord()I
 
     move-result v1
 
-    .line 331
     :goto_0
     return v1
 
-    .line 329
     :cond_0
     const-string v1, "UiccPhoneBookController"
 
@@ -528,7 +484,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 331
     const/4 v1, 0x0
 
     goto :goto_0
@@ -544,25 +499,20 @@
     .end annotation
 
     .prologue
-    .line 231
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/UiccPhoneBookController;->getIccPhoneBookInterfaceManagerProxy(I)Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
 
     move-result-object v0
 
-    .line 233
     .local v0, "iccPbkIntMgrProxy":Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
     if-eqz v0, :cond_0
 
-    .line 234
     invoke-virtual {v0}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;->getAnrCount()I
 
     move-result v1
 
-    .line 238
     :goto_0
     return v1
 
-    .line 236
     :cond_0
     const-string v1, "UiccPhoneBookController"
 
@@ -586,7 +536,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 238
     const/4 v1, 0x0
 
     goto :goto_0
@@ -601,7 +550,6 @@
     .end annotation
 
     .prologue
-    .line 243
     invoke-direct {p0}, Lcom/android/internal/telephony/UiccPhoneBookController;->getDefaultSubscription()I
 
     move-result v0
@@ -623,25 +571,20 @@
     .end annotation
 
     .prologue
-    .line 336
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/UiccPhoneBookController;->getIccPhoneBookInterfaceManagerProxy(I)Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
 
     move-result-object v0
 
-    .line 338
     .local v0, "iccPbkIntMgrProxy":Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
     if-eqz v0, :cond_0
 
-    .line 339
     invoke-virtual {v0}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;->getEmailCountEachRecord()I
 
     move-result v1
 
-    .line 343
     :goto_0
     return v1
 
-    .line 341
     :cond_0
     const-string v1, "UiccPhoneBookController"
 
@@ -665,7 +608,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 343
     const/4 v1, 0x0
 
     goto :goto_0
@@ -681,25 +623,20 @@
     .end annotation
 
     .prologue
-    .line 247
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/UiccPhoneBookController;->getIccPhoneBookInterfaceManagerProxy(I)Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
 
     move-result-object v0
 
-    .line 249
     .local v0, "iccPbkIntMgrProxy":Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
     if-eqz v0, :cond_0
 
-    .line 250
     invoke-virtual {v0}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;->getEmailCount()I
 
     move-result v1
 
-    .line 254
     :goto_0
     return v1
 
-    .line 252
     :cond_0
     const-string v1, "UiccPhoneBookController"
 
@@ -723,7 +660,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 254
     const/4 v1, 0x0
 
     goto :goto_0
@@ -738,7 +674,6 @@
     .end annotation
 
     .prologue
-    .line 259
     invoke-direct {p0}, Lcom/android/internal/telephony/UiccPhoneBookController;->getDefaultSubscription()I
 
     move-result v0
@@ -760,25 +695,20 @@
     .end annotation
 
     .prologue
-    .line 263
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/UiccPhoneBookController;->getIccPhoneBookInterfaceManagerProxy(I)Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
 
     move-result-object v0
 
-    .line 265
     .local v0, "iccPbkIntMgrProxy":Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
     if-eqz v0, :cond_0
 
-    .line 266
     invoke-virtual {v0}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;->getSpareAnrCount()I
 
     move-result v1
 
-    .line 270
     :goto_0
     return v1
 
-    .line 268
     :cond_0
     const-string v1, "UiccPhoneBookController"
 
@@ -802,7 +732,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 270
     const/4 v1, 0x0
 
     goto :goto_0
@@ -817,7 +746,6 @@
     .end annotation
 
     .prologue
-    .line 275
     invoke-direct {p0}, Lcom/android/internal/telephony/UiccPhoneBookController;->getDefaultSubscription()I
 
     move-result v0
@@ -839,25 +767,20 @@
     .end annotation
 
     .prologue
-    .line 279
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/UiccPhoneBookController;->getIccPhoneBookInterfaceManagerProxy(I)Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
 
     move-result-object v0
 
-    .line 281
     .local v0, "iccPbkIntMgrProxy":Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
     if-eqz v0, :cond_0
 
-    .line 282
     invoke-virtual {v0}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;->getSpareEmailCount()I
 
     move-result v1
 
-    .line 286
     :goto_0
     return v1
 
-    .line 284
     :cond_0
     const-string v1, "UiccPhoneBookController"
 
@@ -881,7 +804,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 286
     const/4 v1, 0x0
 
     goto :goto_0
@@ -897,7 +819,6 @@
     .end annotation
 
     .prologue
-    .line 319
     const/4 v0, -0x1
 
     return v0
@@ -913,7 +834,6 @@
     .end annotation
 
     .prologue
-    .line 315
     const/4 v0, -0x1
 
     return v0
@@ -933,7 +853,6 @@
     .end annotation
 
     .prologue
-    .line 76
     invoke-direct {p0}, Lcom/android/internal/telephony/UiccPhoneBookController;->getDefaultSubscription()I
 
     move-result v1
@@ -972,12 +891,10 @@
     .end annotation
 
     .prologue
-    .line 84
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/UiccPhoneBookController;->getIccPhoneBookInterfaceManagerProxy(I)Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
 
     move-result-object v0
 
-    .line 86
     .local v0, "iccPbkIntMgrProxy":Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
     if-eqz v0, :cond_0
 
@@ -991,16 +908,13 @@
 
     move-object v5, p6
 
-    .line 87
     invoke-virtual/range {v0 .. v5}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;->updateAdnRecordsInEfByIndex(ILjava/lang/String;Ljava/lang/String;ILjava/lang/String;)Z
 
     move-result v1
 
-    .line 92
     :goto_0
     return v1
 
-    .line 90
     :cond_0
     const-string v1, "UiccPhoneBookController"
 
@@ -1024,7 +938,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 92
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1045,12 +958,10 @@
     .end annotation
 
     .prologue
-    .line 102
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/UiccPhoneBookController;->getIccPhoneBookInterfaceManagerProxy(I)Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
 
     move-result-object v0
 
-    .line 104
     .local v0, "iccPbkIntMgrProxy":Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
     if-eqz v0, :cond_0
 
@@ -1064,16 +975,13 @@
 
     move-object v5, p6
 
-    .line 105
     invoke-virtual/range {v0 .. v5}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;->updateAdnRecordsInEfByIndexWithError(ILjava/lang/String;Ljava/lang/String;ILjava/lang/String;)I
 
     move-result v1
 
-    .line 110
     :goto_0
     return v1
 
-    .line 108
     :cond_0
     const-string v1, "UiccPhoneBookController"
 
@@ -1097,7 +1005,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 110
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1118,7 +1025,6 @@
     .end annotation
 
     .prologue
-    .line 51
     invoke-direct {p0}, Lcom/android/internal/telephony/UiccPhoneBookController;->getDefaultSubscription()I
 
     move-result v1
@@ -1160,12 +1066,10 @@
     .end annotation
 
     .prologue
-    .line 60
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/UiccPhoneBookController;->getIccPhoneBookInterfaceManagerProxy(I)Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
 
     move-result-object v0
 
-    .line 62
     .local v0, "iccPbkIntMgrProxy":Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
     if-eqz v0, :cond_0
 
@@ -1181,16 +1085,13 @@
 
     move-object v6, p7
 
-    .line 63
     invoke-virtual/range {v0 .. v6}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;->updateAdnRecordsInEfBySearch(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v1
 
-    .line 68
     :goto_0
     return v1
 
-    .line 66
     :cond_0
     const-string v1, "UiccPhoneBookController"
 
@@ -1214,7 +1115,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 68
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1234,25 +1134,20 @@
     .end annotation
 
     .prologue
-    .line 198
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/UiccPhoneBookController;->getIccPhoneBookInterfaceManagerProxy(I)Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
 
     move-result-object v0
 
-    .line 200
     .local v0, "iccPbkIntMgrProxy":Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
     if-eqz v0, :cond_0
 
-    .line 201
     invoke-virtual {v0, p2, p3, p4, p5}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;->updateAdnRecordsWithContentValuesInEfByIndexWithError(ILandroid/content/ContentValues;ILjava/lang/String;)I
 
     move-result v1
 
-    .line 206
     :goto_0
     return v1
 
-    .line 204
     :cond_0
     const-string v1, "UiccPhoneBookController"
 
@@ -1276,7 +1171,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 206
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1294,7 +1188,6 @@
     .end annotation
 
     .prologue
-    .line 155
     invoke-direct {p0}, Lcom/android/internal/telephony/UiccPhoneBookController;->getDefaultSubscription()I
 
     move-result v0
@@ -1319,25 +1212,20 @@
     .end annotation
 
     .prologue
-    .line 164
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/UiccPhoneBookController;->getIccPhoneBookInterfaceManagerProxy(I)Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
 
     move-result-object v0
 
-    .line 166
     .local v0, "iccPbkIntMgrProxy":Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
     if-eqz v0, :cond_0
 
-    .line 167
     invoke-virtual {v0, p2, p3, p4}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;->updateAdnRecordsWithContentValuesInEfBySearch(ILandroid/content/ContentValues;Ljava/lang/String;)Z
 
     move-result v1
 
-    .line 172
     :goto_0
     return v1
 
-    .line 170
     :cond_0
     const-string v1, "UiccPhoneBookController"
 
@@ -1361,7 +1249,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 172
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1380,25 +1267,20 @@
     .end annotation
 
     .prologue
-    .line 181
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/UiccPhoneBookController;->getIccPhoneBookInterfaceManagerProxy(I)Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
 
     move-result-object v0
 
-    .line 183
     .local v0, "iccPbkIntMgrProxy":Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
     if-eqz v0, :cond_0
 
-    .line 184
     invoke-virtual {v0, p2, p3, p4}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;->updateAdnRecordsWithContentValuesInEfBySearchWithError(ILandroid/content/ContentValues;Ljava/lang/String;)I
 
     move-result v1
 
-    .line 189
     :goto_0
     return v1
 
-    .line 187
     :cond_0
     const-string v1, "UiccPhoneBookController"
 
@@ -1422,7 +1304,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 189
     const/4 v1, 0x0
 
     goto :goto_0

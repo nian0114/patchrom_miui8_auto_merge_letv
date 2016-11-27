@@ -30,7 +30,6 @@
     .locals 2
 
     .prologue
-    .line 675
     sget-object v0, Lcom/letv/leui/provider/EUIBrowserContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "image_mappings"
@@ -48,7 +47,6 @@
     .locals 0
 
     .prologue
-    .line 670
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 41
     iput-object p1, p0, Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager$1;->this$0:Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager;
 
     invoke-direct {p0}, Lcom/letv/leui/util/statusbar/PickerColorUtils;-><init>()V
@@ -38,12 +37,10 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 44
     iget-object v0, p0, Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager$1;->this$0:Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager;
 
     # invokes: Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager;->setImmersiveStatusBarColor(I)V
     invoke-static {v0, p1}, Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager;->access$100(Lcom/letv/leui/util/statusbar/LeImmersiveStatusBarManager;I)V
 
-    .line 45
     return-void
 .end method

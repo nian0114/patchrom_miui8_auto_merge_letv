@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 832
     .local p0, "this":Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$2;, "Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase.2;"
     iput-object p1, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$2;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;
 
@@ -41,12 +40,10 @@
     .locals 1
 
     .prologue
-    .line 835
     .local p0, "this":Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$2;, "Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase.2;"
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$2;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;->requestLayout()V
 
-    .line 836
     return-void
 .end method

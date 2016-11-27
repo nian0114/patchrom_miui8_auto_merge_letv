@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 884
     iput-object p1, p0, Lcom/android/server/power/ShutdownThread$5;->this$0:Lcom/android/server/power/ShutdownThread;
 
     iput p2, p0, Lcom/android/server/power/ShutdownThread$5;->val$progress:I
@@ -48,7 +47,6 @@
     .locals 2
 
     .prologue
-    .line 887
     iget-object v0, p0, Lcom/android/server/power/ShutdownThread$5;->this$0:Lcom/android/server/power/ShutdownThread;
 
     # getter for: Lcom/android/server/power/ShutdownThread;->mProgressDialog:Landroid/app/ProgressDialog;
@@ -58,7 +56,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 888
     iget-object v0, p0, Lcom/android/server/power/ShutdownThread$5;->this$0:Lcom/android/server/power/ShutdownThread;
 
     # getter for: Lcom/android/server/power/ShutdownThread;->mProgressDialog:Landroid/app/ProgressDialog;
@@ -70,12 +67,10 @@
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setProgress(I)V
 
-    .line 889
     iget-object v0, p0, Lcom/android/server/power/ShutdownThread$5;->val$message:Ljava/lang/CharSequence;
 
     if-eqz v0, :cond_0
 
-    .line 890
     iget-object v0, p0, Lcom/android/server/power/ShutdownThread$5;->this$0:Lcom/android/server/power/ShutdownThread;
 
     # getter for: Lcom/android/server/power/ShutdownThread;->mProgressDialog:Landroid/app/ProgressDialog;
@@ -87,7 +82,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 894
     :cond_0
     # getter for: Lcom/android/server/power/ShutdownThread;->mShutdown:Lcom/android/server/power/ui/ShutdownViewManager;
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->access$200()Lcom/android/server/power/ui/ShutdownViewManager;
@@ -96,7 +90,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 895
     # getter for: Lcom/android/server/power/ShutdownThread;->mShutdown:Lcom/android/server/power/ui/ShutdownViewManager;
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->access$200()Lcom/android/server/power/ui/ShutdownViewManager;
 
@@ -106,7 +99,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/power/ui/ShutdownViewManager;->setUpdateProgress(I)V
 
-    .line 897
     :cond_1
     return-void
 .end method

@@ -24,10 +24,8 @@
     .locals 0
 
     .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 19
     return-void
 .end method
 
@@ -37,7 +35,6 @@
     .locals 3
 
     .prologue
-    .line 53
     new-instance v2, Lcom/google/gson/GsonBuilder;
 
     invoke-direct {v2}, Lcom/google/gson/GsonBuilder;-><init>()V
@@ -50,13 +47,11 @@
 
     move-result-object v0
 
-    .line 54
     .local v0, "gson":Lcom/google/gson/Gson;
     invoke-virtual {v0, p0}, Lcom/google/gson/Gson;->toJson(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 55
     .local v1, "json":Ljava/lang/String;
     return-object v1
 .end method
@@ -65,18 +60,15 @@
     .locals 2
 
     .prologue
-    .line 39
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 40
     .local v0, "sb":Ljava/lang/StringBuffer;
     const-string v1, "{"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 41
     const-string v1, "type: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -85,7 +77,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 42
     const-string v1, ", event: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -94,7 +85,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 43
     const-string v1, ", data: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -103,12 +93,10 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
 
-    .line 44
     const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 45
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v1

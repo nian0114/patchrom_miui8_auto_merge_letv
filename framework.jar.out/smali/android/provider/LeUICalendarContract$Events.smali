@@ -38,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 60
     const-string v0, "content://com.android.calendar/events"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -47,7 +46,6 @@
 
     sput-object v0, Landroid/provider/LeUICalendarContract$Events;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 68
     const-string v0, "content://com.android.calendar/exception"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -56,12 +54,10 @@
 
     sput-object v0, Landroid/provider/LeUICalendarContract$Events;->CONTENT_EXCEPTION_URI:Landroid/net/Uri;
 
-    .line 87
     sget-object v0, Landroid/provider/CalendarContract$Events;->PROVIDER_WRITABLE_COLUMNS:[Ljava/lang/String;
 
     sput-object v0, Landroid/provider/LeUICalendarContract$Events;->PROVIDER_WRITABLE_COLUMNS:[Ljava/lang/String;
 
-    .line 95
     sget-object v0, Landroid/provider/CalendarContract$Events;->SYNC_WRITABLE_COLUMNS:[Ljava/lang/String;
 
     sput-object v0, Landroid/provider/LeUICalendarContract$Events;->SYNC_WRITABLE_COLUMNS:[Ljava/lang/String;
@@ -73,7 +69,6 @@
     .locals 0
 
     .prologue
-    .line 74
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

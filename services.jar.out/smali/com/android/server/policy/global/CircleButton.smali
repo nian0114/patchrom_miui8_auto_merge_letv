@@ -71,10 +71,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 60
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 29
     const/high16 v0, 0x41900000    # 18.0f
 
     invoke-virtual {p0, v0}, Lcom/android/server/policy/global/CircleButton;->dipToPx(F)I
@@ -83,7 +81,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/CircleButton;->DEFAULT_CIRCLE_RADIUS:I
 
-    .line 31
     const/high16 v0, 0x41000000    # 8.0f
 
     invoke-virtual {p0, v0}, Lcom/android/server/policy/global/CircleButton;->dipToPx(F)I
@@ -92,7 +89,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/CircleButton;->DEFAULT_ICON_RADIUS:I
 
-    .line 33
     invoke-virtual {p0}, Lcom/android/server/policy/global/CircleButton;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -105,15 +101,12 @@
 
     iput v0, p0, Lcom/android/server/policy/global/CircleButton;->DEFAULT_PAINT_STROKE_WIDTH:I
 
-    .line 35
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/policy/global/CircleButton;->isCancel:Z
 
-    .line 61
     invoke-direct {p0}, Lcom/android/server/policy/global/CircleButton;->init()V
 
-    .line 62
     return-void
 .end method
 
@@ -123,10 +116,8 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 64
     invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 29
     const/high16 v0, 0x41900000    # 18.0f
 
     invoke-virtual {p0, v0}, Lcom/android/server/policy/global/CircleButton;->dipToPx(F)I
@@ -135,7 +126,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/CircleButton;->DEFAULT_CIRCLE_RADIUS:I
 
-    .line 31
     const/high16 v0, 0x41000000    # 8.0f
 
     invoke-virtual {p0, v0}, Lcom/android/server/policy/global/CircleButton;->dipToPx(F)I
@@ -144,7 +134,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/CircleButton;->DEFAULT_ICON_RADIUS:I
 
-    .line 33
     invoke-virtual {p0}, Lcom/android/server/policy/global/CircleButton;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -157,15 +146,12 @@
 
     iput v0, p0, Lcom/android/server/policy/global/CircleButton;->DEFAULT_PAINT_STROKE_WIDTH:I
 
-    .line 35
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/policy/global/CircleButton;->isCancel:Z
 
-    .line 65
     invoke-direct {p0}, Lcom/android/server/policy/global/CircleButton;->init()V
 
-    .line 66
     return-void
 .end method
 
@@ -176,10 +162,8 @@
     .param p3, "defStyleAttr"    # I
 
     .prologue
-    .line 69
     invoke-direct {p0, p1, p2, p3}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 29
     const/high16 v0, 0x41900000    # 18.0f
 
     invoke-virtual {p0, v0}, Lcom/android/server/policy/global/CircleButton;->dipToPx(F)I
@@ -188,7 +172,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/CircleButton;->DEFAULT_CIRCLE_RADIUS:I
 
-    .line 31
     const/high16 v0, 0x41000000    # 8.0f
 
     invoke-virtual {p0, v0}, Lcom/android/server/policy/global/CircleButton;->dipToPx(F)I
@@ -197,7 +180,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/CircleButton;->DEFAULT_ICON_RADIUS:I
 
-    .line 33
     invoke-virtual {p0}, Lcom/android/server/policy/global/CircleButton;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -210,15 +192,12 @@
 
     iput v0, p0, Lcom/android/server/policy/global/CircleButton;->DEFAULT_PAINT_STROKE_WIDTH:I
 
-    .line 35
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/policy/global/CircleButton;->isCancel:Z
 
-    .line 70
     invoke-direct {p0}, Lcom/android/server/policy/global/CircleButton;->init()V
 
-    .line 71
     return-void
 .end method
 
@@ -227,20 +206,17 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 216
     invoke-virtual {p0}, Lcom/android/server/policy/global/CircleButton;->getWidth()I
 
     move-result v2
 
     div-int/lit8 v0, v2, 0x2
 
-    .line 217
     .local v0, "centerX":I
     iget v2, p0, Lcom/android/server/policy/global/CircleButton;->mScaleRingWH:I
 
     div-int/lit8 v1, v2, 0x2
 
-    .line 218
     .local v1, "centerY":I
     int-to-float v2, v0
 
@@ -254,7 +230,6 @@
 
     invoke-virtual {p1, v2, v3, v4, v5}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 219
     return-void
 .end method
 
@@ -263,12 +238,10 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 226
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v0
 
-    .line 227
     .local v0, "seq":I
     iget-object v2, p0, Lcom/android/server/policy/global/CircleButton;->mTipPaint:Landroid/graphics/Paint;
 
@@ -278,7 +251,6 @@
 
     move-result v1
 
-    .line 228
     .local v1, "textWidth":F
     iget-object v2, p0, Lcom/android/server/policy/global/CircleButton;->mTipMsg:Ljava/lang/String;
 
@@ -308,10 +280,8 @@
 
     invoke-virtual {p1, v2, v3, v4, v5}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    .line 229
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    .line 230
     return-void
 .end method
 
@@ -319,25 +289,18 @@
     .locals 0
 
     .prologue
-    .line 76
     invoke-direct {p0}, Lcom/android/server/policy/global/CircleButton;->initViewParams()V
 
-    .line 77
     invoke-direct {p0}, Lcom/android/server/policy/global/CircleButton;->initTipParams()V
 
-    .line 78
     invoke-direct {p0}, Lcom/android/server/policy/global/CircleButton;->initCircleParams()V
 
-    .line 79
     invoke-virtual {p0}, Lcom/android/server/policy/global/CircleButton;->initParams()V
 
-    .line 81
     invoke-direct {p0}, Lcom/android/server/policy/global/CircleButton;->loadCircleAnimator()V
 
-    .line 82
     invoke-direct {p0}, Lcom/android/server/policy/global/CircleButton;->loadTipAnimator()V
 
-    .line 83
     return-void
 .end method
 
@@ -345,7 +308,6 @@
     .locals 2
 
     .prologue
-    .line 116
     invoke-virtual {p0}, Lcom/android/server/policy/global/CircleButton;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -358,54 +320,46 @@
 
     iput v0, p0, Lcom/android/server/policy/global/CircleButton;->mCircleColor:I
 
-    .line 117
     iget v0, p0, Lcom/android/server/policy/global/CircleButton;->DEFAULT_CIRCLE_RADIUS:I
 
     iput v0, p0, Lcom/android/server/policy/global/CircleButton;->mCircleRadius:I
 
-    .line 119
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/policy/global/CircleButton;->mCirclePaint:Landroid/graphics/Paint;
 
-    .line 120
     iget-object v0, p0, Lcom/android/server/policy/global/CircleButton;->mCirclePaint:Landroid/graphics/Paint;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 121
     iget-object v0, p0, Lcom/android/server/policy/global/CircleButton;->mCirclePaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/policy/global/CircleButton;->mCircleColor:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 122
     iget-object v0, p0, Lcom/android/server/policy/global/CircleButton;->mCirclePaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 123
     iget-object v0, p0, Lcom/android/server/policy/global/CircleButton;->mCirclePaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Join;->ROUND:Landroid/graphics/Paint$Join;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeJoin(Landroid/graphics/Paint$Join;)V
 
-    .line 124
     iget-object v0, p0, Lcom/android/server/policy/global/CircleButton;->mCirclePaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
-    .line 125
     iget-object v0, p0, Lcom/android/server/policy/global/CircleButton;->mCirclePaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/policy/global/CircleButton;->DEFAULT_PAINT_STROKE_WIDTH:I
@@ -414,7 +368,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 126
     return-void
 .end method
 
@@ -424,7 +377,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 97
     invoke-virtual {p0}, Lcom/android/server/policy/global/CircleButton;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -437,7 +389,6 @@
 
     iput-object v0, p0, Lcom/android/server/policy/global/CircleButton;->mTipMsg:Ljava/lang/String;
 
-    .line 98
     invoke-virtual {p0}, Lcom/android/server/policy/global/CircleButton;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -452,7 +403,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/CircleButton;->mTipTextSize:F
 
-    .line 99
     invoke-virtual {p0}, Lcom/android/server/policy/global/CircleButton;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -465,7 +415,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/CircleButton;->mTipColor:I
 
-    .line 100
     invoke-virtual {p0}, Lcom/android/server/policy/global/CircleButton;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -478,59 +427,50 @@
 
     iput v0, p0, Lcom/android/server/policy/global/CircleButton;->mTipPaddingBottom:I
 
-    .line 102
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/policy/global/CircleButton;->mTipPaint:Landroid/graphics/Paint;
 
-    .line 103
     iget-object v0, p0, Lcom/android/server/policy/global/CircleButton;->mTipPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 104
     iget-object v0, p0, Lcom/android/server/policy/global/CircleButton;->mTipPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setDither(Z)V
 
-    .line 105
     iget-object v0, p0, Lcom/android/server/policy/global/CircleButton;->mTipPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/policy/global/CircleButton;->mTipColor:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 106
     iget-object v0, p0, Lcom/android/server/policy/global/CircleButton;->mTipPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/policy/global/CircleButton;->mTipTextSize:F
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    .line 107
     iget-object v0, p0, Lcom/android/server/policy/global/CircleButton;->mTipPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 108
     iget-object v0, p0, Lcom/android/server/policy/global/CircleButton;->mTipPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Join;->ROUND:Landroid/graphics/Paint$Join;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeJoin(Landroid/graphics/Paint$Join;)V
 
-    .line 109
     iget-object v0, p0, Lcom/android/server/policy/global/CircleButton;->mTipPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
-    .line 110
     return-void
 .end method
 
@@ -538,7 +478,6 @@
     .locals 2
 
     .prologue
-    .line 89
     invoke-virtual {p0}, Lcom/android/server/policy/global/CircleButton;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -551,7 +490,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/CircleButton;->mScaleRingWH:I
 
-    .line 90
     invoke-virtual {p0}, Lcom/android/server/policy/global/CircleButton;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -564,7 +502,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/CircleButton;->density:F
 
-    .line 91
     return-void
 .end method
 
@@ -572,7 +509,6 @@
     .locals 12
 
     .prologue
-    .line 154
     const-string v5, "circleAlpha"
 
     const/4 v6, 0x2
@@ -585,7 +521,6 @@
 
     move-result-object v1
 
-    .line 156
     .local v1, "circleAlphaOut":Landroid/animation/PropertyValuesHolder;
     const-string v5, "circleAlpha"
 
@@ -599,7 +534,6 @@
 
     move-result-object v0
 
-    .line 157
     .local v0, "circleAlphaIn":Landroid/animation/PropertyValuesHolder;
     const-string v5, "circleScale"
 
@@ -623,7 +557,6 @@
 
     move-result-object v2
 
-    .line 158
     .local v2, "circleScaleIn":Landroid/animation/PropertyValuesHolder;
     const/4 v5, 0x2
 
@@ -643,14 +576,12 @@
 
     iput-object v5, p0, Lcom/android/server/policy/global/CircleButton;->mCircleIn:Landroid/animation/ObjectAnimator;
 
-    .line 159
     iget-object v5, p0, Lcom/android/server/policy/global/CircleButton;->mCircleIn:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v6, 0x2bc
 
     invoke-virtual {v5, v6, v7}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 160
     iget-object v5, p0, Lcom/android/server/policy/global/CircleButton;->mCircleIn:Landroid/animation/ObjectAnimator;
 
     new-instance v6, Landroid/view/animation/DecelerateInterpolator;
@@ -661,7 +592,6 @@
 
     invoke-virtual {v5, v6}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 163
     const-string v5, "circleScale"
 
     const/4 v6, 0x2
@@ -694,14 +624,12 @@
 
     iput-object v5, p0, Lcom/android/server/policy/global/CircleButton;->mCircleOutFirst:Landroid/animation/ObjectAnimator;
 
-    .line 164
     iget-object v5, p0, Lcom/android/server/policy/global/CircleButton;->mCircleOutFirst:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v6, 0x12c
 
     invoke-virtual {v5, v6, v7}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 165
     iget-object v5, p0, Lcom/android/server/policy/global/CircleButton;->mCircleOutFirst:Landroid/animation/ObjectAnimator;
 
     new-instance v6, Landroid/view/animation/DecelerateInterpolator;
@@ -712,7 +640,6 @@
 
     invoke-virtual {v5, v6}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 167
     const-string v5, "circleScale"
 
     const/4 v6, 0x2
@@ -743,7 +670,6 @@
 
     move-result-object v4
 
-    .line 168
     .local v4, "circleScaleOutSecond":Landroid/animation/PropertyValuesHolder;
     const/4 v5, 0x2
 
@@ -763,14 +689,12 @@
 
     iput-object v5, p0, Lcom/android/server/policy/global/CircleButton;->mCircleOutSecond:Landroid/animation/ObjectAnimator;
 
-    .line 169
     iget-object v5, p0, Lcom/android/server/policy/global/CircleButton;->mCircleOutSecond:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v6, 0x1f4
 
     invoke-virtual {v5, v6, v7}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 170
     iget-object v5, p0, Lcom/android/server/policy/global/CircleButton;->mCircleOutSecond:Landroid/animation/ObjectAnimator;
 
     new-instance v6, Landroid/view/animation/DecelerateInterpolator;
@@ -781,7 +705,6 @@
 
     invoke-virtual {v5, v6}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 172
     const-string v5, "circleScale"
 
     const/4 v6, 0x2
@@ -804,7 +727,6 @@
 
     move-result-object v3
 
-    .line 173
     .local v3, "circleScaleOut":Landroid/animation/PropertyValuesHolder;
     const/4 v5, 0x2
 
@@ -824,21 +746,18 @@
 
     iput-object v5, p0, Lcom/android/server/policy/global/CircleButton;->mCircleOut:Landroid/animation/ObjectAnimator;
 
-    .line 174
     iget-object v5, p0, Lcom/android/server/policy/global/CircleButton;->mCircleOut:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v6, 0x1f4
 
     invoke-virtual {v5, v6, v7}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 175
     iget-object v5, p0, Lcom/android/server/policy/global/CircleButton;->mCircleOut:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v6, 0x12c
 
     invoke-virtual {v5, v6, v7}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
 
-    .line 176
     iget-object v5, p0, Lcom/android/server/policy/global/CircleButton;->mCircleOut:Landroid/animation/ObjectAnimator;
 
     new-instance v6, Landroid/view/animation/DecelerateInterpolator;
@@ -849,17 +768,14 @@
 
     invoke-virtual {v5, v6}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 177
     return-void
 
-    .line 154
     :array_0
     .array-data 4
         0xff
         0x0
     .end array-data
 
-    .line 156
     :array_1
     .array-data 4
         0x0
@@ -875,7 +791,6 @@
 
     const/high16 v4, 0x3fc00000    # 1.5f
 
-    .line 184
     const-string v0, "tipAlpha"
 
     new-array v1, v5, [I
@@ -888,14 +803,12 @@
 
     iput-object v0, p0, Lcom/android/server/policy/global/CircleButton;->mTipIn:Landroid/animation/ObjectAnimator;
 
-    .line 185
     iget-object v0, p0, Lcom/android/server/policy/global/CircleButton;->mTipIn:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v2, 0x2bc
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 186
     iget-object v0, p0, Lcom/android/server/policy/global/CircleButton;->mTipIn:Landroid/animation/ObjectAnimator;
 
     new-instance v1, Landroid/view/animation/DecelerateInterpolator;
@@ -904,7 +817,6 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 188
     const-string v0, "tipAlpha"
 
     new-array v1, v5, [I
@@ -917,14 +829,12 @@
 
     iput-object v0, p0, Lcom/android/server/policy/global/CircleButton;->mTipOut:Landroid/animation/ObjectAnimator;
 
-    .line 189
     iget-object v0, p0, Lcom/android/server/policy/global/CircleButton;->mTipOut:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v2, 0x320
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 190
     iget-object v0, p0, Lcom/android/server/policy/global/CircleButton;->mTipOut:Landroid/animation/ObjectAnimator;
 
     new-instance v1, Landroid/view/animation/DecelerateInterpolator;
@@ -933,17 +843,14 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 191
     return-void
 
-    .line 184
     :array_0
     .array-data 4
         0x0
         0xff
     .end array-data
 
-    .line 188
     :array_1
     .array-data 4
         0xff
@@ -958,7 +865,6 @@
     .param p1, "dpValue"    # F
 
     .prologue
-    .line 358
     invoke-virtual {p0}, Lcom/android/server/policy/global/CircleButton;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -969,7 +875,6 @@
 
     iget v0, v1, Landroid/util/DisplayMetrics;->density:F
 
-    .line 359
     .local v0, "scale":F
     mul-float v1, p1, v0
 
@@ -989,10 +894,8 @@
     .locals 3
 
     .prologue
-    .line 259
     const/4 v0, 0x0
 
-    .line 260
     .local v0, "tipWidth":I
     iget-object v1, p0, Lcom/android/server/policy/global/CircleButton;->mTipMsg:Ljava/lang/String;
 
@@ -1002,7 +905,6 @@
 
     if-nez v1, :cond_0
 
-    .line 261
     iget-object v1, p0, Lcom/android/server/policy/global/CircleButton;->mTipPaint:Landroid/graphics/Paint;
 
     iget-object v2, p0, Lcom/android/server/policy/global/CircleButton;->mTipMsg:Ljava/lang/String;
@@ -1017,7 +919,6 @@
 
     float-to-int v0, v1
 
-    .line 263
     :cond_0
     iget v1, p0, Lcom/android/server/policy/global/CircleButton;->mScaleRingWH:I
 
@@ -1034,7 +935,6 @@
     .param p2, "marginBase"    # I
 
     .prologue
-    .line 273
     iget v1, p0, Lcom/android/server/policy/global/CircleButton;->mScaleRingWH:I
 
     sub-int v1, p1, v1
@@ -1043,7 +943,6 @@
 
     sub-int v0, p2, v1
 
-    .line 274
     .local v0, "margin":I
     invoke-static {v0}, Ljava/lang/Math;->abs(I)I
 
@@ -1061,16 +960,13 @@
 
     const/4 v9, 0x0
 
-    .line 306
     const/4 v4, 0x2
 
     new-array v3, v4, [I
 
-    .line 307
     .local v3, "location":[I
     invoke-virtual {p0, v3}, Lcom/android/server/policy/global/CircleButton;->getLocationInWindow([I)V
 
-    .line 309
     new-instance v2, Landroid/graphics/Rect;
 
     aget v4, v3, v9
@@ -1095,7 +991,6 @@
 
     invoke-direct {v2, v4, v5, v6, v7}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 311
     .local v2, "frame":Landroid/graphics/Rect;
     invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
 
@@ -1105,7 +1000,6 @@
 
     if-le v4, v5, :cond_0
 
-    .line 312
     invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
 
     move-result v4
@@ -1116,7 +1010,6 @@
 
     div-int/lit8 v0, v4, 0x2
 
-    .line 313
     .local v0, "bottomOffsetY":I
     iget v4, v2, Landroid/graphics/Rect;->bottom:I
 
@@ -1124,7 +1017,6 @@
 
     iput v4, v2, Landroid/graphics/Rect;->bottom:I
 
-    .line 315
     .end local v0    # "bottomOffsetY":I
     :cond_0
     invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
@@ -1135,7 +1027,6 @@
 
     if-le v4, v5, :cond_1
 
-    .line 316
     invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
 
     move-result v4
@@ -1146,11 +1037,9 @@
 
     div-int/lit8 v1, v4, 0x2
 
-    .line 318
     .local v1, "dx":I
     invoke-virtual {v2, v1, v9}, Landroid/graphics/Rect;->inset(II)V
 
-    .line 321
     .end local v1    # "dx":I
     :cond_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
@@ -1180,10 +1069,8 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 199
     invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 200
     iget-object v0, p0, Lcom/android/server/policy/global/CircleButton;->mTipMsg:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1204,19 +1091,15 @@
 
     if-gtz v0, :cond_1
 
-    .line 209
     :cond_0
     :goto_0
     return-void
 
-    .line 204
     :cond_1
     invoke-direct {p0, p1}, Lcom/android/server/policy/global/CircleButton;->drawCircle(Landroid/graphics/Canvas;)V
 
-    .line 206
     invoke-direct {p0, p1}, Lcom/android/server/policy/global/CircleButton;->drawTip(Landroid/graphics/Canvas;)V
 
-    .line 208
     invoke-virtual {p0, p1}, Lcom/android/server/policy/global/CircleButton;->drawIcon(Landroid/graphics/Canvas;)V
 
     goto :goto_0
@@ -1227,12 +1110,10 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 294
     invoke-super {p0, p1}, Landroid/view/View;->onFilterTouchEventForSecurity(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
-    .line 295
     .local v0, "result":Z
     if-eqz v0, :cond_0
 
@@ -1242,7 +1123,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 297
     .end local v0    # "result":Z
     :cond_0
     :goto_0
@@ -1264,23 +1144,18 @@
     .prologue
     const v1, 0xffffff
 
-    .line 139
     if-nez p1, :cond_0
 
-    .line 145
     :goto_0
     return-void
 
-    .line 142
     :cond_0
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/policy/global/CircleButton;->mCircleRadius:I
 
-    .line 143
     iput v1, p0, Lcom/android/server/policy/global/CircleButton;->mCircleColor:I
 
-    .line 144
     iput v1, p0, Lcom/android/server/policy/global/CircleButton;->mTipColor:I
 
     goto :goto_0
@@ -1291,7 +1166,6 @@
     .param p1, "value"    # F
 
     .prologue
-    .line 278
     const/high16 v0, 0x3f800000    # 1.0f
 
     cmpl-float v0, p1, v0
@@ -1304,12 +1178,10 @@
 
     if-gez v0, :cond_1
 
-    .line 281
     :cond_0
     :goto_0
     return-void
 
-    .line 280
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/server/policy/global/CircleButton;->setAlpha(F)V
 
@@ -1321,7 +1193,6 @@
     .param p1, "alpha"    # I
 
     .prologue
-    .line 340
     iget-object v0, p0, Lcom/android/server/policy/global/CircleButton;->mCirclePaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/policy/global/CircleButton;->mCircleColor:I
@@ -1336,10 +1207,8 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 341
     invoke-virtual {p0}, Lcom/android/server/policy/global/CircleButton;->invalidate()V
 
-    .line 342
     return-void
 .end method
 
@@ -1348,13 +1217,10 @@
     .param p1, "radius"    # I
 
     .prologue
-    .line 330
     iput p1, p0, Lcom/android/server/policy/global/CircleButton;->mCircleRadius:I
 
-    .line 331
     invoke-virtual {p0}, Lcom/android/server/policy/global/CircleButton;->invalidate()V
 
-    .line 332
     return-void
 .end method
 
@@ -1363,7 +1229,6 @@
     .param p1, "res"    # I
 
     .prologue
-    .line 251
     invoke-virtual {p0}, Lcom/android/server/policy/global/CircleButton;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1374,7 +1239,6 @@
 
     iput-object v0, p0, Lcom/android/server/policy/global/CircleButton;->mTipMsg:Ljava/lang/String;
 
-    .line 252
     return-void
 .end method
 
@@ -1383,10 +1247,8 @@
     .param p1, "text"    # Ljava/lang/String;
 
     .prologue
-    .line 243
     iput-object p1, p0, Lcom/android/server/policy/global/CircleButton;->mTipMsg:Ljava/lang/String;
 
-    .line 244
     return-void
 .end method
 
@@ -1395,7 +1257,6 @@
     .param p1, "alpha"    # I
 
     .prologue
-    .line 350
     iget-object v0, p0, Lcom/android/server/policy/global/CircleButton;->mTipPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/policy/global/CircleButton;->mTipColor:I
@@ -1410,9 +1271,7 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 351
     invoke-virtual {p0}, Lcom/android/server/policy/global/CircleButton;->invalidate()V
 
-    .line 352
     return-void
 .end method

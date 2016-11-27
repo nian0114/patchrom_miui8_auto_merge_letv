@@ -45,67 +45,53 @@
     .param p5, "aboveSystem"    # Z
 
     .prologue
-    .line 58
     invoke-direct {p0, p2}, Lcom/letv/leui/widget/LeBottomSheet;-><init>(Landroid/content/Context;)V
 
-    .line 51
     const/4 v10, 0x0
 
     iput-object v10, p0, Lcom/android/server/am/LetvAppNotRespondingDialog;->mContext:Landroid/content/Context;
 
-    .line 52
     const/4 v10, 0x0
 
     iput-object v10, p0, Lcom/android/server/am/LetvAppNotRespondingDialog;->mAppName:Ljava/lang/String;
 
-    .line 53
     const/4 v10, 0x0
 
     iput-boolean v10, p0, Lcom/android/server/am/LetvAppNotRespondingDialog;->isSystemApp:Z
 
-    .line 207
     new-instance v10, Lcom/android/server/am/LetvAppNotRespondingDialog$3;
 
     invoke-direct {v10, p0}, Lcom/android/server/am/LetvAppNotRespondingDialog$3;-><init>(Lcom/android/server/am/LetvAppNotRespondingDialog;)V
 
     iput-object v10, p0, Lcom/android/server/am/LetvAppNotRespondingDialog;->mHandler:Landroid/os/Handler;
 
-    .line 61
     iput-object p2, p0, Lcom/android/server/am/LetvAppNotRespondingDialog;->mContext:Landroid/content/Context;
 
-    .line 64
     iput-object p1, p0, Lcom/android/server/am/LetvAppNotRespondingDialog;->mService:Lcom/android/server/am/ActivityManagerService;
 
-    .line 65
     move-object/from16 v0, p3
 
     iput-object v0, p0, Lcom/android/server/am/LetvAppNotRespondingDialog;->mProc:Lcom/android/server/am/ProcessRecord;
 
-    .line 66
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
 
-    .line 68
     .local v8, "res":Landroid/content/res/Resources;
     const/4 v10, 0x0
 
     invoke-virtual {p0, v10}, Lcom/android/server/am/LetvAppNotRespondingDialog;->setCancelable(Z)V
 
-    .line 70
     const/4 v5, 0x0
 
-    .line 71
     .local v5, "message":Ljava/lang/String;
     const/4 v4, -0x1
 
-    .line 72
     .local v4, "id":I
     const/4 v10, 0x2
 
     new-array v3, v10, [Ljava/lang/String;
 
-    .line 75
     .local v3, "btnStrName":[Ljava/lang/String;
     if-eqz p4, :cond_1
 
@@ -121,12 +107,10 @@
 
     move-result-object v6
 
-    .line 78
     .local v6, "name1":Ljava/lang/CharSequence;
     :goto_0
     const/4 v7, 0x0
 
-    .line 79
     .local v7, "name2":Ljava/lang/CharSequence;
     move-object/from16 v0, p3
 
@@ -154,10 +138,8 @@
 
     if-eqz v7, :cond_5
 
-    .line 81
     if-eqz v6, :cond_3
 
-    .line 83
     move-object/from16 v0, p3
 
     iget-object v10, v0, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
@@ -168,10 +150,8 @@
 
     if-gtz v10, :cond_2
 
-    .line 84
     const v9, 0x1040708
 
-    .line 122
     .local v9, "resid":I
     :goto_1
     if-eqz v7, :cond_9
@@ -200,7 +180,6 @@
 
     move-result-object v5
 
-    .line 127
     :goto_2
     invoke-static {v7}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -208,14 +187,12 @@
 
     if-nez v10, :cond_a
 
-    .line 128
     invoke-interface {v7}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v10
 
     iput-object v10, p0, Lcom/android/server/am/LetvAppNotRespondingDialog;->mAppName:Ljava/lang/String;
 
-    .line 135
     :goto_3
     move-object/from16 v0, p3
 
@@ -227,16 +204,13 @@
 
     if-gtz v10, :cond_c
 
-    .line 136
     const/4 v10, 0x0
 
     iput-boolean v10, p0, Lcom/android/server/am/LetvAppNotRespondingDialog;->isSystemApp:Z
 
-    .line 142
     :goto_4
     const/4 v4, 0x1
 
-    .line 143
     const/4 v10, 0x0
 
     const v11, 0x1040377
@@ -251,7 +225,6 @@
 
     aput-object v11, v3, v10
 
-    .line 144
     const/4 v10, 0x1
 
     const v11, 0x1040379
@@ -266,7 +239,6 @@
 
     aput-object v11, v3, v10
 
-    .line 147
     invoke-virtual {p0}, Lcom/android/server/am/LetvAppNotRespondingDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v10
@@ -275,7 +247,6 @@
 
     invoke-virtual {v10, v11}, Landroid/view/Window;->setType(I)V
 
-    .line 148
     invoke-virtual {p0}, Lcom/android/server/am/LetvAppNotRespondingDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v10
@@ -286,7 +257,6 @@
 
     invoke-virtual {v10, v11, v12}, Landroid/view/Window;->setFlags(II)V
 
-    .line 150
     invoke-virtual {p0}, Lcom/android/server/am/LetvAppNotRespondingDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v10
@@ -295,20 +265,17 @@
 
     move-result-object v2
 
-    .line 151
     .local v2, "attrsBasic":Landroid/view/WindowManager$LayoutParams;
     const-string v10, "Error Dialog"
 
     invoke-virtual {v2, v10}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 152
     invoke-virtual {p0}, Lcom/android/server/am/LetvAppNotRespondingDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v10
 
     invoke-virtual {v10, v2}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
-    .line 155
     const v10, 0x1040372
 
     invoke-virtual {v8, v10}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
@@ -317,10 +284,8 @@
 
     invoke-virtual {p0, v10}, Lcom/android/server/am/LetvAppNotRespondingDialog;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 156
     if-eqz p5, :cond_0
 
-    .line 157
     invoke-virtual {p0}, Lcom/android/server/am/LetvAppNotRespondingDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v10
@@ -329,7 +294,6 @@
 
     invoke-virtual {v10, v11}, Landroid/view/Window;->setType(I)V
 
-    .line 159
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/am/LetvAppNotRespondingDialog;->getWindow()Landroid/view/Window;
 
@@ -339,7 +303,6 @@
 
     move-result-object v1
 
-    .line 160
     .local v1, "attrs":Landroid/view/WindowManager$LayoutParams;
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -367,25 +330,20 @@
 
     invoke-virtual {v1, v10}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 161
     const/16 v10, 0x110
 
     iput v10, v1, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
-    .line 163
     invoke-virtual {p0}, Lcom/android/server/am/LetvAppNotRespondingDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v10
 
     invoke-virtual {v10, v1}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
-    .line 165
     invoke-direct {p0, v4, v3, v5}, Lcom/android/server/am/LetvAppNotRespondingDialog;->buildErrorSheet(I[Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 166
     return-void
 
-    .line 75
     .end local v1    # "attrs":Landroid/view/WindowManager$LayoutParams;
     .end local v2    # "attrsBasic":Landroid/view/WindowManager$LayoutParams;
     .end local v6    # "name1":Ljava/lang/CharSequence;
@@ -396,7 +354,6 @@
 
     goto/16 :goto_0
 
-    .line 86
     .restart local v6    # "name1":Ljava/lang/CharSequence;
     .restart local v7    # "name2":Ljava/lang/CharSequence;
     :cond_2
@@ -405,17 +362,14 @@
     .restart local v9    # "resid":I
     goto/16 :goto_1
 
-    .line 90
     .end local v9    # "resid":I
     :cond_3
     move-object v6, v7
 
-    .line 91
     move-object/from16 v0, p3
 
     iget-object v7, v0, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
-    .line 93
     move-object/from16 v0, p3
 
     iget-object v10, v0, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
@@ -426,13 +380,11 @@
 
     if-gtz v10, :cond_4
 
-    .line 94
     const v9, 0x104070a
 
     .restart local v9    # "resid":I
     goto/16 :goto_1
 
-    .line 96
     .end local v9    # "resid":I
     :cond_4
     const v9, 0x1040375
@@ -440,17 +392,14 @@
     .restart local v9    # "resid":I
     goto/16 :goto_1
 
-    .line 101
     .end local v9    # "resid":I
     :cond_5
     if-eqz v6, :cond_7
 
-    .line 102
     move-object/from16 v0, p3
 
     iget-object v7, v0, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
-    .line 104
     move-object/from16 v0, p3
 
     iget-object v10, v0, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
@@ -461,13 +410,11 @@
 
     if-gtz v10, :cond_6
 
-    .line 105
     const v9, 0x1040709
 
     .restart local v9    # "resid":I
     goto/16 :goto_1
 
-    .line 107
     .end local v9    # "resid":I
     :cond_6
     const v9, 0x1040374
@@ -475,14 +422,12 @@
     .restart local v9    # "resid":I
     goto/16 :goto_1
 
-    .line 111
     .end local v9    # "resid":I
     :cond_7
     move-object/from16 v0, p3
 
     iget-object v6, v0, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
-    .line 113
     move-object/from16 v0, p3
 
     iget-object v10, v0, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
@@ -493,13 +438,11 @@
 
     if-gtz v10, :cond_8
 
-    .line 114
     const v9, 0x104070b
 
     .restart local v9    # "resid":I
     goto/16 :goto_1
 
-    .line 116
     .end local v9    # "resid":I
     :cond_8
     const v9, 0x1040376
@@ -507,7 +450,6 @@
     .restart local v9    # "resid":I
     goto/16 :goto_1
 
-    .line 122
     :cond_9
     const/4 v10, 0x1
 
@@ -527,7 +469,6 @@
 
     goto/16 :goto_2
 
-    .line 129
     :cond_a
     invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -535,7 +476,6 @@
 
     if-nez v10, :cond_b
 
-    .line 130
     invoke-interface {v6}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v10
@@ -544,7 +484,6 @@
 
     goto/16 :goto_3
 
-    .line 132
     :cond_b
     const-string v10, ""
 
@@ -552,7 +491,6 @@
 
     goto/16 :goto_3
 
-    .line 138
     :cond_c
     const/4 v10, 0x1
 
@@ -566,7 +504,6 @@
     .param p0, "x0"    # Lcom/android/server/am/LetvAppNotRespondingDialog;
 
     .prologue
-    .line 34
     iget-object v0, p0, Lcom/android/server/am/LetvAppNotRespondingDialog;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -577,7 +514,6 @@
     .param p0, "x0"    # Lcom/android/server/am/LetvAppNotRespondingDialog;
 
     .prologue
-    .line 34
     iget-object v0, p0, Lcom/android/server/am/LetvAppNotRespondingDialog;->mProc:Lcom/android/server/am/ProcessRecord;
 
     return-object v0
@@ -588,7 +524,6 @@
     .param p0, "x0"    # Lcom/android/server/am/LetvAppNotRespondingDialog;
 
     .prologue
-    .line 34
     iget-object v0, p0, Lcom/android/server/am/LetvAppNotRespondingDialog;->mService:Lcom/android/server/am/ActivityManagerService;
 
     return-object v0
@@ -599,7 +534,6 @@
     .param p0, "x0"    # Lcom/android/server/am/LetvAppNotRespondingDialog;
 
     .prologue
-    .line 34
     iget-boolean v0, p0, Lcom/android/server/am/LetvAppNotRespondingDialog;->isSystemApp:Z
 
     return v0
@@ -610,7 +544,6 @@
     .param p0, "x0"    # Lcom/android/server/am/LetvAppNotRespondingDialog;
 
     .prologue
-    .line 34
     iget-object v0, p0, Lcom/android/server/am/LetvAppNotRespondingDialog;->mAppName:Ljava/lang/String;
 
     return-object v0
@@ -621,7 +554,6 @@
     .param p0, "x0"    # Lcom/android/server/am/LetvAppNotRespondingDialog;
 
     .prologue
-    .line 34
     iget-object v0, p0, Lcom/android/server/am/LetvAppNotRespondingDialog;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -636,18 +568,14 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 169
     const/4 v2, 0x0
 
-    .line 170
     .local v2, "ok":Landroid/view/View$OnClickListener;
     const/4 v3, 0x0
 
-    .line 172
     .local v3, "other":Landroid/view/View$OnClickListener;
     packed-switch p1, :pswitch_data_0
 
-    .line 199
     const-string v0, "LetvAppNotRespondingDialog"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -670,25 +598,21 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 202
     :goto_0
     return-void
 
-    .line 174
     :pswitch_0
     new-instance v2, Lcom/android/server/am/LetvAppNotRespondingDialog$1;
 
     .end local v2    # "ok":Landroid/view/View$OnClickListener;
     invoke-direct {v2, p0}, Lcom/android/server/am/LetvAppNotRespondingDialog$1;-><init>(Lcom/android/server/am/LetvAppNotRespondingDialog;)V
 
-    .line 182
     .restart local v2    # "ok":Landroid/view/View$OnClickListener;
     new-instance v3, Lcom/android/server/am/LetvAppNotRespondingDialog$2;
 
     .end local v3    # "other":Landroid/view/View$OnClickListener;
     invoke-direct {v3, p0}, Lcom/android/server/am/LetvAppNotRespondingDialog$2;-><init>(Lcom/android/server/am/LetvAppNotRespondingDialog;)V
 
-    .line 190
     .restart local v3    # "other":Landroid/view/View$OnClickListener;
     const/4 v1, 0x5
 
@@ -710,7 +634,6 @@
 
     goto :goto_0
 
-    .line 172
     nop
 
     :pswitch_data_0
@@ -725,6 +648,5 @@
     .locals 0
 
     .prologue
-    .line 205
     return-void
 .end method

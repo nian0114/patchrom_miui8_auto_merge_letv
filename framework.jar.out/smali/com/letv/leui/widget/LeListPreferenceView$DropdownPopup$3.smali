@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 684
     iput-object p1, p0, Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup$3;->this$1:Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup;
 
     iput-object p2, p0, Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup$3;->val$this$0:Lcom/letv/leui/widget/LeListPreferenceView;
@@ -46,7 +45,6 @@
     .prologue
     const/4 v4, 0x2
 
-    .line 687
     iget-object v2, p0, Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup$3;->this$1:Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup;
 
     iget-object v3, p0, Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup$3;->this$1:Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup;
@@ -58,7 +56,6 @@
     # setter for: Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup;->isAbove:Z
     invoke-static {v2, v3}, Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup;->access$1202(Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup;Z)Z
 
-    .line 688
     iget-object v2, p0, Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup$3;->this$1:Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup;
 
     # getter for: Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup;->promptView:Landroid/view/View;
@@ -68,7 +65,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 689
     iget-object v2, p0, Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup$3;->this$1:Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup;
 
     # getter for: Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup;->promptView:Landroid/view/View;
@@ -82,7 +78,6 @@
 
     move-result-object v1
 
-    .line 692
     .local v1, "arrowView":Landroid/view/View;
     iget-object v2, p0, Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup$3;->this$1:Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup;
 
@@ -98,7 +93,6 @@
 
     iput-object v2, v3, Lcom/letv/leui/widget/LeListPreferenceView;->animateDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 695
     iget-object v2, p0, Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup$3;->this$1:Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup;
 
     # getter for: Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup;->isAbove:Z
@@ -108,7 +102,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 696
     const-string v2, "rotation"
 
     new-array v3, v4, [F
@@ -119,17 +112,14 @@
 
     move-result-object v0
 
-    .line 700
     .local v0, "animator":Landroid/animation/ObjectAnimator;
     :goto_0
     const-wide/16 v2, 0x12c
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 701
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 703
     iget-object v2, p0, Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup$3;->this$1:Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup;
 
     iget-object v2, v2, Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup;->this$0:Lcom/letv/leui/widget/LeListPreferenceView;
@@ -141,7 +131,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 704
     iget-object v2, p0, Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup$3;->this$1:Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup;
 
     iget-object v2, v2, Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup;->this$0:Lcom/letv/leui/widget/LeListPreferenceView;
@@ -155,7 +144,6 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 707
     :cond_0
     iget-object v2, p0, Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup$3;->this$1:Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup;
 
@@ -168,7 +156,6 @@
 
     iput-object v3, v2, Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup;->overlayDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 708
     iget-object v2, p0, Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup$3;->this$1:Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup;
 
     iget-object v3, p0, Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup$3;->this$1:Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup;
@@ -186,12 +173,10 @@
 
     iput-object v3, v2, Lcom/letv/leui/widget/LeListPreferenceView$DropdownPopup;->arrowDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 711
     .end local v0    # "animator":Landroid/animation/ObjectAnimator;
     :cond_1
     return-void
 
-    .line 698
     .restart local v1    # "arrowView":Landroid/view/View;
     :cond_2
     const-string v2, "rotation"
@@ -207,14 +192,12 @@
     .restart local v0    # "animator":Landroid/animation/ObjectAnimator;
     goto :goto_0
 
-    .line 696
     :array_0
     .array-data 4
         0x0
         0x42b40000    # 90.0f
     .end array-data
 
-    .line 698
     :array_1
     .array-data 4
         0x0

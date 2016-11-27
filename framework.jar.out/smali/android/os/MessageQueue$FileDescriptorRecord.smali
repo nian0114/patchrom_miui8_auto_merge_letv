@@ -32,18 +32,13 @@
     .param p3, "listener"    # Landroid/os/MessageQueue$OnFileDescriptorEventListener;
 
     .prologue
-    .line 890
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 891
     iput-object p1, p0, Landroid/os/MessageQueue$FileDescriptorRecord;->mDescriptor:Ljava/io/FileDescriptor;
 
-    .line 892
     iput p2, p0, Landroid/os/MessageQueue$FileDescriptorRecord;->mEvents:I
 
-    .line 893
     iput-object p3, p0, Landroid/os/MessageQueue$FileDescriptorRecord;->mListener:Landroid/os/MessageQueue$OnFileDescriptorEventListener;
 
-    .line 894
     return-void
 .end method

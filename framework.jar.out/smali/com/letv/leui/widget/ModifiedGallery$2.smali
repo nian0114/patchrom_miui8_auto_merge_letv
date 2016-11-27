@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 626
     iput-object p1, p0, Lcom/letv/leui/widget/ModifiedGallery$2;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .prologue
     const/4 v5, 0x2
 
-    .line 630
     iget-object v2, p0, Lcom/letv/leui/widget/ModifiedGallery$2;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
     iget-object v3, p0, Lcom/letv/leui/widget/ModifiedGallery$2;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
@@ -57,11 +55,9 @@
 
     move-result-object v0
 
-    .line 631
     .local v0, "lastView":Landroid/view/View;
     const/4 v1, 0x0
 
-    .line 632
     .local v1, "scrollAmount":I
     iget-object v2, p0, Lcom/letv/leui/widget/ModifiedGallery$2;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
@@ -72,7 +68,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 633
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Landroid/view/View;->getLeft()I
@@ -87,7 +82,6 @@
 
     if-le v2, v3, :cond_0
 
-    .line 634
     iget-object v2, p0, Lcom/letv/leui/widget/ModifiedGallery$2;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
     invoke-virtual {v2}, Lcom/letv/leui/widget/ModifiedGallery;->getPaddingLeft()I
@@ -100,7 +94,6 @@
 
     sub-int v1, v2, v3
 
-    .line 642
     :cond_0
     :goto_0
     iget-object v2, p0, Lcom/letv/leui/widget/ModifiedGallery$2;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
@@ -110,7 +103,6 @@
     # setter for: Lcom/letv/leui/widget/ModifiedGallery;->mTouchMode:I
     invoke-static {v2, v3}, Lcom/letv/leui/widget/ModifiedGallery;->access$202(Lcom/letv/leui/widget/ModifiedGallery;I)I
 
-    .line 644
     iget-object v2, p0, Lcom/letv/leui/widget/ModifiedGallery$2;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
     # getter for: Lcom/letv/leui/widget/ModifiedGallery;->mLastScrollState:I
@@ -122,12 +114,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 645
     iget-object v2, p0, Lcom/letv/leui/widget/ModifiedGallery$2;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
     invoke-virtual {v2, v5}, Lcom/letv/leui/widget/ModifiedGallery;->reportScrollStateChange(I)V
 
-    .line 648
     :cond_1
     iget-object v2, p0, Lcom/letv/leui/widget/ModifiedGallery$2;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
@@ -138,10 +128,8 @@
 
     invoke-virtual {v2, v1}, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->startUsingDistance(I)V
 
-    .line 649
     return-void
 
-    .line 637
     :cond_2
     if-eqz v0, :cond_0
 
@@ -165,7 +153,6 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 638
     iget-object v2, p0, Lcom/letv/leui/widget/ModifiedGallery$2;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
     invoke-virtual {v2}, Lcom/letv/leui/widget/ModifiedGallery;->getWidth()I

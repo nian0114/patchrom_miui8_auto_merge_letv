@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 61
     iput-object p1, p0, Lcom/android/server/pm/http/HttpConnect$WorkHandler;->this$0:Lcom/android/server/pm/http/HttpConnect;
 
-    .line 62
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 63
     return-void
 .end method
 
@@ -41,22 +38,18 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 67
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 122
     :goto_0
     iget-object v2, p0, Lcom/android/server/pm/http/HttpConnect$WorkHandler;->this$0:Lcom/android/server/pm/http/HttpConnect;
 
     invoke-virtual {v2}, Lcom/android/server/pm/http/HttpConnect;->registerConnectChangeReceiver()V
 
-    .line 123
     :goto_1
     return-void
 
-    .line 70
     :pswitch_0
     const-string v2, "Area"
 
@@ -64,7 +57,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 71
     iget-object v2, p0, Lcom/android/server/pm/http/HttpConnect$WorkHandler;->this$0:Lcom/android/server/pm/http/HttpConnect;
 
     # invokes: Lcom/android/server/pm/http/HttpConnect;->imeiToArea()Lcom/android/server/pm/http/Response;
@@ -72,11 +64,9 @@
 
     move-result-object v0
 
-    .line 72
     .local v0, "response":Lcom/android/server/pm/http/Response;
     if-nez v0, :cond_0
 
-    .line 73
     const-string v2, "Area"
 
     const-string v3, "get imei to area :response is null"
@@ -85,7 +75,6 @@
 
     goto :goto_1
 
-    .line 76
     :cond_0
     iget-object v3, p0, Lcom/android/server/pm/http/HttpConnect$WorkHandler;->this$0:Lcom/android/server/pm/http/HttpConnect;
 
@@ -105,7 +94,6 @@
     # setter for: Lcom/android/server/pm/http/HttpConnect;->mAreaParams:Lcom/android/server/pm/http/Base;
     invoke-static {v3, v2}, Lcom/android/server/pm/http/HttpConnect;->access$102(Lcom/android/server/pm/http/HttpConnect;Lcom/android/server/pm/http/Base;)Lcom/android/server/pm/http/Base;
 
-    .line 79
     iget-object v2, p0, Lcom/android/server/pm/http/HttpConnect$WorkHandler;->this$0:Lcom/android/server/pm/http/HttpConnect;
 
     # getter for: Lcom/android/server/pm/http/HttpConnect;->mAreaParams:Lcom/android/server/pm/http/Base;
@@ -115,7 +103,6 @@
 
     if-nez v2, :cond_1
 
-    .line 80
     const-string v2, "Area"
 
     const-string v3, "analysis Respond :mAreaParams is null"
@@ -124,7 +111,6 @@
 
     goto :goto_1
 
-    .line 84
     :cond_1
     iget-object v2, p0, Lcom/android/server/pm/http/HttpConnect$WorkHandler;->this$0:Lcom/android/server/pm/http/HttpConnect;
 
@@ -141,7 +127,6 @@
 
     if-nez v2, :cond_8
 
-    .line 85
     iget-object v2, p0, Lcom/android/server/pm/http/HttpConnect$WorkHandler;->this$0:Lcom/android/server/pm/http/HttpConnect;
 
     # getter for: Lcom/android/server/pm/http/HttpConnect;->mAreaParams:Lcom/android/server/pm/http/Base;
@@ -159,7 +144,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 86
     iget-object v2, p0, Lcom/android/server/pm/http/HttpConnect$WorkHandler;->this$0:Lcom/android/server/pm/http/HttpConnect;
 
     # getter for: Lcom/android/server/pm/http/HttpConnect;->mAreaParams:Lcom/android/server/pm/http/Base;
@@ -173,7 +157,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 87
     iget-object v2, p0, Lcom/android/server/pm/http/HttpConnect$WorkHandler;->this$0:Lcom/android/server/pm/http/HttpConnect;
 
     # getter for: Lcom/android/server/pm/http/HttpConnect;->mAreaParams:Lcom/android/server/pm/http/Base;
@@ -193,7 +176,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 89
     iget-object v2, p0, Lcom/android/server/pm/http/HttpConnect$WorkHandler;->this$0:Lcom/android/server/pm/http/HttpConnect;
 
     # getter for: Lcom/android/server/pm/http/HttpConnect;->mAreaParams:Lcom/android/server/pm/http/Base;
@@ -211,7 +193,6 @@
 
     if-nez v2, :cond_3
 
-    .line 90
     const-string v2, "persist.sys.salesarea"
 
     iget-object v3, p0, Lcom/android/server/pm/http/HttpConnect$WorkHandler;->this$0:Lcom/android/server/pm/http/HttpConnect;
@@ -227,7 +208,6 @@
 
     invoke-static {v2, v3}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 91
     const-string v2, "Area"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -261,7 +241,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 92
     const-string v2, "persist.sys.salesarea"
 
     const-string v3, ""
@@ -270,7 +249,6 @@
 
     move-result-object v1
 
-    .line 93
     .local v1, "salesArea":Ljava/lang/String;
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -278,7 +256,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 94
     const-string v2, "Area"
 
     const-string v3, "get imei to area :response: SystemProperties.set  failed"
@@ -287,14 +264,12 @@
 
     goto/16 :goto_1
 
-    .line 97
     :cond_2
     iget-object v2, p0, Lcom/android/server/pm/http/HttpConnect$WorkHandler;->this$0:Lcom/android/server/pm/http/HttpConnect;
 
     # invokes: Lcom/android/server/pm/http/HttpConnect;->sendSaleChangeBroadcast()V
     invoke-static {v2}, Lcom/android/server/pm/http/HttpConnect;->access$300(Lcom/android/server/pm/http/HttpConnect;)V
 
-    .line 98
     iget-object v2, p0, Lcom/android/server/pm/http/HttpConnect$WorkHandler;->this$0:Lcom/android/server/pm/http/HttpConnect;
 
     # invokes: Lcom/android/server/pm/http/HttpConnect;->unRegisterConnectChangeReceiver()V
@@ -302,7 +277,6 @@
 
     goto/16 :goto_1
 
-    .line 101
     .end local v1    # "salesArea":Ljava/lang/String;
     :cond_3
     const-string v2, "Area"
@@ -313,7 +287,6 @@
 
     goto/16 :goto_0
 
-    .line 104
     :cond_4
     const-string v2, "Area"
 
@@ -350,7 +323,6 @@
 
     goto/16 :goto_0
 
-    .line 107
     :cond_5
     const-string v2, "Area"
 
@@ -360,7 +332,6 @@
 
     goto/16 :goto_0
 
-    .line 110
     :cond_6
     iget-object v2, p0, Lcom/android/server/pm/http/HttpConnect$WorkHandler;->this$0:Lcom/android/server/pm/http/HttpConnect;
 
@@ -373,7 +344,6 @@
 
     if-eqz v2, :cond_7
 
-    .line 111
     const-string v2, "Area"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -426,7 +396,6 @@
 
     goto/16 :goto_0
 
-    .line 113
     :cond_7
     const-string v2, "Area"
 
@@ -461,7 +430,6 @@
 
     goto/16 :goto_0
 
-    .line 117
     :cond_8
     const-string v2, "Area"
 
@@ -471,7 +439,6 @@
 
     goto/16 :goto_0
 
-    .line 67
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

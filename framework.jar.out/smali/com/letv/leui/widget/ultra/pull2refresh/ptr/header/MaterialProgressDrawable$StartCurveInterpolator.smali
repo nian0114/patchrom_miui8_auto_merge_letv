@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 721
     invoke-direct {p0}, Landroid/view/animation/AccelerateDecelerateInterpolator;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
     .param p1, "x0"    # Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialProgressDrawable$1;
 
     .prologue
-    .line 721
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialProgressDrawable$StartCurveInterpolator;-><init>()V
 
     return-void
@@ -43,7 +41,6 @@
     .param p1, "input"    # F
 
     .prologue
-    .line 724
     const/high16 v0, 0x3f800000    # 1.0f
 
     const/high16 v1, 0x40000000    # 2.0f

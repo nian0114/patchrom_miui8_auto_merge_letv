@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 8066
     iput-object p1, p0, Landroid/view/ViewRootImpl$7;->this$0:Landroid/view/ViewRootImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,10 +39,8 @@
     .locals 4
 
     .prologue
-    .line 8069
     const/4 v0, 0x0
 
-    .line 8070
     .local v0, "bitmap":Landroid/graphics/Bitmap;
     iget-object v1, p0, Landroid/view/ViewRootImpl$7;->this$0:Landroid/view/ViewRootImpl;
 
@@ -61,7 +58,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 8071
     iget-object v1, p0, Landroid/view/ViewRootImpl$7;->this$0:Landroid/view/ViewRootImpl;
 
     iget-object v1, v1, Landroid/view/ViewRootImpl;->mSurface:Landroid/view/Surface;
@@ -70,10 +66,8 @@
 
     move-result-object v0
 
-    .line 8072
     if-eqz v0, :cond_1
 
-    .line 8073
     const-string v1, "ViewRootImpl"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -114,12 +108,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8078
     :cond_0
     :goto_0
     return-object v0
 
-    .line 8075
     :cond_1
     const-string v1, "ViewRootImpl"
 

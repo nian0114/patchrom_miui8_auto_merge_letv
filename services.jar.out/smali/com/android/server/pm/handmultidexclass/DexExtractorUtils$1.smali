@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 197
     iput-object p1, p0, Lcom/android/server/pm/handmultidexclass/DexExtractorUtils$1;->val$extractedFilePrefix:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "pathname"    # Ljava/io/File;
 
     .prologue
-    .line 201
     invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v0

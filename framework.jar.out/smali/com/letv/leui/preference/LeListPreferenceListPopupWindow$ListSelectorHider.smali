@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1748
     iput-object p1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$ListSelectorHider;->this$0:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$1;
 
     .prologue
-    .line 1748
     invoke-direct {p0, p1}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$ListSelectorHider;-><init>(Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;)V
 
     return-void
@@ -52,11 +50,9 @@
     .locals 1
 
     .prologue
-    .line 1750
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$ListSelectorHider;->this$0:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;
 
     invoke-virtual {v0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->clearListSelection()V
 
-    .line 1751
     return-void
 .end method

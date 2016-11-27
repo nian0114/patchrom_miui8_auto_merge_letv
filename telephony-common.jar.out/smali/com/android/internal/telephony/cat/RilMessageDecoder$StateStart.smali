@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 130
     iput-object p1, p0, Lcom/android/internal/telephony/cat/RilMessageDecoder$StateStart;->this$0:Lcom/android/internal/telephony/cat/RilMessageDecoder;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/internal/telephony/cat/RilMessageDecoder$1;
 
     .prologue
-    .line 130
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/cat/RilMessageDecoder$StateStart;-><init>(Lcom/android/internal/telephony/cat/RilMessageDecoder;)V
 
     return-void
@@ -52,12 +50,10 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 133
     iget v0, p1, Landroid/os/Message;->what:I
 
     if-ne v0, v3, :cond_2
 
-    .line 135
     iget-object v0, p0, Lcom/android/internal/telephony/cat/RilMessageDecoder$StateStart;->this$0:Lcom/android/internal/telephony/cat/RilMessageDecoder;
 
     # getter for: Lcom/android/internal/telephony/cat/RilMessageDecoder;->mLock:Ljava/lang/Object;
@@ -67,7 +63,6 @@
 
     monitor-enter v1
 
-    .line 136
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/telephony/cat/RilMessageDecoder$StateStart;->this$0:Lcom/android/internal/telephony/cat/RilMessageDecoder;
 
@@ -78,25 +73,20 @@
 
     if-nez v0, :cond_0
 
-    .line 137
     const-string v0, "StateStart mCaller is null"
 
     invoke-static {p0, v0}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 138
     monitor-exit v1
 
-    .line 151
     :goto_0
     return v3
 
-    .line 141
     :cond_0
     const-string v0, "StateStart mCaller isn\'t null and decodeMessageParams"
 
     invoke-static {p0, v0}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 142
     iget-object v2, p0, Lcom/android/internal/telephony/cat/RilMessageDecoder$StateStart;->this$0:Lcom/android/internal/telephony/cat/RilMessageDecoder;
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -110,7 +100,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 143
     iget-object v0, p0, Lcom/android/internal/telephony/cat/RilMessageDecoder$StateStart;->this$0:Lcom/android/internal/telephony/cat/RilMessageDecoder;
 
     iget-object v2, p0, Lcom/android/internal/telephony/cat/RilMessageDecoder$StateStart;->this$0:Lcom/android/internal/telephony/cat/RilMessageDecoder;
@@ -123,7 +112,6 @@
     # invokes: Lcom/android/internal/telephony/cat/RilMessageDecoder;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v0, v2}, Lcom/android/internal/telephony/cat/RilMessageDecoder;->access$600(Lcom/android/internal/telephony/cat/RilMessageDecoder;Lcom/android/internal/util/IState;)V
 
-    .line 145
     :cond_1
     monitor-exit v1
 
@@ -138,7 +126,6 @@
 
     throw v0
 
-    .line 148
     :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 

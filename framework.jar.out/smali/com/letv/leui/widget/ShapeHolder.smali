@@ -37,23 +37,18 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 16
     iput v0, p0, Lcom/letv/leui/widget/ShapeHolder;->x:F
 
     iput v0, p0, Lcom/letv/leui/widget/ShapeHolder;->y:F
 
-    .line 23
     iput-object p1, p0, Lcom/letv/leui/widget/ShapeHolder;->shape:Landroid/graphics/drawable/ShapeDrawable;
 
-    .line 25
     const/high16 v0, 0x3f800000    # 1.0f
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/ShapeHolder;->setAlpha(F)V
 
-    .line 26
     return-void
 .end method
 
@@ -63,7 +58,6 @@
     .locals 1
 
     .prologue
-    .line 79
     iget-object v0, p0, Lcom/letv/leui/widget/ShapeHolder;->shape:Landroid/graphics/drawable/ShapeDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getAlpha()I
@@ -79,7 +73,6 @@
     .locals 1
 
     .prologue
-    .line 61
     iget-object v0, p0, Lcom/letv/leui/widget/ShapeHolder;->shape:Landroid/graphics/drawable/ShapeDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
@@ -97,7 +90,6 @@
     .locals 1
 
     .prologue
-    .line 69
     iget-object v0, p0, Lcom/letv/leui/widget/ShapeHolder;->gradient:Landroid/graphics/RadialGradient;
 
     return-object v0
@@ -107,7 +99,6 @@
     .locals 1
 
     .prologue
-    .line 91
     iget-object v0, p0, Lcom/letv/leui/widget/ShapeHolder;->shape:Landroid/graphics/drawable/ShapeDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getShape()Landroid/graphics/drawable/shapes/Shape;
@@ -125,7 +116,6 @@
     .locals 1
 
     .prologue
-    .line 29
     iget-object v0, p0, Lcom/letv/leui/widget/ShapeHolder;->paint:Landroid/graphics/Paint;
 
     return-object v0
@@ -135,14 +125,12 @@
     .locals 3
 
     .prologue
-    .line 99
     iget-object v1, p0, Lcom/letv/leui/widget/ShapeHolder;->shape:Landroid/graphics/drawable/ShapeDrawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/ShapeDrawable;->getShape()Landroid/graphics/drawable/shapes/Shape;
 
     move-result-object v0
 
-    .line 100
     .local v0, "s":Landroid/graphics/drawable/shapes/Shape;
     invoke-virtual {v0}, Landroid/graphics/drawable/shapes/Shape;->getHeight()F
 
@@ -163,7 +151,6 @@
     .locals 1
 
     .prologue
-    .line 54
     iget-object v0, p0, Lcom/letv/leui/widget/ShapeHolder;->shape:Landroid/graphics/drawable/ShapeDrawable;
 
     return-object v0
@@ -173,7 +160,6 @@
     .locals 1
 
     .prologue
-    .line 83
     iget-object v0, p0, Lcom/letv/leui/widget/ShapeHolder;->shape:Landroid/graphics/drawable/ShapeDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getShape()Landroid/graphics/drawable/shapes/Shape;
@@ -191,7 +177,6 @@
     .locals 1
 
     .prologue
-    .line 41
     iget v0, p0, Lcom/letv/leui/widget/ShapeHolder;->x:F
 
     return v0
@@ -201,7 +186,6 @@
     .locals 1
 
     .prologue
-    .line 47
     iget v0, p0, Lcom/letv/leui/widget/ShapeHolder;->y:F
 
     return v0
@@ -212,7 +196,6 @@
     .param p1, "alpha"    # F
 
     .prologue
-    .line 76
     iget-object v0, p0, Lcom/letv/leui/widget/ShapeHolder;->shape:Landroid/graphics/drawable/ShapeDrawable;
 
     const/high16 v1, 0x437f0000    # 255.0f
@@ -227,7 +210,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/ShapeDrawable;->setAlpha(I)V
 
-    .line 77
     return-void
 .end method
 
@@ -236,7 +218,6 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 64
     iget-object v0, p0, Lcom/letv/leui/widget/ShapeHolder;->shape:Landroid/graphics/drawable/ShapeDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
@@ -245,10 +226,8 @@
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 65
     iput p1, p0, Lcom/letv/leui/widget/ShapeHolder;->color:I
 
-    .line 66
     return-void
 .end method
 
@@ -257,10 +236,8 @@
     .param p1, "value"    # Landroid/graphics/RadialGradient;
 
     .prologue
-    .line 72
     iput-object p1, p0, Lcom/letv/leui/widget/ShapeHolder;->gradient:Landroid/graphics/RadialGradient;
 
-    .line 73
     return-void
 .end method
 
@@ -269,14 +246,12 @@
     .param p1, "height"    # F
 
     .prologue
-    .line 94
     iget-object v1, p0, Lcom/letv/leui/widget/ShapeHolder;->shape:Landroid/graphics/drawable/ShapeDrawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/ShapeDrawable;->getShape()Landroid/graphics/drawable/shapes/Shape;
 
     move-result-object v0
 
-    .line 95
     .local v0, "s":Landroid/graphics/drawable/shapes/Shape;
     invoke-virtual {v0}, Landroid/graphics/drawable/shapes/Shape;->getWidth()F
 
@@ -284,7 +259,6 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/graphics/drawable/shapes/Shape;->resize(FF)V
 
-    .line 96
     return-void
 .end method
 
@@ -293,10 +267,8 @@
     .param p1, "value"    # Landroid/graphics/Paint;
 
     .prologue
-    .line 32
     iput-object p1, p0, Lcom/letv/leui/widget/ShapeHolder;->paint:Landroid/graphics/Paint;
 
-    .line 33
     return-void
 .end method
 
@@ -307,14 +279,12 @@
     .prologue
     const/high16 v2, 0x40000000    # 2.0f
 
-    .line 103
     iget-object v1, p0, Lcom/letv/leui/widget/ShapeHolder;->shape:Landroid/graphics/drawable/ShapeDrawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/ShapeDrawable;->getShape()Landroid/graphics/drawable/shapes/Shape;
 
     move-result-object v0
 
-    .line 104
     .local v0, "s":Landroid/graphics/drawable/shapes/Shape;
     mul-float v1, p1, v2
 
@@ -322,7 +292,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/drawable/shapes/Shape;->resize(FF)V
 
-    .line 105
     return-void
 .end method
 
@@ -331,10 +300,8 @@
     .param p1, "value"    # Landroid/graphics/drawable/ShapeDrawable;
 
     .prologue
-    .line 57
     iput-object p1, p0, Lcom/letv/leui/widget/ShapeHolder;->shape:Landroid/graphics/drawable/ShapeDrawable;
 
-    .line 58
     return-void
 .end method
 
@@ -343,14 +310,12 @@
     .param p1, "width"    # F
 
     .prologue
-    .line 86
     iget-object v1, p0, Lcom/letv/leui/widget/ShapeHolder;->shape:Landroid/graphics/drawable/ShapeDrawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/ShapeDrawable;->getShape()Landroid/graphics/drawable/shapes/Shape;
 
     move-result-object v0
 
-    .line 87
     .local v0, "s":Landroid/graphics/drawable/shapes/Shape;
     invoke-virtual {v0}, Landroid/graphics/drawable/shapes/Shape;->getHeight()F
 
@@ -358,7 +323,6 @@
 
     invoke-virtual {v0, p1, v1}, Landroid/graphics/drawable/shapes/Shape;->resize(FF)V
 
-    .line 88
     return-void
 .end method
 
@@ -367,10 +331,8 @@
     .param p1, "value"    # F
 
     .prologue
-    .line 44
     iput p1, p0, Lcom/letv/leui/widget/ShapeHolder;->x:F
 
-    .line 45
     return-void
 .end method
 
@@ -380,13 +342,10 @@
     .param p2, "valueY"    # F
 
     .prologue
-    .line 36
     invoke-virtual {p0, p1}, Lcom/letv/leui/widget/ShapeHolder;->setX(F)V
 
-    .line 37
     invoke-virtual {p0, p2}, Lcom/letv/leui/widget/ShapeHolder;->setY(F)V
 
-    .line 38
     return-void
 .end method
 
@@ -395,9 +354,7 @@
     .param p1, "value"    # F
 
     .prologue
-    .line 50
     iput p1, p0, Lcom/letv/leui/widget/ShapeHolder;->y:F
 
-    .line 51
     return-void
 .end method

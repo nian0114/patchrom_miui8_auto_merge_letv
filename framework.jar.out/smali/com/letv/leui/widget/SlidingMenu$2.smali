@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1166
     iput-object p1, p0, Lcom/letv/leui/widget/SlidingMenu$2;->this$0:Lcom/letv/leui/widget/SlidingMenu;
 
     iput p2, p0, Lcom/letv/leui/widget/SlidingMenu$2;->val$layerType:I
@@ -46,7 +45,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1168
     const-string v1, "SlidingMenu"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -78,7 +76,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1170
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu$2;->this$0:Lcom/letv/leui/widget/SlidingMenu;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/SlidingMenu;->getContent()Landroid/view/View;
@@ -89,7 +86,6 @@
 
     invoke-virtual {v0, v1, v4}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
 
-    .line 1171
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu$2;->this$0:Lcom/letv/leui/widget/SlidingMenu;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/SlidingMenu;->getMenu()Landroid/view/View;
@@ -100,7 +96,6 @@
 
     invoke-virtual {v0, v1, v4}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
 
-    .line 1172
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu$2;->this$0:Lcom/letv/leui/widget/SlidingMenu;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/SlidingMenu;->getSecondaryMenu()Landroid/view/View;
@@ -109,7 +104,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1173
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu$2;->this$0:Lcom/letv/leui/widget/SlidingMenu;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/SlidingMenu;->getSecondaryMenu()Landroid/view/View;
@@ -120,11 +114,9 @@
 
     invoke-virtual {v0, v1, v4}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
 
-    .line 1175
     :cond_0
     return-void
 
-    .line 1168
     :cond_1
     const/4 v0, 0x0
 

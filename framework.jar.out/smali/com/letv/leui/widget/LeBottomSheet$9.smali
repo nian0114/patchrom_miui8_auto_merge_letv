@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 832
     iput-object p1, p0, Lcom/letv/leui/widget/LeBottomSheet$9;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 835
     iget-object v3, p0, Lcom/letv/leui/widget/LeBottomSheet$9;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # getter for: Lcom/letv/leui/widget/LeBottomSheet;->mMenuView:Landroid/view/View;
@@ -56,7 +54,6 @@
 
     invoke-virtual {v3, p0}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 837
     iget-object v3, p0, Lcom/letv/leui/widget/LeBottomSheet$9;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # getter for: Lcom/letv/leui/widget/LeBottomSheet;->moreItem:Z
@@ -66,7 +63,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 838
     iget-object v3, p0, Lcom/letv/leui/widget/LeBottomSheet$9;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # getter for: Lcom/letv/leui/widget/LeBottomSheet;->listView:Landroid/widget/ListView;
@@ -91,7 +87,6 @@
 
     move-result-object v2
 
-    .line 839
     .local v2, "mView":Landroid/view/View;
     invoke-static {v6, v6}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
@@ -103,14 +98,12 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/view/View;->measure(II)V
 
-    .line 842
     invoke-virtual {v2}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v3
 
     int-to-float v0, v3
 
-    .line 843
     .local v0, "height":F
     iget-object v3, p0, Lcom/letv/leui/widget/LeBottomSheet$9;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
@@ -123,7 +116,6 @@
 
     move-result-object v1
 
-    .line 844
     .local v1, "lp":Landroid/view/ViewGroup$LayoutParams;
     const/high16 v3, 0x40b00000    # 5.5f
 
@@ -133,7 +125,6 @@
 
     iput v3, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 845
     iget-object v3, p0, Lcom/letv/leui/widget/LeBottomSheet$9;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # getter for: Lcom/letv/leui/widget/LeBottomSheet;->listView:Landroid/widget/ListView;
@@ -143,7 +134,6 @@
 
     invoke-virtual {v3, v1}, Landroid/widget/ListView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 847
     .end local v0    # "height":F
     .end local v1    # "lp":Landroid/view/ViewGroup$LayoutParams;
     .end local v2    # "mView":Landroid/view/View;

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 233
     iput-object p1, p0, Lcom/letv/leui/widget/LeActionBarBottomSlider$7$1;->this$1:Lcom/letv/leui/widget/LeActionBarBottomSlider$7;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 236
     iget-object v0, p0, Lcom/letv/leui/widget/LeActionBarBottomSlider$7$1;->this$1:Lcom/letv/leui/widget/LeActionBarBottomSlider$7;
 
     iget-object v0, v0, Lcom/letv/leui/widget/LeActionBarBottomSlider$7;->this$0:Lcom/letv/leui/widget/LeActionBarBottomSlider;
@@ -67,7 +65,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 237
     iget-object v0, p0, Lcom/letv/leui/widget/LeActionBarBottomSlider$7$1;->this$1:Lcom/letv/leui/widget/LeActionBarBottomSlider$7;
 
     iget-object v0, v0, Lcom/letv/leui/widget/LeActionBarBottomSlider$7;->this$0:Lcom/letv/leui/widget/LeActionBarBottomSlider;
@@ -79,7 +76,6 @@
 
     invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
 
-    .line 238
     iget-object v0, p0, Lcom/letv/leui/widget/LeActionBarBottomSlider$7$1;->this$1:Lcom/letv/leui/widget/LeActionBarBottomSlider$7;
 
     iget-object v0, v0, Lcom/letv/leui/widget/LeActionBarBottomSlider$7;->this$0:Lcom/letv/leui/widget/LeActionBarBottomSlider;
@@ -89,7 +85,6 @@
     # setter for: Lcom/letv/leui/widget/LeActionBarBottomSlider;->responsable:Z
     invoke-static {v0, v1}, Lcom/letv/leui/widget/LeActionBarBottomSlider;->access$302(Lcom/letv/leui/widget/LeActionBarBottomSlider;Z)Z
 
-    .line 239
     iget-object v0, p0, Lcom/letv/leui/widget/LeActionBarBottomSlider$7$1;->this$1:Lcom/letv/leui/widget/LeActionBarBottomSlider$7;
 
     iget-object v0, v0, Lcom/letv/leui/widget/LeActionBarBottomSlider$7;->this$0:Lcom/letv/leui/widget/LeActionBarBottomSlider;
@@ -103,7 +98,6 @@
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/widget/LeTransLinearLayout;->setIntercept(Z)V
 
-    .line 241
     :cond_0
     return-void
 .end method

@@ -57,32 +57,26 @@
     .locals 1
 
     .prologue
-    .line 547
     sget-object v0, Lcom/letv/tracker/enums/EventType;->Click:Lcom/letv/tracker/enums/EventType;
 
     sput-object v0, Lcom/letv/leui/util/LeResolveUtils$UV;->ACTION_CLICK:Lcom/letv/tracker/enums/EventType;
 
-    .line 559
     sget-object v0, Lcom/letv/tracker/enums/Key;->From:Lcom/letv/tracker/enums/Key;
 
     sput-object v0, Lcom/letv/leui/util/LeResolveUtils$UV;->KEY_EVENT_FROM_PACKAGENAME:Lcom/letv/tracker/enums/Key;
 
-    .line 560
     sget-object v0, Lcom/letv/tracker/enums/Key;->Class:Lcom/letv/tracker/enums/Key;
 
     sput-object v0, Lcom/letv/leui/util/LeResolveUtils$UV;->KEY_EVENT_INTENT_PACKAGENAME:Lcom/letv/tracker/enums/Key;
 
-    .line 561
     sget-object v0, Lcom/letv/tracker/enums/Key;->Type:Lcom/letv/tracker/enums/Key;
 
     sput-object v0, Lcom/letv/leui/util/LeResolveUtils$UV;->KEY_EVENT_INTENT_TYPE:Lcom/letv/tracker/enums/Key;
 
-    .line 562
     sget-object v0, Lcom/letv/tracker/enums/Key;->Content:Lcom/letv/tracker/enums/Key;
 
     sput-object v0, Lcom/letv/leui/util/LeResolveUtils$UV;->KEY_EVENT_INTENT_CONTENT:Lcom/letv/tracker/enums/Key;
 
-    .line 563
     sget-object v0, Lcom/letv/tracker/enums/EventType;->Popup:Lcom/letv/tracker/enums/EventType;
 
     sput-object v0, Lcom/letv/leui/util/LeResolveUtils$UV;->KEY_EVENT_POPUP:Lcom/letv/tracker/enums/EventType;
@@ -94,7 +88,6 @@
     .locals 0
 
     .prologue
-    .line 546
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -105,10 +98,8 @@
     .param p0, "activityToken"    # Landroid/os/IBinder;
 
     .prologue
-    .line 605
     const/4 v1, 0x0
 
-    .line 607
     .local v1, "mCallingPackage":Ljava/lang/String;
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
@@ -121,15 +112,12 @@
 
     move-result-object v1
 
-    .line 614
     :goto_0
     return-object v1
 
-    .line 608
     :catch_0
     move-exception v0
 
-    .line 609
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -143,12 +131,10 @@
     .param p2, "intentContent"    # Ljava/lang/String;
 
     .prologue
-    .line 568
     invoke-static {}, Lcom/letv/tracker/agnes/Agnes;->getInstance()Lcom/letv/tracker/agnes/Agnes;
 
     move-result-object v0
 
-    .line 569
     .local v0, "agnes":Lcom/letv/tracker/agnes/Agnes;
     const-string v3, "leShareWidget"
 
@@ -156,7 +142,6 @@
 
     move-result-object v1
 
-    .line 570
     .local v1, "app":Lcom/letv/tracker/agnes/App;
     sget-object v3, Lcom/letv/leui/util/LeResolveUtils$UV;->KEY_EVENT_POPUP:Lcom/letv/tracker/enums/EventType;
 
@@ -164,29 +149,23 @@
 
     move-result-object v2
 
-    .line 571
     .local v2, "event":Lcom/letv/tracker/agnes/Event;
     sget-object v3, Lcom/letv/leui/util/LeResolveUtils$UV;->KEY_EVENT_FROM_PACKAGENAME:Lcom/letv/tracker/enums/Key;
 
     invoke-virtual {v2, v3, p0}, Lcom/letv/tracker/agnes/Event;->addProp(Lcom/letv/tracker/enums/Key;Ljava/lang/String;)V
 
-    .line 572
     sget-object v3, Lcom/letv/leui/util/LeResolveUtils$UV;->KEY_EVENT_INTENT_TYPE:Lcom/letv/tracker/enums/Key;
 
     invoke-virtual {v2, v3, p1}, Lcom/letv/tracker/agnes/Event;->addProp(Lcom/letv/tracker/enums/Key;Ljava/lang/String;)V
 
-    .line 573
     sget-object v3, Lcom/letv/leui/util/LeResolveUtils$UV;->KEY_EVENT_INTENT_CONTENT:Lcom/letv/tracker/enums/Key;
 
     invoke-virtual {v2, v3, p2}, Lcom/letv/tracker/agnes/Event;->addProp(Lcom/letv/tracker/enums/Key;Ljava/lang/String;)V
 
-    .line 574
     invoke-virtual {v0, v2}, Lcom/letv/tracker/agnes/Agnes;->report(Lcom/letv/tracker/agnes/Event;)V
 
-    .line 575
     invoke-virtual {v0, v1}, Lcom/letv/tracker/agnes/Agnes;->report(Lcom/letv/tracker/agnes/App;)V
 
-    .line 576
     return-void
 .end method
 
@@ -200,7 +179,6 @@
     .param p5, "mShareDesc"    # Ljava/lang/String;
 
     .prologue
-    .line 619
     if-eqz p5, :cond_0
 
     :try_start_0
@@ -212,13 +190,11 @@
 
     if-ge v5, v6, :cond_5
 
-    .line 620
     :cond_0
     invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 621
     .local v1, "extras":Landroid/os/Bundle;
     if-eqz v1, :cond_2
 
@@ -240,14 +216,12 @@
 
     if-eqz v5, :cond_2
 
-    .line 622
     const-string v5, "android.intent.extra.STREAM"
 
     invoke-virtual {v1, v5}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v4
 
-    .line 623
     .local v4, "uris":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/os/Parcelable;>;"
     if-eqz v4, :cond_3
 
@@ -257,7 +231,6 @@
 
     if-lez v5, :cond_3
 
-    .line 624
     const/4 v2, 0x0
 
     .local v2, "i":I
@@ -268,10 +241,8 @@
 
     if-ge v2, v5, :cond_2
 
-    .line 625
     if-eqz p0, :cond_1
 
-    .line 626
     invoke-virtual {p1}, Landroid/content/Intent;->getType()Ljava/lang/String;
 
     move-result-object v6
@@ -288,13 +259,11 @@
 
     invoke-static {p3, v6, v5}, Lcom/letv/leui/util/LeResolveUtils$UV;->reportApp(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 624
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 628
     :cond_1
     invoke-virtual {p1}, Landroid/content/Intent;->getType()Ljava/lang/String;
 
@@ -316,24 +285,20 @@
 
     goto :goto_1
 
-    .line 650
     .end local v1    # "extras":Landroid/os/Bundle;
     .end local v2    # "i":I
     .end local v4    # "uris":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/os/Parcelable;>;"
     :catch_0
     move-exception v0
 
-    .line 651
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 654
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_2
     :goto_2
     return-void
 
-    .line 632
     .restart local v1    # "extras":Landroid/os/Bundle;
     .restart local v4    # "uris":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/os/Parcelable;>;"
     :cond_3
@@ -346,7 +311,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 633
     const-string v5, "android.intent.extra.STREAM"
 
     invoke-virtual {v1, v5}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
@@ -357,11 +321,9 @@
 
     move-result-object v3
 
-    .line 634
     .local v3, "uri":Ljava/lang/String;
     if-eqz p0, :cond_4
 
-    .line 635
     invoke-virtual {p1}, Landroid/content/Intent;->getType()Ljava/lang/String;
 
     move-result-object v5
@@ -370,7 +332,6 @@
 
     goto :goto_2
 
-    .line 637
     :cond_4
     invoke-virtual {p1}, Landroid/content/Intent;->getType()Ljava/lang/String;
 
@@ -380,14 +341,12 @@
 
     goto :goto_2
 
-    .line 644
     .end local v1    # "extras":Landroid/os/Bundle;
     .end local v3    # "uri":Ljava/lang/String;
     .end local v4    # "uris":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/os/Parcelable;>;"
     :cond_5
     if-eqz p0, :cond_6
 
-    .line 645
     invoke-virtual {p1}, Landroid/content/Intent;->getType()Ljava/lang/String;
 
     move-result-object v5
@@ -396,7 +355,6 @@
 
     goto :goto_2
 
-    .line 647
     :cond_6
     invoke-virtual {p1}, Landroid/content/Intent;->getType()Ljava/lang/String;
 
@@ -418,7 +376,6 @@
     .param p4, "intentContent"    # Ljava/lang/String;
 
     .prologue
-    .line 580
     :try_start_0
     invoke-static {}, Lcom/letv/tracker/agnes/Agnes;->getInstance()Lcom/letv/tracker/agnes/Agnes;
 
@@ -430,70 +387,58 @@
 
     move-result-object v2
 
-    .line 581
     .local v2, "mApp":Lcom/letv/tracker/agnes/App;
     const/4 v1, 0x0
 
-    .line 582
     .local v1, "event":Lcom/letv/tracker/agnes/Event;
     const/4 v3, 0x0
 
-    .line 583
     .local v3, "widget":Lcom/letv/tracker/agnes/Widget;
     const/4 v4, 0x1
 
     if-ne p0, v4, :cond_0
 
-    .line 584
     const-string v4, "Share.1"
 
     invoke-virtual {v2, v4}, Lcom/letv/tracker/agnes/App;->createWidget(Ljava/lang/String;)Lcom/letv/tracker/agnes/Widget;
 
     move-result-object v3
 
-    .line 585
     sget-object v4, Lcom/letv/leui/util/LeResolveUtils$UV;->ACTION_CLICK:Lcom/letv/tracker/enums/EventType;
 
     invoke-virtual {v3, v4}, Lcom/letv/tracker/agnes/Widget;->createEvent(Lcom/letv/tracker/enums/EventType;)Lcom/letv/tracker/agnes/Event;
 
     move-result-object v1
 
-    .line 586
     sget-object v4, Lcom/letv/leui/util/LeResolveUtils$UV;->KEY_EVENT_INTENT_PACKAGENAME:Lcom/letv/tracker/enums/Key;
 
     invoke-virtual {v1, v4, p2}, Lcom/letv/tracker/agnes/Event;->addProp(Lcom/letv/tracker/enums/Key;Ljava/lang/String;)V
 
-    .line 595
     :goto_0
     sget-object v4, Lcom/letv/leui/util/LeResolveUtils$UV;->KEY_EVENT_FROM_PACKAGENAME:Lcom/letv/tracker/enums/Key;
 
     invoke-virtual {v1, v4, p1}, Lcom/letv/tracker/agnes/Event;->addProp(Lcom/letv/tracker/enums/Key;Ljava/lang/String;)V
 
-    .line 596
     sget-object v4, Lcom/letv/leui/util/LeResolveUtils$UV;->KEY_EVENT_INTENT_TYPE:Lcom/letv/tracker/enums/Key;
 
     invoke-virtual {v1, v4, p3}, Lcom/letv/tracker/agnes/Event;->addProp(Lcom/letv/tracker/enums/Key;Ljava/lang/String;)V
 
-    .line 597
     sget-object v4, Lcom/letv/leui/util/LeResolveUtils$UV;->KEY_EVENT_INTENT_CONTENT:Lcom/letv/tracker/enums/Key;
 
     invoke-virtual {v1, v4, p4}, Lcom/letv/tracker/agnes/Event;->addProp(Lcom/letv/tracker/enums/Key;Ljava/lang/String;)V
 
-    .line 598
     invoke-static {}, Lcom/letv/tracker/agnes/Agnes;->getInstance()Lcom/letv/tracker/agnes/Agnes;
 
     move-result-object v4
 
     invoke-virtual {v4, v1}, Lcom/letv/tracker/agnes/Agnes;->report(Lcom/letv/tracker/agnes/Event;)V
 
-    .line 602
     .end local v1    # "event":Lcom/letv/tracker/agnes/Event;
     .end local v2    # "mApp":Lcom/letv/tracker/agnes/App;
     .end local v3    # "widget":Lcom/letv/tracker/agnes/Widget;
     :goto_1
     return-void
 
-    .line 587
     .restart local v1    # "event":Lcom/letv/tracker/agnes/Event;
     .restart local v2    # "mApp":Lcom/letv/tracker/agnes/App;
     .restart local v3    # "widget":Lcom/letv/tracker/agnes/Widget;
@@ -502,21 +447,18 @@
 
     if-ne p0, v4, :cond_1
 
-    .line 588
     const-string v4, "Share.3"
 
     invoke-virtual {v2, v4}, Lcom/letv/tracker/agnes/App;->createWidget(Ljava/lang/String;)Lcom/letv/tracker/agnes/Widget;
 
     move-result-object v3
 
-    .line 589
     sget-object v4, Lcom/letv/leui/util/LeResolveUtils$UV;->ACTION_CLICK:Lcom/letv/tracker/enums/EventType;
 
     invoke-virtual {v3, v4}, Lcom/letv/tracker/agnes/Widget;->createEvent(Lcom/letv/tracker/enums/EventType;)Lcom/letv/tracker/agnes/Event;
 
     move-result-object v1
 
-    .line 590
     sget-object v4, Lcom/letv/leui/util/LeResolveUtils$UV;->KEY_EVENT_INTENT_PACKAGENAME:Lcom/letv/tracker/enums/Key;
 
     const-string v5, "more"
@@ -527,14 +469,12 @@
 
     goto :goto_0
 
-    .line 599
     .end local v1    # "event":Lcom/letv/tracker/agnes/Event;
     .end local v2    # "mApp":Lcom/letv/tracker/agnes/App;
     .end local v3    # "widget":Lcom/letv/tracker/agnes/Widget;
     :catch_0
     move-exception v0
 
-    .line 600
     .local v0, "e":Ljava/lang/Exception;
     const-string v4, "LeResolveUtils"
 
@@ -546,7 +486,6 @@
 
     goto :goto_1
 
-    .line 592
     .end local v0    # "e":Ljava/lang/Exception;
     .restart local v1    # "event":Lcom/letv/tracker/agnes/Event;
     .restart local v2    # "mApp":Lcom/letv/tracker/agnes/App;
@@ -559,7 +498,6 @@
 
     move-result-object v3
 
-    .line 593
     const-string v4, "cancel_share"
 
     invoke-virtual {v3, v4}, Lcom/letv/tracker/agnes/Widget;->createEvent(Ljava/lang/String;)Lcom/letv/tracker/agnes/Event;

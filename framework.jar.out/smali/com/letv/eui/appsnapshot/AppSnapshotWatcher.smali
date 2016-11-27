@@ -40,10 +40,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     const-string v0, "window"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -56,7 +54,6 @@
 
     iput-object v0, p0, Lcom/letv/eui/appsnapshot/AppSnapshotWatcher;->mWm:Landroid/view/IWindowManager;
 
-    .line 30
     new-instance v0, Lcom/letv/eui/appsnapshot/AppSnapshotWatcher$Watcher;
 
     const/4 v1, 0x0
@@ -65,7 +62,6 @@
 
     iput-object v0, p0, Lcom/letv/eui/appsnapshot/AppSnapshotWatcher;->mWatcher:Lcom/letv/eui/appsnapshot/AppSnapshotWatcher$Watcher;
 
-    .line 31
     return-void
 .end method
 
@@ -74,7 +70,6 @@
     .param p0, "x0"    # Lcom/letv/eui/appsnapshot/AppSnapshotWatcher;
 
     .prologue
-    .line 15
     iget-object v0, p0, Lcom/letv/eui/appsnapshot/AppSnapshotWatcher;->mCallback:Lcom/letv/eui/appsnapshot/AppSnapshotWatcher$Callback;
 
     return-object v0
@@ -87,12 +82,10 @@
     .param p1, "token"    # Landroid/os/IBinder;
 
     .prologue
-    .line 34
     iget-object v2, p0, Lcom/letv/eui/appsnapshot/AppSnapshotWatcher;->mWm:Landroid/view/IWindowManager;
 
     if-eqz v2, :cond_1
 
-    .line 36
     :try_start_0
     iget-object v2, p0, Lcom/letv/eui/appsnapshot/AppSnapshotWatcher;->mWm:Landroid/view/IWindowManager;
 
@@ -100,27 +93,22 @@
 
     move-result-object v0
 
-    .line 37
     .local v0, "appClient":Landroid/view/IWindow;
     if-eqz v0, :cond_0
 
-    .line 38
     new-instance v2, Lcom/letv/eui/appsnapshot/AppSnapshotWatcher$AppWindow;
 
     invoke-direct {v2, p0, v0}, Lcom/letv/eui/appsnapshot/AppSnapshotWatcher$AppWindow;-><init>(Lcom/letv/eui/appsnapshot/AppSnapshotWatcher;Landroid/view/IWindow;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 46
     .end local v0    # "appClient":Landroid/view/IWindow;
     :goto_0
     return-object v2
 
-    .line 40
     :catch_0
     move-exception v1
 
-    .line 41
     .local v1, "e":Landroid/os/RemoteException;
     const-string v2, "AppSnapshotWatcher"
 
@@ -128,7 +116,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 46
     .end local v1    # "e":Landroid/os/RemoteException;
     :cond_0
     :goto_1
@@ -136,7 +123,6 @@
 
     goto :goto_0
 
-    .line 44
     :cond_1
     const-string v2, "AppSnapshotWatcher"
 
@@ -153,7 +139,6 @@
     .param p2, "callback"    # Lcom/letv/eui/appsnapshot/AppSnapshotWatcher$Callback;
 
     .prologue
-    .line 50
     const-string v1, "AppSnapshotWatcher"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -186,10 +171,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 51
     iput-object p2, p0, Lcom/letv/eui/appsnapshot/AppSnapshotWatcher;->mCallback:Lcom/letv/eui/appsnapshot/AppSnapshotWatcher$Callback;
 
-    .line 53
     if-eqz p1, :cond_0
 
     :try_start_0
@@ -197,7 +180,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 54
     iget-object v1, p1, Lcom/letv/eui/appsnapshot/AppSnapshotWatcher$AppWindow;->window:Landroid/view/IWindow;
 
     iget-object v2, p0, Lcom/letv/eui/appsnapshot/AppSnapshotWatcher;->mWatcher:Lcom/letv/eui/appsnapshot/AppSnapshotWatcher$Watcher;
@@ -206,16 +188,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 59
     :cond_0
     :goto_0
     return-void
 
-    .line 56
     :catch_0
     move-exception v0
 
-    .line 57
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "AppSnapshotWatcher"
 
@@ -231,7 +210,6 @@
     .param p1, "appWindow"    # Lcom/letv/eui/appsnapshot/AppSnapshotWatcher$AppWindow;
 
     .prologue
-    .line 62
     const-string v1, "AppSnapshotWatcher"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -254,7 +232,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 64
     if-eqz p1, :cond_0
 
     :try_start_0
@@ -262,23 +239,19 @@
 
     if-eqz v1, :cond_0
 
-    .line 65
     iget-object v1, p1, Lcom/letv/eui/appsnapshot/AppSnapshotWatcher$AppWindow;->window:Landroid/view/IWindow;
 
     invoke-interface {v1}, Landroid/view/IWindow;->stopAppSnapshot()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 70
     :cond_0
     :goto_0
     return-void
 
-    .line 67
     :catch_0
     move-exception v0
 
-    .line 68
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "AppSnapshotWatcher"
 

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 137
     iput-object p1, p0, Lcom/letv/leui/widget/BallsLoadingProgressBar$3;->this$0:Lcom/letv/leui/widget/BallsLoadingProgressBar;
 
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/BallsLoadingProgressBar$EmptyAnimatorListener;-><init>(Lcom/letv/leui/widget/BallsLoadingProgressBar;)V
@@ -38,7 +37,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 140
     iget-object v0, p0, Lcom/letv/leui/widget/BallsLoadingProgressBar$3;->this$0:Lcom/letv/leui/widget/BallsLoadingProgressBar;
 
     # getter for: Lcom/letv/leui/widget/BallsLoadingProgressBar;->mIsFinish:Z
@@ -48,13 +46,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 141
     iget-object v0, p0, Lcom/letv/leui/widget/BallsLoadingProgressBar$3;->this$0:Lcom/letv/leui/widget/BallsLoadingProgressBar;
 
     # invokes: Lcom/letv/leui/widget/BallsLoadingProgressBar;->createEndAnim()V
     invoke-static {v0}, Lcom/letv/leui/widget/BallsLoadingProgressBar;->access$600(Lcom/letv/leui/widget/BallsLoadingProgressBar;)V
 
-    .line 142
     iget-object v0, p0, Lcom/letv/leui/widget/BallsLoadingProgressBar$3;->this$0:Lcom/letv/leui/widget/BallsLoadingProgressBar;
 
     # getter for: Lcom/letv/leui/widget/BallsLoadingProgressBar;->bounceAnim:Landroid/animation/Animator;
@@ -64,18 +60,15 @@
 
     invoke-virtual {v0}, Landroid/animation/Animator;->start()V
 
-    .line 147
     :goto_0
     return-void
 
-    .line 144
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/BallsLoadingProgressBar$3;->this$0:Lcom/letv/leui/widget/BallsLoadingProgressBar;
 
     # invokes: Lcom/letv/leui/widget/BallsLoadingProgressBar;->createAnimStep2()V
     invoke-static {v0}, Lcom/letv/leui/widget/BallsLoadingProgressBar;->access$300(Lcom/letv/leui/widget/BallsLoadingProgressBar;)V
 
-    .line 145
     iget-object v0, p0, Lcom/letv/leui/widget/BallsLoadingProgressBar$3;->this$0:Lcom/letv/leui/widget/BallsLoadingProgressBar;
 
     # getter for: Lcom/letv/leui/widget/BallsLoadingProgressBar;->bounceAnim:Landroid/animation/Animator;

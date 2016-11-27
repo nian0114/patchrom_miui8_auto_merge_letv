@@ -28,13 +28,10 @@
     .param p3, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 79
     iput-object p1, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshGridView$InternalGridView;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshGridView;
 
-    .line 80
     invoke-direct {p0, p2, p3}, Landroid/widget/GridView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 81
     return-void
 .end method
 
@@ -45,12 +42,10 @@
     .param p1, "emptyView"    # Landroid/view/View;
 
     .prologue
-    .line 85
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshGridView$InternalGridView;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshGridView;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshGridView;->setEmptyView(Landroid/view/View;)V
 
-    .line 86
     return-void
 .end method
 
@@ -59,9 +54,7 @@
     .param p1, "emptyView"    # Landroid/view/View;
 
     .prologue
-    .line 90
     invoke-super {p0, p1}, Landroid/widget/GridView;->setEmptyView(Landroid/view/View;)V
 
-    .line 91
     return-void
 .end method

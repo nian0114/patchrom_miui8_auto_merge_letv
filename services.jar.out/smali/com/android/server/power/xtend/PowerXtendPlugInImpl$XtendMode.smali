@@ -58,7 +58,6 @@
 
     const/4 v3, 0x0
 
-    .line 48
     new-instance v0, Lcom/android/server/power/xtend/PowerXtendPlugInImpl$XtendMode;
 
     const-string v1, "UNKNOW"
@@ -69,7 +68,6 @@
 
     sput-object v0, Lcom/android/server/power/xtend/PowerXtendPlugInImpl$XtendMode;->UNKNOW:Lcom/android/server/power/xtend/PowerXtendPlugInImpl$XtendMode;
 
-    .line 49
     new-instance v0, Lcom/android/server/power/xtend/PowerXtendPlugInImpl$XtendMode;
 
     const-string v1, "OFF"
@@ -78,7 +76,6 @@
 
     sput-object v0, Lcom/android/server/power/xtend/PowerXtendPlugInImpl$XtendMode;->OFF:Lcom/android/server/power/xtend/PowerXtendPlugInImpl$XtendMode;
 
-    .line 50
     new-instance v0, Lcom/android/server/power/xtend/PowerXtendPlugInImpl$XtendMode;
 
     const-string v1, "MODE1"
@@ -87,7 +84,6 @@
 
     sput-object v0, Lcom/android/server/power/xtend/PowerXtendPlugInImpl$XtendMode;->MODE1:Lcom/android/server/power/xtend/PowerXtendPlugInImpl$XtendMode;
 
-    .line 51
     new-instance v0, Lcom/android/server/power/xtend/PowerXtendPlugInImpl$XtendMode;
 
     const-string v1, "MODE2"
@@ -96,7 +92,6 @@
 
     sput-object v0, Lcom/android/server/power/xtend/PowerXtendPlugInImpl$XtendMode;->MODE2:Lcom/android/server/power/xtend/PowerXtendPlugInImpl$XtendMode;
 
-    .line 52
     new-instance v0, Lcom/android/server/power/xtend/PowerXtendPlugInImpl$XtendMode;
 
     const-string v1, "MODE3"
@@ -105,7 +100,6 @@
 
     sput-object v0, Lcom/android/server/power/xtend/PowerXtendPlugInImpl$XtendMode;->MODE3:Lcom/android/server/power/xtend/PowerXtendPlugInImpl$XtendMode;
 
-    .line 53
     new-instance v0, Lcom/android/server/power/xtend/PowerXtendPlugInImpl$XtendMode;
 
     const-string v1, "MODE4"
@@ -116,7 +110,6 @@
 
     sput-object v0, Lcom/android/server/power/xtend/PowerXtendPlugInImpl$XtendMode;->MODE4:Lcom/android/server/power/xtend/PowerXtendPlugInImpl$XtendMode;
 
-    .line 47
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/android/server/power/xtend/PowerXtendPlugInImpl$XtendMode;
@@ -162,13 +155,10 @@
     .end annotation
 
     .prologue
-    .line 57
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 58
     iput p3, p0, Lcom/android/server/power/xtend/PowerXtendPlugInImpl$XtendMode;->mMode:I
 
-    .line 59
     return-void
 .end method
 
@@ -177,7 +167,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 47
     const-class v0, Lcom/android/server/power/xtend/PowerXtendPlugInImpl$XtendMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -193,7 +182,6 @@
     .locals 1
 
     .prologue
-    .line 47
     sget-object v0, Lcom/android/server/power/xtend/PowerXtendPlugInImpl$XtendMode;->$VALUES:[Lcom/android/server/power/xtend/PowerXtendPlugInImpl$XtendMode;
 
     invoke-virtual {v0}, [Lcom/android/server/power/xtend/PowerXtendPlugInImpl$XtendMode;->clone()Ljava/lang/Object;
@@ -211,7 +199,6 @@
     .locals 1
 
     .prologue
-    .line 62
     iget v0, p0, Lcom/android/server/power/xtend/PowerXtendPlugInImpl$XtendMode;->mMode:I
 
     return v0

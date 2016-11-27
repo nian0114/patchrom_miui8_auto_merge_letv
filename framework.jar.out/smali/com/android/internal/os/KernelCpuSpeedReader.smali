@@ -24,15 +24,12 @@
     .param p2, "numSpeedSteps"    # I
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 88
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/os/KernelCpuSpeedReader;->mAllProcFiles:[Ljava/lang/String;
 
-    .line 45
     const-string v0, "/sys/devices/system/cpu/cpu%d/cpufreq/stats/time_in_state"
 
     const/4 v1, 0x1
@@ -53,17 +50,14 @@
 
     iput-object v0, p0, Lcom/android/internal/os/KernelCpuSpeedReader;->mProcFile:Ljava/lang/String;
 
-    .line 47
     new-array v0, p2, [J
 
     iput-object v0, p0, Lcom/android/internal/os/KernelCpuSpeedReader;->mLastSpeedTimes:[J
 
-    .line 48
     new-array v0, p2, [J
 
     iput-object v0, p0, Lcom/android/internal/os/KernelCpuSpeedReader;->mDeltaSpeedTimes:[J
 
-    .line 49
     return-void
 .end method
 
@@ -74,22 +68,18 @@
     .param p3, "numCores"    # I
 
     .prologue
-    .line 91
     invoke-direct {p0, p1, p2}, Lcom/android/internal/os/KernelCpuSpeedReader;-><init>(II)V
 
-    .line 92
     new-array v1, p3, [Ljava/lang/String;
 
     iput-object v1, p0, Lcom/android/internal/os/KernelCpuSpeedReader;->mAllProcFiles:[Ljava/lang/String;
 
-    .line 93
     const/4 v0, 0x0
 
     .local v0, "i":I
     :goto_0
     if-ge v0, p3, :cond_0
 
-    .line 94
     iget-object v1, p0, Lcom/android/internal/os/KernelCpuSpeedReader;->mAllProcFiles:[Ljava/lang/String;
 
     const-string v2, "/sys/devices/system/cpu/cpu%d/cpufreq/stats/time_in_state"
@@ -114,12 +104,10 @@
 
     aput-object v2, v1, v0
 
-    .line 93
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 97
     :cond_0
     return-void
 .end method
@@ -128,7 +116,6 @@
     .locals 7
 
     .prologue
-    .line 100
     iget-object v6, p0, Lcom/android/internal/os/KernelCpuSpeedReader;->mAllProcFiles:[Ljava/lang/String;
 
     if-eqz v6, :cond_2
@@ -139,7 +126,6 @@
 
     if-lez v6, :cond_2
 
-    .line 101
     iget-object v0, p0, Lcom/android/internal/os/KernelCpuSpeedReader;->mAllProcFiles:[Ljava/lang/String;
 
     .local v0, "arr$":[Ljava/lang/String;
@@ -154,7 +140,6 @@
 
     aget-object v4, v0, v2
 
-    .line 102
     .local v4, "procFile":Ljava/lang/String;
     :try_start_0
     new-instance v1, Ljava/io/FileReader;
@@ -166,7 +151,6 @@
     .local v1, "fileReader":Ljava/io/FileReader;
     const/4 v6, 0x0
 
-    .line 104
     if-eqz v1, :cond_0
 
     if-eqz v6, :cond_1
@@ -177,7 +161,6 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 109
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "fileReader":Ljava/io/FileReader;
     .end local v2    # "i$":I
@@ -187,7 +170,6 @@
     :goto_1
     return-object v4
 
-    .line 104
     .restart local v0    # "arr$":[Ljava/lang/String;
     .restart local v1    # "fileReader":Ljava/io/FileReader;
     .restart local v2    # "i$":I
@@ -207,12 +189,10 @@
     :catch_1
     move-exception v6
 
-    .line 101
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 104
     .restart local v1    # "fileReader":Ljava/io/FileReader;
     :cond_1
     invoke-virtual {v1}, Ljava/io/FileReader;->close()V
@@ -221,7 +201,6 @@
 
     goto :goto_1
 
-    .line 109
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "fileReader":Ljava/io/FileReader;
     .end local v2    # "i$":I
@@ -239,7 +218,6 @@
     .locals 15
 
     .prologue
-    .line 59
     :try_start_0
     new-instance v2, Ljava/io/BufferedReader;
 
@@ -258,7 +236,6 @@
     .local v2, "reader":Ljava/io/BufferedReader;
     const/4 v9, 0x0
 
-    .line 61
     :try_start_1
     new-instance v4, Landroid/text/TextUtils$SimpleStringSplitter;
 
@@ -266,11 +243,9 @@
 
     invoke-direct {v4, v8}, Landroid/text/TextUtils$SimpleStringSplitter;-><init>(C)V
 
-    .line 63
     .local v4, "splitter":Landroid/text/TextUtils$SimpleStringSplitter;
     const/4 v3, 0x0
 
-    .line 64
     .local v3, "speedIndex":I
     :goto_0
     iget-object v8, p0, Lcom/android/internal/os/KernelCpuSpeedReader;->mLastSpeedTimes:[J
@@ -286,17 +261,14 @@
     .local v1, "line":Ljava/lang/String;
     if-eqz v1, :cond_3
 
-    .line 65
     invoke-virtual {v4, v1}, Landroid/text/TextUtils$SimpleStringSplitter;->setString(Ljava/lang/String;)V
 
-    .line 66
     invoke-virtual {v4}, Landroid/text/TextUtils$SimpleStringSplitter;->next()Ljava/lang/String;
 
     move-result-object v8
 
     invoke-static {v8}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
-    .line 69
     invoke-virtual {v4}, Landroid/text/TextUtils$SimpleStringSplitter;->next()Ljava/lang/String;
 
     move-result-object v8
@@ -309,7 +281,6 @@
 
     mul-long v6, v10, v12
 
-    .line 70
     .local v6, "time":J
     iget-object v8, p0, Lcom/android/internal/os/KernelCpuSpeedReader;->mLastSpeedTimes:[J
 
@@ -319,24 +290,19 @@
 
     if-gez v8, :cond_0
 
-    .line 73
     iget-object v8, p0, Lcom/android/internal/os/KernelCpuSpeedReader;->mDeltaSpeedTimes:[J
 
     aput-wide v6, v8, v3
 
-    .line 77
     :goto_1
     iget-object v8, p0, Lcom/android/internal/os/KernelCpuSpeedReader;->mLastSpeedTimes:[J
 
     aput-wide v6, v8, v3
 
-    .line 78
     add-int/lit8 v3, v3, 0x1
 
-    .line 79
     goto :goto_0
 
-    .line 75
     :cond_0
     iget-object v8, p0, Lcom/android/internal/os/KernelCpuSpeedReader;->mDeltaSpeedTimes:[J
 
@@ -353,7 +319,6 @@
 
     goto :goto_1
 
-    .line 59
     .end local v1    # "line":Ljava/lang/String;
     .end local v3    # "speedIndex":I
     .end local v4    # "splitter":Landroid/text/TextUtils$SimpleStringSplitter;
@@ -366,7 +331,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 80
     :catchall_0
     move-exception v9
 
@@ -398,7 +362,6 @@
     :catch_1
     move-exception v0
 
-    .line 81
     .local v0, "e":Ljava/io/IOException;
     const-string v8, "KernelCpuSpeedReader"
 
@@ -426,14 +389,12 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 82
     iget-object v8, p0, Lcom/android/internal/os/KernelCpuSpeedReader;->mDeltaSpeedTimes:[J
 
     const-wide/16 v10, 0x0
 
     invoke-static {v8, v10, v11}, Ljava/util/Arrays;->fill([JJ)V
 
-    .line 84
     .end local v0    # "e":Ljava/io/IOException;
     :cond_2
     :goto_4
@@ -441,7 +402,6 @@
 
     return-object v8
 
-    .line 80
     .restart local v2    # "reader":Ljava/io/BufferedReader;
     .restart local v3    # "speedIndex":I
     .restart local v4    # "splitter":Landroid/text/TextUtils$SimpleStringSplitter;

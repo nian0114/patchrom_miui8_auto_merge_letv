@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 461
     iput-object p1, p0, Lcom/android/volley/toolbox/ImageLoader$4;->this$0:Lcom/android/volley/toolbox/ImageLoader;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 6
 
     .prologue
-    .line 464
     iget-object v4, p0, Lcom/android/volley/toolbox/ImageLoader$4;->this$0:Lcom/android/volley/toolbox/ImageLoader;
 
     # getter for: Lcom/android/volley/toolbox/ImageLoader;->mBatchedResponses:Ljava/util/HashMap;
@@ -69,7 +67,6 @@
 
     check-cast v0, Lcom/android/volley/toolbox/ImageLoader$BatchedImageRequest;
 
-    .line 465
     .local v0, "bir":Lcom/android/volley/toolbox/ImageLoader$BatchedImageRequest;
     # getter for: Lcom/android/volley/toolbox/ImageLoader$BatchedImageRequest;->mContainers:Ljava/util/LinkedList;
     invoke-static {v0}, Lcom/android/volley/toolbox/ImageLoader$BatchedImageRequest;->access$300(Lcom/android/volley/toolbox/ImageLoader$BatchedImageRequest;)Ljava/util/LinkedList;
@@ -95,7 +92,6 @@
 
     check-cast v1, Lcom/android/volley/toolbox/ImageLoader$ImageContainer;
 
-    .line 469
     .local v1, "container":Lcom/android/volley/toolbox/ImageLoader$ImageContainer;
     # getter for: Lcom/android/volley/toolbox/ImageLoader$ImageContainer;->mListener:Lcom/android/volley/toolbox/ImageLoader$ImageListener;
     invoke-static {v1}, Lcom/android/volley/toolbox/ImageLoader$ImageContainer;->access$400(Lcom/android/volley/toolbox/ImageLoader$ImageContainer;)Lcom/android/volley/toolbox/ImageLoader$ImageListener;
@@ -104,14 +100,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 472
     invoke-virtual {v0}, Lcom/android/volley/toolbox/ImageLoader$BatchedImageRequest;->getError()Lcom/android/volley/VolleyError;
 
     move-result-object v4
 
     if-nez v4, :cond_2
 
-    .line 473
     # getter for: Lcom/android/volley/toolbox/ImageLoader$BatchedImageRequest;->mResponseBitmap:Landroid/graphics/Bitmap;
     invoke-static {v0}, Lcom/android/volley/toolbox/ImageLoader$BatchedImageRequest;->access$000(Lcom/android/volley/toolbox/ImageLoader$BatchedImageRequest;)Landroid/graphics/Bitmap;
 
@@ -120,7 +114,6 @@
     # setter for: Lcom/android/volley/toolbox/ImageLoader$ImageContainer;->mBitmap:Landroid/graphics/Bitmap;
     invoke-static {v1, v4}, Lcom/android/volley/toolbox/ImageLoader$ImageContainer;->access$502(Lcom/android/volley/toolbox/ImageLoader$ImageContainer;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
-    .line 474
     # getter for: Lcom/android/volley/toolbox/ImageLoader$ImageContainer;->mListener:Lcom/android/volley/toolbox/ImageLoader$ImageListener;
     invoke-static {v1}, Lcom/android/volley/toolbox/ImageLoader$ImageContainer;->access$400(Lcom/android/volley/toolbox/ImageLoader$ImageContainer;)Lcom/android/volley/toolbox/ImageLoader$ImageListener;
 
@@ -132,7 +125,6 @@
 
     goto :goto_0
 
-    .line 476
     :cond_2
     # getter for: Lcom/android/volley/toolbox/ImageLoader$ImageContainer;->mListener:Lcom/android/volley/toolbox/ImageLoader$ImageListener;
     invoke-static {v1}, Lcom/android/volley/toolbox/ImageLoader$ImageContainer;->access$400(Lcom/android/volley/toolbox/ImageLoader$ImageContainer;)Lcom/android/volley/toolbox/ImageLoader$ImageListener;
@@ -147,7 +139,6 @@
 
     goto :goto_0
 
-    .line 480
     .end local v0    # "bir":Lcom/android/volley/toolbox/ImageLoader$BatchedImageRequest;
     .end local v1    # "container":Lcom/android/volley/toolbox/ImageLoader$ImageContainer;
     .end local v3    # "i$":Ljava/util/Iterator;
@@ -161,7 +152,6 @@
 
     invoke-virtual {v4}, Ljava/util/HashMap;->clear()V
 
-    .line 481
     iget-object v4, p0, Lcom/android/volley/toolbox/ImageLoader$4;->this$0:Lcom/android/volley/toolbox/ImageLoader;
 
     const/4 v5, 0x0
@@ -169,6 +159,5 @@
     # setter for: Lcom/android/volley/toolbox/ImageLoader;->mRunnable:Ljava/lang/Runnable;
     invoke-static {v4, v5}, Lcom/android/volley/toolbox/ImageLoader;->access$602(Lcom/android/volley/toolbox/ImageLoader;Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
-    .line 482
     return-void
 .end method

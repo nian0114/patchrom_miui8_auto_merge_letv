@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 35
     iput-object p1, p0, Lcom/android/server/pm/http/Base$Data;->this$0:Lcom/android/server/pm/http/Base;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

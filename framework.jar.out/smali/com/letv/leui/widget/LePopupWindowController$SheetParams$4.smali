@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 936
     iput-object p1, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$4;->this$0:Lcom/letv/leui/widget/LePopupWindowController$SheetParams;
 
     iput-object p2, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$4;->val$dialog:Lcom/letv/leui/widget/LePopupWindowController;
@@ -48,7 +47,6 @@
     .param p4, "id"    # J
 
     .prologue
-    .line 939
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$4;->this$0:Lcom/letv/leui/widget/LePopupWindowController$SheetParams;
 
     iget-object v0, v0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams;->mOnClickListener:Landroid/content/DialogInterface$OnClickListener;
@@ -62,14 +60,12 @@
 
     invoke-interface {v0, v1, p3}, Landroid/content/DialogInterface$OnClickListener;->onClick(Landroid/content/DialogInterface;I)V
 
-    .line 940
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$4;->this$0:Lcom/letv/leui/widget/LePopupWindowController$SheetParams;
 
     iget-boolean v0, v0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams;->mIsSingleChoice:Z
 
     if-nez v0, :cond_0
 
-    .line 941
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$4;->val$dialog:Lcom/letv/leui/widget/LePopupWindowController;
 
     # getter for: Lcom/letv/leui/widget/LePopupWindowController;->mDialogInterface:Landroid/content/DialogInterface;
@@ -79,7 +75,6 @@
 
     invoke-interface {v0}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 943
     :cond_0
     return-void
 .end method

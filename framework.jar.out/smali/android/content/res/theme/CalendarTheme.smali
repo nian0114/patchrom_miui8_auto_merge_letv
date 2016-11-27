@@ -51,10 +51,8 @@
     .locals 1
 
     .prologue
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -71,10 +69,8 @@
     .param p1, "dayFontType"    # Ljava/lang/String;
 
     .prologue
-    .line 60
     iput-object p1, p0, Landroid/content/res/theme/CalendarTheme;->dayFontType:Ljava/lang/String;
 
-    .line 61
     return-void
 .end method
 
@@ -83,10 +79,8 @@
     .param p1, "dayMarginLeft"    # F
 
     .prologue
-    .line 56
     iput p1, p0, Landroid/content/res/theme/CalendarTheme;->dayMarginLeft:F
 
-    .line 57
     return-void
 .end method
 
@@ -95,10 +89,8 @@
     .param p1, "dayMarginTop"    # F
 
     .prologue
-    .line 53
     iput p1, p0, Landroid/content/res/theme/CalendarTheme;->dayMarginTop:F
 
-    .line 54
     return-void
 .end method
 
@@ -107,10 +99,8 @@
     .param p1, "dayTextColor"    # I
 
     .prologue
-    .line 68
     iput p1, p0, Landroid/content/res/theme/CalendarTheme;->dayTextColor:I
 
-    .line 69
     return-void
 .end method
 
@@ -119,10 +109,8 @@
     .param p1, "dayTextSize"    # F
 
     .prologue
-    .line 64
     iput p1, p0, Landroid/content/res/theme/CalendarTheme;->dayTextSize:F
 
-    .line 65
     return-void
 .end method
 
@@ -131,10 +119,8 @@
     .param p1, "weekFontType"    # Ljava/lang/String;
 
     .prologue
-    .line 41
     iput-object p1, p0, Landroid/content/res/theme/CalendarTheme;->weekFontType:Ljava/lang/String;
 
-    .line 42
     return-void
 .end method
 
@@ -143,10 +129,8 @@
     .param p1, "weekMarginLeft"    # F
 
     .prologue
-    .line 37
     iput p1, p0, Landroid/content/res/theme/CalendarTheme;->weekMarginLeft:F
 
-    .line 38
     return-void
 .end method
 
@@ -155,10 +139,8 @@
     .param p1, "weekMarginTop"    # F
 
     .prologue
-    .line 34
     iput p1, p0, Landroid/content/res/theme/CalendarTheme;->weekMarginTop:F
 
-    .line 35
     return-void
 .end method
 
@@ -167,10 +149,8 @@
     .param p1, "weekTextColor"    # I
 
     .prologue
-    .line 49
     iput p1, p0, Landroid/content/res/theme/CalendarTheme;->weekTextColor:I
 
-    .line 50
     return-void
 .end method
 
@@ -179,9 +159,7 @@
     .param p1, "weekTextSize"    # F
 
     .prologue
-    .line 45
     iput p1, p0, Landroid/content/res/theme/CalendarTheme;->weekTextSize:F
 
-    .line 46
     return-void
 .end method

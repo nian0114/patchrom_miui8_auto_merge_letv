@@ -31,15 +31,12 @@
     .locals 1
 
     .prologue
-    .line 8
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 11
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/letv/leui/widget/DragSortAbstractGridAdapter;->nextStableId:I
 
-    .line 13
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -62,7 +59,6 @@
     .end annotation
 
     .prologue
-    .line 40
     .local p1, "items":Ljava/util/List;, "Ljava/util/List<*>;"
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -80,13 +76,11 @@
 
     move-result-object v1
 
-    .line 41
     .local v1, "item":Ljava/lang/Object;
     invoke-virtual {p0, v1}, Lcom/letv/leui/widget/DragSortAbstractGridAdapter;->addStableId(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 43
     .end local v1    # "item":Ljava/lang/Object;
     :cond_0
     return-void
@@ -97,7 +91,6 @@
     .param p1, "item"    # Ljava/lang/Object;
 
     .prologue
-    .line 31
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortAbstractGridAdapter;->mIdMap:Ljava/util/HashMap;
 
     iget v1, p0, Lcom/letv/leui/widget/DragSortAbstractGridAdapter;->nextStableId:I
@@ -112,7 +105,6 @@
 
     invoke-virtual {v0, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 32
     return-void
 .end method
 
@@ -120,12 +112,10 @@
     .locals 1
 
     .prologue
-    .line 65
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortAbstractGridAdapter;->mIdMap:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 66
     return-void
 .end method
 
@@ -134,7 +124,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 53
     if-ltz p1, :cond_0
 
     iget-object v1, p0, Lcom/letv/leui/widget/DragSortAbstractGridAdapter;->mIdMap:Ljava/util/HashMap;
@@ -145,21 +134,17 @@
 
     if-lt p1, v1, :cond_1
 
-    .line 54
     :cond_0
     const-wide/16 v2, -0x1
 
-    .line 57
     :goto_0
     return-wide v2
 
-    .line 56
     :cond_1
     invoke-virtual {p0, p1}, Lcom/letv/leui/widget/DragSortAbstractGridAdapter;->getItem(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 57
     .local v0, "item":Ljava/lang/Object;
     iget-object v1, p0, Lcom/letv/leui/widget/DragSortAbstractGridAdapter;->mIdMap:Ljava/util/HashMap;
 
@@ -182,7 +167,6 @@
     .locals 1
 
     .prologue
-    .line 22
     const/4 v0, 0x1
 
     return v0
@@ -193,11 +177,9 @@
     .param p1, "item"    # Ljava/lang/Object;
 
     .prologue
-    .line 74
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortAbstractGridAdapter;->mIdMap:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 75
     return-void
 .end method

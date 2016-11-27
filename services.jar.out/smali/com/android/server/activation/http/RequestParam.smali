@@ -81,50 +81,38 @@
     .local p0, "this":Lcom/android/server/activation/http/RequestParam;, "Lcom/android/server/activation/http/RequestParam<TP;>;"
     const/4 v1, 0x0
 
-    .line 88
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 80
     const/16 v0, 0x2710
 
     iput v0, p0, Lcom/android/server/activation/http/RequestParam;->mConnectTime:I
 
-    .line 83
     const/16 v0, 0x1770
 
     iput v0, p0, Lcom/android/server/activation/http/RequestParam;->mReadTime:I
 
-    .line 86
     iput v1, p0, Lcom/android/server/activation/http/RequestParam;->mReTryTime:I
 
-    .line 89
     iput p3, p0, Lcom/android/server/activation/http/RequestParam;->mMethod:I
 
-    .line 90
     iput-object p2, p0, Lcom/android/server/activation/http/RequestParam;->jsonBody:Ljava/lang/String;
 
-    .line 91
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/activation/http/RequestParam;->isJson:Z
 
-    .line 92
     iput v1, p0, Lcom/android/server/activation/http/RequestParam;->mReTryTime:I
 
-    .line 93
     invoke-direct {p0, p1, p3}, Lcom/android/server/activation/http/RequestParam;->formatUrl(Ljava/lang/String;I)V
 
-    .line 94
     iget-boolean v0, p0, Lcom/android/server/activation/http/RequestParam;->isJson:Z
 
     if-eqz v0, :cond_0
 
-    .line 95
     const-string v0, "application/x-javascript->json"
 
     iput-object v0, p0, Lcom/android/server/activation/http/RequestParam;->mContentType:Ljava/lang/String;
 
-    .line 101
     :goto_0
     invoke-virtual {p0, p3}, Lcom/android/server/activation/http/RequestParam;->getHttpTypeStr(I)Ljava/lang/String;
 
@@ -140,10 +128,8 @@
 
     iput-object v0, p0, Lcom/android/server/activation/http/RequestParam;->headers:Ljava/util/Map;
 
-    .line 102
     return-void
 
-    .line 97
     :cond_0
     const-string v0, "application/x-www-form-urlencoded"
 
@@ -169,14 +155,12 @@
     .end annotation
 
     .prologue
-    .line 295
     .local p0, "this":Lcom/android/server/activation/http/RequestParam;, "Lcom/android/server/activation/http/RequestParam<TP;>;"
     .local p1, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 297
     .local v0, "encodedParams":Ljava/lang/StringBuilder;
     :try_start_0
     iget-object v2, p0, Lcom/android/server/activation/http/RequestParam;->jsonBody:Ljava/lang/String;
@@ -187,14 +171,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 298
     invoke-static {p1}, Lcom/android/server/activation/util/SignatureUtils;->encodeJson(Ljava/util/Map;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 302
     :goto_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -206,7 +188,6 @@
 
     return-object v2
 
-    .line 300
     :cond_0
     iget-object v2, p0, Lcom/android/server/activation/http/RequestParam;->jsonBody:Ljava/lang/String;
 
@@ -216,11 +197,9 @@
 
     goto :goto_0
 
-    .line 303
     :catch_0
     move-exception v1
 
-    .line 304
     .local v1, "uee":Ljava/io/UnsupportedEncodingException;
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -264,14 +243,12 @@
     .end annotation
 
     .prologue
-    .line 276
     .local p0, "this":Lcom/android/server/activation/http/RequestParam;, "Lcom/android/server/activation/http/RequestParam<TP;>;"
     .local p1, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 278
     .local v0, "encodedParams":Ljava/lang/StringBuilder;
     :try_start_0
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -296,7 +273,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 279
     .local v1, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -310,12 +286,10 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 280
     const/16 v4, 0x3d
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 281
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v4
@@ -328,7 +302,6 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 282
     const/16 v4, 0x26
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
@@ -337,13 +310,11 @@
 
     goto :goto_0
 
-    .line 285
     .end local v1    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     .end local v2    # "i$":Ljava/util/Iterator;
     :catch_0
     move-exception v3
 
-    .line 286
     .local v3, "uee":Ljava/io/UnsupportedEncodingException;
     new-instance v4, Ljava/lang/RuntimeException;
 
@@ -369,7 +340,6 @@
 
     throw v4
 
-    .line 284
     .end local v3    # "uee":Ljava/io/UnsupportedEncodingException;
     .restart local v2    # "i$":Ljava/util/Iterator;
     :cond_0
@@ -393,7 +363,6 @@
     .param p2, "method"    # I
 
     .prologue
-    .line 131
     .local p0, "this":Lcom/android/server/activation/http/RequestParam;, "Lcom/android/server/activation/http/RequestParam<TP;>;"
     iget-object v6, p0, Lcom/android/server/activation/http/RequestParam;->params:Ljava/util/Map;
 
@@ -407,35 +376,28 @@
 
     if-nez v6, :cond_1
 
-    .line 132
     :cond_0
     iput-object p1, p0, Lcom/android/server/activation/http/RequestParam;->baseUrl:Ljava/lang/String;
 
-    .line 167
     :goto_0
     return-void
 
-    .line 136
     :cond_1
     packed-switch p2, :pswitch_data_0
 
-    .line 164
     :pswitch_0
     iput-object p1, p0, Lcom/android/server/activation/http/RequestParam;->baseUrl:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 139
     :pswitch_1
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 140
     .local v4, "sb":Ljava/lang/StringBuilder;
     const/4 v1, 0x1
 
-    .line 141
     .local v1, "first":Z
     iget-object v6, p0, Lcom/android/server/activation/http/RequestParam;->params:Ljava/util/Map;
 
@@ -461,28 +423,23 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 142
     .local v3, "key":Ljava/lang/String;
     if-eqz v1, :cond_4
 
-    .line 143
     if-eqz p2, :cond_2
 
     const/4 v6, 0x3
 
     if-ne p2, v6, :cond_3
 
-    .line 144
     :cond_2
     const-string v6, "?"
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 146
     :cond_3
     const/4 v1, 0x0
 
-    .line 150
     :goto_2
     iget-object v6, p0, Lcom/android/server/activation/http/RequestParam;->params:Ljava/util/Map;
 
@@ -492,11 +449,9 @@
 
     check-cast v5, Ljava/lang/String;
 
-    .line 151
     .local v5, "value":Ljava/lang/String;
     if-eqz v5, :cond_5
 
-    .line 153
     :try_start_0
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -532,17 +487,14 @@
 
     goto :goto_1
 
-    .line 154
     :catch_0
     move-exception v0
 
-    .line 155
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
 
-    .line 148
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v5    # "value":Ljava/lang/String;
     :cond_4
@@ -552,7 +504,6 @@
 
     goto :goto_2
 
-    .line 158
     .restart local v5    # "value":Ljava/lang/String;
     :cond_5
     new-instance v6, Ljava/lang/StringBuilder;
@@ -577,7 +528,6 @@
 
     goto :goto_1
 
-    .line 161
     .end local v3    # "key":Ljava/lang/String;
     .end local v5    # "value":Ljava/lang/String;
     :cond_6
@@ -589,7 +539,6 @@
 
     goto/16 :goto_0
 
-    .line 136
     nop
 
     :pswitch_data_0
@@ -607,7 +556,6 @@
     .locals 2
 
     .prologue
-    .line 350
     .local p0, "this":Lcom/android/server/activation/http/RequestParam;, "Lcom/android/server/activation/http/RequestParam<TP;>;"
     iget-object v0, p0, Lcom/android/server/activation/http/RequestParam;->jsonBody:Ljava/lang/String;
 
@@ -617,14 +565,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 351
     iget-object v0, p0, Lcom/android/server/activation/http/RequestParam;->params:Ljava/util/Map;
 
     invoke-static {v0}, Lcom/android/server/activation/util/SignatureUtils;->encodeJson(Ljava/util/Map;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 353
     :goto_0
     return-object v0
 
@@ -642,13 +588,11 @@
     .locals 8
 
     .prologue
-    .line 313
     .local p0, "this":Lcom/android/server/activation/http/RequestParam;, "Lcom/android/server/activation/http/RequestParam<TP;>;"
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 314
     .local v4, "sb":Ljava/lang/StringBuilder;
     iget-object v6, p0, Lcom/android/server/activation/http/RequestParam;->params:Ljava/util/Map;
 
@@ -662,15 +606,12 @@
 
     if-nez v6, :cond_1
 
-    .line 338
     :cond_0
     return-object v4
 
-    .line 317
     :cond_1
     const/4 v1, 0x1
 
-    .line 318
     .local v1, "first":Z
     iget-object v6, p0, Lcom/android/server/activation/http/RequestParam;->params:Ljava/util/Map;
 
@@ -696,11 +637,9 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 319
     .local v3, "key":Ljava/lang/String;
     if-eqz v1, :cond_4
 
-    .line 320
     iget v6, p0, Lcom/android/server/activation/http/RequestParam;->mMethod:I
 
     if-eqz v6, :cond_2
@@ -711,17 +650,14 @@
 
     if-ne v6, v7, :cond_3
 
-    .line 321
     :cond_2
     const-string v6, "?"
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 323
     :cond_3
     const/4 v1, 0x0
 
-    .line 327
     :goto_1
     iget-object v6, p0, Lcom/android/server/activation/http/RequestParam;->params:Ljava/util/Map;
 
@@ -731,11 +667,9 @@
 
     check-cast v5, Ljava/lang/String;
 
-    .line 328
     .local v5, "value":Ljava/lang/String;
     if-eqz v5, :cond_5
 
-    .line 330
     :try_start_0
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -771,17 +705,14 @@
 
     goto :goto_0
 
-    .line 331
     :catch_0
     move-exception v0
 
-    .line 332
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 325
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v5    # "value":Ljava/lang/String;
     :cond_4
@@ -791,7 +722,6 @@
 
     goto :goto_1
 
-    .line 335
     .restart local v5    # "value":Ljava/lang/String;
     :cond_5
     new-instance v6, Ljava/lang/StringBuilder;
@@ -821,7 +751,6 @@
     .locals 1
 
     .prologue
-    .line 173
     .local p0, "this":Lcom/android/server/activation/http/RequestParam;, "Lcom/android/server/activation/http/RequestParam<TP;>;"
     iget-object v0, p0, Lcom/android/server/activation/http/RequestParam;->baseUrl:Ljava/lang/String;
 
@@ -832,19 +761,16 @@
     .locals 2
 
     .prologue
-    .line 260
     .local p0, "this":Lcom/android/server/activation/http/RequestParam;, "Lcom/android/server/activation/http/RequestParam<TP;>;"
     invoke-virtual {p0}, Lcom/android/server/activation/http/RequestParam;->getParams()Ljava/util/Map;
 
     move-result-object v0
 
-    .line 261
     .local v0, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     iget-boolean v1, p0, Lcom/android/server/activation/http/RequestParam;->isJson:Z
 
     if-eqz v1, :cond_0
 
-    .line 263
     invoke-virtual {p0}, Lcom/android/server/activation/http/RequestParam;->getParamsEncoding()Ljava/lang/String;
 
     move-result-object v1
@@ -853,11 +779,9 @@
 
     move-result-object v1
 
-    .line 268
     :goto_0
     return-object v1
 
-    .line 265
     :cond_0
     if-eqz v0, :cond_1
 
@@ -872,7 +796,6 @@
 
     goto :goto_0
 
-    .line 268
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/activation/http/RequestParam;->getParamsEncoding()Ljava/lang/String;
 
@@ -889,7 +812,6 @@
     .locals 4
 
     .prologue
-    .line 235
     .local p0, "this":Lcom/android/server/activation/http/RequestParam;, "Lcom/android/server/activation/http/RequestParam<TP;>;"
     const-string v0, "%s;charset=%s"
 
@@ -922,7 +844,6 @@
     .locals 1
 
     .prologue
-    .line 180
     .local p0, "this":Lcom/android/server/activation/http/RequestParam;, "Lcom/android/server/activation/http/RequestParam<TP;>;"
     iget v0, p0, Lcom/android/server/activation/http/RequestParam;->mConnectTime:I
 
@@ -934,41 +855,34 @@
     .param p1, "method"    # I
 
     .prologue
-    .line 110
     .local p0, "this":Lcom/android/server/activation/http/RequestParam;, "Lcom/android/server/activation/http/RequestParam<TP;>;"
     packed-switch p1, :pswitch_data_0
 
-    .line 120
     const-string v0, "GET"
 
     :goto_0
     return-object v0
 
-    .line 112
     :pswitch_0
     const-string v0, "GET"
 
     goto :goto_0
 
-    .line 114
     :pswitch_1
     const-string v0, "POST"
 
     goto :goto_0
 
-    .line 116
     :pswitch_2
     const-string v0, "PUT"
 
     goto :goto_0
 
-    .line 118
     :pswitch_3
     const-string v0, "DELETE"
 
     goto :goto_0
 
-    .line 110
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -982,7 +896,6 @@
     .locals 1
 
     .prologue
-    .line 210
     .local p0, "this":Lcom/android/server/activation/http/RequestParam;, "Lcom/android/server/activation/http/RequestParam<TP;>;"
     iget v0, p0, Lcom/android/server/activation/http/RequestParam;->mMethod:I
 
@@ -998,7 +911,6 @@
     .end annotation
 
     .prologue
-    .line 252
     .local p0, "this":Lcom/android/server/activation/http/RequestParam;, "Lcom/android/server/activation/http/RequestParam<TP;>;"
     iget-object v0, p0, Lcom/android/server/activation/http/RequestParam;->params:Ljava/util/Map;
 
@@ -1009,7 +921,6 @@
     .locals 1
 
     .prologue
-    .line 227
     .local p0, "this":Lcom/android/server/activation/http/RequestParam;, "Lcom/android/server/activation/http/RequestParam<TP;>;"
     const-string v0, "UTF-8"
 
@@ -1020,7 +931,6 @@
     .locals 1
 
     .prologue
-    .line 187
     .local p0, "this":Lcom/android/server/activation/http/RequestParam;, "Lcom/android/server/activation/http/RequestParam<TP;>;"
     iget v0, p0, Lcom/android/server/activation/http/RequestParam;->mReadTime:I
 
@@ -1031,7 +941,6 @@
     .locals 1
 
     .prologue
-    .line 203
     .local p0, "this":Lcom/android/server/activation/http/RequestParam;, "Lcom/android/server/activation/http/RequestParam<TP;>;"
     iget v0, p0, Lcom/android/server/activation/http/RequestParam;->mReTryTime:I
 
@@ -1052,7 +961,6 @@
     .end annotation
 
     .prologue
-    .line 243
     .local p0, "this":Lcom/android/server/activation/http/RequestParam;, "Lcom/android/server/activation/http/RequestParam<TP;>;"
     iget-object v0, p0, Lcom/android/server/activation/http/RequestParam;->headers:Ljava/util/Map;
 
@@ -1064,11 +972,9 @@
     .param p1, "retryTime"    # I
 
     .prologue
-    .line 195
     .local p0, "this":Lcom/android/server/activation/http/RequestParam;, "Lcom/android/server/activation/http/RequestParam<TP;>;"
     iput p1, p0, Lcom/android/server/activation/http/RequestParam;->mReTryTime:I
 
-    .line 196
     return-void
 .end method
 
@@ -1076,7 +982,6 @@
     .locals 6
 
     .prologue
-    .line 364
     .local p0, "this":Lcom/android/server/activation/http/RequestParam;, "Lcom/android/server/activation/http/RequestParam<TP;>;"
     iget-object v4, p0, Lcom/android/server/activation/http/RequestParam;->params:Ljava/util/Map;
 
@@ -1093,28 +998,23 @@
     :cond_0
     const-string v4, ""
 
-    .line 397
     :goto_0
     return-object v4
 
-    .line 365
     :cond_1
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 368
     .local v3, "sb":Ljava/lang/StringBuilder;
     iget-object v4, p0, Lcom/android/server/activation/http/RequestParam;->baseUrl:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 369
     const-string v4, " "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 370
     iget v4, p0, Lcom/android/server/activation/http/RequestParam;->mMethod:I
 
     invoke-virtual {p0, v4}, Lcom/android/server/activation/http/RequestParam;->getHttpTypeStr(I)Ljava/lang/String;
@@ -1123,16 +1023,13 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 373
     const/4 v0, 0x1
 
-    .line 374
     .local v0, "first":Z
     const-string v4, " [PARAM] "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 375
     iget-object v4, p0, Lcom/android/server/activation/http/RequestParam;->params:Ljava/util/Map;
 
     invoke-interface {v4}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -1157,14 +1054,11 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 376
     .local v2, "key":Ljava/lang/String;
     if-eqz v0, :cond_2
 
-    .line 377
     const/4 v0, 0x0
 
-    .line 381
     :goto_2
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1200,7 +1094,6 @@
 
     goto :goto_1
 
-    .line 379
     :cond_2
     const-string v4, ","
 
@@ -1208,12 +1101,10 @@
 
     goto :goto_2
 
-    .line 384
     .end local v2    # "key":Ljava/lang/String;
     :cond_3
     const/4 v0, 0x1
 
-    .line 386
     iget-object v4, p0, Lcom/android/server/activation/http/RequestParam;->headers:Ljava/util/Map;
 
     if-eqz v4, :cond_5
@@ -1226,12 +1117,10 @@
 
     if-lez v4, :cond_5
 
-    .line 387
     const-string v4, " [HEAD] "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 388
     iget-object v4, p0, Lcom/android/server/activation/http/RequestParam;->headers:Ljava/util/Map;
 
     invoke-interface {v4}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -1255,14 +1144,11 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 389
     .restart local v2    # "key":Ljava/lang/String;
     if-eqz v0, :cond_4
 
-    .line 390
     const/4 v0, 0x0
 
-    .line 394
     :goto_4
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1298,7 +1184,6 @@
 
     goto :goto_3
 
-    .line 392
     :cond_4
     const-string v4, ","
 
@@ -1306,7 +1191,6 @@
 
     goto :goto_4
 
-    .line 397
     .end local v2    # "key":Ljava/lang/String;
     :cond_5
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;

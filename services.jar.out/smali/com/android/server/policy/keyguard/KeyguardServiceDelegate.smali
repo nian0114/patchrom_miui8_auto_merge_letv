@@ -56,48 +56,40 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 131
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
     new-instance v0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;
 
     invoke-direct {v0}, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardState:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;
 
-    .line 166
     new-instance v0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$1;-><init>(Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;)V
 
     iput-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardConnection:Landroid/content/ServiceConnection;
 
-    .line 132
     iput-object p1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mContext:Landroid/content/Context;
 
-    .line 133
     invoke-static {p1}, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->createScrim(Landroid/content/Context;)Landroid/view/View;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mScrim:Landroid/view/View;
 
-    .line 134
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mScrimHandler:Landroid/os/Handler;
 
-    .line 137
     invoke-static {p1}, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->getInstance(Landroid/content/Context;)Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mAntiInadvertentlyHelper:Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
-    .line 138
     return-void
 .end method
 
@@ -106,7 +98,6 @@
     .param p0, "x0"    # Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;
 
     .prologue
-    .line 34
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -117,7 +108,6 @@
     .param p0, "x0"    # Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;
 
     .prologue
-    .line 34
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardState:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;
 
     return-object v0
@@ -128,7 +118,6 @@
     .param p0, "x0"    # Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;
 
     .prologue
-    .line 34
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mDrawnListenerWhenConnect:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$DrawnListener;
 
     return-object v0
@@ -140,7 +129,6 @@
     .param p1, "x1"    # Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$DrawnListener;
 
     .prologue
-    .line 34
     iput-object p1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mDrawnListenerWhenConnect:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$DrawnListener;
 
     return-object p1
@@ -151,7 +139,6 @@
     .param p0, "x0"    # Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;
 
     .prologue
-    .line 34
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mScrim:Landroid/view/View;
 
     return-object v0
@@ -164,24 +151,19 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 358
     new-instance v8, Landroid/view/View;
 
     invoke-direct {v8, p0}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 360
     .local v8, "view":Landroid/view/View;
     const v4, 0x110900
 
-    .line 366
     .local v4, "flags":I
     const/4 v6, -0x1
 
-    .line 367
     .local v6, "stretch":I
     const/16 v7, 0x7ed
 
-    .line 368
     .local v7, "type":I
     new-instance v0, Landroid/view/WindowManager$LayoutParams;
 
@@ -193,30 +175,25 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/view/WindowManager$LayoutParams;-><init>(IIIII)V
 
-    .line 370
     .local v0, "lp":Landroid/view/WindowManager$LayoutParams;
     const/16 v1, 0x10
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->softInputMode:I
 
-    .line 371
     const/4 v1, 0x5
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->screenOrientation:I
 
-    .line 372
     iget v1, v0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
     or-int/lit8 v1, v1, 0x1
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
-    .line 373
     const-string v1, "KeyguardScrim"
 
     invoke-virtual {v0, v1}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 374
     const-string v1, "window"
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -225,16 +202,13 @@
 
     check-cast v9, Landroid/view/WindowManager;
 
-    .line 375
     .local v9, "wm":Landroid/view/WindowManager;
     invoke-interface {v9, v8, v0}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 378
     const/high16 v1, 0x3610000
 
     invoke-virtual {v8, v1}, Landroid/view/View;->setSystemUiVisibility(I)V
 
-    .line 383
     return-object v8
 .end method
 
@@ -247,12 +221,10 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 141
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 142
     .local v0, "intent":Landroid/content/Intent;
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
@@ -262,7 +234,6 @@
 
     move-result-object v2
 
-    .line 144
     .local v2, "resources":Landroid/content/res/Resources;
     const v3, 0x1040051
 
@@ -274,11 +245,9 @@
 
     move-result-object v1
 
-    .line 146
     .local v1, "keyguardComponent":Landroid/content/ComponentName;
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 148
     iget-object v3, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardConnection:Landroid/content/ServiceConnection;
 
     const/4 v4, 0x1
@@ -291,7 +260,6 @@
 
     if-nez v3, :cond_0
 
-    .line 150
     const-string v3, "KeyguardServiceDelegate"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -314,27 +282,22 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 151
     iget-object v3, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardState:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;
 
     iput-boolean v6, v3, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;->showing:Z
 
-    .line 152
     iget-object v3, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardState:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;
 
     iput-boolean v6, v3, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;->showingAndNotOccluded:Z
 
-    .line 153
     iget-object v3, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardState:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;
 
     iput-boolean v6, v3, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;->secure:Z
 
-    .line 154
     iget-object v4, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardState:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;
 
     monitor-enter v4
 
-    .line 158
     :try_start_0
     iget-object v3, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardState:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;
 
@@ -342,17 +305,13 @@
 
     iput-boolean v5, v3, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;->deviceHasKeyguard:Z
 
-    .line 159
     invoke-virtual {p0}, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->hideScrim()V
 
-    .line 160
     monitor-exit v4
 
-    .line 164
     :goto_0
     return-void
 
-    .line 160
     :catchall_0
     move-exception v3
 
@@ -362,7 +321,6 @@
 
     throw v3
 
-    .line 162
     :cond_0
     const-string v3, "KeyguardServiceDelegate"
 
@@ -377,17 +335,14 @@
     .locals 1
 
     .prologue
-    .line 239
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 240
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     invoke-virtual {v0}, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->dismiss()V
 
-    .line 242
     :cond_0
     return-void
 .end method
@@ -397,17 +352,14 @@
     .param p1, "options"    # Landroid/os/Bundle;
 
     .prologue
-    .line 339
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 340
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     invoke-virtual {v0, p1}, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->doKeyguardTimeout(Landroid/os/Bundle;)V
 
-    .line 342
     :cond_0
     return-void
 .end method
@@ -418,7 +370,6 @@
     .param p2, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 421
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -439,7 +390,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 422
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -458,7 +408,6 @@
 
     move-result-object p1
 
-    .line 423
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -487,7 +436,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 424
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -516,7 +464,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 425
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -545,7 +492,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 426
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -574,7 +520,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 427
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -603,7 +548,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 428
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -632,7 +576,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 429
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -661,7 +604,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 430
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -690,7 +632,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 431
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -719,7 +660,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 432
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -748,7 +688,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 433
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -777,7 +716,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 434
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -806,7 +744,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 435
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -835,7 +772,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 436
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -864,17 +800,14 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 437
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 438
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->dump(Ljava/lang/String;Ljava/io/PrintWriter;)V
 
-    .line 440
     :cond_0
     return-void
 .end method
@@ -883,7 +816,6 @@
     .locals 2
 
     .prologue
-    .line 399
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mScrimHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$3;
@@ -892,7 +824,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 405
     return-void
 .end method
 
@@ -900,12 +831,10 @@
     .locals 2
 
     .prologue
-    .line 213
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 214
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardState:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;
 
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
@@ -916,7 +845,6 @@
 
     iput-boolean v1, v0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;->inputRestricted:Z
 
-    .line 216
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardState:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;
 
@@ -929,12 +857,10 @@
     .locals 2
 
     .prologue
-    .line 245
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 246
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardState:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;
 
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
@@ -945,7 +871,6 @@
 
     iput-boolean v1, v0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;->secure:Z
 
-    .line 248
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardState:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;
 
@@ -958,12 +883,10 @@
     .locals 2
 
     .prologue
-    .line 206
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 207
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardState:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;
 
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
@@ -974,7 +897,6 @@
 
     iput-boolean v1, v0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;->showing:Z
 
-    .line 209
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardState:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;
 
@@ -989,17 +911,14 @@
     .param p2, "wakeup"    # Z
 
     .prologue
-    .line 226
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 227
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->keyguardDone(ZZ)V
 
-    .line 229
     :cond_0
     return-void
 .end method
@@ -1008,17 +927,14 @@
     .locals 1
 
     .prologue
-    .line 415
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 416
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     invoke-virtual {v0}, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->onActivityDrawn()V
 
-    .line 418
     :cond_0
     return-void
 .end method
@@ -1027,17 +943,14 @@
     .locals 2
 
     .prologue
-    .line 408
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 409
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     invoke-virtual {v0}, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->onBootCompleted()V
 
-    .line 411
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardState:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;
 
@@ -1045,7 +958,6 @@
 
     iput-boolean v1, v0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;->bootCompleted:Z
 
-    .line 412
     return-void
 .end method
 
@@ -1053,17 +965,14 @@
     .locals 2
 
     .prologue
-    .line 252
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 253
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     invoke-virtual {v0}, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->onDreamingStarted()V
 
-    .line 255
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardState:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;
 
@@ -1071,7 +980,6 @@
 
     iput-boolean v1, v0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;->dreaming:Z
 
-    .line 256
     return-void
 .end method
 
@@ -1079,17 +987,14 @@
     .locals 2
 
     .prologue
-    .line 259
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 260
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     invoke-virtual {v0}, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->onDreamingStopped()V
 
-    .line 262
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardState:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;
 
@@ -1097,7 +1002,6 @@
 
     iput-boolean v1, v0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;->dreaming:Z
 
-    .line 263
     return-void
 .end method
 
@@ -1106,17 +1010,14 @@
     .param p1, "why"    # I
 
     .prologue
-    .line 317
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 318
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     invoke-virtual {v0, p1}, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->onFinishedGoingToSleep(I)V
 
-    .line 320
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardState:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;
 
@@ -1124,7 +1025,6 @@
 
     iput v1, v0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;->interactiveState:I
 
-    .line 321
     return-void
 .end method
 
@@ -1132,24 +1032,20 @@
     .locals 2
 
     .prologue
-    .line 274
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 275
     const-string v0, "KeyguardServiceDelegate"
 
     const-string v1, "onScreenTurnedOff()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 276
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     invoke-virtual {v0}, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->onScreenTurnedOff()V
 
-    .line 278
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardState:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;
 
@@ -1157,12 +1053,10 @@
 
     iput v1, v0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;->screenState:I
 
-    .line 280
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mAntiInadvertentlyHelper:Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     invoke-virtual {v0}, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->onScreenTurnOff()V
 
-    .line 281
     return-void
 .end method
 
@@ -1170,24 +1064,20 @@
     .locals 2
 
     .prologue
-    .line 301
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 302
     const-string v0, "KeyguardServiceDelegate"
 
     const-string v1, "onScreenTurnedOn()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 303
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     invoke-virtual {v0}, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->onScreenTurnedOn()V
 
-    .line 305
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardState:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;
 
@@ -1195,7 +1085,6 @@
 
     iput v1, v0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;->screenState:I
 
-    .line 306
     return-void
 .end method
 
@@ -1204,12 +1093,10 @@
     .param p1, "drawnListener"    # Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$DrawnListener;
 
     .prologue
-    .line 284
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 285
     const-string v0, "KeyguardServiceDelegate"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1238,7 +1125,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 286
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     new-instance v1, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardShowDelegate;
@@ -1247,7 +1133,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->onScreenTurningOn(Lcom/android/internal/policy/IKeyguardDrawnCallback;)V
 
-    .line 295
     :goto_0
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardState:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;
 
@@ -1255,15 +1140,12 @@
 
     iput v1, v0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;->screenState:I
 
-    .line 297
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mAntiInadvertentlyHelper:Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     invoke-virtual {v0}, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->onScreenTurnOn()V
 
-    .line 298
     return-void
 
-    .line 289
     :cond_0
     const-string v0, "KeyguardServiceDelegate"
 
@@ -1271,10 +1153,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 292
     iput-object p1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mDrawnListenerWhenConnect:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$DrawnListener;
 
-    .line 293
     invoke-virtual {p0}, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->showScrim()V
 
     goto :goto_0
@@ -1285,30 +1165,25 @@
     .param p1, "why"    # I
 
     .prologue
-    .line 309
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 310
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     invoke-virtual {v0, p1}, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->onStartedGoingToSleep(I)V
 
-    .line 312
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardState:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;
 
     iput p1, v0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;->offReason:I
 
-    .line 313
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardState:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;
 
     const/4 v1, 0x2
 
     iput v1, v0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;->interactiveState:I
 
-    .line 314
     return-void
 .end method
 
@@ -1316,24 +1191,20 @@
     .locals 2
 
     .prologue
-    .line 266
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 267
     const-string v0, "KeyguardServiceDelegate"
 
     const-string v1, "onStartedWakingUp()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 268
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     invoke-virtual {v0}, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->onStartedWakingUp()V
 
-    .line 270
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardState:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;
 
@@ -1341,7 +1212,6 @@
 
     iput v1, v0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;->interactiveState:I
 
-    .line 271
     return-void
 .end method
 
@@ -1349,21 +1219,17 @@
     .locals 2
 
     .prologue
-    .line 331
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 332
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     invoke-virtual {v0}, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->onSystemReady()V
 
-    .line 336
     :goto_0
     return-void
 
-    .line 334
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardState:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;
 
@@ -1379,23 +1245,19 @@
     .param p1, "newUserId"    # I
 
     .prologue
-    .line 345
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 346
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     invoke-virtual {v0, p1}, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->setCurrentUser(I)V
 
-    .line 348
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardState:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;
 
     iput p1, v0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;->currentUser:I
 
-    .line 349
     return-void
 .end method
 
@@ -1404,23 +1266,19 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 324
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 325
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     invoke-virtual {v0, p1}, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->setKeyguardEnabled(Z)V
 
-    .line 327
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardState:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;
 
     iput-boolean p1, v0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;->enabled:Z
 
-    .line 328
     return-void
 .end method
 
@@ -1429,23 +1287,19 @@
     .param p1, "isOccluded"    # Z
 
     .prologue
-    .line 232
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 233
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     invoke-virtual {v0, p1}, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->setOccluded(Z)V
 
-    .line 235
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardState:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;
 
     iput-boolean p1, v0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;->occluded:Z
 
-    .line 236
     return-void
 .end method
 
@@ -1453,12 +1307,10 @@
     .locals 3
 
     .prologue
-    .line 387
     iget-object v1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardState:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;
 
     monitor-enter v1
 
-    .line 388
     :try_start_0
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardState:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardState;
 
@@ -1468,11 +1320,9 @@
 
     monitor-exit v1
 
-    .line 396
     :goto_0
     return-void
 
-    .line 389
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mScrimHandler:Landroid/os/Handler;
 
@@ -1482,7 +1332,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 395
     monitor-exit v1
 
     goto :goto_0
@@ -1503,17 +1352,14 @@
     .param p3, "fadeoutDuration"    # J
 
     .prologue
-    .line 352
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 353
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->startKeyguardExitAnimation(JJ)V
 
-    .line 355
     :cond_0
     return-void
 .end method
@@ -1523,12 +1369,10 @@
     .param p1, "onKeyguardExitResult"    # Landroid/view/WindowManagerPolicy$OnKeyguardExitResult;
 
     .prologue
-    .line 220
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 221
     iget-object v0, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->mKeyguardService:Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;
 
     new-instance v1, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardExitDelegate;
@@ -1537,7 +1381,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/policy/keyguard/KeyguardServiceWrapper;->verifyUnlock(Lcom/android/internal/policy/IKeyguardExitCallback;)V
 
-    .line 223
     :cond_0
     return-void
 .end method

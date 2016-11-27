@@ -26,16 +26,12 @@
     .param p2, "adapter"    # Landroid/widget/ListAdapter;
 
     .prologue
-    .line 1159
     iput-object p1, p0, Lcom/letv/leui/widget/LeListView$AdapterWrapper;->this$0:Lcom/letv/leui/widget/LeListView;
 
-    .line 1160
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 1161
     iput-object p2, p0, Lcom/letv/leui/widget/LeListView$AdapterWrapper;->mAdapter:Landroid/widget/ListAdapter;
 
-    .line 1163
     iget-object v0, p0, Lcom/letv/leui/widget/LeListView$AdapterWrapper;->mAdapter:Landroid/widget/ListAdapter;
 
     new-instance v1, Lcom/letv/leui/widget/LeListView$AdapterWrapper$1;
@@ -44,7 +40,6 @@
 
     invoke-interface {v0, v1}, Landroid/widget/ListAdapter;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
 
-    .line 1172
     return-void
 .end method
 
@@ -54,7 +49,6 @@
     .locals 1
 
     .prologue
-    .line 1195
     iget-object v0, p0, Lcom/letv/leui/widget/LeListView$AdapterWrapper;->mAdapter:Landroid/widget/ListAdapter;
 
     invoke-interface {v0}, Landroid/widget/ListAdapter;->areAllItemsEnabled()Z
@@ -68,7 +62,6 @@
     .locals 1
 
     .prologue
-    .line 1175
     iget-object v0, p0, Lcom/letv/leui/widget/LeListView$AdapterWrapper;->mAdapter:Landroid/widget/ListAdapter;
 
     return-object v0
@@ -78,7 +71,6 @@
     .locals 1
 
     .prologue
-    .line 1190
     iget-object v0, p0, Lcom/letv/leui/widget/LeListView$AdapterWrapper;->mAdapter:Landroid/widget/ListAdapter;
 
     invoke-interface {v0}, Landroid/widget/ListAdapter;->getCount()I
@@ -93,7 +85,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 1185
     iget-object v0, p0, Lcom/letv/leui/widget/LeListView$AdapterWrapper;->mAdapter:Landroid/widget/ListAdapter;
 
     invoke-interface {v0, p1}, Landroid/widget/ListAdapter;->getItem(I)Ljava/lang/Object;
@@ -108,7 +99,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 1180
     iget-object v0, p0, Lcom/letv/leui/widget/LeListView$AdapterWrapper;->mAdapter:Landroid/widget/ListAdapter;
 
     invoke-interface {v0, p1}, Landroid/widget/ListAdapter;->getItemId(I)J
@@ -123,7 +113,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 1205
     iget-object v0, p0, Lcom/letv/leui/widget/LeListView$AdapterWrapper;->mAdapter:Landroid/widget/ListAdapter;
 
     invoke-interface {v0, p1}, Landroid/widget/ListAdapter;->getItemViewType(I)I
@@ -142,21 +131,17 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1230
     if-eqz p2, :cond_3
 
     move-object v2, p2
 
-    .line 1231
     check-cast v2, Lcom/letv/leui/widget/DragSortItemView;
 
-    .line 1232
     .local v2, "v":Lcom/letv/leui/widget/DragSortItemView;
     invoke-virtual {v2, v5}, Lcom/letv/leui/widget/DragSortItemView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 1234
     .local v1, "oldChild":Landroid/view/View;
     iget-object v3, p0, Lcom/letv/leui/widget/LeListView$AdapterWrapper;->mAdapter:Landroid/widget/ListAdapter;
 
@@ -166,21 +151,16 @@
 
     move-result-object v0
 
-    .line 1235
     .local v0, "child":Landroid/view/View;
     if-eq v0, v1, :cond_1
 
-    .line 1237
     if-eqz v1, :cond_0
 
-    .line 1238
     invoke-virtual {v2, v5}, Lcom/letv/leui/widget/DragSortItemView;->removeViewAt(I)V
 
-    .line 1240
     :cond_0
     invoke-virtual {v2, v0}, Lcom/letv/leui/widget/DragSortItemView;->addView(Landroid/view/View;)V
 
-    .line 1257
     .end local v1    # "oldChild":Landroid/view/View;
     :cond_1
     :goto_0
@@ -193,7 +173,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 1258
     iget-object v3, p0, Lcom/letv/leui/widget/LeListView$AdapterWrapper;->this$0:Lcom/letv/leui/widget/LeListView;
 
     # getter for: Lcom/letv/leui/widget/LeListView;->mDragSortHelper:Lcom/letv/leui/widget/DragSortHelper;
@@ -213,11 +192,9 @@
 
     invoke-virtual {v3, v4, v2, v5}, Lcom/letv/leui/widget/DragSortHelper;->adjustItem(ILandroid/view/View;Z)V
 
-    .line 1260
     :cond_2
     return-object v2
 
-    .line 1243
     .end local v0    # "child":Landroid/view/View;
     .end local v2    # "v":Lcom/letv/leui/widget/DragSortItemView;
     :cond_3
@@ -231,13 +208,11 @@
 
     move-result-object v0
 
-    .line 1244
     .restart local v0    # "child":Landroid/view/View;
     instance-of v3, v0, Landroid/widget/Checkable;
 
     if-eqz v3, :cond_4
 
-    .line 1245
     new-instance v2, Lcom/letv/leui/widget/DragSortItemViewCheckable;
 
     iget-object v3, p0, Lcom/letv/leui/widget/LeListView$AdapterWrapper;->this$0:Lcom/letv/leui/widget/LeListView;
@@ -248,7 +223,6 @@
 
     invoke-direct {v2, v3}, Lcom/letv/leui/widget/DragSortItemViewCheckable;-><init>(Landroid/content/Context;)V
 
-    .line 1249
     .restart local v2    # "v":Lcom/letv/leui/widget/DragSortItemView;
     :goto_1
     new-instance v3, Landroid/widget/AbsListView$LayoutParams;
@@ -261,12 +235,10 @@
 
     invoke-virtual {v2, v3}, Lcom/letv/leui/widget/DragSortItemView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1252
     invoke-virtual {v2, v0}, Lcom/letv/leui/widget/DragSortItemView;->addView(Landroid/view/View;)V
 
     goto :goto_0
 
-    .line 1247
     .end local v2    # "v":Lcom/letv/leui/widget/DragSortItemView;
     :cond_4
     new-instance v2, Lcom/letv/leui/widget/DragSortItemView;
@@ -287,7 +259,6 @@
     .locals 1
 
     .prologue
-    .line 1210
     iget-object v0, p0, Lcom/letv/leui/widget/LeListView$AdapterWrapper;->mAdapter:Landroid/widget/ListAdapter;
 
     invoke-interface {v0}, Landroid/widget/ListAdapter;->getViewTypeCount()I
@@ -301,7 +272,6 @@
     .locals 1
 
     .prologue
-    .line 1215
     iget-object v0, p0, Lcom/letv/leui/widget/LeListView$AdapterWrapper;->mAdapter:Landroid/widget/ListAdapter;
 
     invoke-interface {v0}, Landroid/widget/ListAdapter;->hasStableIds()Z
@@ -315,7 +285,6 @@
     .locals 1
 
     .prologue
-    .line 1220
     iget-object v0, p0, Lcom/letv/leui/widget/LeListView$AdapterWrapper;->mAdapter:Landroid/widget/ListAdapter;
 
     invoke-interface {v0}, Landroid/widget/ListAdapter;->isEmpty()Z
@@ -330,7 +299,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 1200
     iget-object v0, p0, Lcom/letv/leui/widget/LeListView$AdapterWrapper;->mAdapter:Landroid/widget/ListAdapter;
 
     invoke-interface {v0, p1}, Landroid/widget/ListAdapter;->isEnabled(I)Z

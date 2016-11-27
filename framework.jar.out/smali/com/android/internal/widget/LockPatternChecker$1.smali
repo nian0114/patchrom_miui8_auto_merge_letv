@@ -43,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 58
     iput-object p1, p0, Lcom/android/internal/widget/LockPatternChecker$1;->val$utils:Lcom/android/internal/widget/LockPatternUtils;
 
     iput-object p2, p0, Lcom/android/internal/widget/LockPatternChecker$1;->val$pattern:Ljava/util/List;
@@ -65,7 +64,6 @@
     .locals 1
 
     .prologue
-    .line 58
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/android/internal/widget/LockPatternChecker$1;->doInBackground([Ljava/lang/Void;)[B
@@ -80,7 +78,6 @@
     .param p1, "args"    # [Ljava/lang/Void;
 
     .prologue
-    .line 64
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/widget/LockPatternChecker$1;->val$utils:Lcom/android/internal/widget/LockPatternUtils;
 
@@ -96,15 +93,12 @@
 
     move-result-object v1
 
-    .line 67
     :goto_0
     return-object v1
 
-    .line 65
     :catch_0
     move-exception v0
 
-    .line 66
     .local v0, "ex":Lcom/android/internal/widget/LockPatternUtils$RequestThrottledException;
     invoke-virtual {v0}, Lcom/android/internal/widget/LockPatternUtils$RequestThrottledException;->getTimeoutMs()I
 
@@ -112,7 +106,6 @@
 
     iput v1, p0, Lcom/android/internal/widget/LockPatternChecker$1;->mThrottleTimeout:I
 
-    .line 67
     const/4 v1, 0x0
 
     goto :goto_0
@@ -122,7 +115,6 @@
     .locals 0
 
     .prologue
-    .line 58
     check-cast p1, [B
 
     invoke-virtual {p0, p1}, Lcom/android/internal/widget/LockPatternChecker$1;->onPostExecute([B)V
@@ -135,13 +127,11 @@
     .param p1, "result"    # [B
 
     .prologue
-    .line 73
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternChecker$1;->val$callback:Lcom/android/internal/widget/LockPatternChecker$OnVerifyCallback;
 
     iget v1, p0, Lcom/android/internal/widget/LockPatternChecker$1;->mThrottleTimeout:I
 
     invoke-interface {v0, p1, v1}, Lcom/android/internal/widget/LockPatternChecker$OnVerifyCallback;->onVerified([BI)V
 
-    .line 74
     return-void
 .end method

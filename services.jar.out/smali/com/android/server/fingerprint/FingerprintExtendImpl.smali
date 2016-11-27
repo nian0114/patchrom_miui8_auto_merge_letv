@@ -39,28 +39,20 @@
 
     const/4 v1, 0x0
 
-    .line 63
     invoke-direct {p0}, Lcom/android/server/fingerprint/FingerprintExtend;-><init>()V
 
-    .line 48
     iput-object v1, p0, Lcom/android/server/fingerprint/FingerprintExtendImpl;->mQFingerprintManager:Lcom/qualcomm/qti/biometrics/fingerprint/QFingerprintManager;
 
-    .line 49
     iput-object v1, p0, Lcom/android/server/fingerprint/FingerprintExtendImpl;->mContext:Landroid/content/Context;
 
-    .line 51
     iput-object v1, p0, Lcom/android/server/fingerprint/FingerprintExtendImpl;->mQFingerprintDebug:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug;
 
-    .line 59
     iput v2, p0, Lcom/android/server/fingerprint/FingerprintExtendImpl;->mLastVersion:I
 
-    .line 60
     iput v2, p0, Lcom/android/server/fingerprint/FingerprintExtendImpl;->mCurVesion:I
 
-    .line 64
     iput-object p1, p0, Lcom/android/server/fingerprint/FingerprintExtendImpl;->mContext:Landroid/content/Context;
 
-    .line 66
     :try_start_0
     new-instance v1, Lcom/qualcomm/qti/biometrics/fingerprint/QFingerprintManager;
 
@@ -70,7 +62,6 @@
 
     iput-object v1, p0, Lcom/android/server/fingerprint/FingerprintExtendImpl;->mQFingerprintManager:Lcom/qualcomm/qti/biometrics/fingerprint/QFingerprintManager;
 
-    .line 68
     new-instance v1, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug;
 
     iget-object v2, p0, Lcom/android/server/fingerprint/FingerprintExtendImpl;->mContext:Landroid/content/Context;
@@ -81,7 +72,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 73
     :goto_0
     new-instance v1, Ljava/io/File;
 
@@ -95,14 +85,11 @@
 
     iput-object v1, p0, Lcom/android/server/fingerprint/FingerprintExtendImpl;->mFile:Ljava/io/File;
 
-    .line 74
     return-void
 
-    .line 70
     :catch_0
     move-exception v0
 
-    .line 71
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "FingerprintService"
 
@@ -126,21 +113,17 @@
 
     const/4 v7, 0x0
 
-    .line 188
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 189
     .local v1, "intent":Landroid/content/Intent;
     const-string v3, "android.settings.SECURITY_SETTINGS"
 
     invoke-virtual {v1, v3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 190
     invoke-virtual {v1, v10}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 191
     const v3, 0x1080265
 
     invoke-virtual {p1, v3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -171,7 +154,6 @@
 
     move-result-object v2
 
-    .line 198
     .local v2, "largeIcon":Landroid/graphics/Bitmap;
     new-instance v3, Landroid/app/Notification$Builder;
 
@@ -235,7 +217,6 @@
 
     move-result-object v0
 
-    .line 210
     .local v0, "builder":Landroid/app/Notification$Builder;
     invoke-static {p1}, Landroid/app/NotificationManager;->from(Landroid/content/Context;)Landroid/app/NotificationManager;
 
@@ -249,7 +230,6 @@
 
     invoke-virtual {v3, v4, v7, v5}, Landroid/app/NotificationManager;->notify(Ljava/lang/String;ILandroid/app/Notification;)V
 
-    .line 211
     return-void
 .end method
 
@@ -260,7 +240,6 @@
     .param p1, "daemon"    # Landroid/hardware/fingerprint/IFingerprintDaemon;
 
     .prologue
-    .line 109
     const/4 v0, -0x1
 
     return v0
@@ -271,7 +250,6 @@
     .param p1, "daemon"    # Landroid/hardware/fingerprint/IFingerprintDaemon;
 
     .prologue
-    .line 105
     const/4 v0, -0x1
 
     return v0
@@ -283,19 +261,15 @@
     .prologue
     const/4 v4, 0x5
 
-    .line 118
     iget-object v3, p0, Lcom/android/server/fingerprint/FingerprintExtendImpl;->mQFingerprintDebug:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug;
 
     if-eqz v3, :cond_1
 
-    .line 120
     const/4 v1, 0x0
 
-    .line 121
     .local v1, "info":Lcom/qualcomm/qti/biometrics/fingerprintdebug/FrameworkInfo;
     const/4 v2, 0x0
 
-    .line 122
     .local v2, "version":I
     :try_start_0
     iget-object v3, p0, Lcom/android/server/fingerprint/FingerprintExtendImpl;->mQFingerprintDebug:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug;
@@ -304,7 +278,6 @@
 
     move-result-object v1
 
-    .line 123
     iget-object v3, v1, Lcom/qualcomm/qti/biometrics/fingerprintdebug/FrameworkInfo;->mVersion:Ljava/util/List;
 
     const/4 v5, 0x1
@@ -319,7 +292,6 @@
 
     move-result v2
 
-    .line 124
     const-string v3, "FingerprintService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -344,7 +316,6 @@
     :try_end_0
     .catch Lcom/qualcomm/qti/biometrics/fingerprintdebug/QfpException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 125
     const/16 v3, 0x27
 
     if-lt v2, v3, :cond_0
@@ -353,10 +324,8 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 126
     const/4 v3, 0x3
 
-    .line 134
     .end local v1    # "info":Lcom/qualcomm/qti/biometrics/fingerprintdebug/FrameworkInfo;
     .end local v2    # "version":I
     :goto_0
@@ -367,14 +336,11 @@
     :cond_0
     move v3, v4
 
-    .line 128
     goto :goto_0
 
-    .line 130
     :catch_0
     move-exception v0
 
-    .line 131
     .local v0, "e":Lcom/qualcomm/qti/biometrics/fingerprintdebug/QfpException;
     invoke-virtual {v0}, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QfpException;->printStackTrace()V
 
@@ -384,7 +350,6 @@
     :cond_1
     move v3, v4
 
-    .line 134
     goto :goto_0
 .end method
 
@@ -394,7 +359,6 @@
     .param p2, "mode"    # I
 
     .prologue
-    .line 113
     const/4 v0, -0x1
 
     return v0
@@ -406,19 +370,15 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 77
     iget-object v1, p0, Lcom/android/server/fingerprint/FingerprintExtendImpl;->mQFingerprintManager:Lcom/qualcomm/qti/biometrics/fingerprint/QFingerprintManager;
 
     if-nez v1, :cond_0
 
-    .line 78
     const/4 v1, -0x1
 
-    .line 87
     :goto_0
     return v1
 
-    .line 81
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/android/server/fingerprint/FingerprintExtendImpl;->mQFingerprintManager:Lcom/qualcomm/qti/biometrics/fingerprint/QFingerprintManager;
@@ -430,17 +390,14 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 87
     :goto_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 82
     :catch_0
     move-exception v0
 
-    .line 83
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "FingerprintService"
 
@@ -450,12 +407,10 @@
 
     goto :goto_1
 
-    .line 84
     .end local v0    # "e":Landroid/os/RemoteException;
     :catch_1
     move-exception v0
 
-    .line 85
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "FingerprintService"
 
@@ -471,19 +426,15 @@
     .param p1, "daemon"    # Landroid/hardware/fingerprint/IFingerprintDaemon;
 
     .prologue
-    .line 91
     iget-object v1, p0, Lcom/android/server/fingerprint/FingerprintExtendImpl;->mQFingerprintManager:Lcom/qualcomm/qti/biometrics/fingerprint/QFingerprintManager;
 
     if-nez v1, :cond_0
 
-    .line 92
     const/4 v1, -0x1
 
-    .line 101
     :goto_0
     return v1
 
-    .line 95
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/android/server/fingerprint/FingerprintExtendImpl;->mQFingerprintManager:Lcom/qualcomm/qti/biometrics/fingerprint/QFingerprintManager;
@@ -493,17 +444,14 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 101
     :goto_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 96
     :catch_0
     move-exception v0
 
-    .line 97
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "FingerprintService"
 
@@ -513,12 +461,10 @@
 
     goto :goto_1
 
-    .line 98
     .end local v0    # "e":Landroid/os/RemoteException;
     :catch_1
     move-exception v0
 
-    .line 99
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "FingerprintService"
 
@@ -536,7 +482,6 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 140
     new-instance v4, Lcom/qualcomm/qti/biometrics/fingerprintdebug/Enrollee;
 
     invoke-static/range {p3 .. p3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -547,27 +492,22 @@
 
     invoke-direct {v4, v12, v13}, Lcom/qualcomm/qti/biometrics/fingerprintdebug/Enrollee;-><init>(Ljava/lang/String;Z)V
 
-    .line 141
     .local v4, "enrollee":Lcom/qualcomm/qti/biometrics/fingerprintdebug/Enrollee;
     const/4 v3, 0x0
 
-    .line 143
     .local v3, "enrollRecord":Lcom/qualcomm/qti/biometrics/fingerprintdebug/EnrollRecord;
     invoke-static {}, Lcom/android/server/fingerprint/FingerprintUtils;->getInstance()Lcom/android/server/fingerprint/FingerprintUtils;
 
     move-result-object v6
 
-    .line 144
     .local v6, "fingerprintUtils":Lcom/android/server/fingerprint/FingerprintUtils;
     const/4 v9, 0x0
 
-    .line 145
     .local v9, "isDiff":Z
     iget-object v12, p0, Lcom/android/server/fingerprint/FingerprintExtendImpl;->mQFingerprintDebug:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug;
 
     if-eqz v12, :cond_0
 
-    .line 147
     :try_start_0
     iget-object v12, p0, Lcom/android/server/fingerprint/FingerprintExtendImpl;->mQFingerprintDebug:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug;
 
@@ -577,7 +517,6 @@
 
     move-result-object v3
 
-    .line 152
     :cond_0
     :goto_0
     const-string v12, "FingerprintService"
@@ -608,7 +547,6 @@
 
     invoke-static {v12, v13}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 153
     move-object/from16 v0, p2
 
     move/from16 v1, p3
@@ -617,7 +555,6 @@
 
     move-result-object v7
 
-    .line 154
     .local v7, "fingerprints":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/fingerprint/Fingerprint;>;"
     invoke-interface {v7}, Ljava/util/List;->size()I
 
@@ -631,17 +568,14 @@
 
     if-eq v12, v13, :cond_2
 
-    .line 155
     const/4 v9, 0x1
 
-    .line 169
     :cond_1
     :goto_1
     const/4 v12, 0x1
 
     if-ne v9, v12, :cond_8
 
-    .line 170
     const/4 v8, 0x0
 
     .local v8, "i":I
@@ -654,7 +588,6 @@
 
     if-ge v8, v12, :cond_6
 
-    .line 172
     :try_start_1
     iget-object v12, v3, Lcom/qualcomm/qti/biometrics/fingerprintdebug/EnrollRecord;->mFingers:Ljava/util/List;
 
@@ -666,7 +599,6 @@
 
     iget v5, v12, Lcom/qualcomm/qti/biometrics/fingerprintdebug/Finger;->mFingerId:I
 
-    .line 173
     .local v5, "fingerprintId":I
     const-string v12, "FingerprintService"
 
@@ -690,7 +622,6 @@
 
     invoke-static {v12, v13}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 174
     move-object/from16 v0, p1
 
     move/from16 v1, p3
@@ -699,32 +630,27 @@
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 170
     .end local v5    # "fingerprintId":I
     :goto_3
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_2
 
-    .line 148
     .end local v7    # "fingerprints":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/fingerprint/Fingerprint;>;"
     .end local v8    # "i":I
     :catch_0
     move-exception v2
 
-    .line 149
     .local v2, "e":Lcom/qualcomm/qti/biometrics/fingerprintdebug/QfpException;
     invoke-virtual {v2}, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QfpException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 157
     .end local v2    # "e":Lcom/qualcomm/qti/biometrics/fingerprintdebug/QfpException;
     .restart local v7    # "fingerprints":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/fingerprint/Fingerprint;>;"
     :cond_2
     const/4 v11, 0x0
 
-    .line 158
     .local v11, "sameCount":I
     const/4 v8, 0x0
 
@@ -736,7 +662,6 @@
 
     if-ge v8, v12, :cond_5
 
-    .line 159
     const/4 v10, 0x0
 
     .local v10, "j":I
@@ -747,7 +672,6 @@
 
     if-ge v10, v12, :cond_4
 
-    .line 160
     invoke-interface {v7, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v12
@@ -770,22 +694,18 @@
 
     if-ne v13, v12, :cond_3
 
-    .line 161
     add-int/lit8 v11, v11, 0x1
 
-    .line 159
     :cond_3
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_5
 
-    .line 158
     :cond_4
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_4
 
-    .line 165
     .end local v10    # "j":I
     :cond_5
     invoke-interface {v7}, Ljava/util/List;->size()I
@@ -794,23 +714,19 @@
 
     if-eq v11, v12, :cond_1
 
-    .line 166
     const/4 v9, 0x1
 
     goto :goto_1
 
-    .line 175
     .end local v11    # "sameCount":I
     :catch_1
     move-exception v2
 
-    .line 176
     .local v2, "e":Landroid/os/RemoteException;
     invoke-virtual {v2}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_3
 
-    .line 179
     .end local v2    # "e":Landroid/os/RemoteException;
     :cond_6
     const/4 v8, 0x0
@@ -822,7 +738,6 @@
 
     if-ge v8, v12, :cond_7
 
-    .line 180
     invoke-interface {v7, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v12
@@ -833,7 +748,6 @@
 
     move-result v5
 
-    .line 181
     .restart local v5    # "fingerprintId":I
     const-string v12, "FingerprintService"
 
@@ -857,26 +771,22 @@
 
     invoke-static {v12, v13}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 182
     move-object/from16 v0, p2
 
     move/from16 v1, p3
 
     invoke-virtual {v6, v0, v5, v1}, Lcom/android/server/fingerprint/FingerprintUtils;->removeFingerprintIdForUser(Landroid/content/Context;II)V
 
-    .line 179
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_6
 
-    .line 184
     .end local v5    # "fingerprintId":I
     :cond_7
     move-object/from16 v0, p2
 
     invoke-direct {p0, v0}, Lcom/android/server/fingerprint/FingerprintExtendImpl;->sendNotification(Landroid/content/Context;)V
 
-    .line 186
     .end local v8    # "i":I
     :cond_8
     return-void
@@ -890,7 +800,6 @@
 
     const/4 v9, 0x3
 
-    .line 216
     iget-object v6, p0, Lcom/android/server/fingerprint/FingerprintExtendImpl;->mFile:Ljava/io/File;
 
     invoke-virtual {v6}, Ljava/io/File;->exists()Z
@@ -899,7 +808,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 218
     :try_start_0
     new-instance v1, Ljava/io/BufferedReader;
 
@@ -911,13 +819,11 @@
 
     invoke-direct {v1, v6}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 219
     .local v1, "bufferReader":Ljava/io/BufferedReader;
     invoke-virtual {v1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 220
     .local v0, "buf":Ljava/lang/String;
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -925,12 +831,10 @@
 
     iput v6, p0, Lcom/android/server/fingerprint/FingerprintExtendImpl;->mLastVersion:I
 
-    .line 221
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 228
     .end local v0    # "buf":Ljava/lang/String;
     .end local v1    # "bufferReader":Ljava/io/BufferedReader;
     :cond_0
@@ -939,14 +843,11 @@
 
     if-eqz v6, :cond_1
 
-    .line 230
     const/4 v4, 0x0
 
-    .line 231
     .local v4, "info":Lcom/qualcomm/qti/biometrics/fingerprintdebug/FrameworkInfo;
     const/4 v5, 0x0
 
-    .line 232
     .local v5, "version":I
     :try_start_1
     iget-object v6, p0, Lcom/android/server/fingerprint/FingerprintExtendImpl;->mQFingerprintDebug:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug;
@@ -955,7 +856,6 @@
 
     move-result-object v4
 
-    .line 233
     iget-object v6, v4, Lcom/qualcomm/qti/biometrics/fingerprintdebug/FrameworkInfo;->mVersion:Ljava/util/List;
 
     const/4 v7, 0x1
@@ -970,17 +870,14 @@
 
     move-result v5
 
-    .line 234
     if-ge v5, v8, :cond_2
 
-    .line 235
     const/4 v6, 0x1
 
     iput v6, p0, Lcom/android/server/fingerprint/FingerprintExtendImpl;->mCurVesion:I
     :try_end_1
     .catch Lcom/qualcomm/qti/biometrics/fingerprintdebug/QfpException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 245
     .end local v4    # "info":Lcom/qualcomm/qti/biometrics/fingerprintdebug/FrameworkInfo;
     .end local v5    # "version":I
     :cond_1
@@ -1021,7 +918,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 246
     iget v6, p0, Lcom/android/server/fingerprint/FingerprintExtendImpl;->mCurVesion:I
 
     if-ne v6, v9, :cond_4
@@ -1032,14 +928,12 @@
 
     if-eq v6, v7, :cond_4
 
-    .line 247
     const-string v6, "persist.sys.fp.update"
 
     const-string v7, "1"
 
     invoke-static {v6, v7}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 252
     :goto_2
     :try_start_2
     new-instance v2, Ljava/io/BufferedWriter;
@@ -1054,7 +948,6 @@
 
     invoke-direct {v2, v6}, Ljava/io/BufferedWriter;-><init>(Ljava/io/Writer;)V
 
-    .line 253
     .local v2, "bufferWriter":Ljava/io/BufferedWriter;
     iget v6, p0, Lcom/android/server/fingerprint/FingerprintExtendImpl;->mCurVesion:I
 
@@ -1064,21 +957,17 @@
 
     invoke-virtual {v2, v6}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 254
     invoke-virtual {v2}, Ljava/io/BufferedWriter;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 258
     .end local v2    # "bufferWriter":Ljava/io/BufferedWriter;
     :goto_3
     return-void
 
-    .line 222
     :catch_0
     move-exception v3
 
-    .line 223
     .local v3, "e":Ljava/io/IOException;
     const-string v6, "FingerprintService"
 
@@ -1088,7 +977,6 @@
 
     goto :goto_0
 
-    .line 236
     .end local v3    # "e":Ljava/io/IOException;
     .restart local v4    # "info":Lcom/qualcomm/qti/biometrics/fingerprintdebug/FrameworkInfo;
     .restart local v5    # "version":I
@@ -1099,7 +987,6 @@
 
     if-ge v5, v6, :cond_3
 
-    .line 237
     const/4 v6, 0x2
 
     :try_start_3
@@ -1109,17 +996,14 @@
 
     goto :goto_1
 
-    .line 241
     :catch_1
     move-exception v3
 
-    .line 242
     .local v3, "e":Lcom/qualcomm/qti/biometrics/fingerprintdebug/QfpException;
     invoke-virtual {v3}, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QfpException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 239
     .end local v3    # "e":Lcom/qualcomm/qti/biometrics/fingerprintdebug/QfpException;
     :cond_3
     const/4 v6, 0x3
@@ -1131,7 +1015,6 @@
 
     goto :goto_1
 
-    .line 249
     .end local v4    # "info":Lcom/qualcomm/qti/biometrics/fingerprintdebug/FrameworkInfo;
     .end local v5    # "version":I
     :cond_4
@@ -1143,11 +1026,9 @@
 
     goto :goto_2
 
-    .line 255
     :catch_2
     move-exception v3
 
-    .line 256
     .local v3, "e":Ljava/io/IOException;
     const-string v6, "FingerprintService"
 

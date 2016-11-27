@@ -29,17 +29,13 @@
     .param p3, "d"    # Landroid/os/IBinder$DeathRecipient;
 
     .prologue
-    .line 8122
     iput-object p1, p0, Landroid/view/ViewRootImpl$SnapshotWatcher;->this$0:Landroid/view/ViewRootImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 8123
     iput-object p2, p0, Landroid/view/ViewRootImpl$SnapshotWatcher;->watcher:Lcom/letv/eui/appsnapshot/IAppSnapshotWatcher;
 
-    .line 8124
     iput-object p3, p0, Landroid/view/ViewRootImpl$SnapshotWatcher;->deathRecipient:Landroid/os/IBinder$DeathRecipient;
 
-    .line 8125
     return-void
 .end method

@@ -32,20 +32,15 @@
     .param p4, "appClickCounts"    # Ljava/lang/String;
 
     .prologue
-    .line 2646
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$ShareActivityInfo;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2647
     iput-object p2, p0, Lcom/android/internal/app/ResolverActivity$ShareActivityInfo;->mMimeType:Ljava/lang/String;
 
-    .line 2648
     iput-object p3, p0, Lcom/android/internal/app/ResolverActivity$ShareActivityInfo;->mAppName:Ljava/lang/String;
 
-    .line 2649
     iput-object p4, p0, Lcom/android/internal/app/ResolverActivity$ShareActivityInfo;->mAppClickCounts:Ljava/lang/String;
 
-    .line 2650
     return-void
 .end method

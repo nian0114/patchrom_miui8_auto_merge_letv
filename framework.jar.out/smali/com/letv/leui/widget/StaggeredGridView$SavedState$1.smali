@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 3280
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 3282
     new-instance v0, Lcom/letv/leui/widget/StaggeredGridView$SavedState;
 
     const/4 v1, 0x0
@@ -59,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 3280
     invoke-virtual {p0, p1}, Lcom/letv/leui/widget/StaggeredGridView$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Lcom/letv/leui/widget/StaggeredGridView$SavedState;
 
     move-result-object v0
@@ -72,7 +69,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 3286
     new-array v0, p1, [Lcom/letv/leui/widget/StaggeredGridView$SavedState;
 
     return-object v0
@@ -82,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 3280
     invoke-virtual {p0, p1}, Lcom/letv/leui/widget/StaggeredGridView$SavedState$1;->newArray(I)[Lcom/letv/leui/widget/StaggeredGridView$SavedState;
 
     move-result-object v0

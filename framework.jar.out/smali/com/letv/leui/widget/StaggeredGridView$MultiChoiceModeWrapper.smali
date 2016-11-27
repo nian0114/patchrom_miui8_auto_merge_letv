@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 2560
     iput-object p1, p0, Lcom/letv/leui/widget/StaggeredGridView$MultiChoiceModeWrapper;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 2568
     iget-object v0, p0, Lcom/letv/leui/widget/StaggeredGridView$MultiChoiceModeWrapper;->mWrapped:Lcom/letv/leui/widget/StaggeredGridView$MultiChoiceModeListener;
 
     if-eqz v0, :cond_0
@@ -64,7 +62,6 @@
     .param p2, "item"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 2591
     iget-object v0, p0, Lcom/letv/leui/widget/StaggeredGridView$MultiChoiceModeWrapper;->mWrapped:Lcom/letv/leui/widget/StaggeredGridView$MultiChoiceModeListener;
 
     invoke-interface {v0, p1, p2}, Lcom/letv/leui/widget/StaggeredGridView$MultiChoiceModeListener;->onActionItemClicked(Landroid/view/ActionMode;Landroid/view/MenuItem;)Z
@@ -84,7 +81,6 @@
 
     const/4 v1, 0x0
 
-    .line 2572
     iget-object v2, p0, Lcom/letv/leui/widget/StaggeredGridView$MultiChoiceModeWrapper;->mWrapped:Lcom/letv/leui/widget/StaggeredGridView$MultiChoiceModeListener;
 
     invoke-interface {v2, p1, p2}, Lcom/letv/leui/widget/StaggeredGridView$MultiChoiceModeListener;->onCreateActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z
@@ -93,7 +89,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 2574
     iget-object v2, p0, Lcom/letv/leui/widget/StaggeredGridView$MultiChoiceModeWrapper;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     iget v2, v2, Lcom/letv/leui/widget/StaggeredGridView;->mChoiceMode:I
@@ -102,16 +97,13 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 2576
     iget-object v1, p0, Lcom/letv/leui/widget/StaggeredGridView$MultiChoiceModeWrapper;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     invoke-virtual {v1, v0}, Lcom/letv/leui/widget/StaggeredGridView;->setLongClickable(Z)V
 
-    .line 2583
     :goto_0
     return v0
 
-    .line 2578
     :cond_0
     iget-object v2, p0, Lcom/letv/leui/widget/StaggeredGridView$MultiChoiceModeWrapper;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
@@ -122,7 +114,6 @@
     :cond_1
     move v0, v1
 
-    .line 2583
     goto :goto_0
 .end method
 
@@ -131,37 +122,31 @@
     .param p1, "mode"    # Landroid/view/ActionMode;
 
     .prologue
-    .line 2595
     iget-object v0, p0, Lcom/letv/leui/widget/StaggeredGridView$MultiChoiceModeWrapper;->mWrapped:Lcom/letv/leui/widget/StaggeredGridView$MultiChoiceModeListener;
 
     invoke-interface {v0, p1}, Lcom/letv/leui/widget/StaggeredGridView$MultiChoiceModeListener;->onDestroyActionMode(Landroid/view/ActionMode;)V
 
-    .line 2597
     iget-object v0, p0, Lcom/letv/leui/widget/StaggeredGridView$MultiChoiceModeWrapper;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     const/4 v1, 0x0
 
     iput-object v1, v0, Lcom/letv/leui/widget/StaggeredGridView;->mChoiceActionMode:Landroid/view/ActionMode;
 
-    .line 2600
     iget-object v0, p0, Lcom/letv/leui/widget/StaggeredGridView$MultiChoiceModeWrapper;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     # invokes: Lcom/letv/leui/widget/StaggeredGridView;->clearChoices()V
     invoke-static {v0}, Lcom/letv/leui/widget/StaggeredGridView;->access$1100(Lcom/letv/leui/widget/StaggeredGridView;)V
 
-    .line 2604
     iget-object v0, p0, Lcom/letv/leui/widget/StaggeredGridView$MultiChoiceModeWrapper;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/StaggeredGridView;->invalidateViews()V
 
-    .line 2606
     iget-object v0, p0, Lcom/letv/leui/widget/StaggeredGridView$MultiChoiceModeWrapper;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/widget/StaggeredGridView;->setLongClickable(Z)V
 
-    .line 2607
     return-void
 .end method
 
@@ -173,7 +158,6 @@
     .param p5, "checked"    # Z
 
     .prologue
-    .line 2611
     iget-object v1, p0, Lcom/letv/leui/widget/StaggeredGridView$MultiChoiceModeWrapper;->mWrapped:Lcom/letv/leui/widget/StaggeredGridView$MultiChoiceModeListener;
 
     move-object v2, p1
@@ -186,7 +170,6 @@
 
     invoke-interface/range {v1 .. v6}, Lcom/letv/leui/widget/StaggeredGridView$MultiChoiceModeListener;->onItemCheckedStateChanged(Landroid/view/ActionMode;IJZ)V
 
-    .line 2614
     iget-object v0, p0, Lcom/letv/leui/widget/StaggeredGridView$MultiChoiceModeWrapper;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/StaggeredGridView;->getCheckedItemCount()I
@@ -195,10 +178,8 @@
 
     if-nez v0, :cond_0
 
-    .line 2615
     invoke-virtual {p1}, Landroid/view/ActionMode;->finish()V
 
-    .line 2617
     :cond_0
     return-void
 .end method
@@ -209,7 +190,6 @@
     .param p2, "menu"    # Landroid/view/Menu;
 
     .prologue
-    .line 2587
     iget-object v0, p0, Lcom/letv/leui/widget/StaggeredGridView$MultiChoiceModeWrapper;->mWrapped:Lcom/letv/leui/widget/StaggeredGridView$MultiChoiceModeListener;
 
     invoke-interface {v0, p1, p2}, Lcom/letv/leui/widget/StaggeredGridView$MultiChoiceModeListener;->onPrepareActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z
@@ -224,9 +204,7 @@
     .param p1, "wrapped"    # Lcom/letv/leui/widget/StaggeredGridView$MultiChoiceModeListener;
 
     .prologue
-    .line 2564
     iput-object p1, p0, Lcom/letv/leui/widget/StaggeredGridView$MultiChoiceModeWrapper;->mWrapped:Lcom/letv/leui/widget/StaggeredGridView$MultiChoiceModeListener;
 
-    .line 2565
     return-void
 .end method

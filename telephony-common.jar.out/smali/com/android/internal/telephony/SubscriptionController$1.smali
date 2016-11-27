@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 158
     iput-object p1, p0, Lcom/android/internal/telephony/SubscriptionController$1;->this$0:Lcom/android/internal/telephony/SubscriptionController;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,22 +37,18 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 163
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 181
     :goto_0
     return-void
 
-    .line 165
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 166
     .local v0, "ar":Landroid/os/AsyncResult;
     iget-object v1, p0, Lcom/android/internal/telephony/SubscriptionController$1;->this$0:Lcom/android/internal/telephony/SubscriptionController;
 
@@ -61,7 +56,6 @@
 
     monitor-enter v2
 
-    .line 167
     :try_start_0
     iget-object v3, p0, Lcom/android/internal/telephony/SubscriptionController$1;->this$0:Lcom/android/internal/telephony/SubscriptionController;
 
@@ -74,7 +68,6 @@
     :goto_1
     iput-boolean v1, v3, Lcom/android/internal/telephony/SubscriptionController;->mSuccess:Z
 
-    .line 168
     iget-object v1, p0, Lcom/android/internal/telephony/SubscriptionController$1;->this$0:Lcom/android/internal/telephony/SubscriptionController;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -102,19 +95,16 @@
     # invokes: Lcom/android/internal/telephony/SubscriptionController;->logd(Ljava/lang/String;)V
     invoke-static {v1, v3}, Lcom/android/internal/telephony/SubscriptionController;->access$000(Lcom/android/internal/telephony/SubscriptionController;Ljava/lang/String;)V
 
-    .line 169
     const/4 v1, 0x2
 
     invoke-virtual {p0, v1}, Lcom/android/internal/telephony/SubscriptionController$1;->removeMessages(I)V
 
-    .line 170
     iget-object v1, p0, Lcom/android/internal/telephony/SubscriptionController$1;->this$0:Lcom/android/internal/telephony/SubscriptionController;
 
     iget-object v1, v1, Lcom/android/internal/telephony/SubscriptionController;->mLock:Ljava/lang/Object;
 
     invoke-virtual {v1}, Ljava/lang/Object;->notifyAll()V
 
-    .line 171
     monitor-exit v2
 
     goto :goto_0
@@ -128,13 +118,11 @@
 
     throw v1
 
-    .line 167
     :cond_0
     const/4 v1, 0x0
 
     goto :goto_1
 
-    .line 175
     .end local v0    # "ar":Landroid/os/AsyncResult;
     :pswitch_1
     iget-object v1, p0, Lcom/android/internal/telephony/SubscriptionController$1;->this$0:Lcom/android/internal/telephony/SubscriptionController;
@@ -143,7 +131,6 @@
 
     monitor-enter v2
 
-    .line 176
     :try_start_1
     iget-object v1, p0, Lcom/android/internal/telephony/SubscriptionController$1;->this$0:Lcom/android/internal/telephony/SubscriptionController;
 
@@ -152,14 +139,12 @@
     # invokes: Lcom/android/internal/telephony/SubscriptionController;->logd(Ljava/lang/String;)V
     invoke-static {v1, v3}, Lcom/android/internal/telephony/SubscriptionController;->access$000(Lcom/android/internal/telephony/SubscriptionController;Ljava/lang/String;)V
 
-    .line 177
     iget-object v1, p0, Lcom/android/internal/telephony/SubscriptionController$1;->this$0:Lcom/android/internal/telephony/SubscriptionController;
 
     iget-object v1, v1, Lcom/android/internal/telephony/SubscriptionController;->mLock:Ljava/lang/Object;
 
     invoke-virtual {v1}, Ljava/lang/Object;->notifyAll()V
 
-    .line 178
     monitor-exit v2
 
     goto :goto_0
@@ -173,7 +158,6 @@
 
     throw v1
 
-    .line 163
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

@@ -51,10 +51,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 48
     invoke-direct {p0, p1}, Lcom/android/server/policy/global/CircleButton;-><init>(Landroid/content/Context;)V
 
-    .line 49
     return-void
 .end method
 
@@ -64,10 +62,8 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 52
     invoke-direct {p0, p1, p2}, Lcom/android/server/policy/global/CircleButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 53
     return-void
 .end method
 
@@ -78,10 +74,8 @@
     .param p3, "defStyleAttr"    # I
 
     .prologue
-    .line 56
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/policy/global/CircleButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 57
     return-void
 .end method
 
@@ -90,20 +84,17 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 144
     invoke-virtual {p0}, Lcom/android/server/policy/global/RebootButton;->getWidth()I
 
     move-result v0
 
     div-int/lit8 v6, v0, 0x2
 
-    .line 145
     .local v6, "centerX":I
     iget v0, p0, Lcom/android/server/policy/global/RebootButton;->mScaleRingWH:I
 
     div-int/lit8 v7, v0, 0x2
 
-    .line 146
     .local v7, "centerY":I
     new-instance v1, Landroid/graphics/RectF;
 
@@ -133,7 +124,6 @@
 
     invoke-direct {v1, v0, v2, v3, v4}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    .line 150
     .local v1, "rectF":Landroid/graphics/RectF;
     iget v0, p0, Lcom/android/server/policy/global/RebootButton;->mArcStartAngle:I
 
@@ -151,7 +141,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
 
-    .line 151
     return-void
 .end method
 
@@ -160,13 +149,10 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 135
     invoke-direct {p0, p1}, Lcom/android/server/policy/global/RebootButton;->drawArc(Landroid/graphics/Canvas;)V
 
-    .line 136
     invoke-direct {p0, p1}, Lcom/android/server/policy/global/RebootButton;->drawArrow(Landroid/graphics/Canvas;)V
 
-    .line 137
     return-void
 .end method
 
@@ -175,14 +161,12 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 158
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/policy/global/RebootButton;->getWidth()I
 
     move-result v2
 
     div-int/lit8 v13, v2, 0x2
 
-    .line 159
     .local v13, "centerX":I
     move-object/from16 v0, p0
 
@@ -190,7 +174,6 @@
 
     div-int/lit8 v14, v2, 0x2
 
-    .line 162
     .local v14, "centerY":I
     int-to-double v10, v13
 
@@ -230,7 +213,6 @@
 
     double-to-float v5, v10
 
-    .line 163
     .local v5, "x":F
     int-to-double v10, v14
 
@@ -270,13 +252,11 @@
 
     double-to-float v6, v10
 
-    .line 165
     .local v6, "y":F
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v15
 
-    .line 167
     .local v15, "seq":I
     move-object/from16 v0, p0
 
@@ -302,7 +282,6 @@
 
     invoke-virtual {v0, v2, v5, v6}, Landroid/graphics/Canvas;->rotate(FFF)V
 
-    .line 169
     float-to-double v10, v5
 
     move-object/from16 v0, p0
@@ -341,7 +320,6 @@
 
     double-to-float v3, v10
 
-    .line 170
     .local v3, "x1":F
     float-to-double v10, v6
 
@@ -381,7 +359,6 @@
 
     double-to-float v4, v10
 
-    .line 171
     .local v4, "y1":F
     float-to-double v10, v5
 
@@ -421,7 +398,6 @@
 
     double-to-float v8, v10
 
-    .line 172
     .local v8, "x2":F
     float-to-double v10, v6
 
@@ -461,7 +437,6 @@
 
     double-to-float v9, v10
 
-    .line 174
     .local v9, "y2":F
     move-object/from16 v0, p0
 
@@ -471,7 +446,6 @@
 
     invoke-virtual/range {v2 .. v7}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 175
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lcom/android/server/policy/global/RebootButton;->mArcArrowPaint:Landroid/graphics/Paint;
@@ -484,12 +458,10 @@
 
     invoke-virtual/range {v7 .. v12}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 177
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v15}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    .line 178
     return-void
 .end method
 
@@ -497,12 +469,10 @@
     .locals 2
 
     .prologue
-    .line 70
     iget v0, p0, Lcom/android/server/policy/global/RebootButton;->DEFAULT_ICON_RADIUS:I
 
     iput v0, p0, Lcom/android/server/policy/global/RebootButton;->DEFAULT_ARC_RADIUS:I
 
-    .line 71
     const/high16 v0, 0x40800000    # 4.0f
 
     invoke-virtual {p0, v0}, Lcom/android/server/policy/global/RebootButton;->dipToPx(F)I
@@ -511,84 +481,70 @@
 
     iput v0, p0, Lcom/android/server/policy/global/RebootButton;->DEFAULT_ARROW_RADIUS:I
 
-    .line 73
     iget v0, p0, Lcom/android/server/policy/global/RebootButton;->DEFAULT_ARC_RADIUS:I
 
     iput v0, p0, Lcom/android/server/policy/global/RebootButton;->mArcRadius:I
 
-    .line 74
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/policy/global/RebootButton;->mArcArrowColor:I
 
-    .line 75
     const/16 v0, -0x3c
 
     iput v0, p0, Lcom/android/server/policy/global/RebootButton;->mArcStartAngle:I
 
-    .line 76
     const/16 v0, 0x12c
 
     iput v0, p0, Lcom/android/server/policy/global/RebootButton;->mArcSweepAngle:I
 
-    .line 77
     const/16 v0, 0x1e
 
     iput v0, p0, Lcom/android/server/policy/global/RebootButton;->mArrowAngle:I
 
-    .line 78
     const/16 v0, 0x14
 
     iput v0, p0, Lcom/android/server/policy/global/RebootButton;->mArrowOffsetAngle:I
 
-    .line 79
     iget v0, p0, Lcom/android/server/policy/global/RebootButton;->DEFAULT_ARROW_RADIUS:I
 
     iput v0, p0, Lcom/android/server/policy/global/RebootButton;->mArrowRadius:I
 
-    .line 81
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/policy/global/RebootButton;->mArcArrowPaint:Landroid/graphics/Paint;
 
-    .line 82
     iget-object v0, p0, Lcom/android/server/policy/global/RebootButton;->mArcArrowPaint:Landroid/graphics/Paint;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 83
     iget-object v0, p0, Lcom/android/server/policy/global/RebootButton;->mArcArrowPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/policy/global/RebootButton;->mArcArrowColor:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 84
     iget-object v0, p0, Lcom/android/server/policy/global/RebootButton;->mArcArrowPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 85
     iget-object v0, p0, Lcom/android/server/policy/global/RebootButton;->mArcArrowPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Join;->ROUND:Landroid/graphics/Paint$Join;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeJoin(Landroid/graphics/Paint$Join;)V
 
-    .line 86
     iget-object v0, p0, Lcom/android/server/policy/global/RebootButton;->mArcArrowPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
-    .line 87
     iget-object v0, p0, Lcom/android/server/policy/global/RebootButton;->mArcArrowPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/policy/global/RebootButton;->DEFAULT_PAINT_STROKE_WIDTH:I
@@ -597,7 +553,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 88
     return-void
 .end method
 
@@ -615,7 +570,6 @@
 
     const/4 v10, 0x0
 
-    .line 105
     const-string v6, "arrowScale"
 
     new-array v7, v11, [I
@@ -630,7 +584,6 @@
 
     move-result-object v4
 
-    .line 106
     .local v4, "arrowScaleIn":Landroid/animation/PropertyValuesHolder;
     const-string v6, "arcScale"
 
@@ -646,7 +599,6 @@
 
     move-result-object v2
 
-    .line 107
     .local v2, "arcScaleIn":Landroid/animation/PropertyValuesHolder;
     const-string v6, "arcRotate"
 
@@ -658,7 +610,6 @@
 
     move-result-object v1
 
-    .line 108
     .local v1, "arcRotate":Landroid/animation/PropertyValuesHolder;
     new-array v6, v14, [Landroid/animation/PropertyValuesHolder;
 
@@ -674,14 +625,12 @@
 
     iput-object v6, p0, Lcom/android/server/policy/global/RebootButton;->mArcArrowIn:Landroid/animation/ObjectAnimator;
 
-    .line 109
     iget-object v6, p0, Lcom/android/server/policy/global/RebootButton;->mArcArrowIn:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v8, 0x2bc
 
     invoke-virtual {v6, v8, v9}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 110
     iget-object v6, p0, Lcom/android/server/policy/global/RebootButton;->mArcArrowIn:Landroid/animation/ObjectAnimator;
 
     new-instance v7, Landroid/view/animation/DecelerateInterpolator;
@@ -690,14 +639,12 @@
 
     invoke-virtual {v6, v7}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 111
     iget-object v6, p0, Lcom/android/server/policy/global/RebootButton;->mArcArrowIn:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v8, 0xaf
 
     invoke-virtual {v6, v8, v9}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
 
-    .line 113
     const-string v6, "arrowScale"
 
     new-array v7, v11, [I
@@ -712,7 +659,6 @@
 
     move-result-object v5
 
-    .line 114
     .local v5, "arrowScaleOut":Landroid/animation/PropertyValuesHolder;
     const-string v6, "arcScale"
 
@@ -728,7 +674,6 @@
 
     move-result-object v3
 
-    .line 115
     .local v3, "arcScaleOut":Landroid/animation/PropertyValuesHolder;
     const-string v6, "arcArrowAlpha"
 
@@ -740,7 +685,6 @@
 
     move-result-object v0
 
-    .line 116
     .local v0, "arcArrowAlphaOut":Landroid/animation/PropertyValuesHolder;
     new-array v6, v14, [Landroid/animation/PropertyValuesHolder;
 
@@ -756,21 +700,18 @@
 
     iput-object v6, p0, Lcom/android/server/policy/global/RebootButton;->mArcArrowScaleOut:Landroid/animation/ObjectAnimator;
 
-    .line 117
     iget-object v6, p0, Lcom/android/server/policy/global/RebootButton;->mArcArrowScaleOut:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v8, 0x1f4
 
     invoke-virtual {v6, v8, v9}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 118
     iget-object v6, p0, Lcom/android/server/policy/global/RebootButton;->mArcArrowScaleOut:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v8, 0x12c
 
     invoke-virtual {v6, v8, v9}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
 
-    .line 119
     iget-object v6, p0, Lcom/android/server/policy/global/RebootButton;->mArcArrowScaleOut:Landroid/animation/ObjectAnimator;
 
     new-instance v7, Landroid/view/animation/DecelerateInterpolator;
@@ -779,7 +720,6 @@
 
     invoke-virtual {v6, v7}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 121
     const-string v6, "arcArrowRotate"
 
     new-array v7, v11, [I
@@ -792,14 +732,12 @@
 
     iput-object v6, p0, Lcom/android/server/policy/global/RebootButton;->mArcArrowRotateOut:Landroid/animation/ObjectAnimator;
 
-    .line 122
     iget-object v6, p0, Lcom/android/server/policy/global/RebootButton;->mArcArrowRotateOut:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v8, 0x28a
 
     invoke-virtual {v6, v8, v9}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 123
     iget-object v6, p0, Lcom/android/server/policy/global/RebootButton;->mArcArrowRotateOut:Landroid/animation/ObjectAnimator;
 
     new-instance v7, Landroid/view/animation/DecelerateInterpolator;
@@ -808,10 +746,8 @@
 
     invoke-virtual {v6, v7}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 124
     return-void
 
-    .line 107
     nop
 
     :array_0
@@ -820,14 +756,12 @@
         0x12c
     .end array-data
 
-    .line 115
     :array_1
     .array-data 4
         0xff
         0x0
     .end array-data
 
-    .line 121
     :array_2
     .array-data 4
         -0x3c
@@ -840,7 +774,6 @@
     .param p1, "alpha"    # I
 
     .prologue
-    .line 227
     iget-object v0, p0, Lcom/android/server/policy/global/RebootButton;->mArcArrowPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/policy/global/RebootButton;->mArcArrowColor:I
@@ -855,10 +788,8 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 228
     invoke-virtual {p0}, Lcom/android/server/policy/global/RebootButton;->invalidate()V
 
-    .line 229
     return-void
 .end method
 
@@ -867,13 +798,10 @@
     .param p1, "startAngle"    # I
 
     .prologue
-    .line 185
     iput p1, p0, Lcom/android/server/policy/global/RebootButton;->mArcStartAngle:I
 
-    .line 186
     invoke-virtual {p0}, Lcom/android/server/policy/global/RebootButton;->invalidate()V
 
-    .line 187
     return-void
 .end method
 
@@ -882,13 +810,10 @@
     .param p1, "sweepAngle"    # I
 
     .prologue
-    .line 196
     iput p1, p0, Lcom/android/server/policy/global/RebootButton;->mArcSweepAngle:I
 
-    .line 197
     invoke-virtual {p0}, Lcom/android/server/policy/global/RebootButton;->invalidate()V
 
-    .line 198
     return-void
 .end method
 
@@ -897,13 +822,10 @@
     .param p1, "arcRadius"    # I
 
     .prologue
-    .line 217
     iput p1, p0, Lcom/android/server/policy/global/RebootButton;->mArcRadius:I
 
-    .line 218
     invoke-virtual {p0}, Lcom/android/server/policy/global/RebootButton;->invalidate()V
 
-    .line 219
     return-void
 .end method
 
@@ -912,13 +834,10 @@
     .param p1, "arrowRadius"    # I
 
     .prologue
-    .line 206
     iput p1, p0, Lcom/android/server/policy/global/RebootButton;->mArrowRadius:I
 
-    .line 207
     invoke-virtual {p0}, Lcom/android/server/policy/global/RebootButton;->invalidate()V
 
-    .line 208
     return-void
 .end method
 
@@ -928,24 +847,20 @@
     .locals 3
 
     .prologue
-    .line 258
     invoke-virtual {p0}, Lcom/android/server/policy/global/RebootButton;->isClickable()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 277
     :goto_0
     return-void
 
-    .line 261
     :cond_0
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
-    .line 262
     .local v0, "set":Landroid/animation/AnimatorSet;
     iget-object v1, p0, Lcom/android/server/policy/global/RebootButton;->mTipOut:Landroid/animation/ObjectAnimator;
 
@@ -963,14 +878,12 @@
 
     invoke-virtual {v1, v2}, Landroid/animation/AnimatorSet$Builder;->with(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    .line 263
     new-instance v1, Lcom/android/server/policy/global/RebootButton$2;
 
     invoke-direct {v1, p0}, Lcom/android/server/policy/global/RebootButton$2;-><init>(Lcom/android/server/policy/global/RebootButton;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 276
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
     goto :goto_0
@@ -981,10 +894,8 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 128
     invoke-direct {p0, p1}, Lcom/android/server/policy/global/RebootButton;->drawArcArrow(Landroid/graphics/Canvas;)V
 
-    .line 129
     return-void
 .end method
 
@@ -993,7 +904,6 @@
     .param p1, "animation"    # Z
 
     .prologue
-    .line 248
     invoke-virtual {p0}, Lcom/android/server/policy/global/RebootButton;->isClickable()Z
 
     move-result v0
@@ -1004,12 +914,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 252
     :cond_0
     :goto_0
     return-void
 
-    .line 251
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/policy/global/RebootButton;->cancel()V
 
@@ -1020,7 +928,6 @@
     .locals 1
 
     .prologue
-    .line 18
     invoke-super {p0, p1}, Lcom/android/server/policy/global/CircleButton;->hintRingArea(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -1032,18 +939,14 @@
     .locals 1
 
     .prologue
-    .line 61
     invoke-direct {p0}, Lcom/android/server/policy/global/RebootButton;->initArcArrowParams()V
 
-    .line 62
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/android/server/policy/global/RebootButton;->resetParams(Z)V
 
-    .line 63
     invoke-direct {p0}, Lcom/android/server/policy/global/RebootButton;->loadArcArrowAnimator()V
 
-    .line 64
     return-void
 .end method
 
@@ -1051,7 +954,6 @@
     .locals 1
 
     .prologue
-    .line 18
     invoke-super {p0, p1}, Lcom/android/server/policy/global/CircleButton;->onFilterTouchEventForSecurity(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -1063,24 +965,20 @@
     .locals 3
 
     .prologue
-    .line 283
     invoke-virtual {p0}, Lcom/android/server/policy/global/RebootButton;->isClickable()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 291
     :goto_0
     return-void
 
-    .line 286
     :cond_0
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
-    .line 287
     .local v0, "set":Landroid/animation/AnimatorSet;
     iget-object v1, p0, Lcom/android/server/policy/global/RebootButton;->mCircleOutFirst:Landroid/animation/ObjectAnimator;
 
@@ -1104,7 +1002,6 @@
 
     invoke-virtual {v1, v2}, Landroid/animation/AnimatorSet$Builder;->with(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    .line 288
     iget-object v1, p0, Lcom/android/server/policy/global/RebootButton;->mCircleOutSecond:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
@@ -1115,14 +1012,12 @@
 
     invoke-virtual {v1, v2}, Landroid/animation/AnimatorSet$Builder;->after(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    .line 289
     new-instance v1, Lcom/android/server/policy/global/CircleButton$ClickableControlListener;
 
     invoke-direct {v1, p0}, Lcom/android/server/policy/global/CircleButton$ClickableControlListener;-><init>(Lcom/android/server/policy/global/CircleButton;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 290
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
     goto :goto_0
@@ -1135,16 +1030,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 92
     invoke-super {p0, p1}, Lcom/android/server/policy/global/CircleButton;->resetParams(Z)V
 
-    .line 93
     iput v0, p0, Lcom/android/server/policy/global/RebootButton;->mArcRadius:I
 
-    .line 94
     iput v0, p0, Lcom/android/server/policy/global/RebootButton;->mArrowRadius:I
 
-    .line 95
     return-void
 .end method
 
@@ -1152,7 +1043,6 @@
     .locals 0
 
     .prologue
-    .line 18
     invoke-super {p0, p1}, Lcom/android/server/policy/global/CircleButton;->setAlaphaWhenDrag(F)V
 
     return-void
@@ -1163,24 +1053,20 @@
     .param p1, "animation"    # Z
 
     .prologue
-    .line 232
     invoke-virtual {p0}, Lcom/android/server/policy/global/RebootButton;->isClickable()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 245
     :goto_0
     return-void
 
-    .line 235
     :cond_0
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
-    .line 236
     .local v0, "set":Landroid/animation/AnimatorSet;
     iget-object v1, p0, Lcom/android/server/policy/global/RebootButton;->mCircleIn:Landroid/animation/ObjectAnimator;
 
@@ -1198,14 +1084,12 @@
 
     invoke-virtual {v1, v2}, Landroid/animation/AnimatorSet$Builder;->with(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    .line 237
     new-instance v1, Lcom/android/server/policy/global/RebootButton$1;
 
     invoke-direct {v1, p0}, Lcom/android/server/policy/global/RebootButton$1;-><init>(Lcom/android/server/policy/global/RebootButton;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 244
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
     goto :goto_0

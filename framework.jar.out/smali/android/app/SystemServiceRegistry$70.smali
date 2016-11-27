@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 726
     invoke-direct {p0}, Landroid/app/SystemServiceRegistry$CachedServiceFetcher;-><init>()V
 
     return-void
@@ -41,14 +40,12 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 729
     const-string v1, "accesscontrol"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 730
     .local v0, "b":Landroid/os/IBinder;
     new-instance v1, Landroid/app/AccessControlManager;
 
@@ -65,7 +62,6 @@
     .locals 1
 
     .prologue
-    .line 726
     invoke-virtual {p0, p1}, Landroid/app/SystemServiceRegistry$70;->createService(Landroid/app/ContextImpl;)Landroid/app/AccessControlManager;
 
     move-result-object v0

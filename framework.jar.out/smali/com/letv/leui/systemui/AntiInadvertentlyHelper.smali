@@ -63,7 +63,6 @@
     .locals 1
 
     .prologue
-    .line 44
     const-class v0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -72,7 +71,6 @@
 
     sput-object v0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->TAG:Ljava/lang/String;
 
-    .line 49
     const/4 v0, 0x1
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -91,46 +89,36 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 72
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 51
     iput-boolean v1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mProximitySensorEnabled:Z
 
-    .line 53
     iput-boolean v1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->isVrDeviceIn:Z
 
-    .line 54
     iput-boolean v1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->isSettingEnable:Z
 
-    .line 60
     iput-boolean v1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mTouchAble:Z
 
-    .line 128
     new-instance v1, Lcom/letv/leui/systemui/AntiInadvertentlyHelper$3;
 
     invoke-direct {v1, p0}, Lcom/letv/leui/systemui/AntiInadvertentlyHelper$3;-><init>(Lcom/letv/leui/systemui/AntiInadvertentlyHelper;)V
 
     iput-object v1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mHandler:Landroid/os/Handler;
 
-    .line 265
     new-instance v1, Lcom/letv/leui/systemui/AntiInadvertentlyHelper$5;
 
     invoke-direct {v1, p0}, Lcom/letv/leui/systemui/AntiInadvertentlyHelper$5;-><init>(Lcom/letv/leui/systemui/AntiInadvertentlyHelper;)V
 
     iput-object v1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 285
     new-instance v1, Lcom/letv/leui/systemui/AntiInadvertentlyHelper$6;
 
     invoke-direct {v1, p0}, Lcom/letv/leui/systemui/AntiInadvertentlyHelper$6;-><init>(Lcom/letv/leui/systemui/AntiInadvertentlyHelper;)V
 
     iput-object v1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mLocateChangeRunnable:Ljava/lang/Runnable;
 
-    .line 73
     iput-object p1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mContext:Landroid/content/Context;
 
-    .line 74
     iget-object v1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mContext:Landroid/content/Context;
 
     const-string v2, "power"
@@ -143,10 +131,8 @@
 
     iput-object v1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mPM:Landroid/os/PowerManager;
 
-    .line 75
     invoke-direct {p0}, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->initSettings()V
 
-    .line 76
     iget-object v1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mPM:Landroid/os/PowerManager;
 
     invoke-virtual {v1}, Landroid/os/PowerManager;->isScreenOn()Z
@@ -155,7 +141,6 @@
 
     iput-boolean v1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->isScreenOn:Z
 
-    .line 77
     new-instance v1, Lcom/letv/leui/systemui/ProximitySensorHelper;
 
     iget-object v2, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mContext:Landroid/content/Context;
@@ -166,48 +151,39 @@
 
     iput-object v1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mProximitySensorHelper:Lcom/letv/leui/systemui/ProximitySensorHelper;
 
-    .line 78
     iget-object v1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mProximitySensorHelper:Lcom/letv/leui/systemui/ProximitySensorHelper;
 
     invoke-virtual {v1, p0}, Lcom/letv/leui/systemui/ProximitySensorHelper;->setStateCallback(Lcom/letv/leui/systemui/ProximitySensorHelper$StateCallback;)V
 
-    .line 79
     new-instance v1, Landroid/widget/FrameLayout;
 
     invoke-direct {v1, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     iput-object v1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mCoverView:Landroid/view/ViewGroup;
 
-    .line 80
     invoke-direct {p0, p1}, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->loadViews(Landroid/content/Context;)V
 
-    .line 82
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 83
     .local v0, "mIntentFilter":Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.LOCALE_CHANGED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 84
     const-string v1, "android.intent.action.lvr_hmd_in"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 85
     const-string v1, "android.intent.action.lvr_hmd_out"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 86
     iget-object v1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p1, v1, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 88
     sget-object v1, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->ENABLE_ANTI_INADVERTENTLY:Ljava/lang/Boolean;
 
     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
@@ -220,10 +196,8 @@
 
     if-nez v1, :cond_0
 
-    .line 89
     invoke-virtual {p0}, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->onScreenTurnOff()V
 
-    .line 90
     :cond_0
     return-void
 .end method
@@ -233,7 +207,6 @@
     .param p0, "x0"    # Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     .prologue
-    .line 43
     iget-boolean v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->isSettingEnable:Z
 
     return v0
@@ -245,7 +218,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 43
     iput-boolean p1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->isSettingEnable:Z
 
     return p1
@@ -256,7 +228,6 @@
     .param p0, "x0"    # Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     .prologue
-    .line 43
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -267,7 +238,6 @@
     .param p0, "x0"    # Ljava/lang/Boolean;
 
     .prologue
-    .line 43
     sput-object p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->ENABLE_ANTI_INADVERTENTLY:Ljava/lang/Boolean;
 
     return-object p0
@@ -278,7 +248,6 @@
     .param p0, "x0"    # Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     .prologue
-    .line 43
     invoke-direct {p0}, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->forceRelease()V
 
     return-void
@@ -289,7 +258,6 @@
     .param p0, "x0"    # Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     .prologue
-    .line 43
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -300,7 +268,6 @@
     .param p0, "x0"    # Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     .prologue
-    .line 43
     iget-boolean v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->isVrDeviceIn:Z
 
     return v0
@@ -312,7 +279,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 43
     iput-boolean p1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->isVrDeviceIn:Z
 
     return p1
@@ -323,7 +289,6 @@
     .param p0, "x0"    # Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     .prologue
-    .line 43
     iget-boolean v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mTouchAble:Z
 
     return v0
@@ -333,7 +298,6 @@
     .locals 1
 
     .prologue
-    .line 43
     sget-object v0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -344,7 +308,6 @@
     .param p0, "x0"    # Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     .prologue
-    .line 43
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mCoverView:Landroid/view/ViewGroup;
 
     return-object v0
@@ -355,7 +318,6 @@
     .param p0, "x0"    # Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     .prologue
-    .line 43
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mProximitySensorHelper:Lcom/letv/leui/systemui/ProximitySensorHelper;
 
     return-object v0
@@ -367,7 +329,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 43
     invoke-direct {p0, p1}, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->updateWindowFocus(Z)V
 
     return-void
@@ -379,7 +340,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 43
     invoke-direct {p0, p1}, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->updateWindowVisiblity(Z)V
 
     return-void
@@ -390,7 +350,6 @@
     .param p0, "x0"    # Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     .prologue
-    .line 43
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mLocateChangeRunnable:Ljava/lang/Runnable;
 
     return-object v0
@@ -400,22 +359,18 @@
     .locals 2
 
     .prologue
-    .line 247
     const v0, 0x8d04
 
     const-string v1, "forceRelease"
 
     invoke-static {v0, v1}, Landroid/util/EventLog;->writeEvent(ILjava/lang/String;)I
 
-    .line 248
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->updateWindowVisiblity(Z)V
 
-    .line 249
     invoke-direct {p0}, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->resetTouchPanel()V
 
-    .line 250
     return-void
 .end method
 
@@ -424,19 +379,16 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 67
     sget-object v0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mInstance:Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     if-nez v0, :cond_0
 
-    .line 68
     new-instance v0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     invoke-direct {v0, p0}, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mInstance:Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
-    .line 69
     :cond_0
     sget-object v0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mInstance:Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
@@ -451,14 +403,12 @@
 
     const/4 v2, 0x1
 
-    .line 93
     iget-object v1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 94
     .local v0, "cr":Landroid/content/ContentResolver;
     const-string v1, "leui_anti_inadvertently"
 
@@ -473,7 +423,6 @@
     :goto_0
     iput-boolean v1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->isSettingEnable:Z
 
-    .line 95
     iget-boolean v1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->isSettingEnable:Z
 
     if-eqz v1, :cond_0
@@ -491,7 +440,6 @@
 
     sput-object v1, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->ENABLE_ANTI_INADVERTENTLY:Ljava/lang/Boolean;
 
-    .line 96
     new-instance v1, Lcom/letv/leui/systemui/AntiInadvertentlyHelper$1;
 
     iget-object v3, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mHandler:Landroid/os/Handler;
@@ -500,7 +448,6 @@
 
     iput-object v1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mWeatherSettingObserver:Landroid/database/ContentObserver;
 
-    .line 103
     const-string v1, "leui_anti_inadvertently"
 
     invoke-static {v1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -511,13 +458,11 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 106
     return-void
 
     :cond_1
     move v1, v3
 
-    .line 94
     goto :goto_0
 .end method
 
@@ -526,12 +471,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 109
     iget-object v1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mCoverView:Landroid/view/ViewGroup;
 
     invoke-virtual {v1}, Landroid/view/ViewGroup;->removeAllViews()V
 
-    .line 110
     const v1, 0x1090079
 
     iget-object v2, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mCoverView:Landroid/view/ViewGroup;
@@ -540,7 +483,6 @@
 
     move-result-object v0
 
-    .line 111
     .local v0, "cover":Landroid/view/View;
     iget-object v1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mCoverView:Landroid/view/ViewGroup;
 
@@ -550,7 +492,6 @@
 
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 126
     return-void
 .end method
 
@@ -558,7 +499,6 @@
     .locals 3
 
     .prologue
-    .line 262
     sget-object v0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -587,7 +527,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 263
     return-void
 .end method
 
@@ -596,20 +535,16 @@
     .param p1, "needFocus"    # Z
 
     .prologue
-    .line 222
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mLp:Landroid/view/WindowManager$LayoutParams;
 
     if-nez v0, :cond_0
 
-    .line 231
     :goto_0
     return-void
 
-    .line 225
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 226
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mLp:Landroid/view/WindowManager$LayoutParams;
 
     iget v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
@@ -618,7 +553,6 @@
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 230
     :goto_1
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mWindowManager:Landroid/view/WindowManager;
 
@@ -630,7 +564,6 @@
 
     goto :goto_0
 
-    .line 228
     :cond_1
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mLp:Landroid/view/WindowManager$LayoutParams;
 
@@ -656,7 +589,6 @@
 
     const/4 v6, 0x0
 
-    .line 168
     sget-object v0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -703,12 +635,10 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 169
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mWindowManager:Landroid/view/WindowManager;
 
     if-nez v0, :cond_0
 
-    .line 170
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mContext:Landroid/content/Context;
 
     const-string v2, "window"
@@ -721,7 +651,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mWindowManager:Landroid/view/WindowManager;
 
-    .line 171
     new-instance v0, Landroid/view/WindowManager$LayoutParams;
 
     const/16 v3, 0x7da
@@ -736,7 +665,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mLp:Landroid/view/WindowManager$LayoutParams;
 
-    .line 179
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mLp:Landroid/view/WindowManager$LayoutParams;
 
     iget v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
@@ -747,21 +675,18 @@
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 180
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mLp:Landroid/view/WindowManager$LayoutParams;
 
     const/16 v1, 0x30
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    .line 181
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mLp:Landroid/view/WindowManager$LayoutParams;
 
     const-string v1, "AntiInadvertently"
 
     invoke-virtual {v0, v1}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 182
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mLp:Landroid/view/WindowManager$LayoutParams;
 
     iget-object v1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mContext:Landroid/content/Context;
@@ -772,14 +697,12 @@
 
     iput-object v1, v0, Landroid/view/WindowManager$LayoutParams;->packageName:Ljava/lang/String;
 
-    .line 183
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mLp:Landroid/view/WindowManager$LayoutParams;
 
     const-wide/16 v2, 0x0
 
     iput-wide v2, v0, Landroid/view/WindowManager$LayoutParams;->userActivityTimeout:J
 
-    .line 184
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mLp:Landroid/view/WindowManager$LayoutParams;
 
     iget v1, v0, Landroid/view/WindowManager$LayoutParams;->inputFeatures:I
@@ -790,7 +713,6 @@
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->inputFeatures:I
 
-    .line 188
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mWindowManager:Landroid/view/WindowManager;
 
     iget-object v1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mCoverView:Landroid/view/ViewGroup;
@@ -799,11 +721,9 @@
 
     invoke-interface {v0, v1, v2}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 190
     :cond_0
     if-eqz p1, :cond_2
 
-    .line 191
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mCoverView:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->animate()Landroid/view/ViewPropertyAnimator;
@@ -812,36 +732,29 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    .line 192
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mCoverView:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, v6}, Landroid/view/ViewGroup;->setAlpha(F)V
 
-    .line 193
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mCoverView:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, v7}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    .line 194
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mCoverView:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->invalidate()V
 
-    .line 195
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mTouchAble:Z
 
-    .line 219
     :cond_1
     :goto_0
     return-void
 
-    .line 197
     :cond_2
     iput-boolean v7, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mTouchAble:Z
 
-    .line 198
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mCoverView:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->animate()Landroid/view/ViewPropertyAnimator;
@@ -850,7 +763,6 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    .line 199
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mCoverView:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getAlpha()F
@@ -861,7 +773,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 200
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mCoverView:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->animate()Landroid/view/ViewPropertyAnimator;
@@ -898,7 +809,6 @@
 
     goto :goto_0
 
-    .line 213
     :cond_3
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mCoverView:Landroid/view/ViewGroup;
 
@@ -908,19 +818,16 @@
 
     if-eq v0, v8, :cond_1
 
-    .line 214
     sget-object v0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->TAG:Ljava/lang/String;
 
     const-string v1, "setVisibility(View.GONE)"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 215
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mCoverView:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, v8}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    .line 216
     invoke-direct {p0, v7}, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->updateWindowFocus(Z)V
 
     goto :goto_0
@@ -932,22 +839,18 @@
     .locals 2
 
     .prologue
-    .line 234
     const v0, 0x8d04
 
     const-string v1, "AntiInadevertentlyRelease"
 
     invoke-static {v0, v1}, Landroid/util/EventLog;->writeEvent(ILjava/lang/String;)I
 
-    .line 235
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->updateWindowVisiblity(Z)V
 
-    .line 236
     invoke-direct {p0}, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->resetTouchPanel()V
 
-    .line 237
     return-void
 .end method
 
@@ -955,22 +858,18 @@
     .locals 2
 
     .prologue
-    .line 241
     const v0, 0x8d04
 
     const-string v1, "SenosrTimeout"
 
     invoke-static {v0, v1}, Landroid/util/EventLog;->writeEvent(ILjava/lang/String;)I
 
-    .line 242
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->updateWindowVisiblity(Z)V
 
-    .line 243
     invoke-direct {p0}, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->resetTouchPanel()V
 
-    .line 244
     return-void
 .end method
 
@@ -981,7 +880,6 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 316
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1004,7 +902,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 317
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1027,7 +924,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 318
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1050,7 +946,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 319
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1122,7 +1017,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 322
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1169,21 +1063,17 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 325
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mProximitySensorHelper:Lcom/letv/leui/systemui/ProximitySensorHelper;
 
     if-eqz v0, :cond_0
 
-    .line 326
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mProximitySensorHelper:Lcom/letv/leui/systemui/ProximitySensorHelper;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/letv/leui/systemui/ProximitySensorHelper;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 327
     :cond_0
     return-void
 
-    .line 319
     :cond_1
     const-string v0, ""
 
@@ -1195,7 +1085,6 @@
     .param p1, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
-    .line 254
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->local:Ljava/util/Locale;
 
     if-eqz v0, :cond_0
@@ -1210,18 +1099,15 @@
 
     if-nez v0, :cond_1
 
-    .line 255
     :cond_0
     iget-object v0, p1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
     iput-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->local:Ljava/util/Locale;
 
-    .line 256
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mContext:Landroid/content/Context;
 
     invoke-direct {p0, v0}, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->loadViews(Landroid/content/Context;)V
 
-    .line 258
     :cond_1
     return-void
 .end method
@@ -1230,17 +1116,14 @@
     .locals 2
 
     .prologue
-    .line 159
     iget-boolean v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->isScreenOn:Z
 
     if-eqz v0, :cond_0
 
-    .line 160
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->isScreenOn:Z
 
-    .line 161
     sget-object v0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->ENABLE_ANTI_INADVERTENTLY:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -1249,14 +1132,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 162
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 165
     :cond_0
     return-void
 .end method
@@ -1267,15 +1148,12 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 150
     iget-boolean v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->isScreenOn:Z
 
     if-nez v0, :cond_0
 
-    .line 151
     iput-boolean v1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->isScreenOn:Z
 
-    .line 152
     sget-object v0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->ENABLE_ANTI_INADVERTENTLY:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -1284,12 +1162,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 153
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 156
     :cond_0
     return-void
 .end method
@@ -1299,23 +1175,19 @@
     .param p1, "pm"    # Landroid/os/PowerManager;
 
     .prologue
-    .line 293
     const/4 v2, 0x0
 
-    .line 294
     .local v2, "result":Z
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 296
     .local v0, "clazz":Ljava/lang/Class;
     :try_start_0
     iget-object v4, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->resultMethod:Ljava/lang/reflect/Method;
 
     if-nez v4, :cond_0
 
-    .line 297
     const-string v4, "resetTouch"
 
     const/4 v5, 0x0
@@ -1328,13 +1200,11 @@
 
     iput-object v4, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->resultMethod:Ljava/lang/reflect/Method;
 
-    .line 298
     :cond_0
     iget-object v4, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->resultMethod:Ljava/lang/reflect/Method;
 
     if-eqz v4, :cond_1
 
-    .line 299
     iget-object v4, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->resultMethod:Ljava/lang/reflect/Method;
 
     const/4 v5, 0x0
@@ -1349,74 +1219,61 @@
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_3
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 300
     const/4 v2, 0x1
 
     :cond_1
     move v3, v2
 
-    .line 311
     .end local v2    # "result":Z
     .local v3, "result":I
     :goto_0
     return v3
 
-    .line 302
     .end local v3    # "result":I
     .restart local v2    # "result":Z
     :catch_0
     move-exception v1
 
-    .line 303
     .local v1, "e":Ljava/lang/NoSuchMethodException;
     :try_start_1
     invoke-virtual {v1}, Ljava/lang/NoSuchMethodException;->printStackTrace()V
 
     move v3, v2
 
-    .line 311
     .restart local v3    # "result":I
     goto :goto_0
 
-    .line 304
     .end local v1    # "e":Ljava/lang/NoSuchMethodException;
     .end local v3    # "result":I
     :catch_1
     move-exception v1
 
-    .line 305
     .local v1, "e":Ljava/lang/IllegalAccessException;
     invoke-virtual {v1}, Ljava/lang/IllegalAccessException;->printStackTrace()V
 
     move v3, v2
 
-    .line 311
     .restart local v3    # "result":I
     goto :goto_0
 
-    .line 306
     .end local v1    # "e":Ljava/lang/IllegalAccessException;
     .end local v3    # "result":I
     :catch_2
     move-exception v1
 
-    .line 307
     .local v1, "e":Ljava/lang/IllegalArgumentException;
     invoke-virtual {v1}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
 
     move v3, v2
 
-    .line 311
     .restart local v3    # "result":I
     goto :goto_0
 
-    .line 308
     .end local v1    # "e":Ljava/lang/IllegalArgumentException;
     .end local v3    # "result":I
     :catch_3
     move-exception v1
 
-    .line 309
     .local v1, "e":Ljava/lang/reflect/InvocationTargetException;
     invoke-virtual {v1}, Ljava/lang/reflect/InvocationTargetException;->printStackTrace()V
     :try_end_1
@@ -1424,7 +1281,6 @@
 
     move v3, v2
 
-    .line 311
     .restart local v3    # "result":I
     goto :goto_0
 

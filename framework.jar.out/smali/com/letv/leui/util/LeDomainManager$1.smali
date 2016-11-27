@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 71
     iput-object p1, p0, Lcom/letv/leui/util/LeDomainManager$1;->this$0:Lcom/letv/leui/util/LeDomainManager;
 
     iput-object p2, p0, Lcom/letv/leui/util/LeDomainManager$1;->val$region:Ljava/lang/String;
@@ -49,7 +48,6 @@
     .param p1, "callback"    # Lcom/letv/leui/util/LeDomainManager$Callback;
 
     .prologue
-    .line 74
     iget-object v0, p0, Lcom/letv/leui/util/LeDomainManager$1;->this$0:Lcom/letv/leui/util/LeDomainManager;
 
     iget-object v1, p0, Lcom/letv/leui/util/LeDomainManager$1;->val$region:Ljava/lang/String;
@@ -58,6 +56,5 @@
 
     invoke-virtual {v0, v1, p1, v2}, Lcom/letv/leui/util/LeDomainManager;->getDomainByRegion(Ljava/lang/String;Lcom/letv/leui/util/LeDomainManager$Callback;[Ljava/lang/String;)V
 
-    .line 75
     return-void
 .end method

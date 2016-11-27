@@ -17,18 +17,14 @@
     .param p1, "statusCode"    # I
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
 
-    .line 12
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/activation/exception/MethodRequestException;->statusCode:I
 
-    .line 37
     iput p1, p0, Lcom/android/server/activation/exception/MethodRequestException;->statusCode:I
 
-    .line 38
     return-void
 .end method
 
@@ -37,15 +33,12 @@
     .param p1, "cause"    # Ljava/lang/Exception;
 
     .prologue
-    .line 19
     invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
 
-    .line 12
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/activation/exception/MethodRequestException;->statusCode:I
 
-    .line 20
     return-void
 .end method
 
@@ -54,15 +47,12 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 15
     invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 12
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/activation/exception/MethodRequestException;->statusCode:I
 
-    .line 16
     return-void
 .end method
 
@@ -72,18 +62,14 @@
     .param p2, "statusCode"    # I
 
     .prologue
-    .line 23
     invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 12
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/activation/exception/MethodRequestException;->statusCode:I
 
-    .line 24
     iput p2, p0, Lcom/android/server/activation/exception/MethodRequestException;->statusCode:I
 
-    .line 25
     return-void
 .end method
 
@@ -93,15 +79,12 @@
     .param p2, "cause"    # Ljava/lang/Exception;
 
     .prologue
-    .line 28
     invoke-direct {p0, p1, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 12
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/activation/exception/MethodRequestException;->statusCode:I
 
-    .line 29
     return-void
 .end method
 
@@ -112,18 +95,14 @@
     .param p3, "statusCode"    # I
 
     .prologue
-    .line 32
     invoke-direct {p0, p1, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 12
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/activation/exception/MethodRequestException;->statusCode:I
 
-    .line 33
     iput p3, p0, Lcom/android/server/activation/exception/MethodRequestException;->statusCode:I
 
-    .line 34
     return-void
 .end method
 
@@ -133,7 +112,6 @@
     .locals 1
 
     .prologue
-    .line 41
     iget v0, p0, Lcom/android/server/activation/exception/MethodRequestException;->statusCode:I
 
     return v0

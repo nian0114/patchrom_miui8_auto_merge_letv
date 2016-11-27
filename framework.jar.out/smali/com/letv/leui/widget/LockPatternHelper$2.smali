@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 119
     iput-object p1, p0, Lcom/letv/leui/widget/LockPatternHelper$2;->this$0:Lcom/letv/leui/widget/LockPatternHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p3, "times"    # I
 
     .prologue
-    .line 123
     :try_start_0
     iget-object v2, p0, Lcom/letv/leui/widget/LockPatternHelper$2;->this$0:Lcom/letv/leui/widget/LockPatternHelper;
 
@@ -58,11 +56,9 @@
 
     check-cast v0, Lcom/android/internal/widget/LockPatternView$Cell;
 
-    .line 124
     .local v0, "cell":Lcom/android/internal/widget/LockPatternView$Cell;
     if-eqz v0, :cond_0
 
-    .line 125
     iget-object v2, p0, Lcom/letv/leui/widget/LockPatternHelper$2;->this$0:Lcom/letv/leui/widget/LockPatternHelper;
 
     # getter for: Lcom/letv/leui/widget/LockPatternHelper;->mLockPatternRings:[[Lcom/letv/leui/widget/LockPatternRing;
@@ -86,17 +82,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 130
     .end local v0    # "cell":Lcom/android/internal/widget/LockPatternView$Cell;
     :cond_0
     :goto_0
     return-void
 
-    .line 127
     :catch_0
     move-exception v1
 
-    .line 128
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 

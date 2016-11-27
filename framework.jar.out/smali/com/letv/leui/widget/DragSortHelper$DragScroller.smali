@@ -52,17 +52,14 @@
     .locals 1
 
     .prologue
-    .line 2028
     iput-object p1, p0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->this$0:Lcom/letv/leui/widget/DragSortHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2015
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->mScrolling:Z
 
-    .line 2029
     return-void
 .end method
 
@@ -72,7 +69,6 @@
     .locals 1
 
     .prologue
-    .line 2025
     iget-boolean v0, p0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->mScrolling:Z
 
     if-eqz v0, :cond_0
@@ -92,7 +88,6 @@
     .locals 1
 
     .prologue
-    .line 2021
     iget-boolean v0, p0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->mScrolling:Z
 
     return v0
@@ -102,25 +97,21 @@
     .locals 18
 
     .prologue
-    .line 2056
     move-object/from16 v0, p0
 
     iget-boolean v13, v0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->mAbort:Z
 
     if-eqz v13, :cond_0
 
-    .line 2057
     const/4 v13, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v13, v0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->mScrolling:Z
 
-    .line 2142
     :goto_0
     return-void
 
-    .line 2063
     :cond_0
     move-object/from16 v0, p0
 
@@ -135,7 +126,6 @@
 
     move-result v3
 
-    .line 2064
     .local v3, "first":I
     move-object/from16 v0, p0
 
@@ -150,7 +140,6 @@
 
     move-result v4
 
-    .line 2065
     .local v4, "last":I
     move-object/from16 v0, p0
 
@@ -165,7 +154,6 @@
 
     move-result v2
 
-    .line 2066
     .local v2, "count":I
     move-object/from16 v0, p0
 
@@ -180,7 +168,6 @@
 
     move-result v10
 
-    .line 2067
     .local v10, "padTop":I
     move-object/from16 v0, p0
 
@@ -212,7 +199,6 @@
 
     sub-int v5, v13, v14
 
-    .line 2069
     .local v5, "listHeight":I
     move-object/from16 v0, p0
 
@@ -247,7 +233,6 @@
 
     move-result v7
 
-    .line 2070
     .local v7, "minY":I
     move-object/from16 v0, p0
 
@@ -282,7 +267,6 @@
 
     move-result v6
 
-    .line 2072
     .local v6, "maxY":I
     move-object/from16 v0, p0
 
@@ -290,7 +274,6 @@
 
     if-nez v13, :cond_4
 
-    .line 2073
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->this$0:Lcom/letv/leui/widget/DragSortHelper;
@@ -306,11 +289,9 @@
 
     move-result-object v12
 
-    .line 2075
     .local v12, "v":Landroid/view/View;
     if-nez v12, :cond_1
 
-    .line 2076
     const/4 v13, 0x0
 
     move-object/from16 v0, p0
@@ -319,7 +300,6 @@
 
     goto/16 :goto_0
 
-    .line 2079
     :cond_1
     if-nez v3, :cond_2
 
@@ -329,7 +309,6 @@
 
     if-ne v13, v10, :cond_2
 
-    .line 2080
     const/4 v13, 0x0
 
     move-object/from16 v0, p0
@@ -338,7 +317,6 @@
 
     goto/16 :goto_0
 
-    .line 2084
     :cond_2
     move-object/from16 v0, p0
 
@@ -389,7 +367,6 @@
 
     iput v13, v0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->mScrollSpeed:F
 
-    .line 2101
     :goto_1
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -399,7 +376,6 @@
 
     iput-wide v14, v0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->mCurrTime:J
 
-    .line 2102
     move-object/from16 v0, p0
 
     iget-wide v14, v0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->mCurrTime:J
@@ -418,7 +394,6 @@
 
     iput v13, v0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->dt:F
 
-    .line 2108
     move-object/from16 v0, p0
 
     iget v13, v0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->mScrollSpeed:F
@@ -437,14 +412,12 @@
 
     iput v13, v0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->dy:I
 
-    .line 2111
     move-object/from16 v0, p0
 
     iget v13, v0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->dy:I
 
     if-ltz v13, :cond_7
 
-    .line 2112
     move-object/from16 v0, p0
 
     iget v13, v0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->dy:I
@@ -457,10 +430,8 @@
 
     iput v13, v0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->dy:I
 
-    .line 2113
     move v9, v3
 
-    .line 2119
     .local v9, "movePos":I
     :goto_2
     move-object/from16 v0, p0
@@ -478,7 +449,6 @@
 
     move-result-object v8
 
-    .line 2120
     .local v8, "moveItem":Landroid/view/View;
     invoke-virtual {v8}, Landroid/view/View;->getTop()I
 
@@ -490,16 +460,13 @@
 
     add-int v11, v13, v14
 
-    .line 2122
     .local v11, "top":I
     if-nez v9, :cond_3
 
     if-le v11, v10, :cond_3
 
-    .line 2123
     move v11, v10
 
-    .line 2127
     :cond_3
     move-object/from16 v0, p0
 
@@ -510,7 +477,6 @@
     # setter for: Lcom/letv/leui/widget/DragSortHelper;->mBlockLayoutRequests:Z
     invoke-static {v13, v14}, Lcom/letv/leui/widget/DragSortHelper;->access$1902(Lcom/letv/leui/widget/DragSortHelper;Z)Z
 
-    .line 2129
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->this$0:Lcom/letv/leui/widget/DragSortHelper;
@@ -524,7 +490,6 @@
 
     invoke-virtual {v13, v9, v14}, Lcom/letv/leui/widget/LeListView;->setSelectionFromTop(II)V
 
-    .line 2130
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->this$0:Lcom/letv/leui/widget/DragSortHelper;
@@ -536,7 +501,6 @@
 
     invoke-virtual {v13}, Lcom/letv/leui/widget/LeListView;->layoutChildren()V
 
-    .line 2131
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->this$0:Lcom/letv/leui/widget/DragSortHelper;
@@ -548,7 +512,6 @@
 
     invoke-virtual {v13}, Lcom/letv/leui/widget/LeListView;->invalidate()V
 
-    .line 2133
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->this$0:Lcom/letv/leui/widget/DragSortHelper;
@@ -558,7 +521,6 @@
     # setter for: Lcom/letv/leui/widget/DragSortHelper;->mBlockLayoutRequests:Z
     invoke-static {v13, v14}, Lcom/letv/leui/widget/DragSortHelper;->access$1902(Lcom/letv/leui/widget/DragSortHelper;Z)Z
 
-    .line 2136
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->this$0:Lcom/letv/leui/widget/DragSortHelper;
@@ -568,7 +530,6 @@
     # invokes: Lcom/letv/leui/widget/DragSortHelper;->doDragFloatView(ILandroid/view/View;Z)V
     invoke-static {v13, v9, v8, v14}, Lcom/letv/leui/widget/DragSortHelper;->access$2000(Lcom/letv/leui/widget/DragSortHelper;ILandroid/view/View;Z)V
 
-    .line 2138
     move-object/from16 v0, p0
 
     iget-wide v14, v0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->mCurrTime:J
@@ -577,7 +538,6 @@
 
     iput-wide v14, v0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->mPrevTime:J
 
-    .line 2141
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->this$0:Lcom/letv/leui/widget/DragSortHelper;
@@ -593,7 +553,6 @@
 
     goto/16 :goto_0
 
-    .line 2087
     .end local v8    # "moveItem":Landroid/view/View;
     .end local v9    # "movePos":I
     .end local v11    # "top":I
@@ -614,11 +573,9 @@
 
     move-result-object v12
 
-    .line 2088
     .restart local v12    # "v":Landroid/view/View;
     if-nez v12, :cond_5
 
-    .line 2089
     const/4 v13, 0x0
 
     move-object/from16 v0, p0
@@ -627,7 +584,6 @@
 
     goto/16 :goto_0
 
-    .line 2092
     :cond_5
     add-int/lit8 v13, v2, -0x1
 
@@ -641,7 +597,6 @@
 
     if-gt v13, v14, :cond_6
 
-    .line 2093
     const/4 v13, 0x0
 
     move-object/from16 v0, p0
@@ -650,7 +605,6 @@
 
     goto/16 :goto_0
 
-    .line 2097
     :cond_6
     move-object/from16 v0, p0
 
@@ -705,7 +659,6 @@
 
     goto/16 :goto_1
 
-    .line 2115
     :cond_7
     neg-int v13, v5
 
@@ -721,7 +674,6 @@
 
     iput v13, v0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->dy:I
 
-    .line 2116
     move v9, v4
 
     .restart local v9    # "movePos":I
@@ -733,37 +685,30 @@
     .param p1, "dir"    # I
 
     .prologue
-    .line 2032
     iget-boolean v0, p0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->mScrolling:Z
 
     if-nez v0, :cond_0
 
-    .line 2034
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->mAbort:Z
 
-    .line 2035
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->mScrolling:Z
 
-    .line 2036
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->tStart:J
 
-    .line 2037
     iget-wide v0, p0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->tStart:J
 
     iput-wide v0, p0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->mPrevTime:J
 
-    .line 2038
     iput p1, p0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->scrollDir:I
 
-    .line 2039
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->this$0:Lcom/letv/leui/widget/DragSortHelper;
 
     # getter for: Lcom/letv/leui/widget/DragSortHelper;->mLeListView:Lcom/letv/leui/widget/LeListView;
@@ -773,7 +718,6 @@
 
     invoke-virtual {v0, p0}, Lcom/letv/leui/widget/LeListView;->post(Ljava/lang/Runnable;)Z
 
-    .line 2041
     :cond_0
     return-void
 .end method
@@ -783,10 +727,8 @@
     .param p1, "now"    # Z
 
     .prologue
-    .line 2044
     if-eqz p1, :cond_0
 
-    .line 2045
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->this$0:Lcom/letv/leui/widget/DragSortHelper;
 
     # getter for: Lcom/letv/leui/widget/DragSortHelper;->mLeListView:Lcom/letv/leui/widget/LeListView;
@@ -796,16 +738,13 @@
 
     invoke-virtual {v0, p0}, Lcom/letv/leui/widget/LeListView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 2046
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/DragSortHelper$DragScroller;->mScrolling:Z
 
-    .line 2052
     :goto_0
     return-void
 
-    .line 2048
     :cond_0
     const/4 v0, 0x1
 

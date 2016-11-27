@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 430
     iput-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$2;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 433
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$2;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     # getter for: Lcom/android/server/net/NetworkPolicyManagerService;->mContext:Landroid/content/Context;
@@ -59,7 +57,6 @@
 
     move-result v0
 
-    .line 434
     .local v0, "newvalue":I
     const/4 v2, 0x1
 
@@ -74,7 +71,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 435
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$2;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object v2, v2, Lcom/android/server/net/NetworkPolicyManagerService;->realtimeSpeedHandler:Landroid/os/Handler;
@@ -85,19 +81,16 @@
 
     if-nez v2, :cond_0
 
-    .line 436
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$2;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object v2, v2, Lcom/android/server/net/NetworkPolicyManagerService;->realtimeSpeedHandler:Landroid/os/Handler;
 
     invoke-virtual {v2, v4}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 443
     :cond_0
     :goto_0
     return-void
 
-    .line 438
     :cond_1
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$2;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -105,14 +98,12 @@
 
     invoke-virtual {v2, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 439
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "android.intent.action.UPDATE_REALTIME_SPEED"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 440
     .local v1, "sIntent":Landroid/content/Intent;
     const-string v2, "realtime_speed"
 
@@ -120,7 +111,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 441
     invoke-virtual {p1, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
     goto :goto_0

@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 97
     invoke-direct {p0}, Lcom/google/gson/internal/UnsafeAllocator;-><init>()V
 
     return-void
@@ -40,7 +39,6 @@
     .end annotation
 
     .prologue
-    .line 100
     .local p1, "c":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 

@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 788
     iput-object p1, p0, Lcom/google/gson/internal/bind/TypeAdapters$29;->val$unboxed:Ljava/lang/Class;
 
     iput-object p2, p0, Lcom/google/gson/internal/bind/TypeAdapters$29;->val$boxed:Ljava/lang/Class;
@@ -61,13 +60,11 @@
     .end annotation
 
     .prologue
-    .line 791
     .local p2, "typeToken":Lcom/google/gson/reflect/TypeToken;, "Lcom/google/gson/reflect/TypeToken<TT;>;"
     invoke-virtual {p2}, Lcom/google/gson/reflect/TypeToken;->getRawType()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 792
     .local v0, "rawType":Ljava/lang/Class;, "Ljava/lang/Class<-TT;>;"
     iget-object v1, p0, Lcom/google/gson/internal/bind/TypeAdapters$29;->val$unboxed:Ljava/lang/Class;
 
@@ -93,7 +90,6 @@
     .locals 2
 
     .prologue
-    .line 795
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

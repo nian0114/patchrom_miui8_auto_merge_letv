@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 716
     iput-object p1, p0, Lcom/letv/leui/widget/LeItemView$2;->this$0:Lcom/letv/leui/widget/LeItemView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 730
     return-void
 .end method
 
@@ -50,14 +48,12 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 724
     iget-object v0, p0, Lcom/letv/leui/widget/LeItemView$2;->this$0:Lcom/letv/leui/widget/LeItemView;
 
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Lcom/letv/leui/widget/LeItemView;->isAnimate:Z
 
-    .line 725
     return-void
 .end method
 
@@ -66,7 +62,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 735
     return-void
 .end method
 
@@ -75,13 +70,11 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 719
     iget-object v0, p0, Lcom/letv/leui/widget/LeItemView$2;->this$0:Lcom/letv/leui/widget/LeItemView;
 
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcom/letv/leui/widget/LeItemView;->isAnimate:Z
 
-    .line 720
     return-void
 .end method

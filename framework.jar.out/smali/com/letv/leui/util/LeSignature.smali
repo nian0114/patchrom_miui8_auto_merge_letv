@@ -20,7 +20,6 @@
     .locals 1
 
     .prologue
-    .line 26
     const-string v0, "0123456789abcdef"
 
     invoke-virtual {v0}, Ljava/lang/String;->toCharArray()[C
@@ -36,7 +35,6 @@
     .locals 0
 
     .prologue
-    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,7 +45,6 @@
     .param p0, "time"    # J
 
     .prologue
-    .line 184
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v1, "EEE, d MMM yyyy hh:mm:ss z"
@@ -56,7 +53,6 @@
 
     invoke-direct {v0, v1, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    .line 185
     .local v0, "sdf":Ljava/text/SimpleDateFormat;
     new-instance v1, Ljava/util/Date;
 
@@ -96,7 +92,6 @@
     .end annotation
 
     .prologue
-    .line 120
     .local p6, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-static {p4, p5}, Lcom/letv/leui/util/LeSignature;->formatDate(J)Ljava/lang/String;
 
@@ -113,7 +108,6 @@
 
     move-object v5, p6
 
-    .line 121
     invoke-static/range {v0 .. v5}, Lcom/letv/leui/util/LeSignature;->getSignature(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[BLjava/lang/String;Ljava/util/Map;)Ljava/lang/String;
 
     move-result-object v0
@@ -146,7 +140,6 @@
     .end annotation
 
     .prologue
-    .line 140
     .local p5, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-static {p0}, Lcom/letv/leui/util/LeSignature;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -154,7 +147,6 @@
 
     if-eqz v13, :cond_0
 
-    .line 141
     new-instance v13, Ljava/lang/IllegalArgumentException;
 
     const-string v14, "You MUST set access key for request!"
@@ -163,12 +155,10 @@
 
     throw v13
 
-    .line 145
     :cond_0
     :try_start_0
     const-string v1, ""
 
-    .line 146
     .local v1, "bodyMD5":Ljava/lang/String;
     if-eqz p3, :cond_1
 
@@ -178,20 +168,17 @@
 
     if-eqz v13, :cond_1
 
-    .line 148
     const-string v13, "MD5"
 
     invoke-static {v13}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v2
 
-    .line 149
     .local v2, "digest":Ljava/security/MessageDigest;
     move-object/from16 v0, p3
 
     invoke-virtual {v2, v0}, Ljava/security/MessageDigest;->update([B)V
 
-    .line 150
     invoke-virtual {v2}, Ljava/security/MessageDigest;->digest()[B
 
     move-result-object v13
@@ -200,12 +187,10 @@
 
     move-result-object v1
 
-    .line 152
     .end local v2    # "digest":Ljava/security/MessageDigest;
     :cond_1
     const-string v7, ""
 
-    .line 153
     .local v7, "paramString":Ljava/lang/String;
     if-eqz p5, :cond_4
 
@@ -215,12 +200,10 @@
 
     if-lez v13, :cond_4
 
-    .line 154
     new-instance v9, Ljava/util/TreeSet;
 
     invoke-direct {v9}, Ljava/util/TreeSet;-><init>()V
 
-    .line 155
     .local v9, "set":Ljava/util/SortedSet;, "Ljava/util/SortedSet<Ljava/lang/String;>;"
     invoke-interface/range {p5 .. p5}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
@@ -245,7 +228,6 @@
 
     check-cast v6, Ljava/lang/String;
 
-    .line 156
     .local v6, "param":Ljava/lang/String;
     move-object/from16 v0, p5
 
@@ -255,7 +237,6 @@
 
     check-cast v12, Ljava/lang/String;
 
-    .line 157
     .local v12, "value":Ljava/lang/String;
     invoke-static {v12}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -263,7 +244,6 @@
 
     if-nez v13, :cond_2
 
-    .line 158
     new-instance v13, Ljava/lang/StringBuilder;
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
@@ -293,7 +273,6 @@
 
     goto :goto_0
 
-    .line 170
     .end local v1    # "bodyMD5":Ljava/lang/String;
     .end local v4    # "i$":Ljava/util/Iterator;
     .end local v6    # "param":Ljava/lang/String;
@@ -303,11 +282,9 @@
     :catch_0
     move-exception v3
 
-    .line 171
     .local v3, "e":Ljava/security/NoSuchAlgorithmException;
     invoke-virtual {v3}, Ljava/security/NoSuchAlgorithmException;->printStackTrace()V
 
-    .line 175
     .end local v3    # "e":Ljava/security/NoSuchAlgorithmException;
     :goto_1
     const-string v13, ""
@@ -315,7 +292,6 @@
     :goto_2
     return-object v13
 
-    .line 161
     .restart local v1    # "bodyMD5":Ljava/lang/String;
     .restart local v4    # "i$":Ljava/util/Iterator;
     .restart local v7    # "paramString":Ljava/lang/String;
@@ -328,7 +304,6 @@
 
     move-result-object v7
 
-    .line 164
     .end local v4    # "i$":Ljava/util/Iterator;
     .end local v9    # "set":Ljava/util/SortedSet;, "Ljava/util/SortedSet<Ljava/lang/String;>;"
     :cond_4
@@ -392,7 +367,6 @@
 
     move-result-object v11
 
-    .line 165
     .local v11, "stringToSign":Ljava/lang/String;
     new-instance v10, Ljavax/crypto/spec/SecretKeySpec;
 
@@ -404,7 +378,6 @@
 
     invoke-direct {v10, v13, v14}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
 
-    .line 166
     .local v10, "signingKey":Ljavax/crypto/spec/SecretKeySpec;
     const-string v13, "HmacSHA1"
 
@@ -412,11 +385,9 @@
 
     move-result-object v5
 
-    .line 167
     .local v5, "mac":Ljavax/crypto/Mac;
     invoke-virtual {v5, v10}, Ljavax/crypto/Mac;->init(Ljava/security/Key;)V
 
-    .line 168
     invoke-virtual {v11}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v13
@@ -425,7 +396,6 @@
 
     move-result-object v8
 
-    .line 169
     .local v8, "rawHmac":[B
     invoke-static {v8}, Lcom/letv/leui/util/LeSignature;->toHexString([B)Ljava/lang/String;
     :try_end_1
@@ -436,7 +406,6 @@
 
     goto :goto_2
 
-    .line 172
     .end local v1    # "bodyMD5":Ljava/lang/String;
     .end local v5    # "mac":Ljavax/crypto/Mac;
     .end local v7    # "paramString":Ljava/lang/String;
@@ -446,7 +415,6 @@
     :catch_1
     move-exception v3
 
-    .line 173
     .local v3, "e":Ljava/security/InvalidKeyException;
     invoke-virtual {v3}, Ljava/security/InvalidKeyException;->printStackTrace()V
 
@@ -473,7 +441,6 @@
     .end annotation
 
     .prologue
-    .line 64
     .local p2, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-static {p0}, Lcom/letv/leui/util/LeSignature;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -487,7 +454,6 @@
 
     if-eqz v8, :cond_1
 
-    .line 65
     :cond_0
     new-instance v8, Ljava/lang/IllegalArgumentException;
 
@@ -497,13 +463,11 @@
 
     throw v8
 
-    .line 68
     :cond_1
     new-instance v5, Ljava/util/TreeSet;
 
     invoke-direct {v5}, Ljava/util/TreeSet;-><init>()V
 
-    .line 72
     .local v5, "set":Ljava/util/SortedSet;, "Ljava/util/SortedSet<Ljava/lang/String;>;"
     :try_start_0
     const-string v8, "_time"
@@ -514,7 +478,6 @@
 
     if-nez v8, :cond_2
 
-    .line 73
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -545,7 +508,6 @@
 
     invoke-interface {v5, v8}, Ljava/util/SortedSet;->add(Ljava/lang/Object;)Z
 
-    .line 76
     :cond_2
     const-string v8, "_ak"
 
@@ -555,7 +517,6 @@
 
     if-nez v8, :cond_3
 
-    .line 77
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -582,7 +543,6 @@
 
     invoke-interface {v5, v8}, Ljava/util/SortedSet;->add(Ljava/lang/Object;)Z
 
-    .line 80
     :cond_3
     if-eqz p2, :cond_5
 
@@ -592,7 +552,6 @@
 
     if-lez v8, :cond_5
 
-    .line 81
     invoke-interface {p2}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v8
@@ -616,7 +575,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 82
     .local v3, "param":Ljava/lang/String;
     invoke-interface {p2, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -624,7 +582,6 @@
 
     check-cast v7, Ljava/lang/String;
 
-    .line 83
     .local v7, "value":Ljava/lang/String;
     invoke-static {v7}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -632,7 +589,6 @@
 
     if-nez v8, :cond_4
 
-    .line 84
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -668,18 +624,15 @@
 
     goto :goto_0
 
-    .line 95
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v3    # "param":Ljava/lang/String;
     .end local v7    # "value":Ljava/lang/String;
     :catch_0
     move-exception v1
 
-    .line 96
     .local v1, "e":Ljava/io/UnsupportedEncodingException;
     invoke-virtual {v1}, Ljava/io/UnsupportedEncodingException;->printStackTrace()V
 
-    .line 100
     .end local v1    # "e":Ljava/io/UnsupportedEncodingException;
     :goto_1
     const-string v8, ""
@@ -687,7 +640,6 @@
     :goto_2
     return-object v8
 
-    .line 89
     :cond_5
     :try_start_1
     const-string v8, "&"
@@ -696,7 +648,6 @@
 
     move-result-object v4
 
-    .line 90
     .local v4, "paramsString":Ljava/lang/String;
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -714,7 +665,6 @@
 
     move-result-object v6
 
-    .line 92
     .local v6, "str2Sign":Ljava/lang/String;
     const-string v8, "MD5"
 
@@ -722,7 +672,6 @@
 
     move-result-object v0
 
-    .line 93
     .local v0, "digest":Ljava/security/MessageDigest;
     const-string v8, "UTF-8"
 
@@ -732,7 +681,6 @@
 
     invoke-virtual {v0, v8}, Ljava/security/MessageDigest;->update([B)V
 
-    .line 94
     invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
 
     move-result-object v8
@@ -746,14 +694,12 @@
 
     goto :goto_2
 
-    .line 97
     .end local v0    # "digest":Ljava/security/MessageDigest;
     .end local v4    # "paramsString":Ljava/lang/String;
     .end local v6    # "str2Sign":Ljava/lang/String;
     :catch_1
     move-exception v1
 
-    .line 98
     .local v1, "e":Ljava/security/NoSuchAlgorithmException;
     invoke-virtual {v1}, Ljava/security/NoSuchAlgorithmException;->printStackTrace()V
 
@@ -765,7 +711,6 @@
     .param p0, "str"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 189
     if-eqz p0, :cond_0
 
     invoke-interface {p0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
@@ -811,17 +756,14 @@
     .end annotation
 
     .prologue
-    .line 38
     .local p0, "strings":Ljava/lang/Iterable;, "Ljava/lang/Iterable<Ljava/lang/String;>;"
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 39
     .local v3, "sb":Ljava/lang/StringBuilder;
     const/4 v0, 0x1
 
-    .line 40
     .local v0, "first":Z
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -841,26 +783,21 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 41
     .local v2, "item":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 42
     const/4 v0, 0x0
 
-    .line 47
     :goto_1
     invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 44
     :cond_0
     invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 49
     .end local v2    # "item":Ljava/lang/String;
     :cond_1
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -875,7 +812,6 @@
     .param p0, "bytes"    # [B
 
     .prologue
-    .line 29
     new-instance v4, Ljava/lang/StringBuilder;
 
     array-length v5, p0
@@ -884,7 +820,6 @@
 
     invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 30
     .local v4, "sb":Ljava/lang/StringBuilder;
     move-object v0, p0
 
@@ -900,7 +835,6 @@
 
     aget-byte v1, v0, v2
 
-    .line 31
     .local v1, "b":B
     sget-object v5, Lcom/letv/leui/util/LeSignature;->HEX_DIGITS:[C
 
@@ -912,7 +846,6 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 32
     sget-object v5, Lcom/letv/leui/util/LeSignature;->HEX_DIGITS:[C
 
     and-int/lit8 v6, v1, 0xf
@@ -921,12 +854,10 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 30
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 34
     .end local v1    # "b":B
     :cond_0
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;

@@ -75,19 +75,16 @@
     .locals 1
 
     .prologue
-    .line 34
     new-instance v0, Landroid/view/animation/LinearInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
     sput-object v0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->sLinearInterpolator:Landroid/view/animation/LinearInterpolator;
 
-    .line 44
     const v0, 0x3eb33333    # 0.35f
 
     sput v0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->DISMISS_IF_SWIPED_FAR_ENOUGH_SCALE:F
 
-    .line 46
     const/4 v0, 0x0
 
     sput v0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->ALPHA_FADE_START:F
@@ -103,51 +100,40 @@
     .param p4, "pagingTouchSlop"    # F
 
     .prologue
-    .line 73
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     const/high16 v0, 0x42c80000    # 100.0f
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->SWIPE_ESCAPE_VELOCITY:F
 
-    .line 38
     const/16 v0, 0x320
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->DEFAULT_ESCAPE_ANIMATION_DURATION:I
 
-    .line 39
     const/16 v0, 0x190
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->MAX_ESCAPE_ANIMATION_DURATION:I
 
-    .line 40
     const/16 v0, 0x7d0
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->MAX_DISMISS_VELOCITY:I
 
-    .line 50
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mMinAlpha:F
 
-    .line 74
     iput-object p2, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mCallback:Lcom/android/server/policy/global/GlobalActionSwipeHelper$Callback;
 
-    .line 75
     iput p1, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mSwipeDirection:I
 
-    .line 76
     invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mVelocityTracker:Landroid/view/VelocityTracker;
 
-    .line 77
     iput p3, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mDensityScale:F
 
-    .line 79
     return-void
 .end method
 
@@ -156,7 +142,6 @@
     .param p0, "x0"    # Lcom/android/server/policy/global/GlobalActionSwipeHelper;
 
     .prologue
-    .line 19
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mCallback:Lcom/android/server/policy/global/GlobalActionSwipeHelper$Callback;
 
     return-object v0
@@ -168,7 +153,6 @@
     .param p2, "newPos"    # F
 
     .prologue
-    .line 123
     iget v1, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mSwipeDirection:I
 
     if-nez v1, :cond_0
@@ -188,11 +172,9 @@
 
     move-result-object v0
 
-    .line 125
     .local v0, "anim":Landroid/animation/ObjectAnimator;
     return-object v0
 
-    .line 123
     .end local v0    # "anim":Landroid/animation/ObjectAnimator;
     :cond_0
     const-string v1, "translationY"
@@ -207,28 +189,23 @@
     .prologue
     const/high16 v5, 0x3f800000    # 1.0f
 
-    .line 173
     invoke-direct {p0, p1}, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->getAnimatorWH(Lcom/android/server/policy/global/GlobalActionSwipeHelper$AnimatorCallback;)F
 
     move-result v3
 
-    .line 174
     .local v3, "viewSize":F
     const/high16 v4, 0x3f000000    # 0.5f
 
     mul-float v0, v4, v3
 
-    .line 175
     .local v0, "fadeSize":F
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 176
     .local v2, "result":F
     invoke-direct {p0, p1}, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->getTranslation(Lcom/android/server/policy/global/GlobalActionSwipeHelper$AnimatorCallback;)F
 
     move-result v1
 
-    .line 177
     .local v1, "pos":F
     sget v4, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->ALPHA_FADE_START:F
 
@@ -238,7 +215,6 @@
 
     if-ltz v4, :cond_1
 
-    .line 178
     sget v4, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->ALPHA_FADE_START:F
 
     mul-float/2addr v4, v3
@@ -249,7 +225,6 @@
 
     sub-float v2, v5, v4
 
-    .line 182
     :cond_0
     :goto_0
     iget v4, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mMinAlpha:F
@@ -260,7 +235,6 @@
 
     return v4
 
-    .line 179
     :cond_1
     sget v4, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->ALPHA_FADE_START:F
 
@@ -272,7 +246,6 @@
 
     if-gez v4, :cond_0
 
-    .line 180
     sget v4, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->ALPHA_FADE_START:F
 
     mul-float/2addr v4, v3
@@ -291,7 +264,6 @@
     .param p1, "v"    # Lcom/android/server/policy/global/GlobalActionSwipeHelper$AnimatorCallback;
 
     .prologue
-    .line 156
     iget v0, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mSwipeDirection:I
 
     if-nez v0, :cond_0
@@ -316,7 +288,6 @@
     .param p1, "vt"    # Landroid/view/VelocityTracker;
 
     .prologue
-    .line 134
     iget v0, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mSwipeDirection:I
 
     if-nez v0, :cond_0
@@ -341,7 +312,6 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 95
     iget v0, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mSwipeDirection:I
 
     if-nez v0, :cond_0
@@ -366,7 +336,6 @@
     .param p1, "v"    # Lcom/android/server/policy/global/GlobalActionSwipeHelper$AnimatorCallback;
 
     .prologue
-    .line 104
     iget v0, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mSwipeDirection:I
 
     if-nez v0, :cond_0
@@ -391,7 +360,6 @@
     .param p1, "vt"    # Landroid/view/VelocityTracker;
 
     .prologue
-    .line 113
     iget v0, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mSwipeDirection:I
 
     if-nez v0, :cond_0
@@ -417,12 +385,10 @@
     .param p2, "translate"    # F
 
     .prologue
-    .line 143
     iget v0, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mSwipeDirection:I
 
     if-nez v0, :cond_0
 
-    .line 144
     invoke-interface {p1}, Lcom/android/server/policy/global/GlobalActionSwipeHelper$AnimatorCallback;->getTranslationX()F
 
     move-result v0
@@ -431,11 +397,9 @@
 
     invoke-interface {p1, v0}, Lcom/android/server/policy/global/GlobalActionSwipeHelper$AnimatorCallback;->setTranslationX(F)V
 
-    .line 148
     :goto_0
     return-void
 
-    .line 146
     :cond_0
     invoke-interface {p1}, Lcom/android/server/policy/global/GlobalActionSwipeHelper$AnimatorCallback;->getTranslationY()F
 
@@ -454,7 +418,6 @@
     .locals 1
 
     .prologue
-    .line 190
     iget-boolean v0, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mDragging:Z
 
     return v0
@@ -467,16 +430,13 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 200
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    .line 201
     .local v0, "action":I
     packed-switch v0, :pswitch_data_0
 
-    .line 237
     :cond_0
     :goto_0
     :pswitch_0
@@ -485,16 +445,13 @@
     :cond_1
     return v3
 
-    .line 203
     :pswitch_1
     iget-object v4, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mCallback:Lcom/android/server/policy/global/GlobalActionSwipeHelper$Callback;
 
     if-eqz v4, :cond_1
 
-    .line 206
     iput-boolean v3, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mDragging:Z
 
-    .line 207
     iget-object v3, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mCallback:Lcom/android/server/policy/global/GlobalActionSwipeHelper$Callback;
 
     invoke-interface {v3}, Lcom/android/server/policy/global/GlobalActionSwipeHelper$Callback;->getAnimatorObject()Lcom/android/server/policy/global/GlobalActionSwipeHelper$AnimatorCallback;
@@ -503,17 +460,14 @@
 
     iput-object v3, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mAnimatorObject:Lcom/android/server/policy/global/GlobalActionSwipeHelper$AnimatorCallback;
 
-    .line 209
     iget-object v3, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {v3}, Landroid/view/VelocityTracker;->clear()V
 
-    .line 210
     iget-object v3, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mAnimatorObject:Lcom/android/server/policy/global/GlobalActionSwipeHelper$AnimatorCallback;
 
     if-eqz v3, :cond_0
 
-    .line 212
     iget-object v3, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mCallback:Lcom/android/server/policy/global/GlobalActionSwipeHelper$Callback;
 
     invoke-interface {v3}, Lcom/android/server/policy/global/GlobalActionSwipeHelper$Callback;->canSwipeToBottom()Z
@@ -522,12 +476,10 @@
 
     iput-boolean v3, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mCanCurrViewBeDimissed:Z
 
-    .line 214
     iget-object v3, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {v3, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
-    .line 216
     invoke-direct {p0, p1}, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->getRawPos(Landroid/view/MotionEvent;)F
 
     move-result v3
@@ -536,18 +488,15 @@
 
     iput v3, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mLastTouchPos:F
 
-    .line 218
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v1
 
-    .line 219
     .local v1, "rawX":F
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result v2
 
-    .line 220
     .local v2, "rawY":F
     iget-object v3, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mCallback:Lcom/android/server/policy/global/GlobalActionSwipeHelper$Callback;
 
@@ -557,27 +506,23 @@
 
     if-eqz v3, :cond_0
 
-    .line 222
     const/4 v3, 0x1
 
     iput-boolean v3, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mDragging:Z
 
     goto :goto_0
 
-    .line 233
     .end local v1    # "rawX":F
     .end local v2    # "rawY":F
     :pswitch_2
     iput-boolean v3, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mDragging:Z
 
-    .line 234
     const/4 v3, 0x0
 
     iput-object v3, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mAnimatorObject:Lcom/android/server/policy/global/GlobalActionSwipeHelper$AnimatorCallback;
 
     goto :goto_0
 
-    .line 201
     nop
 
     :pswitch_data_0
@@ -594,19 +539,16 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 241
     iget-boolean v10, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mDragging:Z
 
     if-nez v10, :cond_1
 
-    .line 242
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v10
 
     if-nez v10, :cond_0
 
-    .line 244
     iget-object v10, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mCallback:Lcom/android/server/policy/global/GlobalActionSwipeHelper$Callback;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
@@ -619,48 +561,39 @@
 
     invoke-interface {v10, v11, v12}, Lcom/android/server/policy/global/GlobalActionSwipeHelper$Callback;->hintCancelRect(FF)Z
 
-    .line 245
     const/4 v10, 0x1
 
-    .line 321
     :goto_0
     return v10
 
-    .line 247
     :cond_0
     const/4 v10, 0x0
 
     goto :goto_0
 
-    .line 250
     :cond_1
     iget-object v10, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {v10, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
-    .line 251
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    .line 252
     .local v0, "action":I
     packed-switch v0, :pswitch_data_0
 
-    .line 321
     :cond_2
     :goto_1
     const/4 v10, 0x1
 
     goto :goto_0
 
-    .line 256
     :pswitch_0
     iget-object v10, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mAnimatorObject:Lcom/android/server/policy/global/GlobalActionSwipeHelper$AnimatorCallback;
 
     if-eqz v10, :cond_2
 
-    .line 257
     invoke-direct {p0, p1}, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->getRawPos(Landroid/view/MotionEvent;)F
 
     move-result v10
@@ -669,7 +602,6 @@
 
     sub-float v3, v10, v11
 
-    .line 261
     .local v3, "delta":F
     iget-object v10, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mCallback:Lcom/android/server/policy/global/GlobalActionSwipeHelper$Callback;
 
@@ -679,18 +611,15 @@
 
     if-nez v10, :cond_3
 
-    .line 262
     iget-object v10, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mAnimatorObject:Lcom/android/server/policy/global/GlobalActionSwipeHelper$AnimatorCallback;
 
     invoke-direct {p0, v10}, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->getAnimatorWH(Lcom/android/server/policy/global/GlobalActionSwipeHelper$AnimatorCallback;)F
 
-    .line 272
     :cond_3
     iget-object v10, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mAnimatorObject:Lcom/android/server/policy/global/GlobalActionSwipeHelper$AnimatorCallback;
 
     invoke-direct {p0, v10, v3}, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->setTranslation(Lcom/android/server/policy/global/GlobalActionSwipeHelper$AnimatorCallback;F)V
 
-    .line 278
     invoke-direct {p0, p1}, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->getRawPos(Landroid/view/MotionEvent;)F
 
     move-result v10
@@ -699,14 +628,12 @@
 
     goto :goto_1
 
-    .line 283
     .end local v3    # "delta":F
     :pswitch_1
     iget-object v10, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mAnimatorObject:Lcom/android/server/policy/global/GlobalActionSwipeHelper$AnimatorCallback;
 
     if-eqz v10, :cond_2
 
-    .line 284
     iget v10, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->MAX_DISMISS_VELOCITY:I
 
     int-to-float v10, v10
@@ -715,7 +642,6 @@
 
     mul-float v5, v10, v11
 
-    .line 285
     .local v5, "maxVelocity":F
     iget-object v10, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mVelocityTracker:Landroid/view/VelocityTracker;
 
@@ -723,14 +649,12 @@
 
     invoke-virtual {v10, v11, v5}, Landroid/view/VelocityTracker;->computeCurrentVelocity(IF)V
 
-    .line 287
     iget v10, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->SWIPE_ESCAPE_VELOCITY:F
 
     iget v11, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mDensityScale:F
 
     mul-float v4, v10, v11
 
-    .line 289
     .local v4, "escapeVelocity":F
     iget-object v10, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mVelocityTracker:Landroid/view/VelocityTracker;
 
@@ -738,7 +662,6 @@
 
     move-result v9
 
-    .line 290
     .local v9, "velocity":F
     iget-object v10, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mVelocityTracker:Landroid/view/VelocityTracker;
 
@@ -746,7 +669,6 @@
 
     move-result v6
 
-    .line 293
     .local v6, "perpendicularVelocity":F
     iget-object v10, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mAnimatorObject:Lcom/android/server/policy/global/GlobalActionSwipeHelper$AnimatorCallback;
 
@@ -766,7 +688,6 @@
 
     const/4 v1, 0x1
 
-    .line 297
     .local v1, "childSwipedFarEnough":Z
     :goto_2
     invoke-static {v9}, Ljava/lang/Math;->abs(F)F
@@ -817,7 +738,6 @@
 
     const/4 v2, 0x1
 
-    .line 303
     .local v2, "childSwipedFastEnough":Z
     :goto_5
     iget-object v10, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mAnimatorObject:Lcom/android/server/policy/global/GlobalActionSwipeHelper$AnimatorCallback;
@@ -840,7 +760,6 @@
 
     const/4 v7, 0x1
 
-    .line 306
     .local v7, "swipBelow":Z
     :goto_6
     iget-object v10, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mCallback:Lcom/android/server/policy/global/GlobalActionSwipeHelper$Callback;
@@ -860,17 +779,14 @@
 
     const/4 v8, 0x1
 
-    .line 310
     .local v8, "swipeToBottom":Z
     :goto_7
     if-eqz v8, :cond_c
 
-    .line 312
     iget-object v10, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mMediatorCallback:Lcom/android/server/policy/global/GlobalActionViewMediator$MediatorCallback;
 
     invoke-interface {v10}, Lcom/android/server/policy/global/GlobalActionViewMediator$MediatorCallback;->onActionStart()V
 
-    .line 313
     if-eqz v2, :cond_b
 
     .end local v9    # "velocity":F
@@ -879,7 +795,6 @@
 
     goto/16 :goto_1
 
-    .line 293
     .end local v1    # "childSwipedFarEnough":Z
     .end local v2    # "childSwipedFastEnough":Z
     .end local v7    # "swipBelow":Z
@@ -890,7 +805,6 @@
 
     goto :goto_2
 
-    .line 297
     .restart local v1    # "childSwipedFarEnough":Z
     :cond_6
     const/4 v10, 0x0
@@ -907,34 +821,29 @@
 
     goto :goto_5
 
-    .line 303
     .restart local v2    # "childSwipedFastEnough":Z
     :cond_9
     const/4 v7, 0x0
 
     goto :goto_6
 
-    .line 306
     .restart local v7    # "swipBelow":Z
     :cond_a
     const/4 v8, 0x0
 
     goto :goto_7
 
-    .line 313
     .restart local v8    # "swipeToBottom":Z
     :cond_b
     const/4 v9, 0x0
 
     goto :goto_8
 
-    .line 316
     :cond_c
     invoke-virtual {p0, v9}, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->snapChild(F)V
 
     goto/16 :goto_1
 
-    .line 252
     nop
 
     :pswitch_data_0
@@ -951,10 +860,8 @@
     .param p1, "densityScale"    # F
 
     .prologue
-    .line 82
     iput p1, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mDensityScale:F
 
-    .line 83
     return-void
 .end method
 
@@ -963,10 +870,8 @@
     .param p1, "viewMediatorCallback"    # Lcom/android/server/policy/global/GlobalActionViewMediator$MediatorCallback;
 
     .prologue
-    .line 446
     iput-object p1, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mMediatorCallback:Lcom/android/server/policy/global/GlobalActionViewMediator$MediatorCallback;
 
-    .line 447
     return-void
 .end method
 
@@ -975,10 +880,8 @@
     .param p1, "minAlpha"    # F
 
     .prologue
-    .line 164
     iput p1, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mMinAlpha:F
 
-    .line 165
     return-void
 .end method
 
@@ -987,14 +890,12 @@
     .param p1, "pagingTouchSlop"    # F
 
     .prologue
-    .line 86
     iget v0, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mDensityScale:F
 
     div-float v0, p1, v0
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mPagingTouchSlop:F
 
-    .line 87
     return-void
 .end method
 
@@ -1003,17 +904,14 @@
     .param p1, "velocity"    # F
 
     .prologue
-    .line 376
     iget-object v4, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mCallback:Lcom/android/server/policy/global/GlobalActionSwipeHelper$Callback;
 
     if-nez v4, :cond_1
 
-    .line 401
     :cond_0
     :goto_0
     return-void
 
-    .line 377
     :cond_1
     iget-object v4, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mCallback:Lcom/android/server/policy/global/GlobalActionSwipeHelper$Callback;
 
@@ -1021,18 +919,15 @@
 
     move-result-object v1
 
-    .line 378
     .local v1, "animView":Lcom/android/server/policy/global/GlobalActionSwipeHelper$AnimatorCallback;
     if-eqz v1, :cond_0
 
-    .line 379
     iget-object v4, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mCallback:Lcom/android/server/policy/global/GlobalActionSwipeHelper$Callback;
 
     invoke-interface {v4}, Lcom/android/server/policy/global/GlobalActionSwipeHelper$Callback;->canSwipeToBottom()Z
 
     move-result v2
 
-    .line 380
     .local v2, "canAnimViewBeDismissed":Z
     invoke-interface {v1}, Lcom/android/server/policy/global/GlobalActionSwipeHelper$AnimatorCallback;->getInitTranslationY()I
 
@@ -1044,36 +939,30 @@
 
     move-result-object v0
 
-    .line 381
     .local v0, "anim":Landroid/animation/ObjectAnimator;
     sget-object v4, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->sLinearInterpolator:Landroid/view/animation/LinearInterpolator;
 
     invoke-virtual {v0, v4}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 382
     const/16 v3, 0x96
 
-    .line 383
     .local v3, "duration":I
     int-to-long v4, v3
 
     invoke-virtual {v0, v4, v5}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 386
     new-instance v4, Lcom/android/server/policy/global/GlobalActionSwipeHelper$3;
 
     invoke-direct {v4, p0, v1}, Lcom/android/server/policy/global/GlobalActionSwipeHelper$3;-><init>(Lcom/android/server/policy/global/GlobalActionSwipeHelper;Lcom/android/server/policy/global/GlobalActionSwipeHelper$AnimatorCallback;)V
 
     invoke-virtual {v0, v4}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 393
     new-instance v4, Lcom/android/server/policy/global/GlobalActionSwipeHelper$4;
 
     invoke-direct {v4, p0, v2, v1}, Lcom/android/server/policy/global/GlobalActionSwipeHelper$4;-><init>(Lcom/android/server/policy/global/GlobalActionSwipeHelper;ZLcom/android/server/policy/global/GlobalActionSwipeHelper$AnimatorCallback;)V
 
     invoke-virtual {v0, v4}, Landroid/animation/ObjectAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 400
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
     goto :goto_0
@@ -1084,17 +973,14 @@
     .param p1, "velocity"    # F
 
     .prologue
-    .line 331
     iget-object v5, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mCallback:Lcom/android/server/policy/global/GlobalActionSwipeHelper$Callback;
 
     if-nez v5, :cond_1
 
-    .line 369
     :cond_0
     :goto_0
     return-void
 
-    .line 332
     :cond_1
     iget-object v5, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mCallback:Lcom/android/server/policy/global/GlobalActionSwipeHelper$Callback;
 
@@ -1102,18 +988,15 @@
 
     move-result-object v1
 
-    .line 333
     .local v1, "animView":Lcom/android/server/policy/global/GlobalActionSwipeHelper$AnimatorCallback;
     if-eqz v1, :cond_0
 
-    .line 334
     iget-object v5, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->mCallback:Lcom/android/server/policy/global/GlobalActionSwipeHelper$Callback;
 
     invoke-interface {v5}, Lcom/android/server/policy/global/GlobalActionSwipeHelper$Callback;->canSwipeToBottom()Z
 
     move-result v2
 
-    .line 335
     .local v2, "canAnimViewBeDismissed":Z
     invoke-interface {v1}, Lcom/android/server/policy/global/GlobalActionSwipeHelper$AnimatorCallback;->getEndTranslationY()I
 
@@ -1121,11 +1004,9 @@
 
     int-to-float v4, v5
 
-    .line 337
     .local v4, "newPos":F
     iget v3, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->MAX_ESCAPE_ANIMATION_DURATION:I
 
-    .line 338
     .local v3, "duration":I
     const/4 v5, 0x0
 
@@ -1133,7 +1014,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 339
     invoke-direct {p0, v1}, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->getTranslation(Lcom/android/server/policy/global/GlobalActionSwipeHelper$AnimatorCallback;)F
 
     move-result v5
@@ -1160,43 +1040,36 @@
 
     move-result v3
 
-    .line 347
     :goto_1
     invoke-direct {p0, v1, v4}, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->createTranslationAnimation(Lcom/android/server/policy/global/GlobalActionSwipeHelper$AnimatorCallback;F)Landroid/animation/ObjectAnimator;
 
     move-result-object v0
 
-    .line 348
     .local v0, "anim":Landroid/animation/ObjectAnimator;
     sget-object v5, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->sLinearInterpolator:Landroid/view/animation/LinearInterpolator;
 
     invoke-virtual {v0, v5}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 349
     int-to-long v6, v3
 
     invoke-virtual {v0, v6, v7}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 352
     new-instance v5, Lcom/android/server/policy/global/GlobalActionSwipeHelper$1;
 
     invoke-direct {v5, p0}, Lcom/android/server/policy/global/GlobalActionSwipeHelper$1;-><init>(Lcom/android/server/policy/global/GlobalActionSwipeHelper;)V
 
     invoke-virtual {v0, v5}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 361
     new-instance v5, Lcom/android/server/policy/global/GlobalActionSwipeHelper$2;
 
     invoke-direct {v5, p0, v2, v1}, Lcom/android/server/policy/global/GlobalActionSwipeHelper$2;-><init>(Lcom/android/server/policy/global/GlobalActionSwipeHelper;ZLcom/android/server/policy/global/GlobalActionSwipeHelper$AnimatorCallback;)V
 
     invoke-virtual {v0, v5}, Landroid/animation/ObjectAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 368
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
     goto :goto_0
 
-    .line 342
     .end local v0    # "anim":Landroid/animation/ObjectAnimator;
     :cond_2
     iget v3, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper;->DEFAULT_ESCAPE_ANIMATION_DURATION:I

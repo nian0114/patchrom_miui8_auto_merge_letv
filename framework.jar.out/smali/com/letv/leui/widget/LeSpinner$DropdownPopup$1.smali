@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1099
     iput-object p1, p0, Lcom/letv/leui/widget/LeSpinner$DropdownPopup$1;->this$1:Lcom/letv/leui/widget/LeSpinner$DropdownPopup;
 
     iput-object p2, p0, Lcom/letv/leui/widget/LeSpinner$DropdownPopup$1;->val$this$0:Lcom/letv/leui/widget/LeSpinner;
@@ -48,14 +47,12 @@
     .param p4, "id"    # J
 
     .prologue
-    .line 1101
     iget-object v0, p0, Lcom/letv/leui/widget/LeSpinner$DropdownPopup$1;->this$1:Lcom/letv/leui/widget/LeSpinner$DropdownPopup;
 
     iget-object v0, v0, Lcom/letv/leui/widget/LeSpinner$DropdownPopup;->this$0:Lcom/letv/leui/widget/LeSpinner;
 
     invoke-virtual {v0, p3}, Lcom/letv/leui/widget/LeSpinner;->setSelection(I)V
 
-    .line 1102
     iget-object v0, p0, Lcom/letv/leui/widget/LeSpinner$DropdownPopup$1;->this$1:Lcom/letv/leui/widget/LeSpinner$DropdownPopup;
 
     iget-object v0, v0, Lcom/letv/leui/widget/LeSpinner$DropdownPopup;->this$0:Lcom/letv/leui/widget/LeSpinner;
@@ -64,7 +61,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1103
     iget-object v0, p0, Lcom/letv/leui/widget/LeSpinner$DropdownPopup$1;->this$1:Lcom/letv/leui/widget/LeSpinner$DropdownPopup;
 
     iget-object v0, v0, Lcom/letv/leui/widget/LeSpinner$DropdownPopup;->this$0:Lcom/letv/leui/widget/LeSpinner;
@@ -82,12 +78,10 @@
 
     invoke-virtual {v0, p2, p3, v2, v3}, Lcom/letv/leui/widget/LeSpinner;->performItemClick(Landroid/view/View;IJ)Z
 
-    .line 1105
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/LeSpinner$DropdownPopup$1;->this$1:Lcom/letv/leui/widget/LeSpinner$DropdownPopup;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/LeSpinner$DropdownPopup;->dismiss()V
 
-    .line 1106
     return-void
 .end method

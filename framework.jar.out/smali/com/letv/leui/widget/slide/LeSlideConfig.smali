@@ -57,57 +57,44 @@
 
     const/4 v0, -0x1
 
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 12
     iput v0, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->colorPrimary:I
 
-    .line 13
     iput v0, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->colorSecondary:I
 
-    .line 14
     const/high16 v0, -0x40800000    # -1.0f
 
     iput v0, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->touchSize:F
 
-    .line 15
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->sensitivity:F
 
-    .line 19
     const/high16 v0, 0x40a00000    # 5.0f
 
     iput v0, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->velocityThreshold:F
 
-    .line 20
     const/high16 v0, 0x3e800000    # 0.25f
 
     iput v0, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->distanceThreshold:F
 
-    .line 21
     iput-boolean v1, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->edgeOnly:Z
 
-    .line 22
     const v0, 0x3e3851ec    # 0.18f
 
     iput v0, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->edgeSize:F
 
-    .line 23
     const/16 v0, 0x64
 
     iput v0, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->parallaxOffset:I
 
-    .line 24
     const/16 v0, 0x1f4
 
     iput v0, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->slideDuration:I
 
-    .line 26
     iput v1, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->position:I
 
-    .line 33
     return-void
 .end method
 
@@ -116,7 +103,6 @@
     .param p1, "x0"    # Lcom/letv/leui/widget/slide/LeSlideConfig$1;
 
     .prologue
-    .line 5
     invoke-direct {p0}, Lcom/letv/leui/widget/slide/LeSlideConfig;-><init>()V
 
     return-void
@@ -128,7 +114,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 5
     iput p1, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->slideDuration:I
 
     return p1
@@ -140,7 +125,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 5
     iput p1, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->colorPrimary:I
 
     return p1
@@ -152,7 +136,6 @@
     .param p1, "x1"    # Lcom/letv/leui/widget/slide/LeSlideListener;
 
     .prologue
-    .line 5
     iput-object p1, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->listener:Lcom/letv/leui/widget/slide/LeSlideListener;
 
     return-object p1
@@ -164,7 +147,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 5
     iput p1, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->colorSecondary:I
 
     return p1
@@ -176,7 +158,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 5
     iput p1, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->touchSize:F
 
     return p1
@@ -188,7 +169,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 5
     iput p1, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->sensitivity:F
 
     return p1
@@ -200,7 +180,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 5
     iput p1, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->velocityThreshold:F
 
     return p1
@@ -212,7 +191,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 5
     iput p1, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->distanceThreshold:F
 
     return p1
@@ -224,7 +202,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 5
     iput-boolean p1, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->edgeOnly:Z
 
     return p1
@@ -236,7 +213,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 5
     iput p1, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->edgeSize:F
 
     return p1
@@ -248,7 +224,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 5
     iput p1, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->parallaxOffset:I
 
     return p1
@@ -262,7 +237,6 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 137
     iget v0, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->colorPrimary:I
 
     if-eq v0, v1, :cond_0
@@ -286,7 +260,6 @@
     .locals 1
 
     .prologue
-    .line 109
     iget v0, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->distanceThreshold:F
 
     return v0
@@ -297,7 +270,6 @@
     .param p1, "size"    # F
 
     .prologue
-    .line 156
     iget v0, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->edgeSize:F
 
     mul-float/2addr v0, p1
@@ -309,7 +281,6 @@
     .locals 1
 
     .prologue
-    .line 129
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->listener:Lcom/letv/leui/widget/slide/LeSlideListener;
 
     return-object v0
@@ -319,7 +290,6 @@
     .locals 1
 
     .prologue
-    .line 160
     iget v0, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->parallaxOffset:I
 
     return v0
@@ -329,7 +299,6 @@
     .locals 1
 
     .prologue
-    .line 42
     iget v0, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->colorPrimary:I
 
     return v0
@@ -339,7 +308,6 @@
     .locals 1
 
     .prologue
-    .line 52
     iget v0, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->colorSecondary:I
 
     return v0
@@ -349,7 +317,6 @@
     .locals 1
 
     .prologue
-    .line 119
     iget v0, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->sensitivity:F
 
     return v0
@@ -359,7 +326,6 @@
     .locals 1
 
     .prologue
-    .line 164
     iget v0, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->slideDuration:I
 
     return v0
@@ -369,7 +335,6 @@
     .locals 1
 
     .prologue
-    .line 89
     iget v0, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->touchSize:F
 
     return v0
@@ -379,7 +344,6 @@
     .locals 1
 
     .prologue
-    .line 99
     iget v0, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->velocityThreshold:F
 
     return v0
@@ -389,7 +353,6 @@
     .locals 1
 
     .prologue
-    .line 146
     iget-boolean v0, p0, Lcom/letv/leui/widget/slide/LeSlideConfig;->edgeOnly:Z
 
     return v0

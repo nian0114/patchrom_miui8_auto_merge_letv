@@ -52,15 +52,12 @@
     .locals 1
 
     .prologue
-    .line 14
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 15
     const-string v0, "com.qualcomm.qti.biometrics.fingerprint.service.IFingerprintService"
 
     invoke-virtual {p0, p0, v0}, Lcom/qualcomm/qti/biometrics/fingerprint/service/IFingerprintService$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 16
     return-void
 .end method
 
@@ -69,17 +66,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 23
     if-nez p0, :cond_0
 
-    .line 24
     const/4 v0, 0x0
 
-    .line 30
     :goto_0
     return-object v0
 
-    .line 26
     :cond_0
     const-string v1, "com.qualcomm.qti.biometrics.fingerprint.service.IFingerprintService"
 
@@ -87,7 +80,6 @@
 
     move-result-object v0
 
-    .line 27
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -95,12 +87,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 28
     check-cast v0, Lcom/qualcomm/qti/biometrics/fingerprint/service/IFingerprintService;
 
     goto :goto_0
 
-    .line 30
     :cond_1
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprint/service/IFingerprintService$Stub$Proxy;
 
@@ -116,7 +106,6 @@
     .locals 0
 
     .prologue
-    .line 34
     return-object p0
 .end method
 
@@ -137,10 +126,8 @@
 
     const/4 v3, 0x1
 
-    .line 38
     sparse-switch p1, :sswitch_data_0
 
-    .line 142
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v3
@@ -148,7 +135,6 @@
     :goto_0
     return v3
 
-    .line 42
     :sswitch_0
     const-string v4, "com.qualcomm.qti.biometrics.fingerprint.service.IFingerprintService"
 
@@ -156,18 +142,15 @@
 
     goto :goto_0
 
-    .line 47
     :sswitch_1
     const-string v4, "com.qualcomm.qti.biometrics.fingerprint.service.IFingerprintService"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 49
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 51
     .local v0, "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
@@ -177,16 +160,13 @@
 
     move-result-object v1
 
-    .line 52
     .local v1, "_arg1":Lcom/qualcomm/qti/biometrics/fingerprint/service/IFingerprintServiceCallback;
     invoke-virtual {p0, v0, v1}, Lcom/qualcomm/qti/biometrics/fingerprint/service/IFingerprintService$Stub;->enroll(ILcom/qualcomm/qti/biometrics/fingerprint/service/IFingerprintServiceCallback;)V
 
-    .line 53
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 58
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":Lcom/qualcomm/qti/biometrics/fingerprint/service/IFingerprintServiceCallback;
     :sswitch_2
@@ -194,12 +174,10 @@
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 60
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 62
     .restart local v0    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
@@ -209,16 +187,13 @@
 
     move-result-object v1
 
-    .line 63
     .restart local v1    # "_arg1":Lcom/qualcomm/qti/biometrics/fingerprint/service/IFingerprintServiceCallback;
     invoke-virtual {p0, v0, v1}, Lcom/qualcomm/qti/biometrics/fingerprint/service/IFingerprintService$Stub;->match(ILcom/qualcomm/qti/biometrics/fingerprint/service/IFingerprintServiceCallback;)V
 
-    .line 64
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 69
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":Lcom/qualcomm/qti/biometrics/fingerprint/service/IFingerprintServiceCallback;
     :sswitch_3
@@ -226,12 +201,10 @@
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 71
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 73
     .restart local v0    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
@@ -241,16 +214,13 @@
 
     move-result-object v1
 
-    .line 74
     .restart local v1    # "_arg1":Lcom/qualcomm/qti/biometrics/fingerprint/service/IFingerprintServiceCallback;
     invoke-virtual {p0, v0, v1}, Lcom/qualcomm/qti/biometrics/fingerprint/service/IFingerprintService$Stub;->matchAny(ILcom/qualcomm/qti/biometrics/fingerprint/service/IFingerprintServiceCallback;)V
 
-    .line 75
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 80
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":Lcom/qualcomm/qti/biometrics/fingerprint/service/IFingerprintServiceCallback;
     :sswitch_4
@@ -258,12 +228,10 @@
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 82
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 84
     .restart local v0    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
@@ -273,16 +241,13 @@
 
     move-result-object v1
 
-    .line 85
     .restart local v1    # "_arg1":Lcom/qualcomm/qti/biometrics/fingerprint/service/IFingerprintServiceCallback;
     invoke-virtual {p0, v0, v1}, Lcom/qualcomm/qti/biometrics/fingerprint/service/IFingerprintService$Stub;->remove(ILcom/qualcomm/qti/biometrics/fingerprint/service/IFingerprintServiceCallback;)V
 
-    .line 86
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 91
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":Lcom/qualcomm/qti/biometrics/fingerprint/service/IFingerprintServiceCallback;
     :sswitch_5
@@ -290,82 +255,66 @@
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 92
     invoke-virtual {p0}, Lcom/qualcomm/qti/biometrics/fingerprint/service/IFingerprintService$Stub;->cancel()V
 
-    .line 93
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 98
     :sswitch_6
     const-string v4, "com.qualcomm.qti.biometrics.fingerprint.service.IFingerprintService"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 99
     invoke-virtual {p0}, Lcom/qualcomm/qti/biometrics/fingerprint/service/IFingerprintService$Stub;->version()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 100
     .local v2, "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 101
     invoke-virtual {p3, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 106
     .end local v2    # "_result":Ljava/lang/String;
     :sswitch_7
     const-string v4, "com.qualcomm.qti.biometrics.fingerprint.service.IFingerprintService"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 108
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 109
     .restart local v0    # "_arg0":I
     invoke-virtual {p0, v0}, Lcom/qualcomm/qti/biometrics/fingerprint/service/IFingerprintService$Stub;->enableFingerEvent(I)V
 
-    .line 110
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 115
     .end local v0    # "_arg0":I
     :sswitch_8
     const-string v4, "com.qualcomm.qti.biometrics.fingerprint.service.IFingerprintService"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 116
     invoke-virtual {p0}, Lcom/qualcomm/qti/biometrics/fingerprint/service/IFingerprintService$Stub;->disableFingerEvent()V
 
-    .line 117
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 122
     :sswitch_9
     const-string v4, "com.qualcomm.qti.biometrics.fingerprint.service.IFingerprintService"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 124
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v0
 
-    .line 126
     .local v0, "_arg0":[B
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -375,17 +324,14 @@
 
     move v1, v3
 
-    .line 127
     .local v1, "_arg1":Z
     :cond_0
     invoke-virtual {p0, v0, v1}, Lcom/qualcomm/qti/biometrics/fingerprint/service/IFingerprintService$Stub;->setLivenessEnabled([BZ)V
 
-    .line 128
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 133
     .end local v0    # "_arg0":[B
     .end local v1    # "_arg1":Z
     :sswitch_a
@@ -393,22 +339,18 @@
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 135
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v0
 
-    .line 136
     .restart local v0    # "_arg0":[B
     invoke-virtual {p0, v0}, Lcom/qualcomm/qti/biometrics/fingerprint/service/IFingerprintService$Stub;->getLivenessEnabled([B)Z
 
     move-result v2
 
-    .line 137
     .local v2, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 138
     if-eqz v2, :cond_1
 
     move v1, v3
@@ -418,7 +360,6 @@
 
     goto/16 :goto_0
 
-    .line 38
     nop
 
     :sswitch_data_0

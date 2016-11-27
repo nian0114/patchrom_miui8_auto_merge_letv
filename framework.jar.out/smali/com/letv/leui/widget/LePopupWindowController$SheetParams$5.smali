@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 946
     iput-object p1, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$5;->this$0:Lcom/letv/leui/widget/LePopupWindowController$SheetParams;
 
     iput-object p2, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$5;->val$listView:Lcom/letv/leui/widget/LePopupWindowController$RecycleListView;
@@ -52,14 +51,12 @@
     .param p4, "id"    # J
 
     .prologue
-    .line 949
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$5;->this$0:Lcom/letv/leui/widget/LePopupWindowController$SheetParams;
 
     iget-object v0, v0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams;->mCheckedItems:[Z
 
     if-eqz v0, :cond_0
 
-    .line 950
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$5;->this$0:Lcom/letv/leui/widget/LePopupWindowController$SheetParams;
 
     iget-object v0, v0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams;->mCheckedItems:[Z
@@ -72,7 +69,6 @@
 
     aput-boolean v1, v0, p3
 
-    .line 952
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$5;->val$dialog:Lcom/letv/leui/widget/LePopupWindowController;
 
@@ -85,7 +81,6 @@
 
     invoke-virtual {v0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
 
-    .line 953
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$5;->this$0:Lcom/letv/leui/widget/LePopupWindowController$SheetParams;
 
     iget-object v0, v0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams;->mOnCheckboxClickListener:Landroid/content/DialogInterface$OnMultiChoiceClickListener;
@@ -105,6 +100,5 @@
 
     invoke-interface {v0, v1, p3, v2}, Landroid/content/DialogInterface$OnMultiChoiceClickListener;->onClick(Landroid/content/DialogInterface;IZ)V
 
-    .line 955
     return-void
 .end method

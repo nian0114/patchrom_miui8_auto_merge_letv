@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1428
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$5;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 1
 
     .prologue
-    .line 1431
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$5;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     # invokes: Lcom/android/server/policy/PhoneWindowManager;->showForbidVirtualKey()V
     invoke-static {v0}, Lcom/android/server/policy/PhoneWindowManager;->access$1400(Lcom/android/server/policy/PhoneWindowManager;)V
 
-    .line 1432
     return-void
 .end method

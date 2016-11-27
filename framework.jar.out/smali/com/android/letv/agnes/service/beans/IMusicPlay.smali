@@ -54,7 +54,6 @@
     .locals 1
 
     .prologue
-    .line 199
     new-instance v0, Lcom/android/letv/agnes/service/beans/IMusicPlay$1;
 
     invoke-direct {v0}, Lcom/android/letv/agnes/service/beans/IMusicPlay$1;-><init>()V
@@ -68,10 +67,8 @@
     .locals 0
 
     .prologue
-    .line 153
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 154
     return-void
 .end method
 
@@ -93,58 +90,42 @@
     .param p15, "acts"    # Ljava/util/List;
 
     .prologue
-    .line 159
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 160
     iput-wide p1, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->time:J
 
-    .line 161
     iput-object p3, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->id:Ljava/lang/String;
 
-    .line 162
     iput-object p4, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->appId:Ljava/lang/String;
 
-    .line 163
     iput-object p5, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->widgetId:Ljava/lang/String;
 
-    .line 164
     iput-object p6, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->songId:Ljava/lang/String;
 
-    .line 165
     iput-object p7, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->albumId:Ljava/lang/String;
 
-    .line 166
     iput p8, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->musicLength:I
 
-    .line 167
     iput-object p9, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->bitStream:Ljava/lang/String;
 
-    .line 168
     iput-object p10, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->from:Ljava/lang/String;
 
-    .line 169
     iput-object p11, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->station:Ljava/lang/String;
 
-    .line 170
     iput-object p12, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->networkModel:Ljava/lang/String;
 
-    .line 171
     move-object/from16 v0, p13
 
     iput-object v0, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->preMusicId:Ljava/lang/String;
 
-    .line 172
     move-object/from16 v0, p14
 
     iput-object v0, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->props:Ljava/util/Map;
 
-    .line 173
     move-object/from16 v0, p15
 
     iput-object v0, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->acts:Ljava/util/List;
 
-    .line 174
     return-void
 .end method
 
@@ -154,7 +135,6 @@
     .locals 1
 
     .prologue
-    .line 178
     const/4 v0, 0x0
 
     return v0
@@ -164,7 +144,6 @@
     .locals 1
 
     .prologue
-    .line 146
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->acts:Ljava/util/List;
 
     return-object v0
@@ -174,7 +153,6 @@
     .locals 1
 
     .prologue
-    .line 66
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->albumId:Ljava/lang/String;
 
     return-object v0
@@ -184,7 +162,6 @@
     .locals 1
 
     .prologue
-    .line 36
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->appId:Ljava/lang/String;
 
     return-object v0
@@ -194,7 +171,6 @@
     .locals 1
 
     .prologue
-    .line 86
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->bitStream:Ljava/lang/String;
 
     return-object v0
@@ -204,7 +180,6 @@
     .locals 1
 
     .prologue
-    .line 96
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->from:Ljava/lang/String;
 
     return-object v0
@@ -214,7 +189,6 @@
     .locals 1
 
     .prologue
-    .line 26
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->id:Ljava/lang/String;
 
     return-object v0
@@ -224,7 +198,6 @@
     .locals 1
 
     .prologue
-    .line 76
     iget v0, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->musicLength:I
 
     return v0
@@ -234,7 +207,6 @@
     .locals 1
 
     .prologue
-    .line 116
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->networkModel:Ljava/lang/String;
 
     return-object v0
@@ -244,7 +216,6 @@
     .locals 1
 
     .prologue
-    .line 126
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->preMusicId:Ljava/lang/String;
 
     return-object v0
@@ -254,7 +225,6 @@
     .locals 1
 
     .prologue
-    .line 136
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->props:Ljava/util/Map;
 
     return-object v0
@@ -264,7 +234,6 @@
     .locals 1
 
     .prologue
-    .line 56
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->songId:Ljava/lang/String;
 
     return-object v0
@@ -274,7 +243,6 @@
     .locals 1
 
     .prologue
-    .line 106
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->station:Ljava/lang/String;
 
     return-object v0
@@ -284,7 +252,6 @@
     .locals 2
 
     .prologue
-    .line 16
     iget-wide v0, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->time:J
 
     return-wide v0
@@ -294,7 +261,6 @@
     .locals 1
 
     .prologue
-    .line 46
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->widgetId:Ljava/lang/String;
 
     return-object v0
@@ -305,10 +271,8 @@
     .param p1, "acts"    # Ljava/util/List;
 
     .prologue
-    .line 150
     iput-object p1, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->acts:Ljava/util/List;
 
-    .line 151
     return-void
 .end method
 
@@ -317,10 +281,8 @@
     .param p1, "albumId"    # Ljava/lang/String;
 
     .prologue
-    .line 70
     iput-object p1, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->albumId:Ljava/lang/String;
 
-    .line 71
     return-void
 .end method
 
@@ -329,10 +291,8 @@
     .param p1, "appId"    # Ljava/lang/String;
 
     .prologue
-    .line 40
     iput-object p1, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->appId:Ljava/lang/String;
 
-    .line 41
     return-void
 .end method
 
@@ -341,10 +301,8 @@
     .param p1, "bitStream"    # Ljava/lang/String;
 
     .prologue
-    .line 90
     iput-object p1, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->bitStream:Ljava/lang/String;
 
-    .line 91
     return-void
 .end method
 
@@ -353,10 +311,8 @@
     .param p1, "from"    # Ljava/lang/String;
 
     .prologue
-    .line 100
     iput-object p1, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->from:Ljava/lang/String;
 
-    .line 101
     return-void
 .end method
 
@@ -365,10 +321,8 @@
     .param p1, "id"    # Ljava/lang/String;
 
     .prologue
-    .line 30
     iput-object p1, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->id:Ljava/lang/String;
 
-    .line 31
     return-void
 .end method
 
@@ -377,10 +331,8 @@
     .param p1, "musicLength"    # I
 
     .prologue
-    .line 80
     iput p1, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->musicLength:I
 
-    .line 81
     return-void
 .end method
 
@@ -389,10 +341,8 @@
     .param p1, "networkModel"    # Ljava/lang/String;
 
     .prologue
-    .line 120
     iput-object p1, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->networkModel:Ljava/lang/String;
 
-    .line 121
     return-void
 .end method
 
@@ -401,10 +351,8 @@
     .param p1, "preMusicId"    # Ljava/lang/String;
 
     .prologue
-    .line 130
     iput-object p1, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->preMusicId:Ljava/lang/String;
 
-    .line 131
     return-void
 .end method
 
@@ -413,10 +361,8 @@
     .param p1, "props"    # Ljava/util/Map;
 
     .prologue
-    .line 140
     iput-object p1, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->props:Ljava/util/Map;
 
-    .line 141
     return-void
 .end method
 
@@ -425,10 +371,8 @@
     .param p1, "songId"    # Ljava/lang/String;
 
     .prologue
-    .line 60
     iput-object p1, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->songId:Ljava/lang/String;
 
-    .line 61
     return-void
 .end method
 
@@ -437,10 +381,8 @@
     .param p1, "station"    # Ljava/lang/String;
 
     .prologue
-    .line 110
     iput-object p1, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->station:Ljava/lang/String;
 
-    .line 111
     return-void
 .end method
 
@@ -449,10 +391,8 @@
     .param p1, "time"    # J
 
     .prologue
-    .line 20
     iput-wide p1, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->time:J
 
-    .line 21
     return-void
 .end method
 
@@ -461,10 +401,8 @@
     .param p1, "widgetId"    # Ljava/lang/String;
 
     .prologue
-    .line 50
     iput-object p1, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->widgetId:Ljava/lang/String;
 
-    .line 51
     return-void
 .end method
 
@@ -474,76 +412,61 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 183
     iget-wide v0, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->time:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 184
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->id:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 185
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->appId:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 186
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->widgetId:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 187
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->songId:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 188
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->albumId:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 189
     iget v0, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->musicLength:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 190
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->bitStream:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 191
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->from:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 192
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->station:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 193
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->networkModel:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 194
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->preMusicId:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 195
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->props:Ljava/util/Map;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeMap(Ljava/util/Map;)V
 
-    .line 196
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IMusicPlay;->acts:Ljava/util/List;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeList(Ljava/util/List;)V
 
-    .line 197
     return-void
 .end method

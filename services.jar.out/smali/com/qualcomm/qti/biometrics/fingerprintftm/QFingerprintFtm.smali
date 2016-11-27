@@ -31,12 +31,10 @@
     .locals 1
 
     .prologue
-    .line 247
     const-string v0, "qfp-service"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 248
     return-void
 .end method
 
@@ -45,12 +43,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 26
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, v0}, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;-><init>(Landroid/content/Context;I)V
 
-    .line 27
     return-void
 .end method
 
@@ -62,21 +58,16 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
     const-string v0, "qfp-ftm"
 
     iput-object v0, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->TAG:Ljava/lang/String;
 
-    .line 18
     iput-wide v2, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->mJniContext:J
 
-    .line 36
     if-nez p1, :cond_0
 
-    .line 37
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "Context is null"
@@ -85,28 +76,23 @@
 
     throw v0
 
-    .line 40
     :cond_0
     iput-object p1, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->mContext:Landroid/content/Context;
 
-    .line 41
     iput p2, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->mDeviceId:I
 
-    .line 43
     invoke-direct {p0}, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->nativeOpen()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->mJniContext:J
 
-    .line 44
     iget-wide v0, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->mJniContext:J
 
     cmp-long v0, v0, v2
 
     if-nez v0, :cond_1
 
-    .line 45
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "unable to connect to qfp service"
@@ -115,7 +101,6 @@
 
     throw v0
 
-    .line 47
     :cond_1
     return-void
 .end method
@@ -182,10 +167,8 @@
     .param p1, "rc"    # I
 
     .prologue
-    .line 236
     if-eqz p1, :cond_0
 
-    .line 237
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -204,20 +187,17 @@
 
     move-result-object v0
 
-    .line 238
     .local v0, "msg":Ljava/lang/String;
     const-string v1, "qfp-ftm"
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 239
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 241
     .end local v0    # "msg":Ljava/lang/String;
     :cond_0
     return-void
@@ -229,7 +209,6 @@
     .locals 3
 
     .prologue
-    .line 224
     iget-wide v0, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->mJniContext:J
 
     iget v2, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->mDeviceId:I
@@ -240,7 +219,6 @@
 
     invoke-direct {p0, v0}, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->throwIfFail(I)V
 
-    .line 225
     return-void
 .end method
 
@@ -249,12 +227,10 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 214
     const/4 v0, 0x1
 
     new-array v6, v0, [Ljava/lang/String;
 
-    .line 215
     .local v6, "value":[Ljava/lang/String;
     iget-wide v2, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->mJniContext:J
 
@@ -270,7 +246,6 @@
 
     invoke-direct {p0, v0}, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->throwIfFail(I)V
 
-    .line 216
     const/4 v0, 0x0
 
     aget-object v0, v6, v0
@@ -286,20 +261,16 @@
 
     const/4 v7, 0x0
 
-    .line 228
     new-array v5, v1, [I
 
-    .line 229
     .local v5, "phase":[I
     new-array v6, v1, [I
 
-    .line 230
     .local v6, "initialDelay":[I
     aput v7, v6, v7
 
     aput v7, v5, v7
 
-    .line 231
     iget-wide v2, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->mJniContext:J
 
     iget v4, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->mDeviceId:I
@@ -310,7 +281,6 @@
 
     move-result v0
 
-    .line 232
     .local v0, "status":I
     new-instance v1, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm$PsfCalibrationFormat;
 
@@ -329,7 +299,6 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 210
     iget-wide v2, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->mJniContext:J
 
     iget v4, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->mDeviceId:I
@@ -346,7 +315,6 @@
 
     invoke-direct {p0, v0}, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->throwIfFail(I)V
 
-    .line 211
     return-void
 .end method
 
@@ -354,7 +322,6 @@
     .locals 3
 
     .prologue
-    .line 220
     iget-wide v0, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->mJniContext:J
 
     iget v2, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->mDeviceId:I
@@ -365,7 +332,6 @@
 
     invoke-direct {p0, v0}, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->throwIfFail(I)V
 
-    .line 221
     return-void
 .end method
 
@@ -373,12 +339,10 @@
     .locals 4
 
     .prologue
-    .line 152
     const/4 v1, 0x1
 
     new-array v0, v1, [I
 
-    .line 153
     .local v0, "optimalDbias":[I
     iget-wide v2, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->mJniContext:J
 
@@ -390,7 +354,6 @@
 
     invoke-direct {p0, v1}, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->throwIfFail(I)V
 
-    .line 154
     const/4 v1, 0x0
 
     aget v1, v0, v1
@@ -404,23 +367,19 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 302
     iget-wide v0, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->mJniContext:J
 
     cmp-long v0, v0, v2
 
     if-eqz v0, :cond_0
 
-    .line 303
     iget-wide v0, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->mJniContext:J
 
     invoke-direct {p0, v0, v1}, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->nativeClose(J)V
 
-    .line 305
     :cond_0
     iput-wide v2, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->mJniContext:J
 
-    .line 306
     return-void
 .end method
 
@@ -428,7 +387,6 @@
     .locals 3
 
     .prologue
-    .line 54
     iget-wide v0, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->mJniContext:J
 
     iget v2, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->mDeviceId:I
@@ -439,7 +397,6 @@
 
     invoke-direct {p0, v0}, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->throwIfFail(I)V
 
-    .line 55
     return-void
 .end method
 
@@ -451,14 +408,11 @@
 
     const/4 v7, 0x0
 
-    .line 78
     new-array v5, v0, [I
 
-    .line 79
     .local v5, "asicId":[I
     new-array v6, v0, [I
 
-    .line 80
     .local v6, "asicSerialNumber":[I
     iget-wide v2, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->mJniContext:J
 
@@ -472,7 +426,6 @@
 
     invoke-direct {p0, v0}, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->throwIfFail(I)V
 
-    .line 82
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm$DigitalTestFormat;
 
     aget v1, v5, v7
@@ -492,20 +445,16 @@
 
     const/4 v7, 0x0
 
-    .line 170
     new-array v5, v1, [I
 
-    .line 171
     .local v5, "SNR1":[I
     new-array v6, v1, [I
 
-    .line 172
     .local v6, "delta1":[I
     aput v7, v6, v7
 
     aput v7, v5, v7
 
-    .line 173
     iget-wide v2, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->mJniContext:J
 
     iget v4, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->mDeviceId:I
@@ -516,7 +465,6 @@
 
     move-result v0
 
-    .line 174
     .local v0, "status":I
     new-instance v1, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm$TestImageQualityFormat;
 
@@ -533,7 +481,6 @@
     .locals 3
 
     .prologue
-    .line 50
     iget-wide v0, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->mJniContext:J
 
     iget v2, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->mDeviceId:I
@@ -544,7 +491,6 @@
 
     invoke-direct {p0, v0}, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->throwIfFail(I)V
 
-    .line 51
     return-void
 .end method
 
@@ -556,20 +502,16 @@
 
     const/4 v7, 0x0
 
-    .line 202
     new-array v5, v1, [I
 
-    .line 203
     .local v5, "stddevTbOn":[I
     new-array v6, v1, [I
 
-    .line 204
     .local v6, "stddevTbOff":[I
     aput v7, v6, v7
 
     aput v7, v5, v7
 
-    .line 205
     iget-wide v2, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->mJniContext:J
 
     iget v4, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->mDeviceId:I
@@ -580,7 +522,6 @@
 
     move-result v0
 
-    .line 206
     .local v0, "status":I
     new-instance v1, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm$TestNoiseFormat;
 
@@ -598,12 +539,10 @@
     .param p1, "name"    # I
 
     .prologue
-    .line 62
     const/4 v0, 0x1
 
     new-array v6, v0, [Ljava/lang/String;
 
-    .line 63
     .local v6, "value":[Ljava/lang/String;
     iget-wide v2, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->mJniContext:J
 
@@ -619,7 +558,6 @@
 
     invoke-direct {p0, v0}, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->throwIfFail(I)V
 
-    .line 64
     const/4 v0, 0x0
 
     aget-object v0, v6, v0
@@ -633,7 +571,6 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 58
     iget-wide v2, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->mJniContext:J
 
     iget v4, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->mDeviceId:I
@@ -650,7 +587,6 @@
 
     invoke-direct {p0, v0}, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->throwIfFail(I)V
 
-    .line 59
     return-void
 .end method
 
@@ -658,36 +594,30 @@
     .locals 19
 
     .prologue
-    .line 113
     const/4 v2, 0x1
 
     new-array v7, v2, [I
 
-    .line 114
     .local v7, "bias":[I
     const/4 v2, 0x1
 
     new-array v8, v2, [I
 
-    .line 115
     .local v8, "median":[I
     const/4 v2, 0x1
 
     new-array v9, v2, [I
 
-    .line 116
     .local v9, "stddev":[I
     const/4 v2, 0x1
 
     new-array v10, v2, [I
 
-    .line 117
     .local v10, "q5":[I
     const/4 v2, 0x1
 
     new-array v11, v2, [I
 
-    .line 118
     .local v11, "q95":[I
     move-object/from16 v0, p0
 
@@ -707,7 +637,6 @@
 
     invoke-direct {v0, v2}, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->throwIfFail(I)V
 
-    .line 120
     new-instance v12, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm$TestBiasFormat;
 
     const/4 v2, 0x0
@@ -741,7 +670,6 @@
     .locals 3
 
     .prologue
-    .line 148
     iget-wide v0, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->mJniContext:J
 
     iget v2, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->mDeviceId:I
@@ -752,7 +680,6 @@
 
     invoke-direct {p0, v0}, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->throwIfFail(I)V
 
-    .line 149
     return-void
 .end method
 
@@ -760,36 +687,30 @@
     .locals 19
 
     .prologue
-    .line 102
     const/4 v2, 0x1
 
     new-array v7, v2, [I
 
-    .line 103
     .local v7, "bias":[I
     const/4 v2, 0x1
 
     new-array v8, v2, [I
 
-    .line 104
     .local v8, "median":[I
     const/4 v2, 0x1
 
     new-array v9, v2, [I
 
-    .line 105
     .local v9, "stddev":[I
     const/4 v2, 0x1
 
     new-array v10, v2, [I
 
-    .line 106
     .local v10, "q5":[I
     const/4 v2, 0x1
 
     new-array v11, v2, [I
 
-    .line 107
     .local v11, "q95":[I
     move-object/from16 v0, p0
 
@@ -809,7 +730,6 @@
 
     invoke-direct {v0, v2}, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->throwIfFail(I)V
 
-    .line 109
     new-instance v12, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm$TestBiasFormat;
 
     const/4 v2, 0x0
@@ -847,22 +767,17 @@
 
     const/4 v10, 0x0
 
-    .line 138
     new-array v5, v0, [I
 
-    .line 139
     .local v5, "median":[I
     new-array v6, v0, [I
 
-    .line 140
     .local v6, "stddev":[I
     new-array v7, v0, [I
 
-    .line 141
     .local v7, "q5":[I
     new-array v8, v0, [I
 
-    .line 142
     .local v8, "q95":[I
     iget-wide v2, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->mJniContext:J
 
@@ -876,7 +791,6 @@
 
     invoke-direct {p0, v0}, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;->throwIfFail(I)V
 
-    .line 144
     new-instance v9, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm$TestTxFormat;
 
     aget v11, v5, v10

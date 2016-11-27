@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 111
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
     .param p1, "x0"    # Lcom/android/server/am/TaskPersister$1;
 
     .prologue
-    .line 111
     invoke-direct {p0}, Lcom/android/server/am/TaskPersister$WriteQueueItem;-><init>()V
 
     return-void
@@ -42,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 114
     const-string v0, "WriteQueueItem"
 
     return-object v0

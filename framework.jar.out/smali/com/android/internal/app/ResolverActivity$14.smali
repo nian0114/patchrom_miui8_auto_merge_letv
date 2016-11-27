@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 2749
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$14;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     iput-object p2, p0, Lcom/android/internal/app/ResolverActivity$14;->val$ri:Landroid/content/pm/ResolveInfo;
@@ -53,10 +52,8 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 2752
     const/4 v11, 0x0
 
-    .line 2753
     .local v11, "targetPackageName":Ljava/lang/String;
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$14;->val$ri:Landroid/content/pm/ResolveInfo;
 
@@ -68,14 +65,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 2754
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$14;->val$ri:Landroid/content/pm/ResolveInfo;
 
     iget-object v0, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v11, v0, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
-    .line 2756
     :cond_0
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$14;->this$0:Lcom/android/internal/app/ResolverActivity;
 
@@ -143,7 +138,6 @@
 
     move-result v12
 
-    .line 2757
     .local v12, "isShare":Z
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$14;->val$ri:Landroid/content/pm/ResolveInfo;
 
@@ -155,7 +149,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2758
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$14;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$14;->val$ri:Landroid/content/pm/ResolveInfo;
@@ -180,7 +173,6 @@
 
     invoke-static {v12, v0, v1, v2, v3}, Lcom/letv/leui/util/LeResolveUtils;->sendShareBroadCast(ZLandroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2760
     :cond_1
     const-string v0, "leshare"
 
@@ -204,19 +196,15 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2761
     if-eqz v12, :cond_2
 
-    .line 2762
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$14;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-virtual {v0}, Lcom/android/internal/app/ResolverActivity;->finish()V
 
-    .line 2777
     :goto_0
     return-void
 
-    .line 2765
     :cond_2
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$14;->this$0:Lcom/android/internal/app/ResolverActivity;
 
@@ -227,7 +215,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 2766
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$14;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->mShareDesc:Ljava/lang/String;
@@ -237,7 +224,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 2767
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$14;->val$intent:Landroid/content/Intent;
 
     const-string v1, "android.intent.extra.TEXT"
@@ -280,7 +266,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2771
     :goto_1
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$14;->val$intent:Landroid/content/Intent;
 
@@ -296,14 +281,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 2772
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$14;->val$intent:Landroid/content/Intent;
 
     const-string v1, "text/plain"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2775
     :cond_3
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$14;->this$0:Lcom/android/internal/app/ResolverActivity;
 
@@ -313,14 +296,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/internal/app/ResolverActivity;->onTargetSelected(Lcom/android/internal/app/ResolverActivity$TargetInfo;Z)Z
 
-    .line 2776
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$14;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-virtual {v0}, Lcom/android/internal/app/ResolverActivity;->finish()V
 
     goto :goto_0
 
-    .line 2769
     :cond_4
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$14;->val$intent:Landroid/content/Intent;
 

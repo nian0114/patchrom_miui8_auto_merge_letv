@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 99
     iput-object p1, p0, Lcom/google/gson/internal/ConstructorConstructor$3;->this$0:Lcom/google/gson/internal/ConstructorConstructor;
 
     iput-object p2, p0, Lcom/google/gson/internal/ConstructorConstructor$3;->val$constructor:Ljava/lang/reflect/Constructor;
@@ -57,10 +56,8 @@
     .end annotation
 
     .prologue
-    .line 103
     const/4 v0, 0x0
 
-    .line 104
     .local v0, "args":[Ljava/lang/Object;
     :try_start_0
     iget-object v2, p0, Lcom/google/gson/internal/ConstructorConstructor$3;->val$constructor:Ljava/lang/reflect/Constructor;
@@ -75,11 +72,9 @@
 
     return-object v2
 
-    .line 105
     :catch_0
     move-exception v1
 
-    .line 107
     .local v1, "e":Ljava/lang/InstantiationException;
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -113,12 +108,10 @@
 
     throw v2
 
-    .line 108
     .end local v1    # "e":Ljava/lang/InstantiationException;
     :catch_1
     move-exception v1
 
-    .line 111
     .local v1, "e":Ljava/lang/reflect/InvocationTargetException;
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -156,12 +149,10 @@
 
     throw v2
 
-    .line 113
     .end local v1    # "e":Ljava/lang/reflect/InvocationTargetException;
     :catch_2
     move-exception v1
 
-    .line 114
     .local v1, "e":Ljava/lang/IllegalAccessException;
     new-instance v2, Ljava/lang/AssertionError;
 

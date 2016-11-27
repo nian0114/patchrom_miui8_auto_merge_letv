@@ -40,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 774
     const-class v0, Lcom/letv/leui/widget/DragSortGridView;
 
     invoke-virtual {v0}, Ljava/lang/Class;->desiredAssertionStatus()Z
@@ -68,18 +67,14 @@
     .param p3, "deltaY"    # I
 
     .prologue
-    .line 779
     iput-object p1, p0, Lcom/letv/leui/widget/DragSortGridView$KitKatSwitchCellAnimator;->this$0:Lcom/letv/leui/widget/DragSortGridView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 780
     iput p2, p0, Lcom/letv/leui/widget/DragSortGridView$KitKatSwitchCellAnimator;->mDeltaX:I
 
-    .line 781
     iput p3, p0, Lcom/letv/leui/widget/DragSortGridView$KitKatSwitchCellAnimator;->mDeltaY:I
 
-    .line 782
     return-void
 .end method
 
@@ -88,7 +83,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/DragSortGridView$KitKatSwitchCellAnimator;
 
     .prologue
-    .line 774
     iget v0, p0, Lcom/letv/leui/widget/DragSortGridView$KitKatSwitchCellAnimator;->mDeltaY:I
 
     return v0
@@ -99,7 +93,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/DragSortGridView$KitKatSwitchCellAnimator;
 
     .prologue
-    .line 774
     iget v0, p0, Lcom/letv/leui/widget/DragSortGridView$KitKatSwitchCellAnimator;->mDeltaX:I
 
     return v0
@@ -113,7 +106,6 @@
     .param p2, "targetPosition"    # I
 
     .prologue
-    .line 786
     sget-boolean v0, Lcom/letv/leui/widget/DragSortGridView$KitKatSwitchCellAnimator;->$assertionsDisabled:Z
 
     if-nez v0, :cond_0
@@ -133,7 +125,6 @@
 
     throw v0
 
-    .line 787
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortGridView$KitKatSwitchCellAnimator;->this$0:Lcom/letv/leui/widget/DragSortGridView;
 
@@ -154,7 +145,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 788
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortGridView$KitKatSwitchCellAnimator;->this$0:Lcom/letv/leui/widget/DragSortGridView;
 
     iget-object v1, p0, Lcom/letv/leui/widget/DragSortGridView$KitKatSwitchCellAnimator;->this$0:Lcom/letv/leui/widget/DragSortGridView;
@@ -173,6 +163,5 @@
     # setter for: Lcom/letv/leui/widget/DragSortGridView;->mMobileView:Landroid/view/View;
     invoke-static {v0, v1}, Lcom/letv/leui/widget/DragSortGridView;->access$602(Lcom/letv/leui/widget/DragSortGridView;Landroid/view/View;)Landroid/view/View;
 
-    .line 789
     return-void
 .end method

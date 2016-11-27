@@ -50,7 +50,6 @@
     .locals 3
 
     .prologue
-    .line 35
     const/16 v0, 0x8
 
     new-array v0, v0, [Landroid/widget/ImageView$ScaleType;
@@ -117,27 +116,20 @@
 
     const/4 v0, 0x0
 
-    .line 47
     invoke-direct {p0, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    .line 27
     iput-boolean v1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mRoundImage:Z
 
-    .line 48
     iput v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mCircleRadius:I
 
-    .line 49
     iput v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mBorderWidth:I
 
-    .line 50
     const/high16 v0, -0x1000000
 
     iput v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mBorderColor:I
 
-    .line 52
     iput-boolean v1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mCustomizedXmlParamsLoaded:Z
 
-    .line 53
     return-void
 .end method
 
@@ -147,12 +139,10 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 56
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/letv/leui/widget/BorderedCircleImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 57
     return-void
 .end method
 
@@ -169,20 +159,16 @@
 
     const/4 v3, 0x0
 
-    .line 60
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 27
     iput-boolean v4, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mRoundImage:Z
 
-    .line 62
     sget-object v1, Lcom/android/internal/R$styleable;->LeCustomizedImageView:[I
 
     invoke-virtual {p1, p2, v1, p3, v3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 65
     .local v0, "a":Landroid/content/res/TypedArray;
     invoke-virtual {v0, v4, v2}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -190,7 +176,6 @@
 
     iput v1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mCircleRadius:I
 
-    .line 67
     const/4 v1, 0x3
 
     invoke-virtual {v0, v1, v2}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
@@ -199,24 +184,19 @@
 
     iput v1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mBorderWidth:I
 
-    .line 70
     iget v1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mCircleRadius:I
 
     if-gez v1, :cond_0
 
-    .line 71
     iput v3, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mCircleRadius:I
 
-    .line 73
     :cond_0
     iget v1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mBorderWidth:I
 
     if-gez v1, :cond_1
 
-    .line 74
     iput v3, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mBorderWidth:I
 
-    .line 77
     :cond_1
     const/4 v1, 0x4
 
@@ -228,7 +208,6 @@
 
     iput v1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mBorderColor:I
 
-    .line 80
     const/4 v1, 0x5
 
     invoke-virtual {v0, v1, v3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -237,7 +216,6 @@
 
     iput-boolean v1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mRoundBackground:Z
 
-    .line 81
     const/4 v1, 0x6
 
     invoke-virtual {v0, v1, v4}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -246,56 +224,45 @@
 
     iput-boolean v1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mRoundImage:Z
 
-    .line 83
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 85
     iput-boolean v4, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mCustomizedXmlParamsLoaded:Z
 
-    .line 87
     iget-object v1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mImageDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_5
 
-    .line 88
     iget-object v1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mImageDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, v1}, Lcom/letv/leui/widget/BorderedCircleImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 93
     :cond_2
     :goto_0
     iget-object v1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_3
 
-    .line 94
     iget-object v1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, v1}, Lcom/letv/leui/widget/BorderedCircleImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 97
     :cond_3
     iget-object v1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mScaleType:Landroid/widget/ImageView$ScaleType;
 
     if-eqz v1, :cond_4
 
-    .line 98
     iget-object v1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mScaleType:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {p0, v1}, Lcom/letv/leui/widget/BorderedCircleImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 100
     :cond_4
     return-void
 
-    .line 89
     :cond_5
     iget-object v1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mImageBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v1, :cond_2
 
-    .line 90
     iget-object v1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mImageBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {p0, v1}, Lcom/letv/leui/widget/BorderedCircleImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
@@ -309,7 +276,6 @@
     .locals 1
 
     .prologue
-    .line 275
     iget v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mBorderWidth:I
 
     return v0
@@ -319,7 +285,6 @@
     .locals 1
 
     .prologue
-    .line 279
     iget v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mBorderColor:I
 
     return v0
@@ -329,7 +294,6 @@
     .locals 1
 
     .prologue
-    .line 271
     iget v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mCircleRadius:I
 
     return v0
@@ -339,7 +303,6 @@
     .locals 1
 
     .prologue
-    .line 163
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mScaleType:Landroid/widget/ImageView$ScaleType;
 
     return-object v0
@@ -349,7 +312,6 @@
     .locals 1
 
     .prologue
-    .line 329
     iget-boolean v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mRoundBackground:Z
 
     return v0
@@ -363,37 +325,30 @@
     .prologue
     const/high16 v6, -0x80000000
 
-    .line 356
     invoke-super {p0, p1, p2}, Landroid/widget/ImageView;->onMeasure(II)V
 
-    .line 358
     invoke-virtual {p0}, Lcom/letv/leui/widget/BorderedCircleImageView;->getMeasuredWidth()I
 
     move-result v3
 
-    .line 359
     .local v3, "width":I
     invoke-virtual {p0}, Lcom/letv/leui/widget/BorderedCircleImageView;->getMeasuredHeight()I
 
     move-result v1
 
-    .line 360
     .local v1, "height":I
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
     move-result v4
 
-    .line 361
     .local v4, "widthMode":I
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
     move-result v2
 
-    .line 363
     .local v2, "heightMode":I
     const/4 v0, 0x0
 
-    .line 365
     .local v0, "changed":Z
     iget v5, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mCircleRadius:I
 
@@ -403,15 +358,12 @@
 
     if-ne v4, v6, :cond_0
 
-    .line 366
     iget v5, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mCircleRadius:I
 
     mul-int/lit8 v3, v5, 0x2
 
-    .line 367
     const/4 v0, 0x1
 
-    .line 370
     :cond_0
     iget v5, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mCircleRadius:I
 
@@ -421,19 +373,15 @@
 
     if-ne v2, v6, :cond_1
 
-    .line 371
     iget v5, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mCircleRadius:I
 
     mul-int/lit8 v1, v5, 0x2
 
-    .line 372
     const/4 v0, 0x1
 
-    .line 375
     :cond_1
     if-eqz v0, :cond_2
 
-    .line 379
     invoke-static {v3, p1}, Lcom/letv/leui/widget/BorderedCircleImageView;->resolveSize(II)I
 
     move-result v5
@@ -444,7 +392,6 @@
 
     invoke-virtual {p0, v5, v6}, Lcom/letv/leui/widget/BorderedCircleImageView;->setMeasuredDimension(II)V
 
-    .line 382
     :cond_2
     return-void
 .end method
@@ -454,10 +401,8 @@
     .param p1, "background"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 207
     invoke-virtual {p0, p1}, Lcom/letv/leui/widget/BorderedCircleImageView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 208
     return-void
 .end method
 
@@ -466,14 +411,12 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 258
     new-instance v0, Landroid/graphics/drawable/ColorDrawable;
 
     invoke-direct {v0, p1}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/BorderedCircleImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 259
     return-void
 .end method
 
@@ -484,19 +427,15 @@
     .end annotation
 
     .prologue
-    .line 213
     iget-boolean v1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mCustomizedXmlParamsLoaded:Z
 
     if-nez v1, :cond_0
 
-    .line 214
     iput-object p1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 254
     :goto_0
     return-void
 
-    .line 218
     :cond_0
     iget-boolean v1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mRoundBackground:Z
 
@@ -504,23 +443,19 @@
 
     if-eqz p1, :cond_6
 
-    .line 219
     instance-of v1, p1, Landroid/graphics/drawable/ColorDrawable;
 
     if-eqz v1, :cond_5
 
-    .line 220
     invoke-virtual {p0}, Lcom/letv/leui/widget/BorderedCircleImageView;->getWidth()I
 
     move-result v5
 
-    .line 221
     .local v5, "width":I
     invoke-virtual {p0}, Lcom/letv/leui/widget/BorderedCircleImageView;->getHeight()I
 
     move-result v6
 
-    .line 223
     .local v6, "height":I
     invoke-virtual {p0}, Lcom/letv/leui/widget/BorderedCircleImageView;->getMeasuredWidth()I
 
@@ -528,12 +463,10 @@
 
     if-ge v5, v1, :cond_1
 
-    .line 224
     invoke-virtual {p0}, Lcom/letv/leui/widget/BorderedCircleImageView;->getMeasuredWidth()I
 
     move-result v5
 
-    .line 227
     :cond_1
     invoke-virtual {p0}, Lcom/letv/leui/widget/BorderedCircleImageView;->getMeasuredHeight()I
 
@@ -541,12 +474,10 @@
 
     if-ge v6, v1, :cond_2
 
-    .line 228
     invoke-virtual {p0}, Lcom/letv/leui/widget/BorderedCircleImageView;->getMeasuredHeight()I
 
     move-result v6
 
-    .line 231
     :cond_2
     invoke-virtual {p0}, Lcom/letv/leui/widget/BorderedCircleImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -554,7 +485,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 232
     invoke-virtual {p0}, Lcom/letv/leui/widget/BorderedCircleImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
@@ -563,14 +493,12 @@
 
     if-ge v5, v1, :cond_3
 
-    .line 233
     invoke-virtual {p0}, Lcom/letv/leui/widget/BorderedCircleImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
     iget v5, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 236
     :cond_3
     invoke-virtual {p0}, Lcom/letv/leui/widget/BorderedCircleImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -580,14 +508,12 @@
 
     if-ge v6, v1, :cond_4
 
-    .line 237
     invoke-virtual {p0}, Lcom/letv/leui/widget/BorderedCircleImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
     iget v6, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 241
     :cond_4
     new-instance v0, Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;
 
@@ -607,11 +533,9 @@
 
     invoke-direct/range {v0 .. v7}, Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;-><init>(Landroid/graphics/drawable/ColorDrawable;FIIIILandroid/widget/ImageView$ScaleType;)V
 
-    .line 245
     .local v0, "drawable":Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;
     iput-object v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 253
     .end local v0    # "drawable":Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;
     .end local v5    # "width":I
     .end local v6    # "height":I
@@ -622,7 +546,6 @@
 
     goto :goto_0
 
-    .line 247
     :cond_5
     iget v1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mCircleRadius:I
 
@@ -642,7 +565,6 @@
 
     goto :goto_1
 
-    .line 251
     :cond_6
     iput-object p1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -654,14 +576,11 @@
     .param p1, "resid"    # I
 
     .prologue
-    .line 263
     const/4 v0, 0x0
 
-    .line 264
     .local v0, "d":Landroid/graphics/drawable/Drawable;
     if-eqz p1, :cond_0
 
-    .line 265
     invoke-virtual {p0}, Lcom/letv/leui/widget/BorderedCircleImageView;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -674,11 +593,9 @@
 
     move-result-object v0
 
-    .line 267
     :cond_0
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/BorderedCircleImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 268
     return-void
 .end method
 
@@ -687,35 +604,29 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 312
     iget v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mBorderColor:I
 
     if-ne v0, p1, :cond_1
 
-    .line 326
     :cond_0
     :goto_0
     return-void
 
-    .line 316
     :cond_1
     iput p1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mBorderColor:I
 
-    .line 317
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mImageDrawable:Landroid/graphics/drawable/Drawable;
 
     instance-of v0, v0, Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;
 
     if-eqz v0, :cond_2
 
-    .line 318
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mImageDrawable:Landroid/graphics/drawable/Drawable;
 
     check-cast v0, Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;->setBorderColor(I)V
 
-    .line 320
     :cond_2
     iget-boolean v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mRoundBackground:Z
 
@@ -727,20 +638,17 @@
 
     if-eqz v0, :cond_3
 
-    .line 321
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
     check-cast v0, Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;->setBorderColor(I)V
 
-    .line 323
     :cond_3
     iget v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mBorderWidth:I
 
     if-lez v0, :cond_0
 
-    .line 324
     invoke-virtual {p0}, Lcom/letv/leui/widget/BorderedCircleImageView;->invalidate()V
 
     goto :goto_0
@@ -751,34 +659,28 @@
     .param p1, "width"    # I
 
     .prologue
-    .line 297
     iget v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mBorderWidth:I
 
     if-ne v0, p1, :cond_0
 
-    .line 309
     :goto_0
     return-void
 
-    .line 301
     :cond_0
     iput p1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mBorderWidth:I
 
-    .line 302
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mImageDrawable:Landroid/graphics/drawable/Drawable;
 
     instance-of v0, v0, Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;
 
     if-eqz v0, :cond_1
 
-    .line 303
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mImageDrawable:Landroid/graphics/drawable/Drawable;
 
     check-cast v0, Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;->setBorderWidth(I)V
 
-    .line 305
     :cond_1
     iget-boolean v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mRoundBackground:Z
 
@@ -790,14 +692,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 306
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
     check-cast v0, Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;->setBorderWidth(I)V
 
-    .line 308
     :cond_2
     invoke-virtual {p0}, Lcom/letv/leui/widget/BorderedCircleImageView;->invalidate()V
 
@@ -809,28 +709,23 @@
     .param p1, "radius"    # I
 
     .prologue
-    .line 283
     iget v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mCircleRadius:I
 
     if-ne v0, p1, :cond_1
 
-    .line 294
     :cond_0
     :goto_0
     return-void
 
-    .line 287
     :cond_1
     iput p1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mCircleRadius:I
 
-    .line 288
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mImageDrawable:Landroid/graphics/drawable/Drawable;
 
     instance-of v0, v0, Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;
 
     if-eqz v0, :cond_2
 
-    .line 289
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mImageDrawable:Landroid/graphics/drawable/Drawable;
 
     check-cast v0, Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;
@@ -839,7 +734,6 @@
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;->setCircleRadius(F)V
 
-    .line 291
     :cond_2
     iget-boolean v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mRoundBackground:Z
 
@@ -851,7 +745,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 292
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
     check-cast v0, Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;
@@ -870,22 +763,17 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 189
     iget-boolean v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mCustomizedXmlParamsLoaded:Z
 
     if-nez v0, :cond_0
 
-    .line 190
     iput-object p1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mImageBitmap:Landroid/graphics/Bitmap;
 
-    .line 191
     iput-object v1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mImageDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 203
     :goto_0
     return-void
 
-    .line 195
     :cond_0
     iget-boolean v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mRoundImage:Z
 
@@ -893,7 +781,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 196
     new-instance v0, Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;
 
     iget v1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mCircleRadius:I
@@ -912,7 +799,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mImageDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 202
     :goto_1
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mImageDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -920,7 +806,6 @@
 
     goto :goto_0
 
-    .line 200
     :cond_1
     iput-object v1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mImageDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -932,24 +817,19 @@
     .param p1, "drawable"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 168
     iget-boolean v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mCustomizedXmlParamsLoaded:Z
 
     if-nez v0, :cond_0
 
-    .line 169
     iput-object p1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mImageDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 170
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mImageBitmap:Landroid/graphics/Bitmap;
 
-    .line 181
     :goto_0
     return-void
 
-    .line 174
     :cond_0
     iget-boolean v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mRoundImage:Z
 
@@ -961,7 +841,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 175
     iget v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mCircleRadius:I
 
     int-to-float v0, v0
@@ -978,7 +857,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mImageDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 180
     :goto_1
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mImageDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -986,7 +864,6 @@
 
     goto :goto_0
 
-    .line 178
     :cond_1
     iput-object p1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mImageDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -998,7 +875,6 @@
     .param p1, "resId"    # I
 
     .prologue
-    .line 185
     invoke-virtual {p0}, Lcom/letv/leui/widget/BorderedCircleImageView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1013,7 +889,6 @@
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/BorderedCircleImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 186
     return-void
 .end method
 
@@ -1022,30 +897,24 @@
     .param p1, "roundBackground"    # Z
 
     .prologue
-    .line 333
     iget-boolean v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mRoundBackground:Z
 
     if-ne v0, p1, :cond_0
 
-    .line 353
     :goto_0
     return-void
 
-    .line 337
     :cond_0
     iput-boolean p1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mRoundBackground:Z
 
-    .line 338
     if-eqz p1, :cond_3
 
-    .line 339
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
     instance-of v0, v0, Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;
 
     if-eqz v0, :cond_2
 
-    .line 340
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
     check-cast v0, Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;
@@ -1054,7 +923,6 @@
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 341
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
     check-cast v0, Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;
@@ -1065,7 +933,6 @@
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;->setCircleRadius(F)V
 
-    .line 342
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
     check-cast v0, Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;
@@ -1074,7 +941,6 @@
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;->setBorderWidth(I)V
 
-    .line 343
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
     check-cast v0, Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;
@@ -1083,14 +949,12 @@
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;->setBorderColor(I)V
 
-    .line 352
     :cond_1
     :goto_1
     invoke-virtual {p0}, Lcom/letv/leui/widget/BorderedCircleImageView;->invalidate()V
 
     goto :goto_0
 
-    .line 345
     :cond_2
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -1098,7 +962,6 @@
 
     goto :goto_1
 
-    .line 347
     :cond_3
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -1106,7 +969,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 348
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
     check-cast v0, Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;
@@ -1115,7 +977,6 @@
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;->setBorderWidth(I)V
 
-    .line 349
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
     check-cast v0, Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;
@@ -1132,34 +993,27 @@
     .param p1, "scaleType"    # Landroid/widget/ImageView$ScaleType;
 
     .prologue
-    .line 111
     iget-boolean v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mCustomizedXmlParamsLoaded:Z
 
     if-nez v0, :cond_0
 
-    .line 112
     iput-object p1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mScaleType:Landroid/widget/ImageView$ScaleType;
 
-    .line 153
     :goto_0
     return-void
 
-    .line 116
     :cond_0
     if-nez p1, :cond_1
 
-    .line 117
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 120
     :cond_1
     iput-object p1, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mScaleType:Landroid/widget/ImageView$ScaleType;
 
-    .line 122
     sget-object v0, Lcom/letv/leui/widget/BorderedCircleImageView$1;->$SwitchMap$android$widget$ImageView$ScaleType:[I
 
     invoke-virtual {p1}, Landroid/widget/ImageView$ScaleType;->ordinal()I
@@ -1170,10 +1024,8 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 137
     invoke-super {p0, p1}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 141
     :goto_1
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mImageDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -1191,14 +1043,12 @@
 
     if-eq v0, p1, :cond_2
 
-    .line 143
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mImageDrawable:Landroid/graphics/drawable/Drawable;
 
     check-cast v0, Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 146
     :cond_2
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -1216,28 +1066,23 @@
 
     if-eq v0, p1, :cond_3
 
-    .line 148
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
     check-cast v0, Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/BorderedCircleBitmapDrawable;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 150
     :cond_3
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/BorderedCircleImageView;->setWillNotCacheDrawing(Z)V
 
-    .line 151
     invoke-virtual {p0}, Lcom/letv/leui/widget/BorderedCircleImageView;->requestLayout()V
 
-    .line 152
     invoke-virtual {p0}, Lcom/letv/leui/widget/BorderedCircleImageView;->invalidate()V
 
     goto :goto_0
 
-    .line 130
     :pswitch_0
     iget-boolean v0, p0, Lcom/letv/leui/widget/BorderedCircleImageView;->mCustomizedXmlParamsLoaded:Z
 
@@ -1247,20 +1092,17 @@
 
     if-eqz v0, :cond_4
 
-    .line 131
     sget-object v0, Landroid/widget/ImageView$ScaleType;->FIT_XY:Landroid/widget/ImageView$ScaleType;
 
     invoke-super {p0, v0}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
     goto :goto_1
 
-    .line 133
     :cond_4
     invoke-super {p0, p1}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
     goto :goto_1
 
-    .line 122
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

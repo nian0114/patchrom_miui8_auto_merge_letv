@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,7 +18,6 @@
     .param p0, "tag"    # Ljava/lang/String;
 
     .prologue
-    .line 11
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -42,7 +40,6 @@
 
     move-result-object v0
 
-    .line 12
     .local v0, "mode":Ljava/lang/String;
     const-string v1, "oversea_mode"
 

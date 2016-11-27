@@ -75,19 +75,15 @@
     .end annotation
 
     .prologue
-    .line 1425
     .local p3, "data":Ljava/util/List;, "Ljava/util/List<Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;>;"
     iput-object p1, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 1426
     iput-object p4, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->key:[Ljava/lang/String;
 
-    .line 1427
     iput-object p3, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->data:Ljava/util/List;
 
-    .line 1428
     const-string v0, "layout_inflater"
 
     invoke-virtual {p2, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -98,10 +94,8 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->inflater:Landroid/view/LayoutInflater;
 
-    .line 1429
     iput p5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->actionBarColor:I
 
-    .line 1430
     return-void
 .end method
 
@@ -128,22 +122,17 @@
     .end annotation
 
     .prologue
-    .line 1417
     .local p3, "data":Ljava/util/List;, "Ljava/util/List<Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;>;"
     iput-object p1, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 1418
     iput-object p4, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->key:[Ljava/lang/String;
 
-    .line 1419
     iput-object p3, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->data:Ljava/util/List;
 
-    .line 1420
     iput-boolean p5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->hasIcon:Z
 
-    .line 1421
     const-string v0, "layout_inflater"
 
     invoke-virtual {p2, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -154,10 +143,8 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->inflater:Landroid/view/LayoutInflater;
 
-    .line 1422
     iput-boolean p6, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->WithTailImg:Z
 
-    .line 1423
     return-void
 .end method
 
@@ -166,7 +153,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;
 
     .prologue
-    .line 1393
     iget-object v0, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->data:Ljava/util/List;
 
     return-object v0
@@ -177,7 +163,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;
 
     .prologue
-    .line 1393
     iget-object v0, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->key:[Ljava/lang/String;
 
     return-object v0
@@ -188,7 +173,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;
 
     .prologue
-    .line 1393
     iget-boolean v0, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->hasIcon:Z
 
     return v0
@@ -199,7 +183,6 @@
     .param p1, "dipValue"    # F
 
     .prologue
-    .line 1705
     iget-object v1, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # getter for: Lcom/letv/leui/widget/LeBottomSheet;->mContext:Landroid/content/Context;
@@ -217,7 +200,6 @@
 
     iget v0, v1, Landroid/util/DisplayMetrics;->density:F
 
-    .line 1706
     .local v0, "scale":F
     mul-float v1, p1, v0
 
@@ -234,7 +216,6 @@
     .locals 2
 
     .prologue
-    .line 1650
     iget-object v0, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # getter for: Lcom/letv/leui/widget/LeBottomSheet;->showMode:I
@@ -263,7 +244,6 @@
     .locals 1
 
     .prologue
-    .line 1673
     const/4 v0, 0x0
 
     return v0
@@ -274,7 +254,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 1678
     const/4 v0, 0x0
 
     return v0
@@ -284,7 +263,6 @@
     .locals 1
 
     .prologue
-    .line 1701
     const/4 v0, 0x0
 
     return v0
@@ -295,7 +273,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 1693
     iget-object v0, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->data:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -306,10 +283,8 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 1694
     const/4 v0, 0x0
 
-    .line 1696
     :goto_0
     return v0
 
@@ -323,7 +298,6 @@
     .locals 1
 
     .prologue
-    .line 1434
     iget-object v0, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->data:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -338,7 +312,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 1439
     iget-object v0, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->data:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -353,7 +326,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 1444
     int-to-long v0, p1
 
     return-wide v0
@@ -366,7 +338,6 @@
     .param p3, "parent"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 1449
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # getter for: Lcom/letv/leui/widget/LeBottomSheet;->slideFromTop:Z
@@ -376,17 +347,14 @@
 
     if-eqz v5, :cond_7
 
-    .line 1451
     if-nez p2, :cond_3
 
-    .line 1452
     new-instance v1, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$ViewHolder;
 
     const/4 v5, 0x0
 
     invoke-direct {v1, p0, v5}, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$ViewHolder;-><init>(Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;Lcom/letv/leui/widget/LeBottomSheet$1;)V
 
-    .line 1453
     .local v1, "holder":Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$ViewHolder;
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->key:[Ljava/lang/String;
 
@@ -396,7 +364,6 @@
 
     if-ne v5, v6, :cond_2
 
-    .line 1454
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->inflater:Landroid/view/LayoutInflater;
 
     const v6, 0x109009d
@@ -407,7 +374,6 @@
 
     move-result-object p2
 
-    .line 1460
     :goto_0
     const v5, 0x10203ff
 
@@ -419,7 +385,6 @@
 
     iput-object v5, v1, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$ViewHolder;->mainText:Landroid/widget/TextView;
 
-    .line 1461
     const v5, 0x1020401
 
     invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -430,14 +395,12 @@
 
     iput-object v5, v1, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$ViewHolder;->leCheckBox:Lcom/letv/leui/widget/LeCheckBox;
 
-    .line 1462
     iget-object v5, v1, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$ViewHolder;->leCheckBox:Lcom/letv/leui/widget/LeCheckBox;
 
     const/4 v6, 0x0
 
     invoke-virtual {v5, v6}, Lcom/letv/leui/widget/LeCheckBox;->setClickable(Z)V
 
-    .line 1463
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->key:[Ljava/lang/String;
 
     array-length v5, v5
@@ -455,7 +418,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 1464
     iget-object v5, v1, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$ViewHolder;->leCheckBox:Lcom/letv/leui/widget/LeCheckBox;
 
     iget v6, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->actionBarColor:I
@@ -464,11 +426,9 @@
 
     invoke-virtual {v5, v6, v7}, Lcom/letv/leui/widget/LeCheckBox;->setTrackBoxColor(II)V
 
-    .line 1466
     :cond_0
     invoke-virtual {p2, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 1470
     :goto_1
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->key:[Ljava/lang/String;
 
@@ -478,7 +438,6 @@
 
     if-ne v5, v6, :cond_5
 
-    .line 1471
     iget-object v6, v1, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$ViewHolder;->mainText:Landroid/widget/TextView;
 
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->data:Ljava/util/List;
@@ -503,7 +462,6 @@
 
     invoke-virtual {v6, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1472
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # getter for: Lcom/letv/leui/widget/LeBottomSheet;->checkPos:I
@@ -513,7 +471,6 @@
 
     if-ne v5, p1, :cond_4
 
-    .line 1473
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # getter for: Lcom/letv/leui/widget/LeBottomSheet;->usePressEffect:Z
@@ -523,14 +480,12 @@
 
     if-eqz v5, :cond_1
 
-    .line 1474
     iget-object v5, v1, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$ViewHolder;->leCheckBox:Lcom/letv/leui/widget/LeCheckBox;
 
     const/4 v6, 0x1
 
     invoke-virtual {v5, v6}, Lcom/letv/leui/widget/LeCheckBox;->setChecked(Z)V
 
-    .line 1475
     iget-object v5, v1, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$ViewHolder;->mainText:Landroid/widget/TextView;
 
     const v6, -0xdc6a12
@@ -541,14 +496,12 @@
     :goto_2
     move-object v0, p2
 
-    .line 1646
     .end local v1    # "holder":Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$ViewHolder;
     .end local p2    # "convertView":Landroid/view/View;
     .local v0, "convertView":Landroid/view/View;
     :goto_3
     return-object v0
 
-    .line 1456
     .end local v0    # "convertView":Landroid/view/View;
     .restart local v1    # "holder":Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$ViewHolder;
     .restart local p2    # "convertView":Landroid/view/View;
@@ -563,7 +516,6 @@
 
     move-result-object p2
 
-    .line 1457
     const v5, 0x1020418
 
     invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -574,7 +526,6 @@
 
     iput-object v5, v1, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$ViewHolder;->icon:Landroid/widget/ImageView;
 
-    .line 1458
     const v5, 0x1020419
 
     invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -587,7 +538,6 @@
 
     goto/16 :goto_0
 
-    .line 1468
     .end local v1    # "holder":Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$ViewHolder;
     :cond_3
     invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
@@ -599,7 +549,6 @@
     .restart local v1    # "holder":Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$ViewHolder;
     goto :goto_1
 
-    .line 1477
     :cond_4
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
@@ -610,14 +559,12 @@
 
     if-eq v5, p1, :cond_1
 
-    .line 1478
     iget-object v5, v1, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$ViewHolder;->leCheckBox:Lcom/letv/leui/widget/LeCheckBox;
 
     const/4 v6, 0x0
 
     invoke-virtual {v5, v6}, Lcom/letv/leui/widget/LeCheckBox;->setChecked(Z)V
 
-    .line 1479
     iget-object v5, v1, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$ViewHolder;->mainText:Landroid/widget/TextView;
 
     const v6, -0xbebebf
@@ -626,7 +573,6 @@
 
     goto :goto_2
 
-    .line 1482
     :cond_5
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
@@ -649,14 +595,12 @@
 
     if-ne v5, v6, :cond_6
 
-    .line 1483
     iget-object v5, v1, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$ViewHolder;->leCheckBox:Lcom/letv/leui/widget/LeCheckBox;
 
     const/4 v6, 0x1
 
     invoke-virtual {v5, v6}, Lcom/letv/leui/widget/LeCheckBox;->setChecked(Z)V
 
-    .line 1487
     :goto_4
     iget-object v6, v1, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$ViewHolder;->icon:Landroid/widget/ImageView;
 
@@ -682,7 +626,6 @@
 
     invoke-virtual {v6, v5}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1488
     iget-object v6, v1, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$ViewHolder;->mainText:Landroid/widget/TextView;
 
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->data:Ljava/util/List;
@@ -707,7 +650,6 @@
 
     invoke-virtual {v6, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1489
     iget-object v6, v1, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$ViewHolder;->subText:Landroid/widget/TextView;
 
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->data:Ljava/util/List;
@@ -734,7 +676,6 @@
 
     goto/16 :goto_2
 
-    .line 1485
     :cond_6
     iget-object v5, v1, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$ViewHolder;->leCheckBox:Lcom/letv/leui/widget/LeCheckBox;
 
@@ -744,25 +685,21 @@
 
     goto :goto_4
 
-    .line 1494
     .end local v1    # "holder":Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$ViewHolder;
     :cond_7
     if-nez p2, :cond_12
 
-    .line 1495
     new-instance v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;
 
     const/4 v5, 0x0
 
     invoke-direct {v4, p0, v5}, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;-><init>(Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;Lcom/letv/leui/widget/LeBottomSheet$1;)V
 
-    .line 1496
     .local v4, "temp":Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;
     iget-boolean v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->hasIcon:Z
 
     if-eqz v5, :cond_11
 
-    .line 1497
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->inflater:Landroid/view/LayoutInflater;
 
     const v6, 0x1090097
@@ -773,7 +710,6 @@
 
     move-result-object p2
 
-    .line 1498
     const v5, 0x1020405
 
     invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -784,7 +720,6 @@
 
     iput-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->icon:Landroid/widget/ImageView;
 
-    .line 1499
     const v5, 0x1020403
 
     invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -795,7 +730,6 @@
 
     iput-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->divideline:Landroid/widget/ImageView;
 
-    .line 1500
     const v5, 0x1020406
 
     invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -806,7 +740,6 @@
 
     iput-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->textView:Landroid/widget/TextView;
 
-    .line 1501
     const v5, 0x1020407
 
     invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -817,7 +750,6 @@
 
     iput-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->tailImg:Landroid/widget/TextView;
 
-    .line 1502
     const v5, 0x1020408
 
     invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -828,7 +760,6 @@
 
     iput-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->leCheckBox:Lcom/letv/leui/widget/LeCheckBox;
 
-    .line 1504
     const v5, 0x1020409
 
     invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -839,14 +770,12 @@
 
     iput-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->box_border:Lcom/letv/leui/widget/LeCheckBox;
 
-    .line 1506
     iget-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->divideline:Landroid/widget/ImageView;
 
     const/16 v6, 0x8
 
     invoke-virtual {v5, v6}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1507
     const v5, 0x1020404
 
     invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -857,7 +786,6 @@
 
     iput-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->layout:Landroid/widget/LinearLayout;
 
-    .line 1519
     :goto_5
     iget-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->leCheckBox:Lcom/letv/leui/widget/LeCheckBox;
 
@@ -865,7 +793,6 @@
 
     invoke-virtual {v5, v6}, Lcom/letv/leui/widget/LeCheckBox;->setClickable(Z)V
 
-    .line 1521
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # getter for: Lcom/letv/leui/widget/LeBottomSheet;->checkBoxOnColor:I
@@ -888,7 +815,6 @@
 
     if-eq v5, v6, :cond_8
 
-    .line 1522
     iget-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->box_border:Lcom/letv/leui/widget/LeCheckBox;
 
     iget-object v6, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
@@ -907,7 +833,6 @@
 
     invoke-virtual {v5, v6, v7}, Lcom/letv/leui/widget/LeCheckBox;->setTrackBoxColor(II)V
 
-    .line 1524
     :cond_8
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
@@ -920,7 +845,6 @@
 
     if-eq v5, v6, :cond_9
 
-    .line 1525
     iget-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->box_border:Lcom/letv/leui/widget/LeCheckBox;
 
     iget-object v6, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
@@ -932,7 +856,6 @@
 
     invoke-virtual {v5, v6}, Lcom/letv/leui/widget/LeCheckBox;->setArrowColor(I)V
 
-    .line 1527
     :cond_9
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
@@ -945,7 +868,6 @@
 
     if-eq v5, v6, :cond_a
 
-    .line 1528
     iget-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->box_border:Lcom/letv/leui/widget/LeCheckBox;
 
     iget-object v6, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
@@ -957,7 +879,6 @@
 
     invoke-virtual {v5, v6}, Lcom/letv/leui/widget/LeCheckBox;->setBoxBorderColor(I)V
 
-    .line 1535
     :cond_a
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
@@ -979,7 +900,6 @@
 
     if-eq v5, v6, :cond_b
 
-    .line 1536
     iget-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->leCheckBox:Lcom/letv/leui/widget/LeCheckBox;
 
     iget-object v6, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->textView:Landroid/widget/TextView;
@@ -993,11 +913,9 @@
 
     invoke-virtual {v5, v6, v7}, Lcom/letv/leui/widget/LeCheckBox;->attachAnimateToTextViewColor(Landroid/widget/TextView;I)V
 
-    .line 1538
     :cond_b
     invoke-virtual {p2, v4}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 1543
     :goto_6
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
@@ -1014,14 +932,12 @@
 
     if-eqz v5, :cond_c
 
-    .line 1544
     iget-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->layout:Landroid/widget/LinearLayout;
 
     const v6, 0x1080521
 
     invoke-virtual {v5, v6}, Landroid/widget/LinearLayout;->setBackgroundResource(I)V
 
-    .line 1547
     :cond_c
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
@@ -1032,27 +948,23 @@
 
     if-nez v5, :cond_d
 
-    .line 1548
     iget-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->box_border:Lcom/letv/leui/widget/LeCheckBox;
 
     const/4 v6, 0x0
 
     invoke-virtual {v5, v6}, Lcom/letv/leui/widget/LeCheckBox;->setVisibility(I)V
 
-    .line 1549
     iget-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->leCheckBox:Lcom/letv/leui/widget/LeCheckBox;
 
     const/16 v6, 0x8
 
     invoke-virtual {v5, v6}, Lcom/letv/leui/widget/LeCheckBox;->setVisibility(I)V
 
-    .line 1552
     :cond_d
     iget-boolean v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->hasIcon:Z
 
     if-eqz v5, :cond_14
 
-    .line 1553
     iget-object v6, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->icon:Landroid/widget/ImageView;
 
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->data:Ljava/util/List;
@@ -1081,7 +993,6 @@
 
     invoke-virtual {v6, v5}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 1555
     iget-object v6, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->textView:Landroid/widget/TextView;
 
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->data:Ljava/util/List;
@@ -1106,7 +1017,6 @@
 
     invoke-virtual {v6, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1556
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->key:[Ljava/lang/String;
 
     array-length v5, v5
@@ -1115,7 +1025,6 @@
 
     if-ne v5, v6, :cond_e
 
-    .line 1557
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     const/4 v6, 0x0
@@ -1123,7 +1032,6 @@
     # setter for: Lcom/letv/leui/widget/LeBottomSheet;->checkIsOn:Z
     invoke-static {v5, v6}, Lcom/letv/leui/widget/LeBottomSheet;->access$2402(Lcom/letv/leui/widget/LeBottomSheet;Z)Z
 
-    .line 1558
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->data:Ljava/util/List;
 
     invoke-interface {v5, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1142,18 +1050,15 @@
 
     move-result-object v3
 
-    .line 1559
     .local v3, "obj":Ljava/lang/Object;
     if-eqz v3, :cond_13
 
-    .line 1560
     iget-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->tailImg:Landroid/widget/TextView;
 
     const/4 v6, 0x0
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1561
     iget-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->tailImg:Landroid/widget/TextView;
 
     check-cast v3, Ljava/lang/String;
@@ -1163,7 +1068,6 @@
 
     invoke-virtual {v5, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1562
     iget-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->tailImg:Landroid/widget/TextView;
 
     iget-object v6, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
@@ -1175,7 +1079,6 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 1563
     iget-object v6, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->tailImg:Landroid/widget/TextView;
 
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->data:Ljava/util/List;
@@ -1202,12 +1105,10 @@
 
     invoke-virtual {v6, v5}, Landroid/widget/TextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1584
     :cond_e
     :goto_7
     const/4 v2, 0x0
 
-    .line 1585
     .local v2, "isUnableItem":Z
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
@@ -1235,17 +1136,14 @@
 
     if-eqz v5, :cond_16
 
-    .line 1586
     iget-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->textView:Landroid/widget/TextView;
 
     const/high16 v6, 0x4a000000    # 2097152.0f
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 1587
     const/4 v2, 0x1
 
-    .line 1593
     :goto_8
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
@@ -1278,14 +1176,12 @@
 
     if-eqz v5, :cond_f
 
-    .line 1594
     iget-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->textView:Landroid/widget/TextView;
 
     const v6, -0xdc6a12
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 1598
     :cond_f
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
@@ -1313,7 +1209,6 @@
 
     if-eqz v5, :cond_10
 
-    .line 1599
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # getter for: Lcom/letv/leui/widget/LeBottomSheet;->isSinglebox:Z
@@ -1325,7 +1220,6 @@
 
     if-nez v2, :cond_10
 
-    .line 1600
     iget-object v6, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->textView:Landroid/widget/TextView;
 
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
@@ -1351,7 +1245,6 @@
 
     invoke-virtual {v6, v5}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 1605
     :cond_10
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
@@ -1362,7 +1255,6 @@
 
     if-nez v5, :cond_17
 
-    .line 1606
     iget-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->leCheckBox:Lcom/letv/leui/widget/LeCheckBox;
 
     const/16 v6, 0x8
@@ -1371,12 +1263,10 @@
 
     move-object v0, p2
 
-    .line 1607
     .end local p2    # "convertView":Landroid/view/View;
     .restart local v0    # "convertView":Landroid/view/View;
     goto/16 :goto_3
 
-    .line 1509
     .end local v0    # "convertView":Landroid/view/View;
     .end local v2    # "isUnableItem":Z
     .restart local p2    # "convertView":Landroid/view/View;
@@ -1391,7 +1281,6 @@
 
     move-result-object p2
 
-    .line 1510
     const v5, 0x10203ff
 
     invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1402,7 +1291,6 @@
 
     iput-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->textView:Landroid/widget/TextView;
 
-    .line 1511
     const v5, 0x1020400
 
     invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1413,7 +1301,6 @@
 
     iput-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->tailImg:Landroid/widget/TextView;
 
-    .line 1512
     const v5, 0x1020401
 
     invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1424,7 +1311,6 @@
 
     iput-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->leCheckBox:Lcom/letv/leui/widget/LeCheckBox;
 
-    .line 1514
     const v5, 0x1020402
 
     invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1435,7 +1321,6 @@
 
     iput-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->box_border:Lcom/letv/leui/widget/LeCheckBox;
 
-    .line 1516
     const v5, 0x10203fe
 
     invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1448,7 +1333,6 @@
 
     goto/16 :goto_5
 
-    .line 1540
     .end local v4    # "temp":Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;
     :cond_12
     invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
@@ -1460,7 +1344,6 @@
     .restart local v4    # "temp":Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;
     goto/16 :goto_6
 
-    .line 1565
     .restart local v3    # "obj":Ljava/lang/Object;
     :cond_13
     iget-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->tailImg:Landroid/widget/TextView;
@@ -1471,7 +1354,6 @@
 
     goto/16 :goto_7
 
-    .line 1569
     .end local v3    # "obj":Ljava/lang/Object;
     :cond_14
     iget-object v6, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->textView:Landroid/widget/TextView;
@@ -1498,7 +1380,6 @@
 
     invoke-virtual {v6, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1571
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->key:[Ljava/lang/String;
 
     array-length v5, v5
@@ -1507,7 +1388,6 @@
 
     if-ne v5, v6, :cond_e
 
-    .line 1572
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     const/4 v6, 0x0
@@ -1515,7 +1395,6 @@
     # setter for: Lcom/letv/leui/widget/LeBottomSheet;->checkIsOn:Z
     invoke-static {v5, v6}, Lcom/letv/leui/widget/LeBottomSheet;->access$2402(Lcom/letv/leui/widget/LeBottomSheet;Z)Z
 
-    .line 1573
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->data:Ljava/util/List;
 
     invoke-interface {v5, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1534,18 +1413,15 @@
 
     move-result-object v3
 
-    .line 1574
     .restart local v3    # "obj":Ljava/lang/Object;
     if-eqz v3, :cond_15
 
-    .line 1575
     iget-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->tailImg:Landroid/widget/TextView;
 
     const/4 v6, 0x0
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1576
     iget-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->tailImg:Landroid/widget/TextView;
 
     check-cast v3, Ljava/lang/String;
@@ -1555,7 +1431,6 @@
 
     invoke-virtual {v5, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1577
     iget-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->tailImg:Landroid/widget/TextView;
 
     iget-object v6, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
@@ -1567,7 +1442,6 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 1578
     iget-object v6, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->tailImg:Landroid/widget/TextView;
 
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->data:Ljava/util/List;
@@ -1596,7 +1470,6 @@
 
     goto/16 :goto_7
 
-    .line 1580
     .restart local v3    # "obj":Ljava/lang/Object;
     :cond_15
     iget-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->tailImg:Landroid/widget/TextView;
@@ -1607,7 +1480,6 @@
 
     goto/16 :goto_7
 
-    .line 1590
     .end local v3    # "obj":Ljava/lang/Object;
     .restart local v2    # "isUnableItem":Z
     :cond_16
@@ -1619,12 +1491,10 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 1591
     const/4 v2, 0x0
 
     goto/16 :goto_8
 
-    .line 1611
     :cond_17
     const/4 v5, 0x1
 
@@ -1657,7 +1527,6 @@
 
     if-eqz v5, :cond_18
 
-    .line 1612
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # getter for: Lcom/letv/leui/widget/LeBottomSheet;->checkPos:I
@@ -1675,14 +1544,12 @@
 
     if-eqz v5, :cond_1b
 
-    .line 1613
     iget-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->leCheckBox:Lcom/letv/leui/widget/LeCheckBox;
 
     const/4 v6, 0x0
 
     invoke-virtual {v5, v6}, Lcom/letv/leui/widget/LeCheckBox;->setChecked(Z)V
 
-    .line 1628
     :cond_18
     :goto_9
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
@@ -1703,7 +1570,6 @@
 
     if-nez v5, :cond_1a
 
-    .line 1629
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # getter for: Lcom/letv/leui/widget/LeBottomSheet;->checkedIndexList:Ljava/util/ArrayList;
@@ -1721,14 +1587,12 @@
 
     if-eqz v5, :cond_1f
 
-    .line 1630
     iget-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->box_border:Lcom/letv/leui/widget/LeCheckBox;
 
     const/4 v6, 0x1
 
     invoke-virtual {v5, v6}, Lcom/letv/leui/widget/LeCheckBox;->setChecked(Z)V
 
-    .line 1631
     iget-object v6, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->textView:Landroid/widget/TextView;
 
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
@@ -1747,7 +1611,6 @@
     :goto_a
     invoke-virtual {v6, v5}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 1641
     :cond_19
     :goto_b
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
@@ -1759,7 +1622,6 @@
 
     if-eqz v5, :cond_1a
 
-    .line 1642
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # getter for: Lcom/letv/leui/widget/LeBottomSheet;->mLeBotOnClickListener:Lcom/letv/leui/widget/LeBottomSheet$LeBotOnClickListener;
@@ -1778,12 +1640,10 @@
     :cond_1a
     move-object v0, p2
 
-    .line 1646
     .end local p2    # "convertView":Landroid/view/View;
     .restart local v0    # "convertView":Landroid/view/View;
     goto/16 :goto_3
 
-    .line 1614
     .end local v0    # "convertView":Landroid/view/View;
     .restart local p2    # "convertView":Landroid/view/View;
     :cond_1b
@@ -1804,10 +1664,8 @@
 
     if-nez v5, :cond_18
 
-    .line 1615
     if-eqz v2, :cond_1c
 
-    .line 1616
     iget-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->leCheckBox:Lcom/letv/leui/widget/LeCheckBox;
 
     const/4 v6, 0x0
@@ -1816,7 +1674,6 @@
 
     goto :goto_9
 
-    .line 1618
     :cond_1c
     iget-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->leCheckBox:Lcom/letv/leui/widget/LeCheckBox;
 
@@ -1824,7 +1681,6 @@
 
     invoke-virtual {v5, v6}, Lcom/letv/leui/widget/LeCheckBox;->setChecked(Z)V
 
-    .line 1619
     iget-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->textView:Landroid/widget/TextView;
 
     invoke-virtual {v5}, Landroid/widget/TextView;->getCurrentTextColor()I
@@ -1844,7 +1700,6 @@
 
     if-eqz v5, :cond_1d
 
-    .line 1621
     iget-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->leCheckBox:Lcom/letv/leui/widget/LeCheckBox;
 
     iget-object v6, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
@@ -1858,7 +1713,6 @@
 
     goto/16 :goto_9
 
-    .line 1622
     :cond_1d
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
@@ -1869,7 +1723,6 @@
 
     if-nez v5, :cond_18
 
-    .line 1623
     iget-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->leCheckBox:Lcom/letv/leui/widget/LeCheckBox;
 
     iget-object v6, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->textView:Landroid/widget/TextView;
@@ -1882,7 +1735,6 @@
 
     goto/16 :goto_9
 
-    .line 1631
     :cond_1e
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
@@ -1893,7 +1745,6 @@
 
     goto :goto_a
 
-    .line 1634
     :cond_1f
     iget-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->box_border:Lcom/letv/leui/widget/LeCheckBox;
 
@@ -1901,7 +1752,6 @@
 
     invoke-virtual {v5, v6}, Lcom/letv/leui/widget/LeCheckBox;->setChecked(Z)V
 
-    .line 1635
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # getter for: Lcom/letv/leui/widget/LeBottomSheet;->itemColorMap:Ljava/util/Map;
@@ -1930,7 +1780,6 @@
 
     if-nez v2, :cond_20
 
-    .line 1636
     iget-object v6, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->textView:Landroid/widget/TextView;
 
     iget-object v5, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
@@ -1958,11 +1807,9 @@
 
     goto/16 :goto_b
 
-    .line 1637
     :cond_20
     if-nez v2, :cond_19
 
-    .line 1638
     iget-object v5, v4, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter$GridTemp;->textView:Landroid/widget/TextView;
 
     invoke-direct {p0}, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->getTextColor()I
@@ -1979,7 +1826,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 1655
     iget-object v1, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # getter for: Lcom/letv/leui/widget/LeBottomSheet;->unableItemIndex:Ljava/util/ArrayList;
@@ -2002,7 +1848,6 @@
 
     if-lez v1, :cond_1
 
-    .line 1656
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -2020,7 +1865,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 1657
     iget-object v1, p0, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # getter for: Lcom/letv/leui/widget/LeBottomSheet;->unableItemIndex:Ljava/util/ArrayList;
@@ -2040,22 +1884,18 @@
 
     if-ne p1, v1, :cond_0
 
-    .line 1658
     const/4 v1, 0x0
 
-    .line 1662
     .end local v0    # "i":I
     :goto_1
     return v1
 
-    .line 1656
     .restart local v0    # "i":I
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1662
     .end local v0    # "i":I
     :cond_1
     invoke-super {p0, p1}, Landroid/widget/BaseAdapter;->isEnabled(I)Z
@@ -2070,7 +1910,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 1683
     const/high16 v0, 0x41800000    # 16.0f
 
     invoke-direct {p0, v0}, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->dip2px(F)I
@@ -2085,7 +1924,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 1688
     const/high16 v0, 0x41800000    # 16.0f
 
     invoke-direct {p0, v0}, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->dip2px(F)I
@@ -2099,7 +1937,6 @@
     .locals 1
 
     .prologue
-    .line 1668
     const/4 v0, 0x0
 
     return v0

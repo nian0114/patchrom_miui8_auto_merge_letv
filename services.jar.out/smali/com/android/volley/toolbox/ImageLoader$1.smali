@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 99
     iput p1, p0, Lcom/android/volley/toolbox/ImageLoader$1;->val$errorImageResId:I
 
     iput-object p2, p0, Lcom/android/volley/toolbox/ImageLoader$1;->val$view:Landroid/widget/ImageView;
@@ -49,19 +48,16 @@
     .param p1, "error"    # Lcom/android/volley/VolleyError;
 
     .prologue
-    .line 102
     iget v0, p0, Lcom/android/volley/toolbox/ImageLoader$1;->val$errorImageResId:I
 
     if-eqz v0, :cond_0
 
-    .line 103
     iget-object v0, p0, Lcom/android/volley/toolbox/ImageLoader$1;->val$view:Landroid/widget/ImageView;
 
     iget v1, p0, Lcom/android/volley/toolbox/ImageLoader$1;->val$errorImageResId:I
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 105
     :cond_0
     return-void
 .end method
@@ -72,14 +68,12 @@
     .param p2, "isImmediate"    # Z
 
     .prologue
-    .line 109
     invoke-virtual {p1}, Lcom/android/volley/toolbox/ImageLoader$ImageContainer;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 110
     iget-object v0, p0, Lcom/android/volley/toolbox/ImageLoader$1;->val$view:Landroid/widget/ImageView;
 
     invoke-virtual {p1}, Lcom/android/volley/toolbox/ImageLoader$ImageContainer;->getBitmap()Landroid/graphics/Bitmap;
@@ -88,18 +82,15 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 114
     :cond_0
     :goto_0
     return-void
 
-    .line 111
     :cond_1
     iget v0, p0, Lcom/android/volley/toolbox/ImageLoader$1;->val$defaultImageResId:I
 
     if-eqz v0, :cond_0
 
-    .line 112
     iget-object v0, p0, Lcom/android/volley/toolbox/ImageLoader$1;->val$view:Landroid/widget/ImageView;
 
     iget v1, p0, Lcom/android/volley/toolbox/ImageLoader$1;->val$defaultImageResId:I

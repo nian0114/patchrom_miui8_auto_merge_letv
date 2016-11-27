@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 249
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 253
     new-instance v0, Lcom/android/internal/telephony/CallerYellowPageInfo;
 
     invoke-direct {v0, p1}, Lcom/android/internal/telephony/CallerYellowPageInfo;-><init>(Landroid/os/Parcel;)V
@@ -57,7 +55,6 @@
     .locals 1
 
     .prologue
-    .line 249
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/CallerYellowPageInfo$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/internal/telephony/CallerYellowPageInfo;
 
     move-result-object v0
@@ -70,7 +67,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 258
     new-array v0, p1, [Lcom/android/internal/telephony/CallerYellowPageInfo;
 
     return-object v0
@@ -80,7 +76,6 @@
     .locals 1
 
     .prologue
-    .line 249
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/CallerYellowPageInfo$1;->newArray(I)[Lcom/android/internal/telephony/CallerYellowPageInfo;
 
     move-result-object v0

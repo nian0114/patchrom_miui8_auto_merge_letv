@@ -34,7 +34,6 @@
     .locals 1
 
     .prologue
-    .line 74
     new-instance v0, Lcom/android/letv/agnes/service/beans/IWidget$1;
 
     invoke-direct {v0}, Lcom/android/letv/agnes/service/beans/IWidget$1;-><init>()V
@@ -48,10 +47,8 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     return-void
 .end method
 
@@ -63,22 +60,16 @@
     .param p5, "props"    # Ljava/util/Map;
 
     .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     iput-wide p1, p0, Lcom/android/letv/agnes/service/beans/IWidget;->time:J
 
-    .line 32
     iput-object p3, p0, Lcom/android/letv/agnes/service/beans/IWidget;->id:Ljava/lang/String;
 
-    .line 33
     iput-object p4, p0, Lcom/android/letv/agnes/service/beans/IWidget;->appId:Ljava/lang/String;
 
-    .line 34
     iput-object p5, p0, Lcom/android/letv/agnes/service/beans/IWidget;->props:Ljava/util/Map;
 
-    .line 35
     return-void
 .end method
 
@@ -88,7 +79,6 @@
     .locals 1
 
     .prologue
-    .line 63
     const/4 v0, 0x0
 
     return v0
@@ -98,7 +88,6 @@
     .locals 1
 
     .prologue
-    .line 58
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IWidget;->appId:Ljava/lang/String;
 
     return-object v0
@@ -108,7 +97,6 @@
     .locals 1
 
     .prologue
-    .line 50
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IWidget;->id:Ljava/lang/String;
 
     return-object v0
@@ -118,7 +106,6 @@
     .locals 1
 
     .prologue
-    .line 19
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IWidget;->props:Ljava/util/Map;
 
     return-object v0
@@ -128,7 +115,6 @@
     .locals 2
 
     .prologue
-    .line 42
     iget-wide v0, p0, Lcom/android/letv/agnes/service/beans/IWidget;->time:J
 
     return-wide v0
@@ -139,10 +125,8 @@
     .param p1, "appId"    # Ljava/lang/String;
 
     .prologue
-    .line 54
     iput-object p1, p0, Lcom/android/letv/agnes/service/beans/IWidget;->appId:Ljava/lang/String;
 
-    .line 55
     return-void
 .end method
 
@@ -151,10 +135,8 @@
     .param p1, "id"    # Ljava/lang/String;
 
     .prologue
-    .line 46
     iput-object p1, p0, Lcom/android/letv/agnes/service/beans/IWidget;->id:Ljava/lang/String;
 
-    .line 47
     return-void
 .end method
 
@@ -163,10 +145,8 @@
     .param p1, "props"    # Ljava/util/Map;
 
     .prologue
-    .line 23
     iput-object p1, p0, Lcom/android/letv/agnes/service/beans/IWidget;->props:Ljava/util/Map;
 
-    .line 24
     return-void
 .end method
 
@@ -175,10 +155,8 @@
     .param p1, "time"    # J
 
     .prologue
-    .line 38
     iput-wide p1, p0, Lcom/android/letv/agnes/service/beans/IWidget;->time:J
 
-    .line 39
     return-void
 .end method
 
@@ -188,26 +166,21 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 68
     iget-wide v0, p0, Lcom/android/letv/agnes/service/beans/IWidget;->time:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 69
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IWidget;->id:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 70
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IWidget;->appId:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 71
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IWidget;->props:Ljava/util/Map;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeMap(Ljava/util/Map;)V
 
-    .line 72
     return-void
 .end method

@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,10 +21,8 @@
     .param p3, "d"    # F
 
     .prologue
-    .line 146
     div-float/2addr p0, p3
 
-    .line 147
     neg-float v0, p2
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -61,10 +58,8 @@
     .param p3, "d"    # F
 
     .prologue
-    .line 44
     div-float/2addr p0, p3
 
-    .line 45
     mul-float v0, p2, p0
 
     mul-float/2addr v0, p0
@@ -84,7 +79,6 @@
     .param p3, "d"    # F
 
     .prologue
-    .line 127
     const-wide/high16 v0, 0x4000000000000000L    # 2.0
 
     const/high16 v2, 0x41200000    # 10.0f
@@ -126,12 +120,10 @@
 
     const/high16 v1, 0x40000000    # 2.0f
 
-    .line 159
     div-float v0, p3, v1
 
     div-float/2addr p0, v0
 
-    .line 160
     cmpg-float v0, p0, v2
 
     if-gez v0, :cond_0
@@ -158,15 +150,12 @@
 
     add-float/2addr v0, p1
 
-    .line 162
     :goto_0
     return v0
 
-    .line 161
     :cond_0
     sub-float/2addr p0, v1
 
-    .line 162
     div-float v0, p2, v1
 
     mul-float v1, p0, p0
@@ -200,12 +189,10 @@
     .prologue
     const/high16 v2, 0x40000000    # 2.0f
 
-    .line 57
     div-float v0, p3, v2
 
     div-float/2addr p0, v0
 
-    .line 58
     const/high16 v0, 0x3f800000    # 1.0f
 
     cmpg-float v0, p0, v0
@@ -222,15 +209,12 @@
 
     add-float/2addr v0, p1
 
-    .line 60
     :goto_0
     return v0
 
-    .line 59
     :cond_0
     sub-float/2addr p0, v2
 
-    .line 60
     div-float v0, p2, v2
 
     mul-float v1, p0, p0
@@ -260,12 +244,10 @@
 
     const-wide/high16 v4, 0x4000000000000000L    # 2.0
 
-    .line 137
     div-float v0, p3, v1
 
     div-float/2addr p0, v0
 
-    .line 138
     cmpg-float v0, p0, v2
 
     if-gez v0, :cond_0
@@ -290,15 +272,12 @@
 
     add-float/2addr v0, p1
 
-    .line 140
     :goto_0
     return v0
 
-    .line 139
     :cond_0
     sub-float/2addr p0, v2
 
-    .line 140
     div-float v0, p2, v1
 
     const/high16 v1, -0x3ee00000    # -10.0f
@@ -336,12 +315,10 @@
 
     const/high16 v1, 0x40000000    # 2.0f
 
-    .line 36
     div-float v0, p3, v1
 
     div-float/2addr p0, v0
 
-    .line 37
     cmpg-float v0, p0, v2
 
     if-gez v0, :cond_0
@@ -354,15 +331,12 @@
 
     add-float/2addr v0, p1
 
-    .line 39
     :goto_0
     return v0
 
-    .line 38
     :cond_0
     sub-float/2addr p0, v2
 
-    .line 39
     neg-float v0, p2
 
     div-float/2addr v0, v1
@@ -390,12 +364,10 @@
     .prologue
     const/high16 v2, 0x40000000    # 2.0f
 
-    .line 79
     div-float v0, p3, v2
 
     div-float/2addr p0, v0
 
-    .line 80
     const/high16 v0, 0x3f800000    # 1.0f
 
     cmpg-float v0, p0, v0
@@ -414,15 +386,12 @@
 
     add-float/2addr v0, p1
 
-    .line 82
     :goto_0
     return v0
 
-    .line 81
     :cond_0
     sub-float/2addr p0, v2
 
-    .line 82
     neg-float v0, p2
 
     div-float/2addr v0, v2
@@ -452,12 +421,10 @@
     .prologue
     const/high16 v2, 0x40000000    # 2.0f
 
-    .line 101
     div-float v0, p3, v2
 
     div-float/2addr p0, v0
 
-    .line 102
     const/high16 v0, 0x3f800000    # 1.0f
 
     cmpg-float v0, p0, v0
@@ -478,15 +445,12 @@
 
     add-float/2addr v0, p1
 
-    .line 104
     :goto_0
     return v0
 
-    .line 103
     :cond_0
     sub-float/2addr p0, v2
 
-    .line 104
     div-float v0, p2, v2
 
     mul-float v1, p0, p0
@@ -514,7 +478,6 @@
     .param p3, "d"    # F
 
     .prologue
-    .line 121
     neg-float v0, p2
 
     const/high16 v1, 0x40000000    # 2.0f
@@ -556,10 +519,8 @@
     .param p3, "d"    # F
 
     .prologue
-    .line 24
     div-float/2addr p0, p3
 
-    .line 25
     mul-float v0, p2, p0
 
     mul-float/2addr v0, p0
@@ -577,10 +538,8 @@
     .param p3, "d"    # F
 
     .prologue
-    .line 66
     div-float/2addr p0, p3
 
-    .line 67
     mul-float v0, p2, p0
 
     mul-float/2addr v0, p0
@@ -602,10 +561,8 @@
     .param p3, "d"    # F
 
     .prologue
-    .line 88
     div-float/2addr p0, p3
 
-    .line 89
     mul-float v0, p2, p0
 
     mul-float/2addr v0, p0
@@ -629,7 +586,6 @@
     .param p3, "d"    # F
 
     .prologue
-    .line 110
     neg-float v0, p2
 
     div-float v1, p0, p3
@@ -665,13 +621,10 @@
     .prologue
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 152
     div-float/2addr p0, p3
 
-    .line 153
     sub-float/2addr p0, v1
 
-    .line 154
     mul-float v0, p0, p0
 
     sub-float v0, v1, v0
@@ -701,13 +654,10 @@
     .prologue
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 50
     div-float/2addr p0, p3
 
-    .line 51
     sub-float/2addr p0, v1
 
-    .line 52
     mul-float v0, p0, p0
 
     mul-float/2addr v0, p0
@@ -729,7 +679,6 @@
     .param p3, "d"    # F
 
     .prologue
-    .line 132
     const-wide/high16 v0, 0x4000000000000000L    # 2.0
 
     const/high16 v2, -0x3ee00000    # -10.0f
@@ -767,10 +716,8 @@
     .param p3, "d"    # F
 
     .prologue
-    .line 30
     div-float/2addr p0, p3
 
-    .line 31
     neg-float v0, p2
 
     mul-float/2addr v0, p0
@@ -796,13 +743,10 @@
     .prologue
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 72
     div-float/2addr p0, p3
 
-    .line 73
     sub-float/2addr p0, v2
 
-    .line 74
     neg-float v0, p2
 
     mul-float v1, p0, p0
@@ -830,13 +774,10 @@
     .prologue
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 94
     div-float/2addr p0, p3
 
-    .line 95
     sub-float/2addr p0, v1
 
-    .line 96
     mul-float v0, p0, p0
 
     mul-float/2addr v0, p0
@@ -862,7 +803,6 @@
     .param p3, "d"    # F
 
     .prologue
-    .line 115
     div-float v0, p0, p3
 
     float-to-double v0, v0
@@ -892,7 +832,6 @@
     .param p3, "d"    # F
 
     .prologue
-    .line 18
     mul-float v0, p2, p0
 
     div-float/2addr v0, p3

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 60
     iput-object p1, p0, Lcom/android/server/policy/LightSensorListener$1;->this$0:Lcom/android/server/policy/LightSensorListener;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 3
 
     .prologue
-    .line 63
     iget-object v0, p0, Lcom/android/server/policy/LightSensorListener$1;->this$0:Lcom/android/server/policy/LightSensorListener;
 
     # getter for: Lcom/android/server/policy/LightSensorListener;->mSensorOn:Z
@@ -50,7 +48,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 64
     iget-object v0, p0, Lcom/android/server/policy/LightSensorListener$1;->this$0:Lcom/android/server/policy/LightSensorListener;
 
     # getter for: Lcom/android/server/policy/LightSensorListener;->mLock:Ljava/lang/Object;
@@ -60,7 +57,6 @@
 
     monitor-enter v1
 
-    .line 65
     :try_start_0
     iget-object v0, p0, Lcom/android/server/policy/LightSensorListener$1;->this$0:Lcom/android/server/policy/LightSensorListener;
 
@@ -71,12 +67,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 66
     iget-object v0, p0, Lcom/android/server/policy/LightSensorListener$1;->this$0:Lcom/android/server/policy/LightSensorListener;
 
     invoke-virtual {v0}, Lcom/android/server/policy/LightSensorListener;->disable()V
 
-    .line 68
     iget-object v2, p0, Lcom/android/server/policy/LightSensorListener$1;->this$0:Lcom/android/server/policy/LightSensorListener;
 
     iget-object v0, p0, Lcom/android/server/policy/LightSensorListener$1;->this$0:Lcom/android/server/policy/LightSensorListener;
@@ -94,21 +88,17 @@
     # invokes: Lcom/android/server/policy/LightSensorListener;->setAdaptiveDisplay(Z)V
     invoke-static {v2, v0}, Lcom/android/server/policy/LightSensorListener;->access$300(Lcom/android/server/policy/LightSensorListener;Z)V
 
-    .line 70
     :cond_0
     monitor-exit v1
 
-    .line 72
     :cond_1
     return-void
 
-    .line 68
     :cond_2
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 70
     :catchall_0
     move-exception v0
 

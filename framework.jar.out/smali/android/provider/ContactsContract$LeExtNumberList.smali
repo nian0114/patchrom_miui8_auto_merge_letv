@@ -95,10 +95,9 @@
     .locals 2
 
     .prologue
-    .line 10178
     sget-object v0, Landroid/provider/ContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
-    const-string/jumbo v1, "le_ext_number_list"
+    const-string v1, "le_ext_number_list"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -106,10 +105,9 @@
 
     sput-object v0, Landroid/provider/ContactsContract$LeExtNumberList;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 10179
     sget-object v0, Landroid/provider/ContactsContract;->AUTHORITY_URI_NOTIFY:Landroid/net/Uri;
 
-    const-string/jumbo v1, "le_ext_number_list"
+    const-string v1, "le_ext_number_list"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -117,7 +115,6 @@
 
     sput-object v0, Landroid/provider/ContactsContract$LeExtNumberList;->CONTENT_NOTIFY_URI:Landroid/net/Uri;
 
-    .line 10180
     const-string v0, "content://leextnumlist"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -126,10 +123,9 @@
 
     sput-object v0, Landroid/provider/ContactsContract$LeExtNumberList;->SYNC_AUTHORITY_URI:Landroid/net/Uri;
 
-    .line 10181
     sget-object v0, Landroid/provider/ContactsContract$LeExtNumberList;->SYNC_AUTHORITY_URI:Landroid/net/Uri;
 
-    const-string/jumbo v1, "le_ext_number_list"
+    const-string v1, "le_ext_number_list"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -137,10 +133,9 @@
 
     sput-object v0, Landroid/provider/ContactsContract$LeExtNumberList;->CONTENT_SYNC_URI:Landroid/net/Uri;
 
-    .line 10182
     sget-object v0, Landroid/provider/ContactsContract$LeExtNumberList;->SYNC_AUTHORITY_URI:Landroid/net/Uri;
 
-    const-string/jumbo v1, "syncstate"
+    const-string v1, "syncstate"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -155,7 +150,6 @@
     .locals 0
 
     .prologue
-    .line 10177
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

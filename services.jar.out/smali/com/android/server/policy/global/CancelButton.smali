@@ -41,10 +41,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 37
     invoke-direct {p0, p1}, Lcom/android/server/policy/global/CircleButton;-><init>(Landroid/content/Context;)V
 
-    .line 38
     return-void
 .end method
 
@@ -54,10 +52,8 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 41
     invoke-direct {p0, p1, p2}, Lcom/android/server/policy/global/CircleButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 42
     return-void
 .end method
 
@@ -68,10 +64,8 @@
     .param p3, "defStyleAttr"    # I
 
     .prologue
-    .line 45
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/policy/global/CircleButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 46
     return-void
 .end method
 
@@ -80,26 +74,22 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 116
     invoke-virtual {p0}, Lcom/android/server/policy/global/CancelButton;->getWidth()I
 
     move-result v0
 
     div-int/lit8 v6, v0, 0x2
 
-    .line 117
     .local v6, "centerX":I
     iget v0, p0, Lcom/android/server/policy/global/CancelButton;->mScaleRingWH:I
 
     div-int/lit8 v7, v0, 0x2
 
-    .line 119
     .local v7, "centerY":I
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v8
 
-    .line 121
     .local v8, "seq":I
     iget v0, p0, Lcom/android/server/policy/global/CancelButton;->mCrossDegrees:I
 
@@ -111,7 +101,6 @@
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/graphics/Canvas;->rotate(FFF)V
 
-    .line 123
     iget v0, p0, Lcom/android/server/policy/global/CancelButton;->mCrossRadius:I
 
     sub-int v0, v6, v0
@@ -134,7 +123,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 125
     int-to-float v1, v6
 
     iget v0, p0, Lcom/android/server/policy/global/CancelButton;->mCrossRadius:I
@@ -157,10 +145,8 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 126
     invoke-virtual {p1, v8}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    .line 127
     return-void
 .end method
 
@@ -168,69 +154,58 @@
     .locals 2
 
     .prologue
-    .line 58
     iget v0, p0, Lcom/android/server/policy/global/CancelButton;->DEFAULT_ICON_RADIUS:I
 
     iput v0, p0, Lcom/android/server/policy/global/CancelButton;->DEFAULT_CROSS_RADIUS:I
 
-    .line 60
     iget v0, p0, Lcom/android/server/policy/global/CancelButton;->DEFAULT_CROSS_RADIUS:I
 
     iput v0, p0, Lcom/android/server/policy/global/CancelButton;->mCrossRadius:I
 
-    .line 61
     const/16 v0, 0x2d
 
     iput v0, p0, Lcom/android/server/policy/global/CancelButton;->mCrossDegrees:I
 
-    .line 62
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/policy/global/CancelButton;->mCrossColor:I
 
-    .line 64
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/policy/global/CancelButton;->mCrossPaint:Landroid/graphics/Paint;
 
-    .line 65
     iget-object v0, p0, Lcom/android/server/policy/global/CancelButton;->mCrossPaint:Landroid/graphics/Paint;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 66
     iget-object v0, p0, Lcom/android/server/policy/global/CancelButton;->mCrossPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/policy/global/CancelButton;->mCrossColor:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 67
     iget-object v0, p0, Lcom/android/server/policy/global/CancelButton;->mCrossPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 68
     iget-object v0, p0, Lcom/android/server/policy/global/CancelButton;->mCrossPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Join;->ROUND:Landroid/graphics/Paint$Join;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeJoin(Landroid/graphics/Paint$Join;)V
 
-    .line 69
     iget-object v0, p0, Lcom/android/server/policy/global/CancelButton;->mCrossPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
-    .line 70
     iget-object v0, p0, Lcom/android/server/policy/global/CancelButton;->mCrossPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/policy/global/CancelButton;->DEFAULT_PAINT_STROKE_WIDTH:I
@@ -239,7 +214,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 71
     return-void
 .end method
 
@@ -255,7 +229,6 @@
 
     const/4 v8, 0x2
 
-    .line 87
     const-string v4, "crossScale"
 
     new-array v5, v8, [I
@@ -270,7 +243,6 @@
 
     move-result-object v2
 
-    .line 88
     .local v2, "crossScaleIn":Landroid/animation/PropertyValuesHolder;
     const-string v4, "crossRotate"
 
@@ -282,7 +254,6 @@
 
     move-result-object v1
 
-    .line 89
     .local v1, "crossRotateIn":Landroid/animation/PropertyValuesHolder;
     new-array v4, v8, [Landroid/animation/PropertyValuesHolder;
 
@@ -296,21 +267,18 @@
 
     iput-object v4, p0, Lcom/android/server/policy/global/CancelButton;->mCrossIn:Landroid/animation/ObjectAnimator;
 
-    .line 90
     iget-object v4, p0, Lcom/android/server/policy/global/CancelButton;->mCrossIn:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v6, 0x2bc
 
     invoke-virtual {v4, v6, v7}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 91
     iget-object v4, p0, Lcom/android/server/policy/global/CancelButton;->mCrossIn:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v6, 0xaf
 
     invoke-virtual {v4, v6, v7}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
 
-    .line 92
     iget-object v4, p0, Lcom/android/server/policy/global/CancelButton;->mCrossIn:Landroid/animation/ObjectAnimator;
 
     new-instance v5, Landroid/view/animation/DecelerateInterpolator;
@@ -319,7 +287,6 @@
 
     invoke-virtual {v4, v5}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 94
     const-string v4, "crossScale"
 
     new-array v5, v8, [I
@@ -334,7 +301,6 @@
 
     move-result-object v3
 
-    .line 95
     .local v3, "crossScaleOut":Landroid/animation/PropertyValuesHolder;
     const-string v4, "crossAlpha"
 
@@ -346,7 +312,6 @@
 
     move-result-object v0
 
-    .line 96
     .local v0, "crossAlphaOut":Landroid/animation/PropertyValuesHolder;
     new-array v4, v8, [Landroid/animation/PropertyValuesHolder;
 
@@ -360,21 +325,18 @@
 
     iput-object v4, p0, Lcom/android/server/policy/global/CancelButton;->mCrossScaleOut:Landroid/animation/ObjectAnimator;
 
-    .line 97
     iget-object v4, p0, Lcom/android/server/policy/global/CancelButton;->mCrossScaleOut:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v6, 0x1f4
 
     invoke-virtual {v4, v6, v7}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 98
     iget-object v4, p0, Lcom/android/server/policy/global/CancelButton;->mCrossScaleOut:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v6, 0x12c
 
     invoke-virtual {v4, v6, v7}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
 
-    .line 99
     iget-object v4, p0, Lcom/android/server/policy/global/CancelButton;->mCrossScaleOut:Landroid/animation/ObjectAnimator;
 
     new-instance v5, Landroid/view/animation/DecelerateInterpolator;
@@ -383,7 +345,6 @@
 
     invoke-virtual {v4, v5}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 101
     const-string v4, "crossRotate"
 
     new-array v5, v8, [I
@@ -396,14 +357,12 @@
 
     iput-object v4, p0, Lcom/android/server/policy/global/CancelButton;->mCrossRotateOut:Landroid/animation/ObjectAnimator;
 
-    .line 102
     iget-object v4, p0, Lcom/android/server/policy/global/CancelButton;->mCrossRotateOut:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v6, 0x28a
 
     invoke-virtual {v4, v6, v7}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 103
     iget-object v4, p0, Lcom/android/server/policy/global/CancelButton;->mCrossRotateOut:Landroid/animation/ObjectAnimator;
 
     new-instance v5, Landroid/view/animation/DecelerateInterpolator;
@@ -412,24 +371,20 @@
 
     invoke-virtual {v4, v5}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 105
     return-void
 
-    .line 88
     :array_0
     .array-data 4
         -0x2d
         0x2d
     .end array-data
 
-    .line 95
     :array_1
     .array-data 4
         0xff
         0x0
     .end array-data
 
-    .line 101
     :array_2
     .array-data 4
         0x2d
@@ -442,7 +397,6 @@
     .param p1, "alpha"    # I
 
     .prologue
-    .line 155
     iget-object v0, p0, Lcom/android/server/policy/global/CancelButton;->mCrossPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/policy/global/CancelButton;->mCrossColor:I
@@ -457,10 +411,8 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 156
     invoke-virtual {p0}, Lcom/android/server/policy/global/CancelButton;->invalidate()V
 
-    .line 157
     return-void
 .end method
 
@@ -469,13 +421,10 @@
     .param p1, "degrees"    # I
 
     .prologue
-    .line 145
     iput p1, p0, Lcom/android/server/policy/global/CancelButton;->mCrossDegrees:I
 
-    .line 146
     invoke-virtual {p0}, Lcom/android/server/policy/global/CancelButton;->invalidate()V
 
-    .line 147
     return-void
 .end method
 
@@ -484,13 +433,10 @@
     .param p1, "radius"    # I
 
     .prologue
-    .line 135
     iput p1, p0, Lcom/android/server/policy/global/CancelButton;->mCrossRadius:I
 
-    .line 136
     invoke-virtual {p0}, Lcom/android/server/policy/global/CancelButton;->invalidate()V
 
-    .line 137
     return-void
 .end method
 
@@ -500,24 +446,20 @@
     .locals 3
 
     .prologue
-    .line 186
     invoke-virtual {p0}, Lcom/android/server/policy/global/CancelButton;->isClickable()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 206
     :goto_0
     return-void
 
-    .line 189
     :cond_0
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
-    .line 190
     .local v0, "set":Landroid/animation/AnimatorSet;
     iget-object v1, p0, Lcom/android/server/policy/global/CancelButton;->mCircleOutFirst:Landroid/animation/ObjectAnimator;
 
@@ -541,7 +483,6 @@
 
     invoke-virtual {v1, v2}, Landroid/animation/AnimatorSet$Builder;->with(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    .line 191
     iget-object v1, p0, Lcom/android/server/policy/global/CancelButton;->mCircleOutSecond:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
@@ -552,14 +493,12 @@
 
     invoke-virtual {v1, v2}, Landroid/animation/AnimatorSet$Builder;->after(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    .line 192
     new-instance v1, Lcom/android/server/policy/global/CancelButton$2;
 
     invoke-direct {v1, p0}, Lcom/android/server/policy/global/CancelButton$2;-><init>(Lcom/android/server/policy/global/CancelButton;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 205
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
     goto :goto_0
@@ -570,10 +509,8 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 109
     invoke-direct {p0, p1}, Lcom/android/server/policy/global/CancelButton;->drawCross(Landroid/graphics/Canvas;)V
 
-    .line 110
     return-void
 .end method
 
@@ -582,7 +519,6 @@
     .param p1, "animation"    # Z
 
     .prologue
-    .line 176
     invoke-virtual {p0}, Lcom/android/server/policy/global/CancelButton;->isClickable()Z
 
     move-result v0
@@ -593,12 +529,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 180
     :cond_0
     :goto_0
     return-void
 
-    .line 179
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/policy/global/CancelButton;->reBoot()V
 
@@ -609,7 +543,6 @@
     .locals 1
 
     .prologue
-    .line 16
     invoke-super {p0, p1}, Lcom/android/server/policy/global/CircleButton;->hintRingArea(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -621,18 +554,14 @@
     .locals 1
 
     .prologue
-    .line 49
     invoke-direct {p0}, Lcom/android/server/policy/global/CancelButton;->initCrossParams()V
 
-    .line 50
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/android/server/policy/global/CancelButton;->resetParams(Z)V
 
-    .line 51
     invoke-direct {p0}, Lcom/android/server/policy/global/CancelButton;->loadCrossAnimator()V
 
-    .line 52
     return-void
 .end method
 
@@ -640,7 +569,6 @@
     .locals 1
 
     .prologue
-    .line 16
     invoke-super {p0, p1}, Lcom/android/server/policy/global/CircleButton;->onFilterTouchEventForSecurity(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -652,24 +580,20 @@
     .locals 3
 
     .prologue
-    .line 212
     invoke-virtual {p0}, Lcom/android/server/policy/global/CancelButton;->isClickable()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 219
     :goto_0
     return-void
 
-    .line 215
     :cond_0
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
-    .line 216
     .local v0, "set":Landroid/animation/AnimatorSet;
     iget-object v1, p0, Lcom/android/server/policy/global/CancelButton;->mTipOut:Landroid/animation/ObjectAnimator;
 
@@ -687,14 +611,12 @@
 
     invoke-virtual {v1, v2}, Landroid/animation/AnimatorSet$Builder;->with(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    .line 217
     new-instance v1, Lcom/android/server/policy/global/CircleButton$ClickableControlListener;
 
     invoke-direct {v1, p0}, Lcom/android/server/policy/global/CircleButton$ClickableControlListener;-><init>(Lcom/android/server/policy/global/CircleButton;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 218
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
     goto :goto_0
@@ -705,15 +627,12 @@
     .param p1, "isReset"    # Z
 
     .prologue
-    .line 75
     invoke-super {p0, p1}, Lcom/android/server/policy/global/CircleButton;->resetParams(Z)V
 
-    .line 76
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/policy/global/CancelButton;->mCrossRadius:I
 
-    .line 77
     return-void
 .end method
 
@@ -721,7 +640,6 @@
     .locals 0
 
     .prologue
-    .line 16
     invoke-super {p0, p1}, Lcom/android/server/policy/global/CircleButton;->setAlaphaWhenDrag(F)V
 
     return-void
@@ -732,24 +650,20 @@
     .param p1, "animation"    # Z
 
     .prologue
-    .line 160
     invoke-virtual {p0}, Lcom/android/server/policy/global/CancelButton;->isClickable()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 173
     :goto_0
     return-void
 
-    .line 163
     :cond_0
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
-    .line 164
     .local v0, "set":Landroid/animation/AnimatorSet;
     iget-object v1, p0, Lcom/android/server/policy/global/CancelButton;->mCircleIn:Landroid/animation/ObjectAnimator;
 
@@ -767,14 +681,12 @@
 
     invoke-virtual {v1, v2}, Landroid/animation/AnimatorSet$Builder;->with(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    .line 165
     new-instance v1, Lcom/android/server/policy/global/CancelButton$1;
 
     invoke-direct {v1, p0}, Lcom/android/server/policy/global/CancelButton$1;-><init>(Lcom/android/server/policy/global/CancelButton;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 172
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
     goto :goto_0

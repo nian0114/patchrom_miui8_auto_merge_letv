@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 255
     iput-object p1, p0, Lcom/letv/leui/widget/slide/LeSlideLayout$2;->this$0:Lcom/letv/leui/widget/slide/LeSlideLayout;
 
     invoke-direct {p0}, Lcom/letv/leui/widget/slide/LeViewDragHelper$Callback;-><init>()V
@@ -40,7 +39,6 @@
     .param p3, "dx"    # I
 
     .prologue
-    .line 265
     const/4 v0, 0x0
 
     iget-object v1, p0, Lcom/letv/leui/widget/slide/LeSlideLayout$2;->this$0:Lcom/letv/leui/widget/slide/LeSlideLayout;
@@ -62,7 +60,6 @@
     .param p1, "child"    # Landroid/view/View;
 
     .prologue
-    .line 270
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlideLayout$2;->this$0:Lcom/letv/leui/widget/slide/LeSlideLayout;
 
     # getter for: Lcom/letv/leui/widget/slide/LeSlideLayout;->mScreenWidth:I
@@ -80,10 +77,8 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 312
     invoke-super {p0, p1}, Lcom/letv/leui/widget/slide/LeViewDragHelper$Callback;->onViewDragStateChanged(I)V
 
-    .line 313
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlideLayout$2;->this$0:Lcom/letv/leui/widget/slide/LeSlideLayout;
 
     # getter for: Lcom/letv/leui/widget/slide/LeSlideLayout;->mListener:Lcom/letv/leui/widget/slide/LeSlideLayout$OnPanelSlideListener;
@@ -102,16 +97,13 @@
 
     invoke-interface {v0, p1}, Lcom/letv/leui/widget/slide/LeSlideLayout$OnPanelSlideListener;->onStateChanged(I)V
 
-    .line 315
     :cond_0
     packed-switch p1, :pswitch_data_0
 
-    .line 347
     :cond_1
     :goto_0
     return-void
 
-    .line 317
     :pswitch_0
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlideLayout$2;->this$0:Lcom/letv/leui/widget/slide/LeSlideLayout;
 
@@ -122,7 +114,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationZ(F)V
 
-    .line 318
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlideLayout$2;->this$0:Lcom/letv/leui/widget/slide/LeSlideLayout;
 
     # getter for: Lcom/letv/leui/widget/slide/LeSlideLayout;->mDecorView:Landroid/view/View;
@@ -136,7 +127,6 @@
 
     if-nez v0, :cond_4
 
-    .line 320
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlideLayout$2;->this$0:Lcom/letv/leui/widget/slide/LeSlideLayout;
 
     # getter for: Lcom/letv/leui/widget/slide/LeSlideLayout;->mListener:Lcom/letv/leui/widget/slide/LeSlideLayout$OnPanelSlideListener;
@@ -155,7 +145,6 @@
 
     invoke-interface {v0}, Lcom/letv/leui/widget/slide/LeSlideLayout$OnPanelSlideListener;->onOpened()V
 
-    .line 322
     :cond_2
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlideLayout$2;->this$0:Lcom/letv/leui/widget/slide/LeSlideLayout;
 
@@ -166,7 +155,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 324
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlideLayout$2;->this$0:Lcom/letv/leui/widget/slide/LeSlideLayout;
 
     # getter for: Lcom/letv/leui/widget/slide/LeSlideLayout;->mDimView:Landroid/view/View;
@@ -176,7 +164,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setX(F)V
 
-    .line 325
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlideLayout$2;->this$0:Lcom/letv/leui/widget/slide/LeSlideLayout;
 
     const/4 v1, 0x0
@@ -184,7 +171,6 @@
     # setter for: Lcom/letv/leui/widget/slide/LeSlideLayout;->mBgActivityRootView:Landroid/view/View;
     invoke-static {v0, v1}, Lcom/letv/leui/widget/slide/LeSlideLayout;->access$902(Lcom/letv/leui/widget/slide/LeSlideLayout;Landroid/view/View;)Landroid/view/View;
 
-    .line 327
     :cond_3
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlideLayout$2;->this$0:Lcom/letv/leui/widget/slide/LeSlideLayout;
 
@@ -193,7 +179,6 @@
 
     goto :goto_0
 
-    .line 330
     :cond_4
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlideLayout$2;->this$0:Lcom/letv/leui/widget/slide/LeSlideLayout;
 
@@ -215,7 +200,6 @@
 
     goto :goto_0
 
-    .line 334
     :pswitch_1
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlideLayout$2;->this$0:Lcom/letv/leui/widget/slide/LeSlideLayout;
 
@@ -229,7 +213,6 @@
     # setter for: Lcom/letv/leui/widget/slide/LeSlideLayout;->mBgActivityRootView:Landroid/view/View;
     invoke-static {v0, v1}, Lcom/letv/leui/widget/slide/LeSlideLayout;->access$902(Lcom/letv/leui/widget/slide/LeSlideLayout;Landroid/view/View;)Landroid/view/View;
 
-    .line 335
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlideLayout$2;->this$0:Lcom/letv/leui/widget/slide/LeSlideLayout;
 
     # getter for: Lcom/letv/leui/widget/slide/LeSlideLayout;->mBgActivityRootView:Landroid/view/View;
@@ -239,13 +222,11 @@
 
     if-eqz v0, :cond_5
 
-    .line 337
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlideLayout$2;->this$0:Lcom/letv/leui/widget/slide/LeSlideLayout;
 
     # invokes: Lcom/letv/leui/widget/slide/LeSlideLayout;->setDimBackground()V
     invoke-static {v0}, Lcom/letv/leui/widget/slide/LeSlideLayout;->access$1400(Lcom/letv/leui/widget/slide/LeSlideLayout;)V
 
-    .line 338
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlideLayout$2;->this$0:Lcom/letv/leui/widget/slide/LeSlideLayout;
 
     # getter for: Lcom/letv/leui/widget/slide/LeSlideLayout;->mDimView:Landroid/view/View;
@@ -264,7 +245,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setX(F)V
 
-    .line 339
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlideLayout$2;->this$0:Lcom/letv/leui/widget/slide/LeSlideLayout;
 
     # getter for: Lcom/letv/leui/widget/slide/LeSlideLayout;->mDecorView:Landroid/view/View;
@@ -283,7 +263,6 @@
 
     goto/16 :goto_0
 
-    .line 341
     :cond_5
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlideLayout$2;->this$0:Lcom/letv/leui/widget/slide/LeSlideLayout;
 
@@ -296,7 +275,6 @@
 
     goto/16 :goto_0
 
-    .line 315
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -313,10 +291,8 @@
     .param p5, "dy"    # I
 
     .prologue
-    .line 301
     invoke-super/range {p0 .. p5}, Lcom/letv/leui/widget/slide/LeViewDragHelper$Callback;->onViewPositionChanged(Landroid/view/View;IIII)V
 
-    .line 302
     const/high16 v1, 0x3f800000    # 1.0f
 
     int-to-float v2, p2
@@ -334,7 +310,6 @@
 
     sub-float v0, v1, v2
 
-    .line 303
     .local v0, "percent":F
     iget-object v1, p0, Lcom/letv/leui/widget/slide/LeSlideLayout$2;->this$0:Lcom/letv/leui/widget/slide/LeSlideLayout;
 
@@ -354,7 +329,6 @@
 
     invoke-interface {v1, v0}, Lcom/letv/leui/widget/slide/LeSlideLayout$OnPanelSlideListener;->onSlideChange(F)V
 
-    .line 304
     :cond_0
     iget-object v1, p0, Lcom/letv/leui/widget/slide/LeSlideLayout$2;->this$0:Lcom/letv/leui/widget/slide/LeSlideLayout;
 
@@ -365,7 +339,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 306
     iget-object v1, p0, Lcom/letv/leui/widget/slide/LeSlideLayout$2;->this$0:Lcom/letv/leui/widget/slide/LeSlideLayout;
 
     # getter for: Lcom/letv/leui/widget/slide/LeSlideLayout;->mDimView:Landroid/view/View;
@@ -386,7 +359,6 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setX(F)V
 
-    .line 308
     :cond_1
     return-void
 .end method
@@ -400,19 +372,15 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 275
     invoke-super {p0, p1, p2, p3}, Lcom/letv/leui/widget/slide/LeViewDragHelper$Callback;->onViewReleased(Landroid/view/View;FF)V
 
-    .line 277
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
     move-result v1
 
-    .line 278
     .local v1, "left":I
     const/4 v3, 0x0
 
-    .line 279
     .local v3, "settleLeft":I
     iget-object v4, p0, Lcom/letv/leui/widget/slide/LeSlideLayout$2;->this$0:Lcom/letv/leui/widget/slide/LeSlideLayout;
 
@@ -437,7 +405,6 @@
 
     float-to-int v2, v4
 
-    .line 280
     .local v2, "leftThreshold":I
     invoke-static {p3}, Ljava/lang/Math;->abs(F)F
 
@@ -460,14 +427,12 @@
 
     const/4 v0, 0x1
 
-    .line 282
     .local v0, "isVerticalSwiping":Z
     :goto_0
     cmpl-float v4, p2, v6
 
     if-lez v4, :cond_3
 
-    .line 283
     invoke-static {p2}, Ljava/lang/Math;->abs(F)F
 
     move-result v4
@@ -489,7 +454,6 @@
 
     if-nez v0, :cond_2
 
-    .line 284
     iget-object v4, p0, Lcom/letv/leui/widget/slide/LeSlideLayout$2;->this$0:Lcom/letv/leui/widget/slide/LeSlideLayout;
 
     # getter for: Lcom/letv/leui/widget/slide/LeSlideLayout;->mScreenWidth:I
@@ -497,7 +461,6 @@
 
     move-result v3
 
-    .line 295
     :cond_0
     :goto_1
     iget-object v4, p0, Lcom/letv/leui/widget/slide/LeSlideLayout$2;->this$0:Lcom/letv/leui/widget/slide/LeSlideLayout;
@@ -513,27 +476,22 @@
 
     invoke-virtual {v4, v3, v5}, Lcom/letv/leui/widget/slide/LeViewDragHelper;->settleCapturedViewAt(II)Z
 
-    .line 296
     iget-object v4, p0, Lcom/letv/leui/widget/slide/LeSlideLayout$2;->this$0:Lcom/letv/leui/widget/slide/LeSlideLayout;
 
     invoke-virtual {v4}, Lcom/letv/leui/widget/slide/LeSlideLayout;->invalidate()V
 
-    .line 297
     return-void
 
-    .line 280
     .end local v0    # "isVerticalSwiping":Z
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 285
     .restart local v0    # "isVerticalSwiping":Z
     :cond_2
     if-le v1, v2, :cond_0
 
-    .line 286
     iget-object v4, p0, Lcom/letv/leui/widget/slide/LeSlideLayout$2;->this$0:Lcom/letv/leui/widget/slide/LeSlideLayout;
 
     # getter for: Lcom/letv/leui/widget/slide/LeSlideLayout;->mScreenWidth:I
@@ -543,16 +501,13 @@
 
     goto :goto_1
 
-    .line 289
     :cond_3
     cmpl-float v4, p2, v6
 
     if-nez v4, :cond_0
 
-    .line 290
     if-le v1, v2, :cond_0
 
-    .line 291
     iget-object v4, p0, Lcom/letv/leui/widget/slide/LeSlideLayout$2;->this$0:Lcom/letv/leui/widget/slide/LeSlideLayout;
 
     # getter for: Lcom/letv/leui/widget/slide/LeSlideLayout;->mScreenWidth:I
@@ -573,7 +528,6 @@
 
     const/4 v1, 0x0
 
-    .line 259
     iget-object v3, p0, Lcom/letv/leui/widget/slide/LeSlideLayout$2;->this$0:Lcom/letv/leui/widget/slide/LeSlideLayout;
 
     # getter for: Lcom/letv/leui/widget/slide/LeSlideLayout;->mConfig:Lcom/letv/leui/widget/slide/LeSlideConfig;
@@ -619,7 +573,6 @@
     :cond_0
     move v0, v2
 
-    .line 260
     .local v0, "edgeCase":Z
     :goto_0
     iget-object v3, p0, Lcom/letv/leui/widget/slide/LeSlideLayout$2;->this$0:Lcom/letv/leui/widget/slide/LeSlideLayout;
@@ -640,13 +593,11 @@
     :cond_1
     move v0, v1
 
-    .line 259
     goto :goto_0
 
     .restart local v0    # "edgeCase":Z
     :cond_2
     move v2, v1
 
-    .line 260
     goto :goto_1
 .end method

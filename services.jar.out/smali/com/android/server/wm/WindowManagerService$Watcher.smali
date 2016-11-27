@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 12446
     iput-object p1, p0, Lcom/android/server/wm/WindowManagerService$Watcher;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     invoke-direct {p0}, Lcom/letv/eui/appsnapshot/IAppSnapshotWatcher$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/wm/WindowManagerService$1;
 
     .prologue
-    .line 12446
     invoke-direct {p0, p1}, Lcom/android/server/wm/WindowManagerService$Watcher;-><init>(Lcom/android/server/wm/WindowManagerService;)V
 
     return-void
@@ -55,7 +53,6 @@
     .end annotation
 
     .prologue
-    .line 12457
     const-string v0, "WindowManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -78,7 +75,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 12458
     return-void
 .end method
 
@@ -92,7 +88,6 @@
     .end annotation
 
     .prologue
-    .line 12463
     const-string v1, "WindowManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -115,10 +110,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 12464
     if-eqz p1, :cond_0
 
-    .line 12465
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
     move-result-object v1
@@ -129,11 +122,9 @@
 
     move-result-object v0
 
-    .line 12466
     .local v0, "ret":Landroid/graphics/Bitmap;
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 12467
     iget-object v1, p0, Lcom/android/server/wm/WindowManagerService$Watcher;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v2, v1, Lcom/android/server/wm/WindowManagerService;->mH:Lcom/android/server/wm/WindowManagerService$H;
@@ -187,12 +178,10 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/wm/WindowManagerService$H;->post(Ljava/lang/Runnable;)Z
 
-    .line 12470
     .end local v0    # "ret":Landroid/graphics/Bitmap;
     :cond_0
     return-void
 
-    .line 12467
     .restart local v0    # "ret":Landroid/graphics/Bitmap;
     :cond_1
     const-string v1, "snapshot.png"
@@ -209,13 +198,11 @@
     .end annotation
 
     .prologue
-    .line 12451
     const-string v0, "WindowManager"
 
     const-string v1, "onSnapshotStart"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 12452
     return-void
 .end method

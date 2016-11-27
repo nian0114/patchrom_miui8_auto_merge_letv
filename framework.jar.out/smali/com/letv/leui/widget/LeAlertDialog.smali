@@ -23,15 +23,12 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 34
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/LeDialog;-><init>(Landroid/content/Context;)V
 
-    .line 35
     const v0, 0x1090075
 
     iput v0, p0, Lcom/letv/leui/widget/LeAlertDialog;->dialogRes:I
 
-    .line 36
     return-void
 .end method
 
@@ -41,15 +38,12 @@
     .param p2, "theme"    # I
 
     .prologue
-    .line 29
     invoke-direct {p0, p1, p2}, Lcom/letv/leui/widget/LeDialog;-><init>(Landroid/content/Context;I)V
 
-    .line 30
     const v0, 0x1090075
 
     iput v0, p0, Lcom/letv/leui/widget/LeAlertDialog;->dialogRes:I
 
-    .line 31
     return-void
 .end method
 
@@ -60,15 +54,12 @@
     .param p3, "cancelListener"    # Landroid/content/DialogInterface$OnCancelListener;
 
     .prologue
-    .line 24
     invoke-direct {p0, p1, p2, p3}, Lcom/letv/leui/widget/LeDialog;-><init>(Landroid/content/Context;ZLandroid/content/DialogInterface$OnCancelListener;)V
 
-    .line 25
     const v0, 0x1090075
 
     iput v0, p0, Lcom/letv/leui/widget/LeAlertDialog;->dialogRes:I
 
-    .line 26
     return-void
 .end method
 
@@ -77,7 +68,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LeAlertDialog;
 
     .prologue
-    .line 12
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertDialog;->positiveListener:Landroid/content/DialogInterface$OnClickListener;
 
     return-object v0
@@ -88,7 +78,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LeAlertDialog;
 
     .prologue
-    .line 12
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertDialog;->neutralListener:Landroid/content/DialogInterface$OnClickListener;
 
     return-object v0
@@ -99,7 +88,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LeAlertDialog;
 
     .prologue
-    .line 12
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertDialog;->negativeListener:Landroid/content/DialogInterface$OnClickListener;
 
     return-object v0
@@ -119,10 +107,8 @@
 
     const/4 v3, 0x0
 
-    .line 40
     invoke-super {p0}, Lcom/letv/leui/widget/LeDialog;->preShow()V
 
-    .line 42
     const v1, 0x1020435
 
     invoke-virtual {p0, v1}, Lcom/letv/leui/widget/LeAlertDialog;->findViewById(I)Landroid/view/View;
@@ -131,11 +117,9 @@
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    .line 43
     .local v0, "wizaredView":Landroid/view/ViewGroup;
     if-eqz v0, :cond_0
 
-    .line 44
     iget-object v1, p0, Lcom/letv/leui/widget/LeAlertDialog;->positiveCharSequence:Ljava/lang/CharSequence;
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -160,19 +144,15 @@
 
     if-eqz v1, :cond_1
 
-    .line 45
     invoke-virtual {v0, v4}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    .line 102
     :cond_0
     :goto_0
     return-void
 
-    .line 47
     :cond_1
     invoke-virtual {v0, v3}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    .line 48
     iget-object v1, p0, Lcom/letv/leui/widget/LeAlertDialog;->positiveCharSequence:Ljava/lang/CharSequence;
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -181,7 +161,6 @@
 
     if-nez v1, :cond_2
 
-    .line 49
     const v1, 0x1020438
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -194,14 +173,12 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 50
     invoke-virtual {v0, v6}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
 
-    .line 51
     invoke-virtual {v0, v6}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
@@ -212,7 +189,6 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 66
     :goto_1
     iget-object v1, p0, Lcom/letv/leui/widget/LeAlertDialog;->neutralCharSequence:Ljava/lang/CharSequence;
 
@@ -222,7 +198,6 @@
 
     if-nez v1, :cond_3
 
-    .line 67
     const v1, 0x1020437
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -235,14 +210,12 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 68
     invoke-virtual {v0, v5}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
 
-    .line 69
     invoke-virtual {v0, v5}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
@@ -253,7 +226,6 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 81
     :goto_2
     iget-object v1, p0, Lcom/letv/leui/widget/LeAlertDialog;->negativeCharSequence:Ljava/lang/CharSequence;
 
@@ -263,7 +235,6 @@
 
     if-nez v1, :cond_4
 
-    .line 82
     const v1, 0x1020436
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -276,14 +247,12 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 83
     invoke-virtual {v0, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
 
-    .line 84
     invoke-virtual {v0, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
@@ -296,7 +265,6 @@
 
     goto :goto_0
 
-    .line 63
     :cond_2
     invoke-virtual {v0, v6}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
@@ -306,7 +274,6 @@
 
     goto :goto_1
 
-    .line 78
     :cond_3
     invoke-virtual {v0, v5}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
@@ -316,7 +283,6 @@
 
     goto :goto_2
 
-    .line 96
     :cond_4
     invoke-virtual {v0, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
@@ -333,10 +299,8 @@
     .param p2, "listener"    # Landroid/content/DialogInterface$OnClickListener;
 
     .prologue
-    .line 127
     iput-object p2, p0, Lcom/letv/leui/widget/LeAlertDialog;->negativeListener:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 128
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeAlertDialog;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -351,7 +315,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeAlertDialog;->negativeCharSequence:Ljava/lang/CharSequence;
 
-    .line 129
     return-void
 .end method
 
@@ -361,13 +324,10 @@
     .param p2, "listener"    # Landroid/content/DialogInterface$OnClickListener;
 
     .prologue
-    .line 112
     iput-object p2, p0, Lcom/letv/leui/widget/LeAlertDialog;->negativeListener:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 113
     iput-object p1, p0, Lcom/letv/leui/widget/LeAlertDialog;->negativeCharSequence:Ljava/lang/CharSequence;
 
-    .line 114
     return-void
 .end method
 
@@ -377,10 +337,8 @@
     .param p2, "listener"    # Landroid/content/DialogInterface$OnClickListener;
 
     .prologue
-    .line 132
     iput-object p2, p0, Lcom/letv/leui/widget/LeAlertDialog;->neutralListener:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 133
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeAlertDialog;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -395,7 +353,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeAlertDialog;->neutralCharSequence:Ljava/lang/CharSequence;
 
-    .line 134
     return-void
 .end method
 
@@ -405,13 +362,10 @@
     .param p2, "listener"    # Landroid/content/DialogInterface$OnClickListener;
 
     .prologue
-    .line 117
     iput-object p2, p0, Lcom/letv/leui/widget/LeAlertDialog;->neutralListener:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 118
     iput-object p1, p0, Lcom/letv/leui/widget/LeAlertDialog;->neutralCharSequence:Ljava/lang/CharSequence;
 
-    .line 119
     return-void
 .end method
 
@@ -421,10 +375,8 @@
     .param p2, "listener"    # Landroid/content/DialogInterface$OnClickListener;
 
     .prologue
-    .line 122
     iput-object p2, p0, Lcom/letv/leui/widget/LeAlertDialog;->positiveListener:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 123
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeAlertDialog;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -439,7 +391,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeAlertDialog;->positiveCharSequence:Ljava/lang/CharSequence;
 
-    .line 124
     return-void
 .end method
 
@@ -449,12 +400,9 @@
     .param p2, "listener"    # Landroid/content/DialogInterface$OnClickListener;
 
     .prologue
-    .line 107
     iput-object p2, p0, Lcom/letv/leui/widget/LeAlertDialog;->positiveListener:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 108
     iput-object p1, p0, Lcom/letv/leui/widget/LeAlertDialog;->positiveCharSequence:Ljava/lang/CharSequence;
 
-    .line 109
     return-void
 .end method

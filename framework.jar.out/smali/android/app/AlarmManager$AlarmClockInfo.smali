@@ -41,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 888
     new-instance v0, Landroid/app/AlarmManager$AlarmClockInfo$1;
 
     invoke-direct {v0}, Landroid/app/AlarmManager$AlarmClockInfo$1;-><init>()V
@@ -57,16 +56,12 @@
     .param p3, "showIntent"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 839
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 840
     iput-wide p1, p0, Landroid/app/AlarmManager$AlarmClockInfo;->mTriggerTime:J
 
-    .line 841
     iput-object p3, p0, Landroid/app/AlarmManager$AlarmClockInfo;->mShowIntent:Landroid/app/PendingIntent;
 
-    .line 842
     return-void
 .end method
 
@@ -75,17 +70,14 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 848
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 849
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/app/AlarmManager$AlarmClockInfo;->mTriggerTime:J
 
-    .line 850
     const-class v0, Landroid/app/PendingIntent;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -100,7 +92,6 @@
 
     iput-object v0, p0, Landroid/app/AlarmManager$AlarmClockInfo;->mShowIntent:Landroid/app/PendingIntent;
 
-    .line 851
     return-void
 .end method
 
@@ -110,7 +101,6 @@
     .locals 1
 
     .prologue
-    .line 879
     const/4 v0, 0x0
 
     return v0
@@ -120,7 +110,6 @@
     .locals 1
 
     .prologue
-    .line 874
     iget-object v0, p0, Landroid/app/AlarmManager$AlarmClockInfo;->mShowIntent:Landroid/app/PendingIntent;
 
     return-object v0
@@ -130,7 +119,6 @@
     .locals 2
 
     .prologue
-    .line 860
     iget-wide v0, p0, Landroid/app/AlarmManager$AlarmClockInfo;->mTriggerTime:J
 
     return-wide v0
@@ -142,16 +130,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 884
     iget-wide v0, p0, Landroid/app/AlarmManager$AlarmClockInfo;->mTriggerTime:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 885
     iget-object v0, p0, Landroid/app/AlarmManager$AlarmClockInfo;->mShowIntent:Landroid/app/PendingIntent;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 886
     return-void
 .end method

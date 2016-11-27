@@ -47,14 +47,11 @@
     .end annotation
 
     .prologue
-    .line 43
     .local p3, "listener":Lcom/android/volley/Response$Listener;, "Lcom/android/volley/Response$Listener<Ljava/lang/String;>;"
     invoke-direct {p0, p1, p2, p4}, Lcom/android/volley/Request;-><init>(ILjava/lang/String;Lcom/android/volley/Response$ErrorListener;)V
 
-    .line 44
     iput-object p3, p0, Lcom/android/volley/toolbox/StringRequest;->mListener:Lcom/android/volley/Response$Listener;
 
-    .line 45
     return-void
 .end method
 
@@ -76,13 +73,11 @@
     .end annotation
 
     .prologue
-    .line 55
     .local p2, "listener":Lcom/android/volley/Response$Listener;, "Lcom/android/volley/Response$Listener<Ljava/lang/String;>;"
     const/4 v0, 0x0
 
     invoke-direct {p0, v0, p1, p2, p3}, Lcom/android/volley/toolbox/StringRequest;-><init>(ILjava/lang/String;Lcom/android/volley/Response$Listener;Lcom/android/volley/Response$ErrorListener;)V
 
-    .line 56
     return-void
 .end method
 
@@ -92,7 +87,6 @@
     .locals 0
 
     .prologue
-    .line 30
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/android/volley/toolbox/StringRequest;->deliverResponse(Ljava/lang/String;)V
@@ -105,12 +99,10 @@
     .param p1, "response"    # Ljava/lang/String;
 
     .prologue
-    .line 60
     iget-object v0, p0, Lcom/android/volley/toolbox/StringRequest;->mListener:Lcom/android/volley/Response$Listener;
 
     invoke-interface {v0, p1}, Lcom/android/volley/Response$Listener;->onResponse(Ljava/lang/Object;)V
 
-    .line 61
     return-void
 .end method
 
@@ -130,7 +122,6 @@
     .end annotation
 
     .prologue
-    .line 67
     :try_start_0
     new-instance v1, Ljava/lang/String;
 
@@ -146,7 +137,6 @@
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 71
     .local v1, "parsed":Ljava/lang/String;
     :goto_0
     invoke-static {p1}, Lcom/android/volley/toolbox/HttpHeaderParser;->parseCacheHeaders(Lcom/android/volley/NetworkResponse;)Lcom/android/volley/Cache$Entry;
@@ -159,12 +149,10 @@
 
     return-object v2
 
-    .line 68
     .end local v1    # "parsed":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 69
     .local v0, "e":Ljava/io/UnsupportedEncodingException;
     new-instance v1, Ljava/lang/String;
 

@@ -25,13 +25,10 @@
     .param p1, "s"    # Landroid/graphics/drawable/ShapeDrawable;
 
     .prologue
-    .line 75
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 76
     iput-object p1, p0, Lcom/letv/leui/widget/BallShapeHolder;->shapeDrawable:Landroid/graphics/drawable/ShapeDrawable;
 
-    .line 77
     return-void
 .end method
 
@@ -41,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 68
     iget v0, p0, Lcom/letv/leui/widget/BallShapeHolder;->arc:F
 
     return v0
@@ -51,7 +47,6 @@
     .locals 1
 
     .prologue
-    .line 59
     iget v0, p0, Lcom/letv/leui/widget/BallShapeHolder;->color:I
 
     return v0
@@ -61,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 51
     iget-object v0, p0, Lcom/letv/leui/widget/BallShapeHolder;->paint:Landroid/graphics/Paint;
 
     return-object v0
@@ -71,7 +65,6 @@
     .locals 1
 
     .prologue
-    .line 42
     iget v0, p0, Lcom/letv/leui/widget/BallShapeHolder;->radius:F
 
     return v0
@@ -81,7 +74,6 @@
     .locals 1
 
     .prologue
-    .line 18
     iget-object v0, p0, Lcom/letv/leui/widget/BallShapeHolder;->shapeDrawable:Landroid/graphics/drawable/ShapeDrawable;
 
     return-object v0
@@ -91,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 26
     iget v0, p0, Lcom/letv/leui/widget/BallShapeHolder;->x:F
 
     return v0
@@ -101,7 +92,6 @@
     .locals 1
 
     .prologue
-    .line 34
     iget v0, p0, Lcom/letv/leui/widget/BallShapeHolder;->y:F
 
     return v0
@@ -112,10 +102,8 @@
     .param p1, "arc"    # F
 
     .prologue
-    .line 72
     iput p1, p0, Lcom/letv/leui/widget/BallShapeHolder;->arc:F
 
-    .line 73
     return-void
 .end method
 
@@ -124,7 +112,6 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 63
     iget-object v0, p0, Lcom/letv/leui/widget/BallShapeHolder;->shapeDrawable:Landroid/graphics/drawable/ShapeDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
@@ -133,10 +120,8 @@
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 64
     iput p1, p0, Lcom/letv/leui/widget/BallShapeHolder;->color:I
 
-    .line 65
     return-void
 .end method
 
@@ -145,10 +130,8 @@
     .param p1, "paint"    # Landroid/graphics/Paint;
 
     .prologue
-    .line 55
     iput-object p1, p0, Lcom/letv/leui/widget/BallShapeHolder;->paint:Landroid/graphics/Paint;
 
-    .line 56
     return-void
 .end method
 
@@ -159,7 +142,6 @@
     .prologue
     const/high16 v2, 0x40000000    # 2.0f
 
-    .line 46
     iget-object v0, p0, Lcom/letv/leui/widget/BallShapeHolder;->shapeDrawable:Landroid/graphics/drawable/ShapeDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getShape()Landroid/graphics/drawable/shapes/Shape;
@@ -172,10 +154,8 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/drawable/shapes/Shape;->resize(FF)V
 
-    .line 47
     iput p1, p0, Lcom/letv/leui/widget/BallShapeHolder;->radius:F
 
-    .line 48
     return-void
 .end method
 
@@ -184,10 +164,8 @@
     .param p1, "s"    # Landroid/graphics/drawable/ShapeDrawable;
 
     .prologue
-    .line 22
     iput-object p1, p0, Lcom/letv/leui/widget/BallShapeHolder;->shapeDrawable:Landroid/graphics/drawable/ShapeDrawable;
 
-    .line 23
     return-void
 .end method
 
@@ -196,10 +174,8 @@
     .param p1, "x"    # F
 
     .prologue
-    .line 30
     iput p1, p0, Lcom/letv/leui/widget/BallShapeHolder;->x:F
 
-    .line 31
     return-void
 .end method
 
@@ -208,9 +184,7 @@
     .param p1, "y"    # F
 
     .prologue
-    .line 38
     iput p1, p0, Lcom/letv/leui/widget/BallShapeHolder;->y:F
 
-    .line 39
     return-void
 .end method

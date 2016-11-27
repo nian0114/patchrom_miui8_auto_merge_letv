@@ -20,14 +20,12 @@
     .locals 1
 
     .prologue
-    .line 43
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/letv/leui/widget/LeWordIterator;-><init>(Ljava/util/Locale;)V
 
-    .line 44
     return-void
 .end method
 
@@ -36,17 +34,14 @@
     .param p1, "locale"    # Ljava/util/Locale;
 
     .prologue
-    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 51
     invoke-static {p1}, Ljava/text/BreakIterator;->getWordInstance(Ljava/util/Locale;)Ljava/text/BreakIterator;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeWordIterator;->mIterator:Ljava/text/BreakIterator;
 
-    .line 52
     return-void
 .end method
 
@@ -55,7 +50,6 @@
     .param p1, "shiftedOffset"    # I
 
     .prologue
-    .line 139
     if-ltz p1, :cond_0
 
     iget-object v0, p0, Lcom/letv/leui/widget/LeWordIterator;->mString:Ljava/lang/String;
@@ -66,7 +60,6 @@
 
     if-le p1, v0, :cond_1
 
-    .line 140
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -134,7 +127,6 @@
 
     throw v0
 
-    .line 144
     :cond_1
     return-void
 .end method
@@ -146,7 +138,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 123
     if-lt p1, v1, :cond_0
 
     iget-object v2, p0, Lcom/letv/leui/widget/LeWordIterator;->mString:Ljava/lang/String;
@@ -157,14 +148,12 @@
 
     if-gt p1, v2, :cond_0
 
-    .line 124
     iget-object v2, p0, Lcom/letv/leui/widget/LeWordIterator;->mString:Ljava/lang/String;
 
     invoke-virtual {v2, p1}, Ljava/lang/String;->codePointBefore(I)I
 
     move-result v0
 
-    .line 125
     .local v0, "codePoint":I
     invoke-static {v0}, Ljava/lang/Character;->isLetterOrDigit(I)Z
 
@@ -172,7 +161,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 127
     .end local v0    # "codePoint":I
     :goto_0
     return v1
@@ -188,7 +176,6 @@
     .param p1, "shiftedOffset"    # I
 
     .prologue
-    .line 131
     if-ltz p1, :cond_0
 
     iget-object v1, p0, Lcom/letv/leui/widget/LeWordIterator;->mString:Ljava/lang/String;
@@ -199,14 +186,12 @@
 
     if-ge p1, v1, :cond_0
 
-    .line 132
     iget-object v1, p0, Lcom/letv/leui/widget/LeWordIterator;->mString:Ljava/lang/String;
 
     invoke-virtual {v1, p1}, Ljava/lang/String;->codePointAt(I)I
 
     move-result v0
 
-    .line 133
     .local v0, "codePoint":I
     invoke-static {v0}, Ljava/lang/Character;->isLetterOrDigit(I)Z
 
@@ -216,7 +201,6 @@
 
     const/4 v1, 0x1
 
-    .line 135
     .end local v0    # "codePoint":I
     :goto_0
     return v1
@@ -234,23 +218,19 @@
     .param p1, "offset"    # I
 
     .prologue
-    .line 75
     iget v1, p0, Lcom/letv/leui/widget/LeWordIterator;->mOffsetShift:I
 
     sub-int v0, p1, v1
 
-    .line 76
     .local v0, "shiftedOffset":I
     invoke-direct {p0, v0}, Lcom/letv/leui/widget/LeWordIterator;->checkOffsetIsValid(I)V
 
-    .line 78
     invoke-direct {p0, v0}, Lcom/letv/leui/widget/LeWordIterator;->isOnLetterOrDigit(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 79
     iget-object v1, p0, Lcom/letv/leui/widget/LeWordIterator;->mIterator:Ljava/text/BreakIterator;
 
     invoke-virtual {v1, v0}, Ljava/text/BreakIterator;->isBoundary(I)Z
@@ -259,16 +239,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 80
     iget v1, p0, Lcom/letv/leui/widget/LeWordIterator;->mOffsetShift:I
 
     add-int/2addr v1, v0
 
-    .line 89
     :goto_0
     return v1
 
-    .line 82
     :cond_0
     iget-object v1, p0, Lcom/letv/leui/widget/LeWordIterator;->mIterator:Ljava/text/BreakIterator;
 
@@ -282,7 +259,6 @@
 
     goto :goto_0
 
-    .line 85
     :cond_1
     invoke-direct {p0, v0}, Lcom/letv/leui/widget/LeWordIterator;->isAfterLetterOrDigit(I)Z
 
@@ -290,7 +266,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 86
     iget-object v1, p0, Lcom/letv/leui/widget/LeWordIterator;->mIterator:Ljava/text/BreakIterator;
 
     invoke-virtual {v1, v0}, Ljava/text/BreakIterator;->preceding(I)I
@@ -303,7 +278,6 @@
 
     goto :goto_0
 
-    .line 89
     :cond_2
     const/4 v1, -0x1
 
@@ -315,23 +289,19 @@
     .param p1, "offset"    # I
 
     .prologue
-    .line 105
     iget v1, p0, Lcom/letv/leui/widget/LeWordIterator;->mOffsetShift:I
 
     sub-int v0, p1, v1
 
-    .line 106
     .local v0, "shiftedOffset":I
     invoke-direct {p0, v0}, Lcom/letv/leui/widget/LeWordIterator;->checkOffsetIsValid(I)V
 
-    .line 108
     invoke-direct {p0, v0}, Lcom/letv/leui/widget/LeWordIterator;->isAfterLetterOrDigit(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 109
     iget-object v1, p0, Lcom/letv/leui/widget/LeWordIterator;->mIterator:Ljava/text/BreakIterator;
 
     invoke-virtual {v1, v0}, Ljava/text/BreakIterator;->isBoundary(I)Z
@@ -340,16 +310,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 110
     iget v1, p0, Lcom/letv/leui/widget/LeWordIterator;->mOffsetShift:I
 
     add-int/2addr v1, v0
 
-    .line 119
     :goto_0
     return v1
 
-    .line 112
     :cond_0
     iget-object v1, p0, Lcom/letv/leui/widget/LeWordIterator;->mIterator:Ljava/text/BreakIterator;
 
@@ -363,7 +330,6 @@
 
     goto :goto_0
 
-    .line 115
     :cond_1
     invoke-direct {p0, v0}, Lcom/letv/leui/widget/LeWordIterator;->isOnLetterOrDigit(I)Z
 
@@ -371,7 +337,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 116
     iget-object v1, p0, Lcom/letv/leui/widget/LeWordIterator;->mIterator:Ljava/text/BreakIterator;
 
     invoke-virtual {v1, v0}, Ljava/text/BreakIterator;->following(I)I
@@ -384,7 +349,6 @@
 
     goto :goto_0
 
-    .line 119
     :cond_2
     const/4 v1, -0x1
 
@@ -398,7 +362,6 @@
     .param p3, "end"    # I
 
     .prologue
-    .line 55
     const/4 v1, 0x0
 
     add-int/lit8 v2, p2, -0x32
@@ -409,7 +372,6 @@
 
     iput v1, p0, Lcom/letv/leui/widget/LeWordIterator;->mOffsetShift:I
 
-    .line 56
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result v1
@@ -420,7 +382,6 @@
 
     move-result v0
 
-    .line 58
     .local v0, "windowEnd":I
     iget v1, p0, Lcom/letv/leui/widget/LeWordIterator;->mOffsetShift:I
 
@@ -434,13 +395,11 @@
 
     iput-object v1, p0, Lcom/letv/leui/widget/LeWordIterator;->mString:Ljava/lang/String;
 
-    .line 59
     iget-object v1, p0, Lcom/letv/leui/widget/LeWordIterator;->mIterator:Ljava/text/BreakIterator;
 
     iget-object v2, p0, Lcom/letv/leui/widget/LeWordIterator;->mString:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/text/BreakIterator;->setText(Ljava/lang/String;)V
 
-    .line 60
     return-void
 .end method

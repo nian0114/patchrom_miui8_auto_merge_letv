@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 745
     iput-object p1, p0, Lcom/letv/leui/widget/LeTitleEditText$3;->this$0:Lcom/letv/leui/widget/LeTitleEditText;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 748
     iget-object v0, p0, Lcom/letv/leui/widget/LeTitleEditText$3;->this$0:Lcom/letv/leui/widget/LeTitleEditText;
 
     # getter for: Lcom/letv/leui/widget/LeTitleEditText;->mClearButton:Landroid/widget/ImageView;
@@ -51,18 +49,15 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 749
     iget-object v0, p0, Lcom/letv/leui/widget/LeTitleEditText$3;->this$0:Lcom/letv/leui/widget/LeTitleEditText;
 
     # invokes: Lcom/letv/leui/widget/LeTitleEditText;->onClearText()V
     invoke-static {v0}, Lcom/letv/leui/widget/LeTitleEditText;->access$300(Lcom/letv/leui/widget/LeTitleEditText;)V
 
-    .line 753
     :cond_0
     :goto_0
     return-void
 
-    .line 750
     :cond_1
     iget-object v0, p0, Lcom/letv/leui/widget/LeTitleEditText$3;->this$0:Lcom/letv/leui/widget/LeTitleEditText;
 
@@ -82,7 +77,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 751
     iget-object v0, p0, Lcom/letv/leui/widget/LeTitleEditText$3;->this$0:Lcom/letv/leui/widget/LeTitleEditText;
 
     # invokes: Lcom/letv/leui/widget/LeTitleEditText;->onPwdVisibleSwitch()V

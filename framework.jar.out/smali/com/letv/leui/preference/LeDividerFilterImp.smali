@@ -19,16 +19,12 @@
     .param p2, "r"    # Landroid/content/res/Resources;
 
     .prologue
-    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 20
     iput-object p1, p0, Lcom/letv/leui/preference/LeDividerFilterImp;->mAdapter:Landroid/preference/PreferenceGroupAdapter;
 
-    .line 21
     iput-object p2, p0, Lcom/letv/leui/preference/LeDividerFilterImp;->mRes:Landroid/content/res/Resources;
 
-    .line 22
     return-void
 .end method
 
@@ -37,14 +33,11 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 82
     const/4 v0, 0x0
 
-    .line 83
     .local v0, "isPreferenceCategoryCurrent":Z
     const/4 v1, 0x0
 
-    .line 85
     .local v1, "isPreferenceCategoryNext":Z
     iget-object v4, p0, Lcom/letv/leui/preference/LeDividerFilterImp;->mAdapter:Landroid/preference/PreferenceGroupAdapter;
 
@@ -52,11 +45,9 @@
 
     move-result-object v2
 
-    .line 86
     .local v2, "preferenceCurrent":Landroid/preference/Preference;
     instance-of v0, v2, Landroid/preference/PreferenceCategory;
 
-    .line 88
     iget-object v4, p0, Lcom/letv/leui/preference/LeDividerFilterImp;->mAdapter:Landroid/preference/PreferenceGroupAdapter;
 
     invoke-virtual {v4}, Landroid/preference/PreferenceGroupAdapter;->getCount()I
@@ -67,7 +58,6 @@
 
     if-eq p1, v4, :cond_0
 
-    .line 89
     iget-object v4, p0, Lcom/letv/leui/preference/LeDividerFilterImp;->mAdapter:Landroid/preference/PreferenceGroupAdapter;
 
     add-int/lit8 v5, p1, 0x1
@@ -76,22 +66,18 @@
 
     move-result-object v3
 
-    .line 90
     .local v3, "preferenceNext":Landroid/preference/Preference;
     instance-of v1, v3, Landroid/preference/PreferenceCategory;
 
-    .line 93
     .end local v3    # "preferenceNext":Landroid/preference/Preference;
     :cond_0
     if-nez v0, :cond_1
 
     if-eqz v1, :cond_2
 
-    .line 94
     :cond_1
     const/4 v4, 0x0
 
-    .line 96
     :goto_0
     return v4
 
@@ -107,7 +93,6 @@
     .locals 1
 
     .prologue
-    .line 31
     const/4 v0, 0x1
 
     return v0
@@ -118,7 +103,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 36
     invoke-direct {p0, p1}, Lcom/letv/leui/preference/LeDividerFilterImp;->whetherDrawDivider(I)Z
 
     move-result v0
@@ -130,7 +114,6 @@
     .locals 1
 
     .prologue
-    .line 78
     const/4 v0, 0x0
 
     return v0
@@ -141,7 +124,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 68
     iget-object v0, p0, Lcom/letv/leui/preference/LeDividerFilterImp;->mAdapter:Landroid/preference/PreferenceGroupAdapter;
 
     invoke-virtual {v0, p1}, Landroid/preference/PreferenceGroupAdapter;->isEnabled(I)Z
@@ -170,11 +152,9 @@
 
     if-eqz v0, :cond_1
 
-    .line 71
     :cond_0
     const/4 v0, 0x0
 
-    .line 73
     :goto_0
     return v0
 
@@ -195,7 +175,6 @@
 
     const v2, 0x1050141
 
-    .line 41
     iget-object v0, p0, Lcom/letv/leui/preference/LeDividerFilterImp;->mAdapter:Landroid/preference/PreferenceGroupAdapter;
 
     invoke-virtual {v0, p1}, Landroid/preference/PreferenceGroupAdapter;->isEnabled(I)Z
@@ -224,7 +203,6 @@
 
     if-nez v0, :cond_1
 
-    .line 44
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/preference/LeDividerFilterImp;->mRes:Landroid/content/res/Resources;
 
@@ -240,11 +218,9 @@
 
     add-int/2addr v0, v1
 
-    .line 56
     :goto_0
     return v0
 
-    .line 48
     :cond_1
     iget-object v0, p0, Lcom/letv/leui/preference/LeDividerFilterImp;->mAdapter:Landroid/preference/PreferenceGroupAdapter;
 
@@ -266,7 +242,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 50
     iget-object v0, p0, Lcom/letv/leui/preference/LeDividerFilterImp;->mAdapter:Landroid/preference/PreferenceGroupAdapter;
 
     invoke-virtual {v0, p1}, Landroid/preference/PreferenceGroupAdapter;->getItem(I)Landroid/preference/Preference;
@@ -313,7 +288,6 @@
 
     goto :goto_0
 
-    .line 56
     :cond_2
     iget-object v0, p0, Lcom/letv/leui/preference/LeDividerFilterImp;->mRes:Landroid/content/res/Resources;
 
@@ -337,7 +311,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 63
     const/4 v0, 0x0
 
     return v0
@@ -347,7 +320,6 @@
     .locals 1
 
     .prologue
-    .line 26
     const/4 v0, 0x0
 
     return v0

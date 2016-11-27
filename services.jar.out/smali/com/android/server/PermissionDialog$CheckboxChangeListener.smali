@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 213
     iput-object p1, p0, Lcom/android/server/PermissionDialog$CheckboxChangeListener;->this$0:Lcom/android/server/PermissionDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,6 +41,5 @@
     .param p2, "isChecked"    # Z
 
     .prologue
-    .line 218
     return-void
 .end method

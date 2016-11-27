@@ -30,7 +30,6 @@
     .param p2, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 572
     .local p1, "x0":Ljava/lang/Class;, "Ljava/lang/Class<Ljava/lang/Integer;>;"
     invoke-direct {p0, p1, p2}, Landroid/util/Property;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
@@ -44,7 +43,6 @@
     .param p1, "object"    # Lcom/letv/leui/widget/LeCheckBox;
 
     .prologue
-    .line 575
     # getter for: Lcom/letv/leui/widget/LeCheckBox;->mDynimacRadius:I
     invoke-static {p1}, Lcom/letv/leui/widget/LeCheckBox;->access$100(Lcom/letv/leui/widget/LeCheckBox;)I
 
@@ -61,7 +59,6 @@
     .locals 1
 
     .prologue
-    .line 572
     check-cast p1, Lcom/letv/leui/widget/LeCheckBox;
 
     invoke-virtual {p0, p1}, Lcom/letv/leui/widget/LeCheckBox$2;->get(Lcom/letv/leui/widget/LeCheckBox;)Ljava/lang/Integer;
@@ -77,14 +74,12 @@
     .param p2, "value"    # Ljava/lang/Integer;
 
     .prologue
-    .line 583
     invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
     invoke-virtual {p0, p1, v0}, Lcom/letv/leui/widget/LeCheckBox$2;->setValue(Lcom/letv/leui/widget/LeCheckBox;I)V
 
-    .line 584
     return-void
 .end method
 
@@ -92,7 +87,6 @@
     .locals 0
 
     .prologue
-    .line 572
     check-cast p1, Lcom/letv/leui/widget/LeCheckBox;
 
     check-cast p2, Ljava/lang/Integer;
@@ -108,9 +102,7 @@
     .param p2, "value"    # I
 
     .prologue
-    .line 579
     invoke-virtual {p1, p2}, Lcom/letv/leui/widget/LeCheckBox;->setDynimacRadius(I)V
 
-    .line 580
     return-void
 .end method

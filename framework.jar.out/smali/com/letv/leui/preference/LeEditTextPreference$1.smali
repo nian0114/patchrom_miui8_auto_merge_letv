@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 78
     iput-object p1, p0, Lcom/letv/leui/preference/LeEditTextPreference$1;->this$0:Lcom/letv/leui/preference/LeEditTextPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "s"    # Landroid/text/Editable;
 
     .prologue
-    .line 100
     iget-object v0, p0, Lcom/letv/leui/preference/LeEditTextPreference$1;->this$0:Lcom/letv/leui/preference/LeEditTextPreference;
 
     # getter for: Lcom/letv/leui/preference/LeEditTextPreference;->textWatcher:Landroid/text/TextWatcher;
@@ -51,7 +49,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 101
     iget-object v0, p0, Lcom/letv/leui/preference/LeEditTextPreference$1;->this$0:Lcom/letv/leui/preference/LeEditTextPreference;
 
     # getter for: Lcom/letv/leui/preference/LeEditTextPreference;->textWatcher:Landroid/text/TextWatcher;
@@ -61,7 +58,6 @@
 
     invoke-interface {v0, p1}, Landroid/text/TextWatcher;->afterTextChanged(Landroid/text/Editable;)V
 
-    .line 103
     :cond_0
     return-void
 .end method
@@ -74,7 +70,6 @@
     .param p4, "after"    # I
 
     .prologue
-    .line 93
     iget-object v0, p0, Lcom/letv/leui/preference/LeEditTextPreference$1;->this$0:Lcom/letv/leui/preference/LeEditTextPreference;
 
     # getter for: Lcom/letv/leui/preference/LeEditTextPreference;->textWatcher:Landroid/text/TextWatcher;
@@ -84,7 +79,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 94
     iget-object v0, p0, Lcom/letv/leui/preference/LeEditTextPreference$1;->this$0:Lcom/letv/leui/preference/LeEditTextPreference;
 
     # getter for: Lcom/letv/leui/preference/LeEditTextPreference;->textWatcher:Landroid/text/TextWatcher;
@@ -94,7 +88,6 @@
 
     invoke-interface {v0, p1, p2, p3, p4}, Landroid/text/TextWatcher;->beforeTextChanged(Ljava/lang/CharSequence;III)V
 
-    .line 96
     :cond_0
     return-void
 .end method
@@ -107,7 +100,6 @@
     .param p4, "count"    # I
 
     .prologue
-    .line 82
     iget-object v0, p0, Lcom/letv/leui/preference/LeEditTextPreference$1;->this$0:Lcom/letv/leui/preference/LeEditTextPreference;
 
     # getter for: Lcom/letv/leui/preference/LeEditTextPreference;->textWatcher:Landroid/text/TextWatcher;
@@ -117,7 +109,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 83
     iget-object v0, p0, Lcom/letv/leui/preference/LeEditTextPreference$1;->this$0:Lcom/letv/leui/preference/LeEditTextPreference;
 
     # getter for: Lcom/letv/leui/preference/LeEditTextPreference;->textWatcher:Landroid/text/TextWatcher;
@@ -127,14 +118,12 @@
 
     invoke-interface {v0, p1, p2, p3, p4}, Landroid/text/TextWatcher;->onTextChanged(Ljava/lang/CharSequence;III)V
 
-    .line 85
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/preference/LeEditTextPreference$1;->this$0:Lcom/letv/leui/preference/LeEditTextPreference;
 
     # setter for: Lcom/letv/leui/preference/LeEditTextPreference;->editCharSequence:Ljava/lang/CharSequence;
     invoke-static {v0, p1}, Lcom/letv/leui/preference/LeEditTextPreference;->access$102(Lcom/letv/leui/preference/LeEditTextPreference;Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
-    .line 86
     iget-object v0, p0, Lcom/letv/leui/preference/LeEditTextPreference$1;->this$0:Lcom/letv/leui/preference/LeEditTextPreference;
 
     # invokes: Lcom/letv/leui/preference/LeEditTextPreference;->shouldPersist()Z
@@ -144,7 +133,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 87
     iget-object v0, p0, Lcom/letv/leui/preference/LeEditTextPreference$1;->this$0:Lcom/letv/leui/preference/LeEditTextPreference;
 
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
@@ -154,7 +142,6 @@
     # invokes: Lcom/letv/leui/preference/LeEditTextPreference;->persistString(Ljava/lang/String;)Z
     invoke-static {v0, v1}, Lcom/letv/leui/preference/LeEditTextPreference;->access$300(Lcom/letv/leui/preference/LeEditTextPreference;Ljava/lang/String;)Z
 
-    .line 89
     :cond_1
     return-void
 .end method

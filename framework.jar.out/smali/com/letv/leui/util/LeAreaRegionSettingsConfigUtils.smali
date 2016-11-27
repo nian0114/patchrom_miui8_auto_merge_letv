@@ -34,7 +34,6 @@
     .locals 1
 
     .prologue
-    .line 22
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -48,7 +47,6 @@
     .locals 0
 
     .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -59,7 +57,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 30
     const-string v0, "CN"
 
     invoke-static {p0, v0}, Lcom/letv/leui/util/LeAreaRegionSettingsConfigUtils;->matchRegion(Landroid/content/Context;Ljava/lang/String;)Z
@@ -97,14 +94,11 @@
 
     const/4 v1, 0x0
 
-    .line 39
     if-nez p1, :cond_0
 
-    .line 57
     :goto_0
     return v1
 
-    .line 42
     :cond_0
     sget-object v3, Lcom/letv/leui/util/LeAreaRegionSettingsConfigUtils;->sRegionMap:Ljava/util/HashMap;
 
@@ -114,7 +108,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 43
     sget-object v1, Lcom/letv/leui/util/LeAreaRegionSettingsConfigUtils;->sRegionMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -129,7 +122,6 @@
 
     goto :goto_0
 
-    .line 45
     :cond_1
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -141,16 +133,13 @@
 
     move-result-object v0
 
-    .line 48
     .local v0, "regionValue":Ljava/lang/String;
     if-nez v0, :cond_2
 
-    .line 49
     invoke-static {}, Lcom/letv/leui/util/LeSystemProperties;->getDefaultCountryCode()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 52
     :cond_2
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -158,7 +147,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 53
     sget-object v1, Lcom/letv/leui/util/LeAreaRegionSettingsConfigUtils;->sRegionMap:Ljava/util/HashMap;
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -169,10 +157,8 @@
 
     move v1, v2
 
-    .line 54
     goto :goto_0
 
-    .line 56
     :cond_3
     sget-object v2, Lcom/letv/leui/util/LeAreaRegionSettingsConfigUtils;->sRegionMap:Ljava/util/HashMap;
 

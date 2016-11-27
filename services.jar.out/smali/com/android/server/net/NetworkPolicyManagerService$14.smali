@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 915
     iput-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$14;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,23 +40,19 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 921
     iget-object v1, p0, Lcom/android/server/net/NetworkPolicyManagerService$14;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-virtual {v1, v2}, Lcom/android/server/net/NetworkPolicyManagerService;->setRestrictBackground(Z)V
 
-    .line 923
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 924
     .local v0, "data":Landroid/os/Bundle;
     const-string v1, "switch"
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 925
     iget-object v1, p0, Lcom/android/server/net/NetworkPolicyManagerService$14;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     const-string v2, "1.3.3.2.4"
@@ -65,6 +60,5 @@
     # invokes: Lcom/android/server/net/NetworkPolicyManagerService;->reportAgnes(Ljava/lang/String;Landroid/os/Bundle;)V
     invoke-static {v1, v2, v0}, Lcom/android/server/net/NetworkPolicyManagerService;->access$900(Lcom/android/server/net/NetworkPolicyManagerService;Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 927
     return-void
 .end method

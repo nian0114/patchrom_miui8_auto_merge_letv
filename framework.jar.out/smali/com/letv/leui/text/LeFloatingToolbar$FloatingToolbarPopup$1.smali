@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 321
     iput-object p1, p0, Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup$1;->this$1:Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup;
 
     iput-object p2, p0, Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup$1;->val$scrollView:Lcom/letv/leui/widget/LeHorizontalScrollView;
@@ -49,13 +48,11 @@
     .param p5, "oldScrollY"    # I
 
     .prologue
-    .line 324
     iget-object v0, p0, Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup$1;->this$1:Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup;
 
     iget-object v1, p0, Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup$1;->val$scrollView:Lcom/letv/leui/widget/LeHorizontalScrollView;
 
     invoke-virtual {v0, v1, p2}, Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup;->checkArrowShowing(Lcom/letv/leui/widget/LeHorizontalScrollView;I)V
 
-    .line 325
     return-void
 .end method

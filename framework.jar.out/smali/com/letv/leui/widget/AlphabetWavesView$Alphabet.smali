@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 269
     iput-object p1, p0, Lcom/letv/leui/widget/AlphabetWavesView$Alphabet;->this$0:Lcom/letv/leui/widget/AlphabetWavesView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "x1"    # Lcom/letv/leui/widget/AlphabetWavesView$1;
 
     .prologue
-    .line 269
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/AlphabetWavesView$Alphabet;-><init>(Lcom/letv/leui/widget/AlphabetWavesView;)V
 
     return-void

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 92
     iput-object p1, p0, Lcom/letv/domain/DomainHelper$2;->this$0:Lcom/letv/domain/DomainHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +40,10 @@
     .param p1, "volleyError"    # Lcom/android/volley/VolleyError;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/letv/domain/DomainHelper$2;->this$0:Lcom/letv/domain/DomainHelper;
 
     # invokes: Lcom/letv/domain/DomainHelper;->handleErrorResponse(Lcom/android/volley/VolleyError;)V
     invoke-static {v0, p1}, Lcom/letv/domain/DomainHelper;->access$100(Lcom/letv/domain/DomainHelper;Lcom/android/volley/VolleyError;)V
 
-    .line 96
     return-void
 .end method

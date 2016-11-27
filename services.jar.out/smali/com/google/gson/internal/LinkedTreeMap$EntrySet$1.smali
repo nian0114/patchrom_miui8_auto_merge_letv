@@ -34,7 +34,6 @@
     .locals 2
 
     .prologue
-    .line 563
     .local p0, "this":Lcom/google/gson/internal/LinkedTreeMap$EntrySet$1;, "Lcom/google/gson/internal/LinkedTreeMap$EntrySet.1;"
     iput-object p1, p0, Lcom/google/gson/internal/LinkedTreeMap$EntrySet$1;->this$1:Lcom/google/gson/internal/LinkedTreeMap$EntrySet;
 
@@ -53,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 563
     .local p0, "this":Lcom/google/gson/internal/LinkedTreeMap$EntrySet$1;, "Lcom/google/gson/internal/LinkedTreeMap$EntrySet.1;"
     invoke-virtual {p0}, Lcom/google/gson/internal/LinkedTreeMap$EntrySet$1;->next()Ljava/util/Map$Entry;
 
@@ -73,7 +71,6 @@
     .end annotation
 
     .prologue
-    .line 565
     .local p0, "this":Lcom/google/gson/internal/LinkedTreeMap$EntrySet$1;, "Lcom/google/gson/internal/LinkedTreeMap$EntrySet.1;"
     invoke-virtual {p0}, Lcom/google/gson/internal/LinkedTreeMap$EntrySet$1;->nextNode()Lcom/google/gson/internal/LinkedTreeMap$Node;
 

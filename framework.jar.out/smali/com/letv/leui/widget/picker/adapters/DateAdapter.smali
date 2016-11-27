@@ -32,7 +32,6 @@
     .end annotation
 
     .prologue
-    .line 22
     .local p2, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const v0, 0x10900ef
 
@@ -40,10 +39,8 @@
 
     invoke-direct {p0, p1, v0, v1}, Lcom/letv/leui/widget/picker/adapters/AbstractWheelTextAdapter;-><init>(Landroid/content/Context;II)V
 
-    .line 23
     iput-object p2, p0, Lcom/letv/leui/widget/picker/adapters/DateAdapter;->list:Ljava/util/ArrayList;
 
-    .line 24
     return-void
 .end method
 
@@ -53,17 +50,14 @@
     .param p2, "list"    # [Ljava/lang/String;
 
     .prologue
-    .line 27
     const v0, 0x10900ef
 
     const/4 v1, 0x0
 
     invoke-direct {p0, p1, v0, v1}, Lcom/letv/leui/widget/picker/adapters/AbstractWheelTextAdapter;-><init>(Landroid/content/Context;II)V
 
-    .line 28
     invoke-direct {p0, p2}, Lcom/letv/leui/widget/picker/adapters/DateAdapter;->stringToArrayList([Ljava/lang/String;)V
 
-    .line 29
     return-void
 .end method
 
@@ -72,19 +66,16 @@
     .param p1, "str"    # [Ljava/lang/String;
 
     .prologue
-    .line 51
     iget-object v1, p0, Lcom/letv/leui/widget/picker/adapters/DateAdapter;->list:Ljava/util/ArrayList;
 
     if-nez v1, :cond_0
 
-    .line 52
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/letv/leui/widget/picker/adapters/DateAdapter;->list:Ljava/util/ArrayList;
 
-    .line 53
     :cond_0
     iget-object v1, p0, Lcom/letv/leui/widget/picker/adapters/DateAdapter;->list:Ljava/util/ArrayList;
 
@@ -94,12 +85,10 @@
 
     if-nez v1, :cond_1
 
-    .line 54
     iget-object v1, p0, Lcom/letv/leui/widget/picker/adapters/DateAdapter;->list:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    .line 55
     :cond_1
     const/4 v0, 0x0
 
@@ -109,19 +98,16 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 56
     iget-object v1, p0, Lcom/letv/leui/widget/picker/adapters/DateAdapter;->list:Ljava/util/ArrayList;
 
     aget-object v2, p1, v0
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 55
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 57
     :cond_2
     return-void
 .end method
@@ -135,12 +121,10 @@
     .param p3, "parent"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 33
     invoke-super {p0, p1, p2, p3}, Lcom/letv/leui/widget/picker/adapters/AbstractWheelTextAdapter;->getItem(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v1
 
-    .line 35
     .local v1, "view":Landroid/view/View;
     const v2, 0x10200b4
 
@@ -150,7 +134,6 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 37
     .local v0, "textCity":Landroid/widget/TextView;
     iget-object v2, p0, Lcom/letv/leui/widget/picker/adapters/DateAdapter;->list:Ljava/util/ArrayList;
 
@@ -162,7 +145,6 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 38
     return-object v1
 .end method
 
@@ -171,7 +153,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 47
     iget-object v0, p0, Lcom/letv/leui/widget/picker/adapters/DateAdapter;->list:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -187,7 +168,6 @@
     .locals 1
 
     .prologue
-    .line 42
     iget-object v0, p0, Lcom/letv/leui/widget/picker/adapters/DateAdapter;->list:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I

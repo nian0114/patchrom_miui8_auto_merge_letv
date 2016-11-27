@@ -29,13 +29,10 @@
     .param p3, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 95
     iput-object p1, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshHorizontalScrollView$InternalHorizontalScrollViewSDK9;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshHorizontalScrollView;
 
-    .line 96
     invoke-direct {p0, p2, p3}, Landroid/widget/HorizontalScrollView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 97
     return-void
 .end method
 
@@ -45,10 +42,8 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 117
     const/4 v1, 0x0
 
-    .line 118
     .local v1, "scrollRange":I
     invoke-virtual {p0}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshHorizontalScrollView$InternalHorizontalScrollViewSDK9;->getChildCount()I
 
@@ -56,12 +51,10 @@
 
     if-lez v2, :cond_0
 
-    .line 119
     invoke-virtual {p0, v5}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshHorizontalScrollView$InternalHorizontalScrollViewSDK9;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 120
     .local v0, "child":Landroid/view/View;
     invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
@@ -89,7 +82,6 @@
 
     move-result v1
 
-    .line 122
     .end local v0    # "child":Landroid/view/View;
     :cond_0
     return v1
@@ -110,12 +102,10 @@
     .param p9, "isTouchEvent"    # Z
 
     .prologue
-    .line 103
     invoke-super/range {p0 .. p9}, Landroid/widget/HorizontalScrollView;->overScrollBy(IIIIIIIIZ)Z
 
     move-result v7
 
-    .line 107
     .local v7, "returnValue":Z
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshHorizontalScrollView$InternalHorizontalScrollViewSDK9;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshHorizontalScrollView;
 
@@ -135,6 +125,5 @@
 
     invoke-static/range {v0 .. v6}, Lcom/letv/leui/widget/pulltorefresh/OverscrollHelper;->overScrollBy(Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;IIIIIZ)V
 
-    .line 110
     return v7
 .end method

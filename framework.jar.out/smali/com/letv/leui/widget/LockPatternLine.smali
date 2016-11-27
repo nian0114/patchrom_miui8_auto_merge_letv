@@ -73,15 +73,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     const v0, -0x7f000001
 
     iput v0, p0, Lcom/letv/leui/widget/LockPatternLine;->lineColor:I
 
-    .line 31
     const v0, 0x3ecccccd    # 0.4f
 
     iput v0, p0, Lcom/letv/leui/widget/LockPatternLine;->lineAlpha:F
@@ -90,48 +87,40 @@
 
     iput v0, p0, Lcom/letv/leui/widget/LockPatternLine;->lineDisappear:F
 
-    .line 32
     iput v1, p0, Lcom/letv/leui/widget/LockPatternLine;->factorY:F
 
     iput v1, p0, Lcom/letv/leui/widget/LockPatternLine;->factorX:F
 
-    .line 34
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/letv/leui/widget/LockPatternLine;->mCurPoint:Lcom/letv/leui/widget/LockMovePoint;
 
-    .line 48
     iput-object p1, p0, Lcom/letv/leui/widget/LockPatternLine;->mView:Landroid/view/View;
 
-    .line 49
     invoke-direct {p0}, Lcom/letv/leui/widget/LockPatternLine;->getPaint()Landroid/graphics/Paint;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/letv/leui/widget/LockPatternLine;->mPaint:Landroid/graphics/Paint;
 
-    .line 50
     iget-object v0, p0, Lcom/letv/leui/widget/LockPatternLine;->mPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/letv/leui/widget/LockPatternLine;->lineColor:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 51
     invoke-direct {p0}, Lcom/letv/leui/widget/LockPatternLine;->getPaint2()Landroid/graphics/Paint;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/letv/leui/widget/LockPatternLine;->mPaint2:Landroid/graphics/Paint;
 
-    .line 52
     new-instance v0, Landroid/graphics/Path;
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/LockPatternLine;->mPath2:Landroid/graphics/Path;
 
-    .line 53
     return-void
 .end method
 
@@ -143,15 +132,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     const v0, -0x7f000001
 
     iput v0, p0, Lcom/letv/leui/widget/LockPatternLine;->lineColor:I
 
-    .line 31
     const v0, 0x3ecccccd    # 0.4f
 
     iput v0, p0, Lcom/letv/leui/widget/LockPatternLine;->lineAlpha:F
@@ -160,49 +146,40 @@
 
     iput v0, p0, Lcom/letv/leui/widget/LockPatternLine;->lineDisappear:F
 
-    .line 32
     iput v1, p0, Lcom/letv/leui/widget/LockPatternLine;->factorY:F
 
     iput v1, p0, Lcom/letv/leui/widget/LockPatternLine;->factorX:F
 
-    .line 34
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/letv/leui/widget/LockPatternLine;->mCurPoint:Lcom/letv/leui/widget/LockMovePoint;
 
-    .line 39
     iput p2, p0, Lcom/letv/leui/widget/LockPatternLine;->lineColor:I
 
-    .line 40
     iput-object p1, p0, Lcom/letv/leui/widget/LockPatternLine;->mView:Landroid/view/View;
 
-    .line 41
     invoke-direct {p0}, Lcom/letv/leui/widget/LockPatternLine;->getPaint()Landroid/graphics/Paint;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/letv/leui/widget/LockPatternLine;->mPaint:Landroid/graphics/Paint;
 
-    .line 42
     iget-object v0, p0, Lcom/letv/leui/widget/LockPatternLine;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p2}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 43
     invoke-direct {p0}, Lcom/letv/leui/widget/LockPatternLine;->getPaint2()Landroid/graphics/Paint;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/letv/leui/widget/LockPatternLine;->mPaint2:Landroid/graphics/Paint;
 
-    .line 44
     new-instance v0, Landroid/graphics/Path;
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/LockPatternLine;->mPath2:Landroid/graphics/Path;
 
-    .line 45
     return-void
 .end method
 
@@ -211,7 +188,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LockPatternLine;
 
     .prologue
-    .line 17
     iget-object v0, p0, Lcom/letv/leui/widget/LockPatternLine;->mCurPoint:Lcom/letv/leui/widget/LockMovePoint;
 
     return-object v0
@@ -223,7 +199,6 @@
     .param p1, "x1"    # Lcom/letv/leui/widget/LockMovePoint;
 
     .prologue
-    .line 17
     iput-object p1, p0, Lcom/letv/leui/widget/LockPatternLine;->mCurPoint:Lcom/letv/leui/widget/LockMovePoint;
 
     return-object p1
@@ -234,7 +209,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LockPatternLine;
 
     .prologue
-    .line 17
     iget v0, p0, Lcom/letv/leui/widget/LockPatternLine;->mMoveTimes:I
 
     return v0
@@ -245,7 +219,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LockPatternLine;
 
     .prologue
-    .line 17
     iget v0, p0, Lcom/letv/leui/widget/LockPatternLine;->mMoveTimes:I
 
     add-int/lit8 v1, v0, 0x1
@@ -260,7 +233,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LockPatternLine;
 
     .prologue
-    .line 17
     iget-object v0, p0, Lcom/letv/leui/widget/LockPatternLine;->mMovePoints:Ljava/util/List;
 
     return-object v0
@@ -270,7 +242,6 @@
     .locals 1
 
     .prologue
-    .line 98
     iget-object v0, p0, Lcom/letv/leui/widget/LockPatternLine;->mLineErrorAnimator:Landroid/animation/AnimatorSet;
 
     if-eqz v0, :cond_0
@@ -283,12 +254,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 99
     iget-object v0, p0, Lcom/letv/leui/widget/LockPatternLine;->mLineErrorAnimator:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->end()V
 
-    .line 101
     :cond_0
     return-void
 .end method
@@ -301,7 +270,6 @@
 
     const/4 v6, 0x1
 
-    .line 109
     const-string v2, "lineColor"
 
     const/4 v3, 0x2
@@ -320,7 +288,6 @@
 
     move-result-object v1
 
-    .line 111
     .local v1, "pvColor":Landroid/animation/PropertyValuesHolder;
     new-array v2, v6, [Landroid/animation/PropertyValuesHolder;
 
@@ -336,7 +303,6 @@
 
     move-result-object v0
 
-    .line 113
     .local v0, "colorAnim":Landroid/animation/ObjectAnimator;
     new-instance v2, Landroid/view/animation/LinearInterpolator;
 
@@ -344,13 +310,10 @@
 
     invoke-virtual {v0, v2}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 114
     invoke-virtual {v0, p0}, Landroid/animation/ObjectAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 115
     invoke-virtual {v0, v6}, Landroid/animation/ObjectAnimator;->setAutoCancel(Z)V
 
-    .line 116
     return-object v0
 .end method
 
@@ -361,7 +324,6 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 86
     const-string v2, "lineDisappear"
 
     const/4 v3, 0x2
@@ -374,7 +336,6 @@
 
     move-result-object v1
 
-    .line 88
     .local v1, "pvColor":Landroid/animation/PropertyValuesHolder;
     new-array v2, v6, [Landroid/animation/PropertyValuesHolder;
 
@@ -392,7 +353,6 @@
 
     move-result-object v0
 
-    .line 90
     .local v0, "colorAnim":Landroid/animation/ObjectAnimator;
     new-instance v2, Landroid/view/animation/LinearInterpolator;
 
@@ -400,16 +360,12 @@
 
     invoke-virtual {v0, v2}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 91
     invoke-virtual {v0, p0}, Landroid/animation/ObjectAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 92
     invoke-virtual {v0, v6}, Landroid/animation/ObjectAnimator;->setAutoCancel(Z)V
 
-    .line 93
     return-object v0
 
-    .line 86
     nop
 
     :array_0
@@ -425,39 +381,31 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 66
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    .line 67
     .local v0, "p":Landroid/graphics/Paint;
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 68
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setDither(Z)V
 
-    .line 69
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 70
     sget-object v1, Landroid/graphics/Paint$Join;->ROUND:Landroid/graphics/Paint$Join;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeJoin(Landroid/graphics/Paint$Join;)V
 
-    .line 71
     sget-object v1, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
-    .line 72
     const/high16 v1, 0x40a00000    # 5.0f
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 73
     return-object v0
 .end method
 
@@ -467,44 +415,35 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 159
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    .line 160
     .local v0, "p":Landroid/graphics/Paint;
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 161
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setDither(Z)V
 
-    .line 162
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 163
     sget-object v1, Landroid/graphics/Paint$Join;->ROUND:Landroid/graphics/Paint$Join;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeJoin(Landroid/graphics/Paint$Join;)V
 
-    .line 164
     sget-object v1, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
-    .line 165
     const/high16 v1, 0x40a00000    # 5.0f
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 166
     const/high16 v1, -0x7f010000
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 167
     return-object v0
 .end method
 
@@ -514,31 +453,24 @@
     .locals 2
 
     .prologue
-    .line 77
     invoke-direct {p0}, Lcom/letv/leui/widget/LockPatternLine;->cancelLineAnim()V
 
-    .line 78
     invoke-direct {p0}, Lcom/letv/leui/widget/LockPatternLine;->getLineColorAnim()Landroid/animation/ObjectAnimator;
 
     move-result-object v1
 
-    .line 79
     .local v1, "lineColorAnim":Landroid/animation/ObjectAnimator;
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
-    .line 80
     .local v0, "animatorSet":Landroid/animation/AnimatorSet;
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    .line 81
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 82
     iput-object v0, p0, Lcom/letv/leui/widget/LockPatternLine;->mLineErrorAnimator:Landroid/animation/AnimatorSet;
 
-    .line 83
     return-void
 .end method
 
@@ -547,17 +479,14 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 172
     iget-object v4, p0, Lcom/letv/leui/widget/LockPatternLine;->mCurPoint:Lcom/letv/leui/widget/LockMovePoint;
 
     if-eqz v4, :cond_2
 
-    .line 173
     iget-object v4, p0, Lcom/letv/leui/widget/LockPatternLine;->mPath2:Landroid/graphics/Path;
 
     invoke-virtual {v4}, Landroid/graphics/Path;->rewind()V
 
-    .line 174
     iget-object v4, p0, Lcom/letv/leui/widget/LockPatternLine;->mMovePoints:Ljava/util/List;
 
     iget v5, p0, Lcom/letv/leui/widget/LockPatternLine;->mMoveTimes:I
@@ -566,14 +495,12 @@
 
     invoke-virtual {p0, v4, v5}, Lcom/letv/leui/widget/LockPatternLine;->setError(Ljava/util/List;I)V
 
-    .line 175
     iget-object v4, p0, Lcom/letv/leui/widget/LockPatternLine;->mCurPoint:Lcom/letv/leui/widget/LockMovePoint;
 
     invoke-virtual {v4}, Lcom/letv/leui/widget/LockMovePoint;->getCurX()F
 
     move-result v0
 
-    .line 176
     .local v0, "curX":F
     iget-object v4, p0, Lcom/letv/leui/widget/LockPatternLine;->mCurPoint:Lcom/letv/leui/widget/LockMovePoint;
 
@@ -581,7 +508,6 @@
 
     move-result v1
 
-    .line 177
     .local v1, "curY":F
     iget-object v4, p0, Lcom/letv/leui/widget/LockPatternLine;->mCurPoint:Lcom/letv/leui/widget/LockMovePoint;
 
@@ -589,7 +515,6 @@
 
     move-result v2
 
-    .line 178
     .local v2, "moveX":F
     iget-object v4, p0, Lcom/letv/leui/widget/LockPatternLine;->mCurPoint:Lcom/letv/leui/widget/LockMovePoint;
 
@@ -597,7 +522,6 @@
 
     move-result v3
 
-    .line 179
     .local v3, "moveY":F
     iget-object v6, p0, Lcom/letv/leui/widget/LockPatternLine;->mPath2:Landroid/graphics/Path;
 
@@ -617,19 +541,16 @@
     :goto_1
     invoke-virtual {v6, v5, v4}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 180
     iget-object v4, p0, Lcom/letv/leui/widget/LockPatternLine;->mPath2:Landroid/graphics/Path;
 
     invoke-virtual {v4, v2, v3}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 181
     iget-object v4, p0, Lcom/letv/leui/widget/LockPatternLine;->mPath2:Landroid/graphics/Path;
 
     iget-object v5, p0, Lcom/letv/leui/widget/LockPatternLine;->mPaint2:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v4, v5}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 185
     .end local v0    # "curX":F
     .end local v1    # "curY":F
     .end local v2    # "moveX":F
@@ -637,7 +558,6 @@
     :goto_2
     return-void
 
-    .line 179
     .restart local v0    # "curX":F
     .restart local v1    # "curY":F
     .restart local v2    # "moveX":F
@@ -666,7 +586,6 @@
 
     goto :goto_1
 
-    .line 183
     .end local v0    # "curX":F
     .end local v1    # "curY":F
     .end local v2    # "moveX":F
@@ -697,7 +616,6 @@
     .end annotation
 
     .prologue
-    .line 150
     .local p1, "mLockMovePoints":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/letv/leui/widget/LockMovePoint;>;"
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
@@ -705,21 +623,17 @@
 
     if-nez v1, :cond_0
 
-    .line 156
     :goto_0
     return-void
 
-    .line 153
     :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/letv/leui/widget/LockPatternLine;->getMoveAnim(Ljava/util/List;Lcom/letv/leui/widget/LockPatternLine$LineAnimListener;)Landroid/animation/ObjectAnimator;
 
     move-result-object v0
 
-    .line 154
     .local v0, "moveAnim":Landroid/animation/ObjectAnimator;
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 155
     iget-object v1, p0, Lcom/letv/leui/widget/LockPatternLine;->mPaint:Landroid/graphics/Paint;
 
     const/4 v2, 0x0
@@ -735,15 +649,12 @@
     .param p2, "path"    # Landroid/graphics/Path;
 
     .prologue
-    .line 61
     invoke-direct {p0}, Lcom/letv/leui/widget/LockPatternLine;->cancelLineAnim()V
 
-    .line 62
     iget-object v0, p0, Lcom/letv/leui/widget/LockPatternLine;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, p2, v0}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 63
     return-void
 .end method
 
@@ -751,12 +662,10 @@
     .locals 1
 
     .prologue
-    .line 104
     iget-object v0, p0, Lcom/letv/leui/widget/LockPatternLine;->mLineErrorAnimator:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->end()V
 
-    .line 105
     return-void
 .end method
 
@@ -764,7 +673,6 @@
     .locals 1
 
     .prologue
-    .line 241
     iget v0, p0, Lcom/letv/leui/widget/LockPatternLine;->factorX:F
 
     return v0
@@ -774,7 +682,6 @@
     .locals 1
 
     .prologue
-    .line 233
     iget v0, p0, Lcom/letv/leui/widget/LockPatternLine;->factorY:F
 
     return v0
@@ -784,7 +691,6 @@
     .locals 1
 
     .prologue
-    .line 129
     iget v0, p0, Lcom/letv/leui/widget/LockPatternLine;->lineAlpha:F
 
     return v0
@@ -794,7 +700,6 @@
     .locals 1
 
     .prologue
-    .line 121
     iget-object v0, p0, Lcom/letv/leui/widget/LockPatternLine;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0}, Landroid/graphics/Paint;->getColor()I
@@ -808,7 +713,6 @@
     .locals 1
 
     .prologue
-    .line 137
     iget v0, p0, Lcom/letv/leui/widget/LockPatternLine;->lineDisappear:F
 
     return v0
@@ -838,13 +742,10 @@
 
     const/4 v6, 0x1
 
-    .line 188
     iput-object p1, p0, Lcom/letv/leui/widget/LockPatternLine;->mMovePoints:Ljava/util/List;
 
-    .line 189
     iput v7, p0, Lcom/letv/leui/widget/LockPatternLine;->mMoveTimes:I
 
-    .line 190
     const-string v3, "factorY"
 
     new-array v4, v5, [F
@@ -855,7 +756,6 @@
 
     move-result-object v2
 
-    .line 192
     .local v2, "pvMoveY":Landroid/animation/PropertyValuesHolder;
     const-string v3, "factorX"
 
@@ -867,7 +767,6 @@
 
     move-result-object v1
 
-    .line 194
     .local v1, "pvMoveX":Landroid/animation/PropertyValuesHolder;
     new-array v3, v5, [Landroid/animation/PropertyValuesHolder;
 
@@ -885,11 +784,9 @@
 
     move-result-object v0
 
-    .line 196
     .local v0, "moveAnim":Landroid/animation/ObjectAnimator;
     invoke-virtual {v0, v6}, Landroid/animation/ObjectAnimator;->setRepeatMode(I)V
 
-    .line 197
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v3
@@ -898,30 +795,24 @@
 
     invoke-virtual {v0, v3}, Landroid/animation/ObjectAnimator;->setRepeatCount(I)V
 
-    .line 198
     invoke-virtual {v0, p0}, Landroid/animation/ObjectAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 199
     invoke-virtual {v0, v6}, Landroid/animation/ObjectAnimator;->setAutoCancel(Z)V
 
-    .line 200
     new-instance v3, Lcom/letv/leui/widget/LockPatternLine$1;
 
     invoke-direct {v3, p0, p2}, Lcom/letv/leui/widget/LockPatternLine$1;-><init>(Lcom/letv/leui/widget/LockPatternLine;Lcom/letv/leui/widget/LockPatternLine$LineAnimListener;)V
 
     invoke-virtual {v0, v3}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 229
     return-object v0
 
-    .line 190
     :array_0
     .array-data 4
         0x0
         0x3f800000    # 1.0f
     .end array-data
 
-    .line 192
     :array_1
     .array-data 4
         0x0
@@ -934,12 +825,10 @@
     .param p1, "animation"    # Landroid/animation/ValueAnimator;
 
     .prologue
-    .line 146
     iget-object v0, p0, Lcom/letv/leui/widget/LockPatternLine;->mView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    .line 147
     return-void
 .end method
 
@@ -947,15 +836,12 @@
     .locals 1
 
     .prologue
-    .line 56
     invoke-direct {p0}, Lcom/letv/leui/widget/LockPatternLine;->cancelLineAnim()V
 
-    .line 57
     iget v0, p0, Lcom/letv/leui/widget/LockPatternLine;->lineColor:I
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/LockPatternLine;->setLineColor(I)V
 
-    .line 58
     return-void
 .end method
 
@@ -973,7 +859,6 @@
     .end annotation
 
     .prologue
-    .line 252
     .local p1, "points":Ljava/util/List;, "Ljava/util/List<Lcom/letv/leui/widget/LockMovePoint;>;"
     move v0, p2
 
@@ -986,14 +871,12 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 253
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/letv/leui/widget/LockMovePoint;
 
-    .line 254
     .local v2, "p":Lcom/letv/leui/widget/LockMovePoint;
     iget-object v3, p0, Lcom/letv/leui/widget/LockPatternLine;->mPath2:Landroid/graphics/Path;
 
@@ -1007,7 +890,6 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 255
     iget-object v3, p0, Lcom/letv/leui/widget/LockPatternLine;->mPath2:Landroid/graphics/Path;
 
     invoke-virtual {v2}, Lcom/letv/leui/widget/LockMovePoint;->getMoveX()F
@@ -1020,12 +902,10 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 252
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 257
     .end local v2    # "p":Lcom/letv/leui/widget/LockMovePoint;
     :cond_0
     return-void
@@ -1036,10 +916,8 @@
     .param p1, "factorX"    # F
 
     .prologue
-    .line 245
     iput p1, p0, Lcom/letv/leui/widget/LockPatternLine;->factorX:F
 
-    .line 246
     return-void
 .end method
 
@@ -1048,10 +926,8 @@
     .param p1, "factorY"    # F
 
     .prologue
-    .line 237
     iput p1, p0, Lcom/letv/leui/widget/LockPatternLine;->factorY:F
 
-    .line 238
     return-void
 .end method
 
@@ -1060,10 +936,8 @@
     .param p1, "lineAlpha"    # F
 
     .prologue
-    .line 133
     iput p1, p0, Lcom/letv/leui/widget/LockPatternLine;->lineAlpha:F
 
-    .line 134
     return-void
 .end method
 
@@ -1072,12 +946,10 @@
     .param p1, "lineColor"    # I
 
     .prologue
-    .line 125
     iget-object v0, p0, Lcom/letv/leui/widget/LockPatternLine;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 126
     return-void
 .end method
 
@@ -1086,9 +958,7 @@
     .param p1, "lineDisappear"    # F
 
     .prologue
-    .line 141
     iput p1, p0, Lcom/letv/leui/widget/LockPatternLine;->lineDisappear:F
 
-    .line 142
     return-void
 .end method

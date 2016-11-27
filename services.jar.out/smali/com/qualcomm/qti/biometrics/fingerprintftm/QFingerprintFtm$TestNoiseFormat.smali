@@ -32,20 +32,15 @@
     .param p4, "stddevTbOff"    # I
 
     .prologue
-    .line 182
     iput-object p1, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm$TestNoiseFormat;->this$0:Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 183
     iput p2, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm$TestNoiseFormat;->status:I
 
-    .line 184
     iput p3, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm$TestNoiseFormat;->stddevTbOn:I
 
-    .line 185
     iput p4, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm$TestNoiseFormat;->stddevTbOff:I
 
-    .line 186
     return-void
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 230
     iput-object p1, p0, Lcom/letv/leui/widget/LePullToSearchListView$2;->this$0:Lcom/letv/leui/widget/LePullToSearchListView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "animation"    # Landroid/animation/ValueAnimator;
 
     .prologue
-    .line 233
     iget-object v1, p0, Lcom/letv/leui/widget/LePullToSearchListView$2;->this$0:Lcom/letv/leui/widget/LePullToSearchListView;
 
     iget-object v0, p0, Lcom/letv/leui/widget/LePullToSearchListView$2;->this$0:Lcom/letv/leui/widget/LePullToSearchListView;
@@ -64,6 +62,5 @@
     # invokes: Lcom/letv/leui/widget/LePullToSearchListView;->resetTopPadding(I)V
     invoke-static {v1, v0}, Lcom/letv/leui/widget/LePullToSearchListView;->access$200(Lcom/letv/leui/widget/LePullToSearchListView;I)V
 
-    .line 235
     return-void
 .end method

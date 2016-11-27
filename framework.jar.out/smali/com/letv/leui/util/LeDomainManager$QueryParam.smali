@@ -46,34 +46,26 @@
     .param p5, "labels"    # [Ljava/lang/String;
 
     .prologue
-    .line 228
     iput-object p1, p0, Lcom/letv/leui/util/LeDomainManager$QueryParam;->this$0:Lcom/letv/leui/util/LeDomainManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 229
     iput-object p2, p0, Lcom/letv/leui/util/LeDomainManager$QueryParam;->mMethod:Ljava/lang/String;
 
-    .line 230
     iput-object p3, p0, Lcom/letv/leui/util/LeDomainManager$QueryParam;->mMarker:Ljava/lang/String;
 
-    .line 231
     iput-object p4, p0, Lcom/letv/leui/util/LeDomainManager$QueryParam;->mCallback:Lcom/letv/leui/util/LeDomainManager$Callback;
 
-    .line 232
     iput-object p5, p0, Lcom/letv/leui/util/LeDomainManager$QueryParam;->labels:[Ljava/lang/String;
 
-    .line 233
     invoke-static {p5}, Ljava/util/Arrays;->sort([Ljava/lang/Object;)V
 
-    .line 234
     invoke-static {p5}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/letv/leui/util/LeDomainManager$QueryParam;->mLabels:Ljava/util/List;
 
-    .line 235
     return-void
 .end method
 
@@ -83,7 +75,6 @@
     .locals 1
 
     .prologue
-    .line 238
     iget-object v0, p0, Lcom/letv/leui/util/LeDomainManager$QueryParam;->mMarker:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -97,7 +88,6 @@
     .locals 2
 
     .prologue
-    .line 243
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

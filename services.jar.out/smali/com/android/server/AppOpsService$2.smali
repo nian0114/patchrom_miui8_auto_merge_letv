@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Looper;
 
     .prologue
-    .line 289
     iput-object p1, p0, Lcom/android/server/AppOpsService$2;->this$0:Lcom/android/server/AppOpsService;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -39,16 +38,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 292
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 303
     :goto_0
     return-void
 
-    .line 294
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/AppOpsService$2;->this$0:Lcom/android/server/AppOpsService;
 
@@ -56,7 +52,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 295
     iget-object v0, p0, Lcom/android/server/AppOpsService$2;->this$0:Lcom/android/server/AppOpsService;
 
     sget-object v1, Landroid/app/AppOpsUtils;->CTA_SYSTEM_BLACK_APPS:[Ljava/lang/String;
@@ -67,7 +62,6 @@
 
     iput-object v1, v0, Lcom/android/server/AppOpsService;->blackApps:Ljava/util/List;
 
-    .line 299
     :goto_1
     iget-object v0, p0, Lcom/android/server/AppOpsService$2;->this$0:Lcom/android/server/AppOpsService;
 
@@ -85,7 +79,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 300
     iget-object v0, p0, Lcom/android/server/AppOpsService$2;->this$0:Lcom/android/server/AppOpsService;
 
     iget-object v0, v0, Lcom/android/server/AppOpsService;->apps:Ljava/util/HashMap;
@@ -104,7 +97,6 @@
 
     goto :goto_0
 
-    .line 297
     :cond_0
     iget-object v0, p0, Lcom/android/server/AppOpsService$2;->this$0:Lcom/android/server/AppOpsService;
 
@@ -118,7 +110,6 @@
 
     goto :goto_1
 
-    .line 292
     nop
 
     :pswitch_data_0

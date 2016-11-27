@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 200
     iput-object p1, p0, Lcom/letv/leui/widget/LockPatternLine$1;->this$0:Lcom/letv/leui/widget/LockPatternLine;
 
     iput-object p2, p0, Lcom/letv/leui/widget/LockPatternLine$1;->val$listener:Lcom/letv/leui/widget/LockPatternLine$LineAnimListener;
@@ -45,7 +44,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 212
     return-void
 .end method
 
@@ -54,7 +52,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 208
     return-void
 .end method
 
@@ -63,18 +60,15 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 216
     iget-object v1, p0, Lcom/letv/leui/widget/LockPatternLine$1;->this$0:Lcom/letv/leui/widget/LockPatternLine;
 
     # operator++ for: Lcom/letv/leui/widget/LockPatternLine;->mMoveTimes:I
     invoke-static {v1}, Lcom/letv/leui/widget/LockPatternLine;->access$108(Lcom/letv/leui/widget/LockPatternLine;)I
 
-    .line 217
     iget-object v1, p0, Lcom/letv/leui/widget/LockPatternLine$1;->val$listener:Lcom/letv/leui/widget/LockPatternLine$LineAnimListener;
 
     if-eqz v1, :cond_0
 
-    .line 218
     iget-object v1, p0, Lcom/letv/leui/widget/LockPatternLine$1;->val$listener:Lcom/letv/leui/widget/LockPatternLine$LineAnimListener;
 
     iget-object v2, p0, Lcom/letv/leui/widget/LockPatternLine$1;->this$0:Lcom/letv/leui/widget/LockPatternLine;
@@ -108,7 +102,6 @@
 
     invoke-interface {v1, v2, v3, v4}, Lcom/letv/leui/widget/LockPatternLine$LineAnimListener;->onErrorLineAnim(FFI)V
 
-    .line 221
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/letv/leui/widget/LockPatternLine$1;->this$0:Lcom/letv/leui/widget/LockPatternLine;
@@ -124,7 +117,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 222
     iget-object v2, p0, Lcom/letv/leui/widget/LockPatternLine$1;->this$0:Lcom/letv/leui/widget/LockPatternLine;
 
     iget-object v1, p0, Lcom/letv/leui/widget/LockPatternLine$1;->this$0:Lcom/letv/leui/widget/LockPatternLine;
@@ -152,16 +144,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 227
     :cond_1
     :goto_0
     return-void
 
-    .line 224
     :catch_0
     move-exception v0
 
-    .line 225
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -173,7 +162,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 203
     iget-object v1, p0, Lcom/letv/leui/widget/LockPatternLine$1;->this$0:Lcom/letv/leui/widget/LockPatternLine;
 
     iget-object v0, p0, Lcom/letv/leui/widget/LockPatternLine$1;->this$0:Lcom/letv/leui/widget/LockPatternLine;
@@ -199,6 +187,5 @@
     # setter for: Lcom/letv/leui/widget/LockPatternLine;->mCurPoint:Lcom/letv/leui/widget/LockMovePoint;
     invoke-static {v1, v0}, Lcom/letv/leui/widget/LockPatternLine;->access$002(Lcom/letv/leui/widget/LockPatternLine;Lcom/letv/leui/widget/LockMovePoint;)Lcom/letv/leui/widget/LockMovePoint;
 
-    .line 204
     return-void
 .end method

@@ -20,13 +20,11 @@
     .locals 1
 
     .prologue
-    .line 5
     new-instance v0, Lbase/core/java/com/letv/leui/notification/XmlIntegerHelper$1;
 
     invoke-direct {v0}, Lbase/core/java/com/letv/leui/notification/XmlIntegerHelper$1;-><init>()V
 
     invoke-direct {p0, v0}, Lbase/core/java/com/letv/leui/notification/XmlBaseHelper;-><init>(Lbase/core/java/com/letv/leui/notification/XmlBaseHelper$TypeConvers;)V
 
-    .line 31
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 897
     iput-object p1, p0, Lcom/android/server/VibratorService$VibratePhoneStateListener;->this$0:Lcom/android/server/VibratorService;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -39,17 +38,13 @@
     .param p2, "incomingNumber"    # Ljava/lang/String;
 
     .prologue
-    .line 900
     packed-switch p1, :pswitch_data_0
 
-    .line 914
     :goto_0
     invoke-super {p0, p1, p2}, Landroid/telephony/PhoneStateListener;->onCallStateChanged(ILjava/lang/String;)V
 
-    .line 915
     return-void
 
-    .line 902
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/VibratorService$VibratePhoneStateListener;->this$0:Lcom/android/server/VibratorService;
 
@@ -58,7 +53,6 @@
     # setter for: Lcom/android/server/VibratorService;->mPhoneState:Lcom/android/server/VibratorService$StateOfVibratorAboutPhone;
     invoke-static {v0, v1}, Lcom/android/server/VibratorService;->access$1702(Lcom/android/server/VibratorService;Lcom/android/server/VibratorService$StateOfVibratorAboutPhone;)Lcom/android/server/VibratorService$StateOfVibratorAboutPhone;
 
-    .line 903
     const-string v0, "VibratorService"
 
     const-string v1, "mPhoneState = CALL_STATE_RINGING"
@@ -67,7 +61,6 @@
 
     goto :goto_0
 
-    .line 906
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/VibratorService$VibratePhoneStateListener;->this$0:Lcom/android/server/VibratorService;
 
@@ -76,7 +69,6 @@
     # setter for: Lcom/android/server/VibratorService;->mPhoneState:Lcom/android/server/VibratorService$StateOfVibratorAboutPhone;
     invoke-static {v0, v1}, Lcom/android/server/VibratorService;->access$1702(Lcom/android/server/VibratorService;Lcom/android/server/VibratorService$StateOfVibratorAboutPhone;)Lcom/android/server/VibratorService$StateOfVibratorAboutPhone;
 
-    .line 907
     const-string v0, "VibratorService"
 
     const-string v1, "mPhoneState = CALL_STATE_IDLE"
@@ -85,7 +77,6 @@
 
     goto :goto_0
 
-    .line 910
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/VibratorService$VibratePhoneStateListener;->this$0:Lcom/android/server/VibratorService;
 
@@ -94,7 +85,6 @@
     # setter for: Lcom/android/server/VibratorService;->mPhoneState:Lcom/android/server/VibratorService$StateOfVibratorAboutPhone;
     invoke-static {v0, v1}, Lcom/android/server/VibratorService;->access$1702(Lcom/android/server/VibratorService;Lcom/android/server/VibratorService$StateOfVibratorAboutPhone;)Lcom/android/server/VibratorService$StateOfVibratorAboutPhone;
 
-    .line 911
     const-string v0, "VibratorService"
 
     const-string v1, "mPhoneState = CALL_STATE_OFFHOOK"
@@ -103,7 +93,6 @@
 
     goto :goto_0
 
-    .line 900
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1

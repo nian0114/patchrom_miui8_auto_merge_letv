@@ -131,7 +131,6 @@
     .locals 1
 
     .prologue
-    .line 63
     new-instance v0, Lcom/letv/leui/widget/BaseSwipeHelper$1;
 
     invoke-direct {v0}, Lcom/letv/leui/widget/BaseSwipeHelper$1;-><init>()V
@@ -153,54 +152,38 @@
 
     const/4 v0, 0x0
 
-    .line 129
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 70
     iput v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mLeftOffset:F
 
-    .line 71
     iput v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mRightOffset:F
 
-    .line 72
     iput v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeLeftSwitchLine:F
 
-    .line 73
     iput v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeRightSwitchLine:F
 
-    .line 77
     iput v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mViewWidth:I
 
-    .line 79
     iput v1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeMode:I
 
-    .line 80
     iput v1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeCurrentAction:I
 
-    .line 81
     iput v1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeActionLeft:I
 
-    .line 82
     iput v1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeActionRight:I
 
-    .line 95
     const-wide/16 v0, 0x118
 
     iput-wide v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mAnimationTime:J
 
-    .line 104
     iput-boolean v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsOverOffsetEnabled:Z
 
-    .line 109
     iput-boolean v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsSwipeEnable:Z
 
-    .line 118
     iput v3, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mEventSwipingDirection:I
 
-    .line 120
     iput v3, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mViewSwipedDirection:I
 
-    .line 130
     return-void
 .end method
 
@@ -219,57 +202,40 @@
 
     const/4 v0, 0x0
 
-    .line 132
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 70
     iput v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mLeftOffset:F
 
-    .line 71
     iput v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mRightOffset:F
 
-    .line 72
     iput v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeLeftSwitchLine:F
 
-    .line 73
     iput v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeRightSwitchLine:F
 
-    .line 77
     iput v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mViewWidth:I
 
-    .line 79
     iput v1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeMode:I
 
-    .line 80
     iput v1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeCurrentAction:I
 
-    .line 81
     iput v1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeActionLeft:I
 
-    .line 82
     iput v1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeActionRight:I
 
-    .line 95
     const-wide/16 v0, 0x118
 
     iput-wide v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mAnimationTime:J
 
-    .line 104
     iput-boolean v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsOverOffsetEnabled:Z
 
-    .line 109
     iput-boolean v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsSwipeEnable:Z
 
-    .line 118
     iput v3, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mEventSwipingDirection:I
 
-    .line 120
     iput v3, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mViewSwipedDirection:I
 
-    .line 133
     invoke-direct {p0, p1, p2, p3}, Lcom/letv/leui/widget/BaseSwipeHelper;->init(Landroid/content/Context;Landroid/content/res/TypedArray;Lcom/letv/leui/widget/BaseSwipeHelper$Callback;)V
 
-    .line 134
     return-void
 .end method
 
@@ -286,10 +252,8 @@
 
     const/4 v6, 0x0
 
-    .line 137
     if-eqz p2, :cond_0
 
-    .line 138
     const/4 v5, 0x0
 
     invoke-virtual {p2, v5, v7}, Landroid/content/res/TypedArray;->getInt(II)I
@@ -298,14 +262,12 @@
 
     iput v5, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeMode:I
 
-    .line 139
     invoke-virtual {p2, v8, v7}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v5
 
     iput v5, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeActionLeft:I
 
-    .line 140
     const/4 v5, 0x2
 
     invoke-virtual {p2, v5, v7}, Landroid/content/res/TypedArray;->getInt(II)I
@@ -314,12 +276,10 @@
 
     iput v5, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeActionRight:I
 
-    .line 145
     invoke-virtual {p2, v7, v6}, Landroid/content/res/TypedArray;->getDimension(IF)F
 
     move-result v2
 
-    .line 146
     .local v2, "tempLeftOffset":F
     const/4 v5, 0x4
 
@@ -327,13 +287,11 @@
 
     move-result v3
 
-    .line 148
     .local v3, "tempRightOffset":F
     new-instance v1, Landroid/util/DisplayMetrics;
 
     invoke-direct {v1}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 149
     .local v1, "dm":Landroid/util/DisplayMetrics;
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -343,10 +301,8 @@
 
     move-result-object v1
 
-    .line 150
     iget v4, v1, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    .line 151
     .local v4, "width":I
     int-to-float v5, v4
 
@@ -354,14 +310,12 @@
 
     iput v5, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mLeftOffset:F
 
-    .line 152
     int-to-float v5, v4
 
     sub-float/2addr v5, v3
 
     iput v5, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mRightOffset:F
 
-    .line 155
     const/4 v5, 0x5
 
     invoke-virtual {p2, v5, v6}, Landroid/content/res/TypedArray;->getDimension(IF)F
@@ -370,7 +324,6 @@
 
     iput v5, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeLeftSwitchLine:F
 
-    .line 156
     const/4 v5, 0x6
 
     invoke-virtual {p2, v5, v6}, Landroid/content/res/TypedArray;->getDimension(IF)F
@@ -379,7 +332,6 @@
 
     iput v5, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeRightSwitchLine:F
 
-    .line 157
     const/16 v5, 0x8
 
     const/16 v6, 0x118
@@ -392,7 +344,6 @@
 
     iput-wide v6, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mAnimationTime:J
 
-    .line 158
     const/16 v5, 0xe
 
     invoke-virtual {p2, v5, v8}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -401,7 +352,6 @@
 
     iput-boolean v5, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsOverOffsetEnabled:Z
 
-    .line 161
     .end local v1    # "dm":Landroid/util/DisplayMetrics;
     .end local v2    # "tempLeftOffset":F
     .end local v3    # "tempRightOffset":F
@@ -409,12 +359,10 @@
     :cond_0
     iput-object p3, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mCallback:Lcom/letv/leui/widget/BaseSwipeHelper$Callback;
 
-    .line 163
     invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
 
     move-result-object v0
 
-    .line 164
     .local v0, "configuration":Landroid/view/ViewConfiguration;
     invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledPagingTouchSlop()I
 
@@ -422,21 +370,18 @@
 
     iput v5, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mPagingSlop:I
 
-    .line 165
     invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledMinimumFlingVelocity()I
 
     move-result v5
 
     iput v5, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mMinFlingVelocity:I
 
-    .line 166
     invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledMaximumFlingVelocity()I
 
     move-result v5
 
     iput v5, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mMaxFlingVelocity:I
 
-    .line 167
     return-void
 .end method
 
@@ -455,20 +400,16 @@
 
     const/4 v5, 0x1
 
-    .line 713
     invoke-virtual {p0, p1}, Lcom/letv/leui/widget/BaseSwipeHelper;->onMove(F)V
 
-    .line 716
     iget v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeCurrentAction:I
 
     if-ne v2, v5, :cond_0
 
-    .line 717
     iget-object v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mBackView:Landroid/view/View;
 
     invoke-virtual {v2, p1}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 718
     iget-object v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mBackView:Landroid/view/View;
 
     const/high16 v3, 0x40000000    # 2.0f
@@ -497,35 +438,29 @@
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setAlpha(F)V
 
-    .line 722
     :cond_0
     iget v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeCurrentAction:I
 
     if-nez v2, :cond_1
 
-    .line 723
     iget v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeMode:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 771
     :cond_1
     :goto_0
     iget v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeCurrentAction:I
 
     if-ne v2, v7, :cond_2
 
-    .line 772
     iget v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeMode:I
 
     packed-switch v2, :pswitch_data_1
 
-    .line 861
     :cond_2
     :goto_1
     return-void
 
-    .line 725
     :pswitch_0
     iget v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mViewWidth:I
 
@@ -553,7 +488,6 @@
 
     if-lez v2, :cond_3
 
-    .line 728
     :cond_3
     iget v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeActionLeft:I
 
@@ -561,7 +495,6 @@
 
     if-eq v2, v3, :cond_5
 
-    .line 729
     iget v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeActionLeft:I
 
     if-eq v2, v5, :cond_4
@@ -570,7 +503,6 @@
 
     if-ne v2, v5, :cond_7
 
-    .line 730
     :cond_4
     cmpl-float v2, p1, v6
 
@@ -580,10 +512,8 @@
 
     if-eqz v2, :cond_6
 
-    .line 731
     const/4 p1, 0x0
 
-    .line 743
     :cond_5
     :goto_2
     iget-object v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mFrontView:Landroid/view/View;
@@ -592,7 +522,6 @@
 
     goto :goto_0
 
-    .line 732
     :cond_6
     cmpg-float v2, p1, v6
 
@@ -602,25 +531,21 @@
 
     if-eqz v2, :cond_5
 
-    .line 733
     const/4 p1, 0x0
 
     goto :goto_2
 
-    .line 736
     :cond_7
     cmpg-float v2, p1, v6
 
     if-gez v2, :cond_8
 
-    .line 737
     iget v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeActionLeft:I
 
     iput v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeCurrentAction:I
 
     goto :goto_2
 
-    .line 739
     :cond_8
     iget v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeActionRight:I
 
@@ -628,7 +553,6 @@
 
     goto :goto_2
 
-    .line 746
     :pswitch_1
     iget v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mViewWidth:I
 
@@ -640,7 +564,6 @@
 
     add-float v0, v2, v3
 
-    .line 747
     .local v0, "leftThreshold":F
     iget v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mEventSwipingDirection:I
 
@@ -650,7 +573,6 @@
 
     if-gtz v2, :cond_a
 
-    .line 753
     :cond_9
     :goto_3
     iget-object v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mFrontView:Landroid/view/View;
@@ -659,7 +581,6 @@
 
     goto :goto_0
 
-    .line 750
     :cond_a
     iget v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mEventSwipingDirection:I
 
@@ -669,12 +590,10 @@
 
     if-lez v2, :cond_9
 
-    .line 751
     const/4 p1, 0x0
 
     goto :goto_3
 
-    .line 756
     .end local v0    # "leftThreshold":F
     :pswitch_2
     iget v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mViewWidth:I
@@ -685,7 +604,6 @@
 
     sub-float v1, v2, v3
 
-    .line 757
     .local v1, "rightThreshold":F
     iget v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mEventSwipingDirection:I
 
@@ -695,7 +613,6 @@
 
     if-ltz v2, :cond_c
 
-    .line 763
     :cond_b
     :goto_4
     iget-object v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mFrontView:Landroid/view/View;
@@ -704,7 +621,6 @@
 
     goto/16 :goto_0
 
-    .line 760
     :cond_c
     iget v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mEventSwipingDirection:I
 
@@ -714,12 +630,10 @@
 
     if-gez v2, :cond_b
 
-    .line 761
     const/4 p1, 0x0
 
     goto :goto_4
 
-    .line 774
     .end local v1    # "rightThreshold":F
     :pswitch_3
     iget v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mViewWidth:I
@@ -748,7 +662,6 @@
 
     if-lez v2, :cond_d
 
-    .line 777
     :cond_d
     iget v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeActionLeft:I
 
@@ -756,7 +669,6 @@
 
     if-eq v2, v3, :cond_f
 
-    .line 778
     iget v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeActionLeft:I
 
     if-eq v2, v5, :cond_e
@@ -765,7 +677,6 @@
 
     if-ne v2, v5, :cond_13
 
-    .line 779
     :cond_e
     cmpl-float v2, p1, v6
 
@@ -775,17 +686,14 @@
 
     if-eqz v2, :cond_12
 
-    .line 780
     const/4 p1, 0x0
 
-    .line 793
     :cond_f
     :goto_5
     iget v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeCurrentAction:I
 
     if-ne v2, v7, :cond_11
 
-    .line 794
     iget-boolean v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mStartToLeftLock:Z
 
     if-eqz v2, :cond_15
@@ -802,20 +710,16 @@
 
     if-gtz v2, :cond_15
 
-    .line 795
     iget-boolean v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsSwitch:Z
 
     if-nez v2, :cond_10
 
-    .line 796
     iput-boolean v5, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsSwitch:Z
 
-    .line 797
     iget-boolean v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsSwitch:Z
 
     invoke-virtual {p0, v2}, Lcom/letv/leui/widget/BaseSwipeHelper;->onSwipeSwitching(Z)V
 
-    .line 806
     :cond_10
     :goto_6
     iget-boolean v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mStartToRightLock:Z
@@ -828,20 +732,16 @@
 
     if-ltz v2, :cond_16
 
-    .line 807
     iget-boolean v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsSwitch:Z
 
     if-nez v2, :cond_11
 
-    .line 808
     iput-boolean v5, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsSwitch:Z
 
-    .line 809
     iget-boolean v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsSwitch:Z
 
     invoke-virtual {p0, v2}, Lcom/letv/leui/widget/BaseSwipeHelper;->onSwipeSwitching(Z)V
 
-    .line 819
     :cond_11
     :goto_7
     iget-object v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mFrontView:Landroid/view/View;
@@ -850,7 +750,6 @@
 
     goto/16 :goto_1
 
-    .line 781
     :cond_12
     cmpg-float v2, p1, v6
 
@@ -860,25 +759,21 @@
 
     if-eqz v2, :cond_f
 
-    .line 782
     const/4 p1, 0x0
 
     goto :goto_5
 
-    .line 785
     :cond_13
     cmpg-float v2, p1, v6
 
     if-gez v2, :cond_14
 
-    .line 786
     iget v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeActionLeft:I
 
     iput v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeCurrentAction:I
 
     goto :goto_5
 
-    .line 788
     :cond_14
     iget v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeActionRight:I
 
@@ -886,7 +781,6 @@
 
     goto :goto_5
 
-    .line 799
     :cond_15
     iget-boolean v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mStartToLeftLock:Z
 
@@ -904,22 +798,18 @@
 
     if-lez v2, :cond_10
 
-    .line 800
     iget-boolean v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsSwitch:Z
 
     if-eqz v2, :cond_10
 
-    .line 801
     iput-boolean v8, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsSwitch:Z
 
-    .line 802
     iget-boolean v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsSwitch:Z
 
     invoke-virtual {p0, v2}, Lcom/letv/leui/widget/BaseSwipeHelper;->onSwipeSwitching(Z)V
 
     goto :goto_6
 
-    .line 811
     :cond_16
     iget-boolean v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mStartToRightLock:Z
 
@@ -931,22 +821,18 @@
 
     if-gez v2, :cond_11
 
-    .line 812
     iget-boolean v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsSwitch:Z
 
     if-eqz v2, :cond_11
 
-    .line 813
     iput-boolean v8, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsSwitch:Z
 
-    .line 814
     iget-boolean v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsSwitch:Z
 
     invoke-virtual {p0, v2}, Lcom/letv/leui/widget/BaseSwipeHelper;->onSwipeSwitching(Z)V
 
     goto :goto_7
 
-    .line 822
     :pswitch_4
     iget v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeLeftSwitchLine:F
 
@@ -960,20 +846,16 @@
 
     if-gtz v2, :cond_19
 
-    .line 823
     iget-boolean v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsSwitch:Z
 
     if-nez v2, :cond_17
 
-    .line 824
     iput-boolean v5, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsSwitch:Z
 
-    .line 825
     iget-boolean v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsSwitch:Z
 
     invoke-virtual {p0, v2}, Lcom/letv/leui/widget/BaseSwipeHelper;->onSwipeSwitching(Z)V
 
-    .line 834
     :cond_17
     :goto_8
     iget v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mEventSwipingDirection:I
@@ -984,10 +866,8 @@
 
     if-lez v2, :cond_18
 
-    .line 835
     const/4 p1, 0x0
 
-    .line 837
     :cond_18
     iget-object v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mFrontView:Landroid/view/View;
 
@@ -995,7 +875,6 @@
 
     goto/16 :goto_1
 
-    .line 827
     :cond_19
     iget v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeLeftSwitchLine:F
 
@@ -1009,22 +888,18 @@
 
     if-lez v2, :cond_17
 
-    .line 828
     iget-boolean v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsSwitch:Z
 
     if-eqz v2, :cond_17
 
-    .line 829
     iput-boolean v8, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsSwitch:Z
 
-    .line 830
     iget-boolean v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsSwitch:Z
 
     invoke-virtual {p0, v2}, Lcom/letv/leui/widget/BaseSwipeHelper;->onSwipeSwitching(Z)V
 
     goto :goto_8
 
-    .line 840
     :pswitch_5
     iget v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeRightSwitchLine:F
 
@@ -1032,20 +907,16 @@
 
     if-ltz v2, :cond_1c
 
-    .line 841
     iget-boolean v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsSwitch:Z
 
     if-nez v2, :cond_1a
 
-    .line 842
     iput-boolean v5, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsSwitch:Z
 
-    .line 843
     iget-boolean v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsSwitch:Z
 
     invoke-virtual {p0, v2}, Lcom/letv/leui/widget/BaseSwipeHelper;->onSwipeSwitching(Z)V
 
-    .line 852
     :cond_1a
     :goto_9
     iget v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mEventSwipingDirection:I
@@ -1056,10 +927,8 @@
 
     if-gez v2, :cond_1b
 
-    .line 853
     const/4 p1, 0x0
 
-    .line 855
     :cond_1b
     iget-object v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mFrontView:Landroid/view/View;
 
@@ -1067,7 +936,6 @@
 
     goto/16 :goto_1
 
-    .line 845
     :cond_1c
     iget v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeRightSwitchLine:F
 
@@ -1075,22 +943,18 @@
 
     if-gez v2, :cond_1a
 
-    .line 846
     iget-boolean v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsSwitch:Z
 
     if-eqz v2, :cond_1a
 
-    .line 847
     iput-boolean v8, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsSwitch:Z
 
-    .line 848
     iget-boolean v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsSwitch:Z
 
     invoke-virtual {p0, v2}, Lcom/letv/leui/widget/BaseSwipeHelper;->onSwipeSwitching(Z)V
 
     goto :goto_9
 
-    .line 723
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -1098,7 +962,6 @@
         :pswitch_1
     .end packed-switch
 
-    .line 772
     :pswitch_data_1
     .packed-switch 0x1
         :pswitch_3
@@ -1115,37 +978,26 @@
 
     const/4 v0, 0x0
 
-    .line 695
     iput v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mEventDownX:F
 
-    .line 696
     iput v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mEventStartX:F
 
-    .line 697
     iput v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mEventPreEventX:F
 
-    .line 698
     iput v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mStartFrontViewX:F
 
-    .line 699
     iput v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mStartBackViewX:F
 
-    .line 700
     iput-boolean v1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwiping:Z
 
-    .line 701
     iput v1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mEventSwipingDirection:I
 
-    .line 702
     iput-boolean v1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mStartToRightLock:Z
 
-    .line 703
     iput-boolean v1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mStartToLeftLock:Z
 
-    .line 704
     iput-boolean v1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsSwitch:Z
 
-    .line 705
     return-void
 .end method
 
@@ -1155,12 +1007,10 @@
     .locals 3
 
     .prologue
-    .line 184
     iget-boolean v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mOpened:Z
 
     if-eqz v0, :cond_0
 
-    .line 185
     iget-object v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mFrontView:Landroid/view/View;
 
     const/4 v1, 0x1
@@ -1169,7 +1019,6 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/letv/leui/widget/BaseSwipeHelper;->generateRevealAnimate(Landroid/view/View;ZZ)V
 
-    .line 187
     :cond_0
     return-void
 .end method
@@ -1178,7 +1027,6 @@
     .locals 3
 
     .prologue
-    .line 195
     iget-boolean v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mOpened:Z
 
     if-eqz v0, :cond_0
@@ -1187,7 +1035,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 196
     const/4 v0, 0x1
 
     const/4 v1, 0x0
@@ -1200,7 +1047,6 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/letv/leui/widget/BaseSwipeHelper;->onSwipeRevealed(ZZLjava/lang/Object;)V
 
-    .line 198
     :cond_0
     return-void
 .end method
@@ -1212,12 +1058,10 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1223
     iget-boolean v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mOpened:Z
 
     if-eqz v2, :cond_1
 
-    .line 1224
     iget-object v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mFrontView:Landroid/view/View;
 
     invoke-virtual {v2}, Landroid/view/View;->getTranslationX()F
@@ -1228,7 +1072,6 @@
 
     move-result v0
 
-    .line 1226
     .local v0, "absTX":F
     iget-boolean v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mOpenedRight:Z
 
@@ -1240,15 +1083,12 @@
 
     if-ltz v2, :cond_0
 
-    .line 1227
     invoke-virtual {p0}, Lcom/letv/leui/widget/BaseSwipeHelper;->closeAnimate()V
 
-    .line 1235
     .end local v0    # "absTX":F
     :goto_0
     return v1
 
-    .line 1230
     .restart local v0    # "absTX":F
     :cond_0
     iget-boolean v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mOpenedRight:Z
@@ -1271,12 +1111,10 @@
 
     if-gtz v2, :cond_1
 
-    .line 1231
     invoke-virtual {p0}, Lcom/letv/leui/widget/BaseSwipeHelper;->closeAnimate()V
 
     goto :goto_0
 
-    .line 1235
     .end local v0    # "absTX":F
     :cond_1
     const/4 v1, 0x0
@@ -1291,15 +1129,12 @@
     .param p3, "swapRight"    # Z
 
     .prologue
-    .line 1008
     iget v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeCurrentAction:I
 
     if-nez v0, :cond_0
 
-    .line 1009
     invoke-virtual {p0, p1, p2, p3}, Lcom/letv/leui/widget/BaseSwipeHelper;->generateRevealAnimate(Landroid/view/View;ZZ)V
 
-    .line 1011
     :cond_0
     iget v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeCurrentAction:I
 
@@ -1307,12 +1142,10 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1012
     iget-object v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mBackView:Landroid/view/View;
 
     invoke-virtual {p0, v0, p2, p3}, Lcom/letv/leui/widget/BaseSwipeHelper;->generateDismissAnimate(Landroid/view/View;ZZ)V
 
-    .line 1014
     :cond_1
     return-void
 .end method
@@ -1324,14 +1157,11 @@
     .param p3, "swapRight"    # Z
 
     .prologue
-    .line 1024
     if-nez p1, :cond_0
 
-    .line 1060
     :goto_0
     return-void
 
-    .line 1028
     :cond_0
     iget v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mViewWidth:I
 
@@ -1339,7 +1169,6 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 1029
     iget-object v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mCallback:Lcom/letv/leui/widget/BaseSwipeHelper$Callback;
 
     invoke-interface {v2}, Lcom/letv/leui/widget/BaseSwipeHelper$Callback;->getSwipeViewWidth()I
@@ -1348,20 +1177,16 @@
 
     iput v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mViewWidth:I
 
-    .line 1032
     :cond_1
     const/4 v1, 0x0
 
-    .line 1033
     .local v1, "moveTo":I
     iget-boolean v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mOpened:Z
 
     if-eqz v2, :cond_5
 
-    .line 1034
     if-nez p2, :cond_2
 
-    .line 1035
     iget-boolean v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mOpenedRight:Z
 
     if-eqz v2, :cond_4
@@ -1376,19 +1201,15 @@
 
     float-to-int v1, v2
 
-    .line 1043
     :cond_2
     :goto_1
     const/4 v0, 0x1
 
-    .line 1044
     .local v0, "alpha":I
     if-eqz p2, :cond_3
 
-    .line 1045
     const/4 v0, 0x0
 
-    .line 1048
     :cond_3
     invoke-virtual {p1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
@@ -1424,14 +1245,12 @@
 
     invoke-virtual {v2, v3}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
-    .line 1059
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsAnimating:Z
 
     goto :goto_0
 
-    .line 1035
     .end local v0    # "alpha":I
     :cond_4
     iget v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mViewWidth:I
@@ -1448,11 +1267,9 @@
 
     goto :goto_1
 
-    .line 1038
     :cond_5
     if-eqz p2, :cond_2
 
-    .line 1039
     if-eqz p3, :cond_6
 
     iget v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mViewWidth:I
@@ -1491,14 +1308,11 @@
     .param p3, "swapRight"    # Z
 
     .prologue
-    .line 1070
     if-nez p1, :cond_0
 
-    .line 1100
     :goto_0
     return-void
 
-    .line 1074
     :cond_0
     iget v1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mViewWidth:I
 
@@ -1506,7 +1320,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 1075
     iget-object v1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mCallback:Lcom/letv/leui/widget/BaseSwipeHelper$Callback;
 
     invoke-interface {v1}, Lcom/letv/leui/widget/BaseSwipeHelper$Callback;->getSwipeViewWidth()I
@@ -1515,20 +1328,16 @@
 
     iput v1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mViewWidth:I
 
-    .line 1078
     :cond_1
     const/4 v0, 0x0
 
-    .line 1079
     .local v0, "moveTo":I
     iget-boolean v1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mOpened:Z
 
     if-eqz v1, :cond_4
 
-    .line 1080
     if-nez p2, :cond_2
 
-    .line 1081
     iget-boolean v1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mOpenedRight:Z
 
     if-eqz v1, :cond_3
@@ -1543,7 +1352,6 @@
 
     float-to-int v0, v1
 
-    .line 1089
     :cond_2
     :goto_1
     invoke-virtual {p1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
@@ -1574,14 +1382,12 @@
 
     invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
-    .line 1099
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsAnimating:Z
 
     goto :goto_0
 
-    .line 1081
     :cond_3
     iget v1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mViewWidth:I
 
@@ -1597,11 +1403,9 @@
 
     goto :goto_1
 
-    .line 1084
     :cond_4
     if-eqz p2, :cond_2
 
-    .line 1085
     if-eqz p3, :cond_5
 
     iget v1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mViewWidth:I
@@ -1639,14 +1443,11 @@
     .param p2, "isSwitched"    # Z
 
     .prologue
-    .line 1110
     if-nez p1, :cond_0
 
-    .line 1129
     :goto_0
     return-void
 
-    .line 1114
     :cond_0
     iget v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mViewWidth:I
 
@@ -1654,7 +1455,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 1115
     iget-object v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mCallback:Lcom/letv/leui/widget/BaseSwipeHelper$Callback;
 
     invoke-interface {v0}, Lcom/letv/leui/widget/BaseSwipeHelper$Callback;->getSwipeViewWidth()I
@@ -1663,7 +1463,6 @@
 
     iput v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mViewWidth:I
 
-    .line 1118
     :cond_1
     invoke-virtual {p1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
@@ -1693,7 +1492,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
-    .line 1128
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsAnimating:Z
@@ -1705,19 +1503,16 @@
     .locals 1
 
     .prologue
-    .line 1246
     iget-object v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mCallback:Lcom/letv/leui/widget/BaseSwipeHelper$Callback;
 
     if-eqz v0, :cond_0
 
-    .line 1247
     iget-object v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mCallback:Lcom/letv/leui/widget/BaseSwipeHelper$Callback;
 
     invoke-interface {v0}, Lcom/letv/leui/widget/BaseSwipeHelper$Callback;->getBackView()Landroid/view/View;
 
     move-result-object v0
 
-    .line 1249
     :goto_0
     return-object v0
 
@@ -1731,19 +1526,16 @@
     .locals 1
 
     .prologue
-    .line 1239
     iget-object v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mCallback:Lcom/letv/leui/widget/BaseSwipeHelper$Callback;
 
     if-eqz v0, :cond_0
 
-    .line 1240
     iget-object v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mCallback:Lcom/letv/leui/widget/BaseSwipeHelper$Callback;
 
     invoke-interface {v0}, Lcom/letv/leui/widget/BaseSwipeHelper$Callback;->getFrontView()Landroid/view/View;
 
     move-result-object v0
 
-    .line 1242
     :goto_0
     return-object v0
 
@@ -1757,7 +1549,6 @@
     .locals 1
 
     .prologue
-    .line 247
     iget v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeActionLeft:I
 
     return v0
@@ -1767,7 +1558,6 @@
     .locals 1
 
     .prologue
-    .line 265
     iget v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeActionRight:I
 
     return v0
@@ -1777,7 +1567,6 @@
     .locals 1
 
     .prologue
-    .line 213
     iget-object v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeListener:Lcom/letv/leui/widget/SwipeListener;
 
     return-object v0
@@ -1787,7 +1576,6 @@
     .locals 1
 
     .prologue
-    .line 229
     iget-object v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeSwitchListener:Lcom/letv/leui/widget/SwipeSwitchListener;
 
     return-object v0
@@ -1797,7 +1585,6 @@
     .locals 1
 
     .prologue
-    .line 336
     iget-boolean v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsAnimating:Z
 
     return v0
@@ -1807,7 +1594,6 @@
     .locals 1
 
     .prologue
-    .line 1171
     iget-boolean v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsSwipeEnable:Z
 
     return v0
@@ -1817,7 +1603,6 @@
     .locals 1
 
     .prologue
-    .line 1162
     iget v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeMode:I
 
     if-eqz v0, :cond_0
@@ -1837,19 +1622,16 @@
     .locals 1
 
     .prologue
-    .line 944
     iget-object v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeListener:Lcom/letv/leui/widget/SwipeListener;
 
     if-eqz v0, :cond_0
 
-    .line 945
     iget-object v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeListener:Lcom/letv/leui/widget/SwipeListener;
 
     invoke-interface {v0}, Lcom/letv/leui/widget/SwipeListener;->onChangeSwipeMode()I
 
     move-result v0
 
-    .line 947
     :goto_0
     return v0
 
@@ -1864,17 +1646,14 @@
     .param p1, "fromRight"    # Z
 
     .prologue
-    .line 921
     iget-object v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeListener:Lcom/letv/leui/widget/SwipeListener;
 
     if-eqz v0, :cond_0
 
-    .line 922
     iget-object v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeListener:Lcom/letv/leui/widget/SwipeListener;
 
     invoke-interface {v0, p1}, Lcom/letv/leui/widget/SwipeListener;->onClosed(Z)V
 
-    .line 924
     :cond_0
     return-void
 .end method
@@ -1888,39 +1667,32 @@
 
     const/4 v7, 0x0
 
-    .line 340
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
 
-    .line 341
     .local v0, "action":I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v4
 
-    .line 342
     .local v4, "x":F
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v5
 
-    .line 343
     .local v5, "y":F
     const/4 v3, 0x0
 
-    .line 345
     .local v3, "intercept":Z
     if-nez v0, :cond_0
 
-    .line 347
     float-to-int v8, v4
 
     float-to-int v9, v5
 
     invoke-virtual {p0, v7, v8, v9}, Lcom/letv/leui/widget/BaseSwipeHelper;->setBackViewClickable(ZII)Z
 
-    .line 350
     :cond_0
     invoke-virtual {p0}, Lcom/letv/leui/widget/BaseSwipeHelper;->isSwipeTouchEnabled()Z
 
@@ -1928,19 +1700,16 @@
 
     if-eqz v8, :cond_1
 
-    .line 351
     packed-switch v0, :pswitch_data_0
 
     :cond_1
     :goto_0
     move v6, v3
 
-    .line 409
     :cond_2
     :goto_1
     return v6
 
-    .line 353
     :pswitch_0
     iget-boolean v8, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mPaused:Z
 
@@ -1952,105 +1721,85 @@
 
     if-nez v8, :cond_2
 
-    .line 357
     invoke-virtual {p0}, Lcom/letv/leui/widget/BaseSwipeHelper;->getFrontView()Landroid/view/View;
 
     move-result-object v2
 
-    .line 358
     .local v2, "fView":Landroid/view/View;
     if-eqz v2, :cond_3
 
-    .line 359
     invoke-virtual {p0, v2}, Lcom/letv/leui/widget/BaseSwipeHelper;->setFrontView(Landroid/view/View;)V
 
-    .line 362
     :cond_3
     invoke-virtual {p0}, Lcom/letv/leui/widget/BaseSwipeHelper;->getBackView()Landroid/view/View;
 
     move-result-object v1
 
-    .line 363
     .local v1, "bView":Landroid/view/View;
     if-eqz v1, :cond_4
 
-    .line 364
     invoke-virtual {p0, v1}, Lcom/letv/leui/widget/BaseSwipeHelper;->setBackView(Landroid/view/View;)V
 
-    .line 367
     :cond_4
     const/4 v8, 0x3
 
     iput v8, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeCurrentAction:I
 
-    .line 368
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v8
 
     iput v8, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mEventDownX:F
 
-    .line 369
     iget v8, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mEventDownX:F
 
     iput v8, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mEventStartX:F
 
-    .line 370
     iget v8, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mEventDownX:F
 
     iput v8, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mEventPreEventX:F
 
-    .line 371
     invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
 
     move-result-object v8
 
     iput-object v8, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mVelocityTracker:Landroid/view/VelocityTracker;
 
-    .line 372
     invoke-virtual {v2}, Landroid/view/View;->getTranslationX()F
 
     move-result v8
 
     iput v8, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mStartFrontViewX:F
 
-    .line 378
     float-to-int v8, v4
 
     float-to-int v9, v5
 
     invoke-virtual {p0, v8, v9, v7}, Lcom/letv/leui/widget/BaseSwipeHelper;->setBackViewChildFocusable(IIZ)V
 
-    .line 379
     iget-object v8, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mBackView:Landroid/view/View;
 
     invoke-virtual {v8, v7}, Landroid/view/View;->setFocusable(Z)V
 
-    .line 380
     iget-boolean v7, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mOpened:Z
 
     if-eqz v7, :cond_5
 
-    .line 381
     float-to-int v7, v4
 
     float-to-int v8, v5
 
     invoke-virtual {p0, v7, v8, v6}, Lcom/letv/leui/widget/BaseSwipeHelper;->setBackViewChildFocusable(IIZ)V
 
-    .line 382
     iget-object v7, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mBackView:Landroid/view/View;
 
     invoke-virtual {v7, v6}, Landroid/view/View;->setFocusable(Z)V
 
-    .line 385
     :cond_5
     const/4 v3, 0x0
 
-    .line 386
     goto :goto_0
 
-    .line 390
     .end local v1    # "bView":Landroid/view/View;
     .end local v2    # "fView":Landroid/view/View;
     :pswitch_1
@@ -2070,23 +1819,18 @@
 
     if-ltz v6, :cond_6
 
-    .line 391
     const/4 v3, 0x1
 
     goto :goto_0
 
-    .line 393
     :cond_6
     const/4 v3, 0x0
 
-    .line 395
     goto :goto_0
 
-    .line 398
     :pswitch_2
     invoke-direct {p0}, Lcom/letv/leui/widget/BaseSwipeHelper;->resetEventValue()V
 
-    .line 400
     iget-boolean v6, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mOpened:Z
 
     if-eqz v6, :cond_7
@@ -2101,17 +1845,13 @@
 
     move v6, v7
 
-    .line 401
     goto :goto_1
 
-    .line 403
     :cond_7
     const/4 v3, 0x0
 
-    .line 404
     goto :goto_0
 
-    .line 351
     nop
 
     :pswitch_data_0
@@ -2128,17 +1868,14 @@
     .param p1, "x"    # F
 
     .prologue
-    .line 932
     iget-object v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeListener:Lcom/letv/leui/widget/SwipeListener;
 
     if-eqz v0, :cond_0
 
-    .line 933
     iget-object v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeListener:Lcom/letv/leui/widget/SwipeListener;
 
     invoke-interface {v0, p1}, Lcom/letv/leui/widget/SwipeListener;->onMove(F)V
 
-    .line 935
     :cond_0
     return-void
 .end method
@@ -2148,17 +1885,14 @@
     .param p1, "toRight"    # Z
 
     .prologue
-    .line 910
     iget-object v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeListener:Lcom/letv/leui/widget/SwipeListener;
 
     if-eqz v0, :cond_0
 
-    .line 911
     iget-object v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeListener:Lcom/letv/leui/widget/SwipeListener;
 
     invoke-interface {v0, p1}, Lcom/letv/leui/widget/SwipeListener;->onOpened(Z)V
 
-    .line 913
     :cond_0
     return-void
 .end method
@@ -2168,17 +1902,14 @@
     .param p1, "right"    # Z
 
     .prologue
-    .line 881
     iget-object v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeListener:Lcom/letv/leui/widget/SwipeListener;
 
     if-eqz v0, :cond_0
 
-    .line 882
     iget-object v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeListener:Lcom/letv/leui/widget/SwipeListener;
 
     invoke-interface {v0, p1}, Lcom/letv/leui/widget/SwipeListener;->onStartClose(Z)V
 
-    .line 884
     :cond_0
     return-void
 .end method
@@ -2189,17 +1920,14 @@
     .param p2, "right"    # Z
 
     .prologue
-    .line 870
     iget-object v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeListener:Lcom/letv/leui/widget/SwipeListener;
 
     if-eqz v0, :cond_0
 
-    .line 871
     iget-object v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeListener:Lcom/letv/leui/widget/SwipeListener;
 
     invoke-interface {v0, p1, p2}, Lcom/letv/leui/widget/SwipeListener;->onStartOpen(IZ)V
 
-    .line 873
     :cond_0
     return-void
 .end method
@@ -2211,15 +1939,12 @@
     .param p3, "object"    # Ljava/lang/Object;
 
     .prologue
-    .line 954
     invoke-virtual {p0, p3}, Lcom/letv/leui/widget/BaseSwipeHelper;->resetCell(Ljava/lang/Object;)V
 
-    .line 955
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsAnimating:Z
 
-    .line 956
     return-void
 .end method
 
@@ -2232,51 +1957,39 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 962
     iget-boolean v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mOpened:Z
 
-    .line 963
     .local v0, "aux":Z
     if-eqz p1, :cond_0
 
-    .line 964
     iget-boolean v2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mOpened:Z
 
     if-nez v2, :cond_1
 
     const/4 v0, 0x1
 
-    .line 965
     :goto_0
     iput-boolean v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mOpened:Z
 
-    .line 968
     :cond_0
     if-eqz v0, :cond_2
 
-    .line 969
     invoke-virtual {p0, p2}, Lcom/letv/leui/widget/BaseSwipeHelper;->onOpened(Z)V
 
-    .line 970
     iput-boolean p2, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mOpenedRight:Z
 
-    .line 974
     :goto_1
     invoke-virtual {p0, p3}, Lcom/letv/leui/widget/BaseSwipeHelper;->resetCell(Ljava/lang/Object;)V
 
-    .line 975
     iput-boolean v1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsAnimating:Z
 
-    .line 976
     return-void
 
     :cond_1
     move v0, v1
 
-    .line 964
     goto :goto_0
 
-    .line 972
     :cond_2
     invoke-virtual {p0, p2}, Lcom/letv/leui/widget/BaseSwipeHelper;->onClosed(Z)V
 
@@ -2289,26 +2002,21 @@
     .param p2, "object"    # Ljava/lang/Object;
 
     .prologue
-    .line 991
     iget-object v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeSwitchListener:Lcom/letv/leui/widget/SwipeSwitchListener;
 
     if-eqz v0, :cond_0
 
-    .line 992
     iget-object v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeSwitchListener:Lcom/letv/leui/widget/SwipeSwitchListener;
 
     invoke-interface {v0, p1}, Lcom/letv/leui/widget/SwipeSwitchListener;->onSwitched(Z)V
 
-    .line 994
     :cond_0
     invoke-virtual {p0, p2}, Lcom/letv/leui/widget/BaseSwipeHelper;->resetCell(Ljava/lang/Object;)V
 
-    .line 995
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsAnimating:Z
 
-    .line 996
     return-void
 .end method
 
@@ -2317,17 +2025,14 @@
     .param p1, "isChanged"    # Z
 
     .prologue
-    .line 982
     iget-object v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeSwitchListener:Lcom/letv/leui/widget/SwipeSwitchListener;
 
     if-eqz v0, :cond_0
 
-    .line 983
     iget-object v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeSwitchListener:Lcom/letv/leui/widget/SwipeSwitchListener;
 
     invoke-interface {v0, p1}, Lcom/letv/leui/widget/SwipeSwitchListener;->onSwitching(Z)V
 
-    .line 985
     :cond_0
     return-void
 .end method
@@ -2342,12 +2047,10 @@
     .end annotation
 
     .prologue
-    .line 414
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v4
 
-    .line 415
     .local v4, "action":I
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -2359,11 +2062,9 @@
 
     move/from16 v20, v0
 
-    .line 416
     .local v20, "x":I
     const/4 v8, 0x0
 
-    .line 420
     .local v8, "deltaX":F
     invoke-virtual/range {p0 .. p0}, Lcom/letv/leui/widget/BaseSwipeHelper;->isSwipeTouchEnabled()Z
 
@@ -2371,14 +2072,11 @@
 
     if-nez v21, :cond_0
 
-    .line 421
     const/16 v21, 0x0
 
-    .line 687
     :goto_0
     return v21
 
-    .line 424
     :cond_0
     move-object/from16 v0, p0
 
@@ -2402,7 +2100,6 @@
 
     if-eqz v21, :cond_1
 
-    .line 425
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mCallback:Lcom/letv/leui/widget/BaseSwipeHelper$Callback;
@@ -2419,11 +2116,9 @@
 
     iput v0, v1, Lcom/letv/leui/widget/BaseSwipeHelper;->mViewWidth:I
 
-    .line 428
     :cond_1
     const/4 v9, 0x0
 
-    .line 429
     .local v9, "eventFrontViewX":F
     move-object/from16 v0, p0
 
@@ -2433,7 +2128,6 @@
 
     if-eqz v21, :cond_2
 
-    .line 430
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mFrontView:Landroid/view/View;
@@ -2444,7 +2138,6 @@
 
     move-result v9
 
-    .line 432
     :cond_2
     const/16 v21, 0x0
 
@@ -2452,7 +2145,6 @@
 
     if-lez v21, :cond_4
 
-    .line 433
     const/16 v21, 0x2
 
     move/from16 v0, v21
@@ -2461,18 +2153,15 @@
 
     iput v0, v1, Lcom/letv/leui/widget/BaseSwipeHelper;->mViewSwipedDirection:I
 
-    .line 440
     :goto_1
     packed-switch v4, :pswitch_data_0
 
-    .line 687
     :cond_3
     :goto_2
     const/16 v21, 0x0
 
     goto :goto_0
 
-    .line 434
     :cond_4
     const/16 v21, 0x0
 
@@ -2480,7 +2169,6 @@
 
     if-gez v21, :cond_5
 
-    .line 435
     const/16 v21, 0x1
 
     move/from16 v0, v21
@@ -2491,7 +2179,6 @@
 
     goto :goto_1
 
-    .line 437
     :cond_5
     const/16 v21, 0x0
 
@@ -2503,7 +2190,6 @@
 
     goto :goto_1
 
-    .line 442
     :pswitch_0
     move-object/from16 v0, p0
 
@@ -2519,13 +2205,11 @@
 
     if-eqz v21, :cond_7
 
-    .line 443
     :cond_6
     const/16 v21, 0x1
 
     goto :goto_0
 
-    .line 446
     :cond_7
     move-object/from16 v0, p0
 
@@ -2545,18 +2229,15 @@
 
     if-eqz v21, :cond_8
 
-    .line 447
     const/16 v21, 0x1
 
     goto/16 :goto_0
 
-    .line 450
     :cond_8
     const/16 v21, 0x1
 
     goto/16 :goto_0
 
-    .line 453
     :pswitch_1
     move-object/from16 v0, p0
 
@@ -2580,10 +2261,8 @@
 
     if-eqz v21, :cond_3
 
-    .line 458
     const/4 v12, 0x0
 
-    .line 460
     .local v12, "isToCloseOpenedItem":Z
     move-object/from16 v0, p0
 
@@ -2635,10 +2314,8 @@
 
     if-gez v21, :cond_a
 
-    .line 461
     const/4 v12, 0x1
 
-    .line 466
     :cond_9
     :goto_3
     move-object/from16 v0, p0
@@ -2651,15 +2328,12 @@
 
     if-eqz v12, :cond_b
 
-    .line 467
     invoke-virtual/range {p0 .. p0}, Lcom/letv/leui/widget/BaseSwipeHelper;->closeAnimate()V
 
-    .line 468
     const/16 v21, 0x0
 
     goto/16 :goto_0
 
-    .line 462
     :cond_a
     move-object/from16 v0, p0
 
@@ -2711,12 +2385,10 @@
 
     if-gez v21, :cond_9
 
-    .line 463
     const/4 v12, 0x1
 
     goto :goto_3
 
-    .line 471
     :cond_b
     move-object/from16 v0, p0
 
@@ -2726,7 +2398,6 @@
 
     if-eqz v21, :cond_3
 
-    .line 475
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v21
@@ -2739,7 +2410,6 @@
 
     sub-float v8, v21, v22
 
-    .line 477
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mVelocityTracker:Landroid/view/VelocityTracker;
@@ -2752,7 +2422,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
-    .line 478
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mVelocityTracker:Landroid/view/VelocityTracker;
@@ -2763,7 +2432,6 @@
 
     invoke-virtual/range {v21 .. v22}, Landroid/view/VelocityTracker;->computeCurrentVelocity(I)V
 
-    .line 479
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mVelocityTracker:Landroid/view/VelocityTracker;
@@ -2778,7 +2446,6 @@
 
     move-result v18
 
-    .line 480
     .local v18, "velocityX":F
     move-object/from16 v0, p0
 
@@ -2794,7 +2461,6 @@
 
     move-result v19
 
-    .line 482
     .local v19, "velocityY":F
     move-object/from16 v0, p0
 
@@ -2804,7 +2470,6 @@
 
     if-nez v21, :cond_d
 
-    .line 483
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeMode:I
@@ -2835,10 +2500,8 @@
 
     if-lez v21, :cond_c
 
-    .line 484
     const/16 v18, 0x0
 
-    .line 486
     :cond_c
     move-object/from16 v0, p0
 
@@ -2870,18 +2533,14 @@
 
     if-gez v21, :cond_d
 
-    .line 487
     const/16 v18, 0x0
 
-    .line 491
     :cond_d
     const/4 v14, 0x0
 
-    .line 492
     .local v14, "swap":Z
     const/4 v15, 0x0
 
-    .line 493
     .local v15, "swapRight":Z
     move-object/from16 v0, p0
 
@@ -2925,7 +2584,6 @@
 
     const/16 v17, 0x1
 
-    .line 495
     .local v17, "velocityEnable":Z
     :goto_4
     move-object/from16 v0, p0
@@ -2936,7 +2594,6 @@
 
     packed-switch v21, :pswitch_data_1
 
-    .line 563
     :cond_e
     :goto_5
     move-object/from16 v0, p0
@@ -2953,7 +2610,6 @@
 
     if-eq v0, v1, :cond_f
 
-    .line 564
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mFrontView:Landroid/view/View;
@@ -2966,7 +2622,6 @@
 
     invoke-virtual {v0, v1, v14, v15}, Lcom/letv/leui/widget/BaseSwipeHelper;->generateAnimate(Landroid/view/View;ZZ)V
 
-    .line 569
     :cond_f
     move-object/from16 v0, p0
 
@@ -2988,7 +2643,6 @@
 
     if-lez v21, :cond_10
 
-    .line 570
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mFrontView:Landroid/view/View;
@@ -3009,7 +2663,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/letv/leui/widget/BaseSwipeHelper;->generateRevealAnimate(Landroid/view/View;ZZ)V
 
-    .line 573
     :cond_10
     move-object/from16 v0, p0
 
@@ -3019,7 +2672,6 @@
 
     invoke-virtual/range {v21 .. v21}, Landroid/view/VelocityTracker;->recycle()V
 
-    .line 574
     const/16 v21, 0x0
 
     move-object/from16 v0, v21
@@ -3028,19 +2680,16 @@
 
     iput-object v0, v1, Lcom/letv/leui/widget/BaseSwipeHelper;->mVelocityTracker:Landroid/view/VelocityTracker;
 
-    .line 575
     invoke-direct/range {p0 .. p0}, Lcom/letv/leui/widget/BaseSwipeHelper;->resetEventValue()V
 
     goto/16 :goto_2
 
-    .line 493
     .end local v17    # "velocityEnable":Z
     :cond_11
     const/16 v17, 0x0
 
     goto :goto_4
 
-    .line 497
     .restart local v17    # "velocityEnable":Z
     :pswitch_2
     if-eqz v17, :cond_15
@@ -3053,7 +2702,6 @@
 
     if-nez v21, :cond_15
 
-    .line 498
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mVelocityTracker:Landroid/view/VelocityTracker;
@@ -3072,7 +2720,6 @@
 
     const/4 v15, 0x1
 
-    .line 499
     :goto_6
     if-eqz v15, :cond_13
 
@@ -3090,18 +2737,15 @@
 
     if-ne v0, v1, :cond_13
 
-    .line 500
     const/4 v14, 0x1
 
     goto/16 :goto_5
 
-    .line 498
     :cond_12
     const/4 v15, 0x0
 
     goto :goto_6
 
-    .line 501
     :cond_13
     if-nez v15, :cond_14
 
@@ -3119,18 +2763,15 @@
 
     if-ne v0, v1, :cond_14
 
-    .line 502
     const/4 v14, 0x1
 
     goto/16 :goto_5
 
-    .line 504
     :cond_14
     const/4 v14, 0x0
 
     goto/16 :goto_5
 
-    .line 506
     :cond_15
     move-object/from16 v0, p0
 
@@ -3164,7 +2805,6 @@
 
     if-lez v21, :cond_e
 
-    .line 507
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mEventSwipingDirection:I
@@ -3181,7 +2821,6 @@
 
     const/4 v15, 0x1
 
-    .line 509
     :goto_7
     if-eqz v15, :cond_17
 
@@ -3199,18 +2838,15 @@
 
     if-ne v0, v1, :cond_17
 
-    .line 510
     const/4 v14, 0x1
 
     goto/16 :goto_5
 
-    .line 507
     :cond_16
     const/4 v15, 0x0
 
     goto :goto_7
 
-    .line 511
     :cond_17
     if-nez v15, :cond_18
 
@@ -3228,22 +2864,18 @@
 
     if-ne v0, v1, :cond_18
 
-    .line 512
     const/4 v14, 0x1
 
     goto/16 :goto_5
 
-    .line 514
     :cond_18
     const/4 v14, 0x0
 
     goto/16 :goto_5
 
-    .line 519
     :pswitch_3
     if-eqz v17, :cond_1e
 
-    .line 520
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mVelocityTracker:Landroid/view/VelocityTracker;
@@ -3262,7 +2894,6 @@
 
     const/4 v15, 0x1
 
-    .line 522
     :goto_8
     move-object/from16 v0, p0
 
@@ -3282,18 +2913,15 @@
 
     if-nez v21, :cond_1a
 
-    .line 523
     const/4 v14, 0x1
 
     goto/16 :goto_5
 
-    .line 520
     :cond_19
     const/4 v15, 0x0
 
     goto :goto_8
 
-    .line 524
     :cond_1a
     move-object/from16 v0, p0
 
@@ -3313,12 +2941,10 @@
 
     if-nez v21, :cond_1b
 
-    .line 525
     const/4 v14, 0x1
 
     goto/16 :goto_5
 
-    .line 526
     :cond_1b
     move-object/from16 v0, p0
 
@@ -3338,12 +2964,10 @@
 
     if-nez v15, :cond_1c
 
-    .line 527
     const/4 v14, 0x1
 
     goto/16 :goto_5
 
-    .line 528
     :cond_1c
     move-object/from16 v0, p0
 
@@ -3363,18 +2987,15 @@
 
     if-eqz v15, :cond_1d
 
-    .line 529
     const/4 v14, 0x1
 
     goto/16 :goto_5
 
-    .line 531
     :cond_1d
     const/4 v14, 0x0
 
     goto/16 :goto_5
 
-    .line 534
     :cond_1e
     move-object/from16 v0, p0
 
@@ -3392,7 +3013,6 @@
 
     const/4 v15, 0x1
 
-    .line 536
     :goto_9
     move-object/from16 v0, p0
 
@@ -3412,7 +3032,6 @@
 
     if-nez v21, :cond_21
 
-    .line 537
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mViewWidth:I
@@ -3446,19 +3065,16 @@
     :goto_a
     goto/16 :goto_5
 
-    .line 534
     :cond_1f
     const/4 v15, 0x0
 
     goto :goto_9
 
-    .line 537
     :cond_20
     const/4 v14, 0x0
 
     goto :goto_a
 
-    .line 538
     :cond_21
     move-object/from16 v0, p0
 
@@ -3478,7 +3094,6 @@
 
     if-nez v21, :cond_23
 
-    .line 539
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mLeftOffset:F
@@ -3517,7 +3132,6 @@
 
     goto :goto_b
 
-    .line 540
     :cond_23
     move-object/from16 v0, p0
 
@@ -3535,7 +3149,6 @@
 
     if-eqz v21, :cond_25
 
-    .line 541
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mViewWidth:I
@@ -3574,7 +3187,6 @@
 
     goto :goto_c
 
-    .line 542
     :cond_25
     move-object/from16 v0, p0
 
@@ -3592,7 +3204,6 @@
 
     if-nez v21, :cond_e
 
-    .line 543
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mLeftOffset:F
@@ -3631,7 +3242,6 @@
 
     goto :goto_d
 
-    .line 548
     :pswitch_4
     move-object/from16 v0, p0
 
@@ -3649,11 +3259,9 @@
 
     const/4 v15, 0x1
 
-    .line 549
     :goto_e
     const/4 v11, 0x0
 
-    .line 550
     .local v11, "isSwitched":Z
     move-object/from16 v0, p0
 
@@ -3679,10 +3287,8 @@
 
     if-ltz v21, :cond_28
 
-    .line 551
     const/4 v11, 0x1
 
-    .line 557
     :goto_f
     move-object/from16 v0, p0
 
@@ -3698,14 +3304,12 @@
 
     goto/16 :goto_5
 
-    .line 548
     .end local v11    # "isSwitched":Z
     :cond_27
     const/4 v15, 0x0
 
     goto :goto_e
 
-    .line 552
     .restart local v11    # "isSwitched":Z
     :cond_28
     move-object/from16 v0, p0
@@ -3746,18 +3350,15 @@
 
     if-gtz v21, :cond_29
 
-    .line 553
     const/4 v11, 0x1
 
     goto :goto_f
 
-    .line 555
     :cond_29
     const/4 v11, 0x0
 
     goto :goto_f
 
-    .line 578
     .end local v11    # "isSwitched":Z
     .end local v12    # "isToCloseOpenedItem":Z
     .end local v14    # "swap":Z
@@ -3804,7 +3405,6 @@
 
     if-eqz v21, :cond_3
 
-    .line 582
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mVelocityTracker:Landroid/view/VelocityTracker;
@@ -3817,7 +3417,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
-    .line 583
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mVelocityTracker:Landroid/view/VelocityTracker;
@@ -3828,7 +3427,6 @@
 
     invoke-virtual/range {v21 .. v22}, Landroid/view/VelocityTracker;->computeCurrentVelocity(I)V
 
-    .line 584
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mVelocityTracker:Landroid/view/VelocityTracker;
@@ -3843,7 +3441,6 @@
 
     move-result v18
 
-    .line 585
     .restart local v18    # "velocityX":F
     move-object/from16 v0, p0
 
@@ -3859,13 +3456,11 @@
 
     move-result v19
 
-    .line 587
     .restart local v19    # "velocityY":F
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v13
 
-    .line 589
     .local v13, "moveRawX":F
     move-object/from16 v0, p0
 
@@ -3877,7 +3472,6 @@
 
     if-lez v21, :cond_2f
 
-    .line 590
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mEventSwipingDirection:I
@@ -3892,17 +3486,14 @@
 
     if-ne v0, v1, :cond_2a
 
-    .line 591
     move-object/from16 v0, p0
 
     iput v13, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mEventStartX:F
 
-    .line 592
     move-object/from16 v0, p0
 
     iput v9, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mStartFrontViewX:F
 
-    .line 593
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mBackView:Landroid/view/View;
@@ -3911,7 +3502,6 @@
 
     if-eqz v21, :cond_2a
 
-    .line 594
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mBackView:Landroid/view/View;
@@ -3928,7 +3518,6 @@
 
     iput v0, v1, Lcom/letv/leui/widget/BaseSwipeHelper;->mStartBackViewX:F
 
-    .line 597
     :cond_2a
     const/16 v21, 0x1
 
@@ -3938,12 +3527,10 @@
 
     iput v0, v1, Lcom/letv/leui/widget/BaseSwipeHelper;->mEventSwipingDirection:I
 
-    .line 598
     move-object/from16 v0, p0
 
     iput v13, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mEventPreEventX:F
 
-    .line 613
     :goto_10
     move-object/from16 v0, p0
 
@@ -3953,12 +3540,10 @@
 
     sub-float v8, v13, v21
 
-    .line 614
     invoke-static {v8}, Ljava/lang/Math;->abs(F)F
 
     move-result v7
 
-    .line 616
     .local v7, "deltaMode":F
     move-object/from16 v0, p0
 
@@ -3966,27 +3551,21 @@
 
     move/from16 v16, v0
 
-    .line 617
     .local v16, "swipeMode":I
     invoke-virtual/range {p0 .. p0}, Lcom/letv/leui/widget/BaseSwipeHelper;->onChangeSwipeMode()I
 
     move-result v6
 
-    .line 618
     .local v6, "changeSwipeMode":I
     if-ltz v6, :cond_2b
 
-    .line 619
     move/from16 v16, v6
 
-    .line 623
     :cond_2b
     if-nez v16, :cond_32
 
-    .line 624
     const/4 v7, 0x0
 
-    .line 642
     :cond_2c
     :goto_11
     move-object/from16 v0, p0
@@ -4005,7 +3584,6 @@
 
     if-nez v21, :cond_2d
 
-    .line 643
     const/16 v21, 0x3
 
     move/from16 v0, v16
@@ -4044,7 +3622,6 @@
 
     if-gez v21, :cond_36
 
-    .line 644
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mViewWidth:I
@@ -4071,7 +3648,6 @@
 
     add-float v8, v21, v22
 
-    .line 652
     :cond_2d
     :goto_12
     move-object/from16 v0, p0
@@ -4112,7 +3688,6 @@
 
     if-gez v21, :cond_2e
 
-    .line 653
     const/16 v21, 0x1
 
     move/from16 v0, v21
@@ -4121,15 +3696,12 @@
 
     iput-boolean v0, v1, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwiping:Z
 
-    .line 654
     move-object/from16 v0, p0
 
     iput v13, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mEventStartX:F
 
-    .line 655
     const/4 v8, 0x0
 
-    .line 657
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mOpened:Z
@@ -4138,7 +3710,6 @@
 
     if-eqz v21, :cond_3b
 
-    .line 658
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mEventSwipingDirection:I
@@ -4162,7 +3733,6 @@
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/widget/BaseSwipeHelper;->onStartClose(Z)V
 
-    .line 659
     const/16 v21, 0x0
 
     move/from16 v0, v21
@@ -4171,7 +3741,6 @@
 
     iput v0, v1, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeCurrentAction:I
 
-    .line 660
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mOpenedRight:Z
@@ -4189,7 +3758,6 @@
 
     iput-boolean v0, v1, Lcom/letv/leui/widget/BaseSwipeHelper;->mStartToLeftLock:Z
 
-    .line 661
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mOpenedRight:Z
@@ -4207,13 +3775,11 @@
 
     iput-boolean v0, v1, Lcom/letv/leui/widget/BaseSwipeHelper;->mStartToRightLock:Z
 
-    .line 674
     :goto_16
     invoke-static/range {p1 .. p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
     move-result-object v5
 
-    .line 675
     .local v5, "cancelEvent":Landroid/view/MotionEvent;
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
@@ -4227,12 +3793,10 @@
 
     invoke-virtual {v5, v0}, Landroid/view/MotionEvent;->setAction(I)V
 
-    .line 677
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5}, Lcom/letv/leui/widget/BaseSwipeHelper;->superOnTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 680
     .end local v5    # "cancelEvent":Landroid/view/MotionEvent;
     :cond_2e
     move-object/from16 v0, p0
@@ -4243,7 +3807,6 @@
 
     if-eqz v21, :cond_3
 
-    .line 681
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeCurrentAction:I
@@ -4267,17 +3830,14 @@
     :goto_17
     add-float v8, v8, v21
 
-    .line 682
     move-object/from16 v0, p0
 
     invoke-direct {v0, v8}, Lcom/letv/leui/widget/BaseSwipeHelper;->move(F)V
 
-    .line 683
     const/16 v21, 0x1
 
     goto/16 :goto_0
 
-    .line 599
     .end local v6    # "changeSwipeMode":I
     .end local v7    # "deltaMode":F
     .end local v16    # "swipeMode":I
@@ -4292,7 +3852,6 @@
 
     if-gez v21, :cond_31
 
-    .line 600
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mEventSwipingDirection:I
@@ -4307,17 +3866,14 @@
 
     if-ne v0, v1, :cond_30
 
-    .line 601
     move-object/from16 v0, p0
 
     iput v13, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mEventStartX:F
 
-    .line 602
     move-object/from16 v0, p0
 
     iput v9, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mStartFrontViewX:F
 
-    .line 603
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mBackView:Landroid/view/View;
@@ -4326,7 +3882,6 @@
 
     if-eqz v21, :cond_30
 
-    .line 604
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mBackView:Landroid/view/View;
@@ -4343,7 +3898,6 @@
 
     iput v0, v1, Lcom/letv/leui/widget/BaseSwipeHelper;->mStartBackViewX:F
 
-    .line 607
     :cond_30
     const/16 v21, 0x2
 
@@ -4353,14 +3907,12 @@
 
     iput v0, v1, Lcom/letv/leui/widget/BaseSwipeHelper;->mEventSwipingDirection:I
 
-    .line 608
     move-object/from16 v0, p0
 
     iput v13, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mEventPreEventX:F
 
     goto/16 :goto_10
 
-    .line 610
     :cond_31
     move-object/from16 v0, p0
 
@@ -4368,7 +3920,6 @@
 
     goto/16 :goto_10
 
-    .line 625
     .restart local v6    # "changeSwipeMode":I
     .restart local v7    # "deltaMode":F
     .restart local v16    # "swipeMode":I
@@ -4381,7 +3932,6 @@
 
     if-eq v0, v1, :cond_2c
 
-    .line 626
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mOpened:Z
@@ -4390,7 +3940,6 @@
 
     if-eqz v21, :cond_34
 
-    .line 627
     const/16 v21, 0x3
 
     move/from16 v0, v16
@@ -4405,7 +3954,6 @@
 
     if-ltz v21, :cond_2c
 
-    .line 629
     :cond_33
     const/16 v21, 0x2
 
@@ -4423,7 +3971,6 @@
 
     goto/16 :goto_11
 
-    .line 633
     :cond_34
     const/16 v21, 0x3
 
@@ -4447,12 +3994,10 @@
 
     if-nez v21, :cond_35
 
-    .line 634
     const/4 v7, 0x0
 
     goto/16 :goto_11
 
-    .line 635
     :cond_35
     const/16 v21, 0x2
 
@@ -4476,12 +4021,10 @@
 
     if-nez v21, :cond_2c
 
-    .line 636
     const/4 v7, 0x0
 
     goto/16 :goto_11
 
-    .line 645
     :cond_36
     const/16 v21, 0x2
 
@@ -4515,7 +4058,6 @@
 
     if-lez v21, :cond_37
 
-    .line 646
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mViewWidth:I
@@ -4538,7 +4080,6 @@
 
     goto/16 :goto_12
 
-    .line 647
     :cond_37
     const/16 v21, 0x1
 
@@ -4604,25 +4145,21 @@
 
     goto/16 :goto_12
 
-    .line 658
     :cond_38
     const/16 v21, 0x0
 
     goto/16 :goto_13
 
-    .line 660
     :cond_39
     const/16 v21, 0x1
 
     goto/16 :goto_14
 
-    .line 661
     :cond_3a
     const/16 v21, 0x0
 
     goto/16 :goto_15
 
-    .line 663
     :cond_3b
     move-object/from16 v0, p0
 
@@ -4638,7 +4175,6 @@
 
     if-ne v0, v1, :cond_3d
 
-    .line 664
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeActionRight:I
@@ -4651,7 +4187,6 @@
 
     iput v0, v1, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeCurrentAction:I
 
-    .line 668
     :cond_3c
     :goto_18
     move-object/from16 v0, p0
@@ -4685,7 +4220,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/letv/leui/widget/BaseSwipeHelper;->onStartOpen(IZ)V
 
-    .line 669
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mEventSwipingDirection:I
@@ -4702,7 +4236,6 @@
 
     const/4 v10, 0x1
 
-    .line 670
     .local v10, "isOpenRight":Z
     :goto_1a
     if-eqz v10, :cond_40
@@ -4716,7 +4249,6 @@
 
     iput-boolean v0, v1, Lcom/letv/leui/widget/BaseSwipeHelper;->mStartToLeftLock:Z
 
-    .line 671
     if-eqz v10, :cond_41
 
     const/16 v21, 0x1
@@ -4730,7 +4262,6 @@
 
     goto/16 :goto_16
 
-    .line 665
     .end local v10    # "isOpenRight":Z
     :cond_3d
     move-object/from16 v0, p0
@@ -4747,7 +4278,6 @@
 
     if-ne v0, v1, :cond_3c
 
-    .line 666
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeActionLeft:I
@@ -4762,32 +4292,27 @@
 
     goto :goto_18
 
-    .line 668
     :cond_3e
     const/16 v21, 0x0
 
     goto :goto_19
 
-    .line 669
     :cond_3f
     const/4 v10, 0x0
 
     goto :goto_1a
 
-    .line 670
     .restart local v10    # "isOpenRight":Z
     :cond_40
     const/16 v21, 0x1
 
     goto :goto_1b
 
-    .line 671
     :cond_41
     const/16 v21, 0x0
 
     goto :goto_1c
 
-    .line 681
     .end local v10    # "isOpenRight":Z
     :cond_42
     move-object/from16 v0, p0
@@ -4798,7 +4323,6 @@
 
     goto/16 :goto_17
 
-    .line 440
     nop
 
     :pswitch_data_0
@@ -4809,7 +4333,6 @@
         :pswitch_1
     .end packed-switch
 
-    .line 495
     :pswitch_data_1
     .packed-switch 0x0
         :pswitch_3
@@ -4822,12 +4345,10 @@
     .locals 3
 
     .prologue
-    .line 173
     iget-boolean v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mOpened:Z
 
     if-nez v0, :cond_0
 
-    .line 174
     iget-object v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mFrontView:Landroid/view/View;
 
     const/4 v1, 0x1
@@ -4836,7 +4357,6 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/letv/leui/widget/BaseSwipeHelper;->generateRevealAnimate(Landroid/view/View;ZZ)V
 
-    .line 176
     :cond_0
     return-void
 .end method
@@ -4846,14 +4366,12 @@
     .param p1, "object"    # Ljava/lang/Object;
 
     .prologue
-    .line 1132
     invoke-virtual {p0}, Lcom/letv/leui/widget/BaseSwipeHelper;->isAnimating()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 1136
     :cond_0
     return-void
 .end method
@@ -4863,10 +4381,8 @@
     .param p1, "backView"    # Landroid/view/View;
 
     .prologue
-    .line 1153
     iput-object p1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mBackView:Landroid/view/View;
 
-    .line 1154
     return-void
 .end method
 
@@ -4877,22 +4393,18 @@
     .param p3, "focus"    # Z
 
     .prologue
-    .line 1201
     invoke-virtual {p0}, Lcom/letv/leui/widget/BaseSwipeHelper;->getBackView()Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/view/ViewGroup;
 
-    .line 1203
     .local v1, "backView":Landroid/view/ViewGroup;
     if-nez v1, :cond_1
 
-    .line 1212
     :cond_0
     return-void
 
-    .line 1207
     :cond_1
     const/4 v2, 0x0
 
@@ -4904,16 +4416,13 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 1208
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 1209
     .local v0, "backChildView":Landroid/view/View;
     invoke-virtual {v0, p3}, Landroid/view/View;->setFocusable(Z)V
 
-    .line 1207
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
@@ -4928,22 +4437,18 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1185
     invoke-virtual {p0}, Lcom/letv/leui/widget/BaseSwipeHelper;->getBackView()Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/view/ViewGroup;
 
-    .line 1187
     .local v1, "backView":Landroid/view/ViewGroup;
     if-nez v1, :cond_0
 
-    .line 1197
     :goto_0
     return v4
 
-    .line 1191
     :cond_0
     const/4 v2, 0x0
 
@@ -4955,12 +4460,10 @@
 
     if-ge v2, v3, :cond_3
 
-    .line 1192
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 1193
     .local v0, "backChildView":Landroid/view/View;
     if-eqz p1, :cond_1
 
@@ -4969,7 +4472,6 @@
     :goto_2
     invoke-virtual {v0, v3}, Landroid/view/View;->setClickable(Z)V
 
-    .line 1194
     if-eqz p1, :cond_2
 
     move v3, v4
@@ -4977,24 +4479,20 @@
     :goto_3
     invoke-virtual {v0, v3}, Landroid/view/View;->setLongClickable(Z)V
 
-    .line 1191
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 1193
     :cond_1
     iget-boolean v3, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mOpened:Z
 
     goto :goto_2
 
-    .line 1194
     :cond_2
     iget-boolean v3, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mOpened:Z
 
     goto :goto_3
 
-    .line 1197
     .end local v0    # "backChildView":Landroid/view/View;
     :cond_3
     iget-boolean v4, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mOpened:Z
@@ -5007,10 +4505,8 @@
     .param p1, "frontView"    # Landroid/view/View;
 
     .prologue
-    .line 1144
     iput-object p1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mFrontView:Landroid/view/View;
 
-    .line 1145
     return-void
 .end method
 
@@ -5019,10 +4515,8 @@
     .param p1, "offsetLeft"    # F
 
     .prologue
-    .line 301
     iput p1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mLeftOffset:F
 
-    .line 302
     return-void
 .end method
 
@@ -5031,10 +4525,8 @@
     .param p1, "offsetRight"    # F
 
     .prologue
-    .line 292
     iput p1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mRightOffset:F
 
-    .line 293
     return-void
 .end method
 
@@ -5043,10 +4535,8 @@
     .param p1, "overOffsetEnabled"    # Z
 
     .prologue
-    .line 323
     iput-boolean p1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsOverOffsetEnabled:Z
 
-    .line 324
     return-void
 .end method
 
@@ -5055,10 +4545,8 @@
     .param p1, "paused"    # Z
 
     .prologue
-    .line 283
     iput-boolean p1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mPaused:Z
 
-    .line 284
     return-void
 .end method
 
@@ -5067,10 +4555,8 @@
     .param p1, "swipeActionLeft"    # I
 
     .prologue
-    .line 256
     iput p1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeActionLeft:I
 
-    .line 257
     return-void
 .end method
 
@@ -5079,10 +4565,8 @@
     .param p1, "swipeActionRight"    # I
 
     .prologue
-    .line 274
     iput p1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeActionRight:I
 
-    .line 275
     return-void
 .end method
 
@@ -5091,10 +4575,8 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 332
     iput-boolean p1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mIsSwipeEnable:Z
 
-    .line 333
     return-void
 .end method
 
@@ -5103,10 +4585,8 @@
     .param p1, "swipeLeftSwitchLine"    # F
 
     .prologue
-    .line 319
     iput p1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeLeftSwitchLine:F
 
-    .line 320
     return-void
 .end method
 
@@ -5115,10 +4595,8 @@
     .param p1, "swipeListener"    # Lcom/letv/leui/widget/SwipeListener;
 
     .prologue
-    .line 206
     iput-object p1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeListener:Lcom/letv/leui/widget/SwipeListener;
 
-    .line 207
     return-void
 .end method
 
@@ -5127,10 +4605,8 @@
     .param p1, "swipeMode"    # I
 
     .prologue
-    .line 238
     iput p1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeMode:I
 
-    .line 239
     return-void
 .end method
 
@@ -5139,10 +4615,8 @@
     .param p1, "swipeRightSwitchLine"    # F
 
     .prologue
-    .line 310
     iput p1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeRightSwitchLine:F
 
-    .line 311
     return-void
 .end method
 
@@ -5151,10 +4625,8 @@
     .param p1, "swipeListener"    # Lcom/letv/leui/widget/SwipeSwitchListener;
 
     .prologue
-    .line 222
     iput-object p1, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mSwipeSwitchListener:Lcom/letv/leui/widget/SwipeSwitchListener;
 
-    .line 223
     return-void
 .end method
 
@@ -5163,7 +4635,6 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 691
     iget-object v0, p0, Lcom/letv/leui/widget/BaseSwipeHelper;->mCallback:Lcom/letv/leui/widget/BaseSwipeHelper$Callback;
 
     invoke-interface {v0, p1}, Lcom/letv/leui/widget/BaseSwipeHelper$Callback;->superOnTouch(Landroid/view/MotionEvent;)Z

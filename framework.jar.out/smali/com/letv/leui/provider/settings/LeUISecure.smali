@@ -32,7 +32,6 @@
     .locals 1
 
     .prologue
-    .line 77
     const-string v0, "leui_country_area_region_settings"
 
     invoke-static {v0}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;

@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 774
     iput-object p1, p0, Lcom/letv/leui/widget/LeListPopupWindow$DropDownListView$2;->this$0:Lcom/letv/leui/widget/LeListPopupWindow$DropDownListView;
 
     iput-object p2, p0, Lcom/letv/leui/widget/LeListPopupWindow$DropDownListView$2;->val$child:Landroid/view/View;
@@ -50,7 +49,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 777
     iget-object v0, p0, Lcom/letv/leui/widget/LeListPopupWindow$DropDownListView$2;->this$0:Lcom/letv/leui/widget/LeListPopupWindow$DropDownListView;
 
     iget-object v1, p0, Lcom/letv/leui/widget/LeListPopupWindow$DropDownListView$2;->val$child:Landroid/view/View;
@@ -61,6 +59,5 @@
 
     invoke-virtual {v0, v1, v2, v4, v5}, Lcom/letv/leui/widget/LeListPopupWindow$DropDownListView;->performItemClick(Landroid/view/View;IJ)Z
 
-    .line 778
     return-void
 .end method

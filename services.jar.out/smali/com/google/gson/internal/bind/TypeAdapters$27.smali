@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 765
     iput-object p1, p0, Lcom/google/gson/internal/bind/TypeAdapters$27;->val$type:Lcom/google/gson/reflect/TypeToken;
 
     iput-object p2, p0, Lcom/google/gson/internal/bind/TypeAdapters$27;->val$typeAdapter:Lcom/google/gson/TypeAdapter;
@@ -57,7 +56,6 @@
     .end annotation
 
     .prologue
-    .line 768
     .local p2, "typeToken":Lcom/google/gson/reflect/TypeToken;, "Lcom/google/gson/reflect/TypeToken<TT;>;"
     iget-object v0, p0, Lcom/google/gson/internal/bind/TypeAdapters$27;->val$type:Lcom/google/gson/reflect/TypeToken;
 

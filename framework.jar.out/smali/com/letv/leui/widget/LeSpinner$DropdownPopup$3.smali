@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1219
     iput-object p1, p0, Lcom/letv/leui/widget/LeSpinner$DropdownPopup$3;->this$1:Lcom/letv/leui/widget/LeSpinner$DropdownPopup;
 
     iput-object p2, p0, Lcom/letv/leui/widget/LeSpinner$DropdownPopup$3;->val$layoutListener:Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
@@ -44,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 1221
     iget-object v1, p0, Lcom/letv/leui/widget/LeSpinner$DropdownPopup$3;->this$1:Lcom/letv/leui/widget/LeSpinner$DropdownPopup;
 
     iget-object v1, v1, Lcom/letv/leui/widget/LeSpinner$DropdownPopup;->this$0:Lcom/letv/leui/widget/LeSpinner;
@@ -53,16 +51,13 @@
 
     move-result-object v0
 
-    .line 1222
     .local v0, "vto":Landroid/view/ViewTreeObserver;
     if-eqz v0, :cond_0
 
-    .line 1223
     iget-object v1, p0, Lcom/letv/leui/widget/LeSpinner$DropdownPopup$3;->val$layoutListener:Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 1225
     :cond_0
     return-void
 .end method

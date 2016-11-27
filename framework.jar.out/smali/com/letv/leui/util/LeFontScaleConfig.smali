@@ -22,7 +22,6 @@
     .locals 2
 
     .prologue
-    .line 11
     const-string v0, "LeFontScaleConfig"
 
     const/4 v1, 0x3
@@ -40,10 +39,8 @@
     .locals 0
 
     .prologue
-    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 12
     return-void
 .end method
 
@@ -54,7 +51,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 25
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
@@ -65,7 +61,6 @@
 
     move-result v3
 
-    .line 28
     .local v3, "fontSizeExtra":F
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -76,11 +71,9 @@
 
     move-result-object v0
 
-    .line 29
     .local v0, "config":Landroid/content/res/Configuration;
     iget v2, v0, Landroid/content/res/Configuration;->fontScale:F
 
-    .line 30
     .local v2, "fontSize":F
     sget-boolean v5, Lcom/letv/leui/util/LeFontScaleConfig;->DEBUG:Z
 
@@ -120,7 +113,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 32
     :cond_0
     cmpl-float v5, v2, v3
 
@@ -128,18 +120,15 @@
 
     const/4 v4, 0x1
 
-    .line 36
     .end local v0    # "config":Landroid/content/res/Configuration;
     .end local v2    # "fontSize":F
     :cond_1
     :goto_0
     return v4
 
-    .line 33
     :catch_0
     move-exception v1
 
-    .line 34
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 

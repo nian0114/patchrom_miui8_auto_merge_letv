@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 31
     iput-object p1, p0, Lcom/letv/leui/widget/LeNeverPermissionRequestDialog$1;->this$0:Lcom/letv/leui/widget/LeNeverPermissionRequestDialog;
 
     iput-object p2, p0, Lcom/letv/leui/widget/LeNeverPermissionRequestDialog$1;->val$context:Landroid/content/Context;
@@ -45,7 +44,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 34
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
@@ -80,17 +78,14 @@
 
     move-result-object v0
 
-    .line 37
     .local v0, "in":Landroid/content/Intent;
     iget-object v1, p0, Lcom/letv/leui/widget/LeNeverPermissionRequestDialog$1;->val$context:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 38
     iget-object v1, p0, Lcom/letv/leui/widget/LeNeverPermissionRequestDialog$1;->this$0:Lcom/letv/leui/widget/LeNeverPermissionRequestDialog;
 
     invoke-virtual {v1}, Lcom/letv/leui/widget/LeNeverPermissionRequestDialog;->disappear()V
 
-    .line 39
     return-void
 .end method

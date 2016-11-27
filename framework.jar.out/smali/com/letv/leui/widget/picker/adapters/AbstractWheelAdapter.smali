@@ -24,7 +24,6 @@
     .locals 0
 
     .prologue
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +37,6 @@
     .param p2, "parent"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 20
     const/4 v0, 0x0
 
     return-object v0
@@ -48,12 +46,10 @@
     .locals 3
 
     .prologue
-    .line 42
     iget-object v2, p0, Lcom/letv/leui/widget/picker/adapters/AbstractWheelAdapter;->datasetObservers:Ljava/util/List;
 
     if-eqz v2, :cond_0
 
-    .line 43
     iget-object v2, p0, Lcom/letv/leui/widget/picker/adapters/AbstractWheelAdapter;->datasetObservers:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -74,13 +70,11 @@
 
     check-cast v1, Landroid/database/DataSetObserver;
 
-    .line 44
     .local v1, "observer":Landroid/database/DataSetObserver;
     invoke-virtual {v1}, Landroid/database/DataSetObserver;->onChanged()V
 
     goto :goto_0
 
-    .line 47
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "observer":Landroid/database/DataSetObserver;
     :cond_0
@@ -91,12 +85,10 @@
     .locals 3
 
     .prologue
-    .line 53
     iget-object v2, p0, Lcom/letv/leui/widget/picker/adapters/AbstractWheelAdapter;->datasetObservers:Ljava/util/List;
 
     if-eqz v2, :cond_0
 
-    .line 54
     iget-object v2, p0, Lcom/letv/leui/widget/picker/adapters/AbstractWheelAdapter;->datasetObservers:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -117,13 +109,11 @@
 
     check-cast v1, Landroid/database/DataSetObserver;
 
-    .line 55
     .local v1, "observer":Landroid/database/DataSetObserver;
     invoke-virtual {v1}, Landroid/database/DataSetObserver;->onInvalidated()V
 
     goto :goto_0
 
-    .line 58
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "observer":Landroid/database/DataSetObserver;
     :cond_0
@@ -135,25 +125,21 @@
     .param p1, "observer"    # Landroid/database/DataSetObserver;
 
     .prologue
-    .line 25
     iget-object v0, p0, Lcom/letv/leui/widget/picker/adapters/AbstractWheelAdapter;->datasetObservers:Ljava/util/List;
 
     if-nez v0, :cond_0
 
-    .line 26
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/picker/adapters/AbstractWheelAdapter;->datasetObservers:Ljava/util/List;
 
-    .line 28
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/picker/adapters/AbstractWheelAdapter;->datasetObservers:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 29
     return-void
 .end method
 
@@ -162,17 +148,14 @@
     .param p1, "observer"    # Landroid/database/DataSetObserver;
 
     .prologue
-    .line 33
     iget-object v0, p0, Lcom/letv/leui/widget/picker/adapters/AbstractWheelAdapter;->datasetObservers:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
-    .line 34
     iget-object v0, p0, Lcom/letv/leui/widget/picker/adapters/AbstractWheelAdapter;->datasetObservers:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 36
     :cond_0
     return-void
 .end method

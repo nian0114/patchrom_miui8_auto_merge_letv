@@ -26,10 +26,8 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 2022
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2023
     const v0, 0x10204a2
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -40,7 +38,6 @@
 
     iput-object v0, p0, Lcom/android/internal/app/ResolverActivity$ViewHolder;->shareTitle:Landroid/widget/TextView;
 
-    .line 2024
     const v0, 0x10204a5
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -51,6 +48,5 @@
 
     iput-object v0, p0, Lcom/android/internal/app/ResolverActivity$ViewHolder;->shareIcon:Landroid/widget/ImageView;
 
-    .line 2025
     return-void
 .end method

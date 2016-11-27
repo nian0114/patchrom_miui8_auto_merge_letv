@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 107
     invoke-static {}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Orientation;->values()[Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Orientation;
 
     move-result-object v0

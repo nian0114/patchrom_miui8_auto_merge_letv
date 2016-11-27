@@ -15,10 +15,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 63
     invoke-direct {p0, p1}, Landroid/widget/TabWidget;-><init>(Landroid/content/Context;)V
 
-    .line 64
     return-void
 .end method
 
@@ -28,13 +26,10 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 58
     invoke-direct {p0, p1, p2}, Landroid/widget/TabWidget;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 59
     invoke-direct {p0, p1, p2}, Lcom/letv/leui/widget/LeTabWidget;->init(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 60
     return-void
 .end method
 
@@ -45,13 +40,10 @@
     .param p3, "defStyle"    # I
 
     .prologue
-    .line 53
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/TabWidget;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 54
     invoke-direct {p0, p1, p2}, Lcom/letv/leui/widget/LeTabWidget;->init(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 55
     return-void
 .end method
 
@@ -63,14 +55,11 @@
     .prologue
     const/4 v4, -0x1
 
-    .line 83
     if-nez p2, :cond_0
 
-    .line 103
     :goto_0
     return-void
 
-    .line 86
     :cond_0
     sget-object v3, Lcom/android/internal/R$styleable;->LeTabWidget:[I
 
@@ -78,7 +67,6 @@
 
     move-result-object v0
 
-    .line 88
     .local v0, "ta":Landroid/content/res/TypedArray;
     const/4 v3, 0x0
 
@@ -86,11 +74,9 @@
 
     move-result v2
 
-    .line 89
     .local v2, "topStripRes":I
     if-eq v2, v4, :cond_1
 
-    .line 90
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeTabWidget;->getContext()Landroid/content/Context;
 
     move-result-object v3
@@ -105,7 +91,6 @@
 
     iput-object v3, p0, Lcom/letv/leui/widget/LeTabWidget;->mTopStrip:Landroid/graphics/drawable/Drawable;
 
-    .line 95
     :cond_1
     const/4 v3, 0x1
 
@@ -117,7 +102,6 @@
 
     float-to-int v1, v3
 
-    .line 96
     .local v1, "topStripHeight":I
     if-eqz v1, :cond_2
 
@@ -125,10 +109,8 @@
 
     if-eqz v3, :cond_2
 
-    .line 97
     iput v1, p0, Lcom/letv/leui/widget/LeTabWidget;->mTopStripHeight:I
 
-    .line 102
     :cond_2
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
@@ -142,33 +124,26 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 68
     invoke-super {p0, p1}, Landroid/widget/TabWidget;->dispatchDraw(Landroid/graphics/Canvas;)V
 
-    .line 70
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeTabWidget;->getLeft()I
 
     move-result v1
 
-    .line 71
     .local v1, "left":I
     const/4 v3, 0x0
 
-    .line 72
     .local v3, "top":I
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeTabWidget;->getRight()I
 
     move-result v2
 
-    .line 73
     .local v2, "right":I
     iget v0, p0, Lcom/letv/leui/widget/LeTabWidget;->mTopStripHeight:I
 
-    .line 75
     .local v0, "bottom":I
     iget-object v4, p0, Lcom/letv/leui/widget/LeTabWidget;->mTopStrip:Landroid/graphics/drawable/Drawable;
 
-    .line 76
     .local v4, "topStrip":Landroid/graphics/drawable/Drawable;
     if-eqz v4, :cond_0
 
@@ -176,13 +151,10 @@
 
     if-eqz v5, :cond_0
 
-    .line 77
     invoke-virtual {v4, v1, v3, v2, v0}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 78
     invoke-virtual {v4, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 80
     :cond_0
     return-void
 .end method
@@ -192,23 +164,18 @@
     .param p1, "pos"    # I
 
     .prologue
-    .line 121
     invoke-virtual {p0, p1}, Lcom/letv/leui/widget/LeTabWidget;->getTabView(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 122
     .local v1, "tab":Landroid/view/View;
     if-nez v1, :cond_0
 
-    .line 123
     const/4 v0, 0x0
 
-    .line 126
     :goto_0
     return-object v0
 
-    .line 125
     :cond_0
     const v2, 0x1020006
 
@@ -218,7 +185,6 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    .line 126
     .local v0, "img":Landroid/widget/ImageView;
     goto :goto_0
 .end method
@@ -228,23 +194,18 @@
     .param p1, "pos"    # I
 
     .prologue
-    .line 130
     invoke-virtual {p0, p1}, Lcom/letv/leui/widget/LeTabWidget;->getTabView(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 131
     .local v0, "tab":Landroid/view/View;
     if-nez v0, :cond_0
 
-    .line 132
     const/4 v1, 0x0
 
-    .line 135
     :goto_0
     return-object v1
 
-    .line 134
     :cond_0
     const v2, 0x1020016
 
@@ -254,7 +215,6 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    .line 135
     .local v1, "tv":Landroid/widget/TextView;
     goto :goto_0
 .end method
@@ -264,7 +224,6 @@
     .param p1, "pos"    # I
 
     .prologue
-    .line 164
     if-ltz p1, :cond_0
 
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeTabWidget;->getChildCount()I
@@ -273,11 +232,9 @@
 
     if-lt p1, v0, :cond_1
 
-    .line 165
     :cond_0
     const/4 v0, 0x0
 
-    .line 167
     :goto_0
     return-object v0
 
@@ -294,7 +251,6 @@
     .param p1, "resId"    # I
 
     .prologue
-    .line 139
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -305,16 +261,13 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 140
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/LeTabWidget;->getTabTitle(I)Landroid/widget/TextView;
 
     move-result-object v1
 
-    .line 141
     .local v1, "tv":Landroid/widget/TextView;
     if-eqz v1, :cond_0
 
-    .line 142
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeTabWidget;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -325,13 +278,11 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(Landroid/content/res/ColorStateList;)V
 
-    .line 139
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 144
     .end local v1    # "tv":Landroid/widget/TextView;
     :cond_1
     return-void
@@ -349,7 +300,6 @@
 
     const/4 v7, 0x0
 
-    .line 147
     new-array v3, v9, [[I
 
     new-array v5, v8, [I
@@ -364,7 +314,6 @@
 
     aput-object v5, v3, v8
 
-    .line 151
     .local v3, "states":[[I
     new-array v0, v9, [I
 
@@ -372,13 +321,11 @@
 
     aput p1, v0, v8
 
-    .line 154
     .local v0, "colors":[I
     new-instance v2, Landroid/content/res/ColorStateList;
 
     invoke-direct {v2, v3, v0}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
 
-    .line 155
     .local v2, "list":Landroid/content/res/ColorStateList;
     const/4 v1, 0x0
 
@@ -390,25 +337,20 @@
 
     if-ge v1, v5, :cond_1
 
-    .line 156
     invoke-virtual {p0, v1}, Lcom/letv/leui/widget/LeTabWidget;->getTabTitle(I)Landroid/widget/TextView;
 
     move-result-object v4
 
-    .line 157
     .local v4, "tv":Landroid/widget/TextView;
     if-eqz v4, :cond_0
 
-    .line 158
     invoke-virtual {v4, v2}, Landroid/widget/TextView;->setTextColor(Landroid/content/res/ColorStateList;)V
 
-    .line 155
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 160
     .end local v4    # "tv":Landroid/widget/TextView;
     :cond_1
     return-void
@@ -419,7 +361,6 @@
     .param p1, "resId"    # I
 
     .prologue
-    .line 106
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeTabWidget;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -434,7 +375,6 @@
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/LeTabWidget;->setTopStripDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 107
     return-void
 .end method
 
@@ -443,13 +383,10 @@
     .param p1, "drawable"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 110
     iput-object p1, p0, Lcom/letv/leui/widget/LeTabWidget;->mTopStrip:Landroid/graphics/drawable/Drawable;
 
-    .line 112
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeTabWidget;->invalidate()V
 
-    .line 113
     return-void
 .end method
 
@@ -458,12 +395,9 @@
     .param p1, "height"    # I
 
     .prologue
-    .line 116
     iput p1, p0, Lcom/letv/leui/widget/LeTabWidget;->mTopStripHeight:I
 
-    .line 117
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeTabWidget;->invalidate()V
 
-    .line 118
     return-void
 .end method

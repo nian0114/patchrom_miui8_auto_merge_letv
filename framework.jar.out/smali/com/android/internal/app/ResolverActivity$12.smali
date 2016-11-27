@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 2527
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$12;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     iput p2, p0, Lcom/android/internal/app/ResolverActivity$12;->val$j:I
@@ -45,18 +44,15 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 2530
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 2531
     .local v1, "data":Landroid/content/Intent;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 2532
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v2, "index"
 
@@ -64,7 +60,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 2533
     const-string v3, "appName"
 
     iget-object v2, p0, Lcom/android/internal/app/ResolverActivity$12;->this$0:Lcom/android/internal/app/ResolverActivity;
@@ -84,21 +79,17 @@
 
     invoke-virtual {v0, v3, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2534
     invoke-virtual {v1, v0}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 2535
     iget-object v2, p0, Lcom/android/internal/app/ResolverActivity$12;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     const/4 v3, -0x1
 
     invoke-virtual {v2, v3, v1}, Lcom/android/internal/app/ResolverActivity;->setResult(ILandroid/content/Intent;)V
 
-    .line 2536
     iget-object v2, p0, Lcom/android/internal/app/ResolverActivity$12;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-virtual {v2}, Lcom/android/internal/app/ResolverActivity;->finish()V
 
-    .line 2537
     return-void
 .end method

@@ -24,20 +24,16 @@
     .locals 1
 
     .prologue
-    .line 3
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;-><init>()V
 
-    .line 5
     const/high16 v0, 0x3f000000    # 0.5f
 
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrTensionIndicator;->DRAG_RATE:F
 
-    .line 8
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrTensionIndicator;->mOneHeight:F
 
-    .line 13
     const/high16 v0, -0x40800000    # -1.0f
 
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrTensionIndicator;->mReleasePercent:F
@@ -50,16 +46,13 @@
     .param p1, "scrollTop"    # F
 
     .prologue
-    .line 79
     iget v7, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrTensionIndicator;->mOneHeight:F
 
     div-float v1, p1, v7
 
-    .line 81
     .local v1, "currentDragPercent":F
     iput v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrTensionIndicator;->mCurrentDragPercent:F
 
-    .line 84
     const/high16 v7, 0x3f800000    # 1.0f
 
     invoke-static {v1}, Ljava/lang/Math;->abs(F)F
@@ -70,13 +63,11 @@
 
     move-result v0
 
-    .line 85
     .local v0, "boundedDragPercent":F
     iget v7, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrTensionIndicator;->mOneHeight:F
 
     sub-float v3, p1, v7
 
-    .line 89
     .local v3, "extraOS":F
     const/4 v7, 0x0
 
@@ -98,7 +89,6 @@
 
     move-result v6
 
-    .line 91
     .local v6, "tensionSlingshotPercent":F
     const/high16 v7, 0x40800000    # 4.0f
 
@@ -126,7 +116,6 @@
 
     mul-float v5, v7, v8
 
-    .line 92
     .local v5, "tensionPercent":F
     iget v7, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrTensionIndicator;->mOneHeight:F
 
@@ -136,7 +125,6 @@
 
     div-float v2, v7, v8
 
-    .line 93
     .local v2, "extraMove":F
     iget v7, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrTensionIndicator;->mOneHeight:F
 
@@ -146,7 +134,6 @@
 
     float-to-int v4, v7
 
-    .line 95
     .local v4, "targetY":I
     const/4 v7, 0x0
 
@@ -159,7 +146,6 @@
     .locals 1
 
     .prologue
-    .line 100
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrTensionIndicator;->getOffsetToRefresh()I
 
     move-result v0
@@ -171,7 +157,6 @@
     .locals 1
 
     .prologue
-    .line 105
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrTensionIndicator;->mOneHeight:F
 
     float-to-int v0, v0
@@ -183,21 +168,17 @@
     .locals 2
 
     .prologue
-    .line 109
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrTensionIndicator;->isUnderTouch()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 110
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrTensionIndicator;->mCurrentDragPercent:F
 
-    .line 116
     :goto_0
     return v0
 
-    .line 112
     :cond_0
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrTensionIndicator;->mReleasePercent:F
 
@@ -207,7 +188,6 @@
 
     if-gtz v0, :cond_1
 
-    .line 113
     const/high16 v0, 0x3f800000    # 1.0f
 
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrTensionIndicator;->getCurrentPosY()I
@@ -228,7 +208,6 @@
 
     goto :goto_0
 
-    .line 116
     :cond_1
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrTensionIndicator;->mReleasePercent:F
 
@@ -255,13 +234,10 @@
     .param p2, "y"    # F
 
     .prologue
-    .line 17
     invoke-super {p0, p1, p2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->onPressDown(FF)V
 
-    .line 18
     iput p2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrTensionIndicator;->mDownY:F
 
-    .line 19
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrTensionIndicator;->getCurrentPosY()I
 
     move-result v0
@@ -270,7 +246,6 @@
 
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrTensionIndicator;->mDownPos:F
 
-    .line 20
     return-void
 .end method
 
@@ -278,22 +253,18 @@
     .locals 1
 
     .prologue
-    .line 24
     invoke-super {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->onRelease()V
 
-    .line 25
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrTensionIndicator;->getCurrentPosY()I
 
     move-result v0
 
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrTensionIndicator;->mReleasePos:I
 
-    .line 26
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrTensionIndicator;->mCurrentDragPercent:F
 
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrTensionIndicator;->mReleasePercent:F
 
-    .line 27
     return-void
 .end method
 
@@ -301,21 +272,18 @@
     .locals 1
 
     .prologue
-    .line 31
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrTensionIndicator;->getCurrentPosY()I
 
     move-result v0
 
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrTensionIndicator;->mReleasePos:I
 
-    .line 32
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrTensionIndicator;->getOverDragPercent()F
 
     move-result v0
 
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrTensionIndicator;->mReleasePercent:F
 
-    .line 33
     return-void
 .end method
 
@@ -327,7 +295,6 @@
     .param p4, "offsetY"    # F
 
     .prologue
-    .line 44
     move-object/from16 v0, p0
 
     iget v11, v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrTensionIndicator;->mDownY:F
@@ -336,14 +303,11 @@
 
     if-gez v11, :cond_0
 
-    .line 45
     invoke-super/range {p0 .. p4}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->processOnMove(FFFF)V
 
-    .line 74
     :goto_0
     return-void
 
-    .line 50
     :cond_0
     move-object/from16 v0, p0
 
@@ -363,7 +327,6 @@
 
     add-float v7, v11, v12
 
-    .line 51
     .local v7, "scrollTop":F
     move-object/from16 v0, p0
 
@@ -371,7 +334,6 @@
 
     div-float v4, v7, v11
 
-    .line 53
     .local v4, "currentDragPercent":F
     const/4 v11, 0x0
 
@@ -379,7 +341,6 @@
 
     if-gez v11, :cond_1
 
-    .line 54
     const/4 v11, 0x0
 
     move-object/from16 v0, p0
@@ -390,13 +351,11 @@
 
     goto :goto_0
 
-    .line 58
     :cond_1
     move-object/from16 v0, p0
 
     iput v4, v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrTensionIndicator;->mCurrentDragPercent:F
 
-    .line 61
     const/high16 v11, 0x3f800000    # 1.0f
 
     invoke-static {v4}, Ljava/lang/Math;->abs(F)F
@@ -407,7 +366,6 @@
 
     move-result v2
 
-    .line 62
     .local v2, "boundedDragPercent":F
     move-object/from16 v0, p0
 
@@ -415,7 +373,6 @@
 
     sub-float v6, v7, v11
 
-    .line 66
     .local v6, "extraOS":F
     const/4 v11, 0x0
 
@@ -441,7 +398,6 @@
 
     move-result v10
 
-    .line 68
     .local v10, "tensionSlingshotPercent":F
     const/high16 v11, 0x40800000    # 4.0f
 
@@ -469,7 +425,6 @@
 
     mul-float v9, v11, v12
 
-    .line 69
     .local v9, "tensionPercent":F
     move-object/from16 v0, p0
 
@@ -481,7 +436,6 @@
 
     div-float v5, v11, v12
 
-    .line 70
     .local v5, "extraMove":F
     move-object/from16 v0, p0
 
@@ -493,7 +447,6 @@
 
     float-to-int v8, v11
 
-    .line 71
     .local v8, "targetY":I
     invoke-virtual/range {p0 .. p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrTensionIndicator;->getCurrentPosY()I
 
@@ -501,7 +454,6 @@
 
     sub-int v3, v8, v11
 
-    .line 73
     .local v3, "change":I
     int-to-float v11, v3
 
@@ -519,10 +471,8 @@
     .param p1, "height"    # I
 
     .prologue
-    .line 37
     invoke-super {p0, p1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->setHeaderHeight(I)V
 
-    .line 38
     int-to-float v0, p1
 
     const/high16 v1, 0x40800000    # 4.0f
@@ -535,6 +485,5 @@
 
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrTensionIndicator;->mOneHeight:F
 
-    .line 39
     return-void
 .end method

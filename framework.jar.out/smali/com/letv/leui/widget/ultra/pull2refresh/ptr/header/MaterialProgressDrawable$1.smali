@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 99
     iput-object p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialProgressDrawable$1;->this$0:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialProgressDrawable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +40,10 @@
     .param p1, "d"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 102
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialProgressDrawable$1;->this$0:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialProgressDrawable;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialProgressDrawable;->invalidateSelf()V
 
-    .line 103
     return-void
 .end method
 
@@ -57,12 +54,10 @@
     .param p3, "when"    # J
 
     .prologue
-    .line 107
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialProgressDrawable$1;->this$0:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialProgressDrawable;
 
     invoke-virtual {v0, p2, p3, p4}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialProgressDrawable;->scheduleSelf(Ljava/lang/Runnable;J)V
 
-    .line 108
     return-void
 .end method
 
@@ -72,11 +67,9 @@
     .param p2, "what"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 112
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialProgressDrawable$1;->this$0:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialProgressDrawable;
 
     invoke-virtual {v0, p2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialProgressDrawable;->unscheduleSelf(Ljava/lang/Runnable;)V
 
-    .line 113
     return-void
 .end method

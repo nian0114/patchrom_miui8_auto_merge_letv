@@ -35,24 +35,20 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 70
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;-><init>(Landroid/content/Context;)V
 
-    .line 82
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/extras/PullToRefreshWebView2;->mIsReadyForPullDown:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 83
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/extras/PullToRefreshWebView2;->mIsReadyForPullUp:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 71
     return-void
 .end method
 
@@ -64,24 +60,20 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 74
     invoke-direct {p0, p1, p2}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 82
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/extras/PullToRefreshWebView2;->mIsReadyForPullDown:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 83
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/extras/PullToRefreshWebView2;->mIsReadyForPullUp:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 75
     return-void
 .end method
 
@@ -93,24 +85,20 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 78
     invoke-direct {p0, p1, p2}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;-><init>(Landroid/content/Context;Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;)V
 
-    .line 82
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/extras/PullToRefreshWebView2;->mIsReadyForPullDown:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 83
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/extras/PullToRefreshWebView2;->mIsReadyForPullUp:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 79
     return-void
 .end method
 
@@ -119,7 +107,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/pulltorefresh/extras/PullToRefreshWebView2;
 
     .prologue
-    .line 63
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/extras/PullToRefreshWebView2;->mIsReadyForPullUp:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     return-object v0
@@ -130,7 +117,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/pulltorefresh/extras/PullToRefreshWebView2;
 
     .prologue
-    .line 63
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/extras/PullToRefreshWebView2;->mIsReadyForPullDown:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     return-object v0
@@ -142,7 +128,6 @@
     .locals 1
 
     .prologue
-    .line 63
     invoke-virtual {p0, p1, p2}, Lcom/letv/leui/widget/pulltorefresh/extras/PullToRefreshWebView2;->createRefreshableView(Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/webkit/WebView;
 
     move-result-object v0
@@ -156,10 +141,8 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 87
     const/4 v2, 0x0
 
-    .line 89
     .local v2, "webView":Landroid/webkit/WebView;
     iget v3, p0, Lcom/letv/leui/widget/pulltorefresh/extras/PullToRefreshWebView2;->mRefreshableViewLayout:I
 
@@ -167,12 +150,10 @@
 
     if-eq v3, v4, :cond_1
 
-    .line 90
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    .line 91
     .local v0, "inflater":Landroid/view/LayoutInflater;
     iget v3, p0, Lcom/letv/leui/widget/pulltorefresh/extras/PullToRefreshWebView2;->mRefreshableViewLayout:I
 
@@ -184,22 +165,18 @@
 
     check-cast v1, Landroid/view/ViewGroup;
 
-    .line 92
     .local v1, "view":Landroid/view/View;
     instance-of v3, v1, Landroid/webkit/WebView;
 
     if-eqz v3, :cond_0
 
-    .line 93
     check-cast v1, Landroid/webkit/WebView;
 
-    .line 105
     .end local v0    # "inflater":Landroid/view/LayoutInflater;
     .end local v1    # "view":Landroid/view/View;
     :goto_0
     return-object v1
 
-    .line 95
     .restart local v0    # "inflater":Landroid/view/LayoutInflater;
     .restart local v1    # "view":Landroid/view/View;
     :cond_0
@@ -211,7 +188,6 @@
 
     throw v3
 
-    .line 98
     .end local v0    # "inflater":Landroid/view/LayoutInflater;
     .end local v1    # "view":Landroid/view/View;
     :cond_1
@@ -219,14 +195,12 @@
 
     move-result-object v2
 
-    .line 102
     new-instance v3, Lcom/letv/leui/widget/pulltorefresh/extras/PullToRefreshWebView2$JsValueCallback;
 
     invoke-direct {v3, p0}, Lcom/letv/leui/widget/pulltorefresh/extras/PullToRefreshWebView2$JsValueCallback;-><init>(Lcom/letv/leui/widget/pulltorefresh/extras/PullToRefreshWebView2;)V
 
     iput-object v3, p0, Lcom/letv/leui/widget/pulltorefresh/extras/PullToRefreshWebView2;->mJsCallback:Lcom/letv/leui/widget/pulltorefresh/extras/PullToRefreshWebView2$JsValueCallback;
 
-    .line 103
     iget-object v3, p0, Lcom/letv/leui/widget/pulltorefresh/extras/PullToRefreshWebView2;->mJsCallback:Lcom/letv/leui/widget/pulltorefresh/extras/PullToRefreshWebView2$JsValueCallback;
 
     const-string v4, "ptr"
@@ -235,7 +209,6 @@
 
     move-object v1, v2
 
-    .line 105
     goto :goto_0
 .end method
 
@@ -243,7 +216,6 @@
     .locals 2
 
     .prologue
-    .line 122
     invoke-virtual {p0}, Lcom/letv/leui/widget/pulltorefresh/extras/PullToRefreshWebView2;->getRefreshableView()Landroid/view/View;
 
     move-result-object v0
@@ -254,7 +226,6 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 127
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/extras/PullToRefreshWebView2;->mIsReadyForPullUp:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -268,7 +239,6 @@
     .locals 2
 
     .prologue
-    .line 111
     invoke-virtual {p0}, Lcom/letv/leui/widget/pulltorefresh/extras/PullToRefreshWebView2;->getRefreshableView()Landroid/view/View;
 
     move-result-object v0
@@ -279,7 +249,6 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 116
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/extras/PullToRefreshWebView2;->mIsReadyForPullDown:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z

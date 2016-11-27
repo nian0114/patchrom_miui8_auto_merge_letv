@@ -57,7 +57,6 @@
 
     const/4 v3, 0x0
 
-    .line 354
     new-instance v0, Lcom/letv/leui/util/MedianCutQuantizer$ColorDimension;
 
     const-string v1, "RED"
@@ -70,7 +69,6 @@
 
     sput-object v0, Lcom/letv/leui/util/MedianCutQuantizer$ColorDimension;->RED:Lcom/letv/leui/util/MedianCutQuantizer$ColorDimension;
 
-    .line 355
     new-instance v0, Lcom/letv/leui/util/MedianCutQuantizer$ColorDimension;
 
     const-string v1, "GREEN"
@@ -83,7 +81,6 @@
 
     sput-object v0, Lcom/letv/leui/util/MedianCutQuantizer$ColorDimension;->GREEN:Lcom/letv/leui/util/MedianCutQuantizer$ColorDimension;
 
-    .line 356
     new-instance v0, Lcom/letv/leui/util/MedianCutQuantizer$ColorDimension;
 
     const-string v1, "BLUE"
@@ -96,7 +93,6 @@
 
     sput-object v0, Lcom/letv/leui/util/MedianCutQuantizer$ColorDimension;->BLUE:Lcom/letv/leui/util/MedianCutQuantizer$ColorDimension;
 
-    .line 353
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/letv/leui/util/MedianCutQuantizer$ColorDimension;
@@ -131,14 +127,11 @@
     .end annotation
 
     .prologue
-    .line 360
     .local p3, "cmp":Ljava/util/Comparator;, "Ljava/util/Comparator<Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;>;"
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 361
     iput-object p3, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorDimension;->comparator:Ljava/util/Comparator;
 
-    .line 362
     return-void
 .end method
 
@@ -147,7 +140,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 353
     const-class v0, Lcom/letv/leui/util/MedianCutQuantizer$ColorDimension;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -163,7 +155,6 @@
     .locals 1
 
     .prologue
-    .line 353
     sget-object v0, Lcom/letv/leui/util/MedianCutQuantizer$ColorDimension;->$VALUES:[Lcom/letv/leui/util/MedianCutQuantizer$ColorDimension;
 
     invoke-virtual {v0}, [Lcom/letv/leui/util/MedianCutQuantizer$ColorDimension;->clone()Ljava/lang/Object;

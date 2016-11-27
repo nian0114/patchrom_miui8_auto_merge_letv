@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 190
     iput-object p1, p0, Lcom/letv/leui/widget/picker/WheelScroller$1;->this$0:Lcom/letv/leui/widget/picker/WheelScroller;
 
     invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 198
     iget-object v0, p0, Lcom/letv/leui/widget/picker/WheelScroller$1;->this$0:Lcom/letv/leui/widget/picker/WheelScroller;
 
     # getter for: Lcom/letv/leui/widget/picker/WheelScroller;->isVertical:Z
@@ -53,13 +51,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 199
     iget-object v0, p0, Lcom/letv/leui/widget/picker/WheelScroller$1;->this$0:Lcom/letv/leui/widget/picker/WheelScroller;
 
     # setter for: Lcom/letv/leui/widget/picker/WheelScroller;->lastScrollY:I
     invoke-static {v0, v1}, Lcom/letv/leui/widget/picker/WheelScroller;->access$102(Lcom/letv/leui/widget/picker/WheelScroller;I)I
 
-    .line 200
     iget-object v0, p0, Lcom/letv/leui/widget/picker/WheelScroller$1;->this$0:Lcom/letv/leui/widget/picker/WheelScroller;
 
     # getter for: Lcom/letv/leui/widget/picker/WheelScroller;->scroller:Landroid/widget/Scroller;
@@ -100,26 +96,22 @@
 
     invoke-virtual/range {v0 .. v8}, Landroid/widget/Scroller;->fling(IIIIIIII)V
 
-    .line 206
     :goto_0
     iget-object v0, p0, Lcom/letv/leui/widget/picker/WheelScroller$1;->this$0:Lcom/letv/leui/widget/picker/WheelScroller;
 
     # invokes: Lcom/letv/leui/widget/picker/WheelScroller;->setNextMessage(I)V
     invoke-static {v0, v1}, Lcom/letv/leui/widget/picker/WheelScroller;->access$800(Lcom/letv/leui/widget/picker/WheelScroller;I)V
 
-    .line 207
     const/4 v0, 0x1
 
     return v0
 
-    .line 203
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/picker/WheelScroller$1;->this$0:Lcom/letv/leui/widget/picker/WheelScroller;
 
     # setter for: Lcom/letv/leui/widget/picker/WheelScroller;->lastScrollX:I
     invoke-static {v0, v1}, Lcom/letv/leui/widget/picker/WheelScroller;->access$502(Lcom/letv/leui/widget/picker/WheelScroller;I)I
 
-    .line 204
     iget-object v0, p0, Lcom/letv/leui/widget/picker/WheelScroller$1;->this$0:Lcom/letv/leui/widget/picker/WheelScroller;
 
     # getter for: Lcom/letv/leui/widget/picker/WheelScroller;->scroller:Landroid/widget/Scroller;
@@ -173,7 +165,6 @@
     .param p4, "distanceY"    # F
 
     .prologue
-    .line 194
     const/4 v0, 0x1
 
     return v0

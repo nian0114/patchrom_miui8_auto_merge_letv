@@ -34,7 +34,6 @@
     .locals 1
 
     .prologue
-    .line 840
     const-class v0, Lcom/letv/leui/widget/DragSortGridView;
 
     invoke-virtual {v0}, Ljava/lang/Class;->desiredAssertionStatus()Z
@@ -62,18 +61,14 @@
     .param p3, "targetPosition"    # I
 
     .prologue
-    .line 844
     iput-object p1, p0, Lcom/letv/leui/widget/DragSortGridView$LSwitchCellAnimator$AnimateSwitchViewOnPreDrawListener;->this$1:Lcom/letv/leui/widget/DragSortGridView$LSwitchCellAnimator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 845
     iput p2, p0, Lcom/letv/leui/widget/DragSortGridView$LSwitchCellAnimator$AnimateSwitchViewOnPreDrawListener;->mOriginalPosition:I
 
-    .line 846
     iput p3, p0, Lcom/letv/leui/widget/DragSortGridView$LSwitchCellAnimator$AnimateSwitchViewOnPreDrawListener;->mTargetPosition:I
 
-    .line 847
     return-void
 .end method
 
@@ -83,7 +78,6 @@
     .locals 4
 
     .prologue
-    .line 851
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortGridView$LSwitchCellAnimator$AnimateSwitchViewOnPreDrawListener;->this$1:Lcom/letv/leui/widget/DragSortGridView$LSwitchCellAnimator;
 
     iget-object v0, v0, Lcom/letv/leui/widget/DragSortGridView$LSwitchCellAnimator;->this$0:Lcom/letv/leui/widget/DragSortGridView;
@@ -94,7 +88,6 @@
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 853
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortGridView$LSwitchCellAnimator$AnimateSwitchViewOnPreDrawListener;->this$1:Lcom/letv/leui/widget/DragSortGridView$LSwitchCellAnimator;
 
     iget-object v0, v0, Lcom/letv/leui/widget/DragSortGridView$LSwitchCellAnimator;->this$0:Lcom/letv/leui/widget/DragSortGridView;
@@ -109,7 +102,6 @@
     # += operator for: Lcom/letv/leui/widget/DragSortGridView;->mTotalOffsetY:I
     invoke-static {v0, v1}, Lcom/letv/leui/widget/DragSortGridView;->access$412(Lcom/letv/leui/widget/DragSortGridView;I)I
 
-    .line 854
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortGridView$LSwitchCellAnimator$AnimateSwitchViewOnPreDrawListener;->this$1:Lcom/letv/leui/widget/DragSortGridView$LSwitchCellAnimator;
 
     iget-object v0, v0, Lcom/letv/leui/widget/DragSortGridView$LSwitchCellAnimator;->this$0:Lcom/letv/leui/widget/DragSortGridView;
@@ -124,7 +116,6 @@
     # += operator for: Lcom/letv/leui/widget/DragSortGridView;->mTotalOffsetX:I
     invoke-static {v0, v1}, Lcom/letv/leui/widget/DragSortGridView;->access$512(Lcom/letv/leui/widget/DragSortGridView;I)I
 
-    .line 856
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortGridView$LSwitchCellAnimator$AnimateSwitchViewOnPreDrawListener;->this$1:Lcom/letv/leui/widget/DragSortGridView$LSwitchCellAnimator;
 
     iget-object v0, v0, Lcom/letv/leui/widget/DragSortGridView$LSwitchCellAnimator;->this$0:Lcom/letv/leui/widget/DragSortGridView;
@@ -136,7 +127,6 @@
     # invokes: Lcom/letv/leui/widget/DragSortGridView;->animateReorder(II)V
     invoke-static {v0, v1, v2}, Lcom/letv/leui/widget/DragSortGridView;->access$1000(Lcom/letv/leui/widget/DragSortGridView;II)V
 
-    .line 858
     sget-boolean v0, Lcom/letv/leui/widget/DragSortGridView$LSwitchCellAnimator$AnimateSwitchViewOnPreDrawListener;->$assertionsDisabled:Z
 
     if-nez v0, :cond_0
@@ -158,7 +148,6 @@
 
     throw v0
 
-    .line 859
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortGridView$LSwitchCellAnimator$AnimateSwitchViewOnPreDrawListener;->this$1:Lcom/letv/leui/widget/DragSortGridView$LSwitchCellAnimator;
 
@@ -173,7 +162,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 860
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortGridView$LSwitchCellAnimator$AnimateSwitchViewOnPreDrawListener;->this$1:Lcom/letv/leui/widget/DragSortGridView$LSwitchCellAnimator;
 
     iget-object v0, v0, Lcom/letv/leui/widget/DragSortGridView$LSwitchCellAnimator;->this$0:Lcom/letv/leui/widget/DragSortGridView;
@@ -198,7 +186,6 @@
     # setter for: Lcom/letv/leui/widget/DragSortGridView;->mMobileView:Landroid/view/View;
     invoke-static {v0, v1}, Lcom/letv/leui/widget/DragSortGridView;->access$602(Lcom/letv/leui/widget/DragSortGridView;Landroid/view/View;)Landroid/view/View;
 
-    .line 861
     sget-boolean v0, Lcom/letv/leui/widget/DragSortGridView$LSwitchCellAnimator$AnimateSwitchViewOnPreDrawListener;->$assertionsDisabled:Z
 
     if-nez v0, :cond_1
@@ -220,7 +207,6 @@
 
     throw v0
 
-    .line 862
     :cond_1
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortGridView$LSwitchCellAnimator$AnimateSwitchViewOnPreDrawListener;->this$1:Lcom/letv/leui/widget/DragSortGridView$LSwitchCellAnimator;
 
@@ -235,7 +221,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 863
     const/4 v0, 0x1
 
     return v0

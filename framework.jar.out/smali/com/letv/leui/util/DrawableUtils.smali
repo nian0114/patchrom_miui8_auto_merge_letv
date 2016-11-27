@@ -20,7 +20,6 @@
     .locals 0
 
     .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +33,6 @@
     .prologue
     const/16 v3, 0x4d
 
-    .line 43
     const/4 v2, 0x1
 
     const/4 v4, 0x4
@@ -68,20 +66,16 @@
     .param p7, "offsetY"    # I
 
     .prologue
-    .line 66
     invoke-static/range {p0 .. p0}, Lcom/letv/leui/util/DrawableUtils;->drawable2Bitmap(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Bitmap;
 
     move-result-object v11
 
-    .line 67
     .local v11, "mapBitmap":Landroid/graphics/Bitmap;
     const/4 v12, 0x0
 
-    .line 68
     .local v12, "newDrawable":Landroid/graphics/drawable/BitmapDrawable;
     if-eqz v11, :cond_0
 
-    .line 69
     mul-int/lit8 v17, p4, 0x2
 
     invoke-virtual/range {p0 .. p0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
@@ -90,7 +84,6 @@
 
     add-int v10, v17, v18
 
-    .line 70
     .local v10, "createWidth":I
     mul-int/lit8 v17, p4, 0x2
 
@@ -100,7 +93,6 @@
 
     add-int v9, v17, v18
 
-    .line 71
     .local v9, "createHeight":I
     sget-object v17, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
@@ -110,25 +102,21 @@
 
     move-result-object v8
 
-    .line 72
     .local v8, "createBitmap":Landroid/graphics/Bitmap;
     new-instance v6, Landroid/graphics/Canvas;
 
     invoke-direct {v6, v8}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 73
     .local v6, "canvas":Landroid/graphics/Canvas;
     new-instance v3, Landroid/graphics/Paint;
 
     invoke-direct {v3}, Landroid/graphics/Paint;-><init>()V
 
-    .line 74
     .local v3, "bitmapPaint":Landroid/graphics/Paint;
     new-instance v14, Landroid/graphics/Paint;
 
     invoke-direct {v14}, Landroid/graphics/Paint;-><init>()V
 
-    .line 75
     .local v14, "paint":Landroid/graphics/Paint;
     const v17, 0x1060149
 
@@ -140,18 +128,15 @@
 
     move-result v7
 
-    .line 76
     .local v7, "color":I
     invoke-virtual {v14, v7}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 77
     const/16 v17, 0x2
 
     move/from16 v0, v17
 
     new-array v13, v0, [I
 
-    .line 79
     .local v13, "offsetXY":[I
     new-instance v5, Landroid/graphics/BlurMaskFilter;
 
@@ -169,22 +154,18 @@
 
     invoke-direct {v5, v0, v1}, Landroid/graphics/BlurMaskFilter;-><init>(FLandroid/graphics/BlurMaskFilter$Blur;)V
 
-    .line 80
     .local v5, "blurFilterStroke":Landroid/graphics/BlurMaskFilter;
     invoke-virtual {v14, v5}, Landroid/graphics/Paint;->setMaskFilter(Landroid/graphics/MaskFilter;)Landroid/graphics/MaskFilter;
 
-    .line 81
     invoke-virtual {v11, v14, v13}, Landroid/graphics/Bitmap;->extractAlpha(Landroid/graphics/Paint;[I)Landroid/graphics/Bitmap;
 
     move-result-object v16
 
-    .line 82
     .local v16, "strokeBitmap":Landroid/graphics/Bitmap;
     move/from16 v0, p3
 
     invoke-virtual {v3, v0}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 83
     invoke-virtual/range {v16 .. v16}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v17
@@ -223,7 +204,6 @@
 
     invoke-virtual {v6, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 86
     new-instance v4, Landroid/graphics/BlurMaskFilter;
 
     move/from16 v0, p4
@@ -240,22 +220,18 @@
 
     invoke-direct {v4, v0, v1}, Landroid/graphics/BlurMaskFilter;-><init>(FLandroid/graphics/BlurMaskFilter$Blur;)V
 
-    .line 87
     .local v4, "blurFilterOutter":Landroid/graphics/BlurMaskFilter;
     invoke-virtual {v14, v4}, Landroid/graphics/Paint;->setMaskFilter(Landroid/graphics/MaskFilter;)Landroid/graphics/MaskFilter;
 
-    .line 88
     invoke-virtual {v11, v14, v13}, Landroid/graphics/Bitmap;->extractAlpha(Landroid/graphics/Paint;[I)Landroid/graphics/Bitmap;
 
     move-result-object v15
 
-    .line 89
     .local v15, "shadowBitmap":Landroid/graphics/Bitmap;
     move/from16 v0, p5
 
     invoke-virtual {v3, v0}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 90
     invoke-virtual {v15}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v17
@@ -290,7 +266,6 @@
 
     invoke-virtual {v6, v15, v0, v1, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 93
     invoke-virtual {v11}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v17
@@ -335,7 +310,6 @@
 
     invoke-virtual {v6, v11, v0, v1, v2}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 95
     new-instance v12, Landroid/graphics/drawable/BitmapDrawable;
 
     .end local v12    # "newDrawable":Landroid/graphics/drawable/BitmapDrawable;
@@ -343,7 +317,6 @@
 
     invoke-direct {v12, v0, v8}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
-    .line 96
     .restart local v12    # "newDrawable":Landroid/graphics/drawable/BitmapDrawable;
     const/16 v17, 0x0
 
@@ -355,7 +328,6 @@
 
     invoke-virtual {v12, v0, v1, v10, v9}, Landroid/graphics/drawable/BitmapDrawable;->setBounds(IIII)V
 
-    .line 98
     .end local v3    # "bitmapPaint":Landroid/graphics/Paint;
     .end local v4    # "blurFilterOutter":Landroid/graphics/BlurMaskFilter;
     .end local v5    # "blurFilterStroke":Landroid/graphics/BlurMaskFilter;
@@ -391,21 +363,17 @@
 
     const/4 v0, 0x0
 
-    .line 103
     if-nez p0, :cond_1
 
-    .line 135
     :cond_0
     :goto_0
     return-object v0
 
-    .line 107
     :cond_1
     instance-of v2, p0, Landroid/graphics/drawable/BitmapDrawable;
 
     if-eqz v2, :cond_2
 
-    .line 108
     check-cast p0, Landroid/graphics/drawable/BitmapDrawable;
 
     .end local p0    # "drawable":Landroid/graphics/drawable/Drawable;
@@ -415,7 +383,6 @@
 
     goto :goto_0
 
-    .line 109
     .restart local p0    # "drawable":Landroid/graphics/drawable/Drawable;
     :cond_2
     instance-of v2, p0, Landroid/graphics/drawable/NinePatchDrawable;
@@ -466,7 +433,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 121
     :cond_3
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
@@ -480,7 +446,6 @@
 
     if-lez v2, :cond_0
 
-    .line 124
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v3
@@ -504,13 +469,11 @@
 
     move-result-object v0
 
-    .line 128
     .local v0, "bitmap":Landroid/graphics/Bitmap;
     new-instance v1, Landroid/graphics/Canvas;
 
     invoke-direct {v1, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 129
     .local v1, "canvas":Landroid/graphics/Canvas;
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
@@ -522,12 +485,10 @@
 
     invoke-virtual {p0, v6, v6, v2, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 131
     invoke-virtual {p0, v1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     goto :goto_0
 
-    .line 124
     .end local v0    # "bitmap":Landroid/graphics/Bitmap;
     .end local v1    # "canvas":Landroid/graphics/Canvas;
     :cond_4

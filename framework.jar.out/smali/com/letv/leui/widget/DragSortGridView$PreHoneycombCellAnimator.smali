@@ -32,18 +32,14 @@
     .param p3, "deltaY"    # I
 
     .prologue
-    .line 759
     iput-object p1, p0, Lcom/letv/leui/widget/DragSortGridView$PreHoneycombCellAnimator;->this$0:Lcom/letv/leui/widget/DragSortGridView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 760
     iput p2, p0, Lcom/letv/leui/widget/DragSortGridView$PreHoneycombCellAnimator;->mDeltaX:I
 
-    .line 761
     iput p3, p0, Lcom/letv/leui/widget/DragSortGridView$PreHoneycombCellAnimator;->mDeltaY:I
 
-    .line 762
     return-void
 .end method
 
@@ -55,7 +51,6 @@
     .param p2, "targetPosition"    # I
 
     .prologue
-    .line 766
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortGridView$PreHoneycombCellAnimator;->this$0:Lcom/letv/leui/widget/DragSortGridView;
 
     iget v1, p0, Lcom/letv/leui/widget/DragSortGridView$PreHoneycombCellAnimator;->mDeltaY:I
@@ -63,7 +58,6 @@
     # += operator for: Lcom/letv/leui/widget/DragSortGridView;->mTotalOffsetY:I
     invoke-static {v0, v1}, Lcom/letv/leui/widget/DragSortGridView;->access$412(Lcom/letv/leui/widget/DragSortGridView;I)I
 
-    .line 767
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortGridView$PreHoneycombCellAnimator;->this$0:Lcom/letv/leui/widget/DragSortGridView;
 
     iget v1, p0, Lcom/letv/leui/widget/DragSortGridView$PreHoneycombCellAnimator;->mDeltaX:I
@@ -71,6 +65,5 @@
     # += operator for: Lcom/letv/leui/widget/DragSortGridView;->mTotalOffsetX:I
     invoke-static {v0, v1}, Lcom/letv/leui/widget/DragSortGridView;->access$512(Lcom/letv/leui/widget/DragSortGridView;I)I
 
-    .line 768
     return-void
 .end method

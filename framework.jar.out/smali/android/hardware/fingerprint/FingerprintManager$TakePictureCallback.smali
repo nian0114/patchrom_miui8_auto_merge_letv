@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 1033
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,6 +32,5 @@
     .param p2, "errString"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 1040
     return-void
 .end method

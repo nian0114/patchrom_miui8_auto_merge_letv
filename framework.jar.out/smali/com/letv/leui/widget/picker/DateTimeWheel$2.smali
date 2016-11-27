@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 117
     iput-object p1, p0, Lcom/letv/leui/widget/picker/DateTimeWheel$2;->this$0:Lcom/letv/leui/widget/picker/DateTimeWheel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .prologue
     const/high16 v4, 0x41a00000    # 20.0f
 
-    .line 120
     iget-object v1, p0, Lcom/letv/leui/widget/picker/DateTimeWheel$2;->this$0:Lcom/letv/leui/widget/picker/DateTimeWheel;
 
     # getter for: Lcom/letv/leui/widget/picker/DateTimeWheel;->dayWrapper:Landroid/view/View;
@@ -70,7 +68,6 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setLeft(I)V
 
-    .line 121
     iget-object v1, p0, Lcom/letv/leui/widget/picker/DateTimeWheel$2;->this$0:Lcom/letv/leui/widget/picker/DateTimeWheel;
 
     # getter for: Lcom/letv/leui/widget/picker/DateTimeWheel;->hoursWrapper:Landroid/view/View;
@@ -98,7 +95,6 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setLeft(I)V
 
-    .line 122
     iget-object v1, p0, Lcom/letv/leui/widget/picker/DateTimeWheel$2;->this$0:Lcom/letv/leui/widget/picker/DateTimeWheel;
 
     # getter for: Lcom/letv/leui/widget/picker/DateTimeWheel;->day:Lcom/letv/leui/widget/picker/WheelView;
@@ -110,7 +106,6 @@
 
     move-result-object v0
 
-    .line 123
     .local v0, "lp":Landroid/view/ViewGroup$LayoutParams;
     const/high16 v1, 0x43160000    # 150.0f
 
@@ -121,7 +116,6 @@
 
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 124
     iget-object v1, p0, Lcom/letv/leui/widget/picker/DateTimeWheel$2;->this$0:Lcom/letv/leui/widget/picker/DateTimeWheel;
 
     # getter for: Lcom/letv/leui/widget/picker/DateTimeWheel;->day:Lcom/letv/leui/widget/picker/WheelView;
@@ -131,6 +125,5 @@
 
     invoke-virtual {v1, v0}, Lcom/letv/leui/widget/picker/WheelView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 126
     return-void
 .end method

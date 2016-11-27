@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 34
     iput-object p1, p0, Lcom/letv/leui/widget/PinnedHeaderListView$1;->this$0:Lcom/letv/leui/widget/PinnedHeaderListView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
     .end annotation
 
     .prologue
-    .line 37
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     iget-object v0, p0, Lcom/letv/leui/widget/PinnedHeaderListView$1;->this$0:Lcom/letv/leui/widget/PinnedHeaderListView;
 
@@ -63,7 +61,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 38
     iget-object v0, p0, Lcom/letv/leui/widget/PinnedHeaderListView$1;->this$0:Lcom/letv/leui/widget/PinnedHeaderListView;
 
     # getter for: Lcom/letv/leui/widget/PinnedHeaderListView;->mAdapter:Lcom/letv/leui/widget/PinnedSectionAdapter;
@@ -81,7 +78,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/letv/leui/widget/PinnedSectionAdapter;->onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
 
-    .line 40
     :cond_0
     return-void
 .end method

@@ -29,17 +29,13 @@
     .param p4, "db"    # F
 
     .prologue
-    .line 196
     iput-object p1, p0, Lcom/letv/leui/widget/ScreenRecordingView$TimeHolder;->this$0:Lcom/letv/leui/widget/ScreenRecordingView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 197
     iput-wide p2, p0, Lcom/letv/leui/widget/ScreenRecordingView$TimeHolder;->timeMillis:J
 
-    .line 198
     iput p4, p0, Lcom/letv/leui/widget/ScreenRecordingView$TimeHolder;->db:F
 
-    .line 199
     return-void
 .end method

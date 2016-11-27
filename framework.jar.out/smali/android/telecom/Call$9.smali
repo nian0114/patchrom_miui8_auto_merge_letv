@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 1349
     iput-object p1, p0, Landroid/telecom/Call$9;->this$0:Landroid/telecom/Call;
 
     iput-object p2, p0, Landroid/telecom/Call$9;->val$callback:Landroid/telecom/Call$Callback;
@@ -52,14 +51,11 @@
     .locals 6
 
     .prologue
-    .line 1352
     const/4 v1, 0x0
 
-    .line 1353
     .local v1, "isFinalRemoval":Z
     const/4 v2, 0x0
 
-    .line 1355
     .local v2, "toThrow":Ljava/lang/RuntimeException;
     :try_start_0
     iget-object v3, p0, Landroid/telecom/Call$9;->val$callback:Landroid/telecom/Call$Callback;
@@ -70,13 +66,11 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1359
     :goto_0
     iget-object v4, p0, Landroid/telecom/Call$9;->this$0:Landroid/telecom/Call;
 
     monitor-enter v4
 
-    .line 1360
     :try_start_1
     iget-object v3, p0, Landroid/telecom/Call$9;->this$0:Landroid/telecom/Call;
 
@@ -89,7 +83,6 @@
 
     invoke-interface {v3, v5}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 1361
     iget-object v3, p0, Landroid/telecom/Call$9;->this$0:Landroid/telecom/Call;
 
     # getter for: Landroid/telecom/Call;->mCallbackRecords:Ljava/util/List;
@@ -103,19 +96,15 @@
 
     if-eqz v3, :cond_0
 
-    .line 1362
     const/4 v1, 0x1
 
-    .line 1364
     :cond_0
     monitor-exit v4
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1365
     if-eqz v1, :cond_1
 
-    .line 1366
     iget-object v3, p0, Landroid/telecom/Call$9;->this$0:Landroid/telecom/Call;
 
     # getter for: Landroid/telecom/Call;->mPhone:Landroid/telecom/Phone;
@@ -127,24 +116,19 @@
 
     invoke-virtual {v3, v4}, Landroid/telecom/Phone;->internalRemoveCall(Landroid/telecom/Call;)V
 
-    .line 1368
     :cond_1
     if-eqz v2, :cond_2
 
-    .line 1369
     throw v2
 
-    .line 1356
     :catch_0
     move-exception v0
 
-    .line 1357
     .local v0, "e":Ljava/lang/RuntimeException;
     move-object v2, v0
 
     goto :goto_0
 
-    .line 1364
     .end local v0    # "e":Ljava/lang/RuntimeException;
     :catchall_0
     move-exception v3
@@ -156,7 +140,6 @@
 
     throw v3
 
-    .line 1371
     :cond_2
     return-void
 .end method

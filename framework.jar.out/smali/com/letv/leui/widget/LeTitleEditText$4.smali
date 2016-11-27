@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 757
     iput-object p1, p0, Lcom/letv/leui/widget/LeTitleEditText$4;->this$0:Lcom/letv/leui/widget/LeTitleEditText;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p3, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 764
     iget-object v0, p0, Lcom/letv/leui/widget/LeTitleEditText$4;->this$0:Lcom/letv/leui/widget/LeTitleEditText;
 
     # getter for: Lcom/letv/leui/widget/LeTitleEditText;->mOnQueryEditorActionListener:Landroid/widget/TextView$OnEditorActionListener;
@@ -53,7 +51,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 765
     iget-object v0, p0, Lcom/letv/leui/widget/LeTitleEditText$4;->this$0:Lcom/letv/leui/widget/LeTitleEditText;
 
     # getter for: Lcom/letv/leui/widget/LeTitleEditText;->mOnQueryEditorActionListener:Landroid/widget/TextView$OnEditorActionListener;
@@ -65,7 +62,6 @@
 
     move-result v0
 
-    .line 769
     :goto_0
     return v0
 

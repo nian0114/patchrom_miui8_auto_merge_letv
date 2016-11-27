@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 204
     iput-object p1, p0, Lcom/alipay/android/fingerprint/AlipayFingerprint$2;->this$0:Lcom/alipay/android/fingerprint/AlipayFingerprint;
 
     invoke-direct {p0}, Landroid/hardware/fingerprint/IFingerprintServiceReceiver$Stub;-><init>()V
@@ -39,7 +38,6 @@
     .param p3, "acquireInfo"    # I
 
     .prologue
-    .line 212
     const-string v1, "AlipayFingerprint"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -62,7 +60,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 213
     iget-object v1, p0, Lcom/alipay/android/fingerprint/AlipayFingerprint$2;->this$0:Lcom/alipay/android/fingerprint/AlipayFingerprint;
 
     # invokes: Lcom/alipay/android/fingerprint/AlipayFingerprint;->getAcquiredString(I)Ljava/lang/String;
@@ -70,11 +67,9 @@
 
     move-result-object v0
 
-    .line 214
     .local v0, "msgInfo":Ljava/lang/String;
     if-eqz v0, :cond_2
 
-    .line 215
     iget-object v1, p0, Lcom/alipay/android/fingerprint/AlipayFingerprint$2;->this$0:Lcom/alipay/android/fingerprint/AlipayFingerprint;
 
     # getter for: Lcom/alipay/android/fingerprint/AlipayFingerprint;->mHandler:Landroid/os/Handler;
@@ -84,7 +79,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 216
     iget-object v1, p0, Lcom/alipay/android/fingerprint/AlipayFingerprint$2;->this$0:Lcom/alipay/android/fingerprint/AlipayFingerprint;
 
     # getter for: Lcom/alipay/android/fingerprint/AlipayFingerprint;->mHandler:Landroid/os/Handler;
@@ -101,7 +95,6 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 218
     :cond_0
     iget-object v1, p0, Lcom/alipay/android/fingerprint/AlipayFingerprint$2;->this$0:Lcom/alipay/android/fingerprint/AlipayFingerprint;
 
@@ -117,25 +110,21 @@
 
     invoke-interface {v1, v2, v3, v4}, Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint$IdentifyListener;->onResult(III)V
 
-    .line 237
     :cond_1
     :goto_0
     return-void
 
-    .line 222
     :cond_2
     const/16 v1, 0x3fb
 
     if-ne p3, v1, :cond_3
 
-    .line 223
     iget-object v1, p0, Lcom/alipay/android/fingerprint/AlipayFingerprint$2;->this$0:Lcom/alipay/android/fingerprint/AlipayFingerprint;
 
     iget-object v1, v1, Lcom/alipay/android/fingerprint/AlipayFingerprint;->myidentifyListener:Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint$IdentifyListener;
 
     if-eqz v1, :cond_1
 
-    .line 224
     iget-object v1, p0, Lcom/alipay/android/fingerprint/AlipayFingerprint$2;->this$0:Lcom/alipay/android/fingerprint/AlipayFingerprint;
 
     iget-object v1, v1, Lcom/alipay/android/fingerprint/AlipayFingerprint;->myidentifyListener:Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint$IdentifyListener;
@@ -150,20 +139,17 @@
 
     goto :goto_0
 
-    .line 226
     :cond_3
     const/16 v1, 0x3fc
 
     if-ne p3, v1, :cond_1
 
-    .line 227
     iget-object v1, p0, Lcom/alipay/android/fingerprint/AlipayFingerprint$2;->this$0:Lcom/alipay/android/fingerprint/AlipayFingerprint;
 
     iget-object v1, v1, Lcom/alipay/android/fingerprint/AlipayFingerprint;->myidentifyListener:Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint$IdentifyListener;
 
     if-eqz v1, :cond_1
 
-    .line 228
     iget-object v1, p0, Lcom/alipay/android/fingerprint/AlipayFingerprint$2;->this$0:Lcom/alipay/android/fingerprint/AlipayFingerprint;
 
     iget-object v1, v1, Lcom/alipay/android/fingerprint/AlipayFingerprint;->myidentifyListener:Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint$IdentifyListener;
@@ -176,7 +162,6 @@
 
     invoke-interface {v1, v2, v3}, Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint$IdentifyListener;->onStatus(II)V
 
-    .line 229
     iget-object v1, p0, Lcom/alipay/android/fingerprint/AlipayFingerprint$2;->this$0:Lcom/alipay/android/fingerprint/AlipayFingerprint;
 
     iget-object v1, v1, Lcom/alipay/android/fingerprint/AlipayFingerprint;->myidentifyListener:Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint$IdentifyListener;
@@ -197,7 +182,6 @@
     .param p1, "deviceId"    # J
 
     .prologue
-    .line 270
     const-string v0, "AlipayFingerprint"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -220,7 +204,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 271
     iget-object v0, p0, Lcom/alipay/android/fingerprint/AlipayFingerprint$2;->this$0:Lcom/alipay/android/fingerprint/AlipayFingerprint;
 
     # getter for: Lcom/alipay/android/fingerprint/AlipayFingerprint;->mHandler:Landroid/os/Handler;
@@ -230,7 +213,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 272
     iget-object v0, p0, Lcom/alipay/android/fingerprint/AlipayFingerprint$2;->this$0:Lcom/alipay/android/fingerprint/AlipayFingerprint;
 
     # getter for: Lcom/alipay/android/fingerprint/AlipayFingerprint;->mHandler:Landroid/os/Handler;
@@ -247,7 +229,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 274
     :cond_0
     iget-object v0, p0, Lcom/alipay/android/fingerprint/AlipayFingerprint$2;->this$0:Lcom/alipay/android/fingerprint/AlipayFingerprint;
 
@@ -255,7 +236,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 275
     iget-object v0, p0, Lcom/alipay/android/fingerprint/AlipayFingerprint$2;->this$0:Lcom/alipay/android/fingerprint/AlipayFingerprint;
 
     iget-object v0, v0, Lcom/alipay/android/fingerprint/AlipayFingerprint;->myidentifyListener:Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint$IdentifyListener;
@@ -270,7 +250,6 @@
 
     invoke-interface {v0, v1, v2, v3}, Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint$IdentifyListener;->onResult(III)V
 
-    .line 277
     :cond_1
     return-void
 .end method
@@ -281,7 +260,6 @@
     .param p3, "fp"    # Landroid/hardware/fingerprint/FingerprintFido;
 
     .prologue
-    .line 318
     return-void
 .end method
 
@@ -291,10 +269,8 @@
     .param p3, "fp"    # Landroid/hardware/fingerprint/Fingerprint;
 
     .prologue
-    .line 241
     const/4 v0, 0x0
 
-    .line 242
     .local v0, "authenticationSucceed":Z
     const-string v2, "AlipayFingerprint"
 
@@ -318,7 +294,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 243
     iget-object v2, p0, Lcom/alipay/android/fingerprint/AlipayFingerprint$2;->this$0:Lcom/alipay/android/fingerprint/AlipayFingerprint;
 
     # getter for: Lcom/alipay/android/fingerprint/AlipayFingerprint;->mHandler:Landroid/os/Handler;
@@ -328,7 +303,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 244
     iget-object v2, p0, Lcom/alipay/android/fingerprint/AlipayFingerprint$2;->this$0:Lcom/alipay/android/fingerprint/AlipayFingerprint;
 
     # getter for: Lcom/alipay/android/fingerprint/AlipayFingerprint;->mHandler:Landroid/os/Handler;
@@ -345,7 +319,6 @@
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 246
     :cond_0
     iget-object v2, p0, Lcom/alipay/android/fingerprint/AlipayFingerprint$2;->this$0:Lcom/alipay/android/fingerprint/AlipayFingerprint;
 
@@ -353,7 +326,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 247
     iget-object v2, p0, Lcom/alipay/android/fingerprint/AlipayFingerprint$2;->this$0:Lcom/alipay/android/fingerprint/AlipayFingerprint;
 
     iget-object v2, v2, Lcom/alipay/android/fingerprint/AlipayFingerprint;->myidentifyListener:Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint$IdentifyListener;
@@ -366,7 +338,6 @@
 
     invoke-interface {v2, v3, v4}, Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint$IdentifyListener;->onStatus(II)V
 
-    .line 248
     iget-object v2, p0, Lcom/alipay/android/fingerprint/AlipayFingerprint$2;->this$0:Lcom/alipay/android/fingerprint/AlipayFingerprint;
 
     iget-object v2, v2, Lcom/alipay/android/fingerprint/AlipayFingerprint;->myids:[I
@@ -375,7 +346,6 @@
 
     if-eqz p3, :cond_2
 
-    .line 249
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -388,7 +358,6 @@
 
     if-ge v1, v2, :cond_3
 
-    .line 250
     invoke-virtual {p3}, Landroid/hardware/fingerprint/Fingerprint;->getFingerId()I
 
     move-result v2
@@ -401,36 +370,29 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 251
     const/4 v0, 0x1
 
-    .line 249
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 254
     .end local v1    # "i":I
     :cond_2
     if-nez p3, :cond_4
 
-    .line 255
     const-string v2, "AlipayFingerprint"
 
     const-string v3, "onAuthenticationSucceeded fp is null"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 256
     const/4 v0, 0x0
 
-    .line 261
     :cond_3
     :goto_1
     if-eqz v0, :cond_5
 
-    .line 262
     iget-object v2, p0, Lcom/alipay/android/fingerprint/AlipayFingerprint$2;->this$0:Lcom/alipay/android/fingerprint/AlipayFingerprint;
 
     iget-object v2, v2, Lcom/alipay/android/fingerprint/AlipayFingerprint;->myidentifyListener:Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint$IdentifyListener;
@@ -447,17 +409,14 @@
 
     invoke-interface {v2, v3, v4, v5}, Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint$IdentifyListener;->onResult(III)V
 
-    .line 266
     :goto_2
     return-void
 
-    .line 258
     :cond_4
     const/4 v0, 0x1
 
     goto :goto_1
 
-    .line 264
     :cond_5
     iget-object v2, p0, Lcom/alipay/android/fingerprint/AlipayFingerprint$2;->this$0:Lcom/alipay/android/fingerprint/AlipayFingerprint;
 
@@ -484,7 +443,6 @@
     .param p5, "remaining"    # I
 
     .prologue
-    .line 208
     return-void
 .end method
 
@@ -498,16 +456,13 @@
 
     const/4 v4, 0x0
 
-    .line 281
     packed-switch p3, :pswitch_data_0
 
-    .line 310
     :cond_0
     :goto_0
     :pswitch_0
     return-void
 
-    .line 284
     :pswitch_1
     iget-object v0, p0, Lcom/alipay/android/fingerprint/AlipayFingerprint$2;->this$0:Lcom/alipay/android/fingerprint/AlipayFingerprint;
 
@@ -515,7 +470,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 285
     iget-object v0, p0, Lcom/alipay/android/fingerprint/AlipayFingerprint$2;->this$0:Lcom/alipay/android/fingerprint/AlipayFingerprint;
 
     # getter for: Lcom/alipay/android/fingerprint/AlipayFingerprint;->mAuthenticateRequestRandom:J
@@ -541,7 +495,6 @@
 
     if-eq v0, v5, :cond_2
 
-    .line 287
     :cond_1
     iget-object v0, p0, Lcom/alipay/android/fingerprint/AlipayFingerprint$2;->this$0:Lcom/alipay/android/fingerprint/AlipayFingerprint;
 
@@ -555,7 +508,6 @@
 
     invoke-interface {v0, v1, v4, v2}, Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint$IdentifyListener;->onResult(III)V
 
-    .line 290
     :cond_2
     # getter for: Lcom/alipay/android/fingerprint/AlipayFingerprint;->mIsWaitForCancel:Z
     invoke-static {}, Lcom/alipay/android/fingerprint/AlipayFingerprint;->access$500()Z
@@ -564,13 +516,11 @@
 
     if-ne v0, v5, :cond_0
 
-    .line 291
     # setter for: Lcom/alipay/android/fingerprint/AlipayFingerprint;->mIsWaitForCancel:Z
     invoke-static {v4}, Lcom/alipay/android/fingerprint/AlipayFingerprint;->access$502(Z)Z
 
     goto :goto_0
 
-    .line 296
     :pswitch_2
     iget-object v0, p0, Lcom/alipay/android/fingerprint/AlipayFingerprint$2;->this$0:Lcom/alipay/android/fingerprint/AlipayFingerprint;
 
@@ -578,7 +528,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 297
     iget-object v0, p0, Lcom/alipay/android/fingerprint/AlipayFingerprint$2;->this$0:Lcom/alipay/android/fingerprint/AlipayFingerprint;
 
     iget-object v0, v0, Lcom/alipay/android/fingerprint/AlipayFingerprint;->myidentifyListener:Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint$IdentifyListener;
@@ -593,7 +542,6 @@
 
     goto :goto_0
 
-    .line 303
     :pswitch_3
     iget-object v0, p0, Lcom/alipay/android/fingerprint/AlipayFingerprint$2;->this$0:Lcom/alipay/android/fingerprint/AlipayFingerprint;
 
@@ -601,7 +549,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 304
     iget-object v0, p0, Lcom/alipay/android/fingerprint/AlipayFingerprint$2;->this$0:Lcom/alipay/android/fingerprint/AlipayFingerprint;
 
     iget-object v0, v0, Lcom/alipay/android/fingerprint/AlipayFingerprint;->myidentifyListener:Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint$IdentifyListener;
@@ -616,7 +563,6 @@
 
     goto :goto_0
 
-    .line 281
     nop
 
     :pswitch_data_0
@@ -638,6 +584,5 @@
     .param p4, "groupId"    # I
 
     .prologue
-    .line 314
     return-void
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1303
     iput-object p1, p0, Lcom/android/server/connectivity/Tethering$TetherInterfaceSM$TetheredState$1;->this$2:Lcom/android/server/connectivity/Tethering$TetherInterfaceSM$TetheredState;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 1307
     :try_start_0
     iget-object v1, p0, Lcom/android/server/connectivity/Tethering$TetherInterfaceSM$TetheredState$1;->this$2:Lcom/android/server/connectivity/Tethering$TetherInterfaceSM$TetheredState;
 
@@ -57,15 +55,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1311
     :goto_0
     return-void
 
-    .line 1308
     :catch_0
     move-exception v0
 
-    .line 1309
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 

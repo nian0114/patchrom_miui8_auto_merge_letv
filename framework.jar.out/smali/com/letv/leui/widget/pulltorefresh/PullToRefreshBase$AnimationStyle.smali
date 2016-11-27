@@ -40,7 +40,6 @@
 
     const/4 v2, 0x0
 
-    .line 1286
     new-instance v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$AnimationStyle;
 
     const-string v1, "ROTATE"
@@ -49,7 +48,6 @@
 
     sput-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$AnimationStyle;->ROTATE:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$AnimationStyle;
 
-    .line 1292
     new-instance v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$AnimationStyle;
 
     const-string v1, "FLIP"
@@ -58,7 +56,6 @@
 
     sput-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$AnimationStyle;->FLIP:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$AnimationStyle;
 
-    .line 1281
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$AnimationStyle;
@@ -85,7 +82,6 @@
     .end annotation
 
     .prologue
-    .line 1281
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -95,7 +91,6 @@
     .locals 1
 
     .prologue
-    .line 1295
     sget-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$AnimationStyle;->ROTATE:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$AnimationStyle;
 
     return-object v0
@@ -106,13 +101,10 @@
     .param p0, "modeInt"    # I
 
     .prologue
-    .line 1307
     packed-switch p0, :pswitch_data_0
 
-    .line 1310
     sget-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$AnimationStyle;->ROTATE:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$AnimationStyle;
 
-    .line 1312
     :goto_0
     return-object v0
 
@@ -121,7 +113,6 @@
 
     goto :goto_0
 
-    .line 1307
     nop
 
     :pswitch_data_0
@@ -135,7 +126,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 1281
     const-class v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$AnimationStyle;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -151,7 +141,6 @@
     .locals 1
 
     .prologue
-    .line 1281
     sget-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$AnimationStyle;->$VALUES:[Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$AnimationStyle;
 
     invoke-virtual {v0}, [Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$AnimationStyle;->clone()Ljava/lang/Object;
@@ -173,7 +162,6 @@
     .param p4, "attrs"    # Landroid/content/res/TypedArray;
 
     .prologue
-    .line 1317
     sget-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$4;->$SwitchMap$com$letv$leui$widget$pulltorefresh$PullToRefreshBase$AnimationStyle:[I
 
     invoke-virtual {p0}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$AnimationStyle;->ordinal()I
@@ -184,12 +172,10 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1320
     new-instance v0, Lcom/letv/leui/widget/pulltorefresh/internal/RotateLoadingLayout;
 
     invoke-direct {v0, p1, p2, p3, p4}, Lcom/letv/leui/widget/pulltorefresh/internal/RotateLoadingLayout;-><init>(Landroid/content/Context;Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Orientation;Landroid/content/res/TypedArray;)V
 
-    .line 1322
     :goto_0
     return-object v0
 
@@ -200,7 +186,6 @@
 
     goto :goto_0
 
-    .line 1317
     nop
 
     :pswitch_data_0
@@ -218,10 +203,8 @@
     .param p5, "isHeader"    # Z
 
     .prologue
-    .line 1329
     if-nez p5, :cond_0
 
-    .line 1330
     sget-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$4;->$SwitchMap$com$letv$leui$widget$pulltorefresh$PullToRefreshBase$AnimationStyle:[I
 
     invoke-virtual {p0}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$AnimationStyle;->ordinal()I
@@ -232,16 +215,13 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1333
     new-instance v0, Lcom/letv/leui/widget/pulltorefresh/internal/LeFooterRotateLoadingLayout;
 
     invoke-direct {v0, p1, p2, p3, p4}, Lcom/letv/leui/widget/pulltorefresh/internal/LeFooterRotateLoadingLayout;-><init>(Landroid/content/Context;Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Orientation;Landroid/content/res/TypedArray;)V
 
-    .line 1345
     :goto_0
     return-object v0
 
-    .line 1335
     :pswitch_0
     new-instance v0, Lcom/letv/leui/widget/pulltorefresh/internal/FlipLoadingLayout;
 
@@ -249,7 +229,6 @@
 
     goto :goto_0
 
-    .line 1339
     :cond_0
     sget-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$4;->$SwitchMap$com$letv$leui$widget$pulltorefresh$PullToRefreshBase$AnimationStyle:[I
 
@@ -261,7 +240,6 @@
 
     packed-switch v0, :pswitch_data_1
 
-    .line 1342
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -284,14 +262,12 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->print(Ljava/lang/String;)V
 
-    .line 1343
     new-instance v0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
     invoke-direct {v0, p1, p2, p3, p4}, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;-><init>(Landroid/content/Context;Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Orientation;Landroid/content/res/TypedArray;)V
 
     goto :goto_0
 
-    .line 1345
     :pswitch_1
     new-instance v0, Lcom/letv/leui/widget/pulltorefresh/internal/FlipLoadingLayout;
 
@@ -299,13 +275,11 @@
 
     goto :goto_0
 
-    .line 1330
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_0
     .end packed-switch
 
-    .line 1339
     :pswitch_data_1
     .packed-switch 0x2
         :pswitch_1

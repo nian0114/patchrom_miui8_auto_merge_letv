@@ -25,12 +25,10 @@
     .locals 1
 
     .prologue
-    .line 2631
     iput-object p1, p0, Landroid/app/ApplicationPackageManager$DeletePackageObserver;->this$0:Landroid/app/ApplicationPackageManager;
 
     invoke-direct {p0}, Landroid/content/pm/IPackageDeleteObserver$Stub;-><init>()V
 
-    .line 2632
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/app/ApplicationPackageManager$DeletePackageObserver;->mPackageName:Ljava/lang/String;
@@ -44,7 +42,6 @@
     .param p2, "x1"    # Landroid/app/ApplicationPackageManager$1;
 
     .prologue
-    .line 2631
     invoke-direct {p0, p1}, Landroid/app/ApplicationPackageManager$DeletePackageObserver;-><init>(Landroid/app/ApplicationPackageManager;)V
 
     return-void
@@ -58,17 +55,14 @@
     .param p2, "returnCode"    # I
 
     .prologue
-    .line 2638
     const/4 v1, 0x1
 
     if-eq p2, v1, :cond_0
 
-    .line 2639
     iget-object v1, p0, Landroid/app/ApplicationPackageManager$DeletePackageObserver;->mPackageName:Ljava/lang/String;
 
     if-eqz v1, :cond_1
 
-    .line 2640
     const-string v1, "ApplicationPackageManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -93,12 +87,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2641
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 2642
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "PackageName"
 
@@ -106,7 +98,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2643
     const-string v1, "InstallResult"
 
     invoke-static {p2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -115,12 +106,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2644
     const-string v1, "android.intent.action.PACKAGE_DELETE_FAILED"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2645
     iget-object v1, p0, Landroid/app/ApplicationPackageManager$DeletePackageObserver;->this$0:Landroid/app/ApplicationPackageManager;
 
     # getter for: Landroid/app/ApplicationPackageManager;->mContext:Landroid/app/ContextImpl;
@@ -132,13 +121,11 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/app/ContextImpl;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
-    .line 2650
     .end local v0    # "intent":Landroid/content/Intent;
     :cond_0
     :goto_0
     return-void
 
-    .line 2647
     :cond_1
     const-string v1, "ApplicationPackageManager"
 
@@ -154,9 +141,7 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 2634
     iput-object p1, p0, Landroid/app/ApplicationPackageManager$DeletePackageObserver;->mPackageName:Ljava/lang/String;
 
-    .line 2635
     return-void
 .end method

@@ -32,13 +32,10 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 313
     iput-object p1, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->this$0:Lcom/android/server/policy/global/GlobalActionViewManager;
 
-    .line 314
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 315
     invoke-static {p2}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
 
     move-result-object v0
@@ -49,37 +46,30 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->mWindowTouchSlop:I
 
-    .line 316
     const/high16 v0, 0x41c80000    # 25.0f
 
     invoke-virtual {p0, v0}, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->setBlurRadiusDp(F)V
 
-    .line 317
     const/high16 v0, 0x3e800000    # 0.25f
 
     invoke-virtual {p0, v0}, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->setBlurLumaContrast(F)V
 
-    .line 318
     const v0, -0x414ccccd    # -0.35f
 
     invoke-virtual {p0, v0}, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->setBlurLumaBrightness(F)V
 
-    .line 319
     const v0, 0x3f4ccccd    # 0.8f
 
     invoke-virtual {p0, v0}, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->setBlurChromaContrast(F)V
 
-    .line 320
     const/4 v0, 0x2
 
     invoke-virtual {p0, v0}, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->setBlurMode(I)V
 
-    .line 321
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 322
     return-void
 .end method
 
@@ -90,10 +80,8 @@
     .param p1, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 396
     const/4 v0, 0x0
 
-    .line 397
     .local v0, "handle":Z
     iget-object v1, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->this$0:Lcom/android/server/policy/global/GlobalActionViewManager;
 
@@ -104,21 +92,18 @@
 
     if-eqz v1, :cond_0
 
-    .line 399
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 400
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v1
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 418
     :cond_0
     :goto_0
     if-nez v0, :cond_1
@@ -135,16 +120,13 @@
     :goto_1
     return v1
 
-    .line 405
     :sswitch_0
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->handleButtonKey()Z
 
     move-result v0
 
-    .line 406
     goto :goto_0
 
-    .line 413
     :sswitch_1
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->handleMenuKey()Z
 
@@ -152,13 +134,11 @@
 
     goto :goto_0
 
-    .line 418
     :cond_2
     const/4 v1, 0x0
 
     goto :goto_1
 
-    .line 400
     :sswitch_data_0
     .sparse-switch
         0x3 -> :sswitch_0
@@ -180,24 +160,19 @@
 
     const/4 v12, 0x0
 
-    .line 354
     iget-object v2, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->mEnableAccessibilityController:Lcom/android/server/policy/EnableAccessibilityController;
 
     if-eqz v2, :cond_4
 
-    .line 355
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v8
 
-    .line 356
     .local v8, "action":I
     if-nez v8, :cond_1
 
-    .line 357
     move-object v9, p0
 
-    .line 358
     .local v9, "decor":Landroid/view/View;
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -205,7 +180,6 @@
 
     float-to-int v10, v2
 
-    .line 359
     .local v10, "eventX":I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
@@ -213,7 +187,6 @@
 
     float-to-int v11, v2
 
-    .line 360
     .local v11, "eventY":I
     iget v2, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->mWindowTouchSlop:I
 
@@ -247,11 +220,9 @@
 
     if-lt v11, v2, :cond_1
 
-    .line 364
     :cond_0
     iput-boolean v13, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->mCancelOnUp:Z
 
-    .line 368
     .end local v9    # "decor":Landroid/view/View;
     .end local v10    # "eventX":I
     .end local v11    # "eventY":I
@@ -261,7 +232,6 @@
 
     if-nez v2, :cond_6
 
-    .line 369
     iget-object v2, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->mEnableAccessibilityController:Lcom/android/server/policy/EnableAccessibilityController;
 
     invoke-virtual {v2, p1}, Lcom/android/server/policy/EnableAccessibilityController;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
@@ -270,17 +240,14 @@
 
     iput-boolean v2, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->mIntercepted:Z
 
-    .line 370
     iget-boolean v2, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->mIntercepted:Z
 
     if-eqz v2, :cond_2
 
-    .line 371
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 372
     .local v0, "now":J
     const/4 v4, 0x3
 
@@ -296,29 +263,24 @@
 
     move-result-object p1
 
-    .line 374
     const/16 v2, 0x1002
 
     invoke-virtual {p1, v2}, Landroid/view/MotionEvent;->setSource(I)V
 
-    .line 375
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->mCancelOnUp:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 381
     .end local v0    # "now":J
     :cond_2
     if-ne v8, v13, :cond_4
 
-    .line 382
     iget-boolean v2, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->mCancelOnUp:Z
 
     if-eqz v2, :cond_3
 
-    .line 383
     iget-object v2, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->this$0:Lcom/android/server/policy/global/GlobalActionViewManager;
 
     # getter for: Lcom/android/server/policy/global/GlobalActionViewManager;->mMediatorCallback:Lcom/android/server/policy/global/GlobalActionViewMediator$MediatorCallback;
@@ -328,14 +290,11 @@
 
     invoke-interface {v2}, Lcom/android/server/policy/global/GlobalActionViewMediator$MediatorCallback;->hiddenWindow()V
 
-    .line 385
     :cond_3
     iput-boolean v12, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->mCancelOnUp:Z
 
-    .line 386
     iput-boolean v12, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->mIntercepted:Z
 
-    .line 390
     .end local v8    # "action":I
     :cond_4
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
@@ -346,7 +305,6 @@
     :goto_0
     return v2
 
-    .line 378
     .restart local v8    # "action":I
     :cond_6
     :try_start_1
@@ -358,15 +316,12 @@
 
     move-result v2
 
-    .line 381
     if-ne v8, v13, :cond_5
 
-    .line 382
     iget-boolean v3, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->mCancelOnUp:Z
 
     if-eqz v3, :cond_7
 
-    .line 383
     iget-object v3, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->this$0:Lcom/android/server/policy/global/GlobalActionViewManager;
 
     # getter for: Lcom/android/server/policy/global/GlobalActionViewManager;->mMediatorCallback:Lcom/android/server/policy/global/GlobalActionViewMediator$MediatorCallback;
@@ -376,27 +331,22 @@
 
     invoke-interface {v3}, Lcom/android/server/policy/global/GlobalActionViewMediator$MediatorCallback;->hiddenWindow()V
 
-    .line 385
     :cond_7
     iput-boolean v12, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->mCancelOnUp:Z
 
-    .line 386
     iput-boolean v12, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->mIntercepted:Z
 
     goto :goto_0
 
-    .line 381
     :catchall_0
     move-exception v2
 
     if-ne v8, v13, :cond_9
 
-    .line 382
     iget-boolean v3, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->mCancelOnUp:Z
 
     if-eqz v3, :cond_8
 
-    .line 383
     iget-object v3, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->this$0:Lcom/android/server/policy/global/GlobalActionViewManager;
 
     # getter for: Lcom/android/server/policy/global/GlobalActionViewManager;->mMediatorCallback:Lcom/android/server/policy/global/GlobalActionViewMediator$MediatorCallback;
@@ -406,11 +356,9 @@
 
     invoke-interface {v3}, Lcom/android/server/policy/global/GlobalActionViewMediator$MediatorCallback;->hiddenWindow()V
 
-    .line 385
     :cond_8
     iput-boolean v12, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->mCancelOnUp:Z
 
-    .line 386
     iput-boolean v12, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->mIntercepted:Z
 
     :cond_9
@@ -421,7 +369,6 @@
     .locals 1
 
     .prologue
-    .line 426
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->this$0:Lcom/android/server/policy/global/GlobalActionViewManager;
 
     # getter for: Lcom/android/server/policy/global/GlobalActionViewManager;->mMediatorCallback:Lcom/android/server/policy/global/GlobalActionViewMediator$MediatorCallback;
@@ -431,7 +378,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 427
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->this$0:Lcom/android/server/policy/global/GlobalActionViewManager;
 
     # getter for: Lcom/android/server/policy/global/GlobalActionViewManager;->mMediatorCallback:Lcom/android/server/policy/global/GlobalActionViewMediator$MediatorCallback;
@@ -441,7 +387,6 @@
 
     invoke-interface {v0}, Lcom/android/server/policy/global/GlobalActionViewMediator$MediatorCallback;->hiddenWindow()V
 
-    .line 429
     :cond_0
     const/4 v0, 0x1
 
@@ -452,7 +397,6 @@
     .locals 1
 
     .prologue
-    .line 433
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->this$0:Lcom/android/server/policy/global/GlobalActionViewManager;
 
     # getter for: Lcom/android/server/policy/global/GlobalActionViewManager;->mMediatorCallback:Lcom/android/server/policy/global/GlobalActionViewMediator$MediatorCallback;
@@ -462,7 +406,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 434
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->this$0:Lcom/android/server/policy/global/GlobalActionViewManager;
 
     # getter for: Lcom/android/server/policy/global/GlobalActionViewManager;->mMediatorCallback:Lcom/android/server/policy/global/GlobalActionViewMediator$MediatorCallback;
@@ -472,7 +415,6 @@
 
     invoke-interface {v0}, Lcom/android/server/policy/global/GlobalActionViewMediator$MediatorCallback;->hiddenWindow()V
 
-    .line 436
     :cond_0
     const/4 v0, 0x1
 
@@ -483,10 +425,8 @@
     .locals 3
 
     .prologue
-    .line 326
     invoke-super {p0}, Landroid/widget/FrameLayout;->onAttachedToWindow()V
 
-    .line 331
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/server/policy/EnableAccessibilityController;->canEnableAccessibilityViaGesture(Landroid/content/Context;)Z
@@ -495,7 +435,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 332
     new-instance v0, Lcom/android/server/policy/EnableAccessibilityController;
 
     iget-object v1, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->mContext:Landroid/content/Context;
@@ -508,11 +447,9 @@
 
     iput-object v0, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->mEnableAccessibilityController:Lcom/android/server/policy/EnableAccessibilityController;
 
-    .line 343
     :goto_0
     return-void
 
-    .line 341
     :cond_0
     const/4 v0, 0x0
 
@@ -525,20 +462,16 @@
     .locals 1
 
     .prologue
-    .line 346
     invoke-super {p0}, Landroid/widget/FrameLayout;->onDetachedFromWindow()V
 
-    .line 347
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->mEnableAccessibilityController:Lcom/android/server/policy/EnableAccessibilityController;
 
     if-eqz v0, :cond_0
 
-    .line 348
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->mEnableAccessibilityController:Lcom/android/server/policy/EnableAccessibilityController;
 
     invoke-virtual {v0}, Lcom/android/server/policy/EnableAccessibilityController;->onDestroy()V
 
-    .line 350
     :cond_0
     return-void
 .end method

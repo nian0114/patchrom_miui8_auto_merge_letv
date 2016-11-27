@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 61
     invoke-direct {p0}, Lcom/google/gson/TypeAdapter;-><init>()V
 
     return-void
@@ -46,7 +45,6 @@
     .end annotation
 
     .prologue
-    .line 73
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->peek()Lcom/google/gson/stream/JsonToken;
 
     move-result-object v0
@@ -55,15 +53,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 74
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->nextNull()V
 
-    .line 75
     const/4 v0, 0x0
 
     return-object v0
 
-    .line 77
     :cond_0
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
@@ -83,7 +78,6 @@
     .end annotation
 
     .prologue
-    .line 61
     invoke-virtual {p0, p1}, Lcom/google/gson/internal/bind/TypeAdapters$1;->read(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Class;
 
     move-result-object v0
@@ -102,16 +96,12 @@
     .end annotation
 
     .prologue
-    .line 64
     if-nez p2, :cond_0
 
-    .line 65
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonWriter;->nullValue()Lcom/google/gson/stream/JsonWriter;
 
-    .line 70
     return-void
 
-    .line 67
     :cond_0
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
@@ -157,7 +147,6 @@
     .end annotation
 
     .prologue
-    .line 61
     check-cast p2, Ljava/lang/Class;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/gson/internal/bind/TypeAdapters$1;->write(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Class;)V

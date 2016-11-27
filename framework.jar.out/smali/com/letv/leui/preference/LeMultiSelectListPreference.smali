@@ -47,12 +47,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 68
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/letv/leui/preference/LeMultiSelectListPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 69
     return-void
 .end method
 
@@ -62,12 +60,10 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 64
     const v0, 0x1010091
 
     invoke-direct {p0, p1, p2, v0}, Lcom/letv/leui/preference/LeMultiSelectListPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 65
     return-void
 .end method
 
@@ -78,12 +74,10 @@
     .param p3, "defStyleAttr"    # I
 
     .prologue
-    .line 60
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/letv/leui/preference/LeMultiSelectListPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 61
     return-void
 .end method
 
@@ -95,31 +89,26 @@
     .param p4, "defStyleRes"    # I
 
     .prologue
-    .line 49
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/letv/leui/preference/LeDialogPreferenceEx;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 43
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
     iput-object v1, p0, Lcom/letv/leui/preference/LeMultiSelectListPreference;->mValues:Ljava/util/Set;
 
-    .line 44
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
     iput-object v1, p0, Lcom/letv/leui/preference/LeMultiSelectListPreference;->mNewValues:Ljava/util/Set;
 
-    .line 51
     sget-object v1, Lcom/android/internal/R$styleable;->MultiSelectListPreference:[I
 
     invoke-virtual {p1, p2, v1, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 54
     .local v0, "a":Landroid/content/res/TypedArray;
     const/4 v1, 0x0
 
@@ -129,7 +118,6 @@
 
     iput-object v1, p0, Lcom/letv/leui/preference/LeMultiSelectListPreference;->mEntries:[Ljava/lang/CharSequence;
 
-    .line 55
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->getTextArray(I)[Ljava/lang/CharSequence;
@@ -138,10 +126,8 @@
 
     iput-object v1, p0, Lcom/letv/leui/preference/LeMultiSelectListPreference;->mEntryValues:[Ljava/lang/CharSequence;
 
-    .line 56
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 57
     return-void
 .end method
 
@@ -151,7 +137,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 40
     iget-boolean v0, p0, Lcom/letv/leui/preference/LeMultiSelectListPreference;->mPreferenceChanged:Z
 
     or-int/2addr v0, p1
@@ -168,7 +153,6 @@
     .param p0, "x0"    # Lcom/letv/leui/preference/LeMultiSelectListPreference;
 
     .prologue
-    .line 40
     iget-object v0, p0, Lcom/letv/leui/preference/LeMultiSelectListPreference;->mEntryValues:[Ljava/lang/CharSequence;
 
     return-object v0
@@ -179,7 +163,6 @@
     .param p0, "x0"    # Lcom/letv/leui/preference/LeMultiSelectListPreference;
 
     .prologue
-    .line 40
     iget-object v0, p0, Lcom/letv/leui/preference/LeMultiSelectListPreference;->mNewValues:Ljava/util/Set;
 
     return-object v0
@@ -189,22 +172,17 @@
     .locals 6
 
     .prologue
-    .line 193
     iget-object v0, p0, Lcom/letv/leui/preference/LeMultiSelectListPreference;->mEntryValues:[Ljava/lang/CharSequence;
 
-    .line 194
     .local v0, "entries":[Ljava/lang/CharSequence;
     array-length v1, v0
 
-    .line 195
     .local v1, "entryCount":I
     iget-object v4, p0, Lcom/letv/leui/preference/LeMultiSelectListPreference;->mValues:Ljava/util/Set;
 
-    .line 196
     .local v4, "values":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     new-array v3, v1, [Z
 
-    .line 198
     .local v3, "result":[Z
     const/4 v2, 0x0
 
@@ -212,7 +190,6 @@
     :goto_0
     if-ge v2, v1, :cond_0
 
-    .line 199
     aget-object v5, v0, v2
 
     invoke-interface {v5}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
@@ -225,12 +202,10 @@
 
     aput-boolean v5, v3, v2
 
-    .line 198
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 202
     :cond_0
     return-object v3
 .end method
@@ -242,14 +217,12 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 157
     if-eqz p1, :cond_1
 
     iget-object v1, p0, Lcom/letv/leui/preference/LeMultiSelectListPreference;->mEntryValues:[Ljava/lang/CharSequence;
 
     if-eqz v1, :cond_1
 
-    .line 158
     iget-object v1, p0, Lcom/letv/leui/preference/LeMultiSelectListPreference;->mEntryValues:[Ljava/lang/CharSequence;
 
     array-length v1, v1
@@ -260,7 +233,6 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 159
     iget-object v1, p0, Lcom/letv/leui/preference/LeMultiSelectListPreference;->mEntryValues:[Ljava/lang/CharSequence;
 
     aget-object v1, v1, v0
@@ -271,19 +243,16 @@
 
     if-eqz v1, :cond_0
 
-    .line 164
     .end local v0    # "i":I
     :goto_1
     return v0
 
-    .line 158
     .restart local v0    # "i":I
     :cond_0
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 164
     .end local v0    # "i":I
     :cond_1
     const/4 v0, -0x1
@@ -295,7 +264,6 @@
     .locals 1
 
     .prologue
-    .line 99
     iget-object v0, p0, Lcom/letv/leui/preference/LeMultiSelectListPreference;->mEntries:[Ljava/lang/CharSequence;
 
     return-object v0
@@ -305,7 +273,6 @@
     .locals 1
 
     .prologue
-    .line 127
     iget-object v0, p0, Lcom/letv/leui/preference/LeMultiSelectListPreference;->mEntryValues:[Ljava/lang/CharSequence;
 
     return-object v0
@@ -324,7 +291,6 @@
     .end annotation
 
     .prologue
-    .line 147
     iget-object v0, p0, Lcom/letv/leui/preference/LeMultiSelectListPreference;->mValues:Ljava/util/Set;
 
     return-object v0
@@ -335,20 +301,16 @@
     .param p1, "positiveResult"    # Z
 
     .prologue
-    .line 207
     invoke-super {p0, p1}, Lcom/letv/leui/preference/LeDialogPreferenceEx;->onDialogClosed(Z)V
 
-    .line 209
     if-eqz p1, :cond_0
 
     iget-boolean v1, p0, Lcom/letv/leui/preference/LeMultiSelectListPreference;->mPreferenceChanged:Z
 
     if-eqz v1, :cond_0
 
-    .line 210
     iget-object v0, p0, Lcom/letv/leui/preference/LeMultiSelectListPreference;->mNewValues:Ljava/util/Set;
 
-    .line 211
     .local v0, "values":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-virtual {p0, v0}, Lcom/letv/leui/preference/LeMultiSelectListPreference;->callChangeListener(Ljava/lang/Object;)Z
 
@@ -356,17 +318,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 212
     invoke-virtual {p0, v0}, Lcom/letv/leui/preference/LeMultiSelectListPreference;->setValues(Ljava/util/Set;)V
 
-    .line 215
     .end local v0    # "values":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     :cond_0
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/letv/leui/preference/LeMultiSelectListPreference;->mPreferenceChanged:Z
 
-    .line 216
     return-void
 .end method
 
@@ -376,22 +335,18 @@
     .param p2, "index"    # I
 
     .prologue
-    .line 220
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getTextArray(I)[Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 221
     .local v0, "defaultValues":[Ljava/lang/CharSequence;
     array-length v3, v0
 
-    .line 222
     .local v3, "valueCount":I
     new-instance v2, Ljava/util/HashSet;
 
     invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
 
-    .line 224
     .local v2, "result":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     const/4 v1, 0x0
 
@@ -399,7 +354,6 @@
     :goto_0
     if-ge v1, v3, :cond_0
 
-    .line 225
     aget-object v4, v0, v1
 
     invoke-interface {v4}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
@@ -408,12 +362,10 @@
 
     invoke-interface {v2, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 224
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 228
     :cond_0
     return-object v2
 .end method
@@ -423,10 +375,8 @@
     .param p1, "builder"    # Lcom/letv/leui/widget/LePopupWindow$Builder;
 
     .prologue
-    .line 169
     invoke-super {p0, p1}, Lcom/letv/leui/preference/LeDialogPreferenceEx;->onPrepareDialogBuilder(Lcom/letv/leui/widget/LePopupWindow$Builder;)V
 
-    .line 171
     iget-object v1, p0, Lcom/letv/leui/preference/LeMultiSelectListPreference;->mEntries:[Ljava/lang/CharSequence;
 
     if-eqz v1, :cond_0
@@ -435,7 +385,6 @@
 
     if-nez v1, :cond_1
 
-    .line 172
     :cond_0
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -445,13 +394,11 @@
 
     throw v1
 
-    .line 177
     :cond_1
     invoke-direct {p0}, Lcom/letv/leui/preference/LeMultiSelectListPreference;->getSelectedItems()[Z
 
     move-result-object v0
 
-    .line 178
     .local v0, "checkedItems":[Z
     iget-object v1, p0, Lcom/letv/leui/preference/LeMultiSelectListPreference;->mEntries:[Ljava/lang/CharSequence;
 
@@ -461,19 +408,16 @@
 
     invoke-virtual {p1, v1, v0, v2}, Lcom/letv/leui/widget/LePopupWindow$Builder;->setMultiChoiceItems([Ljava/lang/CharSequence;[ZLandroid/content/DialogInterface$OnMultiChoiceClickListener;)Lcom/letv/leui/widget/LePopupWindow$Builder;
 
-    .line 188
     iget-object v1, p0, Lcom/letv/leui/preference/LeMultiSelectListPreference;->mNewValues:Ljava/util/Set;
 
     invoke-interface {v1}, Ljava/util/Set;->clear()V
 
-    .line 189
     iget-object v1, p0, Lcom/letv/leui/preference/LeMultiSelectListPreference;->mNewValues:Ljava/util/Set;
 
     iget-object v2, p0, Lcom/letv/leui/preference/LeMultiSelectListPreference;->mValues:Ljava/util/Set;
 
     invoke-interface {v1, v2}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 190
     return-void
 .end method
 
@@ -481,12 +425,10 @@
     .locals 3
 
     .prologue
-    .line 238
     invoke-super {p0}, Lcom/letv/leui/preference/LeDialogPreferenceEx;->onSaveInstanceState()Landroid/os/Parcelable;
 
     move-result-object v1
 
-    .line 239
     .local v1, "superState":Landroid/os/Parcelable;
     invoke-virtual {p0}, Lcom/letv/leui/preference/LeMultiSelectListPreference;->isPersistent()Z
 
@@ -494,19 +436,16 @@
 
     if-eqz v2, :cond_0
 
-    .line 246
     .end local v1    # "superState":Landroid/os/Parcelable;
     :goto_0
     return-object v1
 
-    .line 244
     .restart local v1    # "superState":Landroid/os/Parcelable;
     :cond_0
     new-instance v0, Lcom/letv/leui/preference/LeMultiSelectListPreference$SavedState;
 
     invoke-direct {v0, v1}, Lcom/letv/leui/preference/LeMultiSelectListPreference$SavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 245
     .local v0, "myState":Lcom/letv/leui/preference/LeMultiSelectListPreference$SavedState;
     invoke-virtual {p0}, Lcom/letv/leui/preference/LeMultiSelectListPreference;->getValues()Ljava/util/Set;
 
@@ -516,7 +455,6 @@
 
     move-object v1, v0
 
-    .line 246
     goto :goto_0
 .end method
 
@@ -526,7 +464,6 @@
     .param p2, "defaultValue"    # Ljava/lang/Object;
 
     .prologue
-    .line 233
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcom/letv/leui/preference/LeMultiSelectListPreference;->mValues:Ljava/util/Set;
@@ -539,10 +476,8 @@
     :goto_0
     invoke-virtual {p0, p2}, Lcom/letv/leui/preference/LeMultiSelectListPreference;->setValues(Ljava/util/Set;)V
 
-    .line 234
     return-void
 
-    .line 233
     .restart local p2    # "defaultValue":Ljava/lang/Object;
     :cond_0
     check-cast p2, Ljava/util/Set;
@@ -555,7 +490,6 @@
     .param p1, "entriesResId"    # I
 
     .prologue
-    .line 90
     invoke-virtual {p0}, Lcom/letv/leui/preference/LeMultiSelectListPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -570,7 +504,6 @@
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/preference/LeMultiSelectListPreference;->setEntries([Ljava/lang/CharSequence;)V
 
-    .line 91
     return-void
 .end method
 
@@ -579,10 +512,8 @@
     .param p1, "entries"    # [Ljava/lang/CharSequence;
 
     .prologue
-    .line 82
     iput-object p1, p0, Lcom/letv/leui/preference/LeMultiSelectListPreference;->mEntries:[Ljava/lang/CharSequence;
 
-    .line 83
     return-void
 .end method
 
@@ -591,7 +522,6 @@
     .param p1, "entryValuesResId"    # I
 
     .prologue
-    .line 118
     invoke-virtual {p0}, Lcom/letv/leui/preference/LeMultiSelectListPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -606,7 +536,6 @@
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/preference/LeMultiSelectListPreference;->setEntryValues([Ljava/lang/CharSequence;)V
 
-    .line 119
     return-void
 .end method
 
@@ -615,10 +544,8 @@
     .param p1, "entryValues"    # [Ljava/lang/CharSequence;
 
     .prologue
-    .line 110
     iput-object p1, p0, Lcom/letv/leui/preference/LeMultiSelectListPreference;->mEntryValues:[Ljava/lang/CharSequence;
 
-    .line 111
     return-void
 .end method
 
@@ -635,20 +562,16 @@
     .end annotation
 
     .prologue
-    .line 137
     .local p1, "values":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     iget-object v0, p0, Lcom/letv/leui/preference/LeMultiSelectListPreference;->mValues:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->clear()V
 
-    .line 138
     iget-object v0, p0, Lcom/letv/leui/preference/LeMultiSelectListPreference;->mValues:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 140
     invoke-virtual {p0, p1}, Lcom/letv/leui/preference/LeMultiSelectListPreference;->persistStringSet(Ljava/util/Set;)Z
 
-    .line 141
     return-void
 .end method

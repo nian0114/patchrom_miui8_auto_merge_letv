@@ -33,18 +33,13 @@
     .param p3, "id"    # J
 
     .prologue
-    .line 3643
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3644
     iput-object p1, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterContextMenuInfo;->targetView:Landroid/view/View;
 
-    .line 3645
     iput p2, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterContextMenuInfo;->position:I
 
-    .line 3646
     iput-wide p3, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterContextMenuInfo;->id:J
 
-    .line 3647
     return-void
 .end method

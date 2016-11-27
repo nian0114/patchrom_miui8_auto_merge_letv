@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -50,7 +49,6 @@
     .end annotation
 
     .prologue
-    .line 65
     .local p0, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-static {p0}, Lcom/android/server/pm/http/SignatureUtils;->encodeJson(Ljava/util/Map;)Ljava/lang/StringBuilder;
 
@@ -82,28 +80,23 @@
     .end annotation
 
     .prologue
-    .line 69
     .local p0, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 70
     .local v4, "sb":Ljava/lang/StringBuilder;
     if-nez p0, :cond_0
 
-    .line 82
     :goto_0
     return-object v4
 
-    .line 74
     :cond_0
     :try_start_0
     new-instance v3, Lorg/json/JSONObject;
 
     invoke-direct {v3}, Lorg/json/JSONObject;-><init>()V
 
-    .line 75
     .local v3, "object":Lorg/json/JSONObject;
     invoke-interface {p0}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
@@ -127,7 +120,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 76
     .local v2, "key":Ljava/lang/String;
     invoke-interface {p0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -139,20 +131,17 @@
 
     goto :goto_1
 
-    .line 79
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "key":Ljava/lang/String;
     .end local v3    # "object":Lorg/json/JSONObject;
     :catch_0
     move-exception v0
 
-    .line 80
     .local v0, "e":Lorg/json/JSONException;
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 78
     .end local v0    # "e":Lorg/json/JSONException;
     .restart local v1    # "i$":Ljava/util/Iterator;
     .restart local v3    # "object":Lorg/json/JSONObject;
@@ -195,30 +184,25 @@
     .end annotation
 
     .prologue
-    .line 47
     .local p4, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     new-instance v6, Ljava/util/HashMap;
 
     invoke-direct {v6}, Ljava/util/HashMap;-><init>()V
 
-    .line 48
     .local v6, "header":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-static {p2, p3}, Lcom/letv/leui/util/LeSignature;->formatDate(J)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 49
     .local v4, "date":Ljava/lang/String;
     if-eqz p5, :cond_0
 
-    .line 50
     const-string v0, "Content-Type"
 
     const-string v1, "application/json"
 
     invoke-interface {v6, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 51
     const-string v7, "Authorization"
 
     const-string v8, " LETV %s %s"
@@ -259,16 +243,13 @@
 
     invoke-interface {v6, v7, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 55
     :goto_0
     const-string v0, "Date"
 
     invoke-interface {v6, v0, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 56
     return-object v6
 
-    .line 53
     :cond_0
     const-string v7, "Authorization"
 

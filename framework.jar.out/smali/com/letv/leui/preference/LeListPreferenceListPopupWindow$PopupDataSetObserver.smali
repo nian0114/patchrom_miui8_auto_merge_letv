@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1733
     iput-object p1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$PopupDataSetObserver;->this$0:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;
 
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$1;
 
     .prologue
-    .line 1733
     invoke-direct {p0, p1}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$PopupDataSetObserver;-><init>(Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;)V
 
     return-void
@@ -49,7 +47,6 @@
     .locals 1
 
     .prologue
-    .line 1736
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$PopupDataSetObserver;->this$0:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;
 
     invoke-virtual {v0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->isShowing()Z
@@ -58,12 +55,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 1738
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$PopupDataSetObserver;->this$0:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;
 
     invoke-virtual {v0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->show()V
 
-    .line 1740
     :cond_0
     return-void
 .end method
@@ -72,11 +67,9 @@
     .locals 1
 
     .prologue
-    .line 1744
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$PopupDataSetObserver;->this$0:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;
 
     invoke-virtual {v0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->dismiss()V
 
-    .line 1745
     return-void
 .end method

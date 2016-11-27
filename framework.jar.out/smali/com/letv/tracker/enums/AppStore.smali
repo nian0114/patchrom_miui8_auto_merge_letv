@@ -99,7 +99,6 @@
 
     const/4 v4, 0x0
 
-    .line 4
     new-instance v0, Lcom/letv/tracker/enums/AppStore;
 
     const-string v1, "Store360"
@@ -110,7 +109,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/AppStore;->Store360:Lcom/letv/tracker/enums/AppStore;
 
-    .line 5
     new-instance v0, Lcom/letv/tracker/enums/AppStore;
 
     const-string v1, "Baidu"
@@ -121,7 +119,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/AppStore;->Baidu:Lcom/letv/tracker/enums/AppStore;
 
-    .line 6
     new-instance v0, Lcom/letv/tracker/enums/AppStore;
 
     const-string v1, "Wandoujia"
@@ -132,7 +129,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/AppStore;->Wandoujia:Lcom/letv/tracker/enums/AppStore;
 
-    .line 7
     new-instance v0, Lcom/letv/tracker/enums/AppStore;
 
     const-string v1, "Hiapk"
@@ -143,7 +139,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/AppStore;->Hiapk:Lcom/letv/tracker/enums/AppStore;
 
-    .line 8
     new-instance v0, Lcom/letv/tracker/enums/AppStore;
 
     const-string v1, "Anzhi"
@@ -154,7 +149,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/AppStore;->Anzhi:Lcom/letv/tracker/enums/AppStore;
 
-    .line 9
     new-instance v0, Lcom/letv/tracker/enums/AppStore;
 
     const-string v1, "GPlay"
@@ -167,7 +161,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/AppStore;->GPlay:Lcom/letv/tracker/enums/AppStore;
 
-    .line 10
     new-instance v0, Lcom/letv/tracker/enums/AppStore;
 
     const-string v1, "Zs91"
@@ -180,7 +173,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/AppStore;->Zs91:Lcom/letv/tracker/enums/AppStore;
 
-    .line 11
     new-instance v0, Lcom/letv/tracker/enums/AppStore;
 
     const-string v1, "AppMi"
@@ -193,7 +185,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/AppStore;->AppMi:Lcom/letv/tracker/enums/AppStore;
 
-    .line 12
     new-instance v0, Lcom/letv/tracker/enums/AppStore;
 
     const-string v1, "AppMy"
@@ -206,7 +197,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/AppStore;->AppMy:Lcom/letv/tracker/enums/AppStore;
 
-    .line 13
     new-instance v0, Lcom/letv/tracker/enums/AppStore;
 
     const-string v1, "Appchina"
@@ -219,7 +209,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/AppStore;->Appchina:Lcom/letv/tracker/enums/AppStore;
 
-    .line 14
     new-instance v0, Lcom/letv/tracker/enums/AppStore;
 
     const-string v1, "Gfan"
@@ -232,7 +221,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/AppStore;->Gfan:Lcom/letv/tracker/enums/AppStore;
 
-    .line 15
     new-instance v0, Lcom/letv/tracker/enums/AppStore;
 
     const-string v1, "Nduoa"
@@ -245,7 +233,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/AppStore;->Nduoa:Lcom/letv/tracker/enums/AppStore;
 
-    .line 16
     new-instance v0, Lcom/letv/tracker/enums/AppStore;
 
     const-string v1, "MobileMM"
@@ -258,7 +245,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/AppStore;->MobileMM:Lcom/letv/tracker/enums/AppStore;
 
-    .line 17
     new-instance v0, Lcom/letv/tracker/enums/AppStore;
 
     const-string v1, "MarketEoe"
@@ -271,7 +257,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/AppStore;->MarketEoe:Lcom/letv/tracker/enums/AppStore;
 
-    .line 18
     new-instance v0, Lcom/letv/tracker/enums/AppStore;
 
     const-string v1, "StoreWo"
@@ -284,7 +269,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/AppStore;->StoreWo:Lcom/letv/tracker/enums/AppStore;
 
-    .line 19
     new-instance v0, Lcom/letv/tracker/enums/AppStore;
 
     const-string v1, "Ggmark"
@@ -297,7 +281,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/AppStore;->Ggmark:Lcom/letv/tracker/enums/AppStore;
 
-    .line 20
     new-instance v0, Lcom/letv/tracker/enums/AppStore;
 
     const-string v1, "Mumayi"
@@ -310,7 +293,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/AppStore;->Mumayi:Lcom/letv/tracker/enums/AppStore;
 
-    .line 21
     new-instance v0, Lcom/letv/tracker/enums/AppStore;
 
     const-string v1, "Apper163"
@@ -323,7 +305,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/AppStore;->Apper163:Lcom/letv/tracker/enums/AppStore;
 
-    .line 22
     new-instance v0, Lcom/letv/tracker/enums/AppStore;
 
     const-string v1, "MarketSogou"
@@ -336,7 +317,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/AppStore;->MarketSogou:Lcom/letv/tracker/enums/AppStore;
 
-    .line 23
     new-instance v0, Lcom/letv/tracker/enums/AppStore;
 
     const-string v1, "Sogoutools"
@@ -349,7 +329,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/AppStore;->Sogoutools:Lcom/letv/tracker/enums/AppStore;
 
-    .line 24
     new-instance v0, Lcom/letv/tracker/enums/AppStore;
 
     const-string v1, "Paojiao"
@@ -362,7 +341,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/AppStore;->Paojiao:Lcom/letv/tracker/enums/AppStore;
 
-    .line 25
     new-instance v0, Lcom/letv/tracker/enums/AppStore;
 
     const-string v1, "Appcenter"
@@ -375,7 +353,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/AppStore;->Appcenter:Lcom/letv/tracker/enums/AppStore;
 
-    .line 26
     new-instance v0, Lcom/letv/tracker/enums/AppStore;
 
     const-string v1, "LenovoMM"
@@ -388,7 +365,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/AppStore;->LenovoMM:Lcom/letv/tracker/enums/AppStore;
 
-    .line 27
     new-instance v0, Lcom/letv/tracker/enums/AppStore;
 
     const-string v1, "Nearme"
@@ -401,7 +377,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/AppStore;->Nearme:Lcom/letv/tracker/enums/AppStore;
 
-    .line 28
     new-instance v0, Lcom/letv/tracker/enums/AppStore;
 
     const-string v1, "Coolmart"
@@ -414,7 +389,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/AppStore;->Coolmart:Lcom/letv/tracker/enums/AppStore;
 
-    .line 29
     new-instance v0, Lcom/letv/tracker/enums/AppStore;
 
     const-string v1, "Anzhuoapk"
@@ -427,7 +401,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/AppStore;->Anzhuoapk:Lcom/letv/tracker/enums/AppStore;
 
-    .line 30
     new-instance v0, Lcom/letv/tracker/enums/AppStore;
 
     const-string v1, "Hicloud"
@@ -440,7 +413,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/AppStore;->Hicloud:Lcom/letv/tracker/enums/AppStore;
 
-    .line 31
     new-instance v0, Lcom/letv/tracker/enums/AppStore;
 
     const-string v1, "Samsung"
@@ -453,7 +425,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/AppStore;->Samsung:Lcom/letv/tracker/enums/AppStore;
 
-    .line 32
     new-instance v0, Lcom/letv/tracker/enums/AppStore;
 
     const-string v1, "Meizu"
@@ -466,7 +437,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/AppStore;->Meizu:Lcom/letv/tracker/enums/AppStore;
 
-    .line 33
     new-instance v0, Lcom/letv/tracker/enums/AppStore;
 
     const-string v1, "StoreVivo"
@@ -479,7 +449,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/AppStore;->StoreVivo:Lcom/letv/tracker/enums/AppStore;
 
-    .line 34
     new-instance v0, Lcom/letv/tracker/enums/AppStore;
 
     const-string v1, "StoreHTC"
@@ -492,7 +461,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/AppStore;->StoreHTC:Lcom/letv/tracker/enums/AppStore;
 
-    .line 3
     const/16 v0, 0x1f
 
     new-array v0, v0, [Lcom/letv/tracker/enums/AppStore;
@@ -690,13 +658,10 @@
     .end annotation
 
     .prologue
-    .line 39
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 40
     iput-object p3, p0, Lcom/letv/tracker/enums/AppStore;->storeId:Ljava/lang/String;
 
-    .line 41
     return-void
 .end method
 
@@ -705,7 +670,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 3
     const-class v0, Lcom/letv/tracker/enums/AppStore;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -721,7 +685,6 @@
     .locals 1
 
     .prologue
-    .line 3
     sget-object v0, Lcom/letv/tracker/enums/AppStore;->$VALUES:[Lcom/letv/tracker/enums/AppStore;
 
     invoke-virtual {v0}, [Lcom/letv/tracker/enums/AppStore;->clone()Ljava/lang/Object;
@@ -739,7 +702,6 @@
     .locals 1
 
     .prologue
-    .line 44
     iget-object v0, p0, Lcom/letv/tracker/enums/AppStore;->storeId:Ljava/lang/String;
 
     return-object v0

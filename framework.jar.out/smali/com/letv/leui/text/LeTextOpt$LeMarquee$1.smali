@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 764
     iput-object p1, p0, Lcom/letv/leui/text/LeTextOpt$LeMarquee$1;->this$0:Lcom/letv/leui/text/LeTextOpt$LeMarquee;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +40,9 @@
     .param p1, "frameTimeNanos"    # J
 
     .prologue
-    .line 767
     iget-object v0, p0, Lcom/letv/leui/text/LeTextOpt$LeMarquee$1;->this$0:Lcom/letv/leui/text/LeTextOpt$LeMarquee;
 
     invoke-virtual {v0}, Lcom/letv/leui/text/LeTextOpt$LeMarquee;->tick()V
 
-    .line 768
     return-void
 .end method

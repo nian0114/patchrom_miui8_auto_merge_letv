@@ -42,18 +42,14 @@
     .param p3, "view"    # Landroid/view/View;
 
     .prologue
-    .line 991
     iput-object p1, p0, Lcom/letv/leui/widget/LeListView$PendingDismissData;->this$0:Lcom/letv/leui/widget/LeListView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 992
     iput p2, p0, Lcom/letv/leui/widget/LeListView$PendingDismissData;->position:I
 
-    .line 993
     iput-object p3, p0, Lcom/letv/leui/widget/LeListView$PendingDismissData;->view:Landroid/view/View;
 
-    .line 994
     return-void
 .end method
 
@@ -64,7 +60,6 @@
     .param p1, "other"    # Lcom/letv/leui/widget/LeListView$PendingDismissData;
 
     .prologue
-    .line 999
     iget v0, p1, Lcom/letv/leui/widget/LeListView$PendingDismissData;->position:I
 
     iget v1, p0, Lcom/letv/leui/widget/LeListView$PendingDismissData;->position:I
@@ -78,7 +73,6 @@
     .locals 1
 
     .prologue
-    .line 987
     check-cast p1, Lcom/letv/leui/widget/LeListView$PendingDismissData;
 
     invoke-virtual {p0, p1}, Lcom/letv/leui/widget/LeListView$PendingDismissData;->compareTo(Lcom/letv/leui/widget/LeListView$PendingDismissData;)I

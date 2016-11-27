@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1493
     iput-object p1, p0, Lcom/android/server/display/DisplayPowerController$10;->this$0:Lcom/android/server/display/DisplayPowerController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "accuracy"    # I
 
     .prologue
-    .line 1524
     return-void
 .end method
 
@@ -57,7 +55,6 @@
 
     const/4 v3, 0x0
 
-    .line 1496
     iget-object v6, p0, Lcom/android/server/display/DisplayPowerController$10;->this$0:Lcom/android/server/display/DisplayPowerController;
 
     # getter for: Lcom/android/server/display/DisplayPowerController;->mHallSensorEnabled:Z
@@ -67,18 +64,15 @@
 
     if-eqz v6, :cond_1
 
-    .line 1497
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
 
-    .line 1498
     .local v4, "time":J
     iget-object v6, p1, Landroid/hardware/SensorEvent;->values:[F
 
     aget v1, v6, v3
 
-    .line 1499
     .local v1, "mHallStatus":F
     const-string v6, "DisplayPowerController"
 
@@ -102,7 +96,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1501
     iget-object v6, p0, Lcom/android/server/display/DisplayPowerController$10;->this$0:Lcom/android/server/display/DisplayPowerController;
 
     # getter for: Lcom/android/server/display/DisplayPowerController;->mLastStatus:F
@@ -114,24 +107,20 @@
 
     if-eqz v6, :cond_0
 
-    .line 1502
     cmpl-float v6, v1, v9
 
     if-nez v6, :cond_2
 
-    .line 1503
     iget-object v6, p0, Lcom/android/server/display/DisplayPowerController$10;->this$0:Lcom/android/server/display/DisplayPowerController;
 
     # setter for: Lcom/android/server/display/DisplayPowerController;->mScreenOffBecauseOfHall:Z
     invoke-static {v6, v2}, Lcom/android/server/display/DisplayPowerController;->access$1602(Lcom/android/server/display/DisplayPowerController;Z)Z
 
-    .line 1507
     :goto_0
     cmpl-float v6, v1, v9
 
     if-eqz v6, :cond_3
 
-    .line 1508
     .local v2, "positive":Z
     :goto_1
     const-string v3, "sys.hallsensor.enable"
@@ -142,7 +131,6 @@
 
     move-result-object v0
 
-    .line 1509
     .local v0, "mHallEnable":Ljava/lang/String;
     const-string v3, "DisplayPowerController"
 
@@ -176,7 +164,6 @@
 
     invoke-static {v3, v6}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1510
     const-string v3, "1"
 
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -185,13 +172,11 @@
 
     if-eqz v3, :cond_1
 
-    .line 1511
     iget-object v3, p0, Lcom/android/server/display/DisplayPowerController$10;->this$0:Lcom/android/server/display/DisplayPowerController;
 
     # invokes: Lcom/android/server/display/DisplayPowerController;->handleHallSensorEvent(JZ)V
     invoke-static {v3, v4, v5, v2}, Lcom/android/server/display/DisplayPowerController;->access$1700(Lcom/android/server/display/DisplayPowerController;JZ)V
 
-    .line 1517
     .end local v0    # "mHallEnable":Ljava/lang/String;
     .end local v2    # "positive":Z
     :cond_0
@@ -200,13 +185,11 @@
     # setter for: Lcom/android/server/display/DisplayPowerController;->mLastStatus:F
     invoke-static {v3, v1}, Lcom/android/server/display/DisplayPowerController;->access$1502(Lcom/android/server/display/DisplayPowerController;F)F
 
-    .line 1519
     .end local v1    # "mHallStatus":F
     .end local v4    # "time":J
     :cond_1
     return-void
 
-    .line 1505
     .restart local v1    # "mHallStatus":F
     .restart local v4    # "time":J
     :cond_2
@@ -220,6 +203,5 @@
     :cond_3
     move v2, v3
 
-    .line 1507
     goto :goto_1
 .end method

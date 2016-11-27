@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2787
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$15;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +40,9 @@
     .param p1, "dialogInterface"    # Landroid/content/DialogInterface;
 
     .prologue
-    .line 2790
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$15;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-virtual {v0}, Lcom/android/internal/app/ResolverActivity;->finish()V
 
-    .line 2791
     return-void
 .end method

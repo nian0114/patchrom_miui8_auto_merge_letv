@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 94
     iput p1, p0, Lcom/letv/leui/util/DominantColorFinder$1;->val$maxCount:F
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
     .param p2, "rhs"    # Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
     .prologue
-    .line 97
     iget v2, p0, Lcom/letv/leui/util/DominantColorFinder$1;->val$maxCount:F
 
     # invokes: Lcom/letv/leui/util/DominantColorFinder;->calculateWeight(Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;F)F
@@ -60,7 +58,6 @@
 
     move-result v0
 
-    .line 98
     .local v0, "lhsWeight":F
     iget v2, p0, Lcom/letv/leui/util/DominantColorFinder$1;->val$maxCount:F
 
@@ -69,31 +66,25 @@
 
     move-result v1
 
-    .line 100
     .local v1, "rhsWeight":F
     cmpg-float v2, v0, v1
 
     if-gez v2, :cond_0
 
-    .line 101
     const/4 v2, 0x1
 
-    .line 105
     :goto_0
     return v2
 
-    .line 102
     :cond_0
     cmpl-float v2, v0, v1
 
     if-lez v2, :cond_1
 
-    .line 103
     const/4 v2, -0x1
 
     goto :goto_0
 
-    .line 105
     :cond_1
     const/4 v2, 0x0
 
@@ -104,7 +95,6 @@
     .locals 1
 
     .prologue
-    .line 94
     check-cast p1, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
     check-cast p2, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;

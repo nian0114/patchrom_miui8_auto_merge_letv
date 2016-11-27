@@ -24,17 +24,14 @@
     .locals 1
 
     .prologue
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/LoadingLayoutProxy;->mLoadingLayouts:Ljava/util/HashSet;
 
-    .line 16
     return-void
 .end method
 
@@ -45,15 +42,12 @@
     .param p1, "layout"    # Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
 
     .prologue
-    .line 28
     if-eqz p1, :cond_0
 
-    .line 29
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/LoadingLayoutProxy;->mLoadingLayouts:Ljava/util/HashSet;
 
     invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 31
     :cond_0
     return-void
 .end method
@@ -63,7 +57,6 @@
     .param p1, "label"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 35
     iget-object v2, p0, Lcom/letv/leui/widget/pulltorefresh/LoadingLayoutProxy;->mLoadingLayouts:Ljava/util/HashSet;
 
     invoke-virtual {v2}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -84,13 +77,11 @@
 
     check-cast v1, Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
 
-    .line 36
     .local v1, "layout":Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
     invoke-virtual {v1, p1}, Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;->setLastUpdatedLabel(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
-    .line 38
     .end local v1    # "layout":Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
     :cond_0
     return-void
@@ -101,7 +92,6 @@
     .param p1, "drawable"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 42
     iget-object v2, p0, Lcom/letv/leui/widget/pulltorefresh/LoadingLayoutProxy;->mLoadingLayouts:Ljava/util/HashSet;
 
     invoke-virtual {v2}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -122,13 +112,11 @@
 
     check-cast v1, Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
 
-    .line 43
     .local v1, "layout":Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
     invoke-virtual {v1, p1}, Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;->setLoadingDrawable(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_0
 
-    .line 45
     .end local v1    # "layout":Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
     :cond_0
     return-void
@@ -139,7 +127,6 @@
     .param p1, "label"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 56
     iget-object v2, p0, Lcom/letv/leui/widget/pulltorefresh/LoadingLayoutProxy;->mLoadingLayouts:Ljava/util/HashSet;
 
     invoke-virtual {v2}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -160,13 +147,11 @@
 
     check-cast v1, Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
 
-    .line 57
     .local v1, "layout":Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
     invoke-virtual {v1, p1}, Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;->setPullLabel(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
-    .line 59
     .end local v1    # "layout":Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
     :cond_0
     return-void
@@ -177,7 +162,6 @@
     .param p1, "refreshingLabel"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 49
     iget-object v2, p0, Lcom/letv/leui/widget/pulltorefresh/LoadingLayoutProxy;->mLoadingLayouts:Ljava/util/HashSet;
 
     invoke-virtual {v2}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -198,13 +182,11 @@
 
     check-cast v1, Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
 
-    .line 50
     .local v1, "layout":Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
     invoke-virtual {v1, p1}, Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;->setRefreshingLabel(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
-    .line 52
     .end local v1    # "layout":Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
     :cond_0
     return-void
@@ -215,7 +197,6 @@
     .param p1, "label"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 63
     iget-object v2, p0, Lcom/letv/leui/widget/pulltorefresh/LoadingLayoutProxy;->mLoadingLayouts:Ljava/util/HashSet;
 
     invoke-virtual {v2}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -236,13 +217,11 @@
 
     check-cast v1, Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
 
-    .line 64
     .local v1, "layout":Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
     invoke-virtual {v1, p1}, Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;->setReleaseLabel(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
-    .line 66
     .end local v1    # "layout":Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
     :cond_0
     return-void
@@ -253,7 +232,6 @@
     .param p1, "tf"    # Landroid/graphics/Typeface;
 
     .prologue
-    .line 69
     iget-object v2, p0, Lcom/letv/leui/widget/pulltorefresh/LoadingLayoutProxy;->mLoadingLayouts:Ljava/util/HashSet;
 
     invoke-virtual {v2}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -274,13 +252,11 @@
 
     check-cast v1, Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
 
-    .line 70
     .local v1, "layout":Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
     invoke-virtual {v1, p1}, Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;->setTextTypeface(Landroid/graphics/Typeface;)V
 
     goto :goto_0
 
-    .line 72
     .end local v1    # "layout":Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
     :cond_0
     return-void

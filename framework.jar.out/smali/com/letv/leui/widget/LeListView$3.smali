@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 1044
     iput-object p1, p0, Lcom/letv/leui/widget/LeListView$3;->this$0:Lcom/letv/leui/widget/LeListView;
 
     iput-object p2, p0, Lcom/letv/leui/widget/LeListView$3;->val$lp:Landroid/view/ViewGroup$LayoutParams;
@@ -49,7 +48,6 @@
     .param p1, "valueAnimator"    # Landroid/animation/ValueAnimator;
 
     .prologue
-    .line 1047
     iget-object v1, p0, Lcom/letv/leui/widget/LeListView$3;->val$lp:Landroid/view/ViewGroup$LayoutParams;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
@@ -64,13 +62,11 @@
 
     iput v0, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 1048
     iget-object v0, p0, Lcom/letv/leui/widget/LeListView$3;->val$dismissView:Landroid/view/View;
 
     iget-object v1, p0, Lcom/letv/leui/widget/LeListView$3;->val$lp:Landroid/view/ViewGroup$LayoutParams;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1049
     return-void
 .end method

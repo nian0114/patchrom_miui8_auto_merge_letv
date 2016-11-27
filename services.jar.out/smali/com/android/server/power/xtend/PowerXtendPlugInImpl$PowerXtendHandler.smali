@@ -24,17 +24,14 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 242
     iput-object p1, p0, Lcom/android/server/power/xtend/PowerXtendPlugInImpl$PowerXtendHandler;->this$0:Lcom/android/server/power/xtend/PowerXtendPlugInImpl;
 
-    .line 243
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-direct {p0, p2, v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 244
     return-void
 .end method
 
@@ -45,7 +42,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 248
     iget-object v1, p0, Lcom/android/server/power/xtend/PowerXtendPlugInImpl$PowerXtendHandler;->this$0:Lcom/android/server/power/xtend/PowerXtendPlugInImpl;
 
     # getter for: Lcom/android/server/power/xtend/PowerXtendPlugInImpl;->mPowerXtendReady:Z
@@ -55,7 +51,6 @@
 
     if-nez v1, :cond_1
 
-    .line 249
     const-string v1, "PowerXtendPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -80,12 +75,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 269
     :cond_0
     :goto_0
     return-void
 
-    .line 252
     :cond_1
     iget v1, p1, Landroid/os/Message;->what:I
 
@@ -93,7 +86,6 @@
 
     goto :goto_0
 
-    .line 255
     :pswitch_0
     iget-object v1, p0, Lcom/android/server/power/xtend/PowerXtendPlugInImpl$PowerXtendHandler;->this$0:Lcom/android/server/power/xtend/PowerXtendPlugInImpl;
 
@@ -102,7 +94,6 @@
     # setter for: Lcom/android/server/power/xtend/PowerXtendPlugInImpl;->mPendingOprator:Z
     invoke-static {v1, v2}, Lcom/android/server/power/xtend/PowerXtendPlugInImpl;->access$102(Lcom/android/server/power/xtend/PowerXtendPlugInImpl;Z)Z
 
-    .line 256
     iget-object v1, p0, Lcom/android/server/power/xtend/PowerXtendPlugInImpl$PowerXtendHandler;->this$0:Lcom/android/server/power/xtend/PowerXtendPlugInImpl;
 
     # invokes: Lcom/android/server/power/xtend/PowerXtendPlugInImpl;->calculateXtendMode()Lcom/android/server/power/xtend/PowerXtendPlugInImpl$XtendMode;
@@ -110,7 +101,6 @@
 
     move-result-object v0
 
-    .line 257
     .local v0, "newXtendMode":Lcom/android/server/power/xtend/PowerXtendPlugInImpl$XtendMode;
     iget-object v1, p0, Lcom/android/server/power/xtend/PowerXtendPlugInImpl$PowerXtendHandler;->this$0:Lcom/android/server/power/xtend/PowerXtendPlugInImpl;
 
@@ -121,7 +111,6 @@
 
     if-eq v1, v0, :cond_0
 
-    .line 262
     const-string v1, "PowerXtendPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -181,13 +170,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 264
     iget-object v1, p0, Lcom/android/server/power/xtend/PowerXtendPlugInImpl$PowerXtendHandler;->this$0:Lcom/android/server/power/xtend/PowerXtendPlugInImpl;
 
     # setter for: Lcom/android/server/power/xtend/PowerXtendPlugInImpl;->mXtendMode:Lcom/android/server/power/xtend/PowerXtendPlugInImpl$XtendMode;
     invoke-static {v1, v0}, Lcom/android/server/power/xtend/PowerXtendPlugInImpl;->access$302(Lcom/android/server/power/xtend/PowerXtendPlugInImpl;Lcom/android/server/power/xtend/PowerXtendPlugInImpl$XtendMode;)Lcom/android/server/power/xtend/PowerXtendPlugInImpl$XtendMode;
 
-    .line 265
     iget-object v1, p0, Lcom/android/server/power/xtend/PowerXtendPlugInImpl$PowerXtendHandler;->this$0:Lcom/android/server/power/xtend/PowerXtendPlugInImpl;
 
     iget-object v2, p0, Lcom/android/server/power/xtend/PowerXtendPlugInImpl$PowerXtendHandler;->this$0:Lcom/android/server/power/xtend/PowerXtendPlugInImpl;
@@ -202,7 +189,6 @@
 
     goto :goto_0
 
-    .line 252
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

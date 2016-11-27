@@ -30,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 108
     const-string v0, "&#([0-9]{3,5});"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -54,29 +53,22 @@
     .end annotation
 
     .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/activation/http/ServiceResponse;->responseAsString:Ljava/lang/String;
 
-    .line 31
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/activation/http/ServiceResponse;->streamConsumed:Z
 
-    .line 39
     iput p1, p0, Lcom/android/server/activation/http/ServiceResponse;->mStatusCode:I
 
-    .line 40
     iput-object p2, p0, Lcom/android/server/activation/http/ServiceResponse;->is:Ljava/io/InputStream;
 
-    .line 42
     invoke-direct {p0}, Lcom/android/server/activation/http/ServiceResponse;->fetchResponse()V
 
-    .line 43
     return-void
 .end method
 
@@ -86,26 +78,20 @@
     .param p2, "responseCode"    # I
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/activation/http/ServiceResponse;->responseAsString:Ljava/lang/String;
 
-    .line 31
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/activation/http/ServiceResponse;->streamConsumed:Z
 
-    .line 45
     iput-object p1, p0, Lcom/android/server/activation/http/ServiceResponse;->responseAsString:Ljava/lang/String;
 
-    .line 46
     iput p2, p0, Lcom/android/server/activation/http/ServiceResponse;->mStatusCode:I
 
-    .line 47
     return-void
 .end method
 
@@ -113,12 +99,10 @@
     .locals 2
 
     .prologue
-    .line 92
     iget-boolean v0, p0, Lcom/android/server/activation/http/ServiceResponse;->streamConsumed:Z
 
     if-eqz v0, :cond_0
 
-    .line 93
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Stream has already been consumed."
@@ -127,7 +111,6 @@
 
     throw v0
 
-    .line 95
     :cond_0
     iget-object v0, p0, Lcom/android/server/activation/http/ServiceResponse;->is:Ljava/io/InputStream;
 
@@ -143,21 +126,17 @@
     .end annotation
 
     .prologue
-    .line 56
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/activation/http/ServiceResponse;->asStream()Ljava/io/InputStream;
 
     move-result-object v4
 
-    .line 57
     .local v4, "stream":Ljava/io/InputStream;
     if-nez v4, :cond_0
 
-    .line 76
     :goto_0
     return-void
 
-    .line 60
     :cond_0
     new-instance v0, Ljava/io/BufferedReader;
 
@@ -169,13 +148,11 @@
 
     invoke-direct {v0, v5}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 61
     .local v0, "br":Ljava/io/BufferedReader;
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 63
     .local v1, "buf":Ljava/lang/StringBuffer;
     :goto_1
     invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -185,7 +162,6 @@
     .local v2, "line":Ljava/lang/String;
     if-eqz v2, :cond_1
 
-    .line 64
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     move-result-object v5
@@ -198,7 +174,6 @@
 
     goto :goto_1
 
-    .line 72
     .end local v0    # "br":Ljava/io/BufferedReader;
     .end local v1    # "buf":Ljava/lang/StringBuffer;
     .end local v2    # "line":Ljava/lang/String;
@@ -206,7 +181,6 @@
     :catch_0
     move-exception v3
 
-    .line 74
     .local v3, "npe":Ljava/lang/NullPointerException;
     new-instance v5, Ljava/io/IOException;
 
@@ -218,7 +192,6 @@
 
     throw v5
 
-    .line 66
     .end local v3    # "npe":Ljava/lang/NullPointerException;
     .restart local v0    # "br":Ljava/io/BufferedReader;
     .restart local v1    # "buf":Ljava/lang/StringBuffer;
@@ -232,7 +205,6 @@
 
     iput-object v5, p0, Lcom/android/server/activation/http/ServiceResponse;->responseAsString:Ljava/lang/String;
 
-    .line 68
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -259,10 +231,8 @@
 
     invoke-static {v5, v6}, Lcom/android/server/activation/util/LogHelper;->e(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 70
     invoke-virtual {v4}, Ljava/io/InputStream;->close()V
 
-    .line 71
     const/4 v5, 0x1
 
     iput-boolean v5, p0, Lcom/android/server/activation/http/ServiceResponse;->streamConsumed:Z
@@ -277,20 +247,17 @@
     .param p0, "original"    # Ljava/lang/String;
 
     .prologue
-    .line 116
     sget-object v2, Lcom/android/server/activation/http/ServiceResponse;->escaped:Ljava/util/regex/Pattern;
 
     invoke-virtual {v2, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
-    .line 117
     .local v0, "mm":Ljava/util/regex/Matcher;
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 118
     .local v1, "unescaped":Ljava/lang/StringBuffer;
     :goto_0
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
@@ -299,7 +266,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 119
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
@@ -322,11 +288,9 @@
 
     goto :goto_0
 
-    .line 122
     :cond_0
     invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->appendTail(Ljava/lang/StringBuffer;)Ljava/lang/StringBuffer;
 
-    .line 123
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -340,7 +304,6 @@
     .locals 1
 
     .prologue
-    .line 105
     iget-object v0, p0, Lcom/android/server/activation/http/ServiceResponse;->responseAsString:Ljava/lang/String;
 
     return-object v0
@@ -350,7 +313,6 @@
     .locals 1
 
     .prologue
-    .line 79
     iget v0, p0, Lcom/android/server/activation/http/ServiceResponse;->mStatusCode:I
 
     return v0
@@ -360,15 +322,12 @@
     .locals 2
 
     .prologue
-    .line 127
     iget-object v0, p0, Lcom/android/server/activation/http/ServiceResponse;->responseAsString:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 128
     iget-object v0, p0, Lcom/android/server/activation/http/ServiceResponse;->responseAsString:Ljava/lang/String;
 
-    .line 130
     :goto_0
     return-object v0
 

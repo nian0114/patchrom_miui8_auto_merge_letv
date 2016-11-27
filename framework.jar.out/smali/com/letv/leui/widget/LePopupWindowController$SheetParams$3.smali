@@ -32,19 +32,16 @@
     .param p4, "x2"    # Z
 
     .prologue
-    .line 884
     iput-object p1, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$3;->this$0:Lcom/letv/leui/widget/LePopupWindowController$SheetParams;
 
     iput-object p5, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$3;->val$listView:Lcom/letv/leui/widget/LePopupWindowController$RecycleListView;
 
     invoke-direct {p0, p2, p3, p4}, Landroid/widget/CursorAdapter;-><init>(Landroid/content/Context;Landroid/database/Cursor;Z)V
 
-    .line 889
     invoke-virtual {p0}, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$3;->getCursor()Landroid/database/Cursor;
 
     move-result-object v0
 
-    .line 890
     .local v0, "cursor":Landroid/database/Cursor;
     iget-object v1, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$3;->this$0:Lcom/letv/leui/widget/LePopupWindowController$SheetParams;
 
@@ -56,7 +53,6 @@
 
     iput v1, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$3;->mLabelIndex:I
 
-    .line 891
     iget-object v1, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$3;->this$0:Lcom/letv/leui/widget/LePopupWindowController$SheetParams;
 
     iget-object v1, v1, Lcom/letv/leui/widget/LePopupWindowController$SheetParams;->mIsCheckedColumn:Ljava/lang/String;
@@ -67,7 +63,6 @@
 
     iput v1, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$3;->mIsCheckedIndex:I
 
-    .line 892
     return-void
 .end method
 
@@ -82,7 +77,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 896
     const v2, 0x1020014
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -91,7 +85,6 @@
 
     check-cast v0, Landroid/widget/CheckedTextView;
 
-    .line 897
     .local v0, "text":Landroid/widget/CheckedTextView;
     iget v2, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$3;->mLabelIndex:I
 
@@ -101,7 +94,6 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/CheckedTextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 898
     iget-object v2, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$3;->val$listView:Lcom/letv/leui/widget/LePopupWindowController$RecycleListView;
 
     invoke-interface {p3}, Landroid/database/Cursor;->getPosition()I
@@ -119,10 +111,8 @@
     :goto_0
     invoke-virtual {v2, v3, v1}, Lcom/letv/leui/widget/LePopupWindowController$RecycleListView;->setItemChecked(IZ)V
 
-    .line 900
     return-void
 
-    .line 898
     :cond_0
     const/4 v1, 0x0
 
@@ -136,7 +126,6 @@
     .param p3, "parent"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 904
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$3;->this$0:Lcom/letv/leui/widget/LePopupWindowController$SheetParams;
 
     iget-object v0, v0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams;->mInflater:Landroid/view/LayoutInflater;

@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 131
     invoke-static {}, Landroid/widget/ImageView$ScaleType;->values()[Landroid/widget/ImageView$ScaleType;
 
     move-result-object v0

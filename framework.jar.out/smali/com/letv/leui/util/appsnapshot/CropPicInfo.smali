@@ -24,13 +24,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 14
     iput-boolean v0, p0, Lcom/letv/leui/util/appsnapshot/CropPicInfo;->isHead:Z
 
-    .line 15
     iput-boolean v0, p0, Lcom/letv/leui/util/appsnapshot/CropPicInfo;->isFoot:Z
 
     return-void

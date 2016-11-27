@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 43
     iput-object p1, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView$2;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;
 
     invoke-direct {p0}, Landroid/webkit/WebChromeClient;-><init>()V
@@ -39,17 +38,14 @@
     .param p2, "newProgress"    # I
 
     .prologue
-    .line 47
     const/16 v0, 0x64
 
     if-ne p2, v0, :cond_0
 
-    .line 48
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView$2;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;->onRefreshComplete()V
 
-    .line 50
     :cond_0
     return-void
 .end method

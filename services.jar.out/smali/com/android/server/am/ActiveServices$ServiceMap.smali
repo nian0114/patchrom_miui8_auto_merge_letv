@@ -101,58 +101,48 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 213
     iput-object p1, p0, Lcom/android/server/am/ActiveServices$ServiceMap;->this$0:Lcom/android/server/am/ActiveServices;
 
-    .line 214
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 184
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/ActiveServices$ServiceMap;->mServicesByName:Landroid/util/ArrayMap;
 
-    .line 186
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/ActiveServices$ServiceMap;->mServicesByIntent:Landroid/util/ArrayMap;
 
-    .line 190
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/ActiveServices$ServiceMap;->mShadowServicesByName:Landroid/util/ArrayMap;
 
-    .line 192
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/ActiveServices$ServiceMap;->mShadowServicesByIntent:Landroid/util/ArrayMap;
 
-    .line 196
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/ActiveServices$ServiceMap;->mDelayedStartList:Ljava/util/ArrayList;
 
-    .line 208
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/ActiveServices$ServiceMap;->mStartingBackground:Ljava/util/ArrayList;
 
-    .line 215
     iput p3, p0, Lcom/android/server/am/ActiveServices$ServiceMap;->mUserId:I
 
-    .line 216
     return-void
 .end method
 
@@ -163,7 +153,6 @@
     .param p1, "r"    # Lcom/android/server/am/ServiceRecord;
 
     .prologue
-    .line 230
     iget-object v0, p0, Lcom/android/server/am/ActiveServices$ServiceMap;->mStartingBackground:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
@@ -172,7 +161,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 231
     sget-boolean v0, Lcom/android/server/am/ActiveServices;->DEBUG_DELAYED_STARTS:Z
 
     if-eqz v0, :cond_0
@@ -199,11 +187,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 233
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/am/ActiveServices$ServiceMap;->rescheduleDelayedStarts()V
 
-    .line 235
     :cond_1
     iget-object v0, p0, Lcom/android/server/am/ActiveServices$ServiceMap;->mDelayedStartList:Ljava/util/ArrayList;
 
@@ -213,7 +199,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 236
     sget-boolean v0, Lcom/android/server/am/ActiveServices;->DEBUG_DELAYED_STARTS:Z
 
     if-eqz v0, :cond_2
@@ -240,7 +225,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 238
     :cond_2
     return-void
 .end method
@@ -250,16 +234,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 220
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 227
     :goto_0
     return-void
 
-    .line 222
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/am/ActiveServices$ServiceMap;->this$0:Lcom/android/server/am/ActiveServices;
 
@@ -267,11 +248,9 @@
 
     monitor-enter v1
 
-    .line 223
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/am/ActiveServices$ServiceMap;->rescheduleDelayedStarts()V
 
-    .line 224
     monitor-exit v1
 
     goto :goto_0
@@ -285,7 +264,6 @@
 
     throw v0
 
-    .line 220
     nop
 
     :pswitch_data_0
@@ -298,17 +276,14 @@
     .locals 14
 
     .prologue
-    .line 241
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/android/server/am/ActiveServices$ServiceMap;->removeMessages(I)V
 
-    .line 242
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v10
 
-    .line 243
     .local v10, "now":J
     const/4 v7, 0x0
 
@@ -323,7 +298,6 @@
     :goto_0
     if-ge v7, v6, :cond_2
 
-    .line 244
     iget-object v0, p0, Lcom/android/server/am/ActiveServices$ServiceMap;->mStartingBackground:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -332,7 +306,6 @@
 
     check-cast v3, Lcom/android/server/am/ServiceRecord;
 
-    .line 245
     .local v3, "r":Lcom/android/server/am/ServiceRecord;
     iget-wide v0, v3, Lcom/android/server/am/ServiceRecord;->startingBgTimeout:J
 
@@ -340,7 +313,6 @@
 
     if-gtz v0, :cond_0
 
-    .line 246
     const-string v0, "ActivityManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -363,30 +335,24 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 247
     iget-object v0, p0, Lcom/android/server/am/ActiveServices$ServiceMap;->mStartingBackground:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v7}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 248
     add-int/lit8 v6, v6, -0x1
 
-    .line 249
     add-int/lit8 v7, v7, -0x1
 
-    .line 243
     :cond_0
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
-    .line 269
     :cond_1
     const/4 v0, 0x0
 
     iput-boolean v0, v3, Lcom/android/server/am/ServiceRecord;->delayed:Z
 
-    .line 271
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/ActiveServices$ServiceMap;->this$0:Lcom/android/server/am/ActiveServices;
 
@@ -412,7 +378,6 @@
     :try_end_0
     .catch Landroid/os/TransactionTooLargeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 253
     .end local v3    # "r":Lcom/android/server/am/ServiceRecord;
     :cond_2
     :goto_1
@@ -436,7 +401,6 @@
 
     if-ge v0, v1, :cond_5
 
-    .line 254
     iget-object v0, p0, Lcom/android/server/am/ActiveServices$ServiceMap;->mDelayedStartList:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
@@ -447,7 +411,6 @@
 
     check-cast v3, Lcom/android/server/am/ServiceRecord;
 
-    .line 255
     .restart local v3    # "r":Lcom/android/server/am/ServiceRecord;
     sget-boolean v0, Lcom/android/server/am/ActiveServices;->DEBUG_DELAYED_STARTS:Z
 
@@ -475,7 +438,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 257
     :cond_3
     iget-object v0, v3, Lcom/android/server/am/ServiceRecord;->pendingStarts:Ljava/util/ArrayList;
 
@@ -485,7 +447,6 @@
 
     if-gtz v0, :cond_4
 
-    .line 258
     const-string v0, "ActivityManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -532,13 +493,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 261
     :cond_4
     sget-boolean v0, Lcom/android/server/am/ActiveServices;->DEBUG_DELAYED_SERVICE:Z
 
     if-eqz v0, :cond_1
 
-    .line 262
     iget-object v0, p0, Lcom/android/server/am/ActiveServices$ServiceMap;->mDelayedStartList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -547,14 +506,12 @@
 
     if-lez v0, :cond_1
 
-    .line 263
     const-string v0, "ActivityManager"
 
     const-string v1, "Remaining delayed list:"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 264
     const/4 v7, 0x0
 
     :goto_2
@@ -566,7 +523,6 @@
 
     if-ge v7, v0, :cond_1
 
-    .line 265
     const-string v0, "ActivityManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -605,12 +561,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 264
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_2
 
-    .line 276
     .end local v3    # "r":Lcom/android/server/am/ServiceRecord;
     :cond_5
     iget-object v0, p0, Lcom/android/server/am/ActiveServices$ServiceMap;->mStartingBackground:Ljava/util/ArrayList;
@@ -621,7 +575,6 @@
 
     if-lez v0, :cond_7
 
-    .line 277
     iget-object v0, p0, Lcom/android/server/am/ActiveServices$ServiceMap;->mStartingBackground:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
@@ -632,7 +585,6 @@
 
     check-cast v9, Lcom/android/server/am/ServiceRecord;
 
-    .line 278
     .local v9, "next":Lcom/android/server/am/ServiceRecord;
     iget-wide v0, v9, Lcom/android/server/am/ServiceRecord;->startingBgTimeout:J
 
@@ -642,7 +594,6 @@
 
     iget-wide v12, v9, Lcom/android/server/am/ServiceRecord;->startingBgTimeout:J
 
-    .line 279
     .local v12, "when":J
     :goto_3
     sget-boolean v0, Lcom/android/server/am/ActiveServices;->DEBUG_DELAYED_SERVICE:Z
@@ -681,7 +632,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 281
     :cond_6
     const/4 v0, 0x1
 
@@ -689,11 +639,9 @@
 
     move-result-object v8
 
-    .line 282
     .local v8, "msg":Landroid/os/Message;
     invoke-virtual {p0, v8, v12, v13}, Lcom/android/server/am/ActiveServices$ServiceMap;->sendMessageAtTime(Landroid/os/Message;J)Z
 
-    .line 284
     .end local v8    # "msg":Landroid/os/Message;
     .end local v9    # "next":Lcom/android/server/am/ServiceRecord;
     .end local v12    # "when":J
@@ -710,7 +658,6 @@
 
     if-ge v0, v1, :cond_8
 
-    .line 285
     iget-object v0, p0, Lcom/android/server/am/ActiveServices$ServiceMap;->this$0:Lcom/android/server/am/ActiveServices;
 
     iget-object v0, v0, Lcom/android/server/am/ActiveServices;->mAm:Lcom/android/server/am/ActivityManagerService;
@@ -719,7 +666,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/am/ActivityManagerService;->backgroundServicesFinishedLocked(I)V
 
-    .line 287
     :cond_8
     return-void
 
@@ -727,10 +673,8 @@
     :cond_9
     move-wide v12, v10
 
-    .line 278
     goto :goto_3
 
-    .line 272
     .end local v9    # "next":Lcom/android/server/am/ServiceRecord;
     .restart local v3    # "r":Lcom/android/server/am/ServiceRecord;
     :catch_0

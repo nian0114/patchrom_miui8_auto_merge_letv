@@ -37,7 +37,6 @@
     .locals 0
 
     .prologue
-    .line 127
     iput-object p1, p0, Lcom/letv/leui/util/LeDomainManager$DomainResult;->this$0:Lcom/letv/leui/util/LeDomainManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 132
     iget-object v0, p0, Lcom/letv/leui/util/LeDomainManager$DomainResult;->exception:Ljava/lang/Exception;
 
     if-eqz v0, :cond_0

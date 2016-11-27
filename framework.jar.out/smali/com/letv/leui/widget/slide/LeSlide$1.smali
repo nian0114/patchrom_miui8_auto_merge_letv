@@ -32,7 +32,6 @@
     .locals 1
 
     .prologue
-    .line 50
     iput-object p1, p0, Lcom/letv/leui/widget/slide/LeSlide$1;->val$activity:Landroid/app/Activity;
 
     iput p2, p0, Lcom/letv/leui/widget/slide/LeSlide$1;->val$statusBarColor1:I
@@ -41,7 +40,6 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
     new-instance v0, Landroid/animation/ArgbEvaluator;
 
     invoke-direct {v0}, Landroid/animation/ArgbEvaluator;-><init>()V
@@ -59,17 +57,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 61
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlide$1;->val$activity:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
-    .line 62
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlide$1;->val$activity:Landroid/app/Activity;
 
     invoke-virtual {v0, v1, v1}, Landroid/app/Activity;->overridePendingTransition(II)V
 
-    .line 63
     return-void
 .end method
 
@@ -77,7 +72,6 @@
     .locals 0
 
     .prologue
-    .line 66
     return-void
 .end method
 
@@ -88,7 +82,6 @@
     .prologue
     const/4 v3, -0x1
 
-    .line 71
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x15
@@ -103,7 +96,6 @@
 
     if-eq v1, v3, :cond_0
 
-    .line 73
     iget-object v1, p0, Lcom/letv/leui/widget/slide/LeSlide$1;->mEvaluator:Landroid/animation/ArgbEvaluator;
 
     iget v2, p0, Lcom/letv/leui/widget/slide/LeSlide$1;->val$statusBarColor1:I
@@ -128,7 +120,6 @@
 
     move-result v0
 
-    .line 74
     .local v0, "newColor":I
     iget-object v1, p0, Lcom/letv/leui/widget/slide/LeSlide$1;->val$activity:Landroid/app/Activity;
 
@@ -138,7 +129,6 @@
 
     invoke-virtual {v1, v0}, Landroid/view/Window;->setStatusBarColor(I)V
 
-    .line 76
     .end local v0    # "newColor":I
     :cond_0
     return-void
@@ -149,6 +139,5 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 57
     return-void
 .end method

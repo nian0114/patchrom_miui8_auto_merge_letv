@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 10755
     iput-object p1, p0, Landroid/widget/TextView$4;->this$0:Landroid/widget/TextView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "dialog"    # Landroid/content/DialogInterface;
 
     .prologue
-    .line 10758
     iget-object v2, p0, Landroid/widget/TextView$4;->this$0:Landroid/widget/TextView;
 
     # getter for: Landroid/widget/TextView;->mText:Ljava/lang/CharSequence;
@@ -53,14 +51,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 10759
     iget-object v2, p0, Landroid/widget/TextView$4;->this$0:Landroid/widget/TextView;
 
     invoke-virtual {v2}, Landroid/widget/TextView;->getSelectionStart()I
 
     move-result v1
 
-    .line 10760
     .local v1, "start":I
     iget-object v2, p0, Landroid/widget/TextView$4;->this$0:Landroid/widget/TextView;
 
@@ -68,7 +64,6 @@
 
     move-result v0
 
-    .line 10761
     .local v0, "end":I
     iget-object v2, p0, Landroid/widget/TextView$4;->this$0:Landroid/widget/TextView;
 
@@ -81,12 +76,10 @@
 
     invoke-static {v2}, Landroid/text/Selection;->removeSelection(Landroid/text/Spannable;)V
 
-    .line 10762
     iget-object v2, p0, Landroid/widget/TextView$4;->this$0:Landroid/widget/TextView;
 
     invoke-virtual {v2, v1, v0}, Landroid/widget/TextView;->invalidDisplayList(II)V
 
-    .line 10764
     .end local v0    # "end":I
     .end local v1    # "start":I
     :cond_0

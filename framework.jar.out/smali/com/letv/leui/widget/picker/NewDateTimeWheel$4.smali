@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 86
     iput-object p1, p0, Lcom/letv/leui/widget/picker/NewDateTimeWheel$4;->this$0:Lcom/letv/leui/widget/picker/NewDateTimeWheel;
 
     invoke-direct {p0}, Lcom/letv/leui/widget/picker/OnWheelChangedListener;-><init>()V
@@ -40,12 +39,10 @@
     .param p3, "newValue"    # I
 
     .prologue
-    .line 89
     iget-object v0, p0, Lcom/letv/leui/widget/picker/NewDateTimeWheel$4;->this$0:Lcom/letv/leui/widget/picker/NewDateTimeWheel;
 
     # invokes: Lcom/letv/leui/widget/picker/NewDateTimeWheel;->changeDate()V
     invoke-static {v0}, Lcom/letv/leui/widget/picker/NewDateTimeWheel;->access$000(Lcom/letv/leui/widget/picker/NewDateTimeWheel;)V
 
-    .line 90
     return-void
 .end method

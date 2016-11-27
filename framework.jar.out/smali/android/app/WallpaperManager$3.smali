@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 1285
     iput-object p1, p0, Landroid/app/WallpaperManager$3;->this$0:Landroid/app/WallpaperManager;
 
     iput-object p2, p0, Landroid/app/WallpaperManager$3;->val$path:Ljava/lang/String;
@@ -53,7 +52,6 @@
     .param p1, "arg0"    # Ljava/io/File;
 
     .prologue
-    .line 1288
     invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v1
@@ -78,13 +76,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 1289
     # invokes: Landroid/app/WallpaperManager;->getFileLength(Ljava/io/File;)I
     invoke-static {p1}, Landroid/app/WallpaperManager;->access$700(Ljava/io/File;)I
 
     move-result v0
 
-    .line 1290
     .local v0, "length":I
     if-lez v0, :cond_0
 
@@ -97,7 +93,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 1291
     iget-object v1, p0, Landroid/app/WallpaperManager$3;->val$file:Ljava/io/File;
 
     # invokes: Landroid/app/WallpaperManager;->checkFileMd5(Ljava/io/File;Ljava/io/File;)Z
@@ -107,10 +102,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 1292
     const/4 v1, 0x1
 
-    .line 1296
     .end local v0    # "length":I
     :goto_0
     return v1

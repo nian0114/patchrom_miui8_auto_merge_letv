@@ -40,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 950
     new-instance v0, Lcom/letv/leui/widget/LeTitleEditText$SavedState$1;
 
     invoke-direct {v0}, Lcom/letv/leui/widget/LeTitleEditText$SavedState$1;-><init>()V
@@ -55,10 +54,8 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 929
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 930
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readValue(Ljava/lang/ClassLoader;)Ljava/lang/Object;
@@ -73,21 +70,18 @@
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/LeTitleEditText$SavedState;->showPwdVisibleSwitch:Z
 
-    .line 931
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/letv/leui/widget/LeTitleEditText$SavedState;->maxWidth:I
 
-    .line 932
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeTitleEditText$SavedState;->text:Ljava/lang/CharSequence;
 
-    .line 933
     return-void
 .end method
 
@@ -97,7 +91,6 @@
     .param p2, "x1"    # Lcom/letv/leui/widget/LeTitleEditText$1;
 
     .prologue
-    .line 919
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/LeTitleEditText$SavedState;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -108,10 +101,8 @@
     .param p1, "superState"    # Landroid/os/Parcelable;
 
     .prologue
-    .line 925
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 926
     return-void
 .end method
 
@@ -121,7 +112,6 @@
     .locals 2
 
     .prologue
-    .line 945
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -163,10 +153,8 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 937
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 938
     iget-boolean v0, p0, Lcom/letv/leui/widget/LeTitleEditText$SavedState;->showPwdVisibleSwitch:Z
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -175,12 +163,10 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
 
-    .line 939
     iget v0, p0, Lcom/letv/leui/widget/LeTitleEditText$SavedState;->maxWidth:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 940
     iget-object v0, p0, Lcom/letv/leui/widget/LeTitleEditText$SavedState;->text:Ljava/lang/CharSequence;
 
     if-nez v0, :cond_0
@@ -194,10 +180,8 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 941
     return-void
 
-    .line 940
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/LeTitleEditText$SavedState;->text:Ljava/lang/CharSequence;
 

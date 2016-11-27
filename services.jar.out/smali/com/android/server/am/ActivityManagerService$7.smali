@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 7245
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$7;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/16 v4, 0x33
 
-    .line 7248
     const-string v0, "delay_delete"
 
     const/4 v1, 0x0
@@ -52,7 +50,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 7249
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$7;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerService;->mHandler:Lcom/android/server/am/ActivityManagerService$MainHandler;
@@ -61,11 +58,9 @@
 
     invoke-virtual {v0, v4, v2, v3}, Lcom/android/server/am/ActivityManagerService$MainHandler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 7253
     :goto_0
     return-void
 
-    .line 7251
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$7;->this$0:Lcom/android/server/am/ActivityManagerService;
 

@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 386
     iput-object p1, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper$3;->this$0:Lcom/android/server/policy/global/GlobalActionSwipeHelper;
 
     iput-object p2, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper$3;->val$animView:Lcom/android/server/policy/global/GlobalActionSwipeHelper$AnimatorCallback;
@@ -42,13 +41,11 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 389
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper$3;->val$animView:Lcom/android/server/policy/global/GlobalActionSwipeHelper$AnimatorCallback;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-interface {v0, v1}, Lcom/android/server/policy/global/GlobalActionSwipeHelper$AnimatorCallback;->setAlpha(F)V
 
-    .line 390
     return-void
 .end method

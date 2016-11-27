@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 1584
     invoke-static {}, Lcom/android/server/display/DisplayPowerController$Status;->values()[Lcom/android/server/display/DisplayPowerController$Status;
 
     move-result-object v0

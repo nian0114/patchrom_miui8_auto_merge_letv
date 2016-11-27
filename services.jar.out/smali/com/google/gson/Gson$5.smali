@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 309
     iput-object p1, p0, Lcom/google/gson/Gson$5;->this$0:Lcom/google/gson/Gson;
 
     invoke-direct {p0}, Lcom/google/gson/TypeAdapter;-><init>()V
@@ -52,7 +51,6 @@
     .end annotation
 
     .prologue
-    .line 311
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->peek()Lcom/google/gson/stream/JsonToken;
 
     move-result-object v0
@@ -61,13 +59,10 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 312
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->nextNull()V
 
-    .line 313
     const/4 v0, 0x0
 
-    .line 315
     :goto_0
     return-object v0
 
@@ -92,7 +87,6 @@
     .end annotation
 
     .prologue
-    .line 309
     invoke-virtual {p0, p1}, Lcom/google/gson/Gson$5;->read(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Number;
 
     move-result-object v0
@@ -111,17 +105,13 @@
     .end annotation
 
     .prologue
-    .line 318
     if-nez p2, :cond_0
 
-    .line 319
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonWriter;->nullValue()Lcom/google/gson/stream/JsonWriter;
 
-    .line 323
     :goto_0
     return-void
 
-    .line 322
     :cond_0
     invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -141,7 +131,6 @@
     .end annotation
 
     .prologue
-    .line 309
     check-cast p2, Ljava/lang/Number;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/gson/Gson$5;->write(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Number;)V

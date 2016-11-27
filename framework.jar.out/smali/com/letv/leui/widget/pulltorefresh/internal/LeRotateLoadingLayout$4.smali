@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 338
     iput-object p1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$4;->this$0:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -38,29 +37,24 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 341
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
 
-    .line 342
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$4;->this$0:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->resetImageHeader()V
 
-    .line 343
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$4;->this$0:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
     iget-object v0, v0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->refreshCompletedListener:Lcom/letv/leui/widget/pulltorefresh/internal/RefreshCompletedListener;
 
     if-eqz v0, :cond_0
 
-    .line 344
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$4;->this$0:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
     iget-object v0, v0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->refreshCompletedListener:Lcom/letv/leui/widget/pulltorefresh/internal/RefreshCompletedListener;
 
     invoke-interface {v0}, Lcom/letv/leui/widget/pulltorefresh/internal/RefreshCompletedListener;->refreshHeaderCompleteInternal()V
 
-    .line 346
     :cond_0
     return-void
 .end method

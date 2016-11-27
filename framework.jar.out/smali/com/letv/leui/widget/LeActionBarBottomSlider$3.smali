@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 147
     iput-object p1, p0, Lcom/letv/leui/widget/LeActionBarBottomSlider$3;->this$0:Lcom/letv/leui/widget/LeActionBarBottomSlider;
 
     iput-object p2, p0, Lcom/letv/leui/widget/LeActionBarBottomSlider$3;->val$adapter:Lcom/letv/leui/widget/LeActionBarBottomSlider$ListViewAdapter;
@@ -60,19 +59,16 @@
     .end annotation
 
     .prologue
-    .line 150
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     iget-object v0, p0, Lcom/letv/leui/widget/LeActionBarBottomSlider$3;->this$0:Lcom/letv/leui/widget/LeActionBarBottomSlider;
 
     # setter for: Lcom/letv/leui/widget/LeActionBarBottomSlider;->checkPos:I
     invoke-static {v0, p3}, Lcom/letv/leui/widget/LeActionBarBottomSlider;->access$202(Lcom/letv/leui/widget/LeActionBarBottomSlider;I)I
 
-    .line 151
     iget-object v0, p0, Lcom/letv/leui/widget/LeActionBarBottomSlider$3;->val$adapter:Lcom/letv/leui/widget/LeActionBarBottomSlider$ListViewAdapter;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/LeActionBarBottomSlider$ListViewAdapter;->notifyDataSetChanged()V
 
-    .line 152
     iget-object v0, p0, Lcom/letv/leui/widget/LeActionBarBottomSlider$3;->val$listener:Landroid/widget/AdapterView$OnItemClickListener;
 
     move-object v1, p1
@@ -85,6 +81,5 @@
 
     invoke-interface/range {v0 .. v5}, Landroid/widget/AdapterView$OnItemClickListener;->onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
 
-    .line 154
     return-void
 .end method

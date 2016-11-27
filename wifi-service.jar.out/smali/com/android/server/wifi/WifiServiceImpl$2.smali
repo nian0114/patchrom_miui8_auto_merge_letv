@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 389
     iput-object p1, p0, Lcom/android/server/wifi/WifiServiceImpl$2;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,14 +38,12 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 392
     const-string v1, "ss"
 
     invoke-virtual {p2, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 393
     .local v0, "state":Ljava/lang/String;
     const-string v1, "ABSENT"
 
@@ -56,21 +53,18 @@
 
     if-eqz v1, :cond_0
 
-    .line 394
     const-string v1, "WifiService"
 
     const-string v2, "resetting country code because SIM is removed"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 395
     iget-object v1, p0, Lcom/android/server/wifi/WifiServiceImpl$2;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     iget-object v1, v1, Lcom/android/server/wifi/WifiServiceImpl;->mWifiStateMachine:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-virtual {v1}, Lcom/android/server/wifi/WifiStateMachine;->resetCountryCode()V
 
-    .line 397
     :cond_0
     return-void
 .end method

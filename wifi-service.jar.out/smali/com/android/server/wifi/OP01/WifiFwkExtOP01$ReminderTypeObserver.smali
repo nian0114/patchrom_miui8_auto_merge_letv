@@ -27,23 +27,18 @@
     .param p3, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 342
     iput-object p1, p0, Lcom/android/server/wifi/OP01/WifiFwkExtOP01$ReminderTypeObserver;->this$0:Lcom/android/server/wifi/OP01/WifiFwkExtOP01;
 
-    .line 343
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 344
     iput-object p3, p0, Lcom/android/server/wifi/OP01/WifiFwkExtOP01$ReminderTypeObserver;->mMyContext:Landroid/content/Context;
 
-    .line 345
     iget-object v1, p0, Lcom/android/server/wifi/OP01/WifiFwkExtOP01$ReminderTypeObserver;->mMyContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 346
     .local v0, "cr":Landroid/content/ContentResolver;
     const-string v1, "wifi_connect_reminder"
 
@@ -55,7 +50,6 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 348
     return-void
 .end method
 
@@ -66,10 +60,8 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 352
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 353
     iget-object v0, p0, Lcom/android/server/wifi/OP01/WifiFwkExtOP01$ReminderTypeObserver;->this$0:Lcom/android/server/wifi/OP01/WifiFwkExtOP01;
 
     iget-object v1, p0, Lcom/android/server/wifi/OP01/WifiFwkExtOP01$ReminderTypeObserver;->mMyContext:Landroid/content/Context;
@@ -89,7 +81,6 @@
     # setter for: Lcom/android/server/wifi/OP01/WifiFwkExtOP01;->mReminderType:I
     invoke-static {v0, v1}, Lcom/android/server/wifi/OP01/WifiFwkExtOP01;->access$402(Lcom/android/server/wifi/OP01/WifiFwkExtOP01;I)I
 
-    .line 356
     const-string v0, "@M_WifiFwkExtOP01"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -119,6 +110,5 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 357
     return-void
 .end method

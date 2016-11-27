@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 548
     iput-object p1, p0, Lcom/letv/leui/widget/LePopupWindowController$3;->this$0:Lcom/letv/leui/widget/LePopupWindowController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,6 +41,5 @@
     .param p2, "isChecked"    # Z
 
     .prologue
-    .line 550
     return-void
 .end method

@@ -38,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 133
     iput-object p1, p0, Lcom/letv/leui/util/ScrollBarAnimHelper$3;->this$0:Lcom/letv/leui/util/ScrollBarAnimHelper;
 
     iput-object p2, p0, Lcom/letv/leui/util/ScrollBarAnimHelper$3;->val$window:Landroid/view/Window;
@@ -64,7 +63,6 @@
     .locals 6
 
     .prologue
-    .line 137
     iget-object v0, p0, Lcom/letv/leui/util/ScrollBarAnimHelper$3;->this$0:Lcom/letv/leui/util/ScrollBarAnimHelper;
 
     iget-object v1, p0, Lcom/letv/leui/util/ScrollBarAnimHelper$3;->val$window:Landroid/view/Window;
@@ -80,7 +78,6 @@
     # invokes: Lcom/letv/leui/util/ScrollBarAnimHelper;->init(Landroid/view/Window;Landroid/app/ActionBar;IFF)V
     invoke-static/range {v0 .. v5}, Lcom/letv/leui/util/ScrollBarAnimHelper;->access$800(Lcom/letv/leui/util/ScrollBarAnimHelper;Landroid/view/Window;Landroid/app/ActionBar;IFF)V
 
-    .line 138
     iget-object v0, p0, Lcom/letv/leui/util/ScrollBarAnimHelper$3;->this$0:Lcom/letv/leui/util/ScrollBarAnimHelper;
 
     iget-object v1, p0, Lcom/letv/leui/util/ScrollBarAnimHelper$3;->val$view:Landroid/view/View;
@@ -88,6 +85,5 @@
     # invokes: Lcom/letv/leui/util/ScrollBarAnimHelper;->make(Landroid/view/View;)V
     invoke-static {v0, v1}, Lcom/letv/leui/util/ScrollBarAnimHelper;->access$700(Lcom/letv/leui/util/ScrollBarAnimHelper;Landroid/view/View;)V
 
-    .line 139
     return-void
 .end method

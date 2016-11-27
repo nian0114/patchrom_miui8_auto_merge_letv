@@ -27,15 +27,11 @@
     .param p2, "paramRect"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 3162
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3163
     iput-object p1, p0, Lcom/letv/leui/widget/StaggeredGridView$ViewRectPair;->view:Landroid/view/View;
 
-    .line 3164
     iput-object p2, p0, Lcom/letv/leui/widget/StaggeredGridView$ViewRectPair;->rect:Landroid/graphics/Rect;
 
-    .line 3165
     return-void
 .end method

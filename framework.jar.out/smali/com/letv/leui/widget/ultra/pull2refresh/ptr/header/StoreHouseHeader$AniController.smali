@@ -38,24 +38,18 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 281
     iput-object p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;->this$0:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 283
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;->mTick:I
 
-    .line 284
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;->mCountPerSeg:I
 
-    .line 285
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;->mSegCount:I
 
-    .line 286
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;->mInterval:I
 
-    .line 287
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;->mRunning:Z
@@ -69,7 +63,6 @@
     .param p2, "x1"    # Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$1;
 
     .prologue
-    .line 281
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;-><init>(Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader;)V
 
     return-void
@@ -80,7 +73,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;
 
     .prologue
-    .line 281
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;->start()V
 
     return-void
@@ -91,7 +83,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;
 
     .prologue
-    .line 281
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;->stop()V
 
     return-void
@@ -101,17 +92,14 @@
     .locals 2
 
     .prologue
-    .line 290
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;->mRunning:Z
 
-    .line 291
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;->mTick:I
 
-    .line 293
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;->this$0:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader;
 
     # getter for: Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader;->mLoadingAniDuration:I
@@ -131,7 +119,6 @@
 
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;->mInterval:I
 
-    .line 294
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;->this$0:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader;
 
     # getter for: Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader;->mLoadingAniSegDuration:I
@@ -145,7 +132,6 @@
 
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;->mCountPerSeg:I
 
-    .line 295
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;->this$0:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader;
 
     iget-object v0, v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader;->mItemList:Ljava/util/ArrayList;
@@ -162,10 +148,8 @@
 
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;->mSegCount:I
 
-    .line 296
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;->run()V
 
-    .line 297
     return-void
 .end method
 
@@ -173,17 +157,14 @@
     .locals 1
 
     .prologue
-    .line 327
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;->mRunning:Z
 
-    .line 328
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;->this$0:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader;
 
     invoke-virtual {v0, p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 329
     return-void
 .end method
 
@@ -195,14 +176,12 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 302
     iget v4, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;->mTick:I
 
     iget v5, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;->mCountPerSeg:I
 
     rem-int v3, v4, v5
 
-    .line 303
     .local v3, "pos":I
     const/4 v0, 0x0
 
@@ -212,26 +191,22 @@
 
     if-ge v0, v4, :cond_1
 
-    .line 305
     iget v4, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;->mCountPerSeg:I
 
     mul-int/2addr v4, v0
 
     add-int v1, v4, v3
 
-    .line 306
     .local v1, "index":I
     iget v4, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;->mTick:I
 
     if-le v1, v4, :cond_0
 
-    .line 303
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 310
     :cond_0
     iget-object v4, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;->this$0:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader;
 
@@ -243,7 +218,6 @@
 
     rem-int/2addr v1, v4
 
-    .line 311
     iget-object v4, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;->this$0:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader;
 
     iget-object v4, v4, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader;->mItemList:Ljava/util/ArrayList;
@@ -254,19 +228,15 @@
 
     check-cast v2, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseBarItem;
 
-    .line 313
     .local v2, "item":Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseBarItem;
     invoke-virtual {v2, v6}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseBarItem;->setFillAfter(Z)V
 
-    .line 314
     const/4 v4, 0x1
 
     invoke-virtual {v2, v4}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseBarItem;->setFillEnabled(Z)V
 
-    .line 315
     invoke-virtual {v2, v6}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseBarItem;->setFillBefore(Z)V
 
-    .line 316
     iget-object v4, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;->this$0:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader;
 
     # getter for: Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader;->mLoadingAniItemDuration:I
@@ -278,7 +248,6 @@
 
     invoke-virtual {v2, v4, v5}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseBarItem;->setDuration(J)V
 
-    .line 317
     iget-object v4, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;->this$0:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader;
 
     # getter for: Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader;->mFromAlpha:F
@@ -297,7 +266,6 @@
 
     goto :goto_1
 
-    .line 320
     .end local v1    # "index":I
     .end local v2    # "item":Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseBarItem;
     :cond_1
@@ -307,12 +275,10 @@
 
     iput v4, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;->mTick:I
 
-    .line 321
     iget-boolean v4, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;->mRunning:Z
 
     if-eqz v4, :cond_2
 
-    .line 322
     iget-object v4, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;->this$0:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader;
 
     iget v5, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader$AniController;->mInterval:I
@@ -321,7 +287,6 @@
 
     invoke-virtual {v4, p0, v6, v7}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/StoreHouseHeader;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 324
     :cond_2
     return-void
 .end method

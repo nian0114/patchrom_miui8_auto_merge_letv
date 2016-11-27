@@ -20,12 +20,10 @@
     .locals 1
 
     .prologue
-    .line 34
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/letv/tracker/util/TrackerLog;->needLog:Z
 
-    .line 36
     const-string v0, "[unknown]"
 
     sput-object v0, Lcom/letv/tracker/util/TrackerLog;->agnesVersion:Ljava/lang/String;
@@ -37,10 +35,8 @@
     .locals 0
 
     .prologue
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     return-void
 .end method
 
@@ -51,12 +47,10 @@
     .param p2, "errMsg"    # Ljava/lang/String;
 
     .prologue
-    .line 122
     sget-boolean v4, Lcom/letv/tracker/util/TrackerLog;->needLog:Z
 
     if-eqz v4, :cond_0
 
-    .line 123
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -99,19 +93,16 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 124
     sget-object v4, Lcom/letv/tracker/util/TrackerLog;->logPath:Ljava/lang/String;
 
     if-eqz v4, :cond_0
 
-    .line 125
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v4, "yyyy-MM-dd hh:mm:ss"
 
     invoke-direct {v0, v4}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 128
     .local v0, "dateFormat":Ljava/text/DateFormat;
     :try_start_0
     new-instance v3, Ljava/io/OutputStreamWriter;
@@ -130,13 +121,11 @@
 
     invoke-direct {v3, v4, v5}, Ljava/io/OutputStreamWriter;-><init>(Ljava/io/OutputStream;Ljava/lang/String;)V
 
-    .line 129
     .local v3, "w":Ljava/io/Writer;
     new-instance v2, Ljava/io/PrintWriter;
 
     invoke-direct {v2, v3}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V
 
-    .line 130
     .local v2, "printWriter":Ljava/io/PrintWriter;
     const-string v4, "%s %s [ERROR] [%s] Id : %s; Discription : %s"
 
@@ -180,27 +169,22 @@
 
     invoke-virtual {v2, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 132
     invoke-virtual {v2}, Ljava/io/PrintWriter;->flush()V
 
-    .line 133
     invoke-virtual {v2}, Ljava/io/PrintWriter;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 139
     .end local v0    # "dateFormat":Ljava/text/DateFormat;
     .end local v2    # "printWriter":Ljava/io/PrintWriter;
     .end local v3    # "w":Ljava/io/Writer;
     :cond_0
     return-void
 
-    .line 134
     .restart local v0    # "dateFormat":Ljava/text/DateFormat;
     :catch_0
     move-exception v1
 
-    .line 135
     .local v1, "e":Ljava/io/IOException;
     new-instance v4, Lcom/letv/tracker/error/TrackerException;
 
@@ -219,12 +203,10 @@
     .param p3, "errCause"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 87
     sget-boolean v4, Lcom/letv/tracker/util/TrackerLog;->needLog:Z
 
     if-eqz v4, :cond_0
 
-    .line 88
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -267,19 +249,16 @@
 
     invoke-static {v4, v5, p3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 89
     sget-object v4, Lcom/letv/tracker/util/TrackerLog;->logPath:Ljava/lang/String;
 
     if-eqz v4, :cond_0
 
-    .line 90
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v4, "yyyy-MM-dd hh:mm:ss"
 
     invoke-direct {v0, v4}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 93
     .local v0, "dateFormat":Ljava/text/DateFormat;
     :try_start_0
     new-instance v3, Ljava/io/OutputStreamWriter;
@@ -298,13 +277,11 @@
 
     invoke-direct {v3, v4, v5}, Ljava/io/OutputStreamWriter;-><init>(Ljava/io/OutputStream;Ljava/lang/String;)V
 
-    .line 94
     .local v3, "w":Ljava/io/Writer;
     new-instance v2, Ljava/io/PrintWriter;
 
     invoke-direct {v2, v3}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V
 
-    .line 95
     .local v2, "printWriter":Ljava/io/PrintWriter;
     const-string v4, "%s %s [ERROR] [%s] ID : %s; Description : %s; Exception : %s"
 
@@ -356,27 +333,22 @@
 
     invoke-virtual {v2, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 101
     invoke-virtual {v2}, Ljava/io/PrintWriter;->flush()V
 
-    .line 102
     invoke-virtual {v2}, Ljava/io/PrintWriter;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 108
     .end local v0    # "dateFormat":Ljava/text/DateFormat;
     .end local v2    # "printWriter":Ljava/io/PrintWriter;
     .end local v3    # "w":Ljava/io/Writer;
     :cond_0
     return-void
 
-    .line 103
     .restart local v0    # "dateFormat":Ljava/text/DateFormat;
     :catch_0
     move-exception v1
 
-    .line 104
     .local v1, "e":Ljava/io/IOException;
     new-instance v4, Lcom/letv/tracker/error/TrackerException;
 
@@ -391,7 +363,6 @@
     .locals 2
 
     .prologue
-    .line 50
     const-class v0, Lcom/letv/tracker/util/TrackerLog;
 
     monitor-enter v0
@@ -420,12 +391,10 @@
     .param p2, "logMsg"    # Ljava/lang/String;
 
     .prologue
-    .line 153
     sget-boolean v4, Lcom/letv/tracker/util/TrackerLog;->needLog:Z
 
     if-eqz v4, :cond_0
 
-    .line 154
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -468,19 +437,16 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 155
     sget-object v4, Lcom/letv/tracker/util/TrackerLog;->logPath:Ljava/lang/String;
 
     if-eqz v4, :cond_0
 
-    .line 156
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v4, "yyyy-MM-dd hh:mm:ss"
 
     invoke-direct {v0, v4}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 159
     .local v0, "dateFormat":Ljava/text/DateFormat;
     :try_start_0
     new-instance v3, Ljava/io/OutputStreamWriter;
@@ -499,13 +465,11 @@
 
     invoke-direct {v3, v4, v5}, Ljava/io/OutputStreamWriter;-><init>(Ljava/io/OutputStream;Ljava/lang/String;)V
 
-    .line 160
     .local v3, "w":Ljava/io/Writer;
     new-instance v2, Ljava/io/PrintWriter;
 
     invoke-direct {v2, v3}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V
 
-    .line 161
     .local v2, "printWriter":Ljava/io/PrintWriter;
     const-string v4, "%s %s [LOG] [%s] ID : %s; Discription : %s"
 
@@ -549,27 +513,22 @@
 
     invoke-virtual {v2, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 163
     invoke-virtual {v2}, Ljava/io/PrintWriter;->flush()V
 
-    .line 164
     invoke-virtual {v2}, Ljava/io/PrintWriter;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 170
     .end local v0    # "dateFormat":Ljava/text/DateFormat;
     .end local v2    # "printWriter":Ljava/io/PrintWriter;
     .end local v3    # "w":Ljava/io/Writer;
     :cond_0
     return-void
 
-    .line 165
     .restart local v0    # "dateFormat":Ljava/text/DateFormat;
     :catch_0
     move-exception v1
 
-    .line 166
     .local v1, "e":Ljava/io/IOException;
     new-instance v4, Lcom/letv/tracker/error/TrackerException;
 
@@ -585,10 +544,8 @@
     .param p0, "v"    # Ljava/lang/String;
 
     .prologue
-    .line 68
     if-eqz p0, :cond_0
 
-    .line 69
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -615,7 +572,6 @@
 
     sput-object v0, Lcom/letv/tracker/util/TrackerLog;->agnesVersion:Ljava/lang/String;
 
-    .line 71
     :cond_0
     return-void
 .end method
@@ -625,7 +581,6 @@
     .param p0, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 60
     const-class v1, Lcom/letv/tracker/util/TrackerLog;
 
     monitor-enter v1
@@ -653,12 +608,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 61
     monitor-exit v1
 
     return-void
 
-    .line 60
     :catchall_0
     move-exception v0
 
@@ -672,10 +625,8 @@
     .param p0, "isNeed"    # Z
 
     .prologue
-    .line 64
     sput-boolean p0, Lcom/letv/tracker/util/TrackerLog;->needLog:Z
 
-    .line 65
     return-void
 .end method
 
@@ -684,12 +635,10 @@
     .param p0, "e"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 180
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 181
     .local v4, "sb":Ljava/lang/StringBuilder;
     invoke-virtual {p0}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
 
@@ -707,7 +656,6 @@
 
     aget-object v1, v0, v2
 
-    .line 182
     .local v1, "element":Ljava/lang/StackTraceElement;
     invoke-virtual {v1}, Ljava/lang/StackTraceElement;->toString()Ljava/lang/String;
 
@@ -715,17 +663,14 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 183
     const-string v5, "\n"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 181
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 185
     .end local v1    # "element":Ljava/lang/StackTraceElement;
     :cond_0
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;

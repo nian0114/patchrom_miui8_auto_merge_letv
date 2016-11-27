@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 8271
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$PolicyPhoneStateListener;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -39,18 +38,14 @@
     .param p2, "incomingNumber"    # Ljava/lang/String;
 
     .prologue
-    .line 8274
     packed-switch p1, :pswitch_data_0
 
-    .line 8285
     :goto_0
     :pswitch_0
     invoke-super {p0, p1, p2}, Landroid/telephony/PhoneStateListener;->onCallStateChanged(ILjava/lang/String;)V
 
-    .line 8286
     return-void
 
-    .line 8279
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$PolicyPhoneStateListener;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -60,7 +55,6 @@
 
     goto :goto_0
 
-    .line 8282
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$PolicyPhoneStateListener;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -70,7 +64,6 @@
 
     goto :goto_0
 
-    .line 8274
     nop
 
     :pswitch_data_0

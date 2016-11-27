@@ -24,7 +24,6 @@
     .param p2, "x0"    # Z
 
     .prologue
-    .line 158
     iput-object p1, p0, Lcom/android/server/MuteKeyObserver$1;->this$0:Lcom/android/server/MuteKeyObserver;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Z)V
@@ -41,16 +40,13 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 161
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 170
     :goto_0
     return-void
 
-    .line 163
     :pswitch_0
     iget-object v1, p0, Lcom/android/server/MuteKeyObserver$1;->this$0:Lcom/android/server/MuteKeyObserver;
 
@@ -69,7 +65,6 @@
 
     goto :goto_1
 
-    .line 166
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/MuteKeyObserver$1;->this$0:Lcom/android/server/MuteKeyObserver;
 
@@ -78,7 +73,6 @@
 
     goto :goto_0
 
-    .line 161
     nop
 
     :pswitch_data_0

@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 81
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,7 +45,6 @@
     .param p2, "rhs"    # Lcom/letv/leui/widget/slide/LeSlidePager$ItemInfo;
 
     .prologue
-    .line 84
     iget v0, p1, Lcom/letv/leui/widget/slide/LeSlidePager$ItemInfo;->position:I
 
     iget v1, p2, Lcom/letv/leui/widget/slide/LeSlidePager$ItemInfo;->position:I
@@ -60,7 +58,6 @@
     .locals 1
 
     .prologue
-    .line 81
     check-cast p1, Lcom/letv/leui/widget/slide/LeSlidePager$ItemInfo;
 
     check-cast p2, Lcom/letv/leui/widget/slide/LeSlidePager$ItemInfo;

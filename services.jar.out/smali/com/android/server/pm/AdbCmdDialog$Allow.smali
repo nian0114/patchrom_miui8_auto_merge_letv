@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 161
     iput-object p1, p0, Lcom/android/server/pm/AdbCmdDialog$Allow;->this$0:Lcom/android/server/pm/AdbCmdDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 165
     iget-object v0, p0, Lcom/android/server/pm/AdbCmdDialog$Allow;->this$0:Lcom/android/server/pm/AdbCmdDialog;
 
     # getter for: Lcom/android/server/pm/AdbCmdDialog;->mHandler:Lcom/android/server/pm/AdbCmdDialog$DialogHandler;
@@ -53,6 +51,5 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/pm/AdbCmdDialog$DialogHandler;->sendEmptyMessage(I)Z
 
-    .line 166
     return-void
 .end method

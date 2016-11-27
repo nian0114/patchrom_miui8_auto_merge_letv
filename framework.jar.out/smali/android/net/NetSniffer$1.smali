@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 205
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,12 +44,10 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 207
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 210
     .local v0, "httpurl":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -60,18 +57,15 @@
 
     if-gtz v2, :cond_1
 
-    .line 211
     :cond_0
     new-instance v1, Landroid/net/NetSniffer;
 
     invoke-direct {v1}, Landroid/net/NetSniffer;-><init>()V
 
-    .line 216
     .local v1, "mNetSniffer":Landroid/net/NetSniffer;
     :goto_0
     return-object v1
 
-    .line 213
     .end local v1    # "mNetSniffer":Landroid/net/NetSniffer;
     :cond_1
     new-instance v1, Landroid/net/NetSniffer;
@@ -86,7 +80,6 @@
     .locals 1
 
     .prologue
-    .line 205
     invoke-virtual {p0, p1}, Landroid/net/NetSniffer$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/NetSniffer;
 
     move-result-object v0
@@ -99,7 +92,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 220
     new-array v0, p1, [Landroid/net/NetSniffer;
 
     return-object v0
@@ -109,7 +101,6 @@
     .locals 1
 
     .prologue
-    .line 205
     invoke-virtual {p0, p1}, Landroid/net/NetSniffer$1;->newArray(I)[Landroid/net/NetSniffer;
 
     move-result-object v0

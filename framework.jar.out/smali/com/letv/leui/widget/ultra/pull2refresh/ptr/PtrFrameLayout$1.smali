@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 487
     iput-object p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout$1;->this$0:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 2
 
     .prologue
-    .line 490
     sget-boolean v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 491
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout$1;->this$0:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;
 
     iget-object v0, v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->LOG_TAG:Ljava/lang/String;
@@ -54,7 +51,6 @@
 
     invoke-static {v0, v1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/util/PtrCLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 493
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout$1;->this$0:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;
 
@@ -63,6 +59,5 @@
     # invokes: Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->notifyUIRefreshComplete(Z)V
     invoke-static {v0, v1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->access$000(Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;Z)V
 
-    .line 494
     return-void
 .end method

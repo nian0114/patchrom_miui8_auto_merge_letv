@@ -35,13 +35,10 @@
     .param p3, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 156
     iput-object p1, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView$InternalWebViewSDK9;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;
 
-    .line 157
     invoke-direct {p0, p2, p3}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 158
     return-void
 .end method
 
@@ -49,7 +46,6 @@
     .locals 4
 
     .prologue
-    .line 175
     const/4 v1, 0x0
 
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView$InternalWebViewSDK9;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;
@@ -124,12 +120,10 @@
     .param p9, "isTouchEvent"    # Z
 
     .prologue
-    .line 164
     invoke-super/range {p0 .. p9}, Landroid/webkit/WebView;->overScrollBy(IIIIIIIIZ)Z
 
     move-result v9
 
-    .line 168
     .local v9, "returnValue":Z
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView$InternalWebViewSDK9;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshWebView;
 
@@ -153,6 +147,5 @@
 
     invoke-static/range {v0 .. v8}, Lcom/letv/leui/widget/pulltorefresh/OverscrollHelper;->overScrollBy(Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;IIIIIIFZ)V
 
-    .line 171
     return v9
 .end method

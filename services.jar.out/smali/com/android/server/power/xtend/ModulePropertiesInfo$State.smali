@@ -54,7 +54,6 @@
 
     const/4 v2, 0x0
 
-    .line 53
     new-instance v0, Lcom/android/server/power/xtend/ModulePropertiesInfo$State;
 
     const-string v1, "NO_SAVE"
@@ -63,7 +62,6 @@
 
     sput-object v0, Lcom/android/server/power/xtend/ModulePropertiesInfo$State;->NO_SAVE:Lcom/android/server/power/xtend/ModulePropertiesInfo$State;
 
-    .line 54
     new-instance v0, Lcom/android/server/power/xtend/ModulePropertiesInfo$State;
 
     const-string v1, "NORMAL_SAVE"
@@ -72,7 +70,6 @@
 
     sput-object v0, Lcom/android/server/power/xtend/ModulePropertiesInfo$State;->NORMAL_SAVE:Lcom/android/server/power/xtend/ModulePropertiesInfo$State;
 
-    .line 55
     new-instance v0, Lcom/android/server/power/xtend/ModulePropertiesInfo$State;
 
     const-string v1, "HIGH_SAVE"
@@ -81,7 +78,6 @@
 
     sput-object v0, Lcom/android/server/power/xtend/ModulePropertiesInfo$State;->HIGH_SAVE:Lcom/android/server/power/xtend/ModulePropertiesInfo$State;
 
-    .line 56
     new-instance v0, Lcom/android/server/power/xtend/ModulePropertiesInfo$State;
 
     const-string v1, "ULTRA_SAVE"
@@ -90,7 +86,6 @@
 
     sput-object v0, Lcom/android/server/power/xtend/ModulePropertiesInfo$State;->ULTRA_SAVE:Lcom/android/server/power/xtend/ModulePropertiesInfo$State;
 
-    .line 52
     new-array v0, v6, [Lcom/android/server/power/xtend/ModulePropertiesInfo$State;
 
     sget-object v1, Lcom/android/server/power/xtend/ModulePropertiesInfo$State;->NO_SAVE:Lcom/android/server/power/xtend/ModulePropertiesInfo$State;
@@ -124,13 +119,10 @@
     .end annotation
 
     .prologue
-    .line 60
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 61
     iput p3, p0, Lcom/android/server/power/xtend/ModulePropertiesInfo$State;->value:I
 
-    .line 62
     return-void
 .end method
 
@@ -139,7 +131,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     const-class v0, Lcom/android/server/power/xtend/ModulePropertiesInfo$State;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -155,7 +146,6 @@
     .locals 1
 
     .prologue
-    .line 52
     sget-object v0, Lcom/android/server/power/xtend/ModulePropertiesInfo$State;->$VALUES:[Lcom/android/server/power/xtend/ModulePropertiesInfo$State;
 
     invoke-virtual {v0}, [Lcom/android/server/power/xtend/ModulePropertiesInfo$State;->clone()Ljava/lang/Object;
@@ -173,7 +163,6 @@
     .locals 1
 
     .prologue
-    .line 65
     iget v0, p0, Lcom/android/server/power/xtend/ModulePropertiesInfo$State;->value:I
 
     return v0

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1445
     iput-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$19;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1451
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/android/server/net/NetworkPolicyManagerService$19$1;
@@ -50,6 +48,5 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 1465
     return-void
 .end method

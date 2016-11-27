@@ -30,7 +30,6 @@
     .param p2, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 759
     .local p1, "x0":Ljava/lang/Class;, "Ljava/lang/Class<Ljava/lang/Float;>;"
     invoke-direct {p0, p1, p2}, Landroid/util/Property;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
@@ -44,7 +43,6 @@
     .param p1, "object"    # Lcom/letv/leui/widget/LeSwitch;
 
     .prologue
-    .line 762
     # getter for: Lcom/letv/leui/widget/LeSwitch;->mThumbPosition:F
     invoke-static {p1}, Lcom/letv/leui/widget/LeSwitch;->access$000(Lcom/letv/leui/widget/LeSwitch;)F
 
@@ -61,7 +59,6 @@
     .locals 1
 
     .prologue
-    .line 759
     check-cast p1, Lcom/letv/leui/widget/LeSwitch;
 
     invoke-virtual {p0, p1}, Lcom/letv/leui/widget/LeSwitch$1;->get(Lcom/letv/leui/widget/LeSwitch;)Ljava/lang/Float;
@@ -77,14 +74,12 @@
     .param p2, "value"    # Ljava/lang/Float;
 
     .prologue
-    .line 771
     invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
     move-result v0
 
     invoke-virtual {p0, p1, v0}, Lcom/letv/leui/widget/LeSwitch$1;->setValue(Lcom/letv/leui/widget/LeSwitch;F)V
 
-    .line 772
     return-void
 .end method
 
@@ -92,7 +87,6 @@
     .locals 0
 
     .prologue
-    .line 759
     check-cast p1, Lcom/letv/leui/widget/LeSwitch;
 
     check-cast p2, Ljava/lang/Float;
@@ -108,9 +102,7 @@
     .param p2, "value"    # F
 
     .prologue
-    .line 766
     invoke-virtual {p1, p2}, Lcom/letv/leui/widget/LeSwitch;->setThumbPosition(F)V
 
-    .line 767
     return-void
 .end method

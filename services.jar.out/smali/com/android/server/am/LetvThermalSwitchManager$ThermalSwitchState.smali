@@ -52,7 +52,6 @@
 
     const/4 v2, 0x0
 
-    .line 38
     new-instance v0, Lcom/android/server/am/LetvThermalSwitchManager$ThermalSwitchState;
 
     const-string v1, "Init"
@@ -61,7 +60,6 @@
 
     sput-object v0, Lcom/android/server/am/LetvThermalSwitchManager$ThermalSwitchState;->Init:Lcom/android/server/am/LetvThermalSwitchManager$ThermalSwitchState;
 
-    .line 39
     new-instance v0, Lcom/android/server/am/LetvThermalSwitchManager$ThermalSwitchState;
 
     const-string v1, "Enabled"
@@ -70,7 +68,6 @@
 
     sput-object v0, Lcom/android/server/am/LetvThermalSwitchManager$ThermalSwitchState;->Enabled:Lcom/android/server/am/LetvThermalSwitchManager$ThermalSwitchState;
 
-    .line 40
     new-instance v0, Lcom/android/server/am/LetvThermalSwitchManager$ThermalSwitchState;
 
     const-string v1, "Disabling"
@@ -79,7 +76,6 @@
 
     sput-object v0, Lcom/android/server/am/LetvThermalSwitchManager$ThermalSwitchState;->Disabling:Lcom/android/server/am/LetvThermalSwitchManager$ThermalSwitchState;
 
-    .line 41
     new-instance v0, Lcom/android/server/am/LetvThermalSwitchManager$ThermalSwitchState;
 
     const-string v1, "Disabled"
@@ -88,7 +84,6 @@
 
     sput-object v0, Lcom/android/server/am/LetvThermalSwitchManager$ThermalSwitchState;->Disabled:Lcom/android/server/am/LetvThermalSwitchManager$ThermalSwitchState;
 
-    .line 42
     new-instance v0, Lcom/android/server/am/LetvThermalSwitchManager$ThermalSwitchState;
 
     const-string v1, "Enabling"
@@ -97,7 +92,6 @@
 
     sput-object v0, Lcom/android/server/am/LetvThermalSwitchManager$ThermalSwitchState;->Enabling:Lcom/android/server/am/LetvThermalSwitchManager$ThermalSwitchState;
 
-    .line 37
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/android/server/am/LetvThermalSwitchManager$ThermalSwitchState;
@@ -136,7 +130,6 @@
     .end annotation
 
     .prologue
-    .line 37
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -147,7 +140,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 37
     const-class v0, Lcom/android/server/am/LetvThermalSwitchManager$ThermalSwitchState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -163,7 +155,6 @@
     .locals 1
 
     .prologue
-    .line 37
     sget-object v0, Lcom/android/server/am/LetvThermalSwitchManager$ThermalSwitchState;->$VALUES:[Lcom/android/server/am/LetvThermalSwitchManager$ThermalSwitchState;
 
     invoke-virtual {v0}, [Lcom/android/server/am/LetvThermalSwitchManager$ThermalSwitchState;->clone()Ljava/lang/Object;

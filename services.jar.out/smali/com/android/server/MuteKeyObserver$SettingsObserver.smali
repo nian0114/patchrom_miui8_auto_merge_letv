@@ -25,23 +25,19 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 175
     iput-object p1, p0, Lcom/android/server/MuteKeyObserver$SettingsObserver;->this$0:Lcom/android/server/MuteKeyObserver;
 
-    .line 176
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 177
     const/4 v0, 0x1
 
     # setter for: Lcom/android/server/MuteKeyObserver;->mSoftMuteKey:Z
     invoke-static {p1, v0}, Lcom/android/server/MuteKeyObserver;->access$202(Lcom/android/server/MuteKeyObserver;Z)Z
 
-    .line 178
     # getter for: Lcom/android/server/MuteKeyObserver;->mContentResolver:Landroid/content/ContentResolver;
     invoke-static {p1}, Lcom/android/server/MuteKeyObserver;->access$300(Lcom/android/server/MuteKeyObserver;)Landroid/content/ContentResolver;
 
@@ -55,7 +51,6 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 180
     # getter for: Lcom/android/server/MuteKeyObserver;->mSoftMuteKey:Z
     invoke-static {p1}, Lcom/android/server/MuteKeyObserver;->access$200(Lcom/android/server/MuteKeyObserver;)Z
 
@@ -63,7 +58,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 181
     # getter for: Lcom/android/server/MuteKeyObserver;->mContentResolver:Landroid/content/ContentResolver;
     invoke-static {p1}, Lcom/android/server/MuteKeyObserver;->access$300(Lcom/android/server/MuteKeyObserver;)Landroid/content/ContentResolver;
 
@@ -77,7 +71,6 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 184
     :cond_0
     return-void
 .end method
@@ -90,10 +83,8 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 188
     invoke-super {p0, p1, p2}, Landroid/database/ContentObserver;->onChange(ZLandroid/net/Uri;)V
 
-    .line 189
     const-string v0, "mutekey_streams_affected"
 
     invoke-static {v0}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -106,18 +97,15 @@
 
     if-eqz v0, :cond_1
 
-    .line 190
     iget-object v0, p0, Lcom/android/server/MuteKeyObserver$SettingsObserver;->this$0:Lcom/android/server/MuteKeyObserver;
 
     # invokes: Lcom/android/server/MuteKeyObserver;->updateStreamLocked()V
     invoke-static {v0}, Lcom/android/server/MuteKeyObserver;->access$400(Lcom/android/server/MuteKeyObserver;)V
 
-    .line 197
     :cond_0
     :goto_0
     return-void
 
-    .line 191
     :cond_1
     iget-object v0, p0, Lcom/android/server/MuteKeyObserver$SettingsObserver;->this$0:Lcom/android/server/MuteKeyObserver;
 
@@ -140,7 +128,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 193
     iget-object v0, p0, Lcom/android/server/MuteKeyObserver$SettingsObserver;->this$0:Lcom/android/server/MuteKeyObserver;
 
     iget-object v1, p0, Lcom/android/server/MuteKeyObserver$SettingsObserver;->this$0:Lcom/android/server/MuteKeyObserver;
@@ -165,7 +152,6 @@
     # setter for: Lcom/android/server/MuteKeyObserver;->mMuteKeyState:I
     invoke-static {v0, v1}, Lcom/android/server/MuteKeyObserver;->access$502(Lcom/android/server/MuteKeyObserver;I)I
 
-    .line 195
     iget-object v0, p0, Lcom/android/server/MuteKeyObserver$SettingsObserver;->this$0:Lcom/android/server/MuteKeyObserver;
 
     # getter for: Lcom/android/server/MuteKeyObserver;->mAudioManager:Landroid/media/AudioManager;

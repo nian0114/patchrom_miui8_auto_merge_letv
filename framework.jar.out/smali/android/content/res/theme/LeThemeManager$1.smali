@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 177
     iput-object p1, p0, Landroid/content/res/theme/LeThemeManager$1;->this$0:Landroid/content/res/theme/LeThemeManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "pathname"    # Ljava/io/File;
 
     .prologue
-    .line 180
     invoke-virtual {p1}, Ljava/io/File;->isDirectory()Z
 
     move-result v0

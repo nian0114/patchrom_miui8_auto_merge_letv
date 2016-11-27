@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 413
     iput-object p1, p0, Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup$5;->this$1:Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 416
     iget-object v0, p0, Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup$5;->this$1:Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup;
 
     iget-object v0, v0, Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup;->this$0:Lcom/letv/leui/text/LeFloatingToolbar;
@@ -58,7 +56,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 417
     iget-object v0, p0, Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup$5;->this$1:Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup;
 
     iget-object v0, v0, Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup;->this$0:Lcom/letv/leui/text/LeFloatingToolbar;
@@ -77,7 +74,6 @@
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/widget/LeHorizontalScrollView;->arrowScroll(I)Z
 
-    .line 419
     :cond_0
     return-void
 .end method

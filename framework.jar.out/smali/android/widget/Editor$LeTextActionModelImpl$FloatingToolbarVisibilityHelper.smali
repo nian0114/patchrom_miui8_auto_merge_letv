@@ -34,15 +34,12 @@
     .param p1, "toolbar"    # Lcom/letv/leui/text/LeFloatingToolbar;
 
     .prologue
-    .line 6852
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6848
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;->mWindowFocused:Z
 
-    .line 6853
     invoke-static {p1}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -51,7 +48,6 @@
 
     iput-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;->mToolbar:Lcom/letv/leui/text/LeFloatingToolbar;
 
-    .line 6854
     return-void
 .end method
 
@@ -65,22 +61,16 @@
 
     const/4 v0, 0x0
 
-    .line 6857
     iput-boolean v0, p0, Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;->mHideRequested:Z
 
-    .line 6858
     iput-boolean v0, p0, Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;->mMoving:Z
 
-    .line 6859
     iput-boolean v0, p0, Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;->mOutOfBounds:Z
 
-    .line 6860
     iput-boolean v1, p0, Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;->mWindowFocused:Z
 
-    .line 6862
     iput-boolean v1, p0, Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;->mActive:Z
 
-    .line 6863
     return-void
 .end method
 
@@ -88,17 +78,14 @@
     .locals 1
 
     .prologue
-    .line 6866
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;->mActive:Z
 
-    .line 6867
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;->mToolbar:Lcom/letv/leui/text/LeFloatingToolbar;
 
     invoke-virtual {v0}, Lcom/letv/leui/text/LeFloatingToolbar;->dismiss()V
 
-    .line 6868
     return-void
 .end method
 
@@ -107,10 +94,8 @@
     .param p1, "hide"    # Z
 
     .prologue
-    .line 6871
     iput-boolean p1, p0, Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;->mHideRequested:Z
 
-    .line 6872
     return-void
 .end method
 
@@ -119,10 +104,8 @@
     .param p1, "moving"    # Z
 
     .prologue
-    .line 6875
     iput-boolean p1, p0, Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;->mMoving:Z
 
-    .line 6876
     return-void
 .end method
 
@@ -131,10 +114,8 @@
     .param p1, "outOfBounds"    # Z
 
     .prologue
-    .line 6879
     iput-boolean p1, p0, Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;->mOutOfBounds:Z
 
-    .line 6880
     return-void
 .end method
 
@@ -143,10 +124,8 @@
     .param p1, "windowFocused"    # Z
 
     .prologue
-    .line 6883
     iput-boolean p1, p0, Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;->mWindowFocused:Z
 
-    .line 6884
     return-void
 .end method
 
@@ -154,16 +133,13 @@
     .locals 1
 
     .prologue
-    .line 6887
     iget-boolean v0, p0, Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;->mActive:Z
 
     if-nez v0, :cond_0
 
-    .line 6896
     :goto_0
     return-void
 
-    .line 6891
     :cond_0
     iget-boolean v0, p0, Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;->mHideRequested:Z
 
@@ -181,7 +157,6 @@
 
     if-nez v0, :cond_2
 
-    .line 6892
     :cond_1
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;->mToolbar:Lcom/letv/leui/text/LeFloatingToolbar;
 
@@ -189,7 +164,6 @@
 
     goto :goto_0
 
-    .line 6894
     :cond_2
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;->mToolbar:Lcom/letv/leui/text/LeFloatingToolbar;
 

@@ -27,15 +27,12 @@
     .param p2, "theme"    # I
 
     .prologue
-    .line 50
     invoke-direct {p0, p1, p2}, Landroid/app/Dialog;-><init>(Landroid/content/Context;I)V
 
-    .line 113
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/LePopupWindow;->cancelOnTouchOutside:Z
 
-    .line 51
     new-instance v0, Lcom/letv/leui/widget/LePopupWindowController;
 
     invoke-virtual {p0}, Lcom/letv/leui/widget/LePopupWindow;->getWindow()Landroid/view/Window;
@@ -46,7 +43,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LePopupWindow;->mAlert:Lcom/letv/leui/widget/LePopupWindowController;
 
-    .line 52
     return-void
 .end method
 
@@ -55,7 +51,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LePopupWindow;
 
     .prologue
-    .line 46
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindow;->mAlert:Lcom/letv/leui/widget/LePopupWindowController;
 
     return-object v0
@@ -68,7 +63,6 @@
     .param p1, "whichButton"    # I
 
     .prologue
-    .line 55
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindow;->mAlert:Lcom/letv/leui/widget/LePopupWindowController;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/LePopupWindowController;->getButton(I)Landroid/widget/Button;
@@ -82,7 +76,6 @@
     .locals 1
 
     .prologue
-    .line 63
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindow;->mAlert:Lcom/letv/leui/widget/LePopupWindowController;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/LePopupWindowController;->getLicenceCheckBox()Lcom/letv/leui/widget/LeCheckBox;
@@ -96,7 +89,6 @@
     .locals 1
 
     .prologue
-    .line 59
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindow;->mAlert:Lcom/letv/leui/widget/LePopupWindowController;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/LePopupWindowController;->getListView()Landroid/widget/ListView;
@@ -111,15 +103,12 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 122
     invoke-super {p0, p1}, Landroid/app/Dialog;->onCreate(Landroid/os/Bundle;)V
 
-    .line 124
     iget-object v1, p0, Lcom/letv/leui/widget/LePopupWindow;->mAlert:Lcom/letv/leui/widget/LePopupWindowController;
 
     invoke-virtual {v1}, Lcom/letv/leui/widget/LePopupWindowController;->install()V
 
-    .line 126
     invoke-virtual {p0}, Lcom/letv/leui/widget/LePopupWindow;->getWindow()Landroid/view/Window;
 
     move-result-object v1
@@ -128,30 +117,25 @@
 
     move-result-object v0
 
-    .line 127
     .local v0, "params":Landroid/view/WindowManager$LayoutParams;
     const/4 v1, -0x2
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->height:I
 
-    .line 128
     const/16 v1, 0x50
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    .line 129
     invoke-virtual {p0}, Lcom/letv/leui/widget/LePopupWindow;->getWindow()Landroid/view/Window;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
-    .line 130
     iget-boolean v1, p0, Lcom/letv/leui/widget/LePopupWindow;->cancelOnTouchOutside:Z
 
     invoke-virtual {p0, v1}, Lcom/letv/leui/widget/LePopupWindow;->setCanceledOnTouchOutside(Z)V
 
-    .line 131
     return-void
 .end method
 
@@ -161,7 +145,6 @@
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 135
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindow;->mAlert:Lcom/letv/leui/widget/LePopupWindowController;
 
     invoke-virtual {v0, p1, p2}, Lcom/letv/leui/widget/LePopupWindowController;->onKeyDown(ILandroid/view/KeyEvent;)Z
@@ -172,7 +155,6 @@
 
     const/4 v0, 0x1
 
-    .line 136
     :goto_0
     return v0
 
@@ -190,7 +172,6 @@
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 141
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindow;->mAlert:Lcom/letv/leui/widget/LePopupWindowController;
 
     invoke-virtual {v0, p1, p2}, Lcom/letv/leui/widget/LePopupWindowController;->onKeyUp(ILandroid/view/KeyEvent;)Z
@@ -201,7 +182,6 @@
 
     const/4 v0, 0x1
 
-    .line 142
     :goto_0
     return v0
 
@@ -220,14 +200,12 @@
     .param p3, "listener"    # Landroid/content/DialogInterface$OnClickListener;
 
     .prologue
-    .line 94
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindow;->mAlert:Lcom/letv/leui/widget/LePopupWindowController;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, p1, p2, p3, v1}, Lcom/letv/leui/widget/LePopupWindowController;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;Landroid/os/Message;)V
 
-    .line 95
     return-void
 .end method
 
@@ -238,14 +216,12 @@
     .param p3, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 90
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindow;->mAlert:Lcom/letv/leui/widget/LePopupWindowController;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, p1, p2, v1, p3}, Lcom/letv/leui/widget/LePopupWindowController;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;Landroid/os/Message;)V
 
-    .line 91
     return-void
 .end method
 
@@ -255,12 +231,10 @@
     .param p2, "color"    # I
 
     .prologue
-    .line 98
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindow;->mAlert:Lcom/letv/leui/widget/LePopupWindowController;
 
     invoke-virtual {v0, p1, p2}, Lcom/letv/leui/widget/LePopupWindowController;->setButtonColor(II)V
 
-    .line 99
     return-void
 .end method
 
@@ -269,13 +243,10 @@
     .param p1, "cancel"    # Z
 
     .prologue
-    .line 116
     invoke-super {p0, p1}, Landroid/app/Dialog;->setCanceledOnTouchOutside(Z)V
 
-    .line 117
     iput-boolean p1, p0, Lcom/letv/leui/widget/LePopupWindow;->cancelOnTouchOutside:Z
 
-    .line 118
     return-void
 .end method
 
@@ -284,12 +255,10 @@
     .param p1, "customTitleView"    # Landroid/view/View;
 
     .prologue
-    .line 73
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindow;->mAlert:Lcom/letv/leui/widget/LePopupWindowController;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/LePopupWindowController;->setCustomTitle(Landroid/view/View;)V
 
-    .line 74
     return-void
 .end method
 
@@ -298,12 +267,10 @@
     .param p1, "resId"    # I
 
     .prologue
-    .line 102
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindow;->mAlert:Lcom/letv/leui/widget/LePopupWindowController;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/LePopupWindowController;->setIcon(I)V
 
-    .line 103
     return-void
 .end method
 
@@ -312,12 +279,10 @@
     .param p1, "icon"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 106
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindow;->mAlert:Lcom/letv/leui/widget/LePopupWindowController;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/LePopupWindowController;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
-    .line 107
     return-void
 .end method
 
@@ -326,12 +291,10 @@
     .param p1, "forceInverseBackground"    # Z
 
     .prologue
-    .line 110
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindow;->mAlert:Lcom/letv/leui/widget/LePopupWindowController;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/LePopupWindowController;->setInverseBackgroundForced(Z)V
 
-    .line 111
     return-void
 .end method
 
@@ -340,12 +303,10 @@
     .param p1, "message"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 77
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindow;->mAlert:Lcom/letv/leui/widget/LePopupWindowController;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/LePopupWindowController;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 78
     return-void
 .end method
 
@@ -354,15 +315,12 @@
     .param p1, "title"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 68
     invoke-super {p0, p1}, Landroid/app/Dialog;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 69
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindow;->mAlert:Lcom/letv/leui/widget/LePopupWindowController;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/LePopupWindowController;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 70
     return-void
 .end method
 
@@ -371,12 +329,10 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 81
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindow;->mAlert:Lcom/letv/leui/widget/LePopupWindowController;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/LePopupWindowController;->setView(Landroid/view/View;)V
 
-    .line 82
     return-void
 .end method
 
@@ -389,7 +345,6 @@
     .param p5, "viewSpacingBottom"    # I
 
     .prologue
-    .line 86
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindow;->mAlert:Lcom/letv/leui/widget/LePopupWindowController;
 
     move-object v1, p1
@@ -404,6 +359,5 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/letv/leui/widget/LePopupWindowController;->setView(Landroid/view/View;IIII)V
 
-    .line 87
     return-void
 .end method

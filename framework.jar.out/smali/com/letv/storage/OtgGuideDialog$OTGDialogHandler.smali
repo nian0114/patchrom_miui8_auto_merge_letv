@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 93
     iput-object p1, p0, Lcom/letv/storage/OtgGuideDialog$OTGDialogHandler;->this$0:Lcom/letv/storage/OtgGuideDialog;
 
-    .line 94
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 95
     return-void
 .end method
 
@@ -41,7 +38,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 99
     move-object/from16 v0, p1
 
     iget v2, v0, Landroid/os/Message;->what:I
@@ -50,7 +46,6 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 100
     new-instance v4, Lcom/letv/storage/OtgGuideDialog$mountStorageListener;
 
     move-object/from16 v0, p0
@@ -61,7 +56,6 @@
 
     invoke-direct {v4, v2, v3}, Lcom/letv/storage/OtgGuideDialog$mountStorageListener;-><init>(Lcom/letv/storage/OtgGuideDialog;Lcom/letv/storage/OtgGuideDialog$1;)V
 
-    .line 101
     .local v4, "okButton":Lcom/letv/storage/OtgGuideDialog$mountStorageListener;
     new-instance v5, Lcom/letv/storage/OtgGuideDialog$cancelListener;
 
@@ -73,13 +67,11 @@
 
     invoke-direct {v5, v2, v3}, Lcom/letv/storage/OtgGuideDialog$cancelListener;-><init>(Lcom/letv/storage/OtgGuideDialog;Lcom/letv/storage/OtgGuideDialog$1;)V
 
-    .line 102
     .local v5, "cancelButton":Lcom/letv/storage/OtgGuideDialog$cancelListener;
     const/4 v2, 0x2
 
     new-array v7, v2, [Ljava/lang/String;
 
-    .line 103
     .local v7, "ButtonText":[Ljava/lang/String;
     const/4 v2, 0x0
 
@@ -100,7 +92,6 @@
 
     aput-object v3, v7, v2
 
-    .line 104
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
@@ -120,7 +111,6 @@
 
     aput-object v3, v7, v2
 
-    .line 105
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/letv/storage/OtgGuideDialog$OTGDialogHandler;->this$0:Lcom/letv/storage/OtgGuideDialog;
@@ -144,16 +134,13 @@
 
     move-result-object v9
 
-    .line 106
     .local v9, "browseStorageText":Ljava/lang/String;
     :goto_0
     const v13, -0xdc6a12
 
-    .line 107
     .local v13, "COLOR_BLUE":I
     move v11, v13
 
-    .line 108
     .local v11, "TextColor":I
     move-object/from16 v0, p0
 
@@ -175,7 +162,6 @@
     # setter for: Lcom/letv/storage/OtgGuideDialog;->otgBottomSheet:Lcom/letv/leui/widget/LeBottomSheet;
     invoke-static {v2, v3}, Lcom/letv/storage/OtgGuideDialog;->access$302(Lcom/letv/storage/OtgGuideDialog;Lcom/letv/leui/widget/LeBottomSheet;)Lcom/letv/leui/widget/LeBottomSheet;
 
-    .line 109
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/letv/storage/OtgGuideDialog$OTGDialogHandler;->this$0:Lcom/letv/storage/OtgGuideDialog;
@@ -197,7 +183,6 @@
 
     invoke-virtual/range {v2 .. v12}, Lcom/letv/leui/widget/LeBottomSheet;->setStyle(ILandroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Landroid/widget/CompoundButton$OnCheckedChangeListener;[Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/String;IZ)V
 
-    .line 111
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/letv/storage/OtgGuideDialog$OTGDialogHandler;->this$0:Lcom/letv/storage/OtgGuideDialog;
@@ -211,7 +196,6 @@
 
     move-result-object v17
 
-    .line 112
     .local v17, "mDialog":Landroid/app/Dialog;
     const/4 v2, 0x0
 
@@ -219,7 +203,6 @@
 
     invoke-virtual {v0, v2}, Landroid/app/Dialog;->setCancelable(Z)V
 
-    .line 113
     invoke-virtual/range {v17 .. v17}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object v2
@@ -228,7 +211,6 @@
 
     invoke-virtual {v2, v3}, Landroid/view/Window;->setType(I)V
 
-    .line 114
     invoke-virtual/range {v17 .. v17}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object v2
@@ -239,7 +221,6 @@
 
     invoke-virtual {v2, v3, v6}, Landroid/view/Window;->setFlags(II)V
 
-    .line 116
     invoke-virtual/range {v17 .. v17}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object v2
@@ -248,7 +229,6 @@
 
     move-result-object v14
 
-    .line 117
     .local v14, "attrs":Landroid/view/WindowManager$LayoutParams;
     iget v2, v14, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
@@ -256,14 +236,12 @@
 
     iput v2, v14, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
-    .line 119
     invoke-virtual/range {v17 .. v17}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object v2
 
     invoke-virtual {v2, v14}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
-    .line 120
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/letv/storage/OtgGuideDialog$OTGDialogHandler;->this$0:Lcom/letv/storage/OtgGuideDialog;
@@ -271,7 +249,6 @@
     # invokes: Lcom/letv/storage/OtgGuideDialog;->appear()V
     invoke-static {v2}, Lcom/letv/storage/OtgGuideDialog;->access$400(Lcom/letv/storage/OtgGuideDialog;)V
 
-    .line 123
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/letv/storage/OtgGuideDialog$OTGDialogHandler;->this$0:Lcom/letv/storage/OtgGuideDialog;
@@ -296,7 +273,6 @@
 
     invoke-virtual {v2, v3, v0, v1}, Lcom/letv/storage/OtgGuideDialog$OTGDialogHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 152
     .end local v4    # "okButton":Lcom/letv/storage/OtgGuideDialog$mountStorageListener;
     .end local v5    # "cancelButton":Lcom/letv/storage/OtgGuideDialog$cancelListener;
     .end local v7    # "ButtonText":[Ljava/lang/String;
@@ -308,7 +284,6 @@
     :goto_1
     return-void
 
-    .line 105
     .restart local v4    # "okButton":Lcom/letv/storage/OtgGuideDialog$mountStorageListener;
     .restart local v5    # "cancelButton":Lcom/letv/storage/OtgGuideDialog$cancelListener;
     .restart local v7    # "ButtonText":[Ljava/lang/String;
@@ -330,7 +305,6 @@
 
     goto/16 :goto_0
 
-    .line 124
     .end local v4    # "okButton":Lcom/letv/storage/OtgGuideDialog$mountStorageListener;
     .end local v5    # "cancelButton":Lcom/letv/storage/OtgGuideDialog$cancelListener;
     .end local v7    # "ButtonText":[Ljava/lang/String;
@@ -343,7 +317,6 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 125
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/letv/storage/OtgGuideDialog$OTGDialogHandler;->this$0:Lcom/letv/storage/OtgGuideDialog;
@@ -353,7 +326,6 @@
 
     goto :goto_1
 
-    .line 126
     :cond_2
     move-object/from16 v0, p1
 
@@ -363,7 +335,6 @@
 
     if-ne v2, v3, :cond_3
 
-    .line 127
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/letv/storage/OtgGuideDialog$OTGDialogHandler;->this$0:Lcom/letv/storage/OtgGuideDialog;
@@ -373,7 +344,6 @@
 
     goto :goto_1
 
-    .line 128
     :cond_3
     move-object/from16 v0, p1
 
@@ -383,7 +353,6 @@
 
     if-ne v2, v3, :cond_5
 
-    .line 129
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/letv/storage/OtgGuideDialog$OTGDialogHandler;->this$0:Lcom/letv/storage/OtgGuideDialog;
@@ -394,12 +363,10 @@
 
     invoke-virtual {v2, v3}, Lcom/letv/storage/OtgGuideDialog$OTGDialogHandler;->sendEmptyMessage(I)Z
 
-    .line 130
     new-instance v16, Landroid/content/Intent;
 
     invoke-direct/range {v16 .. v16}, Landroid/content/Intent;-><init>()V
 
-    .line 131
     .local v16, "intent":Landroid/content/Intent;
     new-instance v2, Landroid/content/ComponentName;
 
@@ -413,7 +380,6 @@
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 132
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/letv/storage/OtgGuideDialog$OTGDialogHandler;->this$0:Lcom/letv/storage/OtgGuideDialog;
@@ -431,14 +397,12 @@
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 133
     const/high16 v2, 0x10000000
 
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 138
     :try_start_0
     move-object/from16 v0, p0
 
@@ -451,14 +415,12 @@
 
     if-eqz v2, :cond_4
 
-    .line 139
     const-string v2, "StorageDefaultPathDialog"
 
     const-string v3, "OtgGuideDialog startActivity start"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 140
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/letv/storage/OtgGuideDialog$OTGDialogHandler;->this$0:Lcom/letv/storage/OtgGuideDialog;
@@ -474,7 +436,6 @@
 
     invoke-virtual {v2, v0, v3}, Landroid/content/Context;->startActivityAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 141
     const-string v2, "StorageDefaultPathDialog"
 
     const-string v3, "OtgGuideDialog startActivity end"
@@ -485,11 +446,9 @@
 
     goto/16 :goto_1
 
-    .line 145
     :catch_0
     move-exception v15
 
-    .line 146
     .local v15, "e":Ljava/lang/Exception;
     const-string v2, "StorageDefaultPathDialog"
 
@@ -519,7 +478,6 @@
 
     goto/16 :goto_1
 
-    .line 143
     .end local v15    # "e":Ljava/lang/Exception;
     :cond_4
     :try_start_1
@@ -533,7 +491,6 @@
 
     goto/16 :goto_1
 
-    .line 150
     .end local v16    # "intent":Landroid/content/Intent;
     :cond_5
     const-string v2, "StorageDefaultPathDialog"

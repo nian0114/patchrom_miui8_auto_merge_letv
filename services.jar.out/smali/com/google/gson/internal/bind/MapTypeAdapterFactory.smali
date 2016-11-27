@@ -27,16 +27,12 @@
     .param p2, "complexMapKeySerialization"    # Z
 
     .prologue
-    .line 110
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 111
     iput-object p1, p0, Lcom/google/gson/internal/bind/MapTypeAdapterFactory;->constructorConstructor:Lcom/google/gson/internal/ConstructorConstructor;
 
-    .line 112
     iput-boolean p2, p0, Lcom/google/gson/internal/bind/MapTypeAdapterFactory;->complexMapKeySerialization:Z
 
-    .line 113
     return-void
 .end method
 
@@ -45,7 +41,6 @@
     .param p0, "x0"    # Lcom/google/gson/internal/bind/MapTypeAdapterFactory;
 
     .prologue
-    .line 105
     iget-boolean v0, p0, Lcom/google/gson/internal/bind/MapTypeAdapterFactory;->complexMapKeySerialization:Z
 
     return v0
@@ -67,7 +62,6 @@
     .end annotation
 
     .prologue
-    .line 140
     sget-object v0, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
     if-eq p2, v0, :cond_0
@@ -118,18 +112,15 @@
 
     const/4 v2, 0x0
 
-    .line 116
     invoke-virtual {p2}, Lcom/google/gson/reflect/TypeToken;->getType()Ljava/lang/reflect/Type;
 
     move-result-object v11
 
-    .line 118
     .local v11, "type":Ljava/lang/reflect/Type;
     invoke-virtual {p2}, Lcom/google/gson/reflect/TypeToken;->getRawType()Ljava/lang/Class;
 
     move-result-object v9
 
-    .line 119
     .local v9, "rawType":Ljava/lang/Class;, "Ljava/lang/Class<-TT;>;"
     const-class v1, Ljava/util/Map;
 
@@ -139,26 +130,21 @@
 
     if-nez v1, :cond_0
 
-    .line 120
     const/4 v0, 0x0
 
-    .line 133
     :goto_0
     return-object v0
 
-    .line 123
     :cond_0
     invoke-static {v11}, Lcom/google/gson/internal/$Gson$Types;->getRawType(Ljava/lang/reflect/Type;)Ljava/lang/Class;
 
     move-result-object v10
 
-    .line 124
     .local v10, "rawTypeOfSrc":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-static {v11, v10}, Lcom/google/gson/internal/$Gson$Types;->getMapKeyAndValueTypes(Ljava/lang/reflect/Type;Ljava/lang/Class;)[Ljava/lang/reflect/Type;
 
     move-result-object v8
 
-    .line 125
     .local v8, "keyAndValueTypes":[Ljava/lang/reflect/Type;
     aget-object v1, v8, v2
 
@@ -166,7 +152,6 @@
 
     move-result-object v4
 
-    .line 126
     .local v4, "keyAdapter":Lcom/google/gson/TypeAdapter;, "Lcom/google/gson/TypeAdapter<*>;"
     aget-object v1, v8, v5
 
@@ -178,7 +163,6 @@
 
     move-result-object v6
 
-    .line 127
     .local v6, "valueAdapter":Lcom/google/gson/TypeAdapter;, "Lcom/google/gson/TypeAdapter<*>;"
     iget-object v1, p0, Lcom/google/gson/internal/bind/MapTypeAdapterFactory;->constructorConstructor:Lcom/google/gson/internal/ConstructorConstructor;
 
@@ -186,7 +170,6 @@
 
     move-result-object v7
 
-    .line 131
     .local v7, "constructor":Lcom/google/gson/internal/ObjectConstructor;, "Lcom/google/gson/internal/ObjectConstructor<TT;>;"
     new-instance v0, Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter;
 
@@ -200,7 +183,6 @@
 
     invoke-direct/range {v0 .. v7}, Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter;-><init>(Lcom/google/gson/internal/bind/MapTypeAdapterFactory;Lcom/google/gson/Gson;Ljava/lang/reflect/Type;Lcom/google/gson/TypeAdapter;Ljava/lang/reflect/Type;Lcom/google/gson/TypeAdapter;Lcom/google/gson/internal/ObjectConstructor;)V
 
-    .line 133
     .local v0, "result":Lcom/google/gson/TypeAdapter;, "Lcom/google/gson/TypeAdapter<TT;>;"
     goto :goto_0
 .end method

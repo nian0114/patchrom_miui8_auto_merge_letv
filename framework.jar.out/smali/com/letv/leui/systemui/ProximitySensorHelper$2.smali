@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 101
     iput-object p1, p0, Lcom/letv/leui/systemui/ProximitySensorHelper$2;->this$0:Lcom/letv/leui/systemui/ProximitySensorHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 3
 
     .prologue
-    .line 104
     iget-object v0, p0, Lcom/letv/leui/systemui/ProximitySensorHelper$2;->this$0:Lcom/letv/leui/systemui/ProximitySensorHelper;
 
     # getter for: Lcom/letv/leui/systemui/ProximitySensorHelper;->mState:Lcom/letv/leui/systemui/ProximitySensorHelper$STATE;
@@ -50,7 +48,6 @@
 
     monitor-enter v1
 
-    .line 105
     :try_start_0
     iget-object v0, p0, Lcom/letv/leui/systemui/ProximitySensorHelper$2;->this$0:Lcom/letv/leui/systemui/ProximitySensorHelper;
 
@@ -59,12 +56,10 @@
     # setter for: Lcom/letv/leui/systemui/ProximitySensorHelper;->mState:Lcom/letv/leui/systemui/ProximitySensorHelper$STATE;
     invoke-static {v0, v2}, Lcom/letv/leui/systemui/ProximitySensorHelper;->access$302(Lcom/letv/leui/systemui/ProximitySensorHelper;Lcom/letv/leui/systemui/ProximitySensorHelper$STATE;)Lcom/letv/leui/systemui/ProximitySensorHelper$STATE;
 
-    .line 106
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 107
     # getter for: Lcom/letv/leui/systemui/ProximitySensorHelper;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/letv/leui/systemui/ProximitySensorHelper;->access$000()Ljava/lang/String;
 
@@ -97,7 +92,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 108
     iget-object v0, p0, Lcom/letv/leui/systemui/ProximitySensorHelper$2;->this$0:Lcom/letv/leui/systemui/ProximitySensorHelper;
 
     # getter for: Lcom/letv/leui/systemui/ProximitySensorHelper;->mStateCallback:Lcom/letv/leui/systemui/ProximitySensorHelper$StateCallback;
@@ -107,7 +101,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 109
     iget-object v0, p0, Lcom/letv/leui/systemui/ProximitySensorHelper$2;->this$0:Lcom/letv/leui/systemui/ProximitySensorHelper;
 
     # getter for: Lcom/letv/leui/systemui/ProximitySensorHelper;->mStateCallback:Lcom/letv/leui/systemui/ProximitySensorHelper$StateCallback;
@@ -117,16 +110,13 @@
 
     invoke-interface {v0}, Lcom/letv/leui/systemui/ProximitySensorHelper$StateCallback;->SenosrTimeout()V
 
-    .line 110
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/systemui/ProximitySensorHelper$2;->this$0:Lcom/letv/leui/systemui/ProximitySensorHelper;
 
     invoke-virtual {v0}, Lcom/letv/leui/systemui/ProximitySensorHelper;->stop()V
 
-    .line 111
     return-void
 
-    .line 106
     :catchall_0
     move-exception v0
 

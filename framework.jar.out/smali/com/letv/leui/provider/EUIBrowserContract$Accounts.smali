@@ -29,7 +29,6 @@
     .locals 2
 
     .prologue
-    .line 412
     sget-object v0, Lcom/letv/leui/provider/EUIBrowserContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     invoke-virtual {v0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
@@ -55,7 +54,6 @@
     .locals 0
 
     .prologue
-    .line 408
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

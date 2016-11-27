@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 242
     iput-object p1, p0, Lcom/letv/leui/widget/SlidingMenu$1;->this$0:Lcom/letv/leui/widget/SlidingMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,7 +50,6 @@
     .param p3, "positionOffsetPixels"    # I
 
     .prologue
-    .line 249
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu$1;->this$0:Lcom/letv/leui/widget/SlidingMenu;
 
     # getter for: Lcom/letv/leui/widget/SlidingMenu;->mSlidingMenuStateChangeListener:Lcom/letv/leui/widget/SlidingMenu$OnMenuStateChangeListener;
@@ -61,7 +59,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 250
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu$1;->this$0:Lcom/letv/leui/widget/SlidingMenu;
 
     # getter for: Lcom/letv/leui/widget/SlidingMenu;->mSlidingMenuStateChangeListener:Lcom/letv/leui/widget/SlidingMenu$OnMenuStateChangeListener;
@@ -71,7 +68,6 @@
 
     invoke-interface {v0, p3}, Lcom/letv/leui/widget/SlidingMenu$OnMenuStateChangeListener;->onScrolling(I)V
 
-    .line 253
     :cond_0
     return-void
 .end method
@@ -83,7 +79,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 256
     if-nez p1, :cond_2
 
     iget-object v1, p0, Lcom/letv/leui/widget/SlidingMenu$1;->this$0:Lcom/letv/leui/widget/SlidingMenu;
@@ -95,7 +90,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 257
     iget-object v1, p0, Lcom/letv/leui/widget/SlidingMenu$1;->this$0:Lcom/letv/leui/widget/SlidingMenu;
 
     # getter for: Lcom/letv/leui/widget/SlidingMenu;->mOpenListener:Lcom/letv/leui/widget/SlidingMenu$OnOpenListener;
@@ -105,7 +99,6 @@
 
     invoke-interface {v1}, Lcom/letv/leui/widget/SlidingMenu$OnOpenListener;->onOpen()V
 
-    .line 264
     :cond_0
     :goto_0
     iget-object v1, p0, Lcom/letv/leui/widget/SlidingMenu$1;->this$0:Lcom/letv/leui/widget/SlidingMenu;
@@ -117,13 +110,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 266
     if-ne p1, v2, :cond_4
 
-    .line 267
     sget-object v0, Lcom/letv/leui/widget/SlidingMenu$State;->CLOSE:Lcom/letv/leui/widget/SlidingMenu$State;
 
-    .line 271
     .local v0, "state":Lcom/letv/leui/widget/SlidingMenu$State;
     :goto_1
     iget-object v1, p0, Lcom/letv/leui/widget/SlidingMenu$1;->this$0:Lcom/letv/leui/widget/SlidingMenu;
@@ -135,12 +125,10 @@
 
     invoke-interface {v1, v0}, Lcom/letv/leui/widget/SlidingMenu$OnMenuStateChangeListener;->onMenuState(Lcom/letv/leui/widget/SlidingMenu$State;)V
 
-    .line 273
     .end local v0    # "state":Lcom/letv/leui/widget/SlidingMenu$State;
     :cond_1
     return-void
 
-    .line 258
     :cond_2
     if-ne p1, v2, :cond_3
 
@@ -153,7 +141,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 259
     iget-object v1, p0, Lcom/letv/leui/widget/SlidingMenu$1;->this$0:Lcom/letv/leui/widget/SlidingMenu;
 
     # getter for: Lcom/letv/leui/widget/SlidingMenu;->mCloseListener:Lcom/letv/leui/widget/SlidingMenu$OnCloseListener;
@@ -165,7 +152,6 @@
 
     goto :goto_0
 
-    .line 260
     :cond_3
     const/4 v1, 0x2
 
@@ -180,7 +166,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 261
     iget-object v1, p0, Lcom/letv/leui/widget/SlidingMenu$1;->this$0:Lcom/letv/leui/widget/SlidingMenu;
 
     # getter for: Lcom/letv/leui/widget/SlidingMenu;->mSecondaryOpenListner:Lcom/letv/leui/widget/SlidingMenu$OnOpenListener;
@@ -192,7 +177,6 @@
 
     goto :goto_0
 
-    .line 269
     :cond_4
     sget-object v0, Lcom/letv/leui/widget/SlidingMenu$State;->OPEN:Lcom/letv/leui/widget/SlidingMenu$State;
 

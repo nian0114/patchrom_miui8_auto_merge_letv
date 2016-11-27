@@ -30,31 +30,26 @@
     .param p1, "reader"    # Ljava/io/Reader;
 
     .prologue
-    .line 68
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 69
     new-instance v0, Lcom/google/gson/stream/JsonReader;
 
     invoke-direct {v0, p1}, Lcom/google/gson/stream/JsonReader;-><init>(Ljava/io/Reader;)V
 
     iput-object v0, p0, Lcom/google/gson/JsonStreamParser;->parser:Lcom/google/gson/stream/JsonReader;
 
-    .line 70
     iget-object v0, p0, Lcom/google/gson/JsonStreamParser;->parser:Lcom/google/gson/stream/JsonReader;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/google/gson/stream/JsonReader;->setLenient(Z)V
 
-    .line 71
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/google/gson/JsonStreamParser;->lock:Ljava/lang/Object;
 
-    .line 72
     return-void
 .end method
 
@@ -63,14 +58,12 @@
     .param p1, "json"    # Ljava/lang/String;
 
     .prologue
-    .line 61
     new-instance v0, Ljava/io/StringReader;
 
     invoke-direct {v0, p1}, Ljava/io/StringReader;-><init>(Ljava/lang/String;)V
 
     invoke-direct {p0, v0}, Lcom/google/gson/JsonStreamParser;-><init>(Ljava/io/Reader;)V
 
-    .line 62
     return-void
 .end method
 
@@ -80,12 +73,10 @@
     .locals 4
 
     .prologue
-    .line 103
     iget-object v2, p0, Lcom/google/gson/JsonStreamParser;->lock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 105
     :try_start_0
     iget-object v1, p0, Lcom/google/gson/JsonStreamParser;->parser:Lcom/google/gson/stream/JsonReader;
 
@@ -114,11 +105,9 @@
 
     goto :goto_0
 
-    .line 106
     :catch_0
     move-exception v0
 
-    .line 107
     .local v0, "e":Lcom/google/gson/stream/MalformedJsonException;
     new-instance v1, Lcom/google/gson/JsonSyntaxException;
 
@@ -126,7 +115,6 @@
 
     throw v1
 
-    .line 111
     .end local v0    # "e":Lcom/google/gson/stream/MalformedJsonException;
     :catchall_0
     move-exception v1
@@ -137,11 +125,9 @@
 
     throw v1
 
-    .line 108
     :catch_1
     move-exception v0
 
-    .line 109
     .local v0, "e":Ljava/io/IOException;
     :try_start_2
     new-instance v1, Lcom/google/gson/JsonIOException;
@@ -162,21 +148,18 @@
     .end annotation
 
     .prologue
-    .line 82
     invoke-virtual {p0}, Lcom/google/gson/JsonStreamParser;->hasNext()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 83
     new-instance v1, Ljava/util/NoSuchElementException;
 
     invoke-direct {v1}, Ljava/util/NoSuchElementException;-><init>()V
 
     throw v1
 
-    .line 87
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/google/gson/JsonStreamParser;->parser:Lcom/google/gson/stream/JsonReader;
@@ -191,11 +174,9 @@
 
     return-object v1
 
-    .line 88
     :catch_0
     move-exception v0
 
-    .line 89
     .local v0, "e":Ljava/lang/StackOverflowError;
     new-instance v1, Lcom/google/gson/JsonParseException;
 
@@ -205,12 +186,10 @@
 
     throw v1
 
-    .line 90
     .end local v0    # "e":Ljava/lang/StackOverflowError;
     :catch_1
     move-exception v0
 
-    .line 91
     .local v0, "e":Ljava/lang/OutOfMemoryError;
     new-instance v1, Lcom/google/gson/JsonParseException;
 
@@ -220,12 +199,10 @@
 
     throw v1
 
-    .line 92
     .end local v0    # "e":Ljava/lang/OutOfMemoryError;
     :catch_2
     move-exception v0
 
-    .line 93
     .local v0, "e":Lcom/google/gson/JsonParseException;
     invoke-virtual {v0}, Lcom/google/gson/JsonParseException;->getCause()Ljava/lang/Throwable;
 
@@ -248,7 +225,6 @@
     .locals 1
 
     .prologue
-    .line 52
     invoke-virtual {p0}, Lcom/google/gson/JsonStreamParser;->next()Lcom/google/gson/JsonElement;
 
     move-result-object v0
@@ -260,7 +236,6 @@
     .locals 1
 
     .prologue
-    .line 120
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 136
     iput-object p1, p0, Lcom/letv/leui/widget/WifiConnectView$1;->this$0:Lcom/letv/leui/widget/WifiConnectView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +40,9 @@
     .param p1, "animation"    # Landroid/animation/ValueAnimator;
 
     .prologue
-    .line 139
     iget-object v0, p0, Lcom/letv/leui/widget/WifiConnectView$1;->this$0:Lcom/letv/leui/widget/WifiConnectView;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/WifiConnectView;->invalidate()V
 
-    .line 140
     return-void
 .end method

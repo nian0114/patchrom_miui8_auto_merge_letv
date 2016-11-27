@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 135
     iput-object p1, p0, Lcom/letv/leui/widget/pulltorefresh/extras/PullToRefreshWebView2$JsValueCallback;->this$0:Lcom/letv/leui/widget/pulltorefresh/extras/PullToRefreshWebView2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "response"    # Z
 
     .prologue
-    .line 142
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/extras/PullToRefreshWebView2$JsValueCallback;->this$0:Lcom/letv/leui/widget/pulltorefresh/extras/PullToRefreshWebView2;
 
     # getter for: Lcom/letv/leui/widget/pulltorefresh/extras/PullToRefreshWebView2;->mIsReadyForPullDown:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -48,7 +46,6 @@
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 143
     return-void
 .end method
 
@@ -57,7 +54,6 @@
     .param p1, "response"    # Z
 
     .prologue
-    .line 138
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/extras/PullToRefreshWebView2$JsValueCallback;->this$0:Lcom/letv/leui/widget/pulltorefresh/extras/PullToRefreshWebView2;
 
     # getter for: Lcom/letv/leui/widget/pulltorefresh/extras/PullToRefreshWebView2;->mIsReadyForPullUp:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -67,6 +63,5 @@
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 139
     return-void
 .end method

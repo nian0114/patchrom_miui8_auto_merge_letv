@@ -65,12 +65,10 @@
     .locals 1
 
     .prologue
-    .line 30
     const/16 v0, 0x14c
 
     sput v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->PERCENT_OFFSET:I
 
-    .line 31
     sget v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->PERCENT_OFFSET:I
 
     div-int/lit8 v0, v0, 0x6
@@ -87,12 +85,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 45
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 46
     return-void
 .end method
 
@@ -106,37 +102,31 @@
 
     const/4 v5, -0x1
 
-    .line 49
     invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 34
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4, v6}, Ljava/util/ArrayList;-><init>(I)V
 
     iput-object v4, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mBalls:Ljava/util/ArrayList;
 
-    .line 35
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4, v6}, Ljava/util/ArrayList;-><init>(I)V
 
     iput-object v4, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mColorList:Ljava/util/ArrayList;
 
-    .line 50
     const/4 v4, 0x2
 
     new-array v0, v4, [I
 
     fill-array-data v0, :array_0
 
-    .line 54
     .local v0, "attrsArray":[I
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v3
 
-    .line 55
     .local v3, "ta":Landroid/content/res/TypedArray;
     const/4 v4, 0x0
 
@@ -144,7 +134,6 @@
 
     move-result v2
 
-    .line 56
     .local v2, "layout_width":I
     const/4 v4, 0x1
 
@@ -152,17 +141,13 @@
 
     move-result v1
 
-    .line 57
     .local v1, "layout_height":I
     invoke-virtual {v3}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 58
     invoke-direct {p0, v2, v1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->init(II)V
 
-    .line 60
     return-void
 
-    .line 50
     :array_0
     .array-data 4
         0x10100f4
@@ -175,7 +160,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;
 
     .prologue
-    .line 24
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mRotateAnim:Landroid/animation/ObjectAnimator;
 
     return-object v0
@@ -188,12 +172,10 @@
     .param p3, "color"    # I
 
     .prologue
-    .line 93
     new-instance v0, Landroid/graphics/drawable/shapes/OvalShape;
 
     invoke-direct {v0}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
 
-    .line 94
     .local v0, "circle":Landroid/graphics/drawable/shapes/OvalShape;
     iget v4, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mBallRadius:F
 
@@ -201,42 +183,33 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/graphics/drawable/shapes/OvalShape;->resize(FF)V
 
-    .line 95
     new-instance v1, Landroid/graphics/drawable/ShapeDrawable;
 
     invoke-direct {v1, v0}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
 
-    .line 96
     .local v1, "drawable":Landroid/graphics/drawable/ShapeDrawable;
     new-instance v3, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;
 
     invoke-direct {v3, v1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;-><init>(Landroid/graphics/drawable/ShapeDrawable;)V
 
-    .line 97
     .local v3, "shapeHolder":Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;
     invoke-virtual {v3, p1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->setX(F)V
 
-    .line 98
     invoke-virtual {v3, p2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->setY(F)V
 
-    .line 99
     invoke-virtual {v1}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
 
     move-result-object v2
 
-    .line 100
     .local v2, "paint":Landroid/graphics/Paint;
     invoke-virtual {v2, p3}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 101
     invoke-virtual {v3, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->setPaint(Landroid/graphics/Paint;)V
 
-    .line 102
     const/4 v4, 0x0
 
     invoke-virtual {v3, v4}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->setAlpha(F)V
 
-    .line 103
     return-object v3
 .end method
 
@@ -244,7 +217,6 @@
     .locals 1
 
     .prologue
-    .line 412
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mRotateAnim:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->isRunning()Z
@@ -253,12 +225,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 413
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mRotateAnim:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 416
     :cond_0
     return-void
 .end method
@@ -268,7 +238,6 @@
     .param p1, "curPer"    # J
 
     .prologue
-    .line 426
     iget-wide v2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mLastPercent:J
 
     cmp-long v1, p1, v2
@@ -277,15 +246,12 @@
 
     const/4 v0, 0x1
 
-    .line 427
     .local v0, "isDown":Z
     :goto_0
     iput-wide p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mLastPercent:J
 
-    .line 428
     return v0
 
-    .line 426
     .end local v0    # "isDown":Z
     :cond_0
     const/4 v0, 0x0
@@ -309,7 +275,6 @@
 
     const/4 v8, 0x0
 
-    .line 235
     const-string v5, "width"
 
     new-array v6, v10, [F
@@ -326,7 +291,6 @@
 
     move-result-object v3
 
-    .line 237
     .local v3, "pvhW":Landroid/animation/PropertyValuesHolder;
     const-string v5, "height"
 
@@ -344,7 +308,6 @@
 
     move-result-object v2
 
-    .line 239
     .local v2, "pvhH":Landroid/animation/PropertyValuesHolder;
     const-string v5, "x"
 
@@ -366,7 +329,6 @@
 
     move-result-object v0
 
-    .line 241
     .local v0, "pvTX":Landroid/animation/PropertyValuesHolder;
     const-string v5, "y"
 
@@ -388,7 +350,6 @@
 
     move-result-object v1
 
-    .line 243
     .local v1, "pvTY":Landroid/animation/PropertyValuesHolder;
     const/4 v5, 0x4
 
@@ -414,7 +375,6 @@
 
     move-result-object v4
 
-    .line 246
     .local v4, "z2nAnim":Landroid/animation/ObjectAnimator;
     new-instance v5, Landroid/view/animation/AccelerateInterpolator;
 
@@ -422,10 +382,8 @@
 
     invoke-virtual {v4, v5}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 247
     invoke-virtual {v4, p0}, Landroid/animation/ObjectAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 248
     return-object v4
 .end method
 
@@ -445,7 +403,6 @@
 
     const/4 v9, 0x0
 
-    .line 190
     const-string v5, "width"
 
     new-array v6, v11, [F
@@ -462,7 +419,6 @@
 
     move-result-object v3
 
-    .line 192
     .local v3, "pvhW":Landroid/animation/PropertyValuesHolder;
     const-string v5, "height"
 
@@ -480,7 +436,6 @@
 
     move-result-object v2
 
-    .line 194
     .local v2, "pvhH":Landroid/animation/PropertyValuesHolder;
     const-string v5, "x"
 
@@ -508,7 +463,6 @@
 
     move-result-object v0
 
-    .line 196
     .local v0, "pvTX":Landroid/animation/PropertyValuesHolder;
     const-string v5, "y"
 
@@ -536,7 +490,6 @@
 
     move-result-object v1
 
-    .line 198
     .local v1, "pvTY":Landroid/animation/PropertyValuesHolder;
     const/4 v5, 0x4
 
@@ -556,7 +509,6 @@
 
     move-result-object v4
 
-    .line 201
     .local v4, "z2nAnim":Landroid/animation/ObjectAnimator;
     sget v5, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->EVERY_DURATION:I
 
@@ -564,14 +516,12 @@
 
     invoke-virtual {v4, v6, v7}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 203
     new-instance v5, Landroid/view/animation/OvershootInterpolator;
 
     invoke-direct {v5}, Landroid/view/animation/OvershootInterpolator;-><init>()V
 
     invoke-virtual {v4, v5}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 205
     return-object v4
 .end method
 
@@ -581,7 +531,6 @@
     .param p2, "layout_height"    # I
 
     .prologue
-    .line 64
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mColorList:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->getDefaultColorList()Ljava/util/ArrayList;
@@ -590,13 +539,10 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 65
     invoke-direct {p0, p1, p2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->prepare(II)V
 
-    .line 66
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->preAnim()V
 
-    .line 67
     return-void
 .end method
 
@@ -604,10 +550,8 @@
     .locals 14
 
     .prologue
-    .line 81
     const/high16 v0, 0x42700000    # 60.0f
 
-    .line 82
     .local v0, "angleUnit":F
     iget v4, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mViewRadius:F
 
@@ -615,7 +559,6 @@
 
     sub-float v1, v4, v5
 
-    .line 83
     .local v1, "drawRadius":F
     const/4 v2, 0x0
 
@@ -625,12 +568,10 @@
 
     if-ge v2, v4, :cond_0
 
-    .line 84
     new-instance v3, Landroid/graphics/PointF;
 
     invoke-direct {v3}, Landroid/graphics/PointF;-><init>()V
 
-    .line 85
     .local v3, "pointF":Landroid/graphics/PointF;
     iget v4, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mViewSize:F
 
@@ -702,7 +643,6 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/graphics/PointF;->set(FF)V
 
-    .line 87
     iget-object v5, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mBalls:Ljava/util/ArrayList;
 
     iget v6, v3, Landroid/graphics/PointF;->x:F
@@ -727,12 +667,10 @@
 
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 83
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 89
     .end local v3    # "pointF":Landroid/graphics/PointF;
     :cond_0
     return-void
@@ -744,12 +682,10 @@
     .param p2, "time"    # I
 
     .prologue
-    .line 419
     invoke-virtual {p1}, Landroid/animation/ObjectAnimator;->getCurrentPlayTime()J
 
     move-result-wide v0
 
-    .line 420
     .local v0, "currentPlayTime":J
     int-to-long v2, p2
 
@@ -757,12 +693,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 421
     int-to-long v2, p2
 
     invoke-virtual {p1, v2, v3}, Landroid/animation/ObjectAnimator;->setCurrentPlayTime(J)V
 
-    .line 423
     :cond_0
     return-void
 .end method
@@ -771,20 +705,16 @@
     .locals 1
 
     .prologue
-    .line 108
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->preAppearAnim()V
 
-    .line 109
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->preRotateAnim2()Landroid/animation/ObjectAnimator;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mRotateAnim:Landroid/animation/ObjectAnimator;
 
-    .line 110
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->preDisappearAnim()V
 
-    .line 111
     return-void
 .end method
 
@@ -792,7 +722,6 @@
     .locals 4
 
     .prologue
-    .line 209
     iget-object v2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mBalls:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
@@ -803,7 +732,6 @@
 
     iput-object v2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
-    .line 210
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -817,7 +745,6 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 212
     iget-object v3, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     iget-object v2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mBalls:Ljava/util/ArrayList;
@@ -834,7 +761,6 @@
 
     aput-object v2, v3, v0
 
-    .line 213
     iget-object v2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     aget-object v2, v2, v0
@@ -847,12 +773,10 @@
 
     invoke-virtual {v2, v3}, Landroid/animation/ObjectAnimator;->setTarget(Ljava/lang/Object;)V
 
-    .line 210
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 228
     :cond_0
     return-void
 .end method
@@ -861,12 +785,10 @@
     .locals 5
 
     .prologue
-    .line 255
     iget-object v3, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mDisappearAnim:Landroid/animation/AnimatorSet;
 
     if-nez v3, :cond_1
 
-    .line 256
     iget-object v3, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mBalls:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
@@ -875,7 +797,6 @@
 
     new-array v2, v3, [Landroid/animation/ObjectAnimator;
 
-    .line 257
     .local v2, "mAnimators":[Landroid/animation/ObjectAnimator;
     const/4 v0, 0x0
 
@@ -890,7 +811,6 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 259
     iget-object v3, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mBalls:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -905,7 +825,6 @@
 
     aput-object v3, v2, v0
 
-    .line 260
     aget-object v3, v2, v0
 
     iget-object v4, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mBalls:Ljava/util/ArrayList;
@@ -916,7 +835,6 @@
 
     invoke-virtual {v3, v4}, Landroid/animation/ObjectAnimator;->setTarget(Ljava/lang/Object;)V
 
-    .line 261
     aget-object v3, v2, v0
 
     new-instance v4, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView$1;
@@ -925,12 +843,10 @@
 
     invoke-virtual {v3, v4}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 257
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 272
     :cond_0
     new-instance v3, Landroid/animation/AnimatorSet;
 
@@ -938,7 +854,6 @@
 
     iput-object v3, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mDisappearAnim:Landroid/animation/AnimatorSet;
 
-    .line 273
     iget-object v3, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mDisappearAnim:Landroid/animation/AnimatorSet;
 
     new-instance v4, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView$2;
@@ -947,12 +862,10 @@
 
     invoke-virtual {v3, v4}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 288
     iget-object v3, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mDisappearAnim:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v3, v2}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 291
     .end local v0    # "i":I
     .end local v1    # "j":I
     .end local v2    # "mAnimators":[Landroid/animation/ObjectAnimator;
@@ -964,7 +877,6 @@
     .locals 6
 
     .prologue
-    .line 147
     const-string v2, "rotation"
 
     const/4 v3, 0x2
@@ -977,7 +889,6 @@
 
     move-result-object v1
 
-    .line 149
     .local v1, "rotation":Landroid/animation/PropertyValuesHolder;
     const/4 v2, 0x1
 
@@ -997,23 +908,19 @@
 
     move-result-object v0
 
-    .line 150
     .local v0, "rotateAnim":Landroid/animation/ObjectAnimator;
     const/4 v2, -0x1
 
     invoke-virtual {v0, v2}, Landroid/animation/ObjectAnimator;->setRepeatCount(I)V
 
-    .line 151
     new-instance v2, Landroid/view/animation/LinearInterpolator;
 
     invoke-direct {v2}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
     invoke-virtual {v0, v2}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 152
     return-object v0
 
-    .line 147
     nop
 
     :array_0
@@ -1027,7 +934,6 @@
     .locals 6
 
     .prologue
-    .line 156
     const-string v2, "rot"
 
     const/4 v3, 0x2
@@ -1040,7 +946,6 @@
 
     move-result-object v1
 
-    .line 160
     .local v1, "rotation":Landroid/animation/PropertyValuesHolder;
     const/4 v2, 0x1
 
@@ -1060,26 +965,21 @@
 
     move-result-object v0
 
-    .line 161
     .local v0, "rotateAnim":Landroid/animation/ObjectAnimator;
     const/4 v2, -0x1
 
     invoke-virtual {v0, v2}, Landroid/animation/ObjectAnimator;->setRepeatCount(I)V
 
-    .line 162
     new-instance v2, Landroid/view/animation/LinearInterpolator;
 
     invoke-direct {v2}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
     invoke-virtual {v0, v2}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 163
     invoke-virtual {v0, p0}, Landroid/animation/ObjectAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 183
     return-object v0
 
-    .line 156
     :array_0
     .array-data 4
         0x0
@@ -1093,43 +993,36 @@
     .param p2, "h"    # I
 
     .prologue
-    .line 139
     if-lt p2, p1, :cond_0
 
     move v0, p2
 
-    .line 140
     .local v0, "size":I
     :goto_0
     int-to-float v1, v0
 
     iput v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mViewSize:F
 
-    .line 141
     div-int/lit8 v1, v0, 0x8
 
     int-to-float v1, v1
 
     iput v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mBallRadius:F
 
-    .line 142
     div-int/lit8 v1, v0, 0x2
 
     int-to-float v1, v1
 
     iput v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mViewRadius:F
 
-    .line 143
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->initBall()V
 
-    .line 144
     return-void
 
     .end local v0    # "size":I
     :cond_0
     move v0, p1
 
-    .line 139
     goto :goto_0
 .end method
 
@@ -1137,10 +1030,8 @@
     .locals 0
 
     .prologue
-    .line 455
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->initBall()V
 
-    .line 456
     return-void
 .end method
 
@@ -1150,7 +1041,6 @@
     .locals 3
 
     .prologue
-    .line 473
     iget-object v2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mBalls:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1171,7 +1061,6 @@
 
     check-cast v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;
 
-    .line 474
     .local v0, "holder":Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;
     const/high16 v2, 0x3f800000    # 1.0f
 
@@ -1179,7 +1068,6 @@
 
     goto :goto_0
 
-    .line 476
     .end local v0    # "holder":Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;
     :cond_0
     iget-object v2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mRotateAnim:Landroid/animation/ObjectAnimator;
@@ -1190,17 +1078,14 @@
 
     if-eqz v2, :cond_2
 
-    .line 477
     iget-object v2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mRotateAnim:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v2}, Landroid/animation/ObjectAnimator;->resume()V
 
-    .line 481
     :cond_1
     :goto_1
     return-void
 
-    .line 478
     :cond_2
     iget-object v2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mRotateAnim:Landroid/animation/ObjectAnimator;
 
@@ -1210,7 +1095,6 @@
 
     if-nez v2, :cond_1
 
-    .line 479
     iget-object v2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mRotateAnim:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v2}, Landroid/animation/ObjectAnimator;->start()V
@@ -1222,7 +1106,6 @@
     .locals 1
 
     .prologue
-    .line 484
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mRotateAnim:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->isRunning()Z
@@ -1231,18 +1114,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 486
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mRotateAnim:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 488
     :cond_0
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->setAllBallsAlpha(F)V
 
-    .line 489
     return-void
 .end method
 
@@ -1250,17 +1130,14 @@
     .locals 1
 
     .prologue
-    .line 406
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mDisappearAnim:Landroid/animation/AnimatorSet;
 
     if-eqz v0, :cond_0
 
-    .line 407
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mDisappearAnim:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 409
     :cond_0
     return-void
 .end method
@@ -1278,14 +1155,12 @@
     .end annotation
 
     .prologue
-    .line 70
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x6
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 71
     .local v0, "colorList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     const-string v1, "#ed1e20"
 
@@ -1299,7 +1174,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 72
     const-string v1, "#8c50e7"
 
     invoke-static {v1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
@@ -1312,7 +1186,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 73
     const-string v1, "#1ab1eb"
 
     invoke-static {v1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
@@ -1325,7 +1198,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 74
     const-string v1, "#80cb17"
 
     invoke-static {v1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
@@ -1338,7 +1210,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 75
     const-string v1, "#ffd200"
 
     invoke-static {v1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
@@ -1351,7 +1222,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 76
     const-string v1, "#ff8400"
 
     invoke-static {v1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
@@ -1364,7 +1234,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 77
     return-object v0
 .end method
 
@@ -1372,7 +1241,6 @@
     .locals 1
 
     .prologue
-    .line 447
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->rot:F
 
     return v0
@@ -1382,7 +1250,6 @@
     .locals 1
 
     .prologue
-    .line 133
     const/4 v0, 0x0
 
     return v0
@@ -1393,7 +1260,6 @@
     .param p1, "animation"    # Landroid/animation/ValueAnimator;
 
     .prologue
-    .line 441
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->getX()F
 
     move-result v2
@@ -1402,7 +1268,6 @@
 
     add-int/lit8 v0, v2, 0x1
 
-    .line 442
     .local v0, "x":I
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->getY()F
 
@@ -1412,7 +1277,6 @@
 
     add-int/lit8 v1, v2, 0x1
 
-    .line 443
     .local v1, "y":I
     add-int/lit16 v2, v0, 0x2a0
 
@@ -1420,7 +1284,6 @@
 
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->invalidate(IIII)V
 
-    .line 444
     return-void
 .end method
 
@@ -1428,20 +1291,16 @@
     .locals 1
 
     .prologue
-    .line 499
     invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
 
-    .line 500
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mRotateAnim:Landroid/animation/ObjectAnimator;
 
     if-eqz v0, :cond_0
 
-    .line 501
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mRotateAnim:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 503
     :cond_0
     return-void
 .end method
@@ -1453,10 +1312,8 @@
     .prologue
     const/high16 v5, 0x40000000    # 2.0f
 
-    .line 115
     invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 117
     iget-object v2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mRotateAnim:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v2}, Landroid/animation/ObjectAnimator;->isRunning()Z
@@ -1465,7 +1322,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 118
     iget v2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->rot:F
 
     invoke-virtual {p1}, Landroid/graphics/Canvas;->getWidth()I
@@ -1486,7 +1342,6 @@
 
     invoke-virtual {p1, v2, v3, v4}, Landroid/graphics/Canvas;->rotate(FFF)V
 
-    .line 121
     :cond_0
     iget-object v2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mBalls:Ljava/util/ArrayList;
 
@@ -1509,7 +1364,6 @@
 
     check-cast v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;
 
-    .line 122
     .local v0, "ball":Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;
     invoke-virtual {v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->getShape()Landroid/graphics/drawable/ShapeDrawable;
 
@@ -1521,7 +1375,6 @@
 
     if-lez v2, :cond_1
 
-    .line 125
     invoke-virtual {v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->getX()F
 
     move-result v2
@@ -1544,14 +1397,12 @@
 
     invoke-virtual {p1, v2, v3}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 126
     invoke-virtual {v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->getShape()Landroid/graphics/drawable/ShapeDrawable;
 
     move-result-object v2
 
     invoke-virtual {v2, p1}, Landroid/graphics/drawable/ShapeDrawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 127
     invoke-virtual {v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->getX()F
 
     move-result v2
@@ -1580,7 +1431,6 @@
 
     goto :goto_0
 
-    .line 129
     .end local v0    # "ball":Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;
     :cond_2
     return-void
@@ -1590,22 +1440,18 @@
     .locals 1
 
     .prologue
-    .line 432
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mRotateAnim:Landroid/animation/ObjectAnimator;
 
     if-eqz v0, :cond_0
 
-    .line 433
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mRotateAnim:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 434
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->setRotation(F)V
 
-    .line 436
     :cond_0
     return-void
 .end method
@@ -1615,7 +1461,6 @@
     .param p1, "alpha"    # F
 
     .prologue
-    .line 492
     iget-object v2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mBalls:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1636,13 +1481,11 @@
 
     check-cast v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;
 
-    .line 493
     .local v0, "holder":Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->setAlpha(F)V
 
     goto :goto_0
 
-    .line 495
     .end local v0    # "holder":Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;
     :cond_0
     return-void
@@ -1658,12 +1501,10 @@
     .param p6, "color6"    # I
 
     .prologue
-    .line 459
     iget-object v2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mColorList:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 460
     iget-object v2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mColorList:Ljava/util/ArrayList;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1672,7 +1513,6 @@
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 461
     iget-object v2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mColorList:Ljava/util/ArrayList;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1681,7 +1521,6 @@
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 462
     iget-object v2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mColorList:Ljava/util/ArrayList;
 
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1690,7 +1529,6 @@
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 463
     iget-object v2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mColorList:Ljava/util/ArrayList;
 
     invoke-static {p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1699,7 +1537,6 @@
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 464
     iget-object v2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mColorList:Ljava/util/ArrayList;
 
     invoke-static {p5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1708,7 +1545,6 @@
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 465
     iget-object v2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mColorList:Ljava/util/ArrayList;
 
     invoke-static {p6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1717,7 +1553,6 @@
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 466
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -1726,7 +1561,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 467
     iget-object v2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mBalls:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1735,7 +1569,6 @@
 
     check-cast v1, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;
 
-    .line 468
     .local v1, "shapeHolder":Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;
     invoke-virtual {v1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->getPaint()Landroid/graphics/Paint;
 
@@ -1755,12 +1588,10 @@
 
     invoke-virtual {v3, v2}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 466
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 470
     .end local v1    # "shapeHolder":Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;
     :cond_0
     return-void
@@ -1781,7 +1612,6 @@
 
     const/4 v4, 0x0
 
-    .line 295
     sget v1, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->PERCENT_OFFSET:I
 
     int-to-long v2, v1
@@ -1790,12 +1620,10 @@
 
     if-gez v1, :cond_1
 
-    .line 403
     :cond_0
     :goto_0
     return-void
 
-    .line 298
     :cond_1
     sget v1, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->PERCENT_OFFSET:I
 
@@ -1803,12 +1631,10 @@
 
     sub-long/2addr p1, v2
 
-    .line 299
     invoke-direct {p0, p1, p2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->getDirection(J)Z
 
     move-result v0
 
-    .line 300
     .local v0, "isDown":Z
     sget v1, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->EVERY_DURATION:I
 
@@ -1818,17 +1644,14 @@
 
     if-gtz v1, :cond_3
 
-    .line 301
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->cancelRotateAnim()V
 
-    .line 302
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     aget-object v1, v1, v4
 
     invoke-virtual {v1, p1, p2}, Landroid/animation/ObjectAnimator;->setCurrentPlayTime(J)V
 
-    .line 303
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mBalls:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1839,31 +1662,26 @@
 
     invoke-virtual {v1, v5}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->setAlpha(F)V
 
-    .line 304
     if-nez v0, :cond_2
 
-    .line 305
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     aget-object v1, v1, v6
 
     invoke-direct {p0, v1, v4}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->makeCurPlayTime(Landroid/animation/ObjectAnimator;I)V
 
-    .line 306
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     aget-object v1, v1, v7
 
     invoke-direct {p0, v1, v4}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->makeCurPlayTime(Landroid/animation/ObjectAnimator;I)V
 
-    .line 307
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     aget-object v1, v1, v8
 
     invoke-direct {p0, v1, v4}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->makeCurPlayTime(Landroid/animation/ObjectAnimator;I)V
 
-    .line 308
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     const/4 v2, 0x4
@@ -1872,7 +1690,6 @@
 
     invoke-direct {p0, v1, v4}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->makeCurPlayTime(Landroid/animation/ObjectAnimator;I)V
 
-    .line 309
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     const/4 v2, 0x5
@@ -1881,13 +1698,11 @@
 
     invoke-direct {p0, v1, v4}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->makeCurPlayTime(Landroid/animation/ObjectAnimator;I)V
 
-    .line 311
     :cond_2
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->invalidate()V
 
     goto :goto_0
 
-    .line 312
     :cond_3
     sget v1, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->EVERY_DURATION:I
 
@@ -1899,10 +1714,8 @@
 
     if-gtz v1, :cond_5
 
-    .line 313
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->cancelRotateAnim()V
 
-    .line 314
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     aget-object v1, v1, v6
@@ -1915,7 +1728,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/animation/ObjectAnimator;->setCurrentPlayTime(J)V
 
-    .line 315
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mBalls:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1926,10 +1738,8 @@
 
     invoke-virtual {v1, v5}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->setAlpha(F)V
 
-    .line 316
     if-eqz v0, :cond_4
 
-    .line 317
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     aget-object v1, v1, v4
@@ -1938,13 +1748,11 @@
 
     invoke-direct {p0, v1, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->makeCurPlayTime(Landroid/animation/ObjectAnimator;I)V
 
-    .line 324
     :goto_1
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->invalidate()V
 
     goto/16 :goto_0
 
-    .line 319
     :cond_4
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
@@ -1952,14 +1760,12 @@
 
     invoke-direct {p0, v1, v4}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->makeCurPlayTime(Landroid/animation/ObjectAnimator;I)V
 
-    .line 320
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     aget-object v1, v1, v8
 
     invoke-direct {p0, v1, v4}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->makeCurPlayTime(Landroid/animation/ObjectAnimator;I)V
 
-    .line 321
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     const/4 v2, 0x4
@@ -1968,7 +1774,6 @@
 
     invoke-direct {p0, v1, v4}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->makeCurPlayTime(Landroid/animation/ObjectAnimator;I)V
 
-    .line 322
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     const/4 v2, 0x5
@@ -1979,7 +1784,6 @@
 
     goto :goto_1
 
-    .line 325
     :cond_5
     sget v1, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->EVERY_DURATION:I
 
@@ -1991,10 +1795,8 @@
 
     if-gtz v1, :cond_7
 
-    .line 326
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->cancelRotateAnim()V
 
-    .line 327
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     aget-object v1, v1, v7
@@ -2009,7 +1811,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/animation/ObjectAnimator;->setCurrentPlayTime(J)V
 
-    .line 328
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mBalls:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2020,10 +1821,8 @@
 
     invoke-virtual {v1, v5}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->setAlpha(F)V
 
-    .line 329
     if-eqz v0, :cond_6
 
-    .line 330
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     aget-object v1, v1, v4
@@ -2032,7 +1831,6 @@
 
     invoke-direct {p0, v1, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->makeCurPlayTime(Landroid/animation/ObjectAnimator;I)V
 
-    .line 331
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     aget-object v1, v1, v6
@@ -2041,13 +1839,11 @@
 
     invoke-direct {p0, v1, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->makeCurPlayTime(Landroid/animation/ObjectAnimator;I)V
 
-    .line 337
     :goto_2
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->invalidate()V
 
     goto/16 :goto_0
 
-    .line 333
     :cond_6
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
@@ -2057,7 +1853,6 @@
 
     invoke-direct {p0, v1, v4}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->makeCurPlayTime(Landroid/animation/ObjectAnimator;I)V
 
-    .line 334
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     const/4 v2, 0x4
@@ -2066,7 +1861,6 @@
 
     invoke-direct {p0, v1, v4}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->makeCurPlayTime(Landroid/animation/ObjectAnimator;I)V
 
-    .line 335
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     aget-object v1, v1, v8
@@ -2075,7 +1869,6 @@
 
     goto :goto_2
 
-    .line 338
     :cond_7
     sget v1, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->EVERY_DURATION:I
 
@@ -2087,10 +1880,8 @@
 
     if-gtz v1, :cond_9
 
-    .line 339
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->cancelRotateAnim()V
 
-    .line 340
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     aget-object v1, v1, v8
@@ -2105,7 +1896,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/animation/ObjectAnimator;->setCurrentPlayTime(J)V
 
-    .line 341
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mBalls:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2116,10 +1906,8 @@
 
     invoke-virtual {v1, v5}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->setAlpha(F)V
 
-    .line 342
     if-eqz v0, :cond_8
 
-    .line 343
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     aget-object v1, v1, v4
@@ -2128,7 +1916,6 @@
 
     invoke-direct {p0, v1, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->makeCurPlayTime(Landroid/animation/ObjectAnimator;I)V
 
-    .line 344
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     aget-object v1, v1, v6
@@ -2137,7 +1924,6 @@
 
     invoke-direct {p0, v1, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->makeCurPlayTime(Landroid/animation/ObjectAnimator;I)V
 
-    .line 345
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     aget-object v1, v1, v7
@@ -2146,13 +1932,11 @@
 
     invoke-direct {p0, v1, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->makeCurPlayTime(Landroid/animation/ObjectAnimator;I)V
 
-    .line 351
     :goto_3
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->invalidate()V
 
     goto/16 :goto_0
 
-    .line 348
     :cond_8
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
@@ -2162,7 +1946,6 @@
 
     invoke-direct {p0, v1, v4}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->makeCurPlayTime(Landroid/animation/ObjectAnimator;I)V
 
-    .line 349
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     const/4 v2, 0x4
@@ -2173,7 +1956,6 @@
 
     goto :goto_3
 
-    .line 352
     :cond_9
     sget v1, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->EVERY_DURATION:I
 
@@ -2185,10 +1967,8 @@
 
     if-gtz v1, :cond_b
 
-    .line 353
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->cancelRotateAnim()V
 
-    .line 354
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     const/4 v2, 0x4
@@ -2205,7 +1985,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/animation/ObjectAnimator;->setCurrentPlayTime(J)V
 
-    .line 355
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mBalls:Ljava/util/ArrayList;
 
     const/4 v2, 0x4
@@ -2218,10 +1997,8 @@
 
     invoke-virtual {v1, v5}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->setAlpha(F)V
 
-    .line 356
     if-eqz v0, :cond_a
 
-    .line 357
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     aget-object v1, v1, v4
@@ -2230,7 +2007,6 @@
 
     invoke-direct {p0, v1, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->makeCurPlayTime(Landroid/animation/ObjectAnimator;I)V
 
-    .line 358
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     aget-object v1, v1, v6
@@ -2239,7 +2015,6 @@
 
     invoke-direct {p0, v1, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->makeCurPlayTime(Landroid/animation/ObjectAnimator;I)V
 
-    .line 359
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     aget-object v1, v1, v7
@@ -2248,7 +2023,6 @@
 
     invoke-direct {p0, v1, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->makeCurPlayTime(Landroid/animation/ObjectAnimator;I)V
 
-    .line 360
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     aget-object v1, v1, v8
@@ -2257,13 +2031,11 @@
 
     invoke-direct {p0, v1, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->makeCurPlayTime(Landroid/animation/ObjectAnimator;I)V
 
-    .line 364
     :goto_4
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->invalidate()V
 
     goto/16 :goto_0
 
-    .line 362
     :cond_a
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
@@ -2275,7 +2047,6 @@
 
     goto :goto_4
 
-    .line 365
     :cond_b
     sget v1, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->EVERY_DURATION:I
 
@@ -2287,10 +2058,8 @@
 
     if-gez v1, :cond_d
 
-    .line 366
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->cancelRotateAnim()V
 
-    .line 367
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     const/4 v2, 0x5
@@ -2307,7 +2076,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/animation/ObjectAnimator;->setCurrentPlayTime(J)V
 
-    .line 368
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mBalls:Ljava/util/ArrayList;
 
     const/4 v2, 0x5
@@ -2320,10 +2088,8 @@
 
     invoke-virtual {v1, v5}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->setAlpha(F)V
 
-    .line 369
     if-eqz v0, :cond_c
 
-    .line 370
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     aget-object v1, v1, v4
@@ -2332,7 +2098,6 @@
 
     invoke-direct {p0, v1, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->makeCurPlayTime(Landroid/animation/ObjectAnimator;I)V
 
-    .line 371
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     aget-object v1, v1, v6
@@ -2341,7 +2106,6 @@
 
     invoke-direct {p0, v1, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->makeCurPlayTime(Landroid/animation/ObjectAnimator;I)V
 
-    .line 372
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     aget-object v1, v1, v7
@@ -2350,7 +2114,6 @@
 
     invoke-direct {p0, v1, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->makeCurPlayTime(Landroid/animation/ObjectAnimator;I)V
 
-    .line 373
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     aget-object v1, v1, v8
@@ -2359,7 +2122,6 @@
 
     invoke-direct {p0, v1, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->makeCurPlayTime(Landroid/animation/ObjectAnimator;I)V
 
-    .line 374
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     const/4 v2, 0x4
@@ -2370,13 +2132,11 @@
 
     invoke-direct {p0, v1, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->makeCurPlayTime(Landroid/animation/ObjectAnimator;I)V
 
-    .line 376
     :cond_c
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->invalidate()V
 
     goto/16 :goto_0
 
-    .line 378
     :cond_d
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mBalls:Ljava/util/ArrayList;
 
@@ -2388,7 +2148,6 @@
 
     invoke-virtual {v1, v5}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->setAlpha(F)V
 
-    .line 379
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mBalls:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2399,7 +2158,6 @@
 
     invoke-virtual {v1, v5}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->setAlpha(F)V
 
-    .line 380
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mBalls:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2410,7 +2168,6 @@
 
     invoke-virtual {v1, v5}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->setAlpha(F)V
 
-    .line 381
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mBalls:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2421,7 +2178,6 @@
 
     invoke-virtual {v1, v5}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->setAlpha(F)V
 
-    .line 382
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mBalls:Ljava/util/ArrayList;
 
     const/4 v2, 0x4
@@ -2434,7 +2190,6 @@
 
     invoke-virtual {v1, v5}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->setAlpha(F)V
 
-    .line 383
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mBalls:Ljava/util/ArrayList;
 
     const/4 v2, 0x5
@@ -2447,7 +2202,6 @@
 
     invoke-virtual {v1, v5}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/BallsLoadingShapeHolder;->setAlpha(F)V
 
-    .line 384
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     aget-object v1, v1, v4
@@ -2456,7 +2210,6 @@
 
     invoke-direct {p0, v1, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->makeCurPlayTime(Landroid/animation/ObjectAnimator;I)V
 
-    .line 385
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     aget-object v1, v1, v6
@@ -2465,7 +2218,6 @@
 
     invoke-direct {p0, v1, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->makeCurPlayTime(Landroid/animation/ObjectAnimator;I)V
 
-    .line 386
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     aget-object v1, v1, v7
@@ -2474,7 +2226,6 @@
 
     invoke-direct {p0, v1, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->makeCurPlayTime(Landroid/animation/ObjectAnimator;I)V
 
-    .line 387
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     aget-object v1, v1, v8
@@ -2483,7 +2234,6 @@
 
     invoke-direct {p0, v1, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->makeCurPlayTime(Landroid/animation/ObjectAnimator;I)V
 
-    .line 388
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     const/4 v2, 0x4
@@ -2494,7 +2244,6 @@
 
     invoke-direct {p0, v1, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->makeCurPlayTime(Landroid/animation/ObjectAnimator;I)V
 
-    .line 389
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mAppearAnimators:[Landroid/animation/ObjectAnimator;
 
     const/4 v2, 0x5
@@ -2505,10 +2254,8 @@
 
     invoke-direct {p0, v1, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->makeCurPlayTime(Landroid/animation/ObjectAnimator;I)V
 
-    .line 390
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->invalidate()V
 
-    .line 392
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mRotateAnim:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v1}, Landroid/animation/ObjectAnimator;->isPaused()Z
@@ -2517,14 +2264,12 @@
 
     if-eqz v1, :cond_e
 
-    .line 393
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mRotateAnim:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v1}, Landroid/animation/ObjectAnimator;->resume()V
 
     goto/16 :goto_0
 
-    .line 394
     :cond_e
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mRotateAnim:Landroid/animation/ObjectAnimator;
 
@@ -2534,7 +2279,6 @@
 
     if-nez v1, :cond_0
 
-    .line 395
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mRotateAnim:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v1}, Landroid/animation/ObjectAnimator;->start()V
@@ -2547,9 +2291,7 @@
     .param p1, "rot"    # F
 
     .prologue
-    .line 451
     iput p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->rot:F
 
-    .line 452
     return-void
 .end method

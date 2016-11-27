@@ -39,30 +39,24 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 443
     iput-object p1, p0, Lcom/android/server/InputMethodManagerService$KeyboardDetect;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 444
     new-instance v0, Landroid/util/BoostFramework;
 
     invoke-direct {v0}, Landroid/util/BoostFramework;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/InputMethodManagerService$KeyboardDetect;->mPerf:Landroid/util/BoostFramework;
 
-    .line 445
     iput v1, p0, Lcom/android/server/InputMethodManagerService$KeyboardDetect;->keyboardState:I
 
-    .line 449
     iput v1, p0, Lcom/android/server/InputMethodManagerService$KeyboardDetect;->INACTIVE:I
 
-    .line 450
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/server/InputMethodManagerService$KeyboardDetect;->FOREGROUND:I
 
-    .line 451
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/android/server/InputMethodManagerService$KeyboardDetect;->BACKGROUND:I
@@ -76,7 +70,6 @@
     .locals 1
 
     .prologue
-    .line 498
     monitor-enter p0
 
     :try_start_0
@@ -100,7 +93,6 @@
     .locals 4
 
     .prologue
-    .line 464
     monitor-enter p0
 
     :try_start_0
@@ -110,26 +102,22 @@
 
     if-eqz v1, :cond_2
 
-    .line 466
     :try_start_1
     iget-object v1, p0, Lcom/android/server/InputMethodManagerService$KeyboardDetect;->keyboardParams:[I
 
     if-nez v1, :cond_0
 
-    .line 467
     iget-object v1, p0, Lcom/android/server/InputMethodManagerService$KeyboardDetect;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iget-object v1, v1, Lcom/android/server/InputMethodManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0, v1}, Lcom/android/server/InputMethodManagerService$KeyboardDetect;->setKeyboardParams(Landroid/content/Context;)V
 
-    .line 468
     :cond_0
     iget-object v1, p0, Lcom/android/server/InputMethodManagerService$KeyboardDetect;->keyboardParams:[I
 
     if-eqz v1, :cond_1
 
-    .line 469
     iget-object v1, p0, Lcom/android/server/InputMethodManagerService$KeyboardDetect;->mPerf:Landroid/util/BoostFramework;
 
     const/4 v2, 0x0
@@ -138,7 +126,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/util/BoostFramework;->perfLockAcquire(I[I)I
 
-    .line 470
     sget-boolean v1, Lcom/android/server/InputMethodManagerService;->DEBUG:Z
 
     if-eqz v1, :cond_1
@@ -152,18 +139,15 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 480
     :cond_1
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 472
     :catch_0
     move-exception v0
 
-    .line 473
     .local v0, "e":Ljava/lang/Exception;
     :try_start_2
     const-string v1, "InputMethodManagerService"
@@ -176,7 +160,6 @@
 
     goto :goto_0
 
-    .line 464
     .end local v0    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v1
@@ -185,7 +168,6 @@
 
     throw v1
 
-    .line 477
     :cond_2
     :try_start_3
     const-string v1, "InputMethodManagerService"
@@ -203,7 +185,6 @@
     .locals 3
 
     .prologue
-    .line 483
     monitor-enter p0
 
     :try_start_0
@@ -213,13 +194,11 @@
 
     if-eqz v1, :cond_1
 
-    .line 485
     :try_start_1
     iget-object v1, p0, Lcom/android/server/InputMethodManagerService$KeyboardDetect;->mPerf:Landroid/util/BoostFramework;
 
     invoke-virtual {v1}, Landroid/util/BoostFramework;->perfLockRelease()I
 
-    .line 486
     sget-boolean v1, Lcom/android/server/InputMethodManagerService;->DEBUG:Z
 
     if-eqz v1, :cond_0
@@ -233,18 +212,15 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 495
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 487
     :catch_0
     move-exception v0
 
-    .line 488
     .local v0, "e":Ljava/lang/Exception;
     :try_start_2
     const-string v1, "InputMethodManagerService"
@@ -257,7 +233,6 @@
 
     goto :goto_0
 
-    .line 483
     .end local v0    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v1
@@ -266,7 +241,6 @@
 
     throw v1
 
-    .line 492
     :cond_1
     :try_start_3
     const-string v1, "InputMethodManagerService"
@@ -285,7 +259,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 454
     monitor-enter p0
 
     :try_start_0
@@ -301,12 +274,10 @@
 
     iput-boolean v0, p0, Lcom/android/server/InputMethodManagerService$KeyboardDetect;->enKeyOpt:Z
 
-    .line 456
     iget-boolean v0, p0, Lcom/android/server/InputMethodManagerService$KeyboardDetect;->enKeyOpt:Z
 
     if-eqz v0, :cond_0
 
-    .line 457
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -321,13 +292,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 460
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 454
     :catchall_0
     move-exception v0
 
@@ -341,13 +310,11 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 502
     monitor-enter p0
 
     :try_start_0
     iput p1, p0, Lcom/android/server/InputMethodManagerService$KeyboardDetect;->keyboardState:I
 
-    .line 503
     sget-boolean v0, Lcom/android/server/InputMethodManagerService;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -378,13 +345,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 504
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 502
     :catchall_0
     move-exception v0
 

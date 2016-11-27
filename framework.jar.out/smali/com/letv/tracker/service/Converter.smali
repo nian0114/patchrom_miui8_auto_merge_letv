@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,7 +18,6 @@
     .param p0, "ac"    # Lcom/letv/tracker/msg/bean/Action;
 
     .prologue
-    .line 11
     new-instance v1, Lcom/android/letv/agnes/service/beans/IAction;
 
     invoke-virtual {p0}, Lcom/letv/tracker/msg/bean/Action;->getTime()J
@@ -48,7 +46,6 @@
     .param p0, "ver"    # Lcom/letv/tracker/msg/bean/Version;
 
     .prologue
-    .line 15
     new-instance v0, Lcom/android/letv/agnes/service/beans/IVersion;
 
     invoke-virtual {p0}, Lcom/letv/tracker/msg/bean/Version;->getMajor()I

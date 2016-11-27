@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 85
     iput-object p1, p0, Lcom/letv/domain/DomainHelper$1;->this$0:Lcom/letv/domain/DomainHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,7 +49,6 @@
     .locals 0
 
     .prologue
-    .line 85
     check-cast p1, Lorg/json/JSONObject;
 
     invoke-virtual {p0, p1}, Lcom/letv/domain/DomainHelper$1;->onResponse(Lorg/json/JSONObject;)V
@@ -63,12 +61,10 @@
     .param p1, "jsonObject"    # Lorg/json/JSONObject;
 
     .prologue
-    .line 88
     iget-object v0, p0, Lcom/letv/domain/DomainHelper$1;->this$0:Lcom/letv/domain/DomainHelper;
 
     # invokes: Lcom/letv/domain/DomainHelper;->handleSuccessResponse(Lorg/json/JSONObject;)V
     invoke-static {v0, p1}, Lcom/letv/domain/DomainHelper;->access$000(Lcom/letv/domain/DomainHelper;Lorg/json/JSONObject;)V
 
-    .line 89
     return-void
 .end method

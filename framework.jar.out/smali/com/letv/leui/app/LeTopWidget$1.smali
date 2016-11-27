@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 299
     iput-object p1, p0, Lcom/letv/leui/app/LeTopWidget$1;->this$0:Lcom/letv/leui/app/LeTopWidget;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "arg0"    # Landroid/view/View;
 
     .prologue
-    .line 302
     iget-object v1, p0, Lcom/letv/leui/app/LeTopWidget$1;->this$0:Lcom/letv/leui/app/LeTopWidget;
 
     # getter for: Lcom/letv/leui/app/LeTopWidget;->mContext:Landroid/content/Context;
@@ -51,14 +49,11 @@
 
     check-cast v0, Landroid/app/Activity;
 
-    .line 303
     .local v0, "activity":Landroid/app/Activity;
     if-eqz v0, :cond_0
 
-    .line 304
     invoke-virtual {v0}, Landroid/app/Activity;->onBackPressed()V
 
-    .line 306
     :cond_0
     return-void
 .end method

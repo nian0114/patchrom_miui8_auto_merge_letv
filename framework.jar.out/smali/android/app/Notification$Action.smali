@@ -60,7 +60,6 @@
     .locals 1
 
     .prologue
-    .line 1167
     new-instance v0, Landroid/app/Notification$Action$1;
 
     invoke-direct {v0}, Landroid/app/Notification$Action$1;-><init>()V
@@ -79,7 +78,6 @@
     .end annotation
 
     .prologue
-    .line 985
     const-string v0, ""
 
     invoke-static {v0, p1}, Landroid/graphics/drawable/Icon;->createWithResource(Ljava/lang/String;I)Landroid/graphics/drawable/Icon;
@@ -100,7 +98,6 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/app/Notification$Action;-><init>(Landroid/graphics/drawable/Icon;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroid/app/RemoteInput;)V
 
-    .line 986
     return-void
 .end method
 
@@ -113,32 +110,24 @@
     .param p5, "remoteInputs"    # [Landroid/app/RemoteInput;
 
     .prologue
-    .line 989
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 990
     iput-object p1, p0, Landroid/app/Notification$Action;->mIcon:Landroid/graphics/drawable/Icon;
 
-    .line 991
     iput-object p2, p0, Landroid/app/Notification$Action;->title:Ljava/lang/CharSequence;
 
-    .line 992
     iput-object p3, p0, Landroid/app/Notification$Action;->actionIntent:Landroid/app/PendingIntent;
 
-    .line 993
     if-eqz p4, :cond_0
 
     .end local p4    # "extras":Landroid/os/Bundle;
     :goto_0
     iput-object p4, p0, Landroid/app/Notification$Action;->mExtras:Landroid/os/Bundle;
 
-    .line 994
     iput-object p5, p0, Landroid/app/Notification$Action;->mRemoteInputs:[Landroid/app/RemoteInput;
 
-    .line 995
     return-void
 
-    .line 993
     .restart local p4    # "extras":Landroid/os/Bundle;
     :cond_0
     new-instance p4, Landroid/os/Bundle;
@@ -159,7 +148,6 @@
     .param p6, "x5"    # Landroid/app/Notification$1;
 
     .prologue
-    .line 941
     invoke-direct/range {p0 .. p5}, Landroid/app/Notification$Action;-><init>(Landroid/graphics/drawable/Icon;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroid/app/RemoteInput;)V
 
     return-void
@@ -170,17 +158,14 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 965
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 966
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 967
     sget-object v0, Landroid/graphics/drawable/Icon;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -191,7 +176,6 @@
 
     iput-object v0, p0, Landroid/app/Notification$Action;->mIcon:Landroid/graphics/drawable/Icon;
 
-    .line 968
     iget-object v0, p0, Landroid/app/Notification$Action;->mIcon:Landroid/graphics/drawable/Icon;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Icon;->getType()I
@@ -202,7 +186,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 969
     iget-object v0, p0, Landroid/app/Notification$Action;->mIcon:Landroid/graphics/drawable/Icon;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Icon;->getResId()I
@@ -211,7 +194,6 @@
 
     iput v0, p0, Landroid/app/Notification$Action;->icon:I
 
-    .line 972
     :cond_0
     sget-object v0, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -223,7 +205,6 @@
 
     iput-object v0, p0, Landroid/app/Notification$Action;->title:Ljava/lang/CharSequence;
 
-    .line 973
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -232,7 +213,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 974
     sget-object v0, Landroid/app/PendingIntent;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -243,7 +223,6 @@
 
     iput-object v0, p0, Landroid/app/Notification$Action;->actionIntent:Landroid/app/PendingIntent;
 
-    .line 976
     :cond_1
     invoke-virtual {p1}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
 
@@ -251,7 +230,6 @@
 
     iput-object v0, p0, Landroid/app/Notification$Action;->mExtras:Landroid/os/Bundle;
 
-    .line 977
     sget-object v0, Landroid/app/RemoteInput;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->createTypedArray(Landroid/os/Parcelable$Creator;)[Ljava/lang/Object;
@@ -262,7 +240,6 @@
 
     iput-object v0, p0, Landroid/app/Notification$Action;->mRemoteInputs:[Landroid/app/RemoteInput;
 
-    .line 978
     return-void
 .end method
 
@@ -272,7 +249,6 @@
     .param p2, "x1"    # Landroid/app/Notification$1;
 
     .prologue
-    .line 941
     invoke-direct {p0, p1}, Landroid/app/Notification$Action;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -283,7 +259,6 @@
     .param p0, "x0"    # Landroid/app/Notification$Action;
 
     .prologue
-    .line 941
     iget-object v0, p0, Landroid/app/Notification$Action;->mExtras:Landroid/os/Bundle;
 
     return-object v0
@@ -295,7 +270,6 @@
     .locals 6
 
     .prologue
-    .line 1137
     new-instance v0, Landroid/app/Notification$Action;
 
     invoke-virtual {p0}, Landroid/app/Notification$Action;->getIcon()Landroid/graphics/drawable/Icon;
@@ -330,7 +304,6 @@
     .end annotation
 
     .prologue
-    .line 941
     invoke-virtual {p0}, Landroid/app/Notification$Action;->clone()Landroid/app/Notification$Action;
 
     move-result-object v0
@@ -342,7 +315,6 @@
     .locals 1
 
     .prologue
-    .line 1146
     const/4 v0, 0x0
 
     return v0
@@ -352,7 +324,6 @@
     .locals 1
 
     .prologue
-    .line 1012
     iget-object v0, p0, Landroid/app/Notification$Action;->mExtras:Landroid/os/Bundle;
 
     return-object v0
@@ -362,7 +333,6 @@
     .locals 2
 
     .prologue
-    .line 1001
     iget-object v0, p0, Landroid/app/Notification$Action;->mIcon:Landroid/graphics/drawable/Icon;
 
     if-nez v0, :cond_0
@@ -371,7 +341,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1003
     const-string v0, ""
 
     iget v1, p0, Landroid/app/Notification$Action;->icon:I
@@ -382,7 +351,6 @@
 
     iput-object v0, p0, Landroid/app/Notification$Action;->mIcon:Landroid/graphics/drawable/Icon;
 
-    .line 1005
     :cond_0
     iget-object v0, p0, Landroid/app/Notification$Action;->mIcon:Landroid/graphics/drawable/Icon;
 
@@ -393,7 +361,6 @@
     .locals 1
 
     .prologue
-    .line 1020
     iget-object v0, p0, Landroid/app/Notification$Action;->mRemoteInputs:[Landroid/app/RemoteInput;
 
     return-object v0
@@ -409,61 +376,48 @@
 
     const/4 v2, 0x0
 
-    .line 1150
     invoke-virtual {p0}, Landroid/app/Notification$Action;->getIcon()Landroid/graphics/drawable/Icon;
 
     move-result-object v0
 
-    .line 1151
     .local v0, "ic":Landroid/graphics/drawable/Icon;
     if-eqz v0, :cond_0
 
-    .line 1152
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1153
     invoke-virtual {v0, p1, v2}, Landroid/graphics/drawable/Icon;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 1157
     :goto_0
     iget-object v1, p0, Landroid/app/Notification$Action;->title:Ljava/lang/CharSequence;
 
     invoke-static {v1, p1, p2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
-    .line 1158
     iget-object v1, p0, Landroid/app/Notification$Action;->actionIntent:Landroid/app/PendingIntent;
 
     if-eqz v1, :cond_1
 
-    .line 1159
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1160
     iget-object v1, p0, Landroid/app/Notification$Action;->actionIntent:Landroid/app/PendingIntent;
 
     invoke-virtual {v1, p1, p2}, Landroid/app/PendingIntent;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 1164
     :goto_1
     iget-object v1, p0, Landroid/app/Notification$Action;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
-    .line 1165
     iget-object v1, p0, Landroid/app/Notification$Action;->mRemoteInputs:[Landroid/app/RemoteInput;
 
     invoke-virtual {p1, v1, p2}, Landroid/os/Parcel;->writeTypedArray([Landroid/os/Parcelable;I)V
 
-    .line 1166
     return-void
 
-    .line 1155
     :cond_0
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 1162
     :cond_1
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 

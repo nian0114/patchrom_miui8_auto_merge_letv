@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 212
     iput-object p1, p0, Lbase/core/java/com/letv/leui/notification/LeuiNotificationHelper$3;->this$0:Lbase/core/java/com/letv/leui/notification/LeuiNotificationHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 1
 
     .prologue
-    .line 215
     iget-object v0, p0, Lbase/core/java/com/letv/leui/notification/LeuiNotificationHelper$3;->this$0:Lbase/core/java/com/letv/leui/notification/LeuiNotificationHelper;
 
     # invokes: Lbase/core/java/com/letv/leui/notification/LeuiNotificationHelper;->wakeUpScreen()V
     invoke-static {v0}, Lbase/core/java/com/letv/leui/notification/LeuiNotificationHelper;->access$300(Lbase/core/java/com/letv/leui/notification/LeuiNotificationHelper;)V
 
-    .line 216
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 23
     iput-object p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialHeader$1;->this$0:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialHeader;
 
     invoke-direct {p0}, Landroid/view/animation/Animation;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "t"    # Landroid/view/animation/Transformation;
 
     .prologue
-    .line 26
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialHeader$1;->this$0:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialHeader;
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -49,7 +47,6 @@
     # setter for: Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialHeader;->mScale:F
     invoke-static {v0, v1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialHeader;->access$002(Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialHeader;F)F
 
-    .line 27
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialHeader$1;->this$0:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialHeader;
 
     # getter for: Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialHeader;->mDrawable:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialProgressDrawable;
@@ -72,11 +69,9 @@
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialProgressDrawable;->setAlpha(I)V
 
-    .line 28
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialHeader$1;->this$0:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialHeader;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialHeader;->invalidate()V
 
-    .line 29
     return-void
 .end method

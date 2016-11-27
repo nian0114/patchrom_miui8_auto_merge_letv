@@ -38,7 +38,6 @@
     .locals 3
 
     .prologue
-    .line 3534
     const/16 v0, 0x13
 
     new-array v0, v0, [Ljava/lang/String;
@@ -168,38 +167,31 @@
     .param p3, "alarmS_"    # Lcom/android/server/AlarmManagerService;
 
     .prologue
-    .line 3568
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3564
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/AlarmManagerService$LeuiAlarmManagerPlus;->whitelist:Ljava/util/HashSet;
 
-    .line 3569
     iput-object p3, p0, Lcom/android/server/AlarmManagerService$LeuiAlarmManagerPlus;->alarmS:Lcom/android/server/AlarmManagerService;
 
-    .line 3570
     const-wide/16 v0, 0x0
 
     cmp-long v0, p1, v0
 
     if-nez v0, :cond_0
 
-    .line 3571
     const-string v0, "AlarmManager"
 
     const-string v1, "TimeAlignPolicy nativeData == 0!!!"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3583
     :goto_0
     return-void
 
-    .line 3582
     :cond_0
     const-string v0, "AlarmManager"
 
@@ -215,7 +207,6 @@
     .param p0, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 3528
     invoke-static {p0}, Lcom/android/server/AlarmManagerService$LeuiAlarmManagerPlus;->isCtsApp(Ljava/lang/String;)Z
 
     move-result v0
@@ -230,19 +221,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 3594
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 3602
     :cond_0
     :goto_0
     return v0
 
-    .line 3598
     :cond_1
     const-string v1, "com.android.cts."
 
@@ -252,7 +240,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 3599
     const-string v0, "AlarmManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -275,7 +262,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3600
     const/4 v0, 0x1
 
     goto :goto_0
@@ -286,7 +272,6 @@
     .param p1, "creatorPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 3668
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -305,11 +290,9 @@
 
     if-nez v0, :cond_1
 
-    .line 3669
     :cond_0
     const/4 v0, 0x0
 
-    .line 3670
     :goto_0
     return v0
 
@@ -345,22 +328,18 @@
     .local p1, "alarmBatches":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/AlarmManagerService$Batch;>;"
     const/4 v3, -0x1
 
-    .line 3740
     if-eqz p2, :cond_0
 
     move v2, v3
 
-    .line 3765
     :goto_0
     return v2
 
-    .line 3741
     :cond_0
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 3742
     .local v0, "N":I
     const/4 v2, 0x0
 
@@ -368,30 +347,25 @@
     :goto_1
     if-ge v2, v0, :cond_4
 
-    .line 3743
     invoke-virtual {p1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/server/AlarmManagerService$Batch;
 
-    .line 3744
     .local v1, "b":Lcom/android/server/AlarmManagerService$Batch;
     iget v4, v1, Lcom/android/server/AlarmManagerService$Batch;->flags:I
 
     if-eqz v4, :cond_2
 
-    .line 3742
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 3750
     :cond_2
     if-eqz p7, :cond_3
 
-    .line 3751
     # invokes: Lcom/android/server/AlarmManagerService$Batch;->isTimeAlign()Z
     invoke-static {v1}, Lcom/android/server/AlarmManagerService$Batch;->access$2300(Lcom/android/server/AlarmManagerService$Batch;)Z
 
@@ -407,7 +381,6 @@
 
     goto :goto_0
 
-    .line 3758
     :cond_3
     # invokes: Lcom/android/server/AlarmManagerService$Batch;->isTimeAlign()Z
     invoke-static {v1}, Lcom/android/server/AlarmManagerService$Batch;->access$2300(Lcom/android/server/AlarmManagerService$Batch;)Z
@@ -428,7 +401,6 @@
     :cond_4
     move v2, v3
 
-    .line 3765
     goto :goto_0
 .end method
 
@@ -444,7 +416,6 @@
     .param p12, "type"    # I
 
     .prologue
-    .line 3784
     iget-object v2, p0, Lcom/android/server/AlarmManagerService$LeuiAlarmManagerPlus;->alarmS:Lcom/android/server/AlarmManagerService;
 
     iget-boolean v2, v2, Lcom/android/server/AlarmManagerService;->mInteractive:Z
@@ -469,17 +440,14 @@
 
     move-wide v8, p1
 
-    .line 3786
     # invokes: Lcom/android/server/AlarmManagerService;->getGoogleMaxTriggerTime(JJJJ)J
     invoke-static/range {v2 .. v9}, Lcom/android/server/AlarmManagerService;->access$2400(JJJJ)J
 
     move-result-wide v10
 
-    .line 3815
     :goto_0
     return-wide v10
 
-    .line 3790
     :cond_1
     const-wide/16 v2, 0x0
 
@@ -487,7 +455,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 3792
     iget-object v2, p0, Lcom/android/server/AlarmManagerService$LeuiAlarmManagerPlus;->alarmS:Lcom/android/server/AlarmManagerService;
 
     # invokes: Lcom/android/server/AlarmManagerService;->getLeuiTimeAlignTime()J
@@ -503,11 +470,9 @@
 
     add-long v10, p3, v2
 
-    .line 3798
     .local v10, "maxElapsed":J
     goto :goto_0
 
-    .line 3802
     .end local v10    # "maxElapsed":J
     :cond_2
     const-wide/16 v2, 0x0
@@ -516,7 +481,6 @@
 
     if-gez v2, :cond_3
 
-    .line 3804
     iget-object v2, p0, Lcom/android/server/AlarmManagerService$LeuiAlarmManagerPlus;->alarmS:Lcom/android/server/AlarmManagerService;
 
     # invokes: Lcom/android/server/AlarmManagerService;->getLeuiTimeAlignTime()J
@@ -540,7 +504,6 @@
 
     add-long v10, p3, v2
 
-    .line 3805
     .restart local v10    # "maxElapsed":J
     const-string v2, "AlarmManager"
 
@@ -600,7 +563,6 @@
 
     goto :goto_0
 
-    .line 3809
     .end local v10    # "maxElapsed":J
     :cond_3
     iget-object v2, p0, Lcom/android/server/AlarmManagerService$LeuiAlarmManagerPlus;->alarmS:Lcom/android/server/AlarmManagerService;
@@ -612,7 +574,6 @@
 
     add-long v10, p3, v2
 
-    .line 3815
     .restart local v10    # "maxElapsed":J
     goto :goto_0
 .end method
@@ -627,23 +588,19 @@
 
     const/4 v7, 0x0
 
-    .line 3614
     const/16 v8, 0x2710
 
     if-ge p2, v8, :cond_1
 
-    .line 3659
     :cond_0
     :goto_0
     return v6
 
-    .line 3618
     :cond_1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
-    .line 3620
     .local v4, "start":J
     iget-object v8, p0, Lcom/android/server/AlarmManagerService$LeuiAlarmManagerPlus;->alarmS:Lcom/android/server/AlarmManagerService;
 
@@ -655,26 +612,21 @@
 
     move-result-object v3
 
-    .line 3622
     .local v3, "pm":Landroid/content/pm/PackageManager;
     if-nez v3, :cond_2
 
     move v6, v7
 
-    .line 3626
     goto :goto_0
 
-    .line 3629
     :cond_2
     const/4 v2, 0x0
 
-    .line 3631
     .local v2, "info":Landroid/content/pm/ApplicationInfo;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 3634
     .local v0, "ident":J
     const/4 v8, 0x0
 
@@ -686,19 +638,15 @@
 
     move-result-object v2
 
-    .line 3638
     :goto_1
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3642
     if-nez v2, :cond_3
 
     move v6, v7
 
-    .line 3646
     goto :goto_0
 
-    .line 3638
     :catchall_0
     move-exception v6
 
@@ -706,7 +654,6 @@
 
     throw v6
 
-    .line 3649
     :cond_3
     iget v8, v2, Landroid/content/pm/ApplicationInfo;->flags:I
 
@@ -716,10 +663,8 @@
 
     move v6, v7
 
-    .line 3653
     goto :goto_0
 
-    .line 3635
     :catch_0
     move-exception v8
 
@@ -732,7 +677,6 @@
     .param p2, "creatorPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 3682
     invoke-virtual {p0, p2, p1}, Lcom/android/server/AlarmManagerService$LeuiAlarmManagerPlus;->isSystemService(Ljava/lang/String;I)Z
 
     move-result v0
@@ -768,7 +712,6 @@
     .param p1, "pkg"    # Ljava/lang/String;
 
     .prologue
-    .line 3692
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -787,11 +730,9 @@
 
     if-nez v0, :cond_1
 
-    .line 3694
     :cond_0
     const/4 v0, 0x0
 
-    .line 3695
     :goto_0
     return v0
 
@@ -816,16 +757,13 @@
     .param p10, "alarmClock"    # Landroid/app/AlarmManager$AlarmClockInfo;
 
     .prologue
-    .line 3710
     if-eqz p10, :cond_0
 
     const/4 v0, 0x0
 
-    .line 3726
     :goto_0
     return v0
 
-    .line 3712
     :cond_0
     sub-long v0, p3, p1
 
@@ -835,12 +773,10 @@
 
     if-lez v0, :cond_1
 
-    .line 3714
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 3717
     :cond_1
     const-wide/32 v0, 0x493e0
 
@@ -848,12 +784,10 @@
 
     if-lez v0, :cond_2
 
-    .line 3719
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 3721
     :cond_2
     if-nez p7, :cond_3
 
@@ -878,13 +812,11 @@
 
     if-nez v0, :cond_4
 
-    .line 3724
     :cond_3
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 3726
     :cond_4
     const/4 v0, 0x1
 

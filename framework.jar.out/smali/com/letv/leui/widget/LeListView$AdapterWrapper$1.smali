@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 1163
     iput-object p1, p0, Lcom/letv/leui/widget/LeListView$AdapterWrapper$1;->this$1:Lcom/letv/leui/widget/LeListView$AdapterWrapper;
 
     iput-object p2, p0, Lcom/letv/leui/widget/LeListView$AdapterWrapper$1;->val$this$0:Lcom/letv/leui/widget/LeListView;
@@ -41,12 +40,10 @@
     .locals 1
 
     .prologue
-    .line 1165
     iget-object v0, p0, Lcom/letv/leui/widget/LeListView$AdapterWrapper$1;->this$1:Lcom/letv/leui/widget/LeListView$AdapterWrapper;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/LeListView$AdapterWrapper;->notifyDataSetChanged()V
 
-    .line 1166
     return-void
 .end method
 
@@ -54,11 +51,9 @@
     .locals 1
 
     .prologue
-    .line 1169
     iget-object v0, p0, Lcom/letv/leui/widget/LeListView$AdapterWrapper$1;->this$1:Lcom/letv/leui/widget/LeListView$AdapterWrapper;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/LeListView$AdapterWrapper;->notifyDataSetInvalidated()V
 
-    .line 1170
     return-void
 .end method

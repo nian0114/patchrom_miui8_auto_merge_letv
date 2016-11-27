@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2441
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$10;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
 
     const/4 v0, 0x0
 
-    .line 2444
     iget-object v2, p0, Lcom/android/internal/app/ResolverActivity$10;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->gvHeight:I
@@ -64,7 +62,6 @@
 
     move-result-object v6
 
-    .line 2445
     .local v6, "animation":Landroid/animation/ValueAnimator;
     iget-object v2, p0, Lcom/android/internal/app/ResolverActivity$10;->this$0:Lcom/android/internal/app/ResolverActivity;
 
@@ -75,10 +72,8 @@
 
     if-nez v2, :cond_0
 
-    .line 2446
     invoke-virtual {v6}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 2447
     iget-object v2, p0, Lcom/android/internal/app/ResolverActivity$10;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->showMoreIV:Landroid/widget/ImageView;
@@ -88,7 +83,6 @@
 
     invoke-virtual {v2, v1}, Landroid/widget/ImageView;->setSelected(Z)V
 
-    .line 2452
     :goto_0
     iget-object v2, p0, Lcom/android/internal/app/ResolverActivity$10;->this$0:Lcom/android/internal/app/ResolverActivity;
 
@@ -105,7 +99,6 @@
     # setter for: Lcom/android/internal/app/ResolverActivity;->isColse:Z
     invoke-static {v2, v1}, Lcom/android/internal/app/ResolverActivity;->access$2502(Lcom/android/internal/app/ResolverActivity;Z)Z
 
-    .line 2453
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$10;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->uvReportIntent:Landroid/content/Intent;
@@ -133,14 +126,11 @@
 
     invoke-static/range {v0 .. v5}, Lcom/letv/leui/util/LeResolveUtils$UV;->reportBigBata(ZLandroid/content/Intent;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2454
     return-void
 
-    .line 2449
     :cond_0
     invoke-virtual {v6}, Landroid/animation/ValueAnimator;->reverse()V
 
-    .line 2450
     iget-object v2, p0, Lcom/android/internal/app/ResolverActivity$10;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->showMoreIV:Landroid/widget/ImageView;
@@ -155,6 +145,5 @@
     :cond_1
     move v1, v0
 
-    .line 2452
     goto :goto_1
 .end method

@@ -45,28 +45,21 @@
     .end annotation
 
     .prologue
-    .line 58
     .local p1, "queue":Ljava/util/concurrent/BlockingQueue;, "Ljava/util/concurrent/BlockingQueue<Lcom/android/volley/Request<*>;>;"
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    .line 45
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/volley/NetworkDispatcher;->mQuit:Z
 
-    .line 59
     iput-object p1, p0, Lcom/android/volley/NetworkDispatcher;->mQueue:Ljava/util/concurrent/BlockingQueue;
 
-    .line 60
     iput-object p2, p0, Lcom/android/volley/NetworkDispatcher;->mNetwork:Lcom/android/volley/Network;
 
-    .line 61
     iput-object p3, p0, Lcom/android/volley/NetworkDispatcher;->mCache:Lcom/android/volley/Cache;
 
-    .line 62
     iput-object p4, p0, Lcom/android/volley/NetworkDispatcher;->mDelivery:Lcom/android/volley/ResponseDelivery;
 
-    .line 63
     return-void
 .end method
 
@@ -85,7 +78,6 @@
     .end annotation
 
     .prologue
-    .line 77
     .local p1, "request":Lcom/android/volley/Request;, "Lcom/android/volley/Request<*>;"
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -93,14 +85,12 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 78
     invoke-virtual {p1}, Lcom/android/volley/Request;->getTrafficStatsTag()I
 
     move-result v0
 
     invoke-static {v0}, Landroid/net/TrafficStats;->setThreadStatsTag(I)V
 
-    .line 80
     :cond_0
     return-void
 .end method
@@ -119,18 +109,15 @@
     .end annotation
 
     .prologue
-    .line 149
     .local p1, "request":Lcom/android/volley/Request;, "Lcom/android/volley/Request<*>;"
     invoke-virtual {p1, p2}, Lcom/android/volley/Request;->parseNetworkError(Lcom/android/volley/VolleyError;)Lcom/android/volley/VolleyError;
 
     move-result-object p2
 
-    .line 150
     iget-object v0, p0, Lcom/android/volley/NetworkDispatcher;->mDelivery:Lcom/android/volley/ResponseDelivery;
 
     invoke-interface {v0, p1, p2}, Lcom/android/volley/ResponseDelivery;->postError(Lcom/android/volley/Request;Lcom/android/volley/VolleyError;)V
 
-    .line 151
     return-void
 .end method
 
@@ -140,15 +127,12 @@
     .locals 1
 
     .prologue
-    .line 70
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/volley/NetworkDispatcher;->mQuit:Z
 
-    .line 71
     invoke-virtual {p0}, Lcom/android/volley/NetworkDispatcher;->interrupt()V
 
-    .line 72
     return-void
 .end method
 
@@ -156,19 +140,16 @@
     .locals 11
 
     .prologue
-    .line 84
     const/16 v7, 0xa
 
     invoke-static {v7}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 86
     :cond_0
     :goto_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v4
 
-    .line 90
     .local v4, "startTimeMs":J
     :try_start_0
     iget-object v7, p0, Lcom/android/volley/NetworkDispatcher;->mQueue:Ljava/util/concurrent/BlockingQueue;
@@ -181,21 +162,18 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 100
     .local v2, "request":Lcom/android/volley/Request;, "Lcom/android/volley/Request<*>;"
     :try_start_1
     const-string v7, "network-queue-take"
 
     invoke-virtual {v2, v7}, Lcom/android/volley/Request;->addMarker(Ljava/lang/String;)V
 
-    .line 104
     invoke-virtual {v2}, Lcom/android/volley/Request;->isCanceled()Z
 
     move-result v7
 
     if-eqz v7, :cond_1
 
-    .line 105
     const-string v7, "network-discard-cancelled"
 
     invoke-virtual {v2, v7}, Lcom/android/volley/Request;->finish(Ljava/lang/String;)V
@@ -205,11 +183,9 @@
 
     goto :goto_0
 
-    .line 136
     :catch_0
     move-exception v6
 
-    .line 137
     .local v6, "volleyError":Lcom/android/volley/VolleyError;
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -219,47 +195,39 @@
 
     invoke-virtual {v6, v8, v9}, Lcom/android/volley/VolleyError;->setNetworkTimeMs(J)V
 
-    .line 138
     invoke-direct {p0, v2, v6}, Lcom/android/volley/NetworkDispatcher;->parseAndDeliverNetworkError(Lcom/android/volley/Request;Lcom/android/volley/VolleyError;)V
 
     goto :goto_0
 
-    .line 91
     .end local v2    # "request":Lcom/android/volley/Request;, "Lcom/android/volley/Request<*>;"
     .end local v6    # "volleyError":Lcom/android/volley/VolleyError;
     :catch_1
     move-exception v0
 
-    .line 93
     .local v0, "e":Ljava/lang/InterruptedException;
     iget-boolean v7, p0, Lcom/android/volley/NetworkDispatcher;->mQuit:Z
 
     if-eqz v7, :cond_0
 
-    .line 94
     return-void
 
-    .line 109
     .end local v0    # "e":Ljava/lang/InterruptedException;
     .restart local v2    # "request":Lcom/android/volley/Request;, "Lcom/android/volley/Request<*>;"
     :cond_1
     :try_start_2
     invoke-direct {p0, v2}, Lcom/android/volley/NetworkDispatcher;->addTrafficStatsTag(Lcom/android/volley/Request;)V
 
-    .line 112
     iget-object v7, p0, Lcom/android/volley/NetworkDispatcher;->mNetwork:Lcom/android/volley/Network;
 
     invoke-interface {v7, v2}, Lcom/android/volley/Network;->performRequest(Lcom/android/volley/Request;)Lcom/android/volley/NetworkResponse;
 
     move-result-object v1
 
-    .line 113
     .local v1, "networkResponse":Lcom/android/volley/NetworkResponse;
     const-string v7, "network-http-complete"
 
     invoke-virtual {v2, v7}, Lcom/android/volley/Request;->addMarker(Ljava/lang/String;)V
 
-    .line 117
     iget-boolean v7, v1, Lcom/android/volley/NetworkResponse;->notModified:Z
 
     if-eqz v7, :cond_2
@@ -270,7 +238,6 @@
 
     if-eqz v7, :cond_2
 
-    .line 118
     const-string v7, "not-modified"
 
     invoke-virtual {v2, v7}, Lcom/android/volley/Request;->finish(Ljava/lang/String;)V
@@ -280,12 +247,10 @@
 
     goto :goto_0
 
-    .line 139
     .end local v1    # "networkResponse":Lcom/android/volley/NetworkResponse;
     :catch_2
     move-exception v0
 
-    .line 140
     .local v0, "e":Ljava/lang/Exception;
     const-string v7, "Unhandled exception %s"
 
@@ -303,12 +268,10 @@
 
     invoke-static {v0, v7, v8}, Lcom/android/volley/VolleyLog;->e(Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 141
     new-instance v6, Lcom/android/volley/VolleyError;
 
     invoke-direct {v6, v0}, Lcom/android/volley/VolleyError;-><init>(Ljava/lang/Throwable;)V
 
-    .line 142
     .restart local v6    # "volleyError":Lcom/android/volley/VolleyError;
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -318,14 +281,12 @@
 
     invoke-virtual {v6, v8, v9}, Lcom/android/volley/VolleyError;->setNetworkTimeMs(J)V
 
-    .line 143
     iget-object v7, p0, Lcom/android/volley/NetworkDispatcher;->mDelivery:Lcom/android/volley/ResponseDelivery;
 
     invoke-interface {v7, v2, v6}, Lcom/android/volley/ResponseDelivery;->postError(Lcom/android/volley/Request;Lcom/android/volley/VolleyError;)V
 
     goto :goto_0
 
-    .line 123
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v6    # "volleyError":Lcom/android/volley/VolleyError;
     .restart local v1    # "networkResponse":Lcom/android/volley/NetworkResponse;
@@ -335,13 +296,11 @@
 
     move-result-object v3
 
-    .line 124
     .local v3, "response":Lcom/android/volley/Response;, "Lcom/android/volley/Response<*>;"
     const-string v7, "network-parse-complete"
 
     invoke-virtual {v2, v7}, Lcom/android/volley/Request;->addMarker(Ljava/lang/String;)V
 
-    .line 128
     invoke-virtual {v2}, Lcom/android/volley/Request;->shouldCache()Z
 
     move-result v7
@@ -352,7 +311,6 @@
 
     if-eqz v7, :cond_3
 
-    .line 129
     iget-object v7, p0, Lcom/android/volley/NetworkDispatcher;->mCache:Lcom/android/volley/Cache;
 
     invoke-virtual {v2}, Lcom/android/volley/Request;->getCacheKey()Ljava/lang/String;
@@ -363,16 +321,13 @@
 
     invoke-interface {v7, v8, v9}, Lcom/android/volley/Cache;->put(Ljava/lang/String;Lcom/android/volley/Cache$Entry;)V
 
-    .line 130
     const-string v7, "network-cache-written"
 
     invoke-virtual {v2, v7}, Lcom/android/volley/Request;->addMarker(Ljava/lang/String;)V
 
-    .line 134
     :cond_3
     invoke-virtual {v2}, Lcom/android/volley/Request;->markDelivered()V
 
-    .line 135
     iget-object v7, p0, Lcom/android/volley/NetworkDispatcher;->mDelivery:Lcom/android/volley/ResponseDelivery;
 
     invoke-interface {v7, v2, v3}, Lcom/android/volley/ResponseDelivery;->postResponse(Lcom/android/volley/Request;Lcom/android/volley/Response;)V

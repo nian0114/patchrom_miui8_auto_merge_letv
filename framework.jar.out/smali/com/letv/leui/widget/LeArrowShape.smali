@@ -40,23 +40,18 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 26
     invoke-direct {p0}, Landroid/graphics/drawable/shapes/Shape;-><init>()V
 
-    .line 20
     iput-boolean v0, p0, Lcom/letv/leui/widget/LeArrowShape;->mIsInverseAnimation:Z
 
-    .line 21
     iput-boolean v0, p0, Lcom/letv/leui/widget/LeArrowShape;->mIsShowUp:Z
 
-    .line 27
     const/high16 v0, 0x41100000    # 9.0f
 
     div-float v0, p1, v0
 
     invoke-virtual {p0, p1, p2, v0}, Lcom/letv/leui/widget/LeArrowShape;->setArrowShape(FZF)V
 
-    .line 28
     return-void
 .end method
 
@@ -69,19 +64,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 30
     invoke-direct {p0}, Landroid/graphics/drawable/shapes/Shape;-><init>()V
 
-    .line 20
     iput-boolean v0, p0, Lcom/letv/leui/widget/LeArrowShape;->mIsInverseAnimation:Z
 
-    .line 21
     iput-boolean v0, p0, Lcom/letv/leui/widget/LeArrowShape;->mIsShowUp:Z
 
-    .line 31
     invoke-virtual {p0, p1, p2, p3}, Lcom/letv/leui/widget/LeArrowShape;->setArrowShape(FZF)V
 
-    .line 32
     return-void
 .end method
 
@@ -94,19 +84,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 34
     invoke-direct {p0}, Landroid/graphics/drawable/shapes/Shape;-><init>()V
 
-    .line 20
     iput-boolean v0, p0, Lcom/letv/leui/widget/LeArrowShape;->mIsInverseAnimation:Z
 
-    .line 21
     iput-boolean v0, p0, Lcom/letv/leui/widget/LeArrowShape;->mIsShowUp:Z
 
-    .line 35
     invoke-virtual {p0, p1, p2, p3}, Lcom/letv/leui/widget/LeArrowShape;->setCheckBoxArrowShape(FZZ)V
 
-    .line 36
     return-void
 .end method
 
@@ -118,7 +103,6 @@
     .param p2, "paint"    # Landroid/graphics/Paint;
 
     .prologue
-    .line 81
     iget v3, p0, Lcom/letv/leui/widget/LeArrowShape;->mInterpolatedTime:F
 
     iget v4, p0, Lcom/letv/leui/widget/LeArrowShape;->mBoxSize:F
@@ -135,7 +119,6 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/letv/leui/widget/LeArrowShape;->drawCheckArrow(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFZZ)V
 
-    .line 82
     return-void
 .end method
 
@@ -146,13 +129,10 @@
     .param p3, "interpolatedTime"    # F
 
     .prologue
-    .line 75
     invoke-virtual {p0, p3}, Lcom/letv/leui/widget/LeArrowShape;->setInterpolatedTime(F)V
 
-    .line 76
     invoke-virtual {p0, p1, p2}, Lcom/letv/leui/widget/LeArrowShape;->draw(Landroid/graphics/Canvas;Landroid/graphics/Paint;)V
 
-    .line 77
     return-void
 .end method
 
@@ -166,26 +146,21 @@
     .param p6, "inverseAnimate"    # Z
 
     .prologue
-    .line 88
     const/high16 v1, 0x40000000    # 2.0f
 
     div-float v0, p4, v1
 
-    .line 89
     .local v0, "boxRadius":F
     const/high16 v1, -0x3dcc0000    # -45.0f
 
     invoke-virtual {p1, v1, v0, v0}, Landroid/graphics/Canvas;->rotate(FFF)V
 
-    .line 91
     if-eqz p6, :cond_0
 
-    .line 92
     const/high16 v1, 0x3f800000    # 1.0f
 
     sub-float p3, v1, p3
 
-    .line 94
     :cond_0
     const/4 v1, 0x0
 
@@ -193,10 +168,8 @@
 
     if-gez v1, :cond_1
 
-    .line 95
     const/4 p3, 0x0
 
-    .line 97
     :cond_1
     const/high16 v1, 0x3f800000    # 1.0f
 
@@ -204,21 +177,17 @@
 
     if-lez v1, :cond_2
 
-    .line 98
     const/high16 p3, 0x3f800000    # 1.0f
 
-    .line 101
     :cond_2
     if-eqz p5, :cond_4
 
-    .line 102
     const v1, 0x3eaaaaab
 
     cmpg-float v1, p3, v1
 
     if-gez v1, :cond_3
 
-    .line 103
     new-instance v1, Landroid/graphics/RectF;
 
     iget v2, p0, Lcom/letv/leui/widget/LeArrowShape;->mArrowLeft:F
@@ -245,16 +214,13 @@
 
     invoke-virtual {p1, v1, v2, v3, p2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 143
     :goto_0
     const/high16 v1, 0x42340000    # 45.0f
 
     invoke-virtual {p1, v1, v0, v0}, Landroid/graphics/Canvas;->rotate(FFF)V
 
-    .line 144
     return-void
 
-    .line 108
     :cond_3
     new-instance v1, Landroid/graphics/RectF;
 
@@ -282,7 +248,6 @@
 
     invoke-virtual {p1, v1, v2, v3, p2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 112
     new-instance v1, Landroid/graphics/RectF;
 
     iget v2, p0, Lcom/letv/leui/widget/LeArrowShape;->mArrowLeft:F
@@ -335,7 +300,6 @@
 
     goto :goto_0
 
-    .line 120
     :cond_4
     const v1, 0x3f2aaaab
 
@@ -343,7 +307,6 @@
 
     if-gez v1, :cond_5
 
-    .line 121
     new-instance v1, Landroid/graphics/RectF;
 
     iget v2, p0, Lcom/letv/leui/widget/LeArrowShape;->mArrowLeft:F
@@ -412,7 +375,6 @@
 
     goto/16 :goto_0
 
-    .line 128
     :cond_5
     new-instance v1, Landroid/graphics/RectF;
 
@@ -452,7 +414,6 @@
 
     invoke-virtual {p1, v1, v2, v3, p2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 135
     new-instance v1, Landroid/graphics/RectF;
 
     iget v2, p0, Lcom/letv/leui/widget/LeArrowShape;->mArrowLeft:F
@@ -508,7 +469,6 @@
     .locals 1
 
     .prologue
-    .line 55
     iget v0, p0, Lcom/letv/leui/widget/LeArrowShape;->mInterpolatedTime:F
 
     return v0
@@ -518,7 +478,6 @@
     .locals 1
 
     .prologue
-    .line 63
     iget-boolean v0, p0, Lcom/letv/leui/widget/LeArrowShape;->mIsInverseAnimation:Z
 
     return v0
@@ -528,7 +487,6 @@
     .locals 1
 
     .prologue
-    .line 71
     iget-boolean v0, p0, Lcom/letv/leui/widget/LeArrowShape;->mIsShowUp:Z
 
     return v0
@@ -543,20 +501,16 @@
     .prologue
     const/high16 v2, 0x40800000    # 4.0f
 
-    .line 39
     iput p1, p0, Lcom/letv/leui/widget/LeArrowShape;->mBoxSize:F
 
-    .line 40
     const/high16 v0, 0x40400000    # 3.0f
 
     div-float v0, p1, v0
 
     iput v0, p0, Lcom/letv/leui/widget/LeArrowShape;->mOneThirdBoxSize:F
 
-    .line 41
     iput p3, p0, Lcom/letv/leui/widget/LeArrowShape;->mArrowStrokeWidth:F
 
-    .line 42
     iget v0, p0, Lcom/letv/leui/widget/LeArrowShape;->mArrowStrokeWidth:F
 
     const/high16 v1, 0x40000000    # 2.0f
@@ -565,7 +519,6 @@
 
     iput v0, p0, Lcom/letv/leui/widget/LeArrowShape;->mHalfStrokeWidth:F
 
-    .line 43
     if-eqz p2, :cond_0
 
     const/4 v0, 0x0
@@ -573,23 +526,18 @@
     :goto_0
     iput v0, p0, Lcom/letv/leui/widget/LeArrowShape;->mArrowRadius:F
 
-    .line 44
     div-float v0, p1, v2
 
     iput v0, p0, Lcom/letv/leui/widget/LeArrowShape;->mArrowLeft:F
 
-    .line 45
     div-float v0, p1, v2
 
     iput v0, p0, Lcom/letv/leui/widget/LeArrowShape;->mArrowTop:F
 
-    .line 47
     invoke-virtual {p0, p1, p1}, Lcom/letv/leui/widget/LeArrowShape;->resize(FF)V
 
-    .line 48
     return-void
 
-    .line 43
     :cond_0
     iget v0, p0, Lcom/letv/leui/widget/LeArrowShape;->mHalfStrokeWidth:F
 
@@ -611,10 +559,8 @@
 
     const/high16 v2, 0x40000000    # 2.0f
 
-    .line 148
     iput p1, p0, Lcom/letv/leui/widget/LeArrowShape;->mBoxSize:F
 
-    .line 149
     iget v0, p0, Lcom/letv/leui/widget/LeArrowShape;->mBoxSize:F
 
     const/high16 v1, 0x40400000    # 3.0f
@@ -623,7 +569,6 @@
 
     iput v0, p0, Lcom/letv/leui/widget/LeArrowShape;->mOneThirdBoxSize:F
 
-    .line 150
     iget v0, p0, Lcom/letv/leui/widget/LeArrowShape;->mBoxSize:F
 
     mul-float/2addr v0, v2
@@ -634,19 +579,16 @@
 
     iput v0, p0, Lcom/letv/leui/widget/LeArrowShape;->mArrowStrokeWidth:F
 
-    .line 151
     iget v0, p0, Lcom/letv/leui/widget/LeArrowShape;->mArrowStrokeWidth:F
 
     div-float/2addr v0, v2
 
     iput v0, p0, Lcom/letv/leui/widget/LeArrowShape;->mHalfStrokeWidth:F
 
-    .line 152
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/letv/leui/widget/LeArrowShape;->mArrowRadius:F
 
-    .line 153
     if-eqz p3, :cond_0
 
     iget v0, p0, Lcom/letv/leui/widget/LeArrowShape;->mBoxSize:F
@@ -656,7 +598,6 @@
     :goto_0
     iput v0, p0, Lcom/letv/leui/widget/LeArrowShape;->mArrowLeft:F
 
-    .line 154
     if-eqz p3, :cond_1
 
     iget v0, p0, Lcom/letv/leui/widget/LeArrowShape;->mBoxSize:F
@@ -666,13 +607,10 @@
     :goto_1
     iput v0, p0, Lcom/letv/leui/widget/LeArrowShape;->mArrowTop:F
 
-    .line 156
     invoke-virtual {p0, p1, p1}, Lcom/letv/leui/widget/LeArrowShape;->resize(FF)V
 
-    .line 157
     return-void
 
-    .line 153
     :cond_0
     mul-float v0, p1, v4
 
@@ -680,7 +618,6 @@
 
     goto :goto_0
 
-    .line 154
     :cond_1
     mul-float v0, p1, v4
 
@@ -694,10 +631,8 @@
     .param p1, "interpolatedTime"    # F
 
     .prologue
-    .line 51
     iput p1, p0, Lcom/letv/leui/widget/LeArrowShape;->mInterpolatedTime:F
 
-    .line 52
     return-void
 .end method
 
@@ -706,10 +641,8 @@
     .param p1, "isInverse"    # Z
 
     .prologue
-    .line 59
     iput-boolean p1, p0, Lcom/letv/leui/widget/LeArrowShape;->mIsInverseAnimation:Z
 
-    .line 60
     return-void
 .end method
 
@@ -718,9 +651,7 @@
     .param p1, "isShowUp"    # Z
 
     .prologue
-    .line 67
     iput-boolean p1, p0, Lcom/letv/leui/widget/LeArrowShape;->mIsShowUp:Z
 
-    .line 68
     return-void
 .end method

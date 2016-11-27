@@ -51,7 +51,6 @@
 
     const/4 v4, 0x0
 
-    .line 10
     new-instance v0, Lcom/letv/tracker/enums/DeviceType;
 
     const-string v1, "PC"
@@ -62,7 +61,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/DeviceType;->PC:Lcom/letv/tracker/enums/DeviceType;
 
-    .line 14
     new-instance v0, Lcom/letv/tracker/enums/DeviceType;
 
     const-string v1, "Mac"
@@ -73,7 +71,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/DeviceType;->Mac:Lcom/letv/tracker/enums/DeviceType;
 
-    .line 18
     new-instance v0, Lcom/letv/tracker/enums/DeviceType;
 
     const-string v1, "Phone"
@@ -84,7 +81,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/DeviceType;->Phone:Lcom/letv/tracker/enums/DeviceType;
 
-    .line 22
     new-instance v0, Lcom/letv/tracker/enums/DeviceType;
 
     const-string v1, "Pad"
@@ -95,7 +91,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/DeviceType;->Pad:Lcom/letv/tracker/enums/DeviceType;
 
-    .line 26
     new-instance v0, Lcom/letv/tracker/enums/DeviceType;
 
     const-string v1, "TV"
@@ -106,7 +101,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/DeviceType;->TV:Lcom/letv/tracker/enums/DeviceType;
 
-    .line 30
     new-instance v0, Lcom/letv/tracker/enums/DeviceType;
 
     const-string v1, "CDN"
@@ -119,7 +113,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/DeviceType;->CDN:Lcom/letv/tracker/enums/DeviceType;
 
-    .line 34
     new-instance v0, Lcom/letv/tracker/enums/DeviceType;
 
     const-string v1, "Others"
@@ -132,7 +125,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/DeviceType;->Others:Lcom/letv/tracker/enums/DeviceType;
 
-    .line 6
     const/4 v0, 0x7
 
     new-array v0, v0, [Lcom/letv/tracker/enums/DeviceType;
@@ -186,13 +178,10 @@
     .end annotation
 
     .prologue
-    .line 46
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 47
     iput-object p3, p0, Lcom/letv/tracker/enums/DeviceType;->id:Ljava/lang/String;
 
-    .line 48
     return-void
 .end method
 
@@ -201,7 +190,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 6
     const-class v0, Lcom/letv/tracker/enums/DeviceType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -217,7 +205,6 @@
     .locals 1
 
     .prologue
-    .line 6
     sget-object v0, Lcom/letv/tracker/enums/DeviceType;->$VALUES:[Lcom/letv/tracker/enums/DeviceType;
 
     invoke-virtual {v0}, [Lcom/letv/tracker/enums/DeviceType;->clone()Ljava/lang/Object;
@@ -235,7 +222,6 @@
     .locals 1
 
     .prologue
-    .line 56
     iget-object v0, p0, Lcom/letv/tracker/enums/DeviceType;->id:Ljava/lang/String;
 
     return-object v0

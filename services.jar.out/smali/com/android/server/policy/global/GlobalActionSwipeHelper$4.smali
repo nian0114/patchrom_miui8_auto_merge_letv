@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 393
     iput-object p1, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper$4;->this$0:Lcom/android/server/policy/global/GlobalActionSwipeHelper;
 
     iput-boolean p2, p0, Lcom/android/server/policy/global/GlobalActionSwipeHelper$4;->val$canAnimViewBeDismissed:Z
@@ -49,6 +48,5 @@
     .param p1, "animation"    # Landroid/animation/ValueAnimator;
 
     .prologue
-    .line 398
     return-void
 .end method

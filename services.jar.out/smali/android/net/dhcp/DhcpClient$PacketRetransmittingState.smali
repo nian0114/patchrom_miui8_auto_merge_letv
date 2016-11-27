@@ -27,12 +27,10 @@
     .locals 1
 
     .prologue
-    .line 684
     iput-object p1, p0, Landroid/net/dhcp/DhcpClient$PacketRetransmittingState;->this$0:Landroid/net/dhcp/DhcpClient;
 
     invoke-direct {p0, p1}, Landroid/net/dhcp/DhcpClient$LoggingState;-><init>(Landroid/net/dhcp/DhcpClient;)V
 
-    .line 687
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/net/dhcp/DhcpClient$PacketRetransmittingState;->mTimeout:I
@@ -46,23 +44,18 @@
     .locals 2
 
     .prologue
-    .line 691
     invoke-super {p0}, Landroid/net/dhcp/DhcpClient$LoggingState;->enter()V
 
-    .line 692
     invoke-virtual {p0}, Landroid/net/dhcp/DhcpClient$PacketRetransmittingState;->initTimer()V
 
-    .line 693
     invoke-virtual {p0}, Landroid/net/dhcp/DhcpClient$PacketRetransmittingState;->maybeInitTimeout()V
 
-    .line 694
     iget-object v0, p0, Landroid/net/dhcp/DhcpClient$PacketRetransmittingState;->this$0:Landroid/net/dhcp/DhcpClient;
 
     const v1, 0x30065
 
     invoke-virtual {v0, v1}, Landroid/net/dhcp/DhcpClient;->sendMessage(I)V
 
-    .line 695
     return-void
 .end method
 
@@ -70,7 +63,6 @@
     .locals 2
 
     .prologue
-    .line 717
     iget-object v0, p0, Landroid/net/dhcp/DhcpClient$PacketRetransmittingState;->this$0:Landroid/net/dhcp/DhcpClient;
 
     # getter for: Landroid/net/dhcp/DhcpClient;->mAlarmManager:Landroid/app/AlarmManager;
@@ -87,7 +79,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 718
     iget-object v0, p0, Landroid/net/dhcp/DhcpClient$PacketRetransmittingState;->this$0:Landroid/net/dhcp/DhcpClient;
 
     # getter for: Landroid/net/dhcp/DhcpClient;->mAlarmManager:Landroid/app/AlarmManager;
@@ -104,7 +95,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 719
     return-void
 .end method
 
@@ -112,12 +102,10 @@
     .locals 1
 
     .prologue
-    .line 726
     const/16 v0, 0x7d0
 
     iput v0, p0, Landroid/net/dhcp/DhcpClient$PacketRetransmittingState;->mTimer:I
 
-    .line 727
     return-void
 .end method
 
@@ -126,10 +114,8 @@
     .param p1, "baseTimer"    # I
 
     .prologue
-    .line 730
     div-int/lit8 v1, p1, 0xa
 
-    .line 731
     .local v1, "maxJitter":I
     iget-object v2, p0, Landroid/net/dhcp/DhcpClient$PacketRetransmittingState;->this$0:Landroid/net/dhcp/DhcpClient;
 
@@ -146,7 +132,6 @@
 
     sub-int v0, v2, v1
 
-    .line 732
     .local v0, "jitter":I
     add-int v2, p1, v0
 
@@ -157,12 +142,10 @@
     .locals 6
 
     .prologue
-    .line 748
     iget v2, p0, Landroid/net/dhcp/DhcpClient$PacketRetransmittingState;->mTimeout:I
 
     if-lez v2, :cond_0
 
-    .line 749
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
@@ -173,7 +156,6 @@
 
     add-long v0, v2, v4
 
-    .line 750
     .local v0, "alarmTime":J
     iget-object v2, p0, Landroid/net/dhcp/DhcpClient$PacketRetransmittingState;->this$0:Landroid/net/dhcp/DhcpClient;
 
@@ -193,7 +175,6 @@
 
     invoke-virtual {v2, v3, v0, v1, v4}, Landroid/app/AlarmManager;->setExact(IJLandroid/app/PendingIntent;)V
 
-    .line 753
     .end local v0    # "alarmTime":J
     :cond_0
     return-void
@@ -206,33 +187,26 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 699
     invoke-super {p0, p1}, Landroid/net/dhcp/DhcpClient$LoggingState;->processMessage(Landroid/os/Message;)Z
 
-    .line 700
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 712
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 702
     :pswitch_0
     invoke-virtual {p0}, Landroid/net/dhcp/DhcpClient$PacketRetransmittingState;->sendPacket()Z
 
-    .line 703
     invoke-virtual {p0}, Landroid/net/dhcp/DhcpClient$PacketRetransmittingState;->scheduleKick()V
 
     move v0, v1
 
-    .line 704
     goto :goto_0
 
-    .line 706
     :pswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -242,19 +216,15 @@
 
     move v0, v1
 
-    .line 707
     goto :goto_0
 
-    .line 709
     :pswitch_2
     invoke-virtual {p0}, Landroid/net/dhcp/DhcpClient$PacketRetransmittingState;->timeout()V
 
     move v0, v1
 
-    .line 710
     goto :goto_0
 
-    .line 700
     nop
 
     :pswitch_data_0
@@ -274,12 +244,10 @@
     .prologue
     const v9, 0x1f400
 
-    .line 736
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 737
     .local v2, "now":J
     iget v6, p0, Landroid/net/dhcp/DhcpClient$PacketRetransmittingState;->mTimer:I
 
@@ -289,11 +257,9 @@
 
     int-to-long v4, v6
 
-    .line 738
     .local v4, "timeout":J
     add-long v0, v2, v4
 
-    .line 739
     .local v0, "alarmTime":J
     iget-object v6, p0, Landroid/net/dhcp/DhcpClient$PacketRetransmittingState;->this$0:Landroid/net/dhcp/DhcpClient;
 
@@ -311,7 +277,6 @@
 
     invoke-virtual {v6, v7}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 740
     iget-object v6, p0, Landroid/net/dhcp/DhcpClient$PacketRetransmittingState;->this$0:Landroid/net/dhcp/DhcpClient;
 
     # getter for: Landroid/net/dhcp/DhcpClient;->mAlarmManager:Landroid/app/AlarmManager;
@@ -330,22 +295,18 @@
 
     invoke-virtual {v6, v7, v0, v1, v8}, Landroid/app/AlarmManager;->setExact(IJLandroid/app/PendingIntent;)V
 
-    .line 741
     iget v6, p0, Landroid/net/dhcp/DhcpClient$PacketRetransmittingState;->mTimer:I
 
     mul-int/lit8 v6, v6, 0x2
 
     iput v6, p0, Landroid/net/dhcp/DhcpClient$PacketRetransmittingState;->mTimer:I
 
-    .line 742
     iget v6, p0, Landroid/net/dhcp/DhcpClient$PacketRetransmittingState;->mTimer:I
 
     if-le v6, v9, :cond_0
 
-    .line 743
     iput v9, p0, Landroid/net/dhcp/DhcpClient$PacketRetransmittingState;->mTimer:I
 
-    .line 745
     :cond_0
     return-void
 .end method
@@ -357,6 +318,5 @@
     .locals 0
 
     .prologue
-    .line 723
     return-void
 .end method

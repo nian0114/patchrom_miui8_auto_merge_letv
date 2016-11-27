@@ -28,28 +28,22 @@
     .param p2, "httpurl"    # Ljava/lang/String;
 
     .prologue
-    .line 98
     iput-object p1, p0, Landroid/net/NetSniffer$httpClientSniffer;->this$0:Landroid/net/NetSniffer;
 
-    .line 99
-    const-string/jumbo v0, "httpClientSniffer"
+    const-string v0, "httpClientSniffer"
 
     invoke-direct {p0, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
-    .line 95
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/net/NetSniffer$httpClientSniffer;->httpUrl:Ljava/lang/String;
 
-    .line 96
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/net/NetSniffer$httpClientSniffer;->accessRet:Z
 
-    .line 100
     iput-object p2, p0, Landroid/net/NetSniffer$httpClientSniffer;->httpUrl:Ljava/lang/String;
 
-    .line 101
     return-void
 .end method
 
@@ -60,7 +54,6 @@
     .param p3, "x2"    # Landroid/net/NetSniffer$1;
 
     .prologue
-    .line 94
     invoke-direct {p0, p1, p2}, Landroid/net/NetSniffer$httpClientSniffer;-><init>(Landroid/net/NetSniffer;Ljava/lang/String;)V
 
     return-void
@@ -72,7 +65,6 @@
     .locals 1
 
     .prologue
-    .line 104
     iget-boolean v0, p0, Landroid/net/NetSniffer$httpClientSniffer;->accessRet:Z
 
     return v0
@@ -84,14 +76,11 @@
     .prologue
     const/4 v12, 0x0
 
-    .line 112
     const/4 v10, 0x0
 
-    .line 113
     .local v10, "urlConnection":Ljava/net/HttpURLConnection;
     const/16 v3, 0x257
 
-    .line 116
     .local v3, "httpResponseCode":I
     iget-object v11, p0, Landroid/net/NetSniffer$httpClientSniffer;->httpUrl:Ljava/lang/String;
 
@@ -105,24 +94,19 @@
 
     if-nez v11, :cond_1
 
-    .line 117
     :cond_0
-    const-string/jumbo v4, "httpUrl is invalid"
+    const-string v4, "httpUrl is invalid"
 
-    .line 119
     .local v4, "mHttpClientTestResult":Ljava/lang/String;
     const-string v11, "NetSniffer"
 
     invoke-static {v11, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 122
     iput-boolean v12, p0, Landroid/net/NetSniffer$httpClientSniffer;->accessRet:Z
 
-    .line 184
     :goto_0
     return-void
 
-    .line 127
     .end local v4    # "mHttpClientTestResult":Ljava/lang/String;
     :cond_1
     :try_start_0
@@ -132,7 +116,6 @@
 
     invoke-direct {v5, v11}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
-    .line 128
     .local v5, "url":Ljava/net/URL;
     invoke-virtual {v5}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
@@ -144,47 +127,38 @@
 
     move-object v10, v0
 
-    .line 129
     const/4 v11, 0x0
 
     invoke-virtual {v10, v11}, Ljava/net/HttpURLConnection;->setInstanceFollowRedirects(Z)V
 
-    .line 130
     const/16 v11, 0x1388
 
     invoke-virtual {v10, v11}, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
 
-    .line 131
     const/16 v11, 0x1388
 
     invoke-virtual {v10, v11}, Ljava/net/HttpURLConnection;->setReadTimeout(I)V
 
-    .line 132
     const/4 v11, 0x0
 
     invoke-virtual {v10, v11}, Ljava/net/HttpURLConnection;->setUseCaches(Z)V
 
-    .line 135
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v6
 
-    .line 137
     .local v6, "requestTimestamp":J
     invoke-virtual {v10}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
 
-    .line 140
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v8
 
-    .line 142
     .local v8, "responseTimestamp":J
     invoke-virtual {v10}, Ljava/net/HttpURLConnection;->getResponseCode()I
 
     move-result v3
 
-    .line 144
     const-string v11, "NetSniffer"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -221,7 +195,6 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 157
     const/16 v11, 0xc8
 
     if-lt v3, v11, :cond_5
@@ -230,7 +203,6 @@
 
     if-gt v3, v11, :cond_5
 
-    .line 158
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -265,11 +237,10 @@
 
     move-result-object v4
 
-    .line 159
     .restart local v4    # "mHttpClientTestResult":Ljava/lang/String;
     iget-object v11, p0, Landroid/net/NetSniffer$httpClientSniffer;->httpUrl:Ljava/lang/String;
 
-    const-string/jumbo v12, "http://www.androidbak.net/generate_204"
+    const-string v12, "http://www.androidbak.net/generate_204"
 
     invoke-virtual {v11, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -277,12 +248,10 @@
 
     if-eqz v11, :cond_4
 
-    .line 160
     const/16 v11, 0xcc
 
     if-ne v3, v11, :cond_2
 
-    .line 161
     const/4 v11, 0x1
 
     iput-boolean v11, p0, Landroid/net/NetSniffer$httpClientSniffer;->accessRet:Z
@@ -290,15 +259,12 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 176
     :cond_2
     :goto_1
     if-eqz v10, :cond_3
 
-    .line 177
     invoke-virtual {v10}, Ljava/net/HttpURLConnection;->disconnect()V
 
-    .line 182
     .end local v5    # "url":Ljava/net/URL;
     .end local v6    # "requestTimestamp":J
     .end local v8    # "responseTimestamp":J
@@ -310,7 +276,6 @@
 
     goto/16 :goto_0
 
-    .line 164
     .restart local v5    # "url":Ljava/net/URL;
     .restart local v6    # "requestTimestamp":J
     .restart local v8    # "responseTimestamp":J
@@ -325,7 +290,6 @@
 
     goto :goto_1
 
-    .line 171
     .end local v4    # "mHttpClientTestResult":Ljava/lang/String;
     .end local v5    # "url":Ljava/net/URL;
     .end local v6    # "requestTimestamp":J
@@ -333,12 +297,10 @@
     :catch_0
     move-exception v2
 
-    .line 172
     .local v2, "e":Ljava/io/IOException;
     :try_start_2
     invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 173
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -359,7 +321,6 @@
 
     move-result-object v4
 
-    .line 174
     .restart local v4    # "mHttpClientTestResult":Ljava/lang/String;
     const/4 v11, 0x0
 
@@ -367,15 +328,12 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 176
     if-eqz v10, :cond_3
 
-    .line 177
     invoke-virtual {v10}, Ljava/net/HttpURLConnection;->disconnect()V
 
     goto :goto_2
 
-    .line 167
     .end local v2    # "e":Ljava/io/IOException;
     .end local v4    # "mHttpClientTestResult":Ljava/lang/String;
     .restart local v5    # "url":Ljava/net/URL;
@@ -435,7 +393,6 @@
 
     move-result-object v4
 
-    .line 168
     .restart local v4    # "mHttpClientTestResult":Ljava/lang/String;
     const/4 v11, 0x0
 
@@ -446,7 +403,6 @@
 
     goto :goto_1
 
-    .line 176
     .end local v4    # "mHttpClientTestResult":Ljava/lang/String;
     .end local v5    # "url":Ljava/net/URL;
     .end local v6    # "requestTimestamp":J
@@ -456,7 +412,6 @@
 
     if-eqz v10, :cond_6
 
-    .line 177
     invoke-virtual {v10}, Ljava/net/HttpURLConnection;->disconnect()V
 
     :cond_6

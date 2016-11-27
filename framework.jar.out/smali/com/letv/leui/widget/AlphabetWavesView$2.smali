@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 818
     iput-object p1, p0, Lcom/letv/leui/widget/AlphabetWavesView$2;->this$0:Lcom/letv/leui/widget/AlphabetWavesView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 1
 
     .prologue
-    .line 821
     iget-object v0, p0, Lcom/letv/leui/widget/AlphabetWavesView$2;->this$0:Lcom/letv/leui/widget/AlphabetWavesView;
 
     # invokes: Lcom/letv/leui/widget/AlphabetWavesView;->transitionToHidden()V
     invoke-static {v0}, Lcom/letv/leui/widget/AlphabetWavesView;->access$200(Lcom/letv/leui/widget/AlphabetWavesView;)V
 
-    .line 822
     return-void
 .end method

@@ -366,21 +366,18 @@
 
     const/4 v3, 0x0
 
-    .line 18
     const-string v0, "com.letv.leui.safe_show_phone_and_sms_permisson_detail"
 
     sput-object v0, Landroid/app/AppOpsUtils;->APPOPS_FEATURE:Ljava/lang/String;
 
-    .line 120
     new-array v0, v4, [Ljava/lang/String;
 
-    const-string/jumbo v1, "sina.mobile.tianqitongletv"
+    const-string v1, "sina.mobile.tianqitongletv"
 
     aput-object v1, v0, v3
 
     sput-object v0, Landroid/app/AppOpsUtils;->SYSTEM_WHITE_APPS:[Ljava/lang/String;
 
-    .line 127
     const/16 v0, 0xb
 
     new-array v0, v0, [Ljava/lang/String;
@@ -443,7 +440,6 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->SYSTEM_BLACK_APPS:[Ljava/lang/String;
 
-    .line 143
     const/16 v0, 0x29
 
     new-array v0, v0, [Ljava/lang/String;
@@ -686,7 +682,6 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->CTA_SYSTEM_BLACK_APPS:[Ljava/lang/String;
 
-    .line 280
     new-array v0, v7, [Ljava/lang/String;
 
     const-string v1, "android.permission.ACCESS_COARSE_LOCATION"
@@ -703,7 +698,6 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_LOCATION_PERMS:[Ljava/lang/String;
 
-    .line 286
     const/4 v0, 0x7
 
     new-array v0, v0, [I
@@ -712,7 +706,6 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_LOCATION_OPS:[I
 
-    .line 296
     new-array v0, v5, [Ljava/lang/String;
 
     const-string v1, "android.permission.READ_CONTACTS"
@@ -725,14 +718,12 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_CONTACT_LOG_PERMS:[Ljava/lang/String;
 
-    .line 301
     new-array v0, v5, [I
 
     fill-array-data v0, :array_1
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_CONTACT_LOG_OPS:[I
 
-    .line 306
     new-array v0, v5, [Ljava/lang/String;
 
     const-string v1, "android.permission.READ_CALL_LOG"
@@ -745,14 +736,12 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_CALL_LOG_PERMS:[Ljava/lang/String;
 
-    .line 311
     new-array v0, v5, [I
 
     fill-array-data v0, :array_2
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_CALL_LOG_OPS:[I
 
-    .line 316
     new-array v0, v5, [Ljava/lang/String;
 
     const-string v1, "android.permission.READ_CALENDAR"
@@ -765,14 +754,12 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_CALENDAR_PERMS:[Ljava/lang/String;
 
-    .line 321
     new-array v0, v5, [I
 
     fill-array-data v0, :array_3
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_CALENDAR_OPS:[I
 
-    .line 326
     new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "android.permission.CALL_PHONE"
@@ -781,7 +768,6 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_CALL_PHONE_PERMS:[Ljava/lang/String;
 
-    .line 330
     new-array v0, v4, [I
 
     const/16 v1, 0xd
@@ -790,7 +776,6 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_CALL_PHONE_OPS:[I
 
-    .line 334
     new-array v0, v5, [Ljava/lang/String;
 
     const-string v1, "android.permission.READ_SMS"
@@ -803,14 +788,12 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_SMS_LOG_PERMS:[Ljava/lang/String;
 
-    .line 339
     new-array v0, v6, [I
 
     fill-array-data v0, :array_4
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_SMS_LOG_OPS:[I
 
-    .line 346
     new-array v0, v5, [Ljava/lang/String;
 
     const-string v1, "android.permission.READ_SMS"
@@ -823,14 +806,12 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_MMS_LOG_PERMS:[Ljava/lang/String;
 
-    .line 350
     new-array v0, v5, [I
 
     fill-array-data v0, :array_5
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_MMS_LOG_OPS:[I
 
-    .line 355
     new-array v0, v6, [Ljava/lang/String;
 
     const-string v1, "android.permission.RECEIVE_SMS"
@@ -851,14 +832,12 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_RECEIVE_SMS_PERMS:[Ljava/lang/String;
 
-    .line 362
     new-array v0, v6, [I
 
     fill-array-data v0, :array_6
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_RECEIVE_SMS_OPS:[I
 
-    .line 369
     new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "android.permission.SEND_SMS"
@@ -867,7 +846,6 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_SEND_SMS_PERMS:[Ljava/lang/String;
 
-    .line 373
     new-array v0, v4, [I
 
     const/16 v1, 0x14
@@ -876,7 +854,6 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_SEND_SMS_OPS:[I
 
-    .line 377
     new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "android.permission.SEND_SMS"
@@ -885,7 +862,6 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_SEND_MMS_PERMS:[Ljava/lang/String;
 
-    .line 381
     new-array v0, v4, [I
 
     const/16 v1, 0x43
@@ -894,7 +870,6 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_SEND_MMS_OPS:[I
 
-    .line 385
     new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "android.permission.WRITE_SETTINGS"
@@ -903,7 +878,6 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_WRITE_SETTINGS_PERMS:[Ljava/lang/String;
 
-    .line 389
     new-array v0, v4, [I
 
     const/16 v1, 0x17
@@ -912,7 +886,6 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_WRITE_SETTINGS_OPS:[I
 
-    .line 393
     new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "android.permission.ACCESS_NOTIFICATIONS"
@@ -921,7 +894,6 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_ACCESS_NOTIFICATION_PERMS:[Ljava/lang/String;
 
-    .line 397
     new-array v0, v4, [I
 
     const/16 v1, 0x19
@@ -930,7 +902,6 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_ACCESS_NOTIFICATION_OPS:[I
 
-    .line 401
     new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "android.permission.CAMERA"
@@ -939,7 +910,6 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_CAMERA_PERMS:[Ljava/lang/String;
 
-    .line 405
     new-array v0, v4, [I
 
     const/16 v1, 0x1a
@@ -948,7 +918,6 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_CAMERA_OPS:[I
 
-    .line 409
     new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "android.permission.RECORD_AUDIO"
@@ -957,7 +926,6 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_RECORD_AUDIO_PERMS:[Ljava/lang/String;
 
-    .line 413
     new-array v0, v4, [I
 
     const/16 v1, 0x1b
@@ -966,7 +934,6 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_RECORD_AUDIO_OPS:[I
 
-    .line 417
     new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "android.permission.CHANGE_WIFI_STATE"
@@ -975,7 +942,6 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_CHANGE_WIFI_PERMS:[Ljava/lang/String;
 
-    .line 421
     new-array v0, v4, [I
 
     const/16 v1, 0x3f
@@ -984,7 +950,6 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_CHANGE_WIFI_OPS:[I
 
-    .line 425
     new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "android.permission.BLUETOOTH"
@@ -993,7 +958,6 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_CHANGE_BLUETOOTH_PERMS:[Ljava/lang/String;
 
-    .line 429
     new-array v0, v4, [I
 
     const/16 v1, 0x40
@@ -1002,7 +966,6 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_CHANGE_BLUETOOTH_OPS:[I
 
-    .line 433
     new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "android.permission.CHANGE_NETWORK_STATE"
@@ -1011,7 +974,6 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_CHANGE_DATACONNECT_PERMS:[Ljava/lang/String;
 
-    .line 437
     new-array v0, v4, [I
 
     const/16 v1, 0x41
@@ -1020,7 +982,6 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_CHANGE_DATACONNECT_OPS:[I
 
-    .line 441
     new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "android.permission.RECEIVE_BOOT_COMPLETED"
@@ -1029,7 +990,6 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_RECEIVE_BOOT_COMPLETED_PERMS:[Ljava/lang/String;
 
-    .line 445
     new-array v0, v4, [I
 
     const/16 v1, 0x46
@@ -1038,7 +998,6 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_RECEIVE_BOOT_COMPLETED_OPS:[I
 
-    .line 449
     new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "android.permission.NFC"
@@ -1047,7 +1006,6 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_NFC_PERMS:[Ljava/lang/String;
 
-    .line 453
     new-array v0, v4, [I
 
     const/16 v1, 0x47
@@ -1056,7 +1014,6 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_NFC_OPS:[I
 
-    .line 457
     new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "android.permission.READ_PHONE_STATE"
@@ -1065,7 +1022,6 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_PHONE_INFO_PERMS:[Ljava/lang/String;
 
-    .line 461
     new-array v0, v4, [I
 
     const/16 v1, 0x33
@@ -1074,19 +1030,16 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_PHONE_INFO_OPS:[I
 
-    .line 465
     new-array v0, v3, [Ljava/lang/String;
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_CLIPBOARD_PERMS:[Ljava/lang/String;
 
-    .line 468
     new-array v0, v5, [I
 
     fill-array-data v0, :array_7
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_CLIPBOARD_OPS:[I
 
-    .line 473
     new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "android.permission.SYSTEM_ALERT_WINDOW"
@@ -1095,7 +1048,6 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_SYSTEM_ALERT_WINDOW_PERMS:[Ljava/lang/String;
 
-    .line 477
     new-array v0, v4, [I
 
     const/16 v1, 0x18
@@ -1104,7 +1056,6 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_SYSTEM_ALERT_WINDOW_OPS:[I
 
-    .line 481
     new-array v0, v4, [I
 
     const/16 v1, 0x4a
@@ -1113,7 +1064,6 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_THREE_WAY_CALLING_OPS:[I
 
-    .line 484
     const/4 v0, 0x6
 
     new-array v0, v0, [I
@@ -1122,7 +1072,6 @@
 
     sput-object v0, Landroid/app/AppOpsUtils;->TYPE_ALL_PHONE_OPS:[I
 
-    .line 487
     const/4 v0, 0x6
 
     new-array v0, v0, [I
@@ -1133,7 +1082,6 @@
 
     return-void
 
-    .line 286
     :array_0
     .array-data 4
         0x0
@@ -1145,28 +1093,24 @@
         0x2a
     .end array-data
 
-    .line 301
     :array_1
     .array-data 4
         0x4
         0x5
     .end array-data
 
-    .line 311
     :array_2
     .array-data 4
         0x6
         0x7
     .end array-data
 
-    .line 321
     :array_3
     .array-data 4
         0x8
         0x9
     .end array-data
 
-    .line 339
     :array_4
     .array-data 4
         0xe
@@ -1175,14 +1119,12 @@
         0x16
     .end array-data
 
-    .line 350
     :array_5
     .array-data 4
         0x44
         0x45
     .end array-data
 
-    .line 362
     :array_6
     .array-data 4
         0x10
@@ -1191,14 +1133,12 @@
         0x13
     .end array-data
 
-    .line 468
     :array_7
     .array-data 4
         0x1d
         0x1e
     .end array-data
 
-    .line 484
     :array_8
     .array-data 4
         0xd
@@ -1209,7 +1149,6 @@
         0x7
     .end array-data
 
-    .line 487
     :array_9
     .array-data 4
         0x14
@@ -1228,17 +1167,14 @@
     .param p3, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 25
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 26
     move-object/from16 v0, p1
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Landroid/app/AppOpsUtils;->mContext:Landroid/content/Context;
 
-    .line 27
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -1247,7 +1183,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
 
-    .line 28
     const-string v2, "appops"
 
     move-object/from16 v0, p1
@@ -1262,7 +1197,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->aom:Landroid/app/AppOpsManager;
 
-    .line 29
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->mContext:Landroid/content/Context;
@@ -1275,17 +1209,14 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->pm:Landroid/content/pm/PackageManager;
 
-    .line 30
     if-gez p2, :cond_0
 
-    .line 31
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Landroid/app/AppOpsUtils;->isFirst:Z
 
-    .line 35
     :goto_0
     move/from16 v0, p2
 
@@ -1293,14 +1224,12 @@
 
     iput v0, v1, Landroid/app/AppOpsUtils;->uid:I
 
-    .line 36
     move-object/from16 v0, p3
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Landroid/app/AppOpsUtils;->packageName:Ljava/lang/String;
 
-    .line 37
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -1311,7 +1240,6 @@
 
     move-result-object v17
 
-    .line 38
     .local v17, "communicate_title":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1323,7 +1251,6 @@
 
     move-result-object v19
 
-    .line 39
     .local v19, "internet_title":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1335,7 +1262,6 @@
 
     move-result-object v20
 
-    .line 40
     .local v20, "media_title":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1347,7 +1273,6 @@
 
     move-result-object v23
 
-    .line 41
     .local v23, "tool_title":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1359,7 +1284,6 @@
 
     move-result-object v18
 
-    .line 42
     .local v18, "device_title":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1371,7 +1295,6 @@
 
     move-result-object v22
 
-    .line 43
     .local v22, "system_title":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1383,7 +1306,6 @@
 
     move-result-object v21
 
-    .line 44
     .local v21, "other_title":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1395,7 +1317,6 @@
 
     move-result-object v5
 
-    .line 45
     .local v5, "privacy_title":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1411,7 +1332,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->LOCATION_GROUP_NAME:Ljava/lang/String;
 
-    .line 46
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -1426,7 +1346,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->LOCATION_GROUP_DESC:Ljava/lang/String;
 
-    .line 47
     new-instance v2, Landroid/app/AppOpsUtils$AppOpsItem;
 
     const/4 v4, 0x0
@@ -1531,7 +1450,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->LOCATION_ITEM:Landroid/app/AppOpsUtils$AppOpsItem;
 
-    .line 48
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -1546,7 +1464,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->CONTACT_LOG_GROUP_NAME:Ljava/lang/String;
 
-    .line 49
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -1561,7 +1478,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->CONTACT_LOG_GROUP_DESC:Ljava/lang/String;
 
-    .line 50
     new-instance v6, Landroid/app/AppOpsUtils$AppOpsItem;
 
     const/4 v8, 0x1
@@ -1620,7 +1536,6 @@
 
     iput-object v6, v0, Landroid/app/AppOpsUtils;->CONTACT_LOG_ITEM:Landroid/app/AppOpsUtils$AppOpsItem;
 
-    .line 51
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -1635,7 +1550,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->CALL_LOG_GROUP_NAME:Ljava/lang/String;
 
-    .line 52
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -1650,7 +1564,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->CALL_LOG_GROUP_DESC:Ljava/lang/String;
 
-    .line 53
     new-instance v6, Landroid/app/AppOpsUtils$AppOpsItem;
 
     const/4 v8, 0x1
@@ -1709,7 +1622,6 @@
 
     iput-object v6, v0, Landroid/app/AppOpsUtils;->CALL_LOG_ITEM:Landroid/app/AppOpsUtils$AppOpsItem;
 
-    .line 54
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -1724,7 +1636,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->CALENDAR_GROUP_NAME:Ljava/lang/String;
 
-    .line 55
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -1739,7 +1650,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->CALENDAR_GROUP_DESC:Ljava/lang/String;
 
-    .line 56
     new-instance v6, Landroid/app/AppOpsUtils$AppOpsItem;
 
     const/4 v8, 0x4
@@ -1798,7 +1708,6 @@
 
     iput-object v6, v0, Landroid/app/AppOpsUtils;->CALENDAR_ITEM:Landroid/app/AppOpsUtils$AppOpsItem;
 
-    .line 57
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -1813,7 +1722,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->CALL_PHONE_GROUP_NAME:Ljava/lang/String;
 
-    .line 58
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -1828,7 +1736,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->CALL_PHONE_GROUP_DESC:Ljava/lang/String;
 
-    .line 59
     new-instance v6, Landroid/app/AppOpsUtils$AppOpsItem;
 
     const/4 v8, 0x1
@@ -1877,7 +1784,6 @@
 
     iput-object v6, v0, Landroid/app/AppOpsUtils;->CALL_PHONE_ITEM:Landroid/app/AppOpsUtils$AppOpsItem;
 
-    .line 60
     new-instance v6, Landroid/app/AppOpsUtils$AppOpsItem;
 
     const/4 v8, 0x1
@@ -1976,7 +1882,6 @@
 
     iput-object v6, v0, Landroid/app/AppOpsUtils;->ALL_PHONE_ITEM:Landroid/app/AppOpsUtils$AppOpsItem;
 
-    .line 61
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -1991,7 +1896,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->SMS_LOG_GROUP_NAME:Ljava/lang/String;
 
-    .line 62
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -2006,7 +1910,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->SMS_LOG_GROUP_DESC:Ljava/lang/String;
 
-    .line 63
     new-instance v6, Landroid/app/AppOpsUtils$AppOpsItem;
 
     const/4 v8, 0x1
@@ -2065,7 +1968,6 @@
 
     iput-object v6, v0, Landroid/app/AppOpsUtils;->SMS_LOG_ITEM:Landroid/app/AppOpsUtils$AppOpsItem;
 
-    .line 64
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -2080,7 +1982,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->MMS_LOG_GROUP_NAME:Ljava/lang/String;
 
-    .line 65
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -2095,7 +1996,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->MMS_LOG_GROUP_DESC:Ljava/lang/String;
 
-    .line 66
     new-instance v6, Landroid/app/AppOpsUtils$AppOpsItem;
 
     const/4 v8, 0x1
@@ -2154,7 +2054,6 @@
 
     iput-object v6, v0, Landroid/app/AppOpsUtils;->MMS_LOG_ITEM:Landroid/app/AppOpsUtils$AppOpsItem;
 
-    .line 67
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -2169,7 +2068,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->RECEIVE_SMS_GROUP_NAME:Ljava/lang/String;
 
-    .line 68
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -2184,7 +2082,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->RECEIVE_SMS_GROUP_DESC:Ljava/lang/String;
 
-    .line 69
     new-instance v6, Landroid/app/AppOpsUtils$AppOpsItem;
 
     const/4 v8, 0x1
@@ -2263,7 +2160,6 @@
 
     iput-object v6, v0, Landroid/app/AppOpsUtils;->RECEIVE_SMS_ITEM:Landroid/app/AppOpsUtils$AppOpsItem;
 
-    .line 70
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -2278,7 +2174,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->SEND_SMS_GROUP_NAME:Ljava/lang/String;
 
-    .line 71
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -2293,7 +2188,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->SEND_SMS_GROUP_DESC:Ljava/lang/String;
 
-    .line 72
     new-instance v6, Landroid/app/AppOpsUtils$AppOpsItem;
 
     const/4 v8, 0x1
@@ -2342,7 +2236,6 @@
 
     iput-object v6, v0, Landroid/app/AppOpsUtils;->SEND_SMS_ITEM:Landroid/app/AppOpsUtils$AppOpsItem;
 
-    .line 73
     new-instance v6, Landroid/app/AppOpsUtils$AppOpsItem;
 
     const/4 v8, 0x1
@@ -2481,7 +2374,6 @@
 
     iput-object v6, v0, Landroid/app/AppOpsUtils;->ALL_SMS_ITEM:Landroid/app/AppOpsUtils$AppOpsItem;
 
-    .line 74
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -2496,7 +2388,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->SEND_MMS_GROUP_NAME:Ljava/lang/String;
 
-    .line 75
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -2511,7 +2402,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->SEND_MMS_GROUP_DESC:Ljava/lang/String;
 
-    .line 76
     new-instance v6, Landroid/app/AppOpsUtils$AppOpsItem;
 
     const/4 v8, 0x1
@@ -2560,7 +2450,6 @@
 
     iput-object v6, v0, Landroid/app/AppOpsUtils;->SEND_MMS_ITEM:Landroid/app/AppOpsUtils$AppOpsItem;
 
-    .line 77
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -2575,7 +2464,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->WRITE_SETTINGS_GROUP_NAME:Ljava/lang/String;
 
-    .line 78
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -2590,7 +2478,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->WRITE_SETTINGS_GROUP_DESC:Ljava/lang/String;
 
-    .line 79
     new-instance v6, Landroid/app/AppOpsUtils$AppOpsItem;
 
     const/4 v8, 0x6
@@ -2639,7 +2526,6 @@
 
     iput-object v6, v0, Landroid/app/AppOpsUtils;->WRITE_SETTINGS_ITEM:Landroid/app/AppOpsUtils$AppOpsItem;
 
-    .line 80
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -2654,7 +2540,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->ACCESS_NOTIFICATION_GROUP_NAME:Ljava/lang/String;
 
-    .line 81
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -2669,7 +2554,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->ACCESS_NOTIFICATION_GORUP_DESC:Ljava/lang/String;
 
-    .line 82
     new-instance v6, Landroid/app/AppOpsUtils$AppOpsItem;
 
     const/4 v8, 0x7
@@ -2718,7 +2602,6 @@
 
     iput-object v6, v0, Landroid/app/AppOpsUtils;->ACCESS_NOTIFICATION_ITEM:Landroid/app/AppOpsUtils$AppOpsItem;
 
-    .line 83
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -2733,7 +2616,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->CAMERA_GROUP_NAME:Ljava/lang/String;
 
-    .line 84
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -2748,7 +2630,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->CAMERA_GROUP_DESC:Ljava/lang/String;
 
-    .line 85
     new-instance v6, Landroid/app/AppOpsUtils$AppOpsItem;
 
     const/4 v8, 0x3
@@ -2797,7 +2678,6 @@
 
     iput-object v6, v0, Landroid/app/AppOpsUtils;->CAMERA_ITEM:Landroid/app/AppOpsUtils$AppOpsItem;
 
-    .line 86
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -2812,7 +2692,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->RECORD_AUDIO_GROUP_NAME:Ljava/lang/String;
 
-    .line 87
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -2827,7 +2706,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->RECORD_AUDIO_GROUP_DESC:Ljava/lang/String;
 
-    .line 88
     new-instance v6, Landroid/app/AppOpsUtils$AppOpsItem;
 
     const/4 v8, 0x3
@@ -2876,7 +2754,6 @@
 
     iput-object v6, v0, Landroid/app/AppOpsUtils;->RECORD_AUDIO_ITEM:Landroid/app/AppOpsUtils$AppOpsItem;
 
-    .line 89
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -2891,7 +2768,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->WIFI_GROUP_NAME:Ljava/lang/String;
 
-    .line 90
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -2906,7 +2782,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->WIFI_GROUP_DESC:Ljava/lang/String;
 
-    .line 91
     new-instance v6, Landroid/app/AppOpsUtils$AppOpsItem;
 
     const/4 v8, 0x2
@@ -2955,7 +2830,6 @@
 
     iput-object v6, v0, Landroid/app/AppOpsUtils;->WIFI_ITEM:Landroid/app/AppOpsUtils$AppOpsItem;
 
-    .line 92
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -2970,7 +2844,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->BLUETOOTH_GROUP_NAME:Ljava/lang/String;
 
-    .line 93
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -2985,7 +2858,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->BLUETOOTH_GROUP_DESC:Ljava/lang/String;
 
-    .line 94
     new-instance v6, Landroid/app/AppOpsUtils$AppOpsItem;
 
     const/4 v8, 0x2
@@ -3034,7 +2906,6 @@
 
     iput-object v6, v0, Landroid/app/AppOpsUtils;->BLUETOOTH_ITEM:Landroid/app/AppOpsUtils$AppOpsItem;
 
-    .line 95
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -3049,7 +2920,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->DATACONNECT_GROUP_NAME:Ljava/lang/String;
 
-    .line 96
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -3064,7 +2934,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->DATACONNECT_GROUP_DESC:Ljava/lang/String;
 
-    .line 97
     new-instance v6, Landroid/app/AppOpsUtils$AppOpsItem;
 
     const/4 v8, 0x2
@@ -3113,7 +2982,6 @@
 
     iput-object v6, v0, Landroid/app/AppOpsUtils;->DATACONNECT_ITEM:Landroid/app/AppOpsUtils$AppOpsItem;
 
-    .line 98
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -3128,7 +2996,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->AUTOBOOT_GROUP_NAME:Ljava/lang/String;
 
-    .line 99
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -3143,7 +3010,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->AUTOBOOT_GROUP_DESC:Ljava/lang/String;
 
-    .line 100
     new-instance v6, Landroid/app/AppOpsUtils$AppOpsItem;
 
     const/4 v8, 0x0
@@ -3192,7 +3058,6 @@
 
     iput-object v6, v0, Landroid/app/AppOpsUtils;->AUTOBOOT_ITEM:Landroid/app/AppOpsUtils$AppOpsItem;
 
-    .line 101
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -3207,7 +3072,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->NFC_GROUP_NAME:Ljava/lang/String;
 
-    .line 102
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -3222,7 +3086,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->NFC_GROUP_DESC:Ljava/lang/String;
 
-    .line 103
     new-instance v6, Landroid/app/AppOpsUtils$AppOpsItem;
 
     const/4 v8, 0x2
@@ -3271,7 +3134,6 @@
 
     iput-object v6, v0, Landroid/app/AppOpsUtils;->NFC_ITEM:Landroid/app/AppOpsUtils$AppOpsItem;
 
-    .line 104
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -3286,7 +3148,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->PHONE_INFO_GROUP_NAME:Ljava/lang/String;
 
-    .line 105
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -3301,7 +3162,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->PHONE_INFO_GROUP_DESC:Ljava/lang/String;
 
-    .line 106
     new-instance v6, Landroid/app/AppOpsUtils$AppOpsItem;
 
     const/4 v8, 0x5
@@ -3340,7 +3200,6 @@
 
     iput-object v6, v0, Landroid/app/AppOpsUtils;->PHONE_INFO_ITEM:Landroid/app/AppOpsUtils$AppOpsItem;
 
-    .line 107
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -3355,7 +3214,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->SYSTEM_ALERT_WINDOW_GROUP_NAME:Ljava/lang/String;
 
-    .line 108
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -3370,7 +3228,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->SYSTEM_ALERT_WINDOW_GROUP_DESC:Ljava/lang/String;
 
-    .line 109
     new-instance v6, Landroid/app/AppOpsUtils$AppOpsItem;
 
     const/16 v8, 0x8
@@ -3419,7 +3276,6 @@
 
     iput-object v6, v0, Landroid/app/AppOpsUtils;->SYSTEM_ALERT_WINDOW_ITEM:Landroid/app/AppOpsUtils$AppOpsItem;
 
-    .line 110
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -3434,7 +3290,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->THREE_WAY_CALLING_GROUP_NAME:Ljava/lang/String;
 
-    .line 111
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/app/AppOpsUtils;->res:Landroid/content/res/Resources;
@@ -3449,7 +3304,6 @@
 
     iput-object v2, v0, Landroid/app/AppOpsUtils;->THREE_WAY_CALLING_GROUP_DESC:Ljava/lang/String;
 
-    .line 112
     new-instance v6, Landroid/app/AppOpsUtils$AppOpsItem;
 
     const/16 v8, 0x8
@@ -3498,10 +3352,8 @@
 
     iput-object v6, v0, Landroid/app/AppOpsUtils;->THREE_WAY_CALLING_ITEM:Landroid/app/AppOpsUtils$AppOpsItem;
 
-    .line 113
     return-void
 
-    .line 33
     .end local v5    # "privacy_title":Ljava/lang/String;
     .end local v17    # "communicate_title":Ljava/lang/String;
     .end local v18    # "device_title":Ljava/lang/String;
@@ -3526,7 +3378,6 @@
     .param p1, "target"    # I
 
     .prologue
-    .line 592
     move-object v0, p0
 
     .local v0, "arr$":[I
@@ -3541,26 +3392,21 @@
 
     aget v1, v0, v2
 
-    .line 593
     .local v1, "i":I
     if-ne v1, p1, :cond_0
 
-    .line 594
     const/4 v4, 0x1
 
-    .line 596
     .end local v1    # "i":I
     :goto_1
     return v4
 
-    .line 592
     .restart local v1    # "i":I
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 596
     .end local v1    # "i":I
     :cond_1
     const/4 v4, 0x0

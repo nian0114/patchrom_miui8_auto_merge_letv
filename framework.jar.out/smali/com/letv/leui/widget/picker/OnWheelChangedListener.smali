@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,6 +24,5 @@
     .param p2, "diff"    # I
 
     .prologue
-    .line 23
     return-void
 .end method

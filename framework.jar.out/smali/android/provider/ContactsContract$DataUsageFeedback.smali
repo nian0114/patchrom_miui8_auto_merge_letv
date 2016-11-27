@@ -67,10 +67,9 @@
     .locals 2
 
     .prologue
-    .line 8881
     sget-object v0, Landroid/provider/ContactsContract$Data;->CONTENT_URI:Landroid/net/Uri;
 
-    const-string/jumbo v1, "usagefeedback"
+    const-string v1, "usagefeedback"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -78,7 +77,6 @@
 
     sput-object v0, Landroid/provider/ContactsContract$DataUsageFeedback;->FEEDBACK_URI:Landroid/net/Uri;
 
-    .line 8889
     sget-object v0, Landroid/provider/ContactsContract$Contacts;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "delete_usage"
@@ -89,10 +87,9 @@
 
     sput-object v0, Landroid/provider/ContactsContract$DataUsageFeedback;->DELETE_USAGE_URI:Landroid/net/Uri;
 
-    .line 8896
     sget-object v0, Landroid/provider/ContactsContract$Data;->CONTENT_URI:Landroid/net/Uri;
 
-    const-string/jumbo v1, "le_data_usage_stat"
+    const-string v1, "le_data_usage_stat"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -107,7 +104,6 @@
     .locals 0
 
     .prologue
-    .line 8875
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

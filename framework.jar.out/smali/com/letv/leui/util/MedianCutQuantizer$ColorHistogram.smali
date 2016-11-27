@@ -28,23 +28,17 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 405
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 397
     iput-object v6, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorHistogram;->colorArray:[I
 
-    .line 398
     iput-object v6, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorHistogram;->countArray:[I
 
-    .line 406
     array-length v0, p1
 
-    .line 407
     .local v0, "N":I
     new-array v5, v0, [I
 
-    .line 408
     .local v5, "pixelsCpy":[I
     const/4 v2, 0x0
 
@@ -52,7 +46,6 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
-    .line 410
     const v6, 0xffffff
 
     aget v7, p1, v2
@@ -61,23 +54,18 @@
 
     aput v6, v5, v2
 
-    .line 408
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 412
     :cond_0
     invoke-static {v5}, Ljava/util/Arrays;->sort([I)V
 
-    .line 415
     const/4 v3, -0x1
 
-    .line 416
     .local v3, "k":I
     const/4 v1, -0x1
 
-    .line 417
     .local v1, "curColor":I
     const/4 v2, 0x0
 
@@ -86,45 +74,35 @@
 
     if-ge v2, v6, :cond_2
 
-    .line 418
     aget v6, v5, v2
 
     if-eq v6, v1, :cond_1
 
-    .line 419
     add-int/lit8 v3, v3, 0x1
 
-    .line 420
     aget v1, v5, v2
 
-    .line 417
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 423
     :cond_2
     add-int/lit8 v4, v3, 0x1
 
-    .line 426
     .local v4, "nColors":I
     new-array v6, v4, [I
 
     iput-object v6, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorHistogram;->colorArray:[I
 
-    .line 427
     new-array v6, v4, [I
 
     iput-object v6, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorHistogram;->countArray:[I
 
-    .line 428
     const/4 v3, -0x1
 
-    .line 429
     const/4 v1, -0x1
 
-    .line 430
     const/4 v2, 0x0
 
     :goto_2
@@ -132,36 +110,29 @@
 
     if-ge v2, v6, :cond_4
 
-    .line 431
     aget v6, v5, v2
 
     if-eq v6, v1, :cond_3
 
-    .line 432
     add-int/lit8 v3, v3, 0x1
 
-    .line 433
     aget v1, v5, v2
 
-    .line 434
     iget-object v6, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorHistogram;->colorArray:[I
 
     aput v1, v6, v3
 
-    .line 435
     iget-object v6, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorHistogram;->countArray:[I
 
     const/4 v7, 0x1
 
     aput v7, v6, v3
 
-    .line 430
     :goto_3
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 437
     :cond_3
     iget-object v6, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorHistogram;->countArray:[I
 
@@ -173,7 +144,6 @@
 
     goto :goto_3
 
-    .line 440
     :cond_4
     return-void
 .end method
@@ -186,22 +156,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 400
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 397
     iput-object v0, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorHistogram;->colorArray:[I
 
-    .line 398
     iput-object v0, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorHistogram;->countArray:[I
 
-    .line 401
     iput-object p2, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorHistogram;->countArray:[I
 
-    .line 402
     iput-object p1, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorHistogram;->colorArray:[I
 
-    .line 403
     return-void
 .end method
 
@@ -212,7 +176,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 459
     iget-object v0, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorHistogram;->colorArray:[I
 
     aget v0, v0, p1
@@ -224,7 +187,6 @@
     .locals 1
 
     .prologue
-    .line 443
     iget-object v0, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorHistogram;->colorArray:[I
 
     return-object v0
@@ -235,7 +197,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 463
     iget-object v0, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorHistogram;->countArray:[I
 
     aget v0, v0, p1
@@ -247,7 +208,6 @@
     .locals 1
 
     .prologue
-    .line 447
     iget-object v0, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorHistogram;->countArray:[I
 
     return-object v0
@@ -257,15 +217,12 @@
     .locals 1
 
     .prologue
-    .line 451
     iget-object v0, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorHistogram;->colorArray:[I
 
     if-nez v0, :cond_0
 
-    .line 452
     const/4 v0, 0x0
 
-    .line 454
     :goto_0
     return v0
 

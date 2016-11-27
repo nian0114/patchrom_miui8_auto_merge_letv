@@ -20,7 +20,6 @@
     .locals 1
 
     .prologue
-    .line 10
     const-class v0, Lcom/letv/leui/util/DominantColorFinder;
 
     invoke-virtual {v0}, Ljava/lang/Class;->desiredAssertionStatus()Z
@@ -47,12 +46,10 @@
     .param p1, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 17
     const/16 v0, 0x10
 
     invoke-direct {p0, p1, v0}, Lcom/letv/leui/util/DominantColorFinder;-><init>(Landroid/graphics/Bitmap;I)V
 
-    .line 18
     return-void
 .end method
 
@@ -64,21 +61,17 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 21
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v3
 
-    .line 22
     .local v3, "width":I
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v7
 
-    .line 24
     .local v7, "height":I
     mul-int v0, v3, v7
 
@@ -93,24 +86,19 @@
 
     move v6, v3
 
-    .line 25
     invoke-virtual/range {v0 .. v7}, Landroid/graphics/Bitmap;->getPixels([IIIIIII)V
 
-    .line 27
     const/4 v0, 0x4
 
     if-ge p2, v0, :cond_0
 
-    .line 28
     const/4 p2, 0x4
 
-    .line 31
     :cond_0
     new-instance v8, Lcom/letv/leui/util/MedianCutQuantizer;
 
     invoke-direct {v8, v1, p2}, Lcom/letv/leui/util/MedianCutQuantizer;-><init>([II)V
 
-    .line 33
     .local v8, "mcq":Lcom/letv/leui/util/MedianCutQuantizer;
     invoke-virtual {v8}, Lcom/letv/leui/util/MedianCutQuantizer;->getQuantizedColors()[Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
@@ -118,7 +106,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/util/DominantColorFinder;->mPalette:[Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
-    .line 34
     iget-object v0, p0, Lcom/letv/leui/util/DominantColorFinder;->mPalette:[Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
     invoke-static {v0}, Lcom/letv/leui/util/DominantColorFinder;->weight([Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;)[Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
@@ -127,7 +114,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/util/DominantColorFinder;->mWeightedPalette:[Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
-    .line 35
     return-void
 .end method
 
@@ -137,7 +123,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 10
     invoke-static {p0, p1}, Lcom/letv/leui/util/DominantColorFinder;->calculateWeight(Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;F)F
 
     move-result v0
@@ -150,12 +135,10 @@
     .param p0, "node"    # Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
     .prologue
-    .line 120
     invoke-virtual {p0}, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->getHsv()[F
 
     move-result-object v0
 
-    .line 121
     .local v0, "hsv":[F
     const/4 v1, 0x1
 
@@ -176,7 +159,6 @@
     .param p1, "maxCount"    # F
 
     .prologue
-    .line 113
     const/4 v0, 0x4
 
     new-array v0, v0, [F
@@ -225,7 +207,6 @@
     .param p0, "palette"    # [Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
     .prologue
-    .line 84
     array-length v7, p0
 
     invoke-static {p0, v7}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
@@ -234,7 +215,6 @@
 
     check-cast v1, [Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
-    .line 85
     .local v1, "copy":[Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
     const/4 v7, 0x0
 
@@ -246,7 +226,6 @@
 
     int-to-float v6, v7
 
-    .line 87
     .local v6, "tmaxCount":F
     move-object v0, v1
 
@@ -262,7 +241,6 @@
 
     aget-object v5, v0, v2
 
-    .line 88
     .local v5, "node":Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
     invoke-virtual {v5}, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->getCount()I
 
@@ -274,25 +252,21 @@
 
     if-lez v7, :cond_0
 
-    .line 89
     invoke-virtual {v5}, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->getCount()I
 
     move-result v7
 
     int-to-float v6, v7
 
-    .line 87
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 92
     .end local v5    # "node":Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
     :cond_1
     move v4, v6
 
-    .line 94
     .local v4, "maxCount":F
     new-instance v7, Lcom/letv/leui/util/DominantColorFinder$1;
 
@@ -300,7 +274,6 @@
 
     invoke-static {v1, v7}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
 
-    .line 109
     return-object v1
 .end method
 
@@ -309,7 +282,6 @@
     .param p0, "values"    # [F
 
     .prologue
-    .line 125
     sget-boolean v5, Lcom/letv/leui/util/DominantColorFinder;->$assertionsDisabled:Z
 
     if-nez v5, :cond_0
@@ -326,15 +298,12 @@
 
     throw v5
 
-    .line 127
     :cond_0
     const/4 v1, 0x0
 
-    .line 128
     .local v1, "sum":F
     const/4 v2, 0x0
 
-    .line 130
     .local v2, "sumWeight":F
     const/4 v0, 0x0
 
@@ -344,30 +313,24 @@
 
     if-ge v0, v5, :cond_1
 
-    .line 131
     aget v3, p0, v0
 
-    .line 132
     .local v3, "value":F
     add-int/lit8 v5, v0, 0x1
 
     aget v4, p0, v5
 
-    .line 134
     .local v4, "weight":F
     mul-float v5, v3, v4
 
     add-float/2addr v1, v5
 
-    .line 135
     add-float/2addr v2, v4
 
-    .line 130
     add-int/lit8 v0, v0, 0x2
 
     goto :goto_0
 
-    .line 138
     .end local v3    # "value":F
     .end local v4    # "weight":F
     :cond_1
@@ -382,7 +345,6 @@
     .locals 2
 
     .prologue
-    .line 43
     iget-object v0, p0, Lcom/letv/leui/util/DominantColorFinder;->mWeightedPalette:[Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
     const/4 v1, 0x0
@@ -400,7 +362,6 @@
     .locals 6
 
     .prologue
-    .line 57
     iget-object v0, p0, Lcom/letv/leui/util/DominantColorFinder;->mWeightedPalette:[Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
     .local v0, "arr$":[Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
@@ -415,7 +376,6 @@
 
     aget-object v1, v0, v2
 
-    .line 59
     .local v1, "colorNode":Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
     invoke-virtual {v1}, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->getRgb()I
 
@@ -427,24 +387,20 @@
 
     if-nez v4, :cond_0
 
-    .line 60
     invoke-virtual {v1}, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->getRgb()I
 
     move-result v4
 
-    .line 63
     .end local v1    # "colorNode":Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
     :goto_1
     return v4
 
-    .line 57
     .restart local v1    # "colorNode":Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 63
     .end local v1    # "colorNode":Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
     :cond_1
     iget-object v4, p0, Lcom/letv/leui/util/DominantColorFinder;->mWeightedPalette:[Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
@@ -464,7 +420,6 @@
     .locals 6
 
     .prologue
-    .line 47
     iget-object v0, p0, Lcom/letv/leui/util/DominantColorFinder;->mWeightedPalette:[Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
     .local v0, "arr$":[Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
@@ -479,7 +434,6 @@
 
     aget-object v1, v0, v2
 
-    .line 49
     .local v1, "colorNode":Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
     invoke-virtual {v1}, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->getRgb()I
 
@@ -491,24 +445,20 @@
 
     if-nez v4, :cond_0
 
-    .line 50
     invoke-virtual {v1}, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->getRgb()I
 
     move-result v4
 
-    .line 53
     .end local v1    # "colorNode":Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
     :goto_1
     return v4
 
-    .line 47
     .restart local v1    # "colorNode":Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 53
     .end local v1    # "colorNode":Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
     :cond_1
     iget-object v4, p0, Lcom/letv/leui/util/DominantColorFinder;->mWeightedPalette:[Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
@@ -528,7 +478,6 @@
     .locals 3
 
     .prologue
-    .line 38
     iget-object v1, p0, Lcom/letv/leui/util/DominantColorFinder;->mWeightedPalette:[Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
     iget-object v2, p0, Lcom/letv/leui/util/DominantColorFinder;->mWeightedPalette:[Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
@@ -541,7 +490,6 @@
 
     check-cast v0, [Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
-    .line 39
     .local v0, "copy":[Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
     return-object v0
 .end method
@@ -553,24 +501,20 @@
     .prologue
     const/16 v3, 0xa
 
-    .line 75
     invoke-static {p1}, Landroid/graphics/Color;->red(I)I
 
     move-result v2
 
-    .line 76
     .local v2, "r":I
     invoke-static {p1}, Landroid/graphics/Color;->green(I)I
 
     move-result v1
 
-    .line 77
     .local v1, "g":I
     invoke-static {p1}, Landroid/graphics/Color;->blue(I)I
 
     move-result v0
 
-    .line 79
     .local v0, "b":I
     if-gt v2, v3, :cond_0
 
@@ -596,24 +540,20 @@
     .prologue
     const/16 v3, 0xf4
 
-    .line 67
     invoke-static {p1}, Landroid/graphics/Color;->red(I)I
 
     move-result v2
 
-    .line 68
     .local v2, "r":I
     invoke-static {p1}, Landroid/graphics/Color;->green(I)I
 
     move-result v1
 
-    .line 69
     .local v1, "g":I
     invoke-static {p1}, Landroid/graphics/Color;->blue(I)I
 
     move-result v0
 
-    .line 71
     .local v0, "b":I
     if-lt v2, v3, :cond_0
 

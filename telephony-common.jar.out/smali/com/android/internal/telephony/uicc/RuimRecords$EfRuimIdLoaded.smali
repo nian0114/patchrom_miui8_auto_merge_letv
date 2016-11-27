@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1002
     iput-object p1, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfRuimIdLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/android/internal/telephony/uicc/RuimRecords$1;
 
     .prologue
-    .line 1002
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/uicc/RuimRecords$EfRuimIdLoaded;-><init>(Lcom/android/internal/telephony/uicc/RuimRecords;)V
 
     return-void
@@ -52,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 1004
     const-string v0, "EF_RUIM_ID"
 
     return-object v0
@@ -63,7 +60,6 @@
     .param p1, "ar"    # Landroid/os/AsyncResult;
 
     .prologue
-    .line 1011
     iget-object v5, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v5, [B
@@ -72,7 +68,6 @@
 
     check-cast v0, [B
 
-    .line 1013
     .local v0, "data":[B
     iget-object v5, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfRuimIdLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
@@ -100,30 +95,24 @@
 
     invoke-virtual {v5, v6}, Lcom/android/internal/telephony/uicc/RuimRecords;->log(Ljava/lang/String;)V
 
-    .line 1014
     if-nez v0, :cond_1
 
-    .line 1029
     :cond_0
     :goto_0
     return-void
 
-    .line 1017
     :cond_1
     const/4 v5, 0x0
 
     aget-byte v3, v0, v5
 
-    .line 1018
     .local v3, "numOfBytes":I
     const/16 v5, 0x8
 
     if-ge v3, v5, :cond_0
 
-    .line 1019
     new-array v1, v3, [B
 
-    .line 1020
     .local v1, "decodeData":[B
     const/4 v2, 0x0
 
@@ -131,32 +120,27 @@
     :goto_1
     if-ge v2, v3, :cond_2
 
-    .line 1021
     sub-int v5, v3, v2
 
     aget-byte v5, v0, v5
 
     aput-byte v5, v1, v2
 
-    .line 1020
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 1023
     :cond_2
     invoke-static {v1}, Lcom/android/internal/telephony/uicc/IccUtils;->bytesToHexString([B)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 1024
     .local v4, "ruimId":Ljava/lang/String;
     iget-object v5, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfRuimIdLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
     # setter for: Lcom/android/internal/telephony/uicc/RuimRecords;->mUIMid:Ljava/lang/String;
     invoke-static {v5, v4}, Lcom/android/internal/telephony/uicc/RuimRecords;->access$2002(Lcom/android/internal/telephony/uicc/RuimRecords;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 1025
     const-string v5, "RuimRecords"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -186,7 +170,6 @@
 
     invoke-static {v5, v6}, Landroid/telephony/Rlog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1027
     iget-object v5, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfRuimIdLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
     new-instance v6, Ljava/lang/StringBuilder;

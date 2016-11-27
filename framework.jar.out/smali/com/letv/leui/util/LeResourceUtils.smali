@@ -18,7 +18,6 @@
     .locals 1
 
     .prologue
-    .line 9
     const-class v0, Lcom/letv/leui/util/LeResourceUtils;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -27,17 +26,14 @@
 
     sput-object v0, Lcom/letv/leui/util/LeResourceUtils;->TAG:Ljava/lang/String;
 
-    .line 11
     const-string v0, "string"
 
     sput-object v0, Lcom/letv/leui/util/LeResourceUtils;->TYPE_STRING:Ljava/lang/String;
 
-    .line 12
     const-string v0, "array"
 
     sput-object v0, Lcom/letv/leui/util/LeResourceUtils;->TYPE_ARRAY:Ljava/lang/String;
 
-    .line 14
     const-string v0, "android"
 
     sput-object v0, Lcom/letv/leui/util/LeResourceUtils;->INTERNAL_PACKAGE_NAME:Ljava/lang/String;
@@ -49,7 +45,6 @@
     .locals 0
 
     .prologue
-    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -62,16 +57,13 @@
     .param p2, "localResource"    # Z
 
     .prologue
-    .line 73
     const/4 v4, 0x0
 
     new-array v2, v4, [Ljava/lang/String;
 
-    .line 75
     .local v2, "targetStrArr":[Ljava/lang/String;
     const/4 v1, -0x1
 
-    .line 77
     .local v1, "id":I
     const-string v4, ""
 
@@ -83,7 +75,6 @@
 
     if-nez p0, :cond_1
 
-    .line 78
     :cond_0
     sget-object v4, Lcom/letv/leui/util/LeResourceUtils;->TAG:Ljava/lang/String;
 
@@ -93,13 +84,11 @@
 
     move-object v3, v2
 
-    .line 101
     .end local v2    # "targetStrArr":[Ljava/lang/String;
     .local v3, "targetStrArr":[Ljava/lang/String;
     :goto_0
     return-object v3
 
-    .line 82
     .end local v3    # "targetStrArr":[Ljava/lang/String;
     .restart local v2    # "targetStrArr":[Ljava/lang/String;
     :cond_1
@@ -117,7 +106,6 @@
 
     if-nez v4, :cond_3
 
-    .line 84
     :cond_2
     sget-object v4, Lcom/letv/leui/util/LeResourceUtils;->TAG:Ljava/lang/String;
 
@@ -127,18 +115,15 @@
 
     move-object v3, v2
 
-    .line 85
     .end local v2    # "targetStrArr":[Ljava/lang/String;
     .restart local v3    # "targetStrArr":[Ljava/lang/String;
     goto :goto_0
 
-    .line 89
     .end local v3    # "targetStrArr":[Ljava/lang/String;
     .restart local v2    # "targetStrArr":[Ljava/lang/String;
     :cond_3
     if-nez p2, :cond_4
 
-    .line 90
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -152,7 +137,6 @@
 
     move-result v1
 
-    .line 96
     :goto_1
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -165,12 +149,10 @@
     :goto_2
     move-object v3, v2
 
-    .line 101
     .end local v2    # "targetStrArr":[Ljava/lang/String;
     .restart local v3    # "targetStrArr":[Ljava/lang/String;
     goto :goto_0
 
-    .line 93
     .end local v3    # "targetStrArr":[Ljava/lang/String;
     .restart local v2    # "targetStrArr":[Ljava/lang/String;
     :cond_4
@@ -192,11 +174,9 @@
 
     goto :goto_1
 
-    .line 97
     :catch_0
     move-exception v0
 
-    .line 98
     .local v0, "e":Ljava/lang/Exception;
     sget-object v4, Lcom/letv/leui/util/LeResourceUtils;->TAG:Ljava/lang/String;
 
@@ -214,14 +194,11 @@
     .param p2, "localResource"    # Z
 
     .prologue
-    .line 28
     const-string v2, ""
 
-    .line 30
     .local v2, "targetStr":Ljava/lang/String;
     const/4 v1, -0x1
 
-    .line 32
     .local v1, "id":I
     const-string v4, ""
 
@@ -233,7 +210,6 @@
 
     if-nez p0, :cond_1
 
-    .line 33
     :cond_0
     sget-object v4, Lcom/letv/leui/util/LeResourceUtils;->TAG:Ljava/lang/String;
 
@@ -243,13 +219,11 @@
 
     move-object v3, v2
 
-    .line 57
     .end local v2    # "targetStr":Ljava/lang/String;
     .local v3, "targetStr":Ljava/lang/String;
     :goto_0
     return-object v3
 
-    .line 37
     .end local v3    # "targetStr":Ljava/lang/String;
     .restart local v2    # "targetStr":Ljava/lang/String;
     :cond_1
@@ -267,7 +241,6 @@
 
     if-nez v4, :cond_3
 
-    .line 39
     :cond_2
     sget-object v4, Lcom/letv/leui/util/LeResourceUtils;->TAG:Ljava/lang/String;
 
@@ -277,18 +250,15 @@
 
     move-object v3, v2
 
-    .line 40
     .end local v2    # "targetStr":Ljava/lang/String;
     .restart local v3    # "targetStr":Ljava/lang/String;
     goto :goto_0
 
-    .line 45
     .end local v3    # "targetStr":Ljava/lang/String;
     .restart local v2    # "targetStr":Ljava/lang/String;
     :cond_3
     if-nez p2, :cond_4
 
-    .line 46
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -302,7 +272,6 @@
 
     move-result v1
 
-    .line 52
     :goto_1
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -315,12 +284,10 @@
     :goto_2
     move-object v3, v2
 
-    .line 57
     .end local v2    # "targetStr":Ljava/lang/String;
     .restart local v3    # "targetStr":Ljava/lang/String;
     goto :goto_0
 
-    .line 49
     .end local v3    # "targetStr":Ljava/lang/String;
     .restart local v2    # "targetStr":Ljava/lang/String;
     :cond_4
@@ -342,11 +309,9 @@
 
     goto :goto_1
 
-    .line 53
     :catch_0
     move-exception v0
 
-    .line 54
     .local v0, "e":Ljava/lang/Exception;
     sget-object v4, Lcom/letv/leui/util/LeResourceUtils;->TAG:Ljava/lang/String;
 

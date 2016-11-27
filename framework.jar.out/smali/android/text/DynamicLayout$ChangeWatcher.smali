@@ -37,17 +37,14 @@
     .param p1, "layout"    # Landroid/text/DynamicLayout;
 
     .prologue
-    .line 774
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 775
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Landroid/text/DynamicLayout$ChangeWatcher;->mLayout:Ljava/lang/ref/WeakReference;
 
-    .line 776
     return-void
 .end method
 
@@ -59,7 +56,6 @@
     .param p4, "after"    # I
 
     .prologue
-    .line 779
     iget-object v1, p0, Landroid/text/DynamicLayout$ChangeWatcher;->mLayout:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -68,28 +64,23 @@
 
     check-cast v0, Landroid/text/DynamicLayout;
 
-    .line 781
     .local v0, "ml":Landroid/text/DynamicLayout;
     if-eqz v0, :cond_1
 
-    .line 782
     # invokes: Landroid/text/DynamicLayout;->reflow(Ljava/lang/CharSequence;III)V
     invoke-static {v0, p1, p2, p3, p4}, Landroid/text/DynamicLayout;->access$000(Landroid/text/DynamicLayout;Ljava/lang/CharSequence;III)V
 
-    .line 785
     .end local p1    # "s":Ljava/lang/CharSequence;
     :cond_0
     :goto_0
     return-void
 
-    .line 783
     .restart local p1    # "s":Ljava/lang/CharSequence;
     :cond_1
     instance-of v1, p1, Landroid/text/Spannable;
 
     if-eqz v1, :cond_0
 
-    .line 784
     check-cast p1, Landroid/text/Spannable;
 
     .end local p1    # "s":Ljava/lang/CharSequence;
@@ -105,7 +96,6 @@
     .param p1, "s"    # Landroid/text/Editable;
 
     .prologue
-    .line 797
     return-void
 .end method
 
@@ -117,7 +107,6 @@
     .param p4, "after"    # I
 
     .prologue
-    .line 789
     return-void
 .end method
 
@@ -129,19 +118,16 @@
     .param p4, "end"    # I
 
     .prologue
-    .line 800
     instance-of v0, p2, Landroid/text/style/UpdateLayout;
 
     if-eqz v0, :cond_0
 
-    .line 801
     sub-int v0, p4, p3
 
     sub-int v1, p4, p3
 
     invoke-direct {p0, p1, p3, v0, v1}, Landroid/text/DynamicLayout$ChangeWatcher;->reflow(Ljava/lang/CharSequence;III)V
 
-    .line 802
     :cond_0
     return-void
 .end method
@@ -156,26 +142,22 @@
     .param p6, "nend"    # I
 
     .prologue
-    .line 810
     instance-of v0, p2, Landroid/text/style/UpdateLayout;
 
     if-eqz v0, :cond_0
 
-    .line 811
     sub-int v0, p4, p3
 
     sub-int v1, p4, p3
 
     invoke-direct {p0, p1, p3, v0, v1}, Landroid/text/DynamicLayout$ChangeWatcher;->reflow(Ljava/lang/CharSequence;III)V
 
-    .line 812
     sub-int v0, p6, p5
 
     sub-int v1, p6, p5
 
     invoke-direct {p0, p1, p5, v0, v1}, Landroid/text/DynamicLayout$ChangeWatcher;->reflow(Ljava/lang/CharSequence;III)V
 
-    .line 814
     :cond_0
     return-void
 .end method
@@ -188,19 +170,16 @@
     .param p4, "end"    # I
 
     .prologue
-    .line 805
     instance-of v0, p2, Landroid/text/style/UpdateLayout;
 
     if-eqz v0, :cond_0
 
-    .line 806
     sub-int v0, p4, p3
 
     sub-int v1, p4, p3
 
     invoke-direct {p0, p1, p3, v0, v1}, Landroid/text/DynamicLayout$ChangeWatcher;->reflow(Ljava/lang/CharSequence;III)V
 
-    .line 807
     :cond_0
     return-void
 .end method
@@ -213,9 +192,7 @@
     .param p4, "after"    # I
 
     .prologue
-    .line 792
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/text/DynamicLayout$ChangeWatcher;->reflow(Ljava/lang/CharSequence;III)V
 
-    .line 793
     return-void
 .end method

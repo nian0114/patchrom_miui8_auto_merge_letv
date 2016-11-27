@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 49
     iput-object p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialHeader$2;->this$0:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialHeader;
 
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHook;-><init>()V
@@ -37,7 +36,6 @@
     .locals 2
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialHeader$2;->this$0:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialHeader;
 
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialHeader$2;->this$0:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialHeader;
@@ -49,6 +47,5 @@
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialHeader;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 53
     return-void
 .end method

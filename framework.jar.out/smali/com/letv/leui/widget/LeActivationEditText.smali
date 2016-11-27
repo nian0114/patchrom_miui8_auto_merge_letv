@@ -98,12 +98,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 67
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/letv/leui/widget/LeActivationEditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 68
     return-void
 .end method
 
@@ -113,12 +111,10 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 71
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/letv/leui/widget/LeActivationEditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 72
     return-void
 .end method
 
@@ -139,48 +135,37 @@
 
     const/4 v6, 0x0
 
-    .line 75
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 53
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mEditTextCache:Ljava/util/ArrayList;
 
-    .line 54
     iput v9, p0, Lcom/letv/leui/widget/LeActivationEditText;->mCacheThreshold:I
 
-    .line 57
     iput v5, p0, Lcom/letv/leui/widget/LeActivationEditText;->mAvaliableInputWidth:I
 
-    .line 59
     iput v5, p0, Lcom/letv/leui/widget/LeActivationEditText;->imeOptions:I
 
-    .line 60
     iput v5, p0, Lcom/letv/leui/widget/LeActivationEditText;->inputType:I
 
-    .line 61
     iput-boolean v6, p0, Lcom/letv/leui/widget/LeActivationEditText;->mIsTextClearing:Z
 
-    .line 63
     new-instance v4, Ljava/lang/StringBuffer;
 
     invoke-direct {v4}, Ljava/lang/StringBuffer;-><init>()V
 
     iput-object v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mInputBuffer:Ljava/lang/StringBuffer;
 
-    .line 78
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    .line 80
     .local v3, "res":Landroid/content/res/Resources;
     iput v5, p0, Lcom/letv/leui/widget/LeActivationEditText;->mPerInputWidth:I
 
-    .line 81
     const v4, 0x1040620
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -189,7 +174,6 @@
 
     iput-object v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mTitleText:Ljava/lang/CharSequence;
 
-    .line 82
     const v4, 0x10501a3
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -198,7 +182,6 @@
 
     iput v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mInputMargin:I
 
-    .line 84
     const v4, 0x10501a7
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -207,7 +190,6 @@
 
     iput v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mInputInnerMargin:I
 
-    .line 86
     const v4, 0x10501a4
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -216,7 +198,6 @@
 
     iput v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mInputTextPaddingBottom:I
 
-    .line 88
     const v4, 0x10e00d0
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getInteger(I)I
@@ -225,7 +206,6 @@
 
     iput v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mActivationTextLength:I
 
-    .line 90
     const v4, 0x1060120
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getColor(I)I
@@ -234,7 +214,6 @@
 
     iput v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mTitleTextColor:I
 
-    .line 91
     const v4, 0x10501a5
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -243,7 +222,6 @@
 
     iput v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mTitleTextSize:I
 
-    .line 92
     const v4, 0x1060121
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getColor(I)I
@@ -252,7 +230,6 @@
 
     iput v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mInputTextColor:I
 
-    .line 93
     const v4, 0x10501a6
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -261,19 +238,16 @@
 
     iput v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mInputTextSize:I
 
-    .line 94
     const v4, 0x10804ed
 
     iput v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mWordsBgResId:I
 
-    .line 95
     const v4, 0x1080525
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
-    .line 97
     .local v2, "imageClearSrc":Landroid/graphics/drawable/Drawable;
     sget-object v4, Lcom/android/internal/R$styleable;->LeActivationEditText:[I
 
@@ -281,7 +255,6 @@
 
     move-result-object v0
 
-    .line 100
     .local v0, "a":Landroid/content/res/TypedArray;
     const/16 v4, 0x8
 
@@ -291,7 +264,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 101
     const/16 v4, 0x8
 
     invoke-virtual {v0, v4}, Landroid/content/res/TypedArray;->getText(I)Ljava/lang/CharSequence;
@@ -300,7 +272,6 @@
 
     iput-object v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mTitleText:Ljava/lang/CharSequence;
 
-    .line 104
     :cond_0
     const/16 v4, 0xa
 
@@ -312,7 +283,6 @@
 
     iput v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mTitleTextColor:I
 
-    .line 106
     const/16 v4, 0x9
 
     iget v5, p0, Lcom/letv/leui/widget/LeActivationEditText;->mTitleTextSize:I
@@ -323,7 +293,6 @@
 
     iput v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mTitleTextSize:I
 
-    .line 108
     const/16 v4, 0xb
 
     iget v5, p0, Lcom/letv/leui/widget/LeActivationEditText;->mInputTextSize:I
@@ -334,7 +303,6 @@
 
     iput v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mInputTextSize:I
 
-    .line 110
     const/16 v4, 0xc
 
     iget v5, p0, Lcom/letv/leui/widget/LeActivationEditText;->mInputTextColor:I
@@ -345,7 +313,6 @@
 
     iput v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mInputTextColor:I
 
-    .line 112
     const/4 v4, 0x3
 
     iget v5, p0, Lcom/letv/leui/widget/LeActivationEditText;->mInputMargin:I
@@ -356,7 +323,6 @@
 
     iput v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mInputMargin:I
 
-    .line 114
     iget v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mInputInnerMargin:I
 
     invoke-virtual {v0, v8, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
@@ -365,7 +331,6 @@
 
     iput v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mInputInnerMargin:I
 
-    .line 116
     const/4 v4, 0x5
 
     iget v5, p0, Lcom/letv/leui/widget/LeActivationEditText;->mInputTextPaddingBottom:I
@@ -376,7 +341,6 @@
 
     iput v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mInputTextPaddingBottom:I
 
-    .line 119
     const/4 v4, 0x7
 
     iget v5, p0, Lcom/letv/leui/widget/LeActivationEditText;->mPerInputWidth:I
@@ -387,7 +351,6 @@
 
     iput v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mPerInputWidth:I
 
-    .line 123
     iget v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mActivationTextLength:I
 
     invoke-virtual {v0, v9, v4}, Landroid/content/res/TypedArray;->getInteger(II)I
@@ -396,7 +359,6 @@
 
     iput v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mActivationTextLength:I
 
-    .line 126
     const/16 v4, 0xe
 
     invoke-virtual {v0, v4}, Landroid/content/res/TypedArray;->hasValue(I)Z
@@ -405,14 +367,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 127
     const/16 v4, 0xe
 
     invoke-virtual {v0, v4}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
-    .line 130
     :cond_1
     const/4 v4, 0x2
 
@@ -422,7 +382,6 @@
 
     iput-object v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mFontFamily:Ljava/lang/String;
 
-    .line 131
     const/16 v4, 0xd
 
     iget v5, p0, Lcom/letv/leui/widget/LeActivationEditText;->mWordsBgResId:I
@@ -433,7 +392,6 @@
 
     iput v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mWordsBgResId:I
 
-    .line 133
     const/4 v4, 0x1
 
     iget v5, p0, Lcom/letv/leui/widget/LeActivationEditText;->imeOptions:I
@@ -444,7 +402,6 @@
 
     iput v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->imeOptions:I
 
-    .line 134
     iget v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->inputType:I
 
     invoke-virtual {v0, v6, v4}, Landroid/content/res/TypedArray;->getInt(II)I
@@ -453,18 +410,14 @@
 
     iput v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->inputType:I
 
-    .line 135
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 137
     invoke-virtual {p0, v6}, Lcom/letv/leui/widget/LeActivationEditText;->setOrientation(I)V
 
-    .line 138
     new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
 
     invoke-direct {v1, v7, v7}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    .line 140
     .local v1, "editTextParams":Landroid/widget/LinearLayout$LayoutParams;
     new-instance v4, Landroid/widget/TextView;
 
@@ -472,19 +425,16 @@
 
     iput-object v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mTitleTextView:Landroid/widget/TextView;
 
-    .line 141
     iget-object v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mTitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v4, v1}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 142
     iget-object v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mTitleTextView:Landroid/widget/TextView;
 
     iget v5, p0, Lcom/letv/leui/widget/LeActivationEditText;->mTitleTextColor:I
 
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 143
     iget-object v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mTitleTextView:Landroid/widget/TextView;
 
     iget v5, p0, Lcom/letv/leui/widget/LeActivationEditText;->mTitleTextSize:I
@@ -493,31 +443,26 @@
 
     invoke-virtual {v4, v6, v5}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 144
     iget-object v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mTitleTextView:Landroid/widget/TextView;
 
     iget-object v5, p0, Lcom/letv/leui/widget/LeActivationEditText;->mTitleText:Ljava/lang/CharSequence;
 
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 145
     iget-object v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mTitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {p0, v4}, Lcom/letv/leui/widget/LeActivationEditText;->addView(Landroid/view/View;)V
 
-    .line 147
     new-instance v4, Landroid/widget/ImageView;
 
     invoke-direct {v4, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     iput-object v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mBtnClear:Landroid/widget/ImageView;
 
-    .line 148
     iget-object v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mBtnClear:Landroid/widget/ImageView;
 
     invoke-virtual {v4, v8}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 149
     iget-object v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mBtnClear:Landroid/widget/ImageView;
 
     new-instance v5, Landroid/widget/LinearLayout$LayoutParams;
@@ -526,24 +471,20 @@
 
     invoke-virtual {v4, v5}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 151
     iget-object v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mBtnClear:Landroid/widget/ImageView;
 
     invoke-virtual {v4, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 152
     invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v4
 
     iput v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mBtnClearMeasureWidth:I
 
-    .line 153
     iget-object v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mBtnClear:Landroid/widget/ImageView;
 
     invoke-virtual {v4, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 155
     iget-object v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mFontFamily:Ljava/lang/String;
 
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -552,7 +493,6 @@
 
     if-nez v4, :cond_2
 
-    .line 156
     iget-object v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mFontFamily:Ljava/lang/String;
 
     invoke-static {v4, v6}, Landroid/graphics/Typeface;->create(Ljava/lang/String;I)Landroid/graphics/Typeface;
@@ -561,7 +501,6 @@
 
     iput-object v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mTextTypeFace:Landroid/graphics/Typeface;
 
-    .line 159
     :cond_2
     return-void
 .end method
@@ -571,7 +510,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LeActivationEditText;
 
     .prologue
-    .line 29
     iget v0, p0, Lcom/letv/leui/widget/LeActivationEditText;->mCurrentEditTextId:I
 
     return v0
@@ -582,7 +520,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LeActivationEditText;
 
     .prologue
-    .line 29
     iget-object v0, p0, Lcom/letv/leui/widget/LeActivationEditText;->mBtnClear:Landroid/widget/ImageView;
 
     return-object v0
@@ -593,7 +530,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LeActivationEditText;
 
     .prologue
-    .line 29
     iget-object v0, p0, Lcom/letv/leui/widget/LeActivationEditText;->mInputBuffer:Ljava/lang/StringBuffer;
 
     return-object v0
@@ -604,7 +540,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LeActivationEditText;
 
     .prologue
-    .line 29
     iget v0, p0, Lcom/letv/leui/widget/LeActivationEditText;->mActivationTextLength:I
 
     return v0
@@ -617,7 +552,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 29
     invoke-direct {p0, p1, p2}, Lcom/letv/leui/widget/LeActivationEditText;->moveInputFocus(Ljava/lang/CharSequence;I)V
 
     return-void
@@ -628,7 +562,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LeActivationEditText;
 
     .prologue
-    .line 29
     iget-object v0, p0, Lcom/letv/leui/widget/LeActivationEditText;->mTextChangeListener:Lcom/letv/leui/widget/LeActivationEditText$OnTextChangeListener;
 
     return-object v0
@@ -639,7 +572,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LeActivationEditText;
 
     .prologue
-    .line 29
     iget-boolean v0, p0, Lcom/letv/leui/widget/LeActivationEditText;->mIsTextClearing:Z
 
     return v0
@@ -650,7 +582,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 310
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -659,13 +590,11 @@
 
     move-result-object v0
 
-    .line 311
     .local v0, "view":Landroid/view/View;
     instance-of v1, v0, Lcom/letv/leui/widget/LeActivationEditText$SingleEditText;
 
     if-eqz v1, :cond_1
 
-    .line 312
     iget-object v1, p0, Lcom/letv/leui/widget/LeActivationEditText;->mInputBuffer:Ljava/lang/StringBuffer;
 
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->length()I
@@ -674,12 +603,10 @@
 
     if-le v1, p1, :cond_0
 
-    .line 313
     iget-object v1, p0, Lcom/letv/leui/widget/LeActivationEditText;->mInputBuffer:Ljava/lang/StringBuffer;
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuffer;->deleteCharAt(I)Ljava/lang/StringBuffer;
 
-    .line 315
     :cond_0
     check-cast v0, Lcom/letv/leui/widget/LeActivationEditText$SingleEditText;
 
@@ -688,7 +615,6 @@
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/widget/LeActivationEditText$SingleEditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 317
     :cond_1
     return-void
 .end method
@@ -703,10 +629,8 @@
 
     const/4 v4, 0x0
 
-    .line 239
     const/4 v1, 0x0
 
-    .line 241
     .local v1, "editText":Landroid/widget/EditText;
     iget-object v2, p0, Lcom/letv/leui/widget/LeActivationEditText;->mEditTextCache:Ljava/util/ArrayList;
 
@@ -714,11 +638,9 @@
 
     move-result v0
 
-    .line 242
     .local v0, "cacheSize":I
     if-lez v0, :cond_0
 
-    .line 243
     iget-object v2, p0, Lcom/letv/leui/widget/LeActivationEditText;->mEditTextCache:Ljava/util/ArrayList;
 
     add-int/lit8 v3, v0, -0x1
@@ -736,12 +658,10 @@
     .end local v1    # "editText":Landroid/widget/EditText;
     check-cast v1, Landroid/widget/EditText;
 
-    .line 246
     .restart local v1    # "editText":Landroid/widget/EditText;
     :cond_0
     if-nez v1, :cond_3
 
-    .line 247
     new-instance v1, Lcom/letv/leui/widget/LeActivationEditText$SingleEditText;
 
     .end local v1    # "editText":Landroid/widget/EditText;
@@ -751,7 +671,6 @@
 
     invoke-direct {v1, p0, v2}, Lcom/letv/leui/widget/LeActivationEditText$SingleEditText;-><init>(Lcom/letv/leui/widget/LeActivationEditText;Landroid/content/Context;)V
 
-    .line 248
     .restart local v1    # "editText":Landroid/widget/EditText;
     iget v2, p0, Lcom/letv/leui/widget/LeActivationEditText;->mInputTextSize:I
 
@@ -759,25 +678,20 @@
 
     invoke-virtual {v1, v4, v2}, Landroid/widget/EditText;->setTextSize(IF)V
 
-    .line 249
     iget v2, p0, Lcom/letv/leui/widget/LeActivationEditText;->mInputTextColor:I
 
     invoke-virtual {v1, v2}, Landroid/widget/EditText;->setTextColor(I)V
 
-    .line 250
     iget v2, p0, Lcom/letv/leui/widget/LeActivationEditText;->mWordsBgResId:I
 
     invoke-virtual {v1, v2}, Landroid/widget/EditText;->setBackgroundResource(I)V
 
-    .line 251
     invoke-virtual {v1}, Landroid/widget/EditText;->setSingleLine()V
 
-    .line 252
     const/16 v2, 0x11
 
     invoke-virtual {v1, v2}, Landroid/widget/EditText;->setGravity(I)V
 
-    .line 253
     new-array v2, v6, [Landroid/text/InputFilter;
 
     new-instance v3, Landroid/text/InputFilter$LengthFilter;
@@ -788,48 +702,39 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/EditText;->setFilters([Landroid/text/InputFilter;)V
 
-    .line 254
     invoke-virtual {v1, v4}, Landroid/widget/EditText;->setIncludeFontPadding(Z)V
 
-    .line 256
     iget v2, p0, Lcom/letv/leui/widget/LeActivationEditText;->imeOptions:I
 
     if-eq v2, v5, :cond_1
 
-    .line 257
     iget v2, p0, Lcom/letv/leui/widget/LeActivationEditText;->imeOptions:I
 
     invoke-virtual {v1, v2}, Landroid/widget/EditText;->setImeOptions(I)V
 
-    .line 260
     :cond_1
     iget v2, p0, Lcom/letv/leui/widget/LeActivationEditText;->inputType:I
 
     if-eq v2, v5, :cond_2
 
-    .line 261
     iget v2, p0, Lcom/letv/leui/widget/LeActivationEditText;->inputType:I
 
     invoke-virtual {v1, v2}, Landroid/widget/EditText;->setInputType(I)V
 
-    .line 264
     :cond_2
     iget-object v2, p0, Lcom/letv/leui/widget/LeActivationEditText;->mTextTypeFace:Landroid/graphics/Typeface;
 
     if-eqz v2, :cond_3
 
-    .line 265
     iget-object v2, p0, Lcom/letv/leui/widget/LeActivationEditText;->mTextTypeFace:Landroid/graphics/Typeface;
 
     invoke-virtual {v1, v2}, Landroid/widget/EditText;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 268
     :cond_3
     const-string v2, ""
 
     invoke-virtual {v1, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 269
     return-object v1
 .end method
 
@@ -839,19 +744,16 @@
     .param p2, "type"    # I
 
     .prologue
-    .line 294
     const/4 v1, 0x1
 
     if-ne p2, v1, :cond_3
 
-    .line 295
     iget v1, p0, Lcom/letv/leui/widget/LeActivationEditText;->mCurrentEditTextId:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Lcom/letv/leui/widget/LeActivationEditText;->mCurrentEditTextId:I
 
-    .line 299
     :cond_0
     :goto_0
     iget v1, p0, Lcom/letv/leui/widget/LeActivationEditText;->mCurrentEditTextId:I
@@ -864,34 +766,27 @@
 
     move-result-object v0
 
-    .line 300
     .local v0, "view":Landroid/view/View;
     if-eqz v0, :cond_2
 
-    .line 301
     const/4 v1, -0x1
 
     if-ne p2, v1, :cond_1
 
-    .line 302
     iget v1, p0, Lcom/letv/leui/widget/LeActivationEditText;->mCurrentEditTextId:I
 
     invoke-direct {p0, v1}, Lcom/letv/leui/widget/LeActivationEditText;->clearTextAtIndex(I)V
 
-    .line 304
     :cond_1
     invoke-virtual {v0}, Landroid/view/View;->requestFocus()Z
 
-    .line 307
     :cond_2
     return-void
 
-    .line 296
     .end local v0    # "view":Landroid/view/View;
     :cond_3
     if-gez p2, :cond_0
 
-    .line 297
     iget v1, p0, Lcom/letv/leui/widget/LeActivationEditText;->mCurrentEditTextId:I
 
     add-int/lit8 v1, v1, -0x1
@@ -906,7 +801,6 @@
     .param p1, "editText"    # Landroid/widget/EditText;
 
     .prologue
-    .line 273
     iget-object v0, p0, Lcom/letv/leui/widget/LeActivationEditText;->mEditTextCache:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -917,7 +811,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 274
     iget-object v0, p0, Lcom/letv/leui/widget/LeActivationEditText;->mEditTextCache:Ljava/util/ArrayList;
 
     new-instance v1, Ljava/lang/ref/WeakReference;
@@ -926,7 +819,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 276
     :cond_0
     return-void
 .end method
@@ -935,16 +827,13 @@
     .locals 4
 
     .prologue
-    .line 279
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeActivationEditText;->getChildCount()I
 
     move-result v1
 
-    .line 281
     .local v1, "size":I
     const/4 v2, 0x0
 
-    .line 282
     .local v2, "view":Landroid/view/View;
     add-int/lit8 v0, v1, -0x1
 
@@ -952,45 +841,37 @@
     :goto_0
     if-ltz v0, :cond_2
 
-    .line 283
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/LeActivationEditText;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 284
     instance-of v3, v2, Landroid/widget/EditText;
 
     if-eqz v3, :cond_1
 
     move-object v3, v2
 
-    .line 285
     check-cast v3, Landroid/widget/EditText;
 
     invoke-direct {p0, v3}, Lcom/letv/leui/widget/LeActivationEditText;->recycle(Landroid/widget/EditText;)V
 
-    .line 286
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/LeActivationEditText;->removeViewAt(I)V
 
-    .line 282
     :cond_0
     :goto_1
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 287
     :cond_1
     instance-of v3, v2, Landroid/widget/ImageView;
 
     if-eqz v3, :cond_0
 
-    .line 288
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/LeActivationEditText;->removeViewAt(I)V
 
     goto :goto_1
 
-    .line 291
     :cond_2
     return-void
 .end method
@@ -1003,59 +884,48 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 327
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/letv/leui/widget/LeActivationEditText;->mIsTextClearing:Z
 
-    .line 328
     iget v0, p0, Lcom/letv/leui/widget/LeActivationEditText;->mCurrentEditTextId:I
 
     .local v0, "i":I
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 329
     invoke-direct {p0, v0}, Lcom/letv/leui/widget/LeActivationEditText;->clearTextAtIndex(I)V
 
-    .line 328
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 331
     :cond_0
     iput v3, p0, Lcom/letv/leui/widget/LeActivationEditText;->mCurrentEditTextId:I
 
-    .line 332
     const-string v1, ""
 
     invoke-direct {p0, v1, v3}, Lcom/letv/leui/widget/LeActivationEditText;->moveInputFocus(Ljava/lang/CharSequence;I)V
 
-    .line 333
     iget-object v1, p0, Lcom/letv/leui/widget/LeActivationEditText;->mBtnClear:Landroid/widget/ImageView;
 
     const/4 v2, 0x4
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 334
     iget-object v1, p0, Lcom/letv/leui/widget/LeActivationEditText;->mTextChangeListener:Lcom/letv/leui/widget/LeActivationEditText$OnTextChangeListener;
 
     if-eqz v1, :cond_1
 
-    .line 335
     iget-object v1, p0, Lcom/letv/leui/widget/LeActivationEditText;->mTextChangeListener:Lcom/letv/leui/widget/LeActivationEditText$OnTextChangeListener;
 
     const-string v2, ""
 
     invoke-interface {v1, v2}, Lcom/letv/leui/widget/LeActivationEditText$OnTextChangeListener;->onTextChange(Ljava/lang/String;)V
 
-    .line 337
     :cond_1
     iput-boolean v3, p0, Lcom/letv/leui/widget/LeActivationEditText;->mIsTextClearing:Z
 
-    .line 338
     return-void
 .end method
 
@@ -1063,7 +933,6 @@
     .locals 1
 
     .prologue
-    .line 223
     iget-object v0, p0, Lcom/letv/leui/widget/LeActivationEditText;->mInputBuffer:Ljava/lang/StringBuffer;
 
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
@@ -1078,15 +947,12 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 321
     iget-object v0, p0, Lcom/letv/leui/widget/LeActivationEditText;->mBtnClear:Landroid/widget/ImageView;
 
     if-ne p1, v0, :cond_0
 
-    .line 322
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeActivationEditText;->clearAllText()V
 
-    .line 324
     :cond_0
     return-void
 .end method
@@ -1097,38 +963,32 @@
     .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    .line 163
     invoke-super {p0, p1, p2}, Landroid/widget/LinearLayout;->onMeasure(II)V
 
-    .line 165
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeActivationEditText;->getMeasuredWidth()I
 
     move-result v1
 
     iput v1, p0, Lcom/letv/leui/widget/LeActivationEditText;->mMeasureWidth:I
 
-    .line 166
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeActivationEditText;->getMeasuredHeight()I
 
     move-result v1
 
     iput v1, p0, Lcom/letv/leui/widget/LeActivationEditText;->mMeasureHeight:I
 
-    .line 168
     iget v1, p0, Lcom/letv/leui/widget/LeActivationEditText;->mAvaliableInputWidth:I
 
     const/4 v2, -0x1
 
     if-ne v1, v2, :cond_0
 
-    .line 169
     iget-object v1, p0, Lcom/letv/leui/widget/LeActivationEditText;->mTitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getMeasuredWidth()I
 
     move-result v0
 
-    .line 170
     .local v0, "titleTextWidth":I
     iget v1, p0, Lcom/letv/leui/widget/LeActivationEditText;->mMeasureWidth:I
 
@@ -1140,12 +1000,10 @@
 
     iput v1, p0, Lcom/letv/leui/widget/LeActivationEditText;->mAvaliableInputWidth:I
 
-    .line 171
     iget v1, p0, Lcom/letv/leui/widget/LeActivationEditText;->mActivationTextLength:I
 
     invoke-virtual {p0, v1}, Lcom/letv/leui/widget/LeActivationEditText;->setActivitionTextLength(I)V
 
-    .line 174
     .end local v0    # "titleTextWidth":I
     :cond_0
     iget v1, p0, Lcom/letv/leui/widget/LeActivationEditText;->mMeasureWidth:I
@@ -1158,7 +1016,6 @@
 
     invoke-virtual {p0, v1, v2}, Lcom/letv/leui/widget/LeActivationEditText;->setMeasuredDimension(II)V
 
-    .line 175
     return-void
 .end method
 
@@ -1169,7 +1026,6 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 183
     iget v5, p0, Lcom/letv/leui/widget/LeActivationEditText;->mAvaliableInputWidth:I
 
     iget v6, p0, Lcom/letv/leui/widget/LeActivationEditText;->mInputMargin:I
@@ -1178,7 +1034,6 @@
 
     sub-int v0, v5, v6
 
-    .line 184
     .local v0, "avaliableInputWidth":I
     iget v5, p0, Lcom/letv/leui/widget/LeActivationEditText;->mPerInputWidth:I
 
@@ -1188,46 +1043,38 @@
 
     iget v4, p0, Lcom/letv/leui/widget/LeActivationEditText;->mPerInputWidth:I
 
-    .line 187
     .local v4, "perTextWidth":I
     :goto_0
     const/4 v1, 0x0
 
-    .line 188
     .local v1, "editText":Landroid/widget/EditText;
     invoke-direct {p0}, Lcom/letv/leui/widget/LeActivationEditText;->removeAllEditTextViews()V
 
-    .line 189
     const/4 v2, 0x0
 
     .local v2, "i":I
     :goto_1
     if-ge v2, p1, :cond_4
 
-    .line 191
     invoke-direct {p0}, Lcom/letv/leui/widget/LeActivationEditText;->getCacheEditText()Landroid/widget/EditText;
 
     move-result-object v1
 
-    .line 192
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
     invoke-virtual {v1, v5}, Landroid/widget/EditText;->setTag(Ljava/lang/Object;)V
 
-    .line 193
     invoke-virtual {v1}, Landroid/widget/EditText;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v3
 
     check-cast v3, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 194
     .local v3, "params":Landroid/widget/LinearLayout$LayoutParams;
     if-nez v3, :cond_0
 
-    .line 195
     new-instance v3, Landroid/widget/LinearLayout$LayoutParams;
 
     .end local v3    # "params":Landroid/widget/LinearLayout$LayoutParams;
@@ -1235,45 +1082,36 @@
 
     invoke-direct {v3, v4, v5}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    .line 196
     .restart local v3    # "params":Landroid/widget/LinearLayout$LayoutParams;
     invoke-virtual {v1, v3}, Landroid/widget/EditText;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 199
     :cond_0
     if-nez v2, :cond_2
 
-    .line 200
     iget v5, p0, Lcom/letv/leui/widget/LeActivationEditText;->mInputMargin:I
 
     iput v5, v3, Landroid/widget/LinearLayout$LayoutParams;->leftMargin:I
 
-    .line 205
     :goto_2
     add-int/lit8 v5, p1, -0x1
 
     if-ne v2, v5, :cond_3
 
-    .line 206
     iget v5, p0, Lcom/letv/leui/widget/LeActivationEditText;->mInputMargin:I
 
     iput v5, v3, Landroid/widget/LinearLayout$LayoutParams;->rightMargin:I
 
-    .line 211
     :goto_3
     iget v5, p0, Lcom/letv/leui/widget/LeActivationEditText;->mInputTextPaddingBottom:I
 
     invoke-virtual {v1, v7, v7, v7, v5}, Landroid/widget/EditText;->setPadding(IIII)V
 
-    .line 213
     invoke-virtual {p0, v1}, Lcom/letv/leui/widget/LeActivationEditText;->addView(Landroid/view/View;)V
 
-    .line 189
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 184
     .end local v1    # "editText":Landroid/widget/EditText;
     .end local v2    # "i":I
     .end local v3    # "params":Landroid/widget/LinearLayout$LayoutParams;
@@ -1291,7 +1129,6 @@
 
     goto :goto_0
 
-    .line 202
     .restart local v1    # "editText":Landroid/widget/EditText;
     .restart local v2    # "i":I
     .restart local v3    # "params":Landroid/widget/LinearLayout$LayoutParams;
@@ -1303,21 +1140,17 @@
 
     goto :goto_2
 
-    .line 208
     :cond_3
     iput v7, v3, Landroid/widget/LinearLayout$LayoutParams;->rightMargin:I
 
     goto :goto_3
 
-    .line 215
     .end local v3    # "params":Landroid/widget/LinearLayout$LayoutParams;
     :cond_4
     if-lez p1, :cond_5
 
-    .line 216
     iput v7, p0, Lcom/letv/leui/widget/LeActivationEditText;->mCurrentEditTextId:I
 
-    .line 218
     :cond_5
     iget-object v5, p0, Lcom/letv/leui/widget/LeActivationEditText;->mInputBuffer:Ljava/lang/StringBuffer;
 
@@ -1329,12 +1162,10 @@
 
     invoke-virtual {v5, v7, v6}, Ljava/lang/StringBuffer;->delete(II)Ljava/lang/StringBuffer;
 
-    .line 219
     iget-object v5, p0, Lcom/letv/leui/widget/LeActivationEditText;->mBtnClear:Landroid/widget/ImageView;
 
     invoke-virtual {p0, v5}, Lcom/letv/leui/widget/LeActivationEditText;->addView(Landroid/view/View;)V
 
-    .line 220
     return-void
 .end method
 
@@ -1343,10 +1174,8 @@
     .param p1, "listener"    # Lcom/letv/leui/widget/LeActivationEditText$OnTextChangeListener;
 
     .prologue
-    .line 178
     iput-object p1, p0, Lcom/letv/leui/widget/LeActivationEditText;->mTextChangeListener:Lcom/letv/leui/widget/LeActivationEditText$OnTextChangeListener;
 
-    .line 179
     return-void
 .end method
 
@@ -1355,15 +1184,12 @@
     .param p1, "text"    # Ljava/lang/String;
 
     .prologue
-    .line 228
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeActivationEditText;->clearAllText()V
 
-    .line 229
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v1
 
-    .line 230
     .local v1, "length":I
     const/4 v0, 0x0
 
@@ -1371,7 +1197,6 @@
     :goto_0
     if-ge v0, v1, :cond_1
 
-    .line 231
     iget v3, p0, Lcom/letv/leui/widget/LeActivationEditText;->mCurrentEditTextId:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1382,13 +1207,11 @@
 
     move-result-object v2
 
-    .line 232
     .local v2, "view":Landroid/view/View;
     instance-of v3, v2, Lcom/letv/leui/widget/LeActivationEditText$SingleEditText;
 
     if-eqz v3, :cond_0
 
-    .line 233
     check-cast v2, Lcom/letv/leui/widget/LeActivationEditText$SingleEditText;
 
     .end local v2    # "view":Landroid/view/View;
@@ -1400,13 +1223,11 @@
 
     invoke-virtual {v2, v3}, Lcom/letv/leui/widget/LeActivationEditText$SingleEditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 230
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 236
     :cond_1
     return-void
 .end method

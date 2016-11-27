@@ -65,12 +65,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 42
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/letv/leui/widget/ScreenRecordingView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 43
     return-void
 .end method
 
@@ -80,12 +78,10 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 38
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/letv/leui/widget/ScreenRecordingView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 39
     return-void
 .end method
 
@@ -98,83 +94,68 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 20
     invoke-direct {p0, p1, p2, p3}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 47
     const/16 v0, 0x64
 
     iput v0, p0, Lcom/letv/leui/widget/ScreenRecordingView;->maxDbNum:I
 
-    .line 49
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/letv/leui/widget/ScreenRecordingView;->recordTimeMillis:J
 
-    .line 55
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/ScreenRecordingView;->holders:Ljava/util/List;
 
-    .line 57
     new-instance v0, Landroid/graphics/PointF;
 
     invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/ScreenRecordingView;->curPoint:Landroid/graphics/PointF;
 
-    .line 60
     iput v2, p0, Lcom/letv/leui/widget/ScreenRecordingView;->activeDotColor:I
 
-    .line 66
     iput v2, p0, Lcom/letv/leui/widget/ScreenRecordingView;->waveCount:I
 
-    .line 98
     iput v2, p0, Lcom/letv/leui/widget/ScreenRecordingView;->waveIndex:I
 
-    .line 22
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/letv/leui/widget/ScreenRecordingView;->activeDotColor:I
 
-    .line 23
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/ScreenRecordingView;->bgLinePaint:Landroid/graphics/Paint;
 
-    .line 24
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/ScreenRecordingView;->activeLinePaint:Landroid/graphics/Paint;
 
-    .line 26
     iget-object v0, p0, Lcom/letv/leui/widget/ScreenRecordingView;->bgLinePaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
 
-    .line 27
     iget-object v0, p0, Lcom/letv/leui/widget/ScreenRecordingView;->bgLinePaint:Landroid/graphics/Paint;
 
     const/high16 v1, 0x40800000    # 4.0f
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 28
     iget-object v0, p0, Lcom/letv/leui/widget/ScreenRecordingView;->bgLinePaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/letv/leui/widget/ScreenRecordingView;->bgColor:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 29
     iget-object v0, p0, Lcom/letv/leui/widget/ScreenRecordingView;->bgLinePaint:Landroid/graphics/Paint;
 
     new-instance v1, Landroid/graphics/PorterDuffXfermode;
@@ -185,28 +166,24 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    .line 31
     iget-object v0, p0, Lcom/letv/leui/widget/ScreenRecordingView;->activeLinePaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/letv/leui/widget/ScreenRecordingView;->activeDotColor:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 32
     iget-object v0, p0, Lcom/letv/leui/widget/ScreenRecordingView;->activeLinePaint:Landroid/graphics/Paint;
 
     const/high16 v1, 0x40a00000    # 5.0f
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 33
     iget-object v0, p0, Lcom/letv/leui/widget/ScreenRecordingView;->activeLinePaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
 
-    .line 35
     return-void
 .end method
 
@@ -217,24 +194,20 @@
     .param p3, "curMills"    # J
 
     .prologue
-    .line 103
     const-wide/16 v2, 0x0
 
     cmp-long v2, p3, v2
 
     if-gtz v2, :cond_0
 
-    .line 131
     :goto_0
     return-void
 
-    .line 107
     :cond_0
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v11
 
-    .line 109
     .local v11, "saveCount":I
     move-wide/from16 v0, p3
 
@@ -242,7 +215,6 @@
 
     move-result v8
 
-    .line 111
     .local v8, "avgDb":F
     iget v2, p0, Lcom/letv/leui/widget/ScreenRecordingView;->midY:F
 
@@ -262,7 +234,6 @@
 
     add-float v13, v2, v3
 
-    .line 112
     .local v13, "startYDown":F
     iget v2, p0, Lcom/letv/leui/widget/ScreenRecordingView;->midY:F
 
@@ -282,7 +253,6 @@
 
     sub-float v14, v2, v3
 
-    .line 114
     .local v14, "startYUp":F
     iget v2, p0, Lcom/letv/leui/widget/ScreenRecordingView;->midY:F
 
@@ -294,7 +264,6 @@
 
     if-lez v2, :cond_2
 
-    .line 115
     :goto_1
     iget v2, p0, Lcom/letv/leui/widget/ScreenRecordingView;->midY:F
 
@@ -306,7 +275,6 @@
 
     if-gez v2, :cond_3
 
-    .line 116
     :goto_2
     iget-object v2, p0, Lcom/letv/leui/widget/ScreenRecordingView;->activeLinePaint:Landroid/graphics/Paint;
 
@@ -314,7 +282,6 @@
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 118
     sub-float v2, v13, v14
 
     const/high16 v3, 0x41100000    # 9.0f
@@ -329,7 +296,6 @@
 
     double-to-int v9, v2
 
-    .line 120
     .local v9, "count":I
     const/4 v2, 0x1
 
@@ -337,7 +303,6 @@
 
     const/4 v9, 0x1
 
-    .line 122
     :cond_1
     :goto_3
     iget v2, p0, Lcom/letv/leui/widget/ScreenRecordingView;->midY:F
@@ -352,7 +317,6 @@
 
     sub-int v12, v2, v3
 
-    .line 124
     .local v12, "startTempY":I
     const/4 v10, 0x0
 
@@ -360,7 +324,6 @@
     :goto_4
     if-ge v10, v9, :cond_5
 
-    .line 125
     move/from16 v0, p2
 
     int-to-float v3, v0
@@ -381,15 +344,12 @@
 
     invoke-virtual/range {v2 .. v7}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 126
     add-int/lit8 v12, v12, 0x9
 
-    .line 124
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_4
 
-    .line 114
     .end local v9    # "count":I
     .end local v10    # "i":I
     .end local v12    # "startTempY":I
@@ -402,7 +362,6 @@
 
     goto :goto_1
 
-    .line 115
     :cond_3
     iget v2, p0, Lcom/letv/leui/widget/ScreenRecordingView;->midY:F
 
@@ -412,7 +371,6 @@
 
     goto :goto_2
 
-    .line 120
     .restart local v9    # "count":I
     :cond_4
     rem-int/lit8 v2, v9, 0x2
@@ -425,7 +383,6 @@
 
     goto :goto_3
 
-    .line 129
     .restart local v10    # "i":I
     .restart local v12    # "startTempY":I
     :cond_5
@@ -435,7 +392,6 @@
 
     iput v2, p0, Lcom/letv/leui/widget/ScreenRecordingView;->waveIndex:I
 
-    .line 130
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v11}, Landroid/graphics/Canvas;->restoreToCount(I)V
@@ -448,7 +404,6 @@
     .param p1, "lengthPx"    # F
 
     .prologue
-    .line 63
     const/high16 v0, 0x43fa0000    # 500.0f
 
     mul-float/2addr v0, p1
@@ -469,14 +424,11 @@
     .param p1, "curMills"    # J
 
     .prologue
-    .line 135
     const/4 v2, 0x0
 
-    .line 136
     .local v2, "totalDb":F
     const/4 v1, 0x0
 
-    .line 138
     .local v1, "totalCount":I
     iget-object v3, p0, Lcom/letv/leui/widget/ScreenRecordingView;->holders:Ljava/util/List;
 
@@ -490,7 +442,6 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 139
     iget-object v3, p0, Lcom/letv/leui/widget/ScreenRecordingView;->holders:Ljava/util/List;
 
     invoke-interface {v3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -533,7 +484,6 @@
 
     if-ltz v3, :cond_0
 
-    .line 140
     iget-object v3, p0, Lcom/letv/leui/widget/ScreenRecordingView;->holders:Ljava/util/List;
 
     invoke-interface {v3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -546,16 +496,13 @@
 
     add-float/2addr v2, v3
 
-    .line 141
     add-int/lit8 v1, v1, 0x1
 
-    .line 138
     :cond_0
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 145
     :cond_1
     if-nez v1, :cond_2
 
@@ -581,21 +528,18 @@
 
     const/high16 v12, 0x41100000    # 9.0f
 
-    .line 70
     invoke-virtual {p0}, Lcom/letv/leui/widget/ScreenRecordingView;->getWidth()I
 
     move-result v0
 
     iput v0, p0, Lcom/letv/leui/widget/ScreenRecordingView;->width:I
 
-    .line 71
     invoke-virtual {p0}, Lcom/letv/leui/widget/ScreenRecordingView;->getHeight()I
 
     move-result v0
 
     iput v0, p0, Lcom/letv/leui/widget/ScreenRecordingView;->height:I
 
-    .line 73
     iget-wide v0, p0, Lcom/letv/leui/widget/ScreenRecordingView;->recordTimeMillis:J
 
     invoke-direct {p0, v12}, Lcom/letv/leui/widget/ScreenRecordingView;->getTimeMillsByLength(F)I
@@ -626,7 +570,6 @@
 
     iput v0, p0, Lcom/letv/leui/widget/ScreenRecordingView;->waveCount:I
 
-    .line 75
     iget v0, p0, Lcom/letv/leui/widget/ScreenRecordingView;->height:I
 
     shr-int/lit8 v0, v0, 0x1
@@ -635,12 +578,10 @@
 
     iput v0, p0, Lcom/letv/leui/widget/ScreenRecordingView;->midY:F
 
-    .line 77
     iget v0, p0, Lcom/letv/leui/widget/ScreenRecordingView;->bgColor:I
 
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->drawColor(I)V
 
-    .line 79
     iget-wide v0, p0, Lcom/letv/leui/widget/ScreenRecordingView;->recordTimeMillis:J
 
     invoke-direct {p0, v12}, Lcom/letv/leui/widget/ScreenRecordingView;->getTimeMillsByLength(F)I
@@ -653,7 +594,6 @@
 
     long-to-float v7, v0
 
-    .line 80
     .local v7, "dotOffsetTime":F
     invoke-direct {p0, v12}, Lcom/letv/leui/widget/ScreenRecordingView;->getTimeMillsByLength(F)I
 
@@ -665,16 +605,13 @@
 
     mul-float v6, v0, v12
 
-    .line 81
     .local v6, "dotOffest":F
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 82
     neg-float v0, v6
 
     invoke-virtual {p1, v0, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 84
     iget-object v0, p0, Lcom/letv/leui/widget/ScreenRecordingView;->holders:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -685,10 +622,8 @@
 
     iput v0, p0, Lcom/letv/leui/widget/ScreenRecordingView;->waveIndex:I
 
-    .line 85
     const/4 v9, 0x0
 
-    .line 87
     .local v9, "times":I
     iget v0, p0, Lcom/letv/leui/widget/ScreenRecordingView;->width:I
 
@@ -700,7 +635,6 @@
 
     if-lt v8, v0, :cond_0
 
-    .line 88
     int-to-float v1, v8
 
     int-to-float v3, v8
@@ -715,7 +649,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 89
     add-int/lit8 v0, v8, -0x4
 
     iget-wide v4, p0, Lcom/letv/leui/widget/ScreenRecordingView;->recordTimeMillis:J
@@ -742,19 +675,15 @@
 
     invoke-direct {p0, p1, v0, v4, v5}, Lcom/letv/leui/widget/ScreenRecordingView;->drawWaveLine(Landroid/graphics/Canvas;IJ)V
 
-    .line 90
     add-int/lit8 v9, v9, 0x1
 
-    .line 87
     add-int/lit8 v8, v8, -0x9
 
     goto :goto_0
 
-    .line 93
     :cond_0
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 96
     return-void
 .end method
 
@@ -762,7 +691,6 @@
     .locals 0
 
     .prologue
-    .line 154
     return-void
 .end method
 
@@ -770,7 +698,6 @@
     .locals 0
 
     .prologue
-    .line 150
     return-void
 .end method
 
@@ -778,12 +705,10 @@
     .locals 1
 
     .prologue
-    .line 189
     iget-object v0, p0, Lcom/letv/leui/widget/ScreenRecordingView;->holders:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 190
     return-void
 .end method
 
@@ -795,15 +720,12 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 168
     iput-wide p1, p0, Lcom/letv/leui/widget/ScreenRecordingView;->recordTimeMillis:J
 
-    .line 169
     cmpl-float v2, p3, v6
 
     if-lez v2, :cond_1
 
-    .line 171
     iget-object v2, p0, Lcom/letv/leui/widget/ScreenRecordingView;->holders:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
@@ -812,7 +734,6 @@
 
     if-nez v2, :cond_0
 
-    .line 172
     iget-object v2, p0, Lcom/letv/leui/widget/ScreenRecordingView;->holders:Ljava/util/List;
 
     new-instance v3, Lcom/letv/leui/widget/ScreenRecordingView$TimeHolder;
@@ -825,7 +746,6 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 175
     :cond_0
     iget-object v2, p0, Lcom/letv/leui/widget/ScreenRecordingView;->holders:Ljava/util/List;
 
@@ -835,7 +755,6 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 177
     iget-object v2, p0, Lcom/letv/leui/widget/ScreenRecordingView;->holders:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
@@ -846,36 +765,30 @@
 
     sub-int v0, v2, v3
 
-    .line 178
     .local v0, "exrtaNum":I
     if-lez v0, :cond_1
 
-    .line 179
     const/4 v1, 0x0
 
     .local v1, "i":I
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 180
     iget-object v2, p0, Lcom/letv/leui/widget/ScreenRecordingView;->holders:Ljava/util/List;
 
     const/4 v3, 0x0
 
     invoke-interface {v2, v3}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 179
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 185
     .end local v0    # "exrtaNum":I
     .end local v1    # "i":I
     :cond_1
     invoke-virtual {p0}, Lcom/letv/leui/widget/ScreenRecordingView;->invalidate()V
 
-    .line 186
     return-void
 .end method
 
@@ -886,14 +799,12 @@
     .end annotation
 
     .prologue
-    .line 162
     const-string v1, "record_time_key"
 
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
 
     move-result-wide v2
 
-    .line 163
     .local v2, "recordTimeMillis":J
     const-string v1, "record_db_key"
 
@@ -901,10 +812,8 @@
 
     move-result v0
 
-    .line 164
     .local v0, "db":F
     invoke-virtual {p0, v2, v3, v0}, Lcom/letv/leui/widget/ScreenRecordingView;->updateRecordUI(JF)V
 
-    .line 165
     return-void
 .end method

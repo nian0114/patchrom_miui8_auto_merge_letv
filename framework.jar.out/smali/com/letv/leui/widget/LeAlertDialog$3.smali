@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 84
     iput-object p1, p0, Lcom/letv/leui/widget/LeAlertDialog$3;->this$0:Lcom/letv/leui/widget/LeAlertDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 88
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertDialog$3;->this$0:Lcom/letv/leui/widget/LeAlertDialog;
 
     # getter for: Lcom/letv/leui/widget/LeAlertDialog;->negativeListener:Landroid/content/DialogInterface$OnClickListener;
@@ -51,7 +49,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 89
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertDialog$3;->this$0:Lcom/letv/leui/widget/LeAlertDialog;
 
     # getter for: Lcom/letv/leui/widget/LeAlertDialog;->negativeListener:Landroid/content/DialogInterface$OnClickListener;
@@ -65,11 +62,9 @@
 
     invoke-interface {v0, v1, v2}, Landroid/content/DialogInterface$OnClickListener;->onClick(Landroid/content/DialogInterface;I)V
 
-    .line 93
     :goto_0
     return-void
 
-    .line 91
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertDialog$3;->this$0:Lcom/letv/leui/widget/LeAlertDialog;
 

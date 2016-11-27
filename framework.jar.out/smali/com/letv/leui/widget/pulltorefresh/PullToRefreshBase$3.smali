@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1272
     .local p0, "this":Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$3;, "Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase.3;"
     iput-object p1, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$3;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;
 
@@ -41,7 +40,6 @@
     .locals 7
 
     .prologue
-    .line 1276
     .local p0, "this":Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$3;, "Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase.3;"
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$3;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;
 
@@ -56,6 +54,5 @@
     # invokes: Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;->smoothScrollTo(IJJLcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$OnSmoothScrollFinishedListener;)V
     invoke-static/range {v0 .. v6}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;->access$100(Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;IJJLcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$OnSmoothScrollFinishedListener;)V
 
-    .line 1277
     return-void
 .end method

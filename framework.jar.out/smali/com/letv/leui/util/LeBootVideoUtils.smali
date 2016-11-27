@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,14 +21,12 @@
     .locals 2
 
     .prologue
-    .line 13
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/data/fastplay/bootvideo.ts"
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 14
     .local v0, "bootVideoFile":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 

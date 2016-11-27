@@ -37,10 +37,8 @@
     .locals 0
 
     .prologue
-    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 51
     return-void
 .end method
 
@@ -51,18 +49,13 @@
     .param p3, "target"    # Ljava/lang/String;
 
     .prologue
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     iput p1, p0, Lcom/letv/leui/pim/HanziToPinyin$Token;->type:I
 
-    .line 55
     iput-object p2, p0, Lcom/letv/leui/pim/HanziToPinyin$Token;->source:Ljava/lang/String;
 
-    .line 56
     iput-object p3, p0, Lcom/letv/leui/pim/HanziToPinyin$Token;->target:Ljava/lang/String;
 
-    .line 57
     return-void
 .end method

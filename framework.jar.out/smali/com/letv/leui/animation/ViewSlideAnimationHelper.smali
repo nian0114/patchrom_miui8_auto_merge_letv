@@ -22,7 +22,6 @@
     .locals 1
 
     .prologue
-    .line 13
     new-instance v0, Landroid/view/animation/AccelerateDecelerateInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/AccelerateDecelerateInterpolator;-><init>()V
@@ -37,23 +36,18 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 25
     iput-object p1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->view:Landroid/view/View;
 
-    .line 26
     const/16 v0, 0x15e
 
     iput v0, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->duration:I
 
-    .line 27
     sget-object v0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->TIMEINTERPOLATOR_DEFAULT:Landroid/animation/TimeInterpolator;
 
     iput-object v0, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->timeInterpolator:Landroid/animation/TimeInterpolator;
 
-    .line 28
     return-void
 .end method
 
@@ -63,21 +57,16 @@
     .param p2, "duration"    # I
 
     .prologue
-    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 20
     iput-object p1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->view:Landroid/view/View;
 
-    .line 21
     iput p2, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->duration:I
 
-    .line 22
     sget-object v0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->TIMEINTERPOLATOR_DEFAULT:Landroid/animation/TimeInterpolator;
 
     iput-object v0, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->timeInterpolator:Landroid/animation/TimeInterpolator;
 
-    .line 23
     return-void
 .end method
 
@@ -88,19 +77,14 @@
     .param p3, "timeInterpolator"    # Landroid/animation/TimeInterpolator;
 
     .prologue
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
     iput-object p1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->view:Landroid/view/View;
 
-    .line 16
     iput p2, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->duration:I
 
-    .line 17
     iput-object p3, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->timeInterpolator:Landroid/animation/TimeInterpolator;
 
-    .line 18
     return-void
 .end method
 
@@ -110,7 +94,6 @@
     .locals 1
 
     .prologue
-    .line 42
     iget v0, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->duration:I
 
     return v0
@@ -120,7 +103,6 @@
     .locals 1
 
     .prologue
-    .line 30
     iget-object v0, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->timeInterpolator:Landroid/animation/TimeInterpolator;
 
     return-object v0
@@ -130,7 +112,6 @@
     .locals 1
 
     .prologue
-    .line 36
     iget-object v0, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->view:Landroid/view/View;
 
     return-object v0
@@ -141,10 +122,8 @@
     .param p1, "duration"    # I
 
     .prologue
-    .line 45
     iput p1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->duration:I
 
-    .line 46
     return-void
 .end method
 
@@ -153,10 +132,8 @@
     .param p1, "timeInterpolator"    # Landroid/animation/TimeInterpolator;
 
     .prologue
-    .line 33
     iput-object p1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->timeInterpolator:Landroid/animation/TimeInterpolator;
 
-    .line 34
     return-void
 .end method
 
@@ -165,10 +142,8 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 39
     iput-object p1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->view:Landroid/view/View;
 
-    .line 40
     return-void
 .end method
 
@@ -178,7 +153,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 78
     iget-object v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->view:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
@@ -187,12 +161,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 79
     iget-object v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->view:Landroid/view/View;
 
     invoke-virtual {v1, v6}, Landroid/view/View;->setVisibility(I)V
 
-    .line 82
     :cond_0
     iget-object v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->view:Landroid/view/View;
 
@@ -236,23 +208,19 @@
 
     move-result-object v0
 
-    .line 84
     .local v0, "bottomIn":Landroid/animation/ObjectAnimator;
     iget-object v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->timeInterpolator:Landroid/animation/TimeInterpolator;
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 87
     iget v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->duration:I
 
     int-to-long v2, v1
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 88
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 89
     return-void
 .end method
 
@@ -262,7 +230,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 107
     iget-object v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->view:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
@@ -271,12 +238,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 108
     iget-object v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->view:Landroid/view/View;
 
     invoke-virtual {v1, v6}, Landroid/view/View;->setVisibility(I)V
 
-    .line 111
     :cond_0
     iget-object v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->view:Landroid/view/View;
 
@@ -320,23 +285,19 @@
 
     move-result-object v0
 
-    .line 113
     .local v0, "leftIn":Landroid/animation/ObjectAnimator;
     iget-object v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->timeInterpolator:Landroid/animation/TimeInterpolator;
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 116
     iget v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->duration:I
 
     int-to-long v2, v1
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 117
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 118
     return-void
 .end method
 
@@ -346,7 +307,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 136
     iget-object v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->view:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
@@ -355,12 +315,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 137
     iget-object v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->view:Landroid/view/View;
 
     invoke-virtual {v1, v6}, Landroid/view/View;->setVisibility(I)V
 
-    .line 140
     :cond_0
     iget-object v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->view:Landroid/view/View;
 
@@ -404,23 +362,19 @@
 
     move-result-object v0
 
-    .line 142
     .local v0, "rightIn":Landroid/animation/ObjectAnimator;
     iget-object v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->timeInterpolator:Landroid/animation/TimeInterpolator;
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 145
     iget v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->duration:I
 
     int-to-long v2, v1
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 146
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 147
     return-void
 .end method
 
@@ -430,7 +384,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 50
     iget-object v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->view:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
@@ -439,12 +392,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 51
     iget-object v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->view:Landroid/view/View;
 
     invoke-virtual {v1, v6}, Landroid/view/View;->setVisibility(I)V
 
-    .line 54
     :cond_0
     iget-object v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->view:Landroid/view/View;
 
@@ -488,23 +439,19 @@
 
     move-result-object v0
 
-    .line 56
     .local v0, "topIn":Landroid/animation/ObjectAnimator;
     iget-object v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->timeInterpolator:Landroid/animation/TimeInterpolator;
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 59
     iget v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->duration:I
 
     int-to-long v2, v1
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 60
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 61
     return-void
 .end method
 
@@ -514,7 +461,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 93
     iget-object v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->view:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
@@ -523,12 +469,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 94
     iget-object v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->view:Landroid/view/View;
 
     invoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V
 
-    .line 97
     :cond_0
     iget-object v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->view:Landroid/view/View;
 
@@ -572,23 +516,19 @@
 
     move-result-object v0
 
-    .line 99
     .local v0, "bottomOut":Landroid/animation/ObjectAnimator;
     iget-object v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->timeInterpolator:Landroid/animation/TimeInterpolator;
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 101
     iget v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->duration:I
 
     int-to-long v2, v1
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 102
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 104
     return-void
 .end method
 
@@ -598,7 +538,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 122
     iget-object v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->view:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
@@ -607,12 +546,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 123
     iget-object v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->view:Landroid/view/View;
 
     invoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V
 
-    .line 126
     :cond_0
     iget-object v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->view:Landroid/view/View;
 
@@ -656,23 +593,19 @@
 
     move-result-object v0
 
-    .line 128
     .local v0, "leftOut":Landroid/animation/ObjectAnimator;
     iget-object v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->timeInterpolator:Landroid/animation/TimeInterpolator;
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 131
     iget v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->duration:I
 
     int-to-long v2, v1
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 132
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 133
     return-void
 .end method
 
@@ -682,7 +615,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 151
     iget-object v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->view:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
@@ -691,12 +623,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 152
     iget-object v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->view:Landroid/view/View;
 
     invoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V
 
-    .line 155
     :cond_0
     iget-object v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->view:Landroid/view/View;
 
@@ -740,23 +670,19 @@
 
     move-result-object v0
 
-    .line 157
     .local v0, "rightOut":Landroid/animation/ObjectAnimator;
     iget-object v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->timeInterpolator:Landroid/animation/TimeInterpolator;
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 160
     iget v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->duration:I
 
     int-to-long v2, v1
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 161
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 162
     return-void
 .end method
 
@@ -766,7 +692,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 65
     iget-object v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->view:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
@@ -775,12 +700,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 66
     iget-object v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->view:Landroid/view/View;
 
     invoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V
 
-    .line 69
     :cond_0
     iget-object v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->view:Landroid/view/View;
 
@@ -824,22 +747,18 @@
 
     move-result-object v0
 
-    .line 71
     .local v0, "topOut":Landroid/animation/ObjectAnimator;
     iget-object v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->timeInterpolator:Landroid/animation/TimeInterpolator;
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 72
     iget v1, p0, Lcom/letv/leui/animation/ViewSlideAnimationHelper;->duration:I
 
     int-to-long v2, v1
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 73
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 74
     return-void
 .end method

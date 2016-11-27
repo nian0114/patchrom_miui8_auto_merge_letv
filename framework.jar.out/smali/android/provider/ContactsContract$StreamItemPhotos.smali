@@ -35,9 +35,7 @@
     .end annotation
 
     .prologue
-    .line 4151
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4152
     return-void
 .end method

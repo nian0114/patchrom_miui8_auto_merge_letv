@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 257
     iput-object p1, p0, Lcom/android/volley/toolbox/ImageLoader$3;->this$0:Lcom/android/volley/toolbox/ImageLoader;
 
     iput-object p2, p0, Lcom/android/volley/toolbox/ImageLoader$3;->val$cacheKey:Ljava/lang/String;
@@ -45,13 +44,11 @@
     .param p1, "error"    # Lcom/android/volley/VolleyError;
 
     .prologue
-    .line 260
     iget-object v0, p0, Lcom/android/volley/toolbox/ImageLoader$3;->this$0:Lcom/android/volley/toolbox/ImageLoader;
 
     iget-object v1, p0, Lcom/android/volley/toolbox/ImageLoader$3;->val$cacheKey:Ljava/lang/String;
 
     invoke-virtual {v0, v1, p1}, Lcom/android/volley/toolbox/ImageLoader;->onGetImageError(Ljava/lang/String;Lcom/android/volley/VolleyError;)V
 
-    .line 261
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,10 +34,8 @@
     .param p1, "runnable"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 60
     invoke-virtual {p0, p1}, Landroid/view/View;->postOnAnimation(Ljava/lang/Runnable;)V
 
-    .line 61
     return-void
 .end method
 
@@ -48,9 +45,7 @@
     .param p1, "background"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 64
     invoke-virtual {p0, p1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 65
     return-void
 .end method

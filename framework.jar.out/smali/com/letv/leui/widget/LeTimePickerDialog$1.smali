@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 97
     iput-object p1, p0, Lcom/letv/leui/widget/LeTimePickerDialog$1;->this$0:Lcom/letv/leui/widget/LeTimePickerDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +41,10 @@
     .param p2, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 101
     iget-object v0, p0, Lcom/letv/leui/widget/LeTimePickerDialog$1;->this$0:Lcom/letv/leui/widget/LeTimePickerDialog;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/LeTimePickerDialog;->dismiss()V
 
-    .line 102
     const/4 v0, 0x0
 
     return v0

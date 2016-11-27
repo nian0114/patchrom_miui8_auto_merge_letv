@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 6616
     iput-object p1, p0, Landroid/widget/Editor$LeTextActionModelImpl$1;->this$0:Landroid/widget/Editor$LeTextActionModelImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 6618
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl$1;->this$0:Landroid/widget/Editor$LeTextActionModelImpl;
 
     # getter for: Landroid/widget/Editor$LeTextActionModelImpl;->mFloatingToolbarVisibilityHelper:Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;
@@ -52,7 +50,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;->setMoving(Z)V
 
-    .line 6619
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl$1;->this$0:Landroid/widget/Editor$LeTextActionModelImpl;
 
     # getter for: Landroid/widget/Editor$LeTextActionModelImpl;->mFloatingToolbarVisibilityHelper:Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;
@@ -62,6 +59,5 @@
 
     invoke-virtual {v0}, Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;->updateToolbarVisibility()V
 
-    .line 6620
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 814
     iput-object p1, p0, Lcom/android/server/activation/ActivePlugInImpl$letvNetworkReceiver;->this$0:Lcom/android/server/activation/ActivePlugInImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/activation/ActivePlugInImpl$1;
 
     .prologue
-    .line 814
     invoke-direct {p0, p1}, Lcom/android/server/activation/ActivePlugInImpl$letvNetworkReceiver;-><init>(Lcom/android/server/activation/ActivePlugInImpl;)V
 
     return-void
@@ -51,7 +49,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 817
     iget-object v2, p0, Lcom/android/server/activation/ActivePlugInImpl$letvNetworkReceiver;->this$0:Lcom/android/server/activation/ActivePlugInImpl;
 
     # invokes: Lcom/android/server/activation/ActivePlugInImpl;->isActiveHalf()Z
@@ -61,18 +58,15 @@
 
     if-eqz v2, :cond_1
 
-    .line 819
     iget-object v2, p0, Lcom/android/server/activation/ActivePlugInImpl$letvNetworkReceiver;->this$0:Lcom/android/server/activation/ActivePlugInImpl;
 
     # invokes: Lcom/android/server/activation/ActivePlugInImpl;->unregisterNetReceiver()V
     invoke-static {v2}, Lcom/android/server/activation/ActivePlugInImpl;->access$600(Lcom/android/server/activation/ActivePlugInImpl;)V
 
-    .line 831
     :cond_0
     :goto_0
     return-void
 
-    .line 823
     :cond_1
     iget-object v2, p0, Lcom/android/server/activation/ActivePlugInImpl$letvNetworkReceiver;->this$0:Lcom/android/server/activation/ActivePlugInImpl;
 
@@ -81,7 +75,6 @@
 
     move-result v1
 
-    .line 825
     .local v1, "oldConnected":Z
     iget-object v2, p0, Lcom/android/server/activation/ActivePlugInImpl$letvNetworkReceiver;->this$0:Lcom/android/server/activation/ActivePlugInImpl;
 
@@ -90,11 +83,9 @@
 
     move-result v0
 
-    .line 826
     .local v0, "isNewConnected":Z
     if-eq v1, v0, :cond_0
 
-    .line 830
     iget-object v2, p0, Lcom/android/server/activation/ActivePlugInImpl$letvNetworkReceiver;->this$0:Lcom/android/server/activation/ActivePlugInImpl;
 
     iget-object v3, p0, Lcom/android/server/activation/ActivePlugInImpl$letvNetworkReceiver;->this$0:Lcom/android/server/activation/ActivePlugInImpl;

@@ -107,7 +107,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 170
     const/4 v0, 0x0
 
     const v1, 0x10102ff
@@ -116,7 +115,6 @@
 
     invoke-direct {p0, p1, v0, v1, v2}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 171
     return-void
 .end method
 
@@ -126,14 +124,12 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 181
     const v0, 0x10102ff
 
     const/4 v1, 0x0
 
     invoke-direct {p0, p1, p2, v0, v1}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 182
     return-void
 .end method
 
@@ -144,12 +140,10 @@
     .param p3, "defStyleAttr"    # I
 
     .prologue
-    .line 193
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 194
     return-void
 .end method
 
@@ -167,92 +161,74 @@
 
     const/4 v2, 0x0
 
-    .line 205
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 70
     iput v1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownHeight:I
 
-    .line 71
     iput v1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownWidth:I
 
-    .line 76
     iput v2, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownGravity:I
 
-    .line 78
     iput-boolean v2, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownAlwaysVisible:Z
 
-    .line 79
     iput-boolean v2, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mForceIgnoreOutsideTouch:Z
 
-    .line 80
     const v1, 0x7fffffff
 
     iput v1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mListItemExpandMaximum:I
 
-    .line 83
     iput v2, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPromptPosition:I
 
-    .line 94
     new-instance v1, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$ResizePopupRunnable;
 
     invoke-direct {v1, p0, v3}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$ResizePopupRunnable;-><init>(Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$1;)V
 
     iput-object v1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mResizePopupRunnable:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$ResizePopupRunnable;
 
-    .line 95
     new-instance v1, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$PopupTouchInterceptor;
 
     invoke-direct {v1, p0, v3}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$PopupTouchInterceptor;-><init>(Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$1;)V
 
     iput-object v1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mTouchInterceptor:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$PopupTouchInterceptor;
 
-    .line 96
     new-instance v1, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$PopupScrollListener;
 
     invoke-direct {v1, p0, v3}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$PopupScrollListener;-><init>(Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$1;)V
 
     iput-object v1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mScrollListener:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$PopupScrollListener;
 
-    .line 97
     new-instance v1, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$ListSelectorHider;
 
     invoke-direct {v1, p0, v3}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$ListSelectorHider;-><init>(Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$1;)V
 
     iput-object v1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mHideSelector:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$ListSelectorHider;
 
-    .line 100
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
     iput-object v1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mHandler:Landroid/os/Handler;
 
-    .line 102
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mTempRect:Landroid/graphics/Rect;
 
-    .line 206
     iput-object p1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mContext:Landroid/content/Context;
 
-    .line 207
     new-instance v1, Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
     invoke-direct {v1, p1, p2, p3, p4}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     iput-object v1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
-    .line 208
     iget-object v1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;->setInputMethodMode(I)V
 
-    .line 210
     iget-object v1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -265,7 +241,6 @@
 
     iget-object v0, v1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
-    .line 211
     .local v0, "locale":Ljava/util/Locale;
     invoke-static {v0}, Landroid/text/TextUtils;->getLayoutDirectionFromLocale(Ljava/util/Locale;)I
 
@@ -273,7 +248,6 @@
 
     iput v1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mLayoutDirection:I
 
-    .line 212
     return-void
 .end method
 
@@ -282,7 +256,6 @@
     .param p0, "x0"    # Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;
 
     .prologue
-    .line 54
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
     return-object v0
@@ -293,7 +266,6 @@
     .param p0, "x0"    # Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;
 
     .prologue
-    .line 54
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mResizePopupRunnable:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$ResizePopupRunnable;
 
     return-object v0
@@ -304,7 +276,6 @@
     .param p0, "x0"    # Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;
 
     .prologue
-    .line 54
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -315,7 +286,6 @@
     .param p0, "x0"    # Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;
 
     .prologue
-    .line 54
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPromptView:Landroid/view/View;
 
     return-object v0
@@ -326,7 +296,6 @@
     .param p0, "x0"    # Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;
 
     .prologue
-    .line 54
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownList:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;
 
     return-object v0
@@ -336,10 +305,8 @@
     .locals 24
 
     .prologue
-    .line 1062
     const/4 v15, 0x0
 
-    .line 1064
     .local v15, "otherHeights":I
     move-object/from16 v0, p0
 
@@ -349,12 +316,10 @@
 
     if-nez v21, :cond_7
 
-    .line 1065
     move-object/from16 v0, p0
 
     iget-object v6, v0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mContext:Landroid/content/Context;
 
-    .line 1073
     .local v6, "context":Landroid/content/Context;
     new-instance v21, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$3;
 
@@ -370,7 +335,6 @@
 
     iput-object v0, v1, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mShowDropDownRunnable:Ljava/lang/Runnable;
 
-    .line 1083
     new-instance v22, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;
 
     move-object/from16 v0, p0
@@ -396,7 +360,6 @@
 
     iput-object v0, v1, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownList:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;
 
-    .line 1084
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownListHighlight:Landroid/graphics/drawable/Drawable;
@@ -405,7 +368,6 @@
 
     if-eqz v21, :cond_0
 
-    .line 1085
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownList:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;
@@ -420,7 +382,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;->setSelector(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1087
     :cond_0
     move-object/from16 v0, p0
 
@@ -436,7 +397,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 1088
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownList:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;
@@ -451,7 +411,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 1089
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownList:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;
@@ -462,7 +421,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;->setFocusable(Z)V
 
-    .line 1090
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownList:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;
@@ -473,7 +431,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;->setFocusableInTouchMode(Z)V
 
-    .line 1091
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownList:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;
@@ -490,7 +447,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
 
-    .line 1107
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownList:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;
@@ -505,7 +461,6 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;->setOnScrollListener(Landroid/widget/AbsListView$OnScrollListener;)V
 
-    .line 1109
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mItemSelectedListener:Landroid/widget/AdapterView$OnItemSelectedListener;
@@ -514,7 +469,6 @@
 
     if-eqz v21, :cond_1
 
-    .line 1110
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownList:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;
@@ -529,28 +483,23 @@
 
     invoke-virtual/range {v21 .. v22}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
 
-    .line 1113
     :cond_1
     move-object/from16 v0, p0
 
     iget-object v7, v0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownList:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;
 
-    .line 1115
     .local v7, "dropDownView":Landroid/view/ViewGroup;
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPromptView:Landroid/view/View;
 
-    .line 1116
     .local v11, "hintView":Landroid/view/View;
     if-eqz v11, :cond_2
 
-    .line 1119
     new-instance v9, Landroid/widget/LinearLayout;
 
     invoke-direct {v9, v6}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    .line 1120
     .local v9, "hintContainer":Landroid/widget/LinearLayout;
     const/16 v21, 0x1
 
@@ -558,7 +507,6 @@
 
     invoke-virtual {v9, v0}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 1122
     new-instance v10, Landroid/widget/LinearLayout$LayoutParams;
 
     const/16 v21, -0x1
@@ -575,7 +523,6 @@
 
     invoke-direct {v10, v0, v1, v2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(IIF)V
 
-    .line 1126
     .local v10, "hintParams":Landroid/widget/LinearLayout$LayoutParams;
     move-object/from16 v0, p0
 
@@ -585,7 +532,6 @@
 
     packed-switch v21, :pswitch_data_0
 
-    .line 1138
     const-string v21, "ListPopupWindow"
 
     new-instance v22, Ljava/lang/StringBuilder;
@@ -614,7 +560,6 @@
 
     invoke-static/range {v21 .. v22}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1144
     :goto_1
     move-object/from16 v0, p0
 
@@ -628,17 +573,14 @@
 
     move-result v20
 
-    .line 1145
     .local v20, "widthSpec":I
     const/4 v8, 0x0
 
-    .line 1146
     .local v8, "heightSpec":I
     move/from16 v0, v20
 
     invoke-virtual {v11, v0, v8}, Landroid/view/View;->measure(II)V
 
-    .line 1148
     invoke-virtual {v11}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v10
@@ -646,7 +588,6 @@
     .end local v10    # "hintParams":Landroid/widget/LinearLayout$LayoutParams;
     check-cast v10, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 1149
     .restart local v10    # "hintParams":Landroid/widget/LinearLayout$LayoutParams;
     invoke-virtual {v11}, Landroid/view/View;->getMeasuredHeight()I
 
@@ -664,10 +605,8 @@
 
     add-int v15, v21, v22
 
-    .line 1152
     move-object v7, v9
 
-    .line 1155
     .end local v8    # "heightSpec":I
     .end local v9    # "hintContainer":Landroid/widget/LinearLayout;
     .end local v10    # "hintParams":Landroid/widget/LinearLayout$LayoutParams;
@@ -683,14 +622,12 @@
 
     invoke-virtual {v0, v7}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;->setContentView(Landroid/view/View;)V
 
-    .line 1169
     .end local v6    # "context":Landroid/content/Context;
     .end local v11    # "hintView":Landroid/view/View;
     :cond_3
     :goto_2
     const/16 v16, 0x0
 
-    .line 1170
     .local v16, "padding":I
     move-object/from16 v0, p0
 
@@ -702,11 +639,9 @@
 
     move-result-object v3
 
-    .line 1171
     .local v3, "background":Landroid/graphics/drawable/Drawable;
     if-eqz v3, :cond_8
 
-    .line 1172
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mTempRect:Landroid/graphics/Rect;
@@ -717,7 +652,6 @@
 
     invoke-virtual {v3, v0}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
 
-    .line 1173
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mTempRect:Landroid/graphics/Rect;
@@ -744,7 +678,6 @@
 
     add-int v16, v21, v22
 
-    .line 1177
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownVerticalOffsetSet:Z
@@ -753,7 +686,6 @@
 
     if-nez v21, :cond_4
 
-    .line 1178
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mTempRect:Landroid/graphics/Rect;
@@ -778,7 +710,6 @@
 
     iput v0, v1, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownVerticalOffset:I
 
-    .line 1185
     :cond_4
     :goto_3
     move-object/from16 v0, p0
@@ -801,7 +732,6 @@
 
     const/4 v12, 0x1
 
-    .line 1187
     .local v12, "ignoreBottomDecorations":Z
     :goto_4
     move-object/from16 v0, p0
@@ -830,7 +760,6 @@
 
     move-result v14
 
-    .line 1190
     .local v14, "maxHeight":I
     move-object/from16 v0, p0
 
@@ -854,15 +783,12 @@
 
     if-ne v0, v1, :cond_a
 
-    .line 1191
     :cond_5
     add-int v21, v14, v16
 
-    .line 1227
     :goto_5
     return v21
 
-    .line 1083
     .end local v3    # "background":Landroid/graphics/drawable/Drawable;
     .end local v7    # "dropDownView":Landroid/view/ViewGroup;
     .end local v12    # "ignoreBottomDecorations":Z
@@ -874,7 +800,6 @@
 
     goto/16 :goto_0
 
-    .line 1128
     .restart local v7    # "dropDownView":Landroid/view/ViewGroup;
     .restart local v9    # "hintContainer":Landroid/widget/LinearLayout;
     .restart local v10    # "hintParams":Landroid/widget/LinearLayout$LayoutParams;
@@ -882,21 +807,17 @@
     :pswitch_0
     invoke-virtual {v9, v7, v10}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1129
     invoke-virtual {v9, v11}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     goto/16 :goto_1
 
-    .line 1133
     :pswitch_1
     invoke-virtual {v9, v11}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 1134
     invoke-virtual {v9, v7, v10}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     goto/16 :goto_1
 
-    .line 1157
     .end local v6    # "context":Landroid/content/Context;
     .end local v7    # "dropDownView":Landroid/view/ViewGroup;
     .end local v9    # "hintContainer":Landroid/widget/LinearLayout;
@@ -915,7 +836,6 @@
 
     check-cast v7, Landroid/view/ViewGroup;
 
-    .line 1158
     .restart local v7    # "dropDownView":Landroid/view/ViewGroup;
     move-object/from16 v0, p0
 
@@ -923,18 +843,15 @@
 
     move-object/from16 v19, v0
 
-    .line 1159
     .local v19, "view":Landroid/view/View;
     if-eqz v19, :cond_3
 
-    .line 1160
     invoke-virtual/range {v19 .. v19}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v10
 
     check-cast v10, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 1162
     .restart local v10    # "hintParams":Landroid/widget/LinearLayout$LayoutParams;
     invoke-virtual/range {v19 .. v19}, Landroid/view/View;->getMeasuredHeight()I
 
@@ -954,7 +871,6 @@
 
     goto/16 :goto_2
 
-    .line 1181
     .end local v10    # "hintParams":Landroid/widget/LinearLayout$LayoutParams;
     .end local v19    # "view":Landroid/view/View;
     .restart local v3    # "background":Landroid/graphics/drawable/Drawable;
@@ -970,13 +886,11 @@
 
     goto/16 :goto_3
 
-    .line 1185
     :cond_9
     const/4 v12, 0x0
 
     goto :goto_4
 
-    .line 1195
     .restart local v12    # "ignoreBottomDecorations":Z
     .restart local v14    # "maxHeight":I
     :cond_a
@@ -988,7 +902,6 @@
 
     packed-switch v21, :pswitch_data_1
 
-    .line 1209
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownWidth:I
@@ -1001,7 +914,6 @@
 
     move-result v4
 
-    .line 1213
     .local v4, "childWidthSpec":I
     :goto_6
     const/16 v21, 0x5
@@ -1040,7 +952,6 @@
 
     aput-object v22, v5, v21
 
-    .line 1215
     .local v5, "clazzs":[Ljava/lang/Class;
     const/16 v21, 0x5
 
@@ -1098,7 +1009,6 @@
 
     aput-object v22, v17, v21
 
-    .line 1217
     .local v17, "pramas":[Ljava/lang/Object;
     move-object/from16 v0, p0
 
@@ -1112,7 +1022,6 @@
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->preBuildListView(Landroid/widget/ListView;)V
 
-    .line 1219
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownList:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;
@@ -1131,7 +1040,6 @@
 
     move-result-object v18
 
-    .line 1220
     .local v18, "res":Ljava/lang/Object;
     check-cast v18, Ljava/lang/Integer;
 
@@ -1140,19 +1048,16 @@
 
     move-result v13
 
-    .line 1225
     .local v13, "listContent":I
     if-lez v13, :cond_b
 
     add-int v15, v15, v16
 
-    .line 1227
     :cond_b
     add-int v21, v13, v15
 
     goto/16 :goto_5
 
-    .line 1197
     .end local v4    # "childWidthSpec":I
     .end local v5    # "clazzs":[Ljava/lang/Class;
     .end local v13    # "listContent":I
@@ -1212,11 +1117,9 @@
 
     move-result v4
 
-    .line 1201
     .restart local v4    # "childWidthSpec":I
     goto/16 :goto_6
 
-    .line 1203
     .end local v4    # "childWidthSpec":I
     :pswitch_3
     move-object/from16 v0, p0
@@ -1273,11 +1176,9 @@
 
     move-result v4
 
-    .line 1207
     .restart local v4    # "childWidthSpec":I
     goto/16 :goto_6
 
-    .line 1126
     nop
 
     :pswitch_data_0
@@ -1286,7 +1187,6 @@
         :pswitch_0
     .end packed-switch
 
-    .line 1195
     :pswitch_data_1
     .packed-switch -0x2
         :pswitch_2
@@ -1298,19 +1198,16 @@
     .locals 3
 
     .prologue
-    .line 683
     iget-object v2, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPromptView:Landroid/view/View;
 
     if-eqz v2, :cond_0
 
-    .line 684
     iget-object v2, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPromptView:Landroid/view/View;
 
     invoke-virtual {v2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
 
-    .line 685
     .local v1, "parent":Landroid/view/ViewParent;
     instance-of v2, v1, Landroid/view/ViewGroup;
 
@@ -1318,16 +1215,13 @@
 
     move-object v0, v1
 
-    .line 686
     check-cast v0, Landroid/view/ViewGroup;
 
-    .line 687
     .local v0, "group":Landroid/view/ViewGroup;
     iget-object v2, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPromptView:Landroid/view/View;
 
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 690
     .end local v0    # "group":Landroid/view/ViewGroup;
     .end local v1    # "parent":Landroid/view/ViewParent;
     :cond_0
@@ -1342,28 +1236,22 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 739
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownList:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;
 
-    .line 740
     .local v0, "list":Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;
     if-eqz v0, :cond_0
 
-    .line 742
     const/4 v1, 0x1
 
     # setter for: Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;->mListSelectionHidden:Z
     invoke-static {v0, v1}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;->access$602(Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;Z)Z
 
-    .line 744
     const-string v1, "hideSelector"
 
     invoke-static {v0, v1, v2, v2}, Lcom/letv/leui/util/LeReflectionUtils;->invokeMethod(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 746
     invoke-virtual {v0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;->requestLayout()V
 
-    .line 748
     :cond_0
     return-void
 .end method
@@ -1373,7 +1261,6 @@
     .param p1, "src"    # Landroid/view/View;
 
     .prologue
-    .line 1046
     new-instance v0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$2;
 
     invoke-direct {v0, p0, p1}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$2;-><init>(Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;Landroid/view/View;)V
@@ -1387,30 +1274,24 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 666
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
     invoke-virtual {v0}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;->dismiss()V
 
-    .line 667
     invoke-direct {p0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->removePromptView()V
 
-    .line 668
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;->setContentView(Landroid/view/View;)V
 
-    .line 669
     iput-object v1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownList:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;
 
-    .line 670
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mResizePopupRunnable:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$ResizePopupRunnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 671
     return-void
 .end method
 
@@ -1418,7 +1299,6 @@
     .locals 1
 
     .prologue
-    .line 402
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownAnchorView:Landroid/view/View;
 
     return-object v0
@@ -1428,7 +1308,6 @@
     .locals 1
 
     .prologue
-    .line 393
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
     invoke-virtual {v0}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;->getAnimationStyle()I
@@ -1442,7 +1321,6 @@
     .locals 1
 
     .prologue
-    .line 365
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
     invoke-virtual {v0}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;->getBackground()Landroid/graphics/drawable/Drawable;
@@ -1456,7 +1334,6 @@
     .locals 1
 
     .prologue
-    .line 498
     iget v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownHeight:I
 
     return v0
@@ -1466,7 +1343,6 @@
     .locals 1
 
     .prologue
-    .line 419
     iget v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownHorizontalOffset:I
 
     return v0
@@ -1476,7 +1352,6 @@
     .locals 1
 
     .prologue
-    .line 714
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
     invoke-virtual {v0}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;->getInputMethodMode()I
@@ -1490,7 +1365,6 @@
     .locals 1
 
     .prologue
-    .line 839
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownList:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;
 
     return-object v0
@@ -1500,7 +1374,6 @@
     .locals 1
 
     .prologue
-    .line 262
     iget v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPromptPosition:I
 
     return v0
@@ -1510,17 +1383,14 @@
     .locals 1
 
     .prologue
-    .line 789
     invoke-virtual {p0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->isShowing()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 790
     const/4 v0, 0x0
 
-    .line 792
     :goto_0
     return-object v0
 
@@ -1538,17 +1408,14 @@
     .locals 2
 
     .prologue
-    .line 815
     invoke-virtual {p0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->isShowing()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 816
     const-wide/high16 v0, -0x8000000000000000L
 
-    .line 818
     :goto_0
     return-wide v0
 
@@ -1566,17 +1433,14 @@
     .locals 1
 
     .prologue
-    .line 802
     invoke-virtual {p0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->isShowing()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 803
     const/4 v0, -0x1
 
-    .line 805
     :goto_0
     return v0
 
@@ -1594,17 +1458,14 @@
     .locals 1
 
     .prologue
-    .line 828
     invoke-virtual {p0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->isShowing()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 829
     const/4 v0, 0x0
 
-    .line 831
     :goto_0
     return-object v0
 
@@ -1622,7 +1483,6 @@
     .locals 1
 
     .prologue
-    .line 349
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
     invoke-virtual {v0}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;->getSoftInputMode()I
@@ -1636,15 +1496,12 @@
     .locals 1
 
     .prologue
-    .line 435
     iget-boolean v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownVerticalOffsetSet:Z
 
     if-nez v0, :cond_0
 
-    .line 436
     const/4 v0, 0x0
 
-    .line 438
     :goto_0
     return v0
 
@@ -1658,7 +1515,6 @@
     .locals 1
 
     .prologue
-    .line 465
     iget v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownWidth:I
 
     return v0
@@ -1668,7 +1524,6 @@
     .locals 1
 
     .prologue
-    .line 217
     iget-boolean v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->isAbove:Z
 
     return v0
@@ -1678,7 +1533,6 @@
     .locals 1
 
     .prologue
-    .line 325
     iget-boolean v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownAlwaysVisible:Z
 
     return v0
@@ -1688,7 +1542,6 @@
     .locals 2
 
     .prologue
-    .line 762
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
     invoke-virtual {v0}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;->getInputMethodMode()I
@@ -1714,7 +1567,6 @@
     .locals 1
 
     .prologue
-    .line 290
     iget-boolean v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mModal:Z
 
     return v0
@@ -1724,7 +1576,6 @@
     .locals 1
 
     .prologue
-    .line 754
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
     invoke-virtual {v0}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;->isShowing()Z
@@ -1740,14 +1591,12 @@
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 864
     invoke-virtual/range {p0 .. p0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->isShowing()Z
 
     move-result v15
 
     if-eqz v15, :cond_7
 
-    .line 870
     const/16 v15, 0x3e
 
     move/from16 v0, p1
@@ -1770,7 +1619,6 @@
 
     if-nez v15, :cond_7
 
-    .line 873
     :cond_0
     move-object/from16 v0, p0
 
@@ -1780,7 +1628,6 @@
 
     move-result v8
 
-    .line 876
     .local v8, "curIndex":I
     move-object/from16 v0, p0
 
@@ -1794,45 +1641,36 @@
 
     const/4 v4, 0x1
 
-    .line 878
     .local v4, "below":Z
     :goto_0
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mAdapter:Landroid/widget/ListAdapter;
 
-    .line 881
     .local v2, "adapter":Landroid/widget/ListAdapter;
     const v9, 0x7fffffff
 
-    .line 882
     .local v9, "firstItem":I
     const/high16 v10, -0x80000000
 
-    .line 884
     .local v10, "lastItem":I
     if-eqz v2, :cond_1
 
-    .line 885
     invoke-interface {v2}, Landroid/widget/ListAdapter;->areAllItemsEnabled()Z
 
     move-result v3
 
-    .line 886
     .local v3, "allEnabled":Z
     if-eqz v3, :cond_5
 
-    .line 887
     const/4 v9, 0x0
 
-    .line 888
     invoke-interface {v2}, Landroid/widget/ListAdapter;->getCount()I
 
     move-result v15
 
     add-int/lit8 v10, v15, -0x1
 
-    .line 911
     .end local v3    # "allEnabled":Z
     :cond_1
     :goto_1
@@ -1857,11 +1695,9 @@
 
     if-lt v8, v10, :cond_6
 
-    .line 915
     :cond_3
     invoke-virtual/range {p0 .. p0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->clearListSelection()V
 
-    .line 916
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
@@ -1870,13 +1706,10 @@
 
     invoke-virtual/range {v15 .. v16}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;->setInputMethodMode(I)V
 
-    .line 917
     invoke-virtual/range {p0 .. p0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->show()V
 
-    .line 918
     const/4 v15, 0x1
 
-    .line 963
     .end local v2    # "adapter":Landroid/widget/ListAdapter;
     .end local v4    # "below":Z
     .end local v8    # "curIndex":I
@@ -1885,14 +1718,12 @@
     :goto_2
     return v15
 
-    .line 876
     .restart local v8    # "curIndex":I
     :cond_4
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 890
     .restart local v2    # "adapter":Landroid/widget/ListAdapter;
     .restart local v3    # "allEnabled":Z
     .restart local v4    # "below":Z
@@ -1915,7 +1746,6 @@
 
     aput-object v16, v5, v15
 
-    .line 891
     .local v5, "clazz1":[Ljava/lang/Class;
     const/4 v15, 0x2
 
@@ -1941,7 +1771,6 @@
 
     aput-object v16, v11, v15
 
-    .line 893
     .local v11, "obj1":[Ljava/lang/Object;
     move-object/from16 v0, p0
 
@@ -1955,7 +1784,6 @@
 
     move-result-object v13
 
-    .line 894
     .local v13, "res":Ljava/lang/Object;
     check-cast v13, Ljava/lang/Integer;
 
@@ -1964,7 +1792,6 @@
 
     move-result v9
 
-    .line 896
     const/4 v15, 0x2
 
     new-array v6, v15, [Ljava/lang/Class;
@@ -1981,7 +1808,6 @@
 
     aput-object v16, v6, v15
 
-    .line 897
     .local v6, "clazz2":[Ljava/lang/Class;
     const/4 v15, 0x2
 
@@ -2011,7 +1837,6 @@
 
     aput-object v16, v12, v15
 
-    .line 899
     .local v12, "obj2":[Ljava/lang/Object;
     move-object/from16 v0, p0
 
@@ -2025,7 +1850,6 @@
 
     move-result-object v14
 
-    .line 900
     .local v14, "res2":Ljava/lang/Object;
     check-cast v14, Ljava/lang/Integer;
 
@@ -2036,7 +1860,6 @@
 
     goto/16 :goto_1
 
-    .line 922
     .end local v3    # "allEnabled":Z
     .end local v5    # "clazz1":[Ljava/lang/Class;
     .end local v6    # "clazz2":[Ljava/lang/Class;
@@ -2052,7 +1875,6 @@
     # setter for: Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;->mListSelectionHidden:Z
     invoke-static/range {v15 .. v16}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;->access$602(Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;Z)Z
 
-    .line 925
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownList:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;
@@ -2065,11 +1887,9 @@
 
     move-result v7
 
-    .line 928
     .local v7, "consumed":Z
     if-eqz v7, :cond_8
 
-    .line 931
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
@@ -2078,20 +1898,16 @@
 
     invoke-virtual/range {v15 .. v16}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;->setInputMethodMode(I)V
 
-    .line 936
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownList:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;
 
     invoke-virtual {v15}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;->requestFocusFromTouch()Z
 
-    .line 937
     invoke-virtual/range {p0 .. p0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->show()V
 
-    .line 939
     sparse-switch p1, :sswitch_data_0
 
-    .line 963
     .end local v2    # "adapter":Landroid/widget/ListAdapter;
     .end local v4    # "below":Z
     .end local v7    # "consumed":Z
@@ -2103,7 +1919,6 @@
 
     goto/16 :goto_2
 
-    .line 946
     .restart local v2    # "adapter":Landroid/widget/ListAdapter;
     .restart local v4    # "below":Z
     .restart local v7    # "consumed":Z
@@ -2115,7 +1930,6 @@
 
     goto/16 :goto_2
 
-    .line 949
     :cond_8
     if-eqz v4, :cond_9
 
@@ -2125,15 +1939,12 @@
 
     if-ne v0, v15, :cond_9
 
-    .line 952
     if-ne v8, v10, :cond_7
 
-    .line 953
     const/4 v15, 0x1
 
     goto/16 :goto_2
 
-    .line 955
     :cond_9
     if-nez v4, :cond_7
 
@@ -2145,12 +1956,10 @@
 
     if-ne v8, v9, :cond_7
 
-    .line 957
     const/4 v15, 0x1
 
     goto/16 :goto_2
 
-    .line 939
     nop
 
     :sswitch_data_0
@@ -2170,7 +1979,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 1001
     const/4 v3, 0x4
 
     if-ne p1, v3, :cond_3
@@ -2181,10 +1989,8 @@
 
     if-eqz v3, :cond_3
 
-    .line 1004
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownAnchorView:Landroid/view/View;
 
-    .line 1005
     .local v0, "anchorView":Landroid/view/View;
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getAction()I
 
@@ -2198,26 +2004,21 @@
 
     if-nez v3, :cond_1
 
-    .line 1006
     invoke-virtual {v0}, Landroid/view/View;->getKeyDispatcherState()Landroid/view/KeyEvent$DispatcherState;
 
     move-result-object v1
 
-    .line 1007
     .local v1, "state":Landroid/view/KeyEvent$DispatcherState;
     if-eqz v1, :cond_0
 
-    .line 1008
     invoke-virtual {v1, p2, p0}, Landroid/view/KeyEvent$DispatcherState;->startTracking(Landroid/view/KeyEvent;Ljava/lang/Object;)V
 
-    .line 1022
     .end local v0    # "anchorView":Landroid/view/View;
     .end local v1    # "state":Landroid/view/KeyEvent$DispatcherState;
     :cond_0
     :goto_0
     return v2
 
-    .line 1011
     .restart local v0    # "anchorView":Landroid/view/View;
     :cond_1
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getAction()I
@@ -2226,19 +2027,15 @@
 
     if-ne v3, v2, :cond_3
 
-    .line 1012
     invoke-virtual {v0}, Landroid/view/View;->getKeyDispatcherState()Landroid/view/KeyEvent$DispatcherState;
 
     move-result-object v1
 
-    .line 1013
     .restart local v1    # "state":Landroid/view/KeyEvent$DispatcherState;
     if-eqz v1, :cond_2
 
-    .line 1014
     invoke-virtual {v1, p2}, Landroid/view/KeyEvent$DispatcherState;->handleUpEvent(Landroid/view/KeyEvent;)V
 
-    .line 1016
     :cond_2
     invoke-virtual {p2}, Landroid/view/KeyEvent;->isTracking()Z
 
@@ -2252,12 +2049,10 @@
 
     if-nez v3, :cond_3
 
-    .line 1017
     invoke-virtual {p0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->dismiss()V
 
     goto :goto_0
 
-    .line 1022
     .end local v0    # "anchorView":Landroid/view/View;
     .end local v1    # "state":Landroid/view/KeyEvent$DispatcherState;
     :cond_3
@@ -2272,7 +2067,6 @@
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 977
     invoke-virtual {p0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->isShowing()Z
 
     move-result v1
@@ -2287,14 +2081,12 @@
 
     if-ltz v1, :cond_1
 
-    .line 978
     iget-object v1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownList:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;
 
     invoke-virtual {v1, p1, p2}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;->onKeyUp(ILandroid/view/KeyEvent;)Z
 
     move-result v0
 
-    .line 979
     .local v0, "consumed":Z
     if-eqz v0, :cond_0
 
@@ -2304,10 +2096,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 982
     invoke-virtual {p0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->dismiss()V
 
-    .line 986
     .end local v0    # "consumed":Z
     :cond_0
     :goto_0
@@ -2324,22 +2114,18 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 773
     invoke-virtual {p0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->isShowing()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 774
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mItemClickListener:Landroid/widget/AdapterView$OnItemClickListener;
 
     if-eqz v0, :cond_0
 
-    .line 775
     iget-object v1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownList:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;
 
-    .line 776
     .local v1, "list":Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;
     invoke-virtual {v1}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;->getFirstVisiblePosition()I
 
@@ -2351,13 +2137,11 @@
 
     move-result-object v2
 
-    .line 777
     .local v2, "child":Landroid/view/View;
     invoke-virtual {v1}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;->getAdapter()Landroid/widget/ListAdapter;
 
     move-result-object v6
 
-    .line 778
     .local v6, "adapter":Landroid/widget/ListAdapter;
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mItemClickListener:Landroid/widget/AdapterView$OnItemClickListener;
 
@@ -2369,14 +2153,12 @@
 
     invoke-interface/range {v0 .. v5}, Landroid/widget/AdapterView$OnItemClickListener;->onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
 
-    .line 780
     .end local v1    # "list":Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;
     .end local v2    # "child":Landroid/view/View;
     .end local v6    # "adapter":Landroid/widget/ListAdapter;
     :cond_0
     const/4 v0, 0x1
 
-    .line 782
     :goto_0
     return v0
 
@@ -2390,14 +2172,12 @@
     .locals 2
 
     .prologue
-    .line 553
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mShowDropDownRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 554
     return-void
 .end method
 
@@ -2406,7 +2186,6 @@
     .param p1, "listView"    # Landroid/widget/ListView;
 
     .prologue
-    .line 278
     return-void
 .end method
 
@@ -2415,12 +2194,10 @@
     .param p1, "adapter"    # Landroid/widget/ListAdapter;
 
     .prologue
-    .line 227
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mObserver:Landroid/database/DataSetObserver;
 
     if-nez v0, :cond_3
 
-    .line 228
     new-instance v0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$PopupDataSetObserver;
 
     const/4 v1, 0x0
@@ -2429,45 +2206,37 @@
 
     iput-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mObserver:Landroid/database/DataSetObserver;
 
-    .line 232
     :cond_0
     :goto_0
     iput-object p1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mAdapter:Landroid/widget/ListAdapter;
 
-    .line 233
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mAdapter:Landroid/widget/ListAdapter;
 
     if-eqz v0, :cond_1
 
-    .line 234
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mObserver:Landroid/database/DataSetObserver;
 
     invoke-interface {p1, v0}, Landroid/widget/ListAdapter;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
 
-    .line 237
     :cond_1
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownList:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;
 
     if-eqz v0, :cond_2
 
-    .line 238
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownList:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;
 
     iget-object v1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mAdapter:Landroid/widget/ListAdapter;
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 240
     :cond_2
     return-void
 
-    .line 229
     :cond_3
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mAdapter:Landroid/widget/ListAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 230
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mAdapter:Landroid/widget/ListAdapter;
 
     iget-object v1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mObserver:Landroid/database/DataSetObserver;
@@ -2482,10 +2251,8 @@
     .param p1, "anchor"    # Landroid/view/View;
 
     .prologue
-    .line 412
     iput-object p1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownAnchorView:Landroid/view/View;
 
-    .line 413
     return-void
 .end method
 
@@ -2494,12 +2261,10 @@
     .param p1, "animationStyle"    # I
 
     .prologue
-    .line 383
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;->setAnimationStyle(I)V
 
-    .line 384
     return-void
 .end method
 
@@ -2508,12 +2273,10 @@
     .param p1, "d"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 374
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 375
     return-void
 .end method
 
@@ -2522,23 +2285,19 @@
     .param p1, "width"    # I
 
     .prologue
-    .line 485
     iget-object v1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
     invoke-virtual {v1}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 486
     .local v0, "popupBackground":Landroid/graphics/drawable/Drawable;
     if-eqz v0, :cond_0
 
-    .line 487
     iget-object v1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mTempRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
 
-    .line 488
     iget-object v1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mTempRect:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->left:I
@@ -2553,11 +2312,9 @@
 
     iput v1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownWidth:I
 
-    .line 492
     :goto_0
     return-void
 
-    .line 490
     :cond_0
     invoke-virtual {p0, p1}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->setWidth(I)V
 
@@ -2569,10 +2326,8 @@
     .param p1, "dropDownAlwaysVisible"    # Z
 
     .prologue
-    .line 316
     iput-boolean p1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownAlwaysVisible:Z
 
-    .line 317
     return-void
 .end method
 
@@ -2581,10 +2336,8 @@
     .param p1, "gravity"    # I
 
     .prologue
-    .line 458
     iput p1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownGravity:I
 
-    .line 459
     return-void
 .end method
 
@@ -2593,10 +2346,8 @@
     .param p1, "forceIgnoreOutsideTouch"    # Z
 
     .prologue
-    .line 301
     iput-boolean p1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mForceIgnoreOutsideTouch:Z
 
-    .line 302
     return-void
 .end method
 
@@ -2605,10 +2356,8 @@
     .param p1, "height"    # I
 
     .prologue
-    .line 507
     iput p1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownHeight:I
 
-    .line 508
     return-void
 .end method
 
@@ -2617,10 +2366,8 @@
     .param p1, "offset"    # I
 
     .prologue
-    .line 428
     iput p1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownHorizontalOffset:I
 
-    .line 429
     return-void
 .end method
 
@@ -2629,12 +2376,10 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 705
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;->setInputMethodMode(I)V
 
-    .line 706
     return-void
 .end method
 
@@ -2643,10 +2388,8 @@
     .param p1, "max"    # I
 
     .prologue
-    .line 849
     iput p1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mListItemExpandMaximum:I
 
-    .line 850
     return-void
 .end method
 
@@ -2655,10 +2398,8 @@
     .param p1, "selector"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 358
     iput-object p1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownListHighlight:Landroid/graphics/drawable/Drawable;
 
-    .line 359
     return-void
 .end method
 
@@ -2667,17 +2408,14 @@
     .param p1, "modal"    # Z
 
     .prologue
-    .line 275
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mModal:Z
 
-    .line 276
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;->setFocusable(Z)V
 
-    .line 277
     return-void
 .end method
 
@@ -2686,12 +2424,10 @@
     .param p1, "listener"    # Lcom/letv/leui/preference/LeListPreferencePopupWindow$OnDismissListener;
 
     .prologue
-    .line 679
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;->setOnDismissListener(Lcom/letv/leui/preference/LeListPreferencePopupWindow$OnDismissListener;)V
 
-    .line 680
     return-void
 .end method
 
@@ -2700,10 +2436,8 @@
     .param p1, "clickListener"    # Landroid/widget/AdapterView$OnItemClickListener;
 
     .prologue
-    .line 518
     iput-object p1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mItemClickListener:Landroid/widget/AdapterView$OnItemClickListener;
 
-    .line 519
     return-void
 .end method
 
@@ -2712,10 +2446,8 @@
     .param p1, "selectedListener"    # Landroid/widget/AdapterView$OnItemSelectedListener;
 
     .prologue
-    .line 529
     iput-object p1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mItemSelectedListener:Landroid/widget/AdapterView$OnItemSelectedListener;
 
-    .line 530
     return-void
 .end method
 
@@ -2724,12 +2456,10 @@
     .param p1, "listener"    # Lcom/letv/leui/preference/LeListPreferencePopupWindow$OnShowListener;
 
     .prologue
-    .line 282
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;->setOnShowListener(Lcom/letv/leui/preference/LeListPreferencePopupWindow$OnShowListener;)V
 
-    .line 283
     return-void
 .end method
 
@@ -2738,10 +2468,8 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 252
     iput p1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPromptPosition:I
 
-    .line 253
     return-void
 .end method
 
@@ -2750,29 +2478,22 @@
     .param p1, "prompt"    # Landroid/view/View;
 
     .prologue
-    .line 539
     invoke-virtual {p0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->isShowing()Z
 
     move-result v0
 
-    .line 540
     .local v0, "showing":Z
     if-eqz v0, :cond_0
 
-    .line 541
     invoke-direct {p0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->removePromptView()V
 
-    .line 543
     :cond_0
     iput-object p1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPromptView:Landroid/view/View;
 
-    .line 544
     if-eqz v0, :cond_1
 
-    .line 545
     invoke-virtual {p0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->show()V
 
-    .line 547
     :cond_1
     return-void
 .end method
@@ -2782,10 +2503,8 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 724
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownList:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;
 
-    .line 725
     .local v0, "list":Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;
     invoke-virtual {p0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->isShowing()Z
 
@@ -2795,28 +2514,23 @@
 
     if-eqz v0, :cond_0
 
-    .line 726
     const/4 v1, 0x0
 
     # setter for: Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;->mListSelectionHidden:Z
     invoke-static {v0, v1}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;->access$602(Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;Z)Z
 
-    .line 727
     invoke-virtual {v0, p1}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;->setSelection(I)V
 
-    .line 728
     invoke-virtual {v0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;->getChoiceMode()I
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 729
     const/4 v1, 0x1
 
     invoke-virtual {v0, p1, v1}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;->setItemChecked(IZ)V
 
-    .line 732
     :cond_0
     return-void
 .end method
@@ -2826,12 +2540,10 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 339
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;->setSoftInputMode(I)V
 
-    .line 340
     return-void
 .end method
 
@@ -2840,15 +2552,12 @@
     .param p1, "offset"    # I
 
     .prologue
-    .line 447
     iput p1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownVerticalOffset:I
 
-    .line 448
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownVerticalOffsetSet:Z
 
-    .line 449
     return-void
 .end method
 
@@ -2857,10 +2566,8 @@
     .param p1, "width"    # I
 
     .prologue
-    .line 475
     iput p1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownWidth:I
 
-    .line 476
     return-void
 .end method
 
@@ -2876,26 +2583,21 @@
 
     const/4 v3, -0x1
 
-    .line 561
     invoke-direct {p0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->buildDropDown()I
 
     move-result v7
 
-    .line 563
     .local v7, "height":I
     const/4 v4, 0x0
 
-    .line 564
     .local v4, "widthSpec":I
     const/4 v5, 0x0
 
-    .line 566
     .local v5, "heightSpec":I
     invoke-virtual {p0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->isInputMethodNotNeeded()Z
 
     move-result v8
 
-    .line 569
     .local v8, "noInputMethod":Z
     new-array v6, v1, [Ljava/lang/Class;
 
@@ -2903,7 +2605,6 @@
 
     aput-object v0, v6, v2
 
-    .line 570
     .local v6, "clazz":[Ljava/lang/Class;
     new-array v9, v1, [Ljava/lang/Object;
 
@@ -2918,7 +2619,6 @@
 
     aput-object v0, v9, v2
 
-    .line 571
     .local v9, "objs":[Ljava/lang/Object;
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
@@ -2926,7 +2626,6 @@
 
     invoke-static {v0, v10, v6, v9}, Lcom/letv/leui/util/LeReflectionUtils;->invokeMethod(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 573
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
     new-instance v10, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$1;
@@ -2935,12 +2634,10 @@
 
     invoke-virtual {v0, v10}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;->setAboveAnchorListener(Lcom/letv/leui/preference/LeListPreferencePopupWindow$AboveAnchorListener;)V
 
-    .line 582
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
     invoke-virtual {v0, v2}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;->setClippingEnabled(Z)V
 
-    .line 583
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
     invoke-virtual {v0}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;->isShowing()Z
@@ -2949,30 +2646,24 @@
 
     if-eqz v0, :cond_b
 
-    .line 584
     iget v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownWidth:I
 
     if-ne v0, v3, :cond_2
 
-    .line 587
     const/4 v4, -0x1
 
-    .line 594
     :goto_1
     iget v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownHeight:I
 
     if-ne v0, v3, :cond_8
 
-    .line 597
     if-eqz v8, :cond_4
 
     move v5, v7
 
-    .line 598
     :goto_2
     if-eqz v8, :cond_6
 
-    .line 599
     iget-object v10, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
     iget v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownWidth:I
@@ -2984,7 +2675,6 @@
     :goto_3
     invoke-virtual {v10, v0, v2}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;->setWindowLayoutMode(II)V
 
-    .line 614
     :goto_4
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
@@ -2999,7 +2689,6 @@
     :goto_5
     invoke-virtual {v0, v1}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;->setOutsideTouchable(Z)V
 
-    .line 616
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
     invoke-virtual {p0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->getAnchorView()Landroid/view/View;
@@ -3012,7 +2701,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;->update(Landroid/view/View;IIII)V
 
-    .line 660
     :cond_0
     :goto_6
     return-void
@@ -3021,17 +2709,14 @@
     :cond_1
     move v0, v2
 
-    .line 570
     goto :goto_0
 
-    .line 588
     .restart local v9    # "objs":[Ljava/lang/Object;
     :cond_2
     iget v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownWidth:I
 
     if-ne v0, v11, :cond_3
 
-    .line 589
     invoke-virtual {p0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->getAnchorView()Landroid/view/View;
 
     move-result-object v0
@@ -3042,7 +2727,6 @@
 
     goto :goto_1
 
-    .line 591
     :cond_3
     iget v4, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownWidth:I
 
@@ -3051,16 +2735,13 @@
     :cond_4
     move v5, v3
 
-    .line 597
     goto :goto_2
 
     :cond_5
     move v0, v2
 
-    .line 599
     goto :goto_3
 
-    .line 603
     :cond_6
     iget-object v10, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
@@ -3080,18 +2761,15 @@
 
     goto :goto_7
 
-    .line 608
     :cond_8
     iget v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownHeight:I
 
     if-ne v0, v11, :cond_9
 
-    .line 609
     move v5, v7
 
     goto :goto_4
 
-    .line 611
     :cond_9
     iget v5, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownHeight:I
 
@@ -3100,39 +2778,31 @@
     :cond_a
     move v1, v2
 
-    .line 614
     goto :goto_5
 
-    .line 619
     :cond_b
     iget v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownWidth:I
 
     if-ne v0, v3, :cond_e
 
-    .line 620
     const/4 v4, -0x1
 
-    .line 629
     :goto_8
     iget v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownHeight:I
 
     if-ne v0, v3, :cond_10
 
-    .line 630
     const/4 v5, -0x1
 
-    .line 639
     :goto_9
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
     invoke-virtual {v0, v4, v5}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;->setWindowLayoutMode(II)V
 
-    .line 640
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;->setClipToScreenEnabled(Z)V
 
-    .line 644
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
     iget-boolean v10, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mForceIgnoreOutsideTouch:Z
@@ -3146,14 +2816,12 @@
     :goto_a
     invoke-virtual {v0, v1}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;->setOutsideTouchable(Z)V
 
-    .line 645
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
     iget-object v1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mTouchInterceptor:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$PopupTouchInterceptor;
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;->setTouchInterceptor(Landroid/view/View$OnTouchListener;)V
 
-    .line 646
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
     invoke-virtual {p0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->getAnchorView()Landroid/view/View;
@@ -3168,12 +2836,10 @@
 
     invoke-virtual {v0, v1, v2, v10, v11}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;->showAsDropDown(Landroid/view/View;III)V
 
-    .line 649
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownList:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;
 
     invoke-virtual {v0, v3}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;->setSelection(I)V
 
-    .line 651
     iget-boolean v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mModal:Z
 
     if-eqz v0, :cond_c
@@ -3186,17 +2852,14 @@
 
     if-eqz v0, :cond_d
 
-    .line 652
     :cond_c
     invoke-virtual {p0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->clearListSelection()V
 
-    .line 654
     :cond_d
     iget-boolean v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mModal:Z
 
     if-nez v0, :cond_0
 
-    .line 655
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mHideSelector:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$ListSelectorHider;
@@ -3205,13 +2868,11 @@
 
     goto/16 :goto_6
 
-    .line 622
     :cond_e
     iget v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownWidth:I
 
     if-ne v0, v11, :cond_f
 
-    .line 623
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
     invoke-virtual {p0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->getAnchorView()Landroid/view/View;
@@ -3226,7 +2887,6 @@
 
     goto :goto_8
 
-    .line 625
     :cond_f
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
@@ -3236,20 +2896,17 @@
 
     goto :goto_8
 
-    .line 632
     :cond_10
     iget v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownHeight:I
 
     if-ne v0, v11, :cond_11
 
-    .line 633
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
     invoke-virtual {v0, v7}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;->setHeight(I)V
 
     goto :goto_9
 
-    .line 635
     :cond_11
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
 
@@ -3262,7 +2919,6 @@
     :cond_12
     move v1, v2
 
-    .line 644
     goto :goto_a
 .end method
 
@@ -3275,25 +2931,20 @@
 
     const/4 v4, 0x1
 
-    .line 1231
     iget-object v3, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPromptView:Landroid/view/View;
 
     if-eqz v3, :cond_1
 
-    .line 1232
     if-eqz p1, :cond_2
 
-    .line 1233
     invoke-virtual {p0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->getPromptPosition()I
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 1234
     invoke-virtual {p0, v4}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->setPromptPosition(I)V
 
-    .line 1242
     :cond_0
     :goto_0
     iget-object v3, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
@@ -3304,37 +2955,29 @@
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    .line 1243
     .local v0, "dropDownView":Landroid/view/ViewGroup;
     invoke-virtual {v0, v5}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 1244
     .local v1, "view0":Landroid/view/View;
     invoke-virtual {v0, v4}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 1246
     .local v2, "view1":Landroid/view/View;
     if-eqz p1, :cond_3
 
-    .line 1247
     instance-of v3, v2, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;
 
     if-eqz v3, :cond_1
 
-    .line 1248
     invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
 
-    .line 1249
     invoke-virtual {v0, v2, v5}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
 
-    .line 1250
     invoke-virtual {v0, v1, v4}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
 
-    .line 1260
     .end local v0    # "dropDownView":Landroid/view/ViewGroup;
     .end local v1    # "view0":Landroid/view/View;
     .end local v2    # "view1":Landroid/view/View;
@@ -3342,7 +2985,6 @@
     :goto_1
     return-void
 
-    .line 1237
     :cond_2
     invoke-virtual {p0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->getPromptPosition()I
 
@@ -3350,12 +2992,10 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 1238
     invoke-virtual {p0, v5}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->setPromptPosition(I)V
 
     goto :goto_0
 
-    .line 1253
     .restart local v0    # "dropDownView":Landroid/view/ViewGroup;
     .restart local v1    # "view0":Landroid/view/View;
     .restart local v2    # "view1":Landroid/view/View;
@@ -3364,13 +3004,10 @@
 
     if-eqz v3, :cond_1
 
-    .line 1254
     invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
 
-    .line 1255
     invoke-virtual {v0, v2, v5}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
 
-    .line 1256
     invoke-virtual {v0, v1, v4}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
 
     goto :goto_1

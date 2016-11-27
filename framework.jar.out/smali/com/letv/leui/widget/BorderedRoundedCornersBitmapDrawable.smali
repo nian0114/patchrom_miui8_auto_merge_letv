@@ -71,93 +71,76 @@
 
     const/4 v3, 0x1
 
-    .line 86
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    .line 29
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBounds:Landroid/graphics/RectF;
 
-    .line 31
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mDrawableRect:Landroid/graphics/RectF;
 
-    .line 34
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapRect:Landroid/graphics/RectF;
 
-    .line 40
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderRect:Landroid/graphics/RectF;
 
-    .line 45
     sget-object v0, Landroid/widget/ImageView$ScaleType;->FIT_XY:Landroid/widget/ImageView$ScaleType;
 
     iput-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mScaleType:Landroid/widget/ImageView$ScaleType;
 
-    .line 47
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mShaderMatrix:Landroid/graphics/Matrix;
 
-    .line 50
     iput-boolean v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mPathIsDirty:Z
 
-    .line 51
     new-instance v0, Landroid/graphics/Path;
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderPath:Landroid/graphics/Path;
 
-    .line 52
     new-instance v0, Landroid/graphics/Path;
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mDrawablePath:Landroid/graphics/Path;
 
-    .line 53
     iput-object v1, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderRadiusArray:[F
 
-    .line 54
     iput-object v1, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mDrawableRadiusArray:[F
 
-    .line 88
     iput p3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderWidth:I
 
-    .line 89
     iput p4, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderColor:I
 
-    .line 91
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
 
     iput v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapWidth:I
 
-    .line 92
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v0
 
     iput v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapHeight:I
 
-    .line 93
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapRect:Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapWidth:I
@@ -170,10 +153,8 @@
 
     invoke-virtual {v0, v4, v4, v1, v2}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 95
     iput p2, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mCornerRadius:F
 
-    .line 96
     new-instance v0, Landroid/graphics/BitmapShader;
 
     sget-object v1, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
@@ -184,62 +165,52 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapShader:Landroid/graphics/BitmapShader;
 
-    .line 97
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapShader:Landroid/graphics/BitmapShader;
 
     iget-object v1, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mShaderMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v0, v1}, Landroid/graphics/BitmapShader;->setLocalMatrix(Landroid/graphics/Matrix;)V
 
-    .line 99
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapPaint:Landroid/graphics/Paint;
 
-    .line 100
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 101
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapPaint:Landroid/graphics/Paint;
 
     iget-object v1, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapShader:Landroid/graphics/BitmapShader;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
-    .line 103
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderPaint:Landroid/graphics/Paint;
 
-    .line 104
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 105
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderColor:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 106
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderPaint:Landroid/graphics/Paint;
 
     int-to-float v1, p3
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 108
     invoke-virtual {p0, p5}, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 109
     return-void
 .end method
 
@@ -260,85 +231,68 @@
 
     const/4 v3, 0x1
 
-    .line 58
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    .line 29
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBounds:Landroid/graphics/RectF;
 
-    .line 31
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mDrawableRect:Landroid/graphics/RectF;
 
-    .line 34
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapRect:Landroid/graphics/RectF;
 
-    .line 40
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderRect:Landroid/graphics/RectF;
 
-    .line 45
     sget-object v0, Landroid/widget/ImageView$ScaleType;->FIT_XY:Landroid/widget/ImageView$ScaleType;
 
     iput-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mScaleType:Landroid/widget/ImageView$ScaleType;
 
-    .line 47
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mShaderMatrix:Landroid/graphics/Matrix;
 
-    .line 50
     iput-boolean v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mPathIsDirty:Z
 
-    .line 51
     new-instance v0, Landroid/graphics/Path;
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderPath:Landroid/graphics/Path;
 
-    .line 52
     new-instance v0, Landroid/graphics/Path;
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mDrawablePath:Landroid/graphics/Path;
 
-    .line 53
     iput-object v4, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderRadiusArray:[F
 
-    .line 54
     iput-object v4, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mDrawableRadiusArray:[F
 
-    .line 59
     iput p3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderWidth:I
 
-    .line 60
     iput p4, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderColor:I
 
-    .line 62
     iput p5, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapWidth:I
 
-    .line 63
     iput p6, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapHeight:I
 
-    .line 64
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapRect:Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapWidth:I
@@ -351,25 +305,20 @@
 
     invoke-virtual {v0, v5, v5, v1, v2}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 66
     iput p2, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mCornerRadius:F
 
-    .line 67
     iput-object v4, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapShader:Landroid/graphics/BitmapShader;
 
-    .line 72
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapPaint:Landroid/graphics/Paint;
 
-    .line 73
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 74
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1}, Landroid/graphics/drawable/ColorDrawable;->getColor()I
@@ -378,36 +327,30 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 77
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderPaint:Landroid/graphics/Paint;
 
-    .line 78
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 79
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderColor:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 80
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderPaint:Landroid/graphics/Paint;
 
     int-to-float v1, p3
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 82
     invoke-virtual {p0, p7}, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 83
     return-void
 .end method
 
@@ -415,32 +358,26 @@
     .locals 5
 
     .prologue
-    .line 418
     iget-boolean v1, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mPathIsDirty:Z
 
     if-eqz v1, :cond_3
 
-    .line 419
     iget-object v1, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderPath:Landroid/graphics/Path;
 
     invoke-virtual {v1}, Landroid/graphics/Path;->reset()V
 
-    .line 420
     iget-object v1, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mDrawablePath:Landroid/graphics/Path;
 
     invoke-virtual {v1}, Landroid/graphics/Path;->reset()V
 
-    .line 422
     iget-object v1, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mDrawableRadiusArray:[F
 
     if-eqz v1, :cond_2
 
-    .line 423
     iget v1, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderWidth:I
 
     if-eqz v1, :cond_1
 
-    .line 424
     iget-object v1, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mDrawableRadiusArray:[F
 
     invoke-virtual {v1}, [F->clone()Ljava/lang/Object;
@@ -451,7 +388,6 @@
 
     iput-object v1, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderRadiusArray:[F
 
-    .line 425
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -462,7 +398,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 426
     iget-object v1, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mDrawableRadiusArray:[F
 
     iget-object v2, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mDrawableRadiusArray:[F
@@ -483,12 +418,10 @@
 
     aput v2, v1, v0
 
-    .line 425
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 429
     :cond_0
     iget-object v1, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderPath:Landroid/graphics/Path;
 
@@ -500,7 +433,6 @@
 
     invoke-virtual {v1, v2, v3, v4}, Landroid/graphics/Path;->addRoundRect(Landroid/graphics/RectF;[FLandroid/graphics/Path$Direction;)V
 
-    .line 432
     .end local v0    # "i":I
     :cond_1
     iget-object v1, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mDrawablePath:Landroid/graphics/Path;
@@ -513,13 +445,11 @@
 
     invoke-virtual {v1, v2, v3, v4}, Landroid/graphics/Path;->addRoundRect(Landroid/graphics/RectF;[FLandroid/graphics/Path$Direction;)V
 
-    .line 435
     :cond_2
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mPathIsDirty:Z
 
-    .line 437
     :cond_3
     return-void
 .end method
@@ -531,12 +461,10 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 305
     instance-of v4, p0, Landroid/graphics/drawable/BitmapDrawable;
 
     if-eqz v4, :cond_0
 
-    .line 306
     check-cast p0, Landroid/graphics/drawable/BitmapDrawable;
 
     .end local p0    # "drawable":Landroid/graphics/drawable/Drawable;
@@ -544,7 +472,6 @@
 
     move-result-object v0
 
-    .line 321
     .local v0, "bitmap":Landroid/graphics/Bitmap;
     .local v2, "height":I
     .local v3, "width":I
@@ -552,7 +479,6 @@
     :goto_0
     return-object v0
 
-    .line 310
     .end local v0    # "bitmap":Landroid/graphics/Bitmap;
     .end local v2    # "height":I
     .end local v3    # "width":I
@@ -561,32 +487,27 @@
 
     move-result v3
 
-    .line 311
     .restart local v3    # "width":I
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v2
 
-    .line 312
     .restart local v2    # "height":I
     if-lez v3, :cond_1
 
     if-lez v2, :cond_1
 
-    .line 313
     sget-object v4, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     invoke-static {v3, v2, v4}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 314
     .restart local v0    # "bitmap":Landroid/graphics/Bitmap;
     new-instance v1, Landroid/graphics/Canvas;
 
     invoke-direct {v1, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 315
     .local v1, "canvas":Landroid/graphics/Canvas;
     invoke-virtual {v1}, Landroid/graphics/Canvas;->getWidth()I
 
@@ -598,12 +519,10 @@
 
     invoke-virtual {p0, v6, v6, v4, v5}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 316
     invoke-virtual {p0, v1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     goto :goto_0
 
-    .line 318
     .end local v0    # "bitmap":Landroid/graphics/Bitmap;
     .end local v1    # "canvas":Landroid/graphics/Canvas;
     :cond_1
@@ -622,30 +541,24 @@
     .param p4, "scaleType"    # Landroid/widget/ImageView$ScaleType;
 
     .prologue
-    .line 330
     if-eqz p0, :cond_5
 
-    .line 331
     instance-of v0, p0, Landroid/graphics/drawable/TransitionDrawable;
 
     if-eqz v0, :cond_3
 
     move-object v10, p0
 
-    .line 332
     check-cast v10, Landroid/graphics/drawable/TransitionDrawable;
 
-    .line 333
     .local v10, "td":Landroid/graphics/drawable/TransitionDrawable;
     invoke-virtual {v10}, Landroid/graphics/drawable/TransitionDrawable;->getNumberOfLayers()I
 
     move-result v9
 
-    .line 335
     .local v9, "num":I
     new-array v7, v9, [Landroid/graphics/drawable/Drawable;
 
-    .line 336
     .local v7, "drawableList":[Landroid/graphics/drawable/Drawable;
     const/4 v8, 0x0
 
@@ -653,16 +566,13 @@
     :goto_0
     if-ge v8, v9, :cond_2
 
-    .line 337
     invoke-virtual {v10, v8}, Landroid/graphics/drawable/TransitionDrawable;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v6
 
-    .line 338
     .local v6, "d":Landroid/graphics/drawable/Drawable;
     invoke-virtual {v10, v8, v8}, Landroid/graphics/drawable/TransitionDrawable;->setId(II)V
 
-    .line 339
     instance-of v0, v6, Landroid/graphics/drawable/ColorDrawable;
 
     if-nez v0, :cond_0
@@ -671,17 +581,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 342
     :cond_0
     aput-object v6, v7, v8
 
-    .line 336
     :goto_1
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_0
 
-    .line 344
     :cond_1
     new-instance v0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;
 
@@ -703,7 +610,6 @@
 
     goto :goto_1
 
-    .line 350
     .end local v6    # "d":Landroid/graphics/drawable/Drawable;
     :cond_2
     const/4 v8, 0x0
@@ -711,17 +617,14 @@
     :goto_2
     if-ge v8, v9, :cond_4
 
-    .line 351
     aget-object v0, v7, v8
 
     invoke-virtual {v10, v8, v0}, Landroid/graphics/drawable/TransitionDrawable;->setDrawableByLayerId(ILandroid/graphics/drawable/Drawable;)Z
 
-    .line 350
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_2
 
-    .line 356
     .end local v7    # "drawableList":[Landroid/graphics/drawable/Drawable;
     .end local v8    # "i":I
     .end local v9    # "num":I
@@ -731,11 +634,9 @@
 
     move-result-object v1
 
-    .line 357
     .local v1, "bm":Landroid/graphics/Bitmap;
     if-eqz v1, :cond_5
 
-    .line 358
     new-instance v0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;
 
     move v2, p1
@@ -750,7 +651,6 @@
 
     move-object v10, v0
 
-    .line 364
     .end local v1    # "bm":Landroid/graphics/Bitmap;
     :cond_4
     :goto_3
@@ -771,7 +671,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 325
     invoke-static {p0, p1, v0, v0, p2}, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->fromDrawable(Landroid/graphics/drawable/Drawable;FIILandroid/widget/ImageView$ScaleType;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -784,18 +683,14 @@
     .param p1, "radii"    # [F
 
     .prologue
-    .line 411
     iput-object p1, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mDrawableRadiusArray:[F
 
-    .line 412
     if-nez p1, :cond_0
 
-    .line 413
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mCornerRadius:F
 
-    .line 415
     :cond_0
     return-void
 .end method
@@ -808,7 +703,6 @@
 
     const/high16 v9, 0x3f000000    # 0.5f
 
-    .line 131
     sget-object v3, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable$1;->$SwitchMap$android$widget$ImageView$ScaleType:[I
 
     iget-object v4, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mScaleType:Landroid/widget/ImageView$ScaleType;
@@ -821,14 +715,12 @@
 
     packed-switch v3, :pswitch_data_0
 
-    .line 216
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderRect:Landroid/graphics/RectF;
 
     iget-object v4, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBounds:Landroid/graphics/RectF;
 
     invoke-virtual {v3, v4}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
 
-    .line 217
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mDrawableRect:Landroid/graphics/RectF;
 
     iget v4, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderWidth:I
@@ -869,12 +761,10 @@
 
     invoke-virtual {v3, v4, v5, v6, v7}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 219
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mShaderMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v3, v10}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
 
-    .line 220
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mShaderMatrix:Landroid/graphics/Matrix;
 
     iget-object v4, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapRect:Landroid/graphics/RectF;
@@ -885,31 +775,26 @@
 
     invoke-virtual {v3, v4, v5, v6}, Landroid/graphics/Matrix;->setRectToRect(Landroid/graphics/RectF;Landroid/graphics/RectF;Landroid/graphics/Matrix$ScaleToFit;)Z
 
-    .line 223
     :goto_0
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapShader:Landroid/graphics/BitmapShader;
 
     if-eqz v3, :cond_0
 
-    .line 224
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapShader:Landroid/graphics/BitmapShader;
 
     iget-object v4, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mShaderMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v3, v4}, Landroid/graphics/BitmapShader;->setLocalMatrix(Landroid/graphics/Matrix;)V
 
-    .line 225
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapPaint:Landroid/graphics/Paint;
 
     iget-object v4, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapShader:Landroid/graphics/BitmapShader;
 
     invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
-    .line 227
     :cond_0
     return-void
 
-    .line 134
     :pswitch_0
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderRect:Landroid/graphics/RectF;
 
@@ -917,7 +802,6 @@
 
     invoke-virtual {v3, v4}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
 
-    .line 135
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mDrawableRect:Landroid/graphics/RectF;
 
     iget v4, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderWidth:I
@@ -958,12 +842,10 @@
 
     invoke-virtual {v3, v4, v5, v6, v7}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 138
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mShaderMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v3, v10}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
 
-    .line 139
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mShaderMatrix:Landroid/graphics/Matrix;
 
     iget-object v4, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mDrawableRect:Landroid/graphics/RectF;
@@ -1010,7 +892,6 @@
 
     goto :goto_0
 
-    .line 145
     :pswitch_1
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderRect:Landroid/graphics/RectF;
 
@@ -1018,7 +899,6 @@
 
     invoke-virtual {v3, v4}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
 
-    .line 146
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mDrawableRect:Landroid/graphics/RectF;
 
     iget v4, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderWidth:I
@@ -1059,19 +939,15 @@
 
     invoke-virtual {v3, v4, v5, v6, v7}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 149
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mShaderMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v3, v10}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
 
-    .line 151
     const/4 v0, 0x0
 
-    .line 152
     .local v0, "dx":F
     const/4 v1, 0x0
 
-    .line 154
     .local v1, "dy":F
     iget v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapWidth:I
 
@@ -1101,7 +977,6 @@
 
     if-lez v3, :cond_1
 
-    .line 155
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mDrawableRect:Landroid/graphics/RectF;
 
     invoke-virtual {v3}, Landroid/graphics/RectF;->height()F
@@ -1114,7 +989,6 @@
 
     div-float v2, v3, v4
 
-    .line 156
     .local v2, "scale":F
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mDrawableRect:Landroid/graphics/RectF;
 
@@ -1132,13 +1006,11 @@
 
     mul-float v0, v3, v9
 
-    .line 162
     :goto_1
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mShaderMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v3, v2, v2}, Landroid/graphics/Matrix;->setScale(FF)V
 
-    .line 163
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mShaderMatrix:Landroid/graphics/Matrix;
 
     add-float v4, v0, v9
@@ -1165,7 +1037,6 @@
 
     goto/16 :goto_0
 
-    .line 158
     .end local v2    # "scale":F
     :cond_1
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mDrawableRect:Landroid/graphics/RectF;
@@ -1180,7 +1051,6 @@
 
     div-float v2, v3, v4
 
-    .line 159
     .restart local v2    # "scale":F
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mDrawableRect:Landroid/graphics/RectF;
 
@@ -1200,7 +1070,6 @@
 
     goto :goto_1
 
-    .line 168
     .end local v0    # "dx":F
     .end local v1    # "dy":F
     .end local v2    # "scale":F
@@ -1209,7 +1078,6 @@
 
     invoke-virtual {v3, v10}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
 
-    .line 170
     iget v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapWidth:I
 
     int-to-float v3, v3
@@ -1238,10 +1106,8 @@
 
     if-gtz v3, :cond_2
 
-    .line 171
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 177
     .restart local v2    # "scale":F
     :goto_2
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBounds:Landroid/graphics/RectF;
@@ -1266,7 +1132,6 @@
 
     int-to-float v0, v3
 
-    .line 178
     .restart local v0    # "dx":F
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBounds:Landroid/graphics/RectF;
 
@@ -1290,32 +1155,27 @@
 
     int-to-float v1, v3
 
-    .line 180
     .restart local v1    # "dy":F
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mShaderMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v3, v2, v2}, Landroid/graphics/Matrix;->setScale(FF)V
 
-    .line 181
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mShaderMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v3, v0, v1}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    .line 183
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderRect:Landroid/graphics/RectF;
 
     iget-object v4, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapRect:Landroid/graphics/RectF;
 
     invoke-virtual {v3, v4}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
 
-    .line 184
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mShaderMatrix:Landroid/graphics/Matrix;
 
     iget-object v4, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderRect:Landroid/graphics/RectF;
 
     invoke-virtual {v3, v4}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
 
-    .line 185
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mDrawableRect:Landroid/graphics/RectF;
 
     iget-object v4, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderRect:Landroid/graphics/RectF;
@@ -1360,7 +1220,6 @@
 
     invoke-virtual {v3, v4, v5, v6, v7}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 187
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mShaderMatrix:Landroid/graphics/Matrix;
 
     iget-object v4, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapRect:Landroid/graphics/RectF;
@@ -1373,7 +1232,6 @@
 
     goto/16 :goto_0
 
-    .line 173
     .end local v0    # "dx":F
     .end local v1    # "dy":F
     .end local v2    # "scale":F
@@ -1409,7 +1267,6 @@
     .restart local v2    # "scale":F
     goto :goto_2
 
-    .line 190
     .end local v2    # "scale":F
     :pswitch_3
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderRect:Landroid/graphics/RectF;
@@ -1418,7 +1275,6 @@
 
     invoke-virtual {v3, v4}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
 
-    .line 191
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mShaderMatrix:Landroid/graphics/Matrix;
 
     iget-object v4, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapRect:Landroid/graphics/RectF;
@@ -1429,14 +1285,12 @@
 
     invoke-virtual {v3, v4, v5, v6}, Landroid/graphics/Matrix;->setRectToRect(Landroid/graphics/RectF;Landroid/graphics/RectF;Landroid/graphics/Matrix$ScaleToFit;)Z
 
-    .line 192
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mShaderMatrix:Landroid/graphics/Matrix;
 
     iget-object v4, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderRect:Landroid/graphics/RectF;
 
     invoke-virtual {v3, v4}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
 
-    .line 193
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mDrawableRect:Landroid/graphics/RectF;
 
     iget-object v4, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderRect:Landroid/graphics/RectF;
@@ -1481,7 +1335,6 @@
 
     invoke-virtual {v3, v4, v5, v6, v7}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 195
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mShaderMatrix:Landroid/graphics/Matrix;
 
     iget-object v4, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapRect:Landroid/graphics/RectF;
@@ -1494,7 +1347,6 @@
 
     goto/16 :goto_0
 
-    .line 198
     :pswitch_4
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderRect:Landroid/graphics/RectF;
 
@@ -1502,7 +1354,6 @@
 
     invoke-virtual {v3, v4}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
 
-    .line 199
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mShaderMatrix:Landroid/graphics/Matrix;
 
     iget-object v4, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapRect:Landroid/graphics/RectF;
@@ -1513,14 +1364,12 @@
 
     invoke-virtual {v3, v4, v5, v6}, Landroid/graphics/Matrix;->setRectToRect(Landroid/graphics/RectF;Landroid/graphics/RectF;Landroid/graphics/Matrix$ScaleToFit;)Z
 
-    .line 200
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mShaderMatrix:Landroid/graphics/Matrix;
 
     iget-object v4, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderRect:Landroid/graphics/RectF;
 
     invoke-virtual {v3, v4}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
 
-    .line 201
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mDrawableRect:Landroid/graphics/RectF;
 
     iget-object v4, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderRect:Landroid/graphics/RectF;
@@ -1565,7 +1414,6 @@
 
     invoke-virtual {v3, v4, v5, v6, v7}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 203
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mShaderMatrix:Landroid/graphics/Matrix;
 
     iget-object v4, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapRect:Landroid/graphics/RectF;
@@ -1578,7 +1426,6 @@
 
     goto/16 :goto_0
 
-    .line 206
     :pswitch_5
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderRect:Landroid/graphics/RectF;
 
@@ -1586,7 +1433,6 @@
 
     invoke-virtual {v3, v4}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
 
-    .line 207
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mShaderMatrix:Landroid/graphics/Matrix;
 
     iget-object v4, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapRect:Landroid/graphics/RectF;
@@ -1597,14 +1443,12 @@
 
     invoke-virtual {v3, v4, v5, v6}, Landroid/graphics/Matrix;->setRectToRect(Landroid/graphics/RectF;Landroid/graphics/RectF;Landroid/graphics/Matrix$ScaleToFit;)Z
 
-    .line 208
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mShaderMatrix:Landroid/graphics/Matrix;
 
     iget-object v4, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderRect:Landroid/graphics/RectF;
 
     invoke-virtual {v3, v4}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
 
-    .line 209
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mDrawableRect:Landroid/graphics/RectF;
 
     iget-object v4, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderRect:Landroid/graphics/RectF;
@@ -1649,7 +1493,6 @@
 
     invoke-virtual {v3, v4, v5, v6, v7}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 211
     iget-object v3, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mShaderMatrix:Landroid/graphics/Matrix;
 
     iget-object v4, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapRect:Landroid/graphics/RectF;
@@ -1662,7 +1505,6 @@
 
     goto/16 :goto_0
 
-    .line 131
     nop
 
     :pswitch_data_0
@@ -1685,38 +1527,31 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 259
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mDrawableRadiusArray:[F
 
     if-eqz v0, :cond_1
 
-    .line 260
     invoke-direct {p0}, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->buildPathIfDirty()V
 
-    .line 262
     iget v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderWidth:I
 
     if-lez v0, :cond_0
 
-    .line 263
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderPath:Landroid/graphics/Path;
 
     iget-object v1, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 264
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mDrawablePath:Landroid/graphics/Path;
 
     iget-object v1, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 277
     :goto_0
     return-void
 
-    .line 266
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mDrawablePath:Landroid/graphics/Path;
 
@@ -1726,13 +1561,11 @@
 
     goto :goto_0
 
-    .line 269
     :cond_1
     iget v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderWidth:I
 
     if-lez v0, :cond_2
 
-    .line 270
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderRect:Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mCornerRadius:F
@@ -1743,7 +1576,6 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 271
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mDrawableRect:Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mCornerRadius:F
@@ -1776,7 +1608,6 @@
 
     goto :goto_0
 
-    .line 274
     :cond_2
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mDrawableRect:Landroid/graphics/RectF;
 
@@ -1795,7 +1626,6 @@
     .locals 1
 
     .prologue
-    .line 376
     iget v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderColor:I
 
     return v0
@@ -1805,7 +1635,6 @@
     .locals 1
 
     .prologue
-    .line 372
     iget v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderWidth:I
 
     return v0
@@ -1815,7 +1644,6 @@
     .locals 1
 
     .prologue
-    .line 368
     iget v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mCornerRadius:F
 
     return v0
@@ -1825,7 +1653,6 @@
     .locals 1
 
     .prologue
-    .line 301
     iget v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapHeight:I
 
     return v0
@@ -1835,7 +1662,6 @@
     .locals 1
 
     .prologue
-    .line 296
     iget v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapWidth:I
 
     return v0
@@ -1845,7 +1671,6 @@
     .locals 1
 
     .prologue
-    .line 281
     const/4 v0, -0x3
 
     return v0
@@ -1855,7 +1680,6 @@
     .locals 1
 
     .prologue
-    .line 123
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mScaleType:Landroid/widget/ImageView$ScaleType;
 
     return-object v0
@@ -1866,18 +1690,14 @@
     .param p1, "bounds"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 233
     invoke-super {p0, p1}, Landroid/graphics/drawable/Drawable;->onBoundsChange(Landroid/graphics/Rect;)V
 
-    .line 235
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBounds:Landroid/graphics/RectF;
 
     invoke-virtual {v0, p1}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
 
-    .line 253
     invoke-direct {p0}, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->setMatrix()V
 
-    .line 254
     return-void
 .end method
 
@@ -1886,12 +1706,10 @@
     .param p1, "alpha"    # I
 
     .prologue
-    .line 286
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 287
     return-void
 .end method
 
@@ -1900,15 +1718,12 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 396
     iput p1, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderColor:I
 
-    .line 397
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 398
     return-void
 .end method
 
@@ -1917,10 +1732,8 @@
     .param p1, "width"    # I
 
     .prologue
-    .line 390
     iput p1, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderWidth:I
 
-    .line 391
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderWidth:I
@@ -1929,12 +1742,10 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 392
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mPathIsDirty:Z
 
-    .line 393
     return-void
 .end method
 
@@ -1943,12 +1754,10 @@
     .param p1, "cf"    # Landroid/graphics/ColorFilter;
 
     .prologue
-    .line 291
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBitmapPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
-    .line 292
     return-void
 .end method
 
@@ -1960,7 +1769,6 @@
     .param p4, "bottomRightRadius"    # I
 
     .prologue
-    .line 402
     const/16 v0, 0x8
 
     new-array v0, v0, [F
@@ -2015,7 +1823,6 @@
 
     invoke-direct {p0, v0}, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->setCornerRadii([F)V
 
-    .line 408
     return-void
 .end method
 
@@ -2026,31 +1833,24 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 380
     iput p1, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mCornerRadius:F
 
-    .line 382
     iput-object v1, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderRadiusArray:[F
 
-    .line 383
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mBorderPath:Landroid/graphics/Path;
 
     invoke-virtual {v0}, Landroid/graphics/Path;->reset()V
 
-    .line 384
     iput-object v1, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mDrawableRadiusArray:[F
 
-    .line 385
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mDrawablePath:Landroid/graphics/Path;
 
     invoke-virtual {v0}, Landroid/graphics/Path;->reset()V
 
-    .line 386
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mPathIsDirty:Z
 
-    .line 387
     return-void
 .end method
 
@@ -2059,25 +1859,19 @@
     .param p1, "scaleType"    # Landroid/widget/ImageView$ScaleType;
 
     .prologue
-    .line 112
     if-nez p1, :cond_0
 
-    .line 113
     sget-object p1, Landroid/widget/ImageView$ScaleType;->FIT_XY:Landroid/widget/ImageView$ScaleType;
 
-    .line 116
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mScaleType:Landroid/widget/ImageView$ScaleType;
 
     if-eq v0, p1, :cond_1
 
-    .line 117
     iput-object p1, p0, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->mScaleType:Landroid/widget/ImageView$ScaleType;
 
-    .line 118
     invoke-direct {p0}, Lcom/letv/leui/widget/BorderedRoundedCornersBitmapDrawable;->setMatrix()V
 
-    .line 120
     :cond_1
     return-void
 .end method

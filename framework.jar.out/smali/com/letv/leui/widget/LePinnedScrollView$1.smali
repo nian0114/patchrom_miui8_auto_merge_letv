@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 57
     iput-object p1, p0, Lcom/letv/leui/widget/LePinnedScrollView$1;->this$0:Lcom/letv/leui/widget/LePinnedScrollView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 8
 
     .prologue
-    .line 61
     iget-object v4, p0, Lcom/letv/leui/widget/LePinnedScrollView$1;->this$0:Lcom/letv/leui/widget/LePinnedScrollView;
 
     # getter for: Lcom/letv/leui/widget/LePinnedScrollView;->currentlyStickingView:Landroid/view/View;
@@ -50,7 +48,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 62
     iget-object v4, p0, Lcom/letv/leui/widget/LePinnedScrollView$1;->this$0:Lcom/letv/leui/widget/LePinnedScrollView;
 
     iget-object v5, p0, Lcom/letv/leui/widget/LePinnedScrollView$1;->this$0:Lcom/letv/leui/widget/LePinnedScrollView;
@@ -65,7 +62,6 @@
 
     move-result v1
 
-    .line 63
     .local v1, "l":I
     iget-object v4, p0, Lcom/letv/leui/widget/LePinnedScrollView$1;->this$0:Lcom/letv/leui/widget/LePinnedScrollView;
 
@@ -81,7 +77,6 @@
 
     move-result v3
 
-    .line 64
     .local v3, "t":I
     iget-object v4, p0, Lcom/letv/leui/widget/LePinnedScrollView$1;->this$0:Lcom/letv/leui/widget/LePinnedScrollView;
 
@@ -97,7 +92,6 @@
 
     move-result v2
 
-    .line 65
     .local v2, "r":I
     iget-object v4, p0, Lcom/letv/leui/widget/LePinnedScrollView$1;->this$0:Lcom/letv/leui/widget/LePinnedScrollView;
 
@@ -133,13 +127,11 @@
 
     float-to-int v0, v4
 
-    .line 66
     .local v0, "b":I
     iget-object v4, p0, Lcom/letv/leui/widget/LePinnedScrollView$1;->this$0:Lcom/letv/leui/widget/LePinnedScrollView;
 
     invoke-virtual {v4, v1, v3, v2, v0}, Lcom/letv/leui/widget/LePinnedScrollView;->invalidate(IIII)V
 
-    .line 68
     .end local v0    # "b":I
     .end local v1    # "l":I
     .end local v2    # "r":I
@@ -151,6 +143,5 @@
 
     invoke-virtual {v4, p0, v6, v7}, Lcom/letv/leui/widget/LePinnedScrollView;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 69
     return-void
 .end method

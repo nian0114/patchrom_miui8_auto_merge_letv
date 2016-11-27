@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 59
     iput-object p1, p0, Lcom/letv/leui/widget/LeTitleEditText$1;->this$0:Lcom/letv/leui/widget/LeTitleEditText;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 1
 
     .prologue
-    .line 61
     iget-object v0, p0, Lcom/letv/leui/widget/LeTitleEditText$1;->this$0:Lcom/letv/leui/widget/LeTitleEditText;
 
     # invokes: Lcom/letv/leui/widget/LeTitleEditText;->updateFocusedState()V
     invoke-static {v0}, Lcom/letv/leui/widget/LeTitleEditText;->access$000(Lcom/letv/leui/widget/LeTitleEditText;)V
 
-    .line 62
     return-void
 .end method

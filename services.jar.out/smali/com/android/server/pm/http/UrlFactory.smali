@@ -23,27 +23,22 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22
     const-string v0, "/manager/api/v1/salearea"
 
     iput-object v0, p0, Lcom/android/server/pm/http/UrlFactory;->serverPath:Ljava/lang/String;
 
-    .line 23
     const-string v0, "https://device.g.scloud.letv.com/manager/api/v1/salearea"
 
     iput-object v0, p0, Lcom/android/server/pm/http/UrlFactory;->serverUrl:Ljava/lang/String;
 
-    .line 28
     invoke-direct {p0, p1}, Lcom/android/server/pm/http/UrlFactory;->productParam(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/pm/http/UrlFactory;->baseUrl:Ljava/lang/String;
 
-    .line 29
     return-void
 .end method
 
@@ -52,14 +47,11 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 49
     const/4 v1, 0x1
 
-    .line 51
     .local v1, "httpType":I
     const-string v4, "2"
 
-    .line 53
     .local v4, "type":Ljava/lang/String;
     const-string v5, "phone"
 
@@ -69,7 +61,6 @@
 
     check-cast v3, Landroid/telephony/TelephonyManager;
 
-    .line 55
     .local v3, "tm":Landroid/telephony/TelephonyManager;
     const/4 v5, 0x0
 
@@ -77,7 +68,6 @@
 
     move-result-object v2
 
-    .line 63
     .local v2, "imei":Ljava/lang/String;
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -85,25 +75,20 @@
 
     if-eqz v5, :cond_0
 
-    .line 64
     const-string v5, "Area"
 
     const-string v6, "get imei is null"
 
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 65
     const/4 v5, 0x0
 
-    .line 71
     :goto_0
     return-object v5
 
-    .line 69
     :cond_0
     const-string v0, "https://device.g.scloud.letv.com/manager/api/v1/salearea"
 
-    .line 70
     .local v0, "connecUrl":Ljava/lang/String;
     new-instance v5, Lcom/android/server/pm/http/BaseParam;
 
@@ -113,7 +98,6 @@
 
     iput-object v5, p0, Lcom/android/server/pm/http/UrlFactory;->baseParam:Lcom/android/server/pm/http/BaseParam;
 
-    .line 71
     iget-object v5, p0, Lcom/android/server/pm/http/UrlFactory;->baseParam:Lcom/android/server/pm/http/BaseParam;
 
     invoke-virtual {v5, v0}, Lcom/android/server/pm/http/BaseParam;->encodeUrl(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -143,7 +127,6 @@
     .end annotation
 
     .prologue
-    .line 44
     iget-object v0, p0, Lcom/android/server/pm/http/UrlFactory;->baseParam:Lcom/android/server/pm/http/BaseParam;
 
     iget-object v0, v0, Lcom/android/server/pm/http/BaseParam;->headers:Ljava/util/Map;
@@ -155,7 +138,6 @@
     .locals 1
 
     .prologue
-    .line 32
     iget-object v0, p0, Lcom/android/server/pm/http/UrlFactory;->baseUrl:Ljava/lang/String;
 
     return-object v0
@@ -165,7 +147,6 @@
     .locals 1
 
     .prologue
-    .line 36
     iget-object v0, p0, Lcom/android/server/pm/http/UrlFactory;->baseParam:Lcom/android/server/pm/http/BaseParam;
 
     iget v0, v0, Lcom/android/server/pm/http/BaseParam;->httpType:I
@@ -177,7 +158,6 @@
     .locals 1
 
     .prologue
-    .line 40
     iget-object v0, p0, Lcom/android/server/pm/http/UrlFactory;->baseParam:Lcom/android/server/pm/http/BaseParam;
 
     invoke-virtual {v0}, Lcom/android/server/pm/http/BaseParam;->needSignature()Z

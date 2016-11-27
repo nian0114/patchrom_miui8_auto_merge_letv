@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 367
     iput-object p1, p0, Lcom/android/server/LocationManagerService$MSiPhoneStateListener;->this$0:Lcom/android/server/LocationManagerService;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/LocationManagerService$1;
 
     .prologue
-    .line 367
     invoke-direct {p0, p1}, Lcom/android/server/LocationManagerService$MSiPhoneStateListener;-><init>(Lcom/android/server/LocationManagerService;)V
 
     return-void
@@ -50,10 +48,8 @@
     .param p1, "serviceState"    # Landroid/telephony/ServiceState;
 
     .prologue
-    .line 371
     invoke-super {p0, p1}, Landroid/telephony/PhoneStateListener;->onServiceStateChanged(Landroid/telephony/ServiceState;)V
 
-    .line 372
     iget-object v1, p0, Lcom/android/server/LocationManagerService$MSiPhoneStateListener;->this$0:Lcom/android/server/LocationManagerService;
 
     # getter for: Lcom/android/server/LocationManagerService;->mContext:Landroid/content/Context;
@@ -71,7 +67,6 @@
 
     move-result-object v0
 
-    .line 374
     .local v0, "network_provider_mode":Ljava/lang/String;
     const-string v1, "auto"
 
@@ -81,18 +76,15 @@
 
     if-nez v1, :cond_0
 
-    .line 375
     const-string v1, "LocationManagerService"
 
     const-string v2, "not auto mode just return from PhoneStateChanged"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 379
     :goto_0
     return-void
 
-    .line 378
     :cond_0
     iget-object v1, p0, Lcom/android/server/LocationManagerService$MSiPhoneStateListener;->this$0:Lcom/android/server/LocationManagerService;
 

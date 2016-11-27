@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 177
     iput-object p1, p0, Lcom/letv/leui/widget/LeAlertParams$3;->this$0:Lcom/letv/leui/widget/LeAlertParams;
 
     iput-object p2, p0, Lcom/letv/leui/widget/LeAlertParams$3;->val$onClickListener:Landroid/content/DialogInterface$OnClickListener;
@@ -45,7 +44,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 180
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams$3;->val$onClickListener:Landroid/content/DialogInterface$OnClickListener;
 
     const/4 v1, 0x0
@@ -54,6 +52,5 @@
 
     invoke-interface {v0, v1, v2}, Landroid/content/DialogInterface$OnClickListener;->onClick(Landroid/content/DialogInterface;I)V
 
-    .line 181
     return-void
 .end method

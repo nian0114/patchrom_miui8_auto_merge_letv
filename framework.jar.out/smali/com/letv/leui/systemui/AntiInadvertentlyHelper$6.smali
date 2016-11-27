@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 285
     iput-object p1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper$6;->this$0:Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 288
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper$6;->this$0:Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     iget-object v1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper$6;->this$0:Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
@@ -60,6 +58,5 @@
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 289
     return-void
 .end method

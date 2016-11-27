@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 70
     iput-object p1, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,19 +40,16 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 74
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 177
     :cond_0
     :goto_0
     const/4 v0, 0x1
 
     return v0
 
-    .line 76
     :pswitch_0
     iget-object v0, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
 
@@ -64,7 +60,6 @@
 
     if-nez v0, :cond_0
 
-    .line 85
     iget-object v0, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
 
     # getter for: Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;->pointViewInfoList:Ljava/util/ArrayList;
@@ -74,7 +69,6 @@
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 86
     iget-object v1, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
 
     iget-object v0, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
@@ -111,7 +105,6 @@
     # invokes: Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;->findPointViews(Ljava/util/ArrayList;Landroid/view/View;FF)V
     invoke-static {v1, v2, v3, v4, v0}, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;->access$400(Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;Ljava/util/ArrayList;Landroid/view/View;FF)V
 
-    .line 87
     iget-object v0, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
 
     iget-object v1, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
@@ -124,7 +117,6 @@
     # invokes: Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;->getPointViewsStartY(Ljava/util/ArrayList;)V
     invoke-static {v0, v1}, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;->access$500(Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;Ljava/util/ArrayList;)V
 
-    .line 90
     iget-object v0, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
 
     # getter for: Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;->rootView:Landroid/view/View;
@@ -167,7 +159,6 @@
 
     invoke-virtual {v10, v0}, Landroid/view/View;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 92
     iget-object v1, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -185,7 +176,6 @@
 
     goto :goto_0
 
-    .line 96
     :pswitch_1
     iget-object v0, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
 
@@ -196,7 +186,6 @@
 
     if-nez v0, :cond_0
 
-    .line 100
     iget-object v0, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
 
     # getter for: Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;->rootView:Landroid/view/View;
@@ -239,7 +228,6 @@
 
     invoke-virtual {v10, v0}, Landroid/view/View;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 102
     iget-object v1, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -257,7 +245,6 @@
 
     goto/16 :goto_0
 
-    .line 106
     :pswitch_2
     iget-object v0, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
 
@@ -301,7 +288,6 @@
 
     invoke-virtual {v10, v0}, Landroid/view/View;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 108
     iget-object v1, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -317,7 +303,6 @@
     # setter for: Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;->currentFingerY:F
     invoke-static {v1, v0}, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;->access$602(Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;F)F
 
-    .line 110
     iget-object v0, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
 
     # getter for: Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;->mHandler:Landroid/os/Handler;
@@ -329,7 +314,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 111
     iget-object v0, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
 
     # getter for: Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;->mHandler:Landroid/os/Handler;
@@ -341,7 +325,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 112
     iget-object v0, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
 
     # getter for: Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;->mHandler:Landroid/os/Handler;
@@ -353,7 +336,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 118
     iget-object v0, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
 
     # getter for: Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;->mHandler:Landroid/os/Handler;
@@ -369,7 +351,6 @@
 
     goto/16 :goto_0
 
-    .line 126
     :pswitch_3
     iget-object v0, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
 
@@ -383,7 +364,6 @@
     # invokes: Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;->getPointViewsEndY(Ljava/util/ArrayList;)V
     invoke-static {v0, v1}, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;->access$800(Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;Ljava/util/ArrayList;)V
 
-    .line 127
     iget-object v0, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
 
     iget-object v1, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
@@ -398,7 +378,6 @@
 
     move-result v9
 
-    .line 128
     .local v9, "moveDistance":I
     iget-object v0, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
 
@@ -409,7 +388,6 @@
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 131
     const-string v0, "AppSnapshotImpl"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -458,7 +436,6 @@
 
     invoke-static {v0, v1}, Lcom/letv/leui/util/appsnapshot/L;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 132
     if-gtz v9, :cond_1
 
     iget-object v0, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
@@ -472,7 +449,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 133
     iget-object v0, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
 
     const/4 v1, 0x1
@@ -480,7 +456,6 @@
     # setter for: Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;->isEnd:Z
     invoke-static {v0, v1}, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;->access$002(Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;Z)Z
 
-    .line 134
     iget-object v0, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
 
     # getter for: Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;->picComposeHandler:Lcom/letv/leui/util/appsnapshot/PicComposeHandler;
@@ -490,7 +465,6 @@
 
     invoke-virtual {v0}, Lcom/letv/leui/util/appsnapshot/PicComposeHandler;->forceStop()V
 
-    .line 135
     iget-object v0, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
 
     const/4 v1, 0x0
@@ -500,7 +474,6 @@
 
     goto/16 :goto_0
 
-    .line 140
     :cond_1
     iget-object v0, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
 
@@ -511,7 +484,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 141
     iget-object v0, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
 
     const/4 v1, 0x1
@@ -519,14 +491,12 @@
     # setter for: Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;->isEnd:Z
     invoke-static {v0, v1}, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;->access$002(Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;Z)Z
 
-    .line 142
     const-string v0, "AppSnapshotImpl"
 
     const-string v1, "force stop handler end ... "
 
     invoke-static {v0, v1}, Lcom/letv/leui/util/appsnapshot/L;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 145
     add-int/lit8 v0, v9, -0x32
 
     int-to-float v0, v0
@@ -551,7 +521,6 @@
 
     if-lez v0, :cond_2
 
-    .line 146
     iget-object v0, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
 
     # getter for: Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;->picComposeHandler:Lcom/letv/leui/util/appsnapshot/PicComposeHandler;
@@ -561,7 +530,6 @@
 
     invoke-virtual {v0}, Lcom/letv/leui/util/appsnapshot/PicComposeHandler;->forceStop()V
 
-    .line 174
     :goto_1
     iget-object v0, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
 
@@ -572,7 +540,6 @@
 
     goto/16 :goto_0
 
-    .line 149
     :cond_2
     iget-object v0, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
 
@@ -599,7 +566,6 @@
 
     move-result-object v8
 
-    .line 150
     .local v8, "b1":Landroid/graphics/Bitmap;
     iget-object v0, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
 
@@ -623,7 +589,6 @@
 
     goto :goto_1
 
-    .line 156
     .end local v8    # "b1":Landroid/graphics/Bitmap;
     :cond_3
     add-int/lit8 v0, v9, -0x32
@@ -687,7 +652,6 @@
 
     if-lt v0, v1, :cond_6
 
-    .line 157
     :cond_4
     iget-object v0, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
 
@@ -696,14 +660,12 @@
     # setter for: Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;->isEnd:Z
     invoke-static {v0, v1}, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;->access$002(Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;Z)Z
 
-    .line 158
     const-string v0, "AppSnapshotImpl"
 
     const-string v1, " handler  end ... "
 
     invoke-static {v0, v1}, Lcom/letv/leui/util/appsnapshot/L;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 161
     add-int/lit8 v0, v9, -0x32
 
     int-to-float v0, v0
@@ -728,7 +690,6 @@
 
     if-lez v0, :cond_5
 
-    .line 162
     iget-object v0, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
 
     # getter for: Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;->picComposeHandler:Lcom/letv/leui/util/appsnapshot/PicComposeHandler;
@@ -740,7 +701,6 @@
 
     goto/16 :goto_1
 
-    .line 165
     :cond_5
     iget-object v0, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
 
@@ -767,7 +727,6 @@
 
     move-result-object v8
 
-    .line 166
     .restart local v8    # "b1":Landroid/graphics/Bitmap;
     iget-object v0, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
 
@@ -791,7 +750,6 @@
 
     goto/16 :goto_1
 
-    .line 169
     .end local v8    # "b1":Landroid/graphics/Bitmap;
     :cond_6
     iget-object v0, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
@@ -821,7 +779,6 @@
 
     move-result-object v8
 
-    .line 170
     .restart local v8    # "b1":Landroid/graphics/Bitmap;
     iget-object v0, p0, Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl$1;->this$0:Lcom/letv/leui/util/appsnapshot/AppSnapshotImpl;
 
@@ -845,7 +802,6 @@
 
     goto/16 :goto_1
 
-    .line 74
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 11192
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$12;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
     .param p2, "obj2"    # Ljava/lang/Object;
 
     .prologue
-    .line 11194
     check-cast p2, Ljava/lang/Integer;
 
     .end local p2    # "obj2":Ljava/lang/Object;

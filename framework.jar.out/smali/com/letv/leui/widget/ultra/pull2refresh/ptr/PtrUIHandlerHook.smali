@@ -25,10 +25,8 @@
     .locals 1
 
     .prologue
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 14
     const/4 v0, 0x0
 
     iput-byte v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHook;->mStatus:B
@@ -42,12 +40,10 @@
     .locals 1
 
     .prologue
-    .line 38
     const/4 v0, 0x0
 
     iput-byte v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHook;->mStatus:B
 
-    .line 39
     return-void
 .end method
 
@@ -55,23 +51,19 @@
     .locals 1
 
     .prologue
-    .line 42
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHook;->mResumeAction:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_0
 
-    .line 43
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHook;->mResumeAction:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 45
     :cond_0
     const/4 v0, 0x2
 
     iput-byte v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHook;->mStatus:B
 
-    .line 46
     return-void
 .end method
 
@@ -80,10 +72,8 @@
     .param p1, "runnable"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 54
     iput-object p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHook;->mResumeAction:Ljava/lang/Runnable;
 
-    .line 55
     return-void
 .end method
 
@@ -91,12 +81,10 @@
     .locals 1
 
     .prologue
-    .line 17
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHook;->takeOver(Ljava/lang/Runnable;)V
 
-    .line 18
     return-void
 .end method
 
@@ -105,41 +93,33 @@
     .param p1, "resumeAction"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 21
     if-eqz p1, :cond_0
 
-    .line 22
     iput-object p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHook;->mResumeAction:Ljava/lang/Runnable;
 
-    .line 24
     :cond_0
     iget-byte v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHook;->mStatus:B
 
     packed-switch v0, :pswitch_data_0
 
-    .line 35
     :goto_0
     :pswitch_0
     return-void
 
-    .line 26
     :pswitch_1
     const/4 v0, 0x1
 
     iput-byte v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHook;->mStatus:B
 
-    .line 27
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHook;->run()V
 
     goto :goto_0
 
-    .line 32
     :pswitch_2
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHook;->resume()V
 
     goto :goto_0
 
-    .line 24
     nop
 
     :pswitch_data_0

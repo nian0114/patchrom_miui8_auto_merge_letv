@@ -87,27 +87,22 @@
     .prologue
     const/4 v1, 0x6
 
-    .line 43
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 30
     iput v1, p0, Lcom/letv/leui/widget/LeLoadingView;->ballNum:I
 
-    .line 31
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeLoadingView;->mBalls:Ljava/util/ArrayList;
 
-    .line 33
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeLoadingView;->colorList:Ljava/util/ArrayList;
 
-    .line 44
     return-void
 .end method
 
@@ -121,40 +116,33 @@
 
     const/4 v5, 0x6
 
-    .line 47
     invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 30
     iput v5, p0, Lcom/letv/leui/widget/LeLoadingView;->ballNum:I
 
-    .line 31
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4, v5}, Ljava/util/ArrayList;-><init>(I)V
 
     iput-object v4, p0, Lcom/letv/leui/widget/LeLoadingView;->mBalls:Ljava/util/ArrayList;
 
-    .line 33
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4, v5}, Ljava/util/ArrayList;-><init>(I)V
 
     iput-object v4, p0, Lcom/letv/leui/widget/LeLoadingView;->colorList:Ljava/util/ArrayList;
 
-    .line 48
     const/4 v4, 0x2
 
     new-array v0, v4, [I
 
     fill-array-data v0, :array_0
 
-    .line 52
     .local v0, "attrsArray":[I
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v3
 
-    .line 53
     .local v3, "ta":Landroid/content/res/TypedArray;
     const/4 v4, 0x0
 
@@ -162,7 +150,6 @@
 
     move-result v2
 
-    .line 54
     .local v2, "layout_width":I
     const/4 v4, 0x1
 
@@ -170,20 +157,15 @@
 
     move-result v1
 
-    .line 55
     .local v1, "layout_height":I
     invoke-virtual {v3}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 57
     iput v2, p0, Lcom/letv/leui/widget/LeLoadingView;->mInitWidth:I
 
-    .line 58
     iput v1, p0, Lcom/letv/leui/widget/LeLoadingView;->mInitHeight:I
 
-    .line 59
     return-void
 
-    .line 48
     nop
 
     :array_0
@@ -198,7 +180,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LeLoadingView;
 
     .prologue
-    .line 23
     iget-object v0, p0, Lcom/letv/leui/widget/LeLoadingView;->mRotateAnim:Landroid/animation/ObjectAnimator;
 
     return-object v0
@@ -210,7 +191,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 23
     iput-boolean p1, p0, Lcom/letv/leui/widget/LeLoadingView;->isAppearAnimRunning:Z
 
     return p1
@@ -221,7 +201,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LeLoadingView;
 
     .prologue
-    .line 23
     iget-object v0, p0, Lcom/letv/leui/widget/LeLoadingView;->animListener:Lcom/letv/leui/widget/LeLoadingView$LeLoadingAnimListener;
 
     return-object v0
@@ -232,7 +211,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/LeLoadingView;
 
     .prologue
-    .line 23
     iget-boolean v0, p0, Lcom/letv/leui/widget/LeLoadingView;->isCancelAnim:Z
 
     return v0
@@ -244,7 +222,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 23
     iput-boolean p1, p0, Lcom/letv/leui/widget/LeLoadingView;->isCancelAnim:Z
 
     return p1
@@ -256,7 +233,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 23
     iput-boolean p1, p0, Lcom/letv/leui/widget/LeLoadingView;->isDisAppearAnimRunning:Z
 
     return p1
@@ -268,7 +244,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 23
     iput-boolean p1, p0, Lcom/letv/leui/widget/LeLoadingView;->isAnimRunning:Z
 
     return p1
@@ -280,12 +255,10 @@
     .param p2, "y"    # F
 
     .prologue
-    .line 84
     new-instance v0, Landroid/graphics/drawable/shapes/OvalShape;
 
     invoke-direct {v0}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
 
-    .line 85
     .local v0, "circle":Landroid/graphics/drawable/shapes/OvalShape;
     iget v4, p0, Lcom/letv/leui/widget/LeLoadingView;->mBallRadius:F
 
@@ -293,44 +266,35 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/graphics/drawable/shapes/OvalShape;->resize(FF)V
 
-    .line 86
     new-instance v1, Landroid/graphics/drawable/ShapeDrawable;
 
     invoke-direct {v1, v0}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
 
-    .line 87
     .local v1, "drawable":Landroid/graphics/drawable/ShapeDrawable;
     new-instance v3, Lcom/letv/leui/widget/BallsLoadingShapeHolder;
 
     invoke-direct {v3, v1}, Lcom/letv/leui/widget/BallsLoadingShapeHolder;-><init>(Landroid/graphics/drawable/ShapeDrawable;)V
 
-    .line 88
     .local v3, "shapeHolder":Lcom/letv/leui/widget/BallsLoadingShapeHolder;
     invoke-virtual {v3, p1}, Lcom/letv/leui/widget/BallsLoadingShapeHolder;->setX(F)V
 
-    .line 89
     invoke-virtual {v3, p2}, Lcom/letv/leui/widget/BallsLoadingShapeHolder;->setY(F)V
 
-    .line 90
     invoke-virtual {v1}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
 
     move-result-object v2
 
-    .line 91
     .local v2, "paint":Landroid/graphics/Paint;
     const/high16 v4, -0x10000
 
     invoke-virtual {v2, v4}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 92
     invoke-virtual {v3, v2}, Lcom/letv/leui/widget/BallsLoadingShapeHolder;->setPaint(Landroid/graphics/Paint;)V
 
-    .line 93
     const/4 v4, 0x0
 
     invoke-virtual {v3, v4}, Lcom/letv/leui/widget/BallsLoadingShapeHolder;->setAlpha(F)V
 
-    .line 94
     return-object v3
 .end method
 
@@ -341,12 +305,10 @@
     .param p3, "color"    # I
 
     .prologue
-    .line 98
     new-instance v0, Landroid/graphics/drawable/shapes/OvalShape;
 
     invoke-direct {v0}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
 
-    .line 99
     .local v0, "circle":Landroid/graphics/drawable/shapes/OvalShape;
     iget v4, p0, Lcom/letv/leui/widget/LeLoadingView;->mBallRadius:F
 
@@ -354,42 +316,33 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/graphics/drawable/shapes/OvalShape;->resize(FF)V
 
-    .line 100
     new-instance v1, Landroid/graphics/drawable/ShapeDrawable;
 
     invoke-direct {v1, v0}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
 
-    .line 101
     .local v1, "drawable":Landroid/graphics/drawable/ShapeDrawable;
     new-instance v3, Lcom/letv/leui/widget/BallsLoadingShapeHolder;
 
     invoke-direct {v3, v1}, Lcom/letv/leui/widget/BallsLoadingShapeHolder;-><init>(Landroid/graphics/drawable/ShapeDrawable;)V
 
-    .line 102
     .local v3, "shapeHolder":Lcom/letv/leui/widget/BallsLoadingShapeHolder;
     invoke-virtual {v3, p1}, Lcom/letv/leui/widget/BallsLoadingShapeHolder;->setX(F)V
 
-    .line 103
     invoke-virtual {v3, p2}, Lcom/letv/leui/widget/BallsLoadingShapeHolder;->setY(F)V
 
-    .line 104
     invoke-virtual {v1}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
 
     move-result-object v2
 
-    .line 105
     .local v2, "paint":Landroid/graphics/Paint;
     invoke-virtual {v2, p3}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 106
     invoke-virtual {v3, v2}, Lcom/letv/leui/widget/BallsLoadingShapeHolder;->setPaint(Landroid/graphics/Paint;)V
 
-    .line 107
     const/4 v4, 0x0
 
     invoke-virtual {v3, v4}, Lcom/letv/leui/widget/BallsLoadingShapeHolder;->setAlpha(F)V
 
-    .line 108
     return-object v3
 .end method
 
@@ -409,7 +362,6 @@
 
     const/4 v9, 0x0
 
-    .line 266
     const-string v5, "width"
 
     new-array v6, v11, [F
@@ -426,7 +378,6 @@
 
     move-result-object v3
 
-    .line 268
     .local v3, "pvhW":Landroid/animation/PropertyValuesHolder;
     const-string v5, "height"
 
@@ -444,7 +395,6 @@
 
     move-result-object v2
 
-    .line 270
     .local v2, "pvhH":Landroid/animation/PropertyValuesHolder;
     const-string v5, "x"
 
@@ -472,7 +422,6 @@
 
     move-result-object v0
 
-    .line 272
     .local v0, "pvTX":Landroid/animation/PropertyValuesHolder;
     const-string v5, "y"
 
@@ -500,7 +449,6 @@
 
     move-result-object v1
 
-    .line 274
     .local v1, "pvTY":Landroid/animation/PropertyValuesHolder;
     const/4 v5, 0x4
 
@@ -526,7 +474,6 @@
 
     move-result-object v4
 
-    .line 276
     .local v4, "z2nAnim":Landroid/animation/ObjectAnimator;
     mul-int/lit8 v5, p2, 0x4b
 
@@ -534,17 +481,14 @@
 
     invoke-virtual {v4, v6, v7}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
 
-    .line 277
     new-instance v5, Landroid/view/animation/AccelerateInterpolator;
 
     invoke-direct {v5}, Landroid/view/animation/AccelerateInterpolator;-><init>()V
 
     invoke-virtual {v4, v5}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 278
     invoke-virtual {v4, p0}, Landroid/animation/ObjectAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 279
     return-object v4
 .end method
 
@@ -552,7 +496,6 @@
     .locals 6
 
     .prologue
-    .line 283
     const-string v2, "rotation"
 
     const/4 v3, 0x2
@@ -565,7 +508,6 @@
 
     move-result-object v1
 
-    .line 285
     .local v1, "rotation":Landroid/animation/PropertyValuesHolder;
     const/4 v2, 0x1
 
@@ -585,26 +527,21 @@
 
     move-result-object v0
 
-    .line 286
     .local v0, "rotateAnim":Landroid/animation/ObjectAnimator;
     const/4 v2, -0x1
 
     invoke-virtual {v0, v2}, Landroid/animation/ObjectAnimator;->setRepeatCount(I)V
 
-    .line 287
     new-instance v2, Landroid/view/animation/LinearInterpolator;
 
     invoke-direct {v2}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
     invoke-virtual {v0, v2}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 288
     invoke-virtual {v0, p0}, Landroid/animation/ObjectAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 289
     return-object v0
 
-    .line 283
     :array_0
     .array-data 4
         0x0
@@ -628,7 +565,6 @@
 
     const/4 v9, 0x0
 
-    .line 246
     const-string v5, "width"
 
     new-array v6, v11, [F
@@ -645,7 +581,6 @@
 
     move-result-object v3
 
-    .line 248
     .local v3, "pvhW":Landroid/animation/PropertyValuesHolder;
     const-string v5, "height"
 
@@ -663,7 +598,6 @@
 
     move-result-object v2
 
-    .line 250
     .local v2, "pvhH":Landroid/animation/PropertyValuesHolder;
     const-string v5, "x"
 
@@ -691,7 +625,6 @@
 
     move-result-object v0
 
-    .line 252
     .local v0, "pvTX":Landroid/animation/PropertyValuesHolder;
     const-string v5, "y"
 
@@ -719,7 +652,6 @@
 
     move-result-object v1
 
-    .line 254
     .local v1, "pvTY":Landroid/animation/PropertyValuesHolder;
     const/4 v5, 0x4
 
@@ -745,7 +677,6 @@
 
     move-result-object v4
 
-    .line 256
     .local v4, "z2nAnim":Landroid/animation/ObjectAnimator;
     mul-int/lit8 v5, p2, 0x4b
 
@@ -753,17 +684,14 @@
 
     invoke-virtual {v4, v6, v7}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
 
-    .line 257
     new-instance v5, Landroid/view/animation/AccelerateInterpolator;
 
     invoke-direct {v5}, Landroid/view/animation/AccelerateInterpolator;-><init>()V
 
     invoke-virtual {v4, v5}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 258
     invoke-virtual {v4, p0}, Landroid/animation/ObjectAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 259
     return-object v4
 .end method
 
@@ -771,7 +699,6 @@
     .locals 14
 
     .prologue
-    .line 73
     const/high16 v4, 0x43b40000    # 360.0f
 
     iget v5, p0, Lcom/letv/leui/widget/LeLoadingView;->ballNum:I
@@ -780,7 +707,6 @@
 
     div-float v0, v4, v5
 
-    .line 74
     .local v0, "angleUnit":F
     iget v4, p0, Lcom/letv/leui/widget/LeLoadingView;->mViewRadius:F
 
@@ -788,7 +714,6 @@
 
     sub-float v1, v4, v5
 
-    .line 75
     .local v1, "drawRadius":F
     const/4 v2, 0x0
 
@@ -798,12 +723,10 @@
 
     if-ge v2, v4, :cond_0
 
-    .line 76
     new-instance v3, Landroid/graphics/PointF;
 
     invoke-direct {v3}, Landroid/graphics/PointF;-><init>()V
 
-    .line 77
     .local v3, "pointF":Landroid/graphics/PointF;
     iget v4, p0, Lcom/letv/leui/widget/LeLoadingView;->mViewSize:F
 
@@ -875,7 +798,6 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/graphics/PointF;->set(FF)V
 
-    .line 79
     iget-object v5, p0, Lcom/letv/leui/widget/LeLoadingView;->mBalls:Ljava/util/ArrayList;
 
     iget v6, v3, Landroid/graphics/PointF;->x:F
@@ -900,12 +822,10 @@
 
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 75
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 81
     .end local v3    # "pointF":Landroid/graphics/PointF;
     :cond_0
     return-void
@@ -917,14 +837,12 @@
     .locals 3
 
     .prologue
-    .line 112
     iget v2, p0, Lcom/letv/leui/widget/LeLoadingView;->mInitWidth:I
 
     if-lez v2, :cond_0
 
     iget v1, p0, Lcom/letv/leui/widget/LeLoadingView;->mInitWidth:I
 
-    .line 113
     .local v1, "width":I
     :goto_0
     iget v2, p0, Lcom/letv/leui/widget/LeLoadingView;->mInitHeight:I
@@ -933,7 +851,6 @@
 
     iget v0, p0, Lcom/letv/leui/widget/LeLoadingView;->mInitHeight:I
 
-    .line 114
     .local v0, "height":I
     :goto_1
     const/4 v2, 0x0
@@ -944,7 +861,6 @@
 
     return v2
 
-    .line 112
     .end local v0    # "height":I
     .end local v1    # "width":I
     :cond_0
@@ -954,7 +870,6 @@
 
     goto :goto_0
 
-    .line 113
     .restart local v1    # "width":I
     :cond_1
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeLoadingView;->getHeight()I
@@ -970,7 +885,6 @@
     .param p2, "width"    # I
 
     .prologue
-    .line 118
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, v0}, Lcom/letv/leui/widget/LeLoadingView;->appearAnim(IILjava/lang/Runnable;)Z
@@ -989,7 +903,6 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 128
     iget-boolean v6, p0, Lcom/letv/leui/widget/LeLoadingView;->isAnimRunning:Z
 
     if-nez v6, :cond_0
@@ -998,53 +911,43 @@
 
     if-eqz v6, :cond_1
 
-    .line 129
     :cond_0
     const/4 v6, 0x0
 
-    .line 185
     :goto_0
     return v6
 
-    .line 131
     :cond_1
     iput-boolean v7, p0, Lcom/letv/leui/widget/LeLoadingView;->isAnimRunning:Z
 
-    .line 132
     move v0, p1
 
-    .line 133
     .local v0, "h":I
     move v5, p2
 
-    .line 134
     .local v5, "w":I
     if-lt v0, v5, :cond_3
 
     move v4, v0
 
-    .line 135
     .local v4, "size":I
     :goto_1
     int-to-float v6, v4
 
     iput v6, p0, Lcom/letv/leui/widget/LeLoadingView;->mViewSize:F
 
-    .line 136
     div-int/lit8 v6, v4, 0x8
 
     int-to-float v6, v6
 
     iput v6, p0, Lcom/letv/leui/widget/LeLoadingView;->mBallRadius:F
 
-    .line 137
     div-int/lit8 v6, v4, 0x2
 
     int-to-float v6, v6
 
     iput v6, p0, Lcom/letv/leui/widget/LeLoadingView;->mViewRadius:F
 
-    .line 138
     iget-object v6, p0, Lcom/letv/leui/widget/LeLoadingView;->colorList:Ljava/util/ArrayList;
 
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
@@ -1053,7 +956,6 @@
 
     if-nez v6, :cond_2
 
-    .line 139
     iget-object v6, p0, Lcom/letv/leui/widget/LeLoadingView;->colorList:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeLoadingView;->getDefaultColorList()Ljava/util/ArrayList;
@@ -1062,21 +964,17 @@
 
     invoke-virtual {v6, v8}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 141
     :cond_2
     iget-object v6, p0, Lcom/letv/leui/widget/LeLoadingView;->appearAnim:Landroid/animation/AnimatorSet;
 
     if-nez v6, :cond_5
 
-    .line 142
     iget-object v6, p0, Lcom/letv/leui/widget/LeLoadingView;->mBalls:Ljava/util/ArrayList;
 
     invoke-virtual {v6}, Ljava/util/ArrayList;->clear()V
 
-    .line 143
     invoke-direct {p0}, Lcom/letv/leui/widget/LeLoadingView;->initBall()V
 
-    .line 144
     iget-object v6, p0, Lcom/letv/leui/widget/LeLoadingView;->mBalls:Ljava/util/ArrayList;
 
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
@@ -1085,7 +983,6 @@
 
     new-array v3, v6, [Landroid/animation/ObjectAnimator;
 
-    .line 145
     .local v3, "mAnimators":[Landroid/animation/ObjectAnimator;
     const/4 v1, 0x0
 
@@ -1100,7 +997,6 @@
     :goto_2
     if-ge v1, v2, :cond_4
 
-    .line 147
     iget-object v6, p0, Lcom/letv/leui/widget/LeLoadingView;->mBalls:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1115,7 +1011,6 @@
 
     aput-object v6, v3, v1
 
-    .line 148
     aget-object v6, v3, v1
 
     iget-object v8, p0, Lcom/letv/leui/widget/LeLoadingView;->mBalls:Ljava/util/ArrayList;
@@ -1126,7 +1021,6 @@
 
     invoke-virtual {v6, v8}, Landroid/animation/ObjectAnimator;->setTarget(Ljava/lang/Object;)V
 
-    .line 149
     aget-object v6, v3, v1
 
     new-instance v8, Lcom/letv/leui/widget/LeLoadingView$1;
@@ -1135,7 +1029,6 @@
 
     invoke-virtual {v6, v8}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 145
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
@@ -1147,10 +1040,8 @@
     :cond_3
     move v4, v5
 
-    .line 134
     goto :goto_1
 
-    .line 160
     .restart local v1    # "i":I
     .restart local v2    # "j":I
     .restart local v3    # "mAnimators":[Landroid/animation/ObjectAnimator;
@@ -1162,14 +1053,12 @@
 
     iput-object v6, p0, Lcom/letv/leui/widget/LeLoadingView;->mRotateAnim:Landroid/animation/ObjectAnimator;
 
-    .line 161
     new-instance v6, Landroid/animation/AnimatorSet;
 
     invoke-direct {v6}, Landroid/animation/AnimatorSet;-><init>()V
 
     iput-object v6, p0, Lcom/letv/leui/widget/LeLoadingView;->appearAnim:Landroid/animation/AnimatorSet;
 
-    .line 162
     iget-object v6, p0, Lcom/letv/leui/widget/LeLoadingView;->appearAnim:Landroid/animation/AnimatorSet;
 
     new-instance v8, Lcom/letv/leui/widget/LeLoadingView$2;
@@ -1178,12 +1067,10 @@
 
     invoke-virtual {v6, v8}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 182
     iget-object v6, p0, Lcom/letv/leui/widget/LeLoadingView;->appearAnim:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v6, v3}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 184
     .end local v1    # "i":I
     .end local v2    # "j":I
     .end local v3    # "mAnimators":[Landroid/animation/ObjectAnimator;
@@ -1194,7 +1081,6 @@
 
     move v6, v7
 
-    .line 185
     goto/16 :goto_0
 .end method
 
@@ -1203,14 +1089,12 @@
     .param p1, "disappearedCallBack"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 122
     iget v2, p0, Lcom/letv/leui/widget/LeLoadingView;->mInitWidth:I
 
     if-lez v2, :cond_0
 
     iget v1, p0, Lcom/letv/leui/widget/LeLoadingView;->mInitWidth:I
 
-    .line 123
     .local v1, "width":I
     :goto_0
     iget v2, p0, Lcom/letv/leui/widget/LeLoadingView;->mInitHeight:I
@@ -1219,7 +1103,6 @@
 
     iget v0, p0, Lcom/letv/leui/widget/LeLoadingView;->mInitHeight:I
 
-    .line 124
     .local v0, "height":I
     :goto_1
     invoke-virtual {p0, v0, v1, p1}, Lcom/letv/leui/widget/LeLoadingView;->appearAnim(IILjava/lang/Runnable;)Z
@@ -1228,7 +1111,6 @@
 
     return v2
 
-    .line 122
     .end local v0    # "height":I
     .end local v1    # "width":I
     :cond_0
@@ -1238,7 +1120,6 @@
 
     goto :goto_0
 
-    .line 123
     .restart local v1    # "width":I
     :cond_1
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeLoadingView;->getHeight()I
@@ -1253,12 +1134,10 @@
     .param p1, "disappearedCallBack"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 190
     const/4 v3, 0x1
 
     iput-boolean v3, p0, Lcom/letv/leui/widget/LeLoadingView;->isCancelAnim:Z
 
-    .line 191
     iget-boolean v3, p0, Lcom/letv/leui/widget/LeLoadingView;->isAnimRunning:Z
 
     if-eqz v3, :cond_0
@@ -1267,18 +1146,15 @@
 
     if-eqz v3, :cond_1
 
-    .line 239
     :cond_0
     :goto_0
     return-void
 
-    .line 194
     :cond_1
     iget-object v3, p0, Lcom/letv/leui/widget/LeLoadingView;->disappearAnim:Landroid/animation/AnimatorSet;
 
     if-nez v3, :cond_3
 
-    .line 195
     iget-object v3, p0, Lcom/letv/leui/widget/LeLoadingView;->mBalls:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
@@ -1287,7 +1163,6 @@
 
     new-array v2, v3, [Landroid/animation/ObjectAnimator;
 
-    .line 196
     .local v2, "mAnimators":[Landroid/animation/ObjectAnimator;
     const/4 v0, 0x0
 
@@ -1302,7 +1177,6 @@
     :goto_1
     if-ge v0, v1, :cond_2
 
-    .line 198
     iget-object v3, p0, Lcom/letv/leui/widget/LeLoadingView;->mBalls:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1317,7 +1191,6 @@
 
     aput-object v3, v2, v0
 
-    .line 199
     aget-object v3, v2, v0
 
     iget-object v4, p0, Lcom/letv/leui/widget/LeLoadingView;->mBalls:Ljava/util/ArrayList;
@@ -1328,7 +1201,6 @@
 
     invoke-virtual {v3, v4}, Landroid/animation/ObjectAnimator;->setTarget(Ljava/lang/Object;)V
 
-    .line 200
     aget-object v3, v2, v0
 
     new-instance v4, Lcom/letv/leui/widget/LeLoadingView$3;
@@ -1337,12 +1209,10 @@
 
     invoke-virtual {v3, v4}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 196
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 211
     :cond_2
     new-instance v3, Landroid/animation/AnimatorSet;
 
@@ -1350,7 +1220,6 @@
 
     iput-object v3, p0, Lcom/letv/leui/widget/LeLoadingView;->disappearAnim:Landroid/animation/AnimatorSet;
 
-    .line 212
     iget-object v3, p0, Lcom/letv/leui/widget/LeLoadingView;->disappearAnim:Landroid/animation/AnimatorSet;
 
     new-instance v4, Lcom/letv/leui/widget/LeLoadingView$4;
@@ -1359,12 +1228,10 @@
 
     invoke-virtual {v3, v4}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 236
     iget-object v3, p0, Lcom/letv/leui/widget/LeLoadingView;->disappearAnim:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v3, v2}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 238
     .end local v0    # "i":I
     .end local v1    # "j":I
     .end local v2    # "mAnimators":[Landroid/animation/ObjectAnimator;
@@ -1380,7 +1247,6 @@
     .locals 1
 
     .prologue
-    .line 331
     iget-object v0, p0, Lcom/letv/leui/widget/LeLoadingView;->animListener:Lcom/letv/leui/widget/LeLoadingView$LeLoadingAnimListener;
 
     return-object v0
@@ -1390,7 +1256,6 @@
     .locals 1
 
     .prologue
-    .line 310
     iget v0, p0, Lcom/letv/leui/widget/LeLoadingView;->ballNum:I
 
     return v0
@@ -1409,7 +1274,6 @@
     .end annotation
 
     .prologue
-    .line 323
     iget-object v0, p0, Lcom/letv/leui/widget/LeLoadingView;->colorList:Ljava/util/ArrayList;
 
     return-object v0
@@ -1428,14 +1292,12 @@
     .end annotation
 
     .prologue
-    .line 62
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x6
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 63
     .local v0, "colorList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     const-string v1, "#ed1e20"
 
@@ -1449,7 +1311,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 64
     const-string v1, "#6c24c6"
 
     invoke-static {v1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
@@ -1462,7 +1323,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 65
     const-string v1, "#1ab1eb"
 
     invoke-static {v1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
@@ -1475,7 +1335,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 66
     const-string v1, "#8ad127"
 
     invoke-static {v1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
@@ -1488,7 +1347,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 67
     const-string v1, "#ffd800"
 
     invoke-static {v1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
@@ -1501,7 +1359,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 68
     const-string v1, "#ff8a00"
 
     invoke-static {v1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
@@ -1514,7 +1371,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 69
     return-object v0
 .end method
 
@@ -1522,7 +1378,6 @@
     .locals 1
 
     .prologue
-    .line 306
     const/4 v0, 0x0
 
     return v0
@@ -1532,7 +1387,6 @@
     .locals 1
 
     .prologue
-    .line 344
     iget-boolean v0, p0, Lcom/letv/leui/widget/LeLoadingView;->isCancelAnim:Z
 
     return v0
@@ -1543,10 +1397,8 @@
     .param p1, "animation"    # Landroid/animation/ValueAnimator;
 
     .prologue
-    .line 340
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeLoadingView;->invalidate()V
 
-    .line 341
     return-void
 .end method
 
@@ -1554,20 +1406,16 @@
     .locals 1
 
     .prologue
-    .line 354
     invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
 
-    .line 355
     iget-object v0, p0, Lcom/letv/leui/widget/LeLoadingView;->mRotateAnim:Landroid/animation/ObjectAnimator;
 
     if-eqz v0, :cond_0
 
-    .line 356
     iget-object v0, p0, Lcom/letv/leui/widget/LeLoadingView;->mRotateAnim:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 358
     :cond_0
     return-void
 .end method
@@ -1579,10 +1427,8 @@
     .prologue
     const/high16 v5, 0x40000000    # 2.0f
 
-    .line 294
     invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 296
     iget-object v2, p0, Lcom/letv/leui/widget/LeLoadingView;->mBalls:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1603,7 +1449,6 @@
 
     check-cast v0, Lcom/letv/leui/widget/BallsLoadingShapeHolder;
 
-    .line 297
     .local v0, "ball":Lcom/letv/leui/widget/BallsLoadingShapeHolder;
     invoke-virtual {v0}, Lcom/letv/leui/widget/BallsLoadingShapeHolder;->getX()F
 
@@ -1627,14 +1472,12 @@
 
     invoke-virtual {p1, v2, v3}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 298
     invoke-virtual {v0}, Lcom/letv/leui/widget/BallsLoadingShapeHolder;->getShape()Landroid/graphics/drawable/ShapeDrawable;
 
     move-result-object v2
 
     invoke-virtual {v2, p1}, Landroid/graphics/drawable/ShapeDrawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 299
     invoke-virtual {v0}, Lcom/letv/leui/widget/BallsLoadingShapeHolder;->getX()F
 
     move-result v2
@@ -1663,7 +1506,6 @@
 
     goto :goto_0
 
-    .line 302
     .end local v0    # "ball":Lcom/letv/leui/widget/BallsLoadingShapeHolder;
     :cond_0
     return-void
@@ -1674,10 +1516,8 @@
     .param p1, "animListener"    # Lcom/letv/leui/widget/LeLoadingView$LeLoadingAnimListener;
 
     .prologue
-    .line 335
     iput-object p1, p0, Lcom/letv/leui/widget/LeLoadingView;->animListener:Lcom/letv/leui/widget/LeLoadingView$LeLoadingAnimListener;
 
-    .line 336
     return-void
 .end method
 
@@ -1695,7 +1535,6 @@
     .end annotation
 
     .prologue
-    .line 315
     .local p2, "colorList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     if-eqz p2, :cond_0
 
@@ -1705,7 +1544,6 @@
 
     if-ge v0, p1, :cond_1
 
-    .line 316
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1715,14 +1553,11 @@
 
     throw v0
 
-    .line 318
     :cond_1
     iput-object p2, p0, Lcom/letv/leui/widget/LeLoadingView;->colorList:Ljava/util/ArrayList;
 
-    .line 319
     iput p1, p0, Lcom/letv/leui/widget/LeLoadingView;->ballNum:I
 
-    .line 320
     return-void
 .end method
 
@@ -1731,10 +1566,8 @@
     .param p1, "isCancelAnim"    # Z
 
     .prologue
-    .line 348
     iput-boolean p1, p0, Lcom/letv/leui/widget/LeLoadingView;->isCancelAnim:Z
 
-    .line 349
     return-void
 .end method
 
@@ -1751,10 +1584,8 @@
     .end annotation
 
     .prologue
-    .line 327
     .local p1, "colorList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     iput-object p1, p0, Lcom/letv/leui/widget/LeLoadingView;->colorList:Ljava/util/ArrayList;
 
-    .line 328
     return-void
 .end method

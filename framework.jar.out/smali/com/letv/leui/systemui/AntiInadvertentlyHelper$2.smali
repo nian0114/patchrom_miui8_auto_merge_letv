@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 111
     iput-object p1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper$2;->this$0:Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .prologue
     const/high16 v3, 0x3f800000    # 1.0f
 
-    .line 114
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper$2;->this$0:Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     # getter for: Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mTouchAble:Z
@@ -60,7 +58,6 @@
 
     if-nez v0, :cond_0
 
-    .line 115
     # getter for: Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->access$400()Ljava/lang/String;
 
@@ -97,7 +94,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 116
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper$2;->this$0:Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     # getter for: Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mCoverView:Landroid/view/ViewGroup;
@@ -113,7 +109,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 117
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper$2;->this$0:Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     # getter for: Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mCoverView:Landroid/view/ViewGroup;
@@ -145,7 +140,6 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 123
     :cond_0
     const/4 v0, 0x0
 

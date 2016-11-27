@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 329
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,14 +35,12 @@
     .param p2, "authType"    # Ljava/lang/String;
 
     .prologue
-    .line 336
     const-string v0, "trustAllHosts"
 
     const-string v1, "checkClientTrusted"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 337
     return-void
 .end method
 
@@ -53,14 +50,12 @@
     .param p2, "authType"    # Ljava/lang/String;
 
     .prologue
-    .line 340
     const-string v0, "trustAllHosts"
 
     const-string v1, "checkServerTrusted"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 341
     return-void
 .end method
 
@@ -68,7 +63,6 @@
     .locals 1
 
     .prologue
-    .line 332
     const/4 v0, 0x0
 
     new-array v0, v0, [Ljava/security/cert/X509Certificate;

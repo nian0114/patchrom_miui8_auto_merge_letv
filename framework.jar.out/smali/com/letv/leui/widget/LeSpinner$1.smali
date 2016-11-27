@@ -26,7 +26,6 @@
     .param p2, "x0"    # Landroid/view/View;
 
     .prologue
-    .line 199
     iput-object p1, p0, Lcom/letv/leui/widget/LeSpinner$1;->this$0:Lcom/letv/leui/widget/LeSpinner;
 
     iput-object p3, p0, Lcom/letv/leui/widget/LeSpinner$1;->val$popup:Lcom/letv/leui/widget/LeSpinner$DropdownPopup;
@@ -42,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 202
     iget-object v0, p0, Lcom/letv/leui/widget/LeSpinner$1;->val$popup:Lcom/letv/leui/widget/LeSpinner$DropdownPopup;
 
     return-object v0
@@ -52,7 +50,6 @@
     .locals 3
 
     .prologue
-    .line 207
     iget-object v0, p0, Lcom/letv/leui/widget/LeSpinner$1;->this$0:Lcom/letv/leui/widget/LeSpinner;
 
     # getter for: Lcom/letv/leui/widget/LeSpinner;->mPopup:Lcom/letv/leui/widget/LeSpinner$SpinnerPopup;
@@ -66,7 +63,6 @@
 
     if-nez v0, :cond_0
 
-    .line 208
     iget-object v0, p0, Lcom/letv/leui/widget/LeSpinner$1;->this$0:Lcom/letv/leui/widget/LeSpinner;
 
     # getter for: Lcom/letv/leui/widget/LeSpinner;->mPopup:Lcom/letv/leui/widget/LeSpinner$SpinnerPopup;
@@ -88,7 +84,6 @@
 
     invoke-interface {v0, v1, v2}, Lcom/letv/leui/widget/LeSpinner$SpinnerPopup;->show(II)V
 
-    .line 210
     :cond_0
     const/4 v0, 0x1
 

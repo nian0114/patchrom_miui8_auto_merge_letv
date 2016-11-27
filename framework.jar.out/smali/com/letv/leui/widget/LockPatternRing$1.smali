@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 152
     iput-object p1, p0, Lcom/letv/leui/widget/LockPatternRing$1;->this$0:Lcom/letv/leui/widget/LockPatternRing;
 
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/LockPatternRing$EmptyAnimatorListener;-><init>(Lcom/letv/leui/widget/LockPatternRing;)V
@@ -38,7 +37,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 155
     iget-object v0, p0, Lcom/letv/leui/widget/LockPatternRing$1;->this$0:Lcom/letv/leui/widget/LockPatternRing;
 
     # invokes: Lcom/letv/leui/widget/LockPatternRing;->getOuterUpPaintAlphaAnim()Landroid/animation/ObjectAnimator;
@@ -48,6 +46,5 @@
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 156
     return-void
 .end method

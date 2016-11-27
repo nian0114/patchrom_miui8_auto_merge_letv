@@ -24,22 +24,16 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 45
     invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
 
-    .line 13
     iput v0, p0, Lcom/android/server/activation/exception/NetworkRequestException;->mExceptionTypeCode:I
 
-    .line 15
     iput v0, p0, Lcom/android/server/activation/exception/NetworkRequestException;->statusCode:I
 
-    .line 46
     iput p1, p0, Lcom/android/server/activation/exception/NetworkRequestException;->statusCode:I
 
-    .line 47
     iput p2, p0, Lcom/android/server/activation/exception/NetworkRequestException;->mExceptionTypeCode:I
 
-    .line 48
     return-void
 .end method
 
@@ -50,16 +44,12 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 22
     invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
 
-    .line 13
     iput v0, p0, Lcom/android/server/activation/exception/NetworkRequestException;->mExceptionTypeCode:I
 
-    .line 15
     iput v0, p0, Lcom/android/server/activation/exception/NetworkRequestException;->statusCode:I
 
-    .line 23
     return-void
 .end method
 
@@ -72,22 +62,16 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 41
     invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
 
-    .line 13
     iput v0, p0, Lcom/android/server/activation/exception/NetworkRequestException;->mExceptionTypeCode:I
 
-    .line 15
     iput v0, p0, Lcom/android/server/activation/exception/NetworkRequestException;->statusCode:I
 
-    .line 42
     iput p2, p0, Lcom/android/server/activation/exception/NetworkRequestException;->statusCode:I
 
-    .line 43
     iput p3, p0, Lcom/android/server/activation/exception/NetworkRequestException;->mExceptionTypeCode:I
 
-    .line 44
     return-void
 .end method
 
@@ -98,16 +82,12 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 18
     invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 13
     iput v0, p0, Lcom/android/server/activation/exception/NetworkRequestException;->mExceptionTypeCode:I
 
-    .line 15
     iput v0, p0, Lcom/android/server/activation/exception/NetworkRequestException;->statusCode:I
 
-    .line 19
     return-void
 .end method
 
@@ -119,19 +99,14 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 26
     invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 13
     iput v0, p0, Lcom/android/server/activation/exception/NetworkRequestException;->mExceptionTypeCode:I
 
-    .line 15
     iput v0, p0, Lcom/android/server/activation/exception/NetworkRequestException;->statusCode:I
 
-    .line 27
     iput p2, p0, Lcom/android/server/activation/exception/NetworkRequestException;->statusCode:I
 
-    .line 29
     return-void
 .end method
 
@@ -143,16 +118,12 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 32
     invoke-direct {p0, p1, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 13
     iput v0, p0, Lcom/android/server/activation/exception/NetworkRequestException;->mExceptionTypeCode:I
 
-    .line 15
     iput v0, p0, Lcom/android/server/activation/exception/NetworkRequestException;->statusCode:I
 
-    .line 33
     return-void
 .end method
 
@@ -165,19 +136,14 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 36
     invoke-direct {p0, p1, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 13
     iput v0, p0, Lcom/android/server/activation/exception/NetworkRequestException;->mExceptionTypeCode:I
 
-    .line 15
     iput v0, p0, Lcom/android/server/activation/exception/NetworkRequestException;->statusCode:I
 
-    .line 37
     iput p3, p0, Lcom/android/server/activation/exception/NetworkRequestException;->statusCode:I
 
-    .line 39
     return-void
 .end method
 
@@ -187,7 +153,6 @@
     .locals 1
 
     .prologue
-    .line 50
     iget v0, p0, Lcom/android/server/activation/exception/NetworkRequestException;->mExceptionTypeCode:I
 
     return v0
@@ -197,7 +162,6 @@
     .locals 1
 
     .prologue
-    .line 54
     iget v0, p0, Lcom/android/server/activation/exception/NetworkRequestException;->statusCode:I
 
     return v0

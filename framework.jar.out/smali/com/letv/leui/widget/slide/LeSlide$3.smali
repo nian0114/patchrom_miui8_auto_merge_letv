@@ -30,14 +30,12 @@
     .locals 1
 
     .prologue
-    .line 140
     iput-object p1, p0, Lcom/letv/leui/widget/slide/LeSlide$3;->val$config:Lcom/letv/leui/widget/slide/LeSlideConfig;
 
     iput-object p2, p0, Lcom/letv/leui/widget/slide/LeSlide$3;->val$activity:Landroid/app/Activity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 142
     new-instance v0, Landroid/animation/ArgbEvaluator;
 
     invoke-direct {v0}, Landroid/animation/ArgbEvaluator;-><init>()V
@@ -55,7 +53,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 153
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlide$3;->val$config:Lcom/letv/leui/widget/slide/LeSlideConfig;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/slide/LeSlideConfig;->getListener()Lcom/letv/leui/widget/slide/LeSlideListener;
@@ -64,7 +61,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 154
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlide$3;->val$config:Lcom/letv/leui/widget/slide/LeSlideConfig;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/slide/LeSlideConfig;->getListener()Lcom/letv/leui/widget/slide/LeSlideListener;
@@ -73,18 +69,15 @@
 
     invoke-interface {v0}, Lcom/letv/leui/widget/slide/LeSlideListener;->onSlideClosed()V
 
-    .line 157
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlide$3;->val$activity:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
-    .line 158
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlide$3;->val$activity:Landroid/app/Activity;
 
     invoke-virtual {v0, v1, v1}, Landroid/app/Activity;->overridePendingTransition(II)V
 
-    .line 159
     return-void
 .end method
 
@@ -92,7 +85,6 @@
     .locals 1
 
     .prologue
-    .line 163
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlide$3;->val$config:Lcom/letv/leui/widget/slide/LeSlideConfig;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/slide/LeSlideConfig;->getListener()Lcom/letv/leui/widget/slide/LeSlideListener;
@@ -101,7 +93,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 164
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlide$3;->val$config:Lcom/letv/leui/widget/slide/LeSlideConfig;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/slide/LeSlideConfig;->getListener()Lcom/letv/leui/widget/slide/LeSlideListener;
@@ -110,7 +101,6 @@
 
     invoke-interface {v0}, Lcom/letv/leui/widget/slide/LeSlideListener;->onSlideOpened()V
 
-    .line 166
     :cond_0
     return-void
 .end method
@@ -120,7 +110,6 @@
     .param p1, "percent"    # F
 
     .prologue
-    .line 172
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x15
@@ -135,7 +124,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 175
     iget-object v1, p0, Lcom/letv/leui/widget/slide/LeSlide$3;->mEvaluator:Landroid/animation/ArgbEvaluator;
 
     iget-object v2, p0, Lcom/letv/leui/widget/slide/LeSlide$3;->val$config:Lcom/letv/leui/widget/slide/LeSlideConfig;
@@ -168,7 +156,6 @@
 
     move-result v0
 
-    .line 178
     .local v0, "newColor":I
     iget-object v1, p0, Lcom/letv/leui/widget/slide/LeSlide$3;->val$activity:Landroid/app/Activity;
 
@@ -178,7 +165,6 @@
 
     invoke-virtual {v1, v0}, Landroid/view/Window;->setStatusBarColor(I)V
 
-    .line 181
     .end local v0    # "newColor":I
     :cond_0
     iget-object v1, p0, Lcom/letv/leui/widget/slide/LeSlide$3;->val$config:Lcom/letv/leui/widget/slide/LeSlideConfig;
@@ -189,7 +175,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 182
     iget-object v1, p0, Lcom/letv/leui/widget/slide/LeSlide$3;->val$config:Lcom/letv/leui/widget/slide/LeSlideConfig;
 
     invoke-virtual {v1}, Lcom/letv/leui/widget/slide/LeSlideConfig;->getListener()Lcom/letv/leui/widget/slide/LeSlideListener;
@@ -198,7 +183,6 @@
 
     invoke-interface {v1, p1}, Lcom/letv/leui/widget/slide/LeSlideListener;->onSlideChange(F)V
 
-    .line 184
     :cond_1
     return-void
 .end method
@@ -208,7 +192,6 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 146
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlide$3;->val$config:Lcom/letv/leui/widget/slide/LeSlideConfig;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/slide/LeSlideConfig;->getListener()Lcom/letv/leui/widget/slide/LeSlideListener;
@@ -217,7 +200,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 147
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlide$3;->val$config:Lcom/letv/leui/widget/slide/LeSlideConfig;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/slide/LeSlideConfig;->getListener()Lcom/letv/leui/widget/slide/LeSlideListener;
@@ -226,7 +208,6 @@
 
     invoke-interface {v0, p1}, Lcom/letv/leui/widget/slide/LeSlideListener;->onSlideStateChanged(I)V
 
-    .line 149
     :cond_0
     return-void
 .end method

@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 805
     iput-object p1, p0, Landroid/view/Choreographer$FrameHandler;->this$0:Landroid/view/Choreographer;
 
-    .line 806
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 807
     return-void
 .end method
 
@@ -41,7 +38,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 811
     # getter for: Landroid/view/Choreographer;->DEBUG_FRAMES:Z
     invoke-static {}, Landroid/view/Choreographer;->access$300()Z
 
@@ -58,7 +54,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 812
     :cond_0
     const-string v0, "Choreographer"
 
@@ -101,17 +96,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 814
     :cond_1
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 825
     :goto_0
     return-void
 
-    .line 816
     :pswitch_0
     iget-object v0, p0, Landroid/view/Choreographer$FrameHandler;->this$0:Landroid/view/Choreographer;
 
@@ -125,7 +117,6 @@
 
     goto :goto_0
 
-    .line 819
     :pswitch_1
     iget-object v0, p0, Landroid/view/Choreographer$FrameHandler;->this$0:Landroid/view/Choreographer;
 
@@ -133,7 +124,6 @@
 
     goto :goto_0
 
-    .line 822
     :pswitch_2
     iget-object v0, p0, Landroid/view/Choreographer$FrameHandler;->this$0:Landroid/view/Choreographer;
 
@@ -143,7 +133,6 @@
 
     goto :goto_0
 
-    .line 814
     nop
 
     :pswitch_data_0

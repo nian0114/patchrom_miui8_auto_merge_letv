@@ -47,7 +47,6 @@
 
     const/4 v3, 0x0
 
-    .line 4
     new-instance v0, Lcom/letv/tracker/enums/PlayType;
 
     const-string v1, "OnDemand"
@@ -58,7 +57,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/PlayType;->OnDemand:Lcom/letv/tracker/enums/PlayType;
 
-    .line 5
     new-instance v0, Lcom/letv/tracker/enums/PlayType;
 
     const-string v1, "Live"
@@ -69,7 +67,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/PlayType;->Live:Lcom/letv/tracker/enums/PlayType;
 
-    .line 6
     new-instance v0, Lcom/letv/tracker/enums/PlayType;
 
     const-string v1, "Carousels"
@@ -80,7 +77,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/PlayType;->Carousels:Lcom/letv/tracker/enums/PlayType;
 
-    .line 7
     new-instance v0, Lcom/letv/tracker/enums/PlayType;
 
     const-string v1, "Cache"
@@ -91,7 +87,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/PlayType;->Cache:Lcom/letv/tracker/enums/PlayType;
 
-    .line 8
     new-instance v0, Lcom/letv/tracker/enums/PlayType;
 
     const-string v1, "Local"
@@ -102,7 +97,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/PlayType;->Local:Lcom/letv/tracker/enums/PlayType;
 
-    .line 3
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/letv/tracker/enums/PlayType;
@@ -144,13 +138,10 @@
     .end annotation
 
     .prologue
-    .line 12
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 13
     iput-object p3, p0, Lcom/letv/tracker/enums/PlayType;->id:Ljava/lang/String;
 
-    .line 14
     return-void
 .end method
 
@@ -159,7 +150,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 3
     const-class v0, Lcom/letv/tracker/enums/PlayType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -175,7 +165,6 @@
     .locals 1
 
     .prologue
-    .line 3
     sget-object v0, Lcom/letv/tracker/enums/PlayType;->$VALUES:[Lcom/letv/tracker/enums/PlayType;
 
     invoke-virtual {v0}, [Lcom/letv/tracker/enums/PlayType;->clone()Ljava/lang/Object;
@@ -193,7 +182,6 @@
     .locals 1
 
     .prologue
-    .line 17
     iget-object v0, p0, Lcom/letv/tracker/enums/PlayType;->id:Ljava/lang/String;
 
     return-object v0

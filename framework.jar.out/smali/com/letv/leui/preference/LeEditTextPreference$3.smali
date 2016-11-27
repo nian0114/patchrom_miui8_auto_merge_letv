@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 268
     iput-object p1, p0, Lcom/letv/leui/preference/LeEditTextPreference$3;->this$0:Lcom/letv/leui/preference/LeEditTextPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 272
     iget-object v0, p0, Lcom/letv/leui/preference/LeEditTextPreference$3;->this$0:Lcom/letv/leui/preference/LeEditTextPreference;
 
     # getter for: Lcom/letv/leui/preference/LeEditTextPreference;->isAttached:Z
@@ -50,14 +48,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 273
     iget-object v0, p0, Lcom/letv/leui/preference/LeEditTextPreference$3;->this$0:Lcom/letv/leui/preference/LeEditTextPreference;
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeEditTextPreference;->mEditText:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->requestFocus()Z
 
-    .line 274
     iget-object v0, p0, Lcom/letv/leui/preference/LeEditTextPreference$3;->this$0:Lcom/letv/leui/preference/LeEditTextPreference;
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeEditTextPreference;->mEditText:Landroid/widget/EditText;
@@ -66,7 +62,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setCursorVisible(Z)V
 
-    .line 275
     iget-object v0, p0, Lcom/letv/leui/preference/LeEditTextPreference$3;->this$0:Lcom/letv/leui/preference/LeEditTextPreference;
 
     # getter for: Lcom/letv/leui/preference/LeEditTextPreference;->mIsMeasureInputArea:Z
@@ -76,7 +71,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 276
     iget-object v1, p0, Lcom/letv/leui/preference/LeEditTextPreference$3;->this$0:Lcom/letv/leui/preference/LeEditTextPreference;
 
     iget-object v0, p0, Lcom/letv/leui/preference/LeEditTextPreference$3;->this$0:Lcom/letv/leui/preference/LeEditTextPreference;
@@ -92,7 +86,6 @@
     # invokes: Lcom/letv/leui/preference/LeEditTextPreference;->ensureViewArea(Landroid/view/View;)V
     invoke-static {v1, v0}, Lcom/letv/leui/preference/LeEditTextPreference;->access$700(Lcom/letv/leui/preference/LeEditTextPreference;Landroid/view/View;)V
 
-    .line 280
     :cond_0
     return-void
 .end method

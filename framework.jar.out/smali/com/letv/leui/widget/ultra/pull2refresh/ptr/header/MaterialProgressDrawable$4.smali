@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 364
     iput-object p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialProgressDrawable$4;->this$0:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialProgressDrawable;
 
     iput-object p2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialProgressDrawable$4;->val$ring:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialProgressDrawable$Ring;
@@ -43,7 +42,6 @@
     .param p2, "t"    # Landroid/view/animation/Transformation;
 
     .prologue
-    .line 369
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialProgressDrawable$4;->val$ring:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialProgressDrawable$Ring;
@@ -74,7 +72,6 @@
 
     double-to-float v5, v12
 
-    .line 371
     .local v5, "minProgressArc":F
     move-object/from16 v0, p0
 
@@ -84,7 +81,6 @@
 
     move-result v8
 
-    .line 372
     .local v8, "startingEndTrim":F
     move-object/from16 v0, p0
 
@@ -94,7 +90,6 @@
 
     move-result v10
 
-    .line 373
     .local v10, "startingTrim":F
     move-object/from16 v0, p0
 
@@ -104,13 +99,11 @@
 
     move-result v9
 
-    .line 375
     .local v9, "startingRotation":F
     const v11, 0x3f4ccccd    # 0.8f
 
     sub-float v4, v11, v5
 
-    .line 376
     .local v4, "minArc":F
     # getter for: Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialProgressDrawable;->START_CURVE_INTERPOLATOR:Landroid/view/animation/Interpolator;
     invoke-static {}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialProgressDrawable;->access$400()Landroid/view/animation/Interpolator;
@@ -127,7 +120,6 @@
 
     add-float v2, v8, v11
 
-    .line 378
     .local v2, "endTrim":F
     move-object/from16 v0, p0
 
@@ -135,7 +127,6 @@
 
     invoke-virtual {v11, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialProgressDrawable$Ring;->setEndTrim(F)V
 
-    .line 379
     const v11, 0x3f4ccccd    # 0.8f
 
     # getter for: Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialProgressDrawable;->END_CURVE_INTERPOLATOR:Landroid/view/animation/Interpolator;
@@ -153,7 +144,6 @@
 
     add-float v7, v10, v11
 
-    .line 382
     .local v7, "startTrim":F
     move-object/from16 v0, p0
 
@@ -161,14 +151,12 @@
 
     invoke-virtual {v11, v7}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialProgressDrawable$Ring;->setStartTrim(F)V
 
-    .line 383
     const/high16 v11, 0x3e800000    # 0.25f
 
     mul-float v11, v11, p1
 
     add-float v6, v9, v11
 
-    .line 384
     .local v6, "rotation":F
     move-object/from16 v0, p0
 
@@ -176,7 +164,6 @@
 
     invoke-virtual {v11, v6}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialProgressDrawable$Ring;->setRotation(F)V
 
-    .line 385
     const/high16 v11, 0x43100000    # 144.0f
 
     mul-float v11, v11, p1
@@ -200,7 +187,6 @@
 
     add-float v3, v11, v12
 
-    .line 387
     .local v3, "groupRotation":F
     move-object/from16 v0, p0
 
@@ -208,6 +194,5 @@
 
     invoke-virtual {v11, v3}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/header/MaterialProgressDrawable;->setRotation(F)V
 
-    .line 388
     return-void
 .end method

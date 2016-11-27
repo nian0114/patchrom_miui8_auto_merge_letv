@@ -24,15 +24,12 @@
     .param p1, "task"    # Lcom/android/server/am/TaskRecord;
 
     .prologue
-    .line 120
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/android/server/am/TaskPersister$WriteQueueItem;-><init>(Lcom/android/server/am/TaskPersister$1;)V
 
-    .line 121
     iput-object p1, p0, Lcom/android/server/am/TaskPersister$TaskWriteQueueItem;->mTask:Lcom/android/server/am/TaskRecord;
 
-    .line 122
     return-void
 .end method
 
@@ -42,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 127
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -33,34 +33,28 @@
     .param p2, "cnt"    # I
 
     .prologue
-    .line 157
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 158
     invoke-static {p1}, Landroid/graphics/Color;->red(I)I
 
     move-result v0
 
     iput v0, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->red:I
 
-    .line 159
     invoke-static {p1}, Landroid/graphics/Color;->green(I)I
 
     move-result v0
 
     iput v0, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->grn:I
 
-    .line 160
     invoke-static {p1}, Landroid/graphics/Color;->blue(I)I
 
     move-result v0
 
     iput v0, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->blu:I
 
-    .line 161
     iput p2, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->cnt:I
 
-    .line 162
     return-void
 .end method
 
@@ -72,22 +66,16 @@
     .param p4, "cnt"    # I
 
     .prologue
-    .line 164
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 165
     iput p1, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->red:I
 
-    .line 166
     iput p2, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->grn:I
 
-    .line 167
     iput p3, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->blu:I
 
-    .line 168
     iput p4, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->cnt:I
 
-    .line 169
     return-void
 .end method
 
@@ -96,7 +84,6 @@
     .param p0, "x0"    # Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
     .prologue
-    .line 150
     iget v0, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->red:I
 
     return v0
@@ -107,7 +94,6 @@
     .param p0, "x0"    # Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
     .prologue
-    .line 150
     iget v0, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->grn:I
 
     return v0
@@ -118,7 +104,6 @@
     .param p0, "x0"    # Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
     .prologue
-    .line 150
     iget v0, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->blu:I
 
     return v0
@@ -129,7 +114,6 @@
     .param p0, "x0"    # Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;
 
     .prologue
-    .line 150
     iget v0, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->cnt:I
 
     return v0
@@ -144,24 +128,20 @@
     .param p3, "blu"    # I
 
     .prologue
-    .line 190
     iget v3, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->red:I
 
     sub-int v2, v3, p1
 
-    .line 191
     .local v2, "dr":I
     iget v3, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->grn:I
 
     sub-int v1, v3, p2
 
-    .line 192
     .local v1, "dg":I
     iget v3, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->blu:I
 
     sub-int v0, v3, p3
 
-    .line 193
     .local v0, "db":I
     mul-int v3, v2, v2
 
@@ -180,7 +160,6 @@
     .locals 1
 
     .prologue
-    .line 184
     iget v0, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->cnt:I
 
     return v0
@@ -190,19 +169,16 @@
     .locals 4
 
     .prologue
-    .line 176
     iget-object v0, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->hsv:[F
 
     if-nez v0, :cond_0
 
-    .line 177
     const/4 v0, 0x3
 
     new-array v0, v0, [F
 
     iput-object v0, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->hsv:[F
 
-    .line 178
     iget v0, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->red:I
 
     iget v1, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->grn:I
@@ -213,7 +189,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/graphics/Color;->RGBToHSV(III[F)V
 
-    .line 180
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->hsv:[F
 
@@ -224,7 +199,6 @@
     .locals 3
 
     .prologue
-    .line 172
     iget v0, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->red:I
 
     iget v1, p0, Lcom/letv/leui/util/MedianCutQuantizer$ColorNode;->grn:I
@@ -242,7 +216,6 @@
     .locals 2
 
     .prologue
-    .line 197
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;

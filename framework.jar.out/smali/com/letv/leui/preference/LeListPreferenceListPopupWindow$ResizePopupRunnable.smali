@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1754
     iput-object p1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$ResizePopupRunnable;->this$0:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$1;
 
     .prologue
-    .line 1754
     invoke-direct {p0, p1}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$ResizePopupRunnable;-><init>(Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;)V
 
     return-void
@@ -52,7 +50,6 @@
     .locals 2
 
     .prologue
-    .line 1756
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$ResizePopupRunnable;->this$0:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;
 
     # getter for: Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mDropDownList:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$DropDownListView;
@@ -103,7 +100,6 @@
 
     if-gt v0, v1, :cond_0
 
-    .line 1758
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$ResizePopupRunnable;->this$0:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;
 
     # getter for: Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->mPopup:Lcom/letv/leui/preference/LeListPreferencePopupWindow;
@@ -115,12 +111,10 @@
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/preference/LeListPreferencePopupWindow;->setInputMethodMode(I)V
 
-    .line 1759
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$ResizePopupRunnable;->this$0:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;
 
     invoke-virtual {v0}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->show()V
 
-    .line 1761
     :cond_0
     return-void
 .end method

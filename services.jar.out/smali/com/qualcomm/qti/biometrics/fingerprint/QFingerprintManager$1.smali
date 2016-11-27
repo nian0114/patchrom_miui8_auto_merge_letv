@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 332
     iput-object p1, p0, Lcom/qualcomm/qti/biometrics/fingerprint/QFingerprintManager$1;->this$0:Lcom/qualcomm/qti/biometrics/fingerprint/QFingerprintManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 336
     :try_start_0
     iget-object v1, p0, Lcom/qualcomm/qti/biometrics/fingerprint/QFingerprintManager$1;->this$0:Lcom/qualcomm/qti/biometrics/fingerprint/QFingerprintManager;
 
@@ -55,15 +53,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 340
     :goto_0
     return-void
 
-    .line 337
     :catch_0
     move-exception v0
 
-    .line 338
     .local v0, "ex":Ljava/lang/Exception;
     const-string v1, "qfp-sdk"
 
@@ -81,7 +76,6 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 344
     const-string v0, "qfp-sdk"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -104,7 +98,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 345
     iget-object v0, p0, Lcom/qualcomm/qti/biometrics/fingerprint/QFingerprintManager$1;->this$0:Lcom/qualcomm/qti/biometrics/fingerprint/QFingerprintManager;
 
     const/4 v1, 0x0
@@ -112,6 +105,5 @@
     # setter for: Lcom/qualcomm/qti/biometrics/fingerprint/QFingerprintManager;->mService:Lcom/qualcomm/qti/biometrics/fingerprint/service/IFingerprintService;
     invoke-static {v0, v1}, Lcom/qualcomm/qti/biometrics/fingerprint/QFingerprintManager;->access$002(Lcom/qualcomm/qti/biometrics/fingerprint/QFingerprintManager;Lcom/qualcomm/qti/biometrics/fingerprint/service/IFingerprintService;)Lcom/qualcomm/qti/biometrics/fingerprint/service/IFingerprintService;
 
-    .line 346
     return-void
 .end method

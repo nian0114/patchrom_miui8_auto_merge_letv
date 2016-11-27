@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 136
     iput-object p1, p0, Lcom/letv/leui/preference/LePassWordPreference$SavedState$1;->this$1:Lcom/letv/leui/preference/LePassWordPreference$SavedState;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,7 +50,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 138
     new-instance v0, Lcom/letv/leui/preference/LePassWordPreference$SavedState;
 
     iget-object v1, p0, Lcom/letv/leui/preference/LePassWordPreference$SavedState$1;->this$1:Lcom/letv/leui/preference/LePassWordPreference$SavedState;
@@ -67,7 +65,6 @@
     .locals 1
 
     .prologue
-    .line 136
     invoke-virtual {p0, p1}, Lcom/letv/leui/preference/LePassWordPreference$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Lcom/letv/leui/preference/LePassWordPreference$SavedState;
 
     move-result-object v0
@@ -80,7 +77,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 142
     new-array v0, p1, [Lcom/letv/leui/preference/LePassWordPreference$SavedState;
 
     return-object v0
@@ -90,7 +86,6 @@
     .locals 1
 
     .prologue
-    .line 136
     invoke-virtual {p0, p1}, Lcom/letv/leui/preference/LePassWordPreference$SavedState$1;->newArray(I)[Lcom/letv/leui/preference/LePassWordPreference$SavedState;
 
     move-result-object v0

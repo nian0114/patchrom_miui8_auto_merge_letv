@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 29
     iput-object p1, p0, Lcom/letv/leui/app/LetvEnginerModeActivity$1;->this$0:Lcom/letv/leui/app/LetvEnginerModeActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,14 +40,12 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 32
     const-string v0, "sys.display.string"
 
     const-string v1, "1"
 
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 33
     iget-object v0, p0, Lcom/letv/leui/app/LetvEnginerModeActivity$1;->this$0:Lcom/letv/leui/app/LetvEnginerModeActivity;
 
     const-string v1, "display string name mode open"
@@ -61,6 +58,5 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 34
     return-void
 .end method

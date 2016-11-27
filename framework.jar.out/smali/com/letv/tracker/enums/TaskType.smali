@@ -47,7 +47,6 @@
 
     const/4 v3, 0x0
 
-    .line 10
     new-instance v0, Lcom/letv/tracker/enums/TaskType;
 
     const-string v1, "Letv"
@@ -58,7 +57,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/TaskType;->Letv:Lcom/letv/tracker/enums/TaskType;
 
-    .line 14
     new-instance v0, Lcom/letv/tracker/enums/TaskType;
 
     const-string v1, "BT"
@@ -69,7 +67,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/TaskType;->BT:Lcom/letv/tracker/enums/TaskType;
 
-    .line 18
     new-instance v0, Lcom/letv/tracker/enums/TaskType;
 
     const-string v1, "FTP"
@@ -80,7 +77,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/TaskType;->FTP:Lcom/letv/tracker/enums/TaskType;
 
-    .line 22
     new-instance v0, Lcom/letv/tracker/enums/TaskType;
 
     const-string v1, "HTTP"
@@ -91,7 +87,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/TaskType;->HTTP:Lcom/letv/tracker/enums/TaskType;
 
-    .line 26
     new-instance v0, Lcom/letv/tracker/enums/TaskType;
 
     const-string v1, "Others"
@@ -102,7 +97,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/TaskType;->Others:Lcom/letv/tracker/enums/TaskType;
 
-    .line 6
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/letv/tracker/enums/TaskType;
@@ -144,13 +138,10 @@
     .end annotation
 
     .prologue
-    .line 38
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 39
     iput-object p3, p0, Lcom/letv/tracker/enums/TaskType;->id:Ljava/lang/String;
 
-    .line 40
     return-void
 .end method
 
@@ -159,7 +150,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 6
     const-class v0, Lcom/letv/tracker/enums/TaskType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -175,7 +165,6 @@
     .locals 1
 
     .prologue
-    .line 6
     sget-object v0, Lcom/letv/tracker/enums/TaskType;->$VALUES:[Lcom/letv/tracker/enums/TaskType;
 
     invoke-virtual {v0}, [Lcom/letv/tracker/enums/TaskType;->clone()Ljava/lang/Object;
@@ -193,7 +182,6 @@
     .locals 1
 
     .prologue
-    .line 48
     iget-object v0, p0, Lcom/letv/tracker/enums/TaskType;->id:Ljava/lang/String;
 
     return-object v0

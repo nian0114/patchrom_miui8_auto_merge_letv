@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 634
     iput-object p1, p0, Lcom/letv/leui/preference/LeListPreference$2;->this$0:Lcom/letv/leui/preference/LeListPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 637
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$2;->this$0:Lcom/letv/leui/preference/LeListPreference;
 
     # getter for: Lcom/letv/leui/preference/LeListPreference;->bottomSheet:Lcom/letv/leui/widget/LeBottomSheet;
@@ -51,6 +49,5 @@
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/LeBottomSheet;->disappear()V
 
-    .line 638
     return-void
 .end method

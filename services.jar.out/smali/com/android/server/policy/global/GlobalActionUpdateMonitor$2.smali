@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 56
     iput-object p1, p0, Lcom/android/server/policy/global/GlobalActionUpdateMonitor$2;->this$0:Lcom/android/server/policy/global/GlobalActionUpdateMonitor;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/16 v5, 0x14d
 
-    .line 58
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 59
     .local v0, "action":Ljava/lang/String;
     const-string v2, "GlobalAction"
 
@@ -70,7 +67,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 60
     const-string v2, "android.intent.action.CLOSE_SYSTEM_DIALOGS"
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -79,14 +75,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 61
     const-string v2, "reason"
 
     invoke-virtual {p2, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 62
     .local v1, "reason":Ljava/lang/String;
     const-string v2, "globalactions"
 
@@ -96,7 +90,6 @@
 
     if-nez v2, :cond_0
 
-    .line 63
     iget-object v2, p0, Lcom/android/server/policy/global/GlobalActionUpdateMonitor$2;->this$0:Lcom/android/server/policy/global/GlobalActionUpdateMonitor;
 
     # getter for: Lcom/android/server/policy/global/GlobalActionUpdateMonitor;->mHandler:Landroid/os/Handler;
@@ -106,13 +99,11 @@
 
     invoke-virtual {v2, v5}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 68
     .end local v1    # "reason":Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
 
-    .line 65
     :cond_1
     const-string v2, "android.intent.action.PHONE_STATE"
 
@@ -122,7 +113,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 66
     iget-object v2, p0, Lcom/android/server/policy/global/GlobalActionUpdateMonitor$2;->this$0:Lcom/android/server/policy/global/GlobalActionUpdateMonitor;
 
     # getter for: Lcom/android/server/policy/global/GlobalActionUpdateMonitor;->mHandler:Landroid/os/Handler;

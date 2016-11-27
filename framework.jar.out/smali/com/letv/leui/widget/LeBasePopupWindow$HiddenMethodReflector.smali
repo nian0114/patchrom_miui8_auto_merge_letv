@@ -31,10 +31,8 @@
     .locals 6
 
     .prologue
-    .line 753
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 755
     :try_start_0
     const-class v1, Landroid/widget/PopupWindow;
 
@@ -56,7 +54,6 @@
 
     iput-object v1, p0, Lcom/letv/leui/widget/LeBasePopupWindow$HiddenMethodReflector;->setAllowScrollingAnchorParent:Ljava/lang/reflect/Method;
 
-    .line 758
     iget-object v1, p0, Lcom/letv/leui/widget/LeBasePopupWindow$HiddenMethodReflector;->setAllowScrollingAnchorParent:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x1
@@ -65,7 +62,6 @@
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 764
     :goto_0
     :try_start_1
     const-class v1, Landroid/widget/PopupWindow;
@@ -100,7 +96,6 @@
 
     iput-object v1, p0, Lcom/letv/leui/widget/LeBasePopupWindow$HiddenMethodReflector;->getMaxAvailableHeight:Ljava/lang/reflect/Method;
 
-    .line 766
     iget-object v1, p0, Lcom/letv/leui/widget/LeBasePopupWindow$HiddenMethodReflector;->getMaxAvailableHeight:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x1
@@ -109,7 +104,6 @@
     :try_end_1
     .catch Ljava/lang/NoSuchMethodException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 772
     :goto_1
     :try_start_2
     const-class v1, Landroid/view/View;
@@ -144,7 +138,6 @@
 
     iput-object v1, p0, Lcom/letv/leui/widget/LeBasePopupWindow$HiddenMethodReflector;->pointInView:Ljava/lang/reflect/Method;
 
-    .line 774
     iget-object v1, p0, Lcom/letv/leui/widget/LeBasePopupWindow$HiddenMethodReflector;->pointInView:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x1
@@ -153,7 +146,6 @@
     :try_end_2
     .catch Ljava/lang/NoSuchMethodException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 780
     :goto_2
     :try_start_3
     const-class v1, Landroid/widget/PopupWindow;
@@ -166,7 +158,6 @@
 
     iput-object v1, p0, Lcom/letv/leui/widget/LeBasePopupWindow$HiddenMethodReflector;->mAboveAnchorBackgroundDrawable:Ljava/lang/reflect/Field;
 
-    .line 781
     iget-object v1, p0, Lcom/letv/leui/widget/LeBasePopupWindow$HiddenMethodReflector;->mAboveAnchorBackgroundDrawable:Ljava/lang/reflect/Field;
 
     const/4 v2, 0x1
@@ -175,7 +166,6 @@
     :try_end_3
     .catch Ljava/lang/NoSuchFieldException; {:try_start_3 .. :try_end_3} :catch_3
 
-    .line 786
     :goto_3
     :try_start_4
     const-class v1, Landroid/widget/PopupWindow;
@@ -188,7 +178,6 @@
 
     iput-object v1, p0, Lcom/letv/leui/widget/LeBasePopupWindow$HiddenMethodReflector;->mBelowAnchorBackgroundDrawable:Ljava/lang/reflect/Field;
 
-    .line 787
     iget-object v1, p0, Lcom/letv/leui/widget/LeBasePopupWindow$HiddenMethodReflector;->mBelowAnchorBackgroundDrawable:Ljava/lang/reflect/Field;
 
     const/4 v2, 0x1
@@ -197,59 +186,48 @@
     :try_end_4
     .catch Ljava/lang/NoSuchFieldException; {:try_start_4 .. :try_end_4} :catch_4
 
-    .line 791
     :goto_4
     return-void
 
-    .line 759
     :catch_0
     move-exception v0
 
-    .line 760
     .local v0, "e":Ljava/lang/NoSuchMethodException;
     invoke-virtual {v0}, Ljava/lang/NoSuchMethodException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 767
     .end local v0    # "e":Ljava/lang/NoSuchMethodException;
     :catch_1
     move-exception v0
 
-    .line 768
     .restart local v0    # "e":Ljava/lang/NoSuchMethodException;
     invoke-virtual {v0}, Ljava/lang/NoSuchMethodException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 775
     .end local v0    # "e":Ljava/lang/NoSuchMethodException;
     :catch_2
     move-exception v0
 
-    .line 776
     .restart local v0    # "e":Ljava/lang/NoSuchMethodException;
     invoke-virtual {v0}, Ljava/lang/NoSuchMethodException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 782
     .end local v0    # "e":Ljava/lang/NoSuchMethodException;
     :catch_3
     move-exception v0
 
-    .line 783
     .local v0, "e":Ljava/lang/NoSuchFieldException;
     invoke-virtual {v0}, Ljava/lang/NoSuchFieldException;->printStackTrace()V
 
     goto :goto_3
 
-    .line 788
     .end local v0    # "e":Ljava/lang/NoSuchFieldException;
     :catch_4
     move-exception v0
 
-    .line 789
     .restart local v0    # "e":Ljava/lang/NoSuchFieldException;
     invoke-virtual {v0}, Ljava/lang/NoSuchFieldException;->printStackTrace()V
 
@@ -266,12 +244,10 @@
     .param p4, "ignoreBottomDecorations"    # Z
 
     .prologue
-    .line 825
     iget-object v1, p0, Lcom/letv/leui/widget/LeBasePopupWindow$HiddenMethodReflector;->getMaxAvailableHeight:Ljava/lang/reflect/Method;
 
     if-eqz v1, :cond_0
 
-    .line 827
     :try_start_0
     iget-object v1, p0, Lcom/letv/leui/widget/LeBasePopupWindow$HiddenMethodReflector;->getMaxAvailableHeight:Ljava/lang/reflect/Method;
 
@@ -311,19 +287,15 @@
 
     move-result v1
 
-    .line 833
     :goto_0
     return v1
 
-    .line 828
     :catch_0
     move-exception v0
 
-    .line 829
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 833
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v1, -0x1
@@ -337,7 +309,6 @@
     .param p2, "d"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 805
     :try_start_0
     iget-object v1, p0, Lcom/letv/leui/widget/LeBasePopupWindow$HiddenMethodReflector;->mAboveAnchorBackgroundDrawable:Ljava/lang/reflect/Field;
 
@@ -346,26 +317,21 @@
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 811
     :goto_0
     return-void
 
-    .line 806
     :catch_0
     move-exception v0
 
-    .line 807
     .local v0, "e":Ljava/lang/IllegalAccessException;
     invoke-virtual {v0}, Ljava/lang/IllegalAccessException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 808
     .end local v0    # "e":Ljava/lang/IllegalAccessException;
     :catch_1
     move-exception v0
 
-    .line 809
     .local v0, "e":Ljava/lang/IllegalArgumentException;
     invoke-virtual {v0}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
 
@@ -378,12 +344,10 @@
     .param p2, "enabled"    # Z
 
     .prologue
-    .line 814
     iget-object v1, p0, Lcom/letv/leui/widget/LeBasePopupWindow$HiddenMethodReflector;->setAllowScrollingAnchorParent:Ljava/lang/reflect/Method;
 
     if-eqz v1, :cond_0
 
-    .line 816
     :try_start_0
     iget-object v1, p0, Lcom/letv/leui/widget/LeBasePopupWindow$HiddenMethodReflector;->setAllowScrollingAnchorParent:Ljava/lang/reflect/Method;
 
@@ -403,16 +367,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 821
     :cond_0
     :goto_0
     return-void
 
-    .line 817
     :catch_0
     move-exception v0
 
-    .line 818
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -425,7 +386,6 @@
     .param p2, "d"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 795
     :try_start_0
     iget-object v1, p0, Lcom/letv/leui/widget/LeBasePopupWindow$HiddenMethodReflector;->mBelowAnchorBackgroundDrawable:Ljava/lang/reflect/Field;
 
@@ -434,26 +394,21 @@
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 801
     :goto_0
     return-void
 
-    .line 796
     :catch_0
     move-exception v0
 
-    .line 797
     .local v0, "e":Ljava/lang/IllegalAccessException;
     invoke-virtual {v0}, Ljava/lang/IllegalAccessException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 798
     .end local v0    # "e":Ljava/lang/IllegalAccessException;
     :catch_1
     move-exception v0
 
-    .line 799
     .local v0, "e":Ljava/lang/IllegalArgumentException;
     invoke-virtual {v0}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
 

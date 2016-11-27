@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1296
     iput-object p1, p0, Lcom/letv/leui/widget/LeBottomSheet$13;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 4
 
     .prologue
-    .line 1299
     iget-object v2, p0, Lcom/letv/leui/widget/LeBottomSheet$13;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # getter for: Lcom/letv/leui/widget/LeBottomSheet;->maxHeightInPixel:I
@@ -52,7 +50,6 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 1300
     iget-object v2, p0, Lcom/letv/leui/widget/LeBottomSheet$13;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # getter for: Lcom/letv/leui/widget/LeBottomSheet;->menuContainer:Landroid/view/ViewGroup;
@@ -64,7 +61,6 @@
 
     move-result v0
 
-    .line 1301
     .local v0, "height":I
     iget-object v2, p0, Lcom/letv/leui/widget/LeBottomSheet$13;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
@@ -77,7 +73,6 @@
 
     move-result-object v1
 
-    .line 1302
     .local v1, "lp":Landroid/view/ViewGroup$LayoutParams;
     iget-object v2, p0, Lcom/letv/leui/widget/LeBottomSheet$13;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
@@ -88,7 +83,6 @@
 
     if-le v0, v2, :cond_0
 
-    .line 1303
     iget-object v2, p0, Lcom/letv/leui/widget/LeBottomSheet$13;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # getter for: Lcom/letv/leui/widget/LeBottomSheet;->maxHeightInPixel:I
@@ -98,7 +92,6 @@
 
     iput v2, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 1304
     iget-object v2, p0, Lcom/letv/leui/widget/LeBottomSheet$13;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # getter for: Lcom/letv/leui/widget/LeBottomSheet;->menuContainer:Landroid/view/ViewGroup;
@@ -108,7 +101,6 @@
 
     invoke-virtual {v2, v1}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1307
     .end local v0    # "height":I
     .end local v1    # "lp":Landroid/view/ViewGroup$LayoutParams;
     :cond_0

@@ -14,7 +14,6 @@
     .locals 0
 
     .prologue
-    .line 13
     invoke-direct {p0}, Landroid/leuipowersavemode/command/ALetvDeepPowerSaveCommand;-><init>()V
 
     return-void
@@ -25,26 +24,22 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 54
     invoke-direct {p0, p1}, Landroid/leuipowersavemode/TelephonyPowerSaveCommand;->getTelephonyManager(Landroid/content/Context;)Landroid/telephony/TelephonyManager;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/leuipowersavemode/TelephonyPowerSaveCommand;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
-    .line 55
     iget-object v0, p0, Landroid/leuipowersavemode/TelephonyPowerSaveCommand;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     if-eqz v0, :cond_0
 
-    .line 56
     iget-object v0, p0, Landroid/leuipowersavemode/TelephonyPowerSaveCommand;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getDataEnabled()Z
 
     move-result v0
 
-    .line 58
     :goto_0
     return v0
 
@@ -59,19 +54,16 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 62
     iget-object v0, p0, Landroid/leuipowersavemode/TelephonyPowerSaveCommand;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     if-nez v0, :cond_0
 
-    .line 63
     invoke-static {p1}, Landroid/telephony/TelephonyManager;->from(Landroid/content/Context;)Landroid/telephony/TelephonyManager;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/leuipowersavemode/TelephonyPowerSaveCommand;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
-    .line 65
     :cond_0
     iget-object v0, p0, Landroid/leuipowersavemode/TelephonyPowerSaveCommand;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
@@ -85,27 +77,22 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 35
     invoke-super {p0, p1}, Landroid/leuipowersavemode/command/ALetvDeepPowerSaveCommand;->disabled(Landroid/content/Context;)V
 
-    .line 36
     invoke-direct {p0, p1}, Landroid/leuipowersavemode/TelephonyPowerSaveCommand;->getTelephonyManager(Landroid/content/Context;)Landroid/telephony/TelephonyManager;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/leuipowersavemode/TelephonyPowerSaveCommand;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
-    .line 37
     iget-object v1, p0, Landroid/leuipowersavemode/TelephonyPowerSaveCommand;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     if-eqz v1, :cond_1
 
-    .line 39
     invoke-direct {p0, p1}, Landroid/leuipowersavemode/TelephonyPowerSaveCommand;->getCurrentTelephonyState(Landroid/content/Context;)Z
 
     move-result v0
 
-    .line 40
     .local v0, "currentDataEnabledState":Z
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -139,12 +126,10 @@
 
     iput-object v1, p0, Landroid/leuipowersavemode/TelephonyPowerSaveCommand;->mCommandString:Ljava/lang/String;
 
-    .line 43
     iget-boolean v1, p0, Landroid/leuipowersavemode/TelephonyPowerSaveCommand;->mTelephonyBeforeState:Z
 
     if-eq v1, v0, :cond_3
 
-    .line 44
     iget-object v2, p0, Landroid/leuipowersavemode/TelephonyPowerSaveCommand;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     iget-boolean v1, p0, Landroid/leuipowersavemode/TelephonyPowerSaveCommand;->mTelephonyBeforeState:Z
@@ -159,7 +144,6 @@
     :goto_0
     invoke-virtual {v2, v1}, Landroid/telephony/TelephonyManager;->setDataEnabled(Z)V
 
-    .line 49
     :goto_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -191,19 +175,16 @@
 
     iput-object v1, p0, Landroid/leuipowersavemode/TelephonyPowerSaveCommand;->mCommandString:Ljava/lang/String;
 
-    .line 51
     .end local v0    # "currentDataEnabledState":Z
     :cond_1
     return-void
 
-    .line 44
     .restart local v0    # "currentDataEnabledState":Z
     :cond_2
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 47
     :cond_3
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -215,7 +196,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "no action ,but success!!!"
+    const-string v2, "no action ,but success!!!"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -235,41 +216,34 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 19
     invoke-super {p0, p1}, Landroid/leuipowersavemode/command/ALetvDeepPowerSaveCommand;->enabled(Landroid/content/Context;)V
 
-    .line 21
     invoke-direct {p0, p1}, Landroid/leuipowersavemode/TelephonyPowerSaveCommand;->getTelephonyManager(Landroid/content/Context;)Landroid/telephony/TelephonyManager;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/leuipowersavemode/TelephonyPowerSaveCommand;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
-    .line 22
     invoke-direct {p0, p1}, Landroid/leuipowersavemode/TelephonyPowerSaveCommand;->getCurrentTelephonyState(Landroid/content/Context;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Landroid/leuipowersavemode/TelephonyPowerSaveCommand;->mTelephonyBeforeState:Z
 
-    .line 23
     iget-object v0, p0, Landroid/leuipowersavemode/TelephonyPowerSaveCommand;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     if-eqz v0, :cond_0
 
-    .line 24
     iget-object v0, p0, Landroid/leuipowersavemode/TelephonyPowerSaveCommand;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/telephony/TelephonyManager;->setDataEnabled(Z)V
 
-    .line 25
     const-string v0, "enabled TelephonyCommand TelephonyManager set false"
 
     iput-object v0, p0, Landroid/leuipowersavemode/TelephonyPowerSaveCommand;->mCommandString:Ljava/lang/String;
 
-    .line 29
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -281,7 +255,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "mTelephonyBeforeState is:"
+    const-string v1, "mTelephonyBeforeState is:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -313,12 +287,10 @@
 
     iput-object v0, p0, Landroid/leuipowersavemode/TelephonyPowerSaveCommand;->mCommandString:Ljava/lang/String;
 
-    .line 31
     return-void
 
-    .line 27
     :cond_0
-    const-string/jumbo v0, "mTelephonyManager null!!!"
+    const-string v0, "mTelephonyManager null!!!"
 
     iput-object v0, p0, Landroid/leuipowersavemode/TelephonyPowerSaveCommand;->mCommandString:Ljava/lang/String;
 

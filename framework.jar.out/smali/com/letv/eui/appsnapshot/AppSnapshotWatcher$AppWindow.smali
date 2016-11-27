@@ -26,14 +26,11 @@
     .param p2, "client"    # Landroid/view/IWindow;
 
     .prologue
-    .line 80
     iput-object p1, p0, Lcom/letv/eui/appsnapshot/AppSnapshotWatcher$AppWindow;->this$0:Lcom/letv/eui/appsnapshot/AppSnapshotWatcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 82
     iput-object p2, p0, Lcom/letv/eui/appsnapshot/AppSnapshotWatcher$AppWindow;->window:Landroid/view/IWindow;
 
-    .line 83
     return-void
 .end method

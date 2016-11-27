@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 11
     invoke-direct {p0}, Landroid/preference/PreferenceActivity;-><init>()V
 
     return-void
@@ -25,10 +24,8 @@
 
     const/4 v7, 0x0
 
-    .line 15
     invoke-super {p0, p1}, Landroid/preference/PreferenceActivity;->addPreferencesFromResource(I)V
 
-    .line 16
     invoke-virtual {p0}, Lcom/letv/leui/preference/LeAbsPreferenceActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v5
@@ -37,7 +34,6 @@
 
     move-result-object v2
 
-    .line 17
     .local v2, "mListAdapter":Landroid/widget/ListAdapter;
     instance-of v5, v2, Landroid/preference/PreferenceGroupAdapter;
 
@@ -45,10 +41,8 @@
 
     move-object v4, v2
 
-    .line 18
     check-cast v4, Landroid/preference/PreferenceGroupAdapter;
 
-    .line 20
     .local v4, "preferenceGroup":Landroid/preference/PreferenceGroupAdapter;
     new-array v0, v6, [Ljava/lang/Class;
 
@@ -56,7 +50,6 @@
 
     aput-object v5, v0, v7
 
-    .line 21
     .local v0, "clazz":[Ljava/lang/Class;
     new-array v3, v6, [Ljava/lang/Object;
 
@@ -70,7 +63,6 @@
 
     aput-object v5, v3, v7
 
-    .line 23
     .local v3, "params":[Ljava/lang/Object;
     :try_start_0
     const-string v5, "setDividerFilter"
@@ -79,7 +71,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 29
     .end local v0    # "clazz":[Ljava/lang/Class;
     .end local v3    # "params":[Ljava/lang/Object;
     .end local v4    # "preferenceGroup":Landroid/preference/PreferenceGroupAdapter;
@@ -87,14 +78,12 @@
     :goto_0
     return-void
 
-    .line 24
     .restart local v0    # "clazz":[Ljava/lang/Class;
     .restart local v3    # "params":[Ljava/lang/Object;
     .restart local v4    # "preferenceGroup":Landroid/preference/PreferenceGroupAdapter;
     :catch_0
     move-exception v1
 
-    .line 25
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 

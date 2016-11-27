@@ -18,10 +18,8 @@
     .locals 0
 
     .prologue
-    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 20
     return-void
 .end method
 
@@ -33,22 +31,16 @@
     .param p4, "moveY"    # F
 
     .prologue
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 13
     iput p1, p0, Lcom/letv/leui/widget/LockMovePoint;->curX:F
 
-    .line 14
     iput p2, p0, Lcom/letv/leui/widget/LockMovePoint;->curY:F
 
-    .line 15
     iput p3, p0, Lcom/letv/leui/widget/LockMovePoint;->moveX:F
 
-    .line 16
     iput p4, p0, Lcom/letv/leui/widget/LockMovePoint;->moveY:F
 
-    .line 17
     return-void
 .end method
 
@@ -58,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 23
     iget v0, p0, Lcom/letv/leui/widget/LockMovePoint;->curX:F
 
     return v0
@@ -68,7 +59,6 @@
     .locals 1
 
     .prologue
-    .line 31
     iget v0, p0, Lcom/letv/leui/widget/LockMovePoint;->curY:F
 
     return v0
@@ -78,7 +68,6 @@
     .locals 1
 
     .prologue
-    .line 39
     iget v0, p0, Lcom/letv/leui/widget/LockMovePoint;->moveX:F
 
     return v0
@@ -88,7 +77,6 @@
     .locals 1
 
     .prologue
-    .line 47
     iget v0, p0, Lcom/letv/leui/widget/LockMovePoint;->moveY:F
 
     return v0
@@ -99,10 +87,8 @@
     .param p1, "curX"    # F
 
     .prologue
-    .line 27
     iput p1, p0, Lcom/letv/leui/widget/LockMovePoint;->curX:F
 
-    .line 28
     return-void
 .end method
 
@@ -111,10 +97,8 @@
     .param p1, "curY"    # F
 
     .prologue
-    .line 35
     iput p1, p0, Lcom/letv/leui/widget/LockMovePoint;->curY:F
 
-    .line 36
     return-void
 .end method
 
@@ -123,10 +107,8 @@
     .param p1, "moveX"    # F
 
     .prologue
-    .line 43
     iput p1, p0, Lcom/letv/leui/widget/LockMovePoint;->moveX:F
 
-    .line 44
     return-void
 .end method
 
@@ -135,9 +117,7 @@
     .param p1, "moveY"    # F
 
     .prologue
-    .line 51
     iput p1, p0, Lcom/letv/leui/widget/LockMovePoint;->moveY:F
 
-    .line 52
     return-void
 .end method

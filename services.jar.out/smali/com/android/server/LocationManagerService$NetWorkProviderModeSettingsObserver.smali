@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 383
     iput-object p1, p0, Lcom/android/server/LocationManagerService$NetWorkProviderModeSettingsObserver;->this$0:Lcom/android/server/LocationManagerService;
 
-    .line 384
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 386
     return-void
 .end method
 
@@ -40,7 +37,6 @@
     .locals 4
 
     .prologue
-    .line 388
     iget-object v1, p0, Lcom/android/server/LocationManagerService$NetWorkProviderModeSettingsObserver;->this$0:Lcom/android/server/LocationManagerService;
 
     # getter for: Lcom/android/server/LocationManagerService;->mContext:Landroid/content/Context;
@@ -52,7 +48,6 @@
 
     move-result-object v0
 
-    .line 389
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v1, "choose_network_provider_mode"
 
@@ -66,7 +61,6 @@
 
     invoke-virtual {v0, v1, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 392
     return-void
 .end method
 
@@ -76,7 +70,6 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 396
     iget-object v1, p0, Lcom/android/server/LocationManagerService$NetWorkProviderModeSettingsObserver;->this$0:Lcom/android/server/LocationManagerService;
 
     # getter for: Lcom/android/server/LocationManagerService;->mContext:Landroid/content/Context;
@@ -94,7 +87,6 @@
 
     move-result-object v0
 
-    .line 399
     .local v0, "mode":Ljava/lang/String;
     const-string v1, "LocationManagerService"
 
@@ -118,7 +110,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 401
     const-string v1, "auto"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -127,18 +118,15 @@
 
     if-eqz v1, :cond_1
 
-    .line 402
     iget-object v1, p0, Lcom/android/server/LocationManagerService$NetWorkProviderModeSettingsObserver;->this$0:Lcom/android/server/LocationManagerService;
 
     # invokes: Lcom/android/server/LocationManagerService;->findNetworkProviderWhenAutoMode()V
     invoke-static {v1}, Lcom/android/server/LocationManagerService;->access$1000(Lcom/android/server/LocationManagerService;)V
 
-    .line 410
     :cond_0
     :goto_0
     return-void
 
-    .line 403
     :cond_1
     const-string v1, "baidu"
 
@@ -148,7 +136,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 404
     iget-object v1, p0, Lcom/android/server/LocationManagerService$NetWorkProviderModeSettingsObserver;->this$0:Lcom/android/server/LocationManagerService;
 
     # getter for: Lcom/android/server/LocationManagerService;->mContext:Landroid/content/Context;
@@ -168,7 +155,6 @@
 
     goto :goto_0
 
-    .line 406
     :cond_2
     const-string v1, "google"
 
@@ -178,7 +164,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 407
     iget-object v1, p0, Lcom/android/server/LocationManagerService$NetWorkProviderModeSettingsObserver;->this$0:Lcom/android/server/LocationManagerService;
 
     # getter for: Lcom/android/server/LocationManagerService;->mContext:Landroid/content/Context;

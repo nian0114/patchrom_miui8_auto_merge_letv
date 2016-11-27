@@ -47,7 +47,6 @@
 
     const/4 v3, 0x0
 
-    .line 4
     new-instance v0, Lcom/letv/tracker/enums/VPNType;
 
     const-string v1, "PPTP"
@@ -58,7 +57,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/VPNType;->PPTP:Lcom/letv/tracker/enums/VPNType;
 
-    .line 5
     new-instance v0, Lcom/letv/tracker/enums/VPNType;
 
     const-string v1, "L2TP"
@@ -69,7 +67,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/VPNType;->L2TP:Lcom/letv/tracker/enums/VPNType;
 
-    .line 6
     new-instance v0, Lcom/letv/tracker/enums/VPNType;
 
     const-string v1, "IpSec"
@@ -80,7 +77,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/VPNType;->IpSec:Lcom/letv/tracker/enums/VPNType;
 
-    .line 7
     new-instance v0, Lcom/letv/tracker/enums/VPNType;
 
     const-string v1, "SSLVPN"
@@ -91,7 +87,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/VPNType;->SSLVPN:Lcom/letv/tracker/enums/VPNType;
 
-    .line 8
     new-instance v0, Lcom/letv/tracker/enums/VPNType;
 
     const-string v1, "Other"
@@ -102,7 +97,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/VPNType;->Other:Lcom/letv/tracker/enums/VPNType;
 
-    .line 3
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/letv/tracker/enums/VPNType;
@@ -144,13 +138,10 @@
     .end annotation
 
     .prologue
-    .line 12
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 13
     iput-object p3, p0, Lcom/letv/tracker/enums/VPNType;->id:Ljava/lang/String;
 
-    .line 14
     return-void
 .end method
 
@@ -159,7 +150,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 3
     const-class v0, Lcom/letv/tracker/enums/VPNType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -175,7 +165,6 @@
     .locals 1
 
     .prologue
-    .line 3
     sget-object v0, Lcom/letv/tracker/enums/VPNType;->$VALUES:[Lcom/letv/tracker/enums/VPNType;
 
     invoke-virtual {v0}, [Lcom/letv/tracker/enums/VPNType;->clone()Ljava/lang/Object;
@@ -193,7 +182,6 @@
     .locals 1
 
     .prologue
-    .line 17
     iget-object v0, p0, Lcom/letv/tracker/enums/VPNType;->id:Ljava/lang/String;
 
     return-object v0

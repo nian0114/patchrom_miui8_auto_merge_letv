@@ -38,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 542
     new-instance v0, Lcom/letv/leui/preference/LeListPreference$SavedState$1;
 
     invoke-direct {v0}, Lcom/letv/leui/preference/LeListPreference$SavedState$1;-><init>()V
@@ -55,17 +54,14 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 526
     invoke-direct {p0, p1}, Landroid/preference/Preference$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 527
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/letv/leui/preference/LeListPreference$SavedState;->value:Ljava/lang/String;
 
-    .line 528
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -75,10 +71,8 @@
     :goto_0
     iput-boolean v0, p0, Lcom/letv/leui/preference/LeListPreference$SavedState;->isBottomSheetShowing:Z
 
-    .line 529
     return-void
 
-    .line 528
     :cond_0
     const/4 v0, 0x0
 
@@ -90,10 +84,8 @@
     .param p1, "superState"    # Landroid/os/Parcelable;
 
     .prologue
-    .line 539
     invoke-direct {p0, p1}, Landroid/preference/Preference$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 540
     return-void
 .end method
 
@@ -105,15 +97,12 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 533
     invoke-super {p0, p1, p2}, Landroid/preference/Preference$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 534
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$SavedState;->value:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 535
     iget-boolean v0, p0, Lcom/letv/leui/preference/LeListPreference$SavedState;->isBottomSheetShowing:Z
 
     if-eqz v0, :cond_0
@@ -123,10 +112,8 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 536
     return-void
 
-    .line 535
     :cond_0
     const/4 v0, 0x0
 

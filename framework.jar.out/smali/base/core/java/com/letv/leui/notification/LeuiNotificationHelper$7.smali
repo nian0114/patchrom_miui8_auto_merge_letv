@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 309
     iput-object p1, p0, Lbase/core/java/com/letv/leui/notification/LeuiNotificationHelper$7;->this$0:Lbase/core/java/com/letv/leui/notification/LeuiNotificationHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 312
     iget-object v0, p0, Lbase/core/java/com/letv/leui/notification/LeuiNotificationHelper$7;->this$0:Lbase/core/java/com/letv/leui/notification/LeuiNotificationHelper;
 
     const/4 v1, 0x0
@@ -48,12 +46,10 @@
     # setter for: Lbase/core/java/com/letv/leui/notification/LeuiNotificationHelper;->mNotificationHeadsUpNeedSave:Z
     invoke-static {v0, v1}, Lbase/core/java/com/letv/leui/notification/LeuiNotificationHelper;->access$1002(Lbase/core/java/com/letv/leui/notification/LeuiNotificationHelper;Z)Z
 
-    .line 313
     iget-object v0, p0, Lbase/core/java/com/letv/leui/notification/LeuiNotificationHelper$7;->this$0:Lbase/core/java/com/letv/leui/notification/LeuiNotificationHelper;
 
     # invokes: Lbase/core/java/com/letv/leui/notification/LeuiNotificationHelper;->saveNotificationHeadsUpMapToFile()V
     invoke-static {v0}, Lbase/core/java/com/letv/leui/notification/LeuiNotificationHelper;->access$1100(Lbase/core/java/com/letv/leui/notification/LeuiNotificationHelper;)V
 
-    .line 314
     return-void
 .end method

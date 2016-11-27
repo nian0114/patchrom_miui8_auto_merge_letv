@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 50
     new-instance v0, Lcom/letv/leui/os/phonecontrol/PhoneLockData;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -65,7 +63,6 @@
     .locals 1
 
     .prologue
-    .line 46
     invoke-virtual {p0, p1}, Lcom/letv/leui/os/phonecontrol/PhoneLockData$1;->createFromParcel(Landroid/os/Parcel;)Lcom/letv/leui/os/phonecontrol/PhoneLockData;
 
     move-result-object v0
@@ -78,7 +75,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 55
     new-array v0, p1, [Lcom/letv/leui/os/phonecontrol/PhoneLockData;
 
     return-object v0
@@ -88,7 +84,6 @@
     .locals 1
 
     .prologue
-    .line 46
     invoke-virtual {p0, p1}, Lcom/letv/leui/os/phonecontrol/PhoneLockData$1;->newArray(I)[Lcom/letv/leui/os/phonecontrol/PhoneLockData;
 
     move-result-object v0

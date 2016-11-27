@@ -102,26 +102,21 @@
     .locals 1
 
     .prologue
-    .line 479
     .local p0, "this":Lcom/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 480
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/gson/internal/LinkedHashTreeMap$Node;->key:Ljava/lang/Object;
 
-    .line 481
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/google/gson/internal/LinkedHashTreeMap$Node;->hash:I
 
-    .line 482
     iput-object p0, p0, Lcom/google/gson/internal/LinkedHashTreeMap$Node;->prev:Lcom/google/gson/internal/LinkedHashTreeMap$Node;
 
     iput-object p0, p0, Lcom/google/gson/internal/LinkedHashTreeMap$Node;->next:Lcom/google/gson/internal/LinkedHashTreeMap$Node;
 
-    .line 483
     return-void
 .end method
 
@@ -141,7 +136,6 @@
     .end annotation
 
     .prologue
-    .line 486
     .local p0, "this":Lcom/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     .local p1, "parent":Lcom/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     .local p2, "key":Ljava/lang/Object;, "TK;"
@@ -149,33 +143,24 @@
     .local p5, "prev":Lcom/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 487
     iput-object p1, p0, Lcom/google/gson/internal/LinkedHashTreeMap$Node;->parent:Lcom/google/gson/internal/LinkedHashTreeMap$Node;
 
-    .line 488
     iput-object p2, p0, Lcom/google/gson/internal/LinkedHashTreeMap$Node;->key:Ljava/lang/Object;
 
-    .line 489
     iput p3, p0, Lcom/google/gson/internal/LinkedHashTreeMap$Node;->hash:I
 
-    .line 490
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/google/gson/internal/LinkedHashTreeMap$Node;->height:I
 
-    .line 491
     iput-object p4, p0, Lcom/google/gson/internal/LinkedHashTreeMap$Node;->next:Lcom/google/gson/internal/LinkedHashTreeMap$Node;
 
-    .line 492
     iput-object p5, p0, Lcom/google/gson/internal/LinkedHashTreeMap$Node;->prev:Lcom/google/gson/internal/LinkedHashTreeMap$Node;
 
-    .line 493
     iput-object p0, p5, Lcom/google/gson/internal/LinkedHashTreeMap$Node;->next:Lcom/google/gson/internal/LinkedHashTreeMap$Node;
 
-    .line 494
     iput-object p0, p4, Lcom/google/gson/internal/LinkedHashTreeMap$Node;->prev:Lcom/google/gson/internal/LinkedHashTreeMap$Node;
 
-    .line 495
     return-void
 .end method
 
@@ -189,17 +174,14 @@
     .local p0, "this":Lcom/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     const/4 v1, 0x0
 
-    .line 513
     instance-of v2, p1, Ljava/util/Map$Entry;
 
     if-eqz v2, :cond_0
 
     move-object v0, p1
 
-    .line 514
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 515
     .local v0, "other":Ljava/util/Map$Entry;
     iget-object v2, p0, Lcom/google/gson/internal/LinkedHashTreeMap$Node;->key:Ljava/lang/Object;
 
@@ -225,12 +207,10 @@
     :goto_1
     const/4 v1, 0x1
 
-    .line 518
     .end local v0    # "other":Ljava/util/Map$Entry;
     :cond_0
     return v1
 
-    .line 515
     .restart local v0    # "other":Ljava/util/Map$Entry;
     :cond_1
     iget-object v2, p0, Lcom/google/gson/internal/LinkedHashTreeMap$Node;->key:Ljava/lang/Object;
@@ -274,28 +254,22 @@
     .end annotation
 
     .prologue
-    .line 534
     .local p0, "this":Lcom/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     move-object v1, p0
 
-    .line 535
     .local v1, "node":Lcom/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     iget-object v0, v1, Lcom/google/gson/internal/LinkedHashTreeMap$Node;->left:Lcom/google/gson/internal/LinkedHashTreeMap$Node;
 
-    .line 536
     .local v0, "child":Lcom/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 537
     move-object v1, v0
 
-    .line 538
     iget-object v0, v1, Lcom/google/gson/internal/LinkedHashTreeMap$Node;->left:Lcom/google/gson/internal/LinkedHashTreeMap$Node;
 
     goto :goto_0
 
-    .line 540
     :cond_0
     return-object v1
 .end method
@@ -309,7 +283,6 @@
     .end annotation
 
     .prologue
-    .line 498
     .local p0, "this":Lcom/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     iget-object v0, p0, Lcom/google/gson/internal/LinkedHashTreeMap$Node;->key:Ljava/lang/Object;
 
@@ -325,7 +298,6 @@
     .end annotation
 
     .prologue
-    .line 502
     .local p0, "this":Lcom/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     iget-object v0, p0, Lcom/google/gson/internal/LinkedHashTreeMap$Node;->value:Ljava/lang/Object;
 
@@ -339,7 +311,6 @@
     .local p0, "this":Lcom/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     const/4 v1, 0x0
 
-    .line 522
     iget-object v0, p0, Lcom/google/gson/internal/LinkedHashTreeMap$Node;->key:Ljava/lang/Object;
 
     if-nez v0, :cond_0
@@ -386,28 +357,22 @@
     .end annotation
 
     .prologue
-    .line 547
     .local p0, "this":Lcom/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     move-object v1, p0
 
-    .line 548
     .local v1, "node":Lcom/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     iget-object v0, v1, Lcom/google/gson/internal/LinkedHashTreeMap$Node;->right:Lcom/google/gson/internal/LinkedHashTreeMap$Node;
 
-    .line 549
     .local v0, "child":Lcom/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 550
     move-object v1, v0
 
-    .line 551
     iget-object v0, v1, Lcom/google/gson/internal/LinkedHashTreeMap$Node;->right:Lcom/google/gson/internal/LinkedHashTreeMap$Node;
 
     goto :goto_0
 
-    .line 553
     :cond_0
     return-object v1
 .end method
@@ -421,16 +386,13 @@
     .end annotation
 
     .prologue
-    .line 506
     .local p0, "this":Lcom/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     .local p1, "value":Ljava/lang/Object;, "TV;"
     iget-object v0, p0, Lcom/google/gson/internal/LinkedHashTreeMap$Node;->value:Ljava/lang/Object;
 
-    .line 507
     .local v0, "oldValue":Ljava/lang/Object;, "TV;"
     iput-object p1, p0, Lcom/google/gson/internal/LinkedHashTreeMap$Node;->value:Ljava/lang/Object;
 
-    .line 508
     return-object v0
 .end method
 
@@ -438,7 +400,6 @@
     .locals 2
 
     .prologue
-    .line 527
     .local p0, "this":Lcom/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     new-instance v0, Ljava/lang/StringBuilder;
 

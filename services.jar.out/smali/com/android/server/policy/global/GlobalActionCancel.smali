@@ -83,101 +83,76 @@
 
     const/4 v1, 0x0
 
-    .line 74
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 39
     const/high16 v0, 0x42280000    # 42.0f
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mTipTextSize:F
 
-    .line 43
     iput v2, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mLineColorNormal:I
 
-    .line 44
     const v0, -0xcc00cd
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mLineColorPress:I
 
-    .line 45
     iput v3, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mLineWidth:I
 
-    .line 46
     const/16 v0, 0x36
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mLineHeight:I
 
-    .line 47
     const/4 v0, 0x3
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mLineOffsetInit:I
 
-    .line 48
     iput v1, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mLineOffset:I
 
-    .line 50
     iput v1, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mLineOffsetScale:I
 
-    .line 51
     iput v1, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mLineOffsetScaleInit:I
 
-    .line 54
     iput v2, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mArcColor:I
 
-    .line 55
     const v0, -0x66666667
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleRingColor:I
 
-    .line 56
     const/16 v0, 0xff
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleRingAlpha:I
 
-    .line 58
     const/high16 v0, -0x3d900000    # -60.0f
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mArcBeginAngle:F
 
-    .line 60
     const/16 v0, 0x7e
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mInnerRingDiameter:I
 
-    .line 61
     iput v1, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mRingWidthIncMax:I
 
-    .line 62
     iput v1, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mRingWidthInc:I
 
-    .line 64
     iput v1, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleRingWH:I
 
-    .line 66
     iput v3, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mArcWidth:I
 
-    .line 68
     const/high16 v0, -0x3d4c0000    # -90.0f
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->startAngle:F
 
-    .line 70
     const/16 v0, 0x30
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mCrossWidth:I
 
-    .line 71
     const/16 v0, 0xc
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mTipPaddingBottom:I
 
-    .line 370
     iput-boolean v1, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mCancel:Z
 
-    .line 75
     invoke-direct {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->init()V
 
-    .line 76
     return-void
 .end method
 
@@ -186,7 +161,6 @@
     .param p0, "x0"    # Lcom/android/server/policy/global/GlobalActionCancel;
 
     .prologue
-    .line 29
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleAnimator:Landroid/animation/ObjectAnimator;
 
     return-object v0
@@ -197,7 +171,6 @@
     .param p0, "x0"    # Lcom/android/server/policy/global/GlobalActionCancel;
 
     .prologue
-    .line 29
     invoke-direct {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->resetScale()V
 
     return-void
@@ -208,26 +181,22 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 330
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->getWidth()I
 
     move-result v0
 
     div-int/lit8 v6, v0, 0x2
 
-    .line 331
     .local v6, "centerX":I
     iget v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleRingWH:I
 
     div-int/lit8 v7, v0, 0x2
 
-    .line 332
     .local v7, "centerY":I
     iget v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mInnerRingDiameter:I
 
     div-int/lit8 v8, v0, 0x2
 
-    .line 333
     .local v8, "innerCircle":I
     new-instance v1, Landroid/graphics/RectF;
 
@@ -281,7 +250,6 @@
 
     invoke-direct {v1, v0, v2, v3, v4}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    .line 339
     .local v1, "rect2":Landroid/graphics/RectF;
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->paint:Landroid/graphics/Paint;
 
@@ -291,7 +259,6 @@
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 341
     iget v2, p0, Lcom/android/server/policy/global/GlobalActionCancel;->startAngle:F
 
     const/high16 v0, 0x43b40000    # 360.0f
@@ -316,7 +283,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
 
-    .line 342
     return-void
 .end method
 
@@ -325,7 +291,6 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 291
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->paint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mLineWidth:I
@@ -334,26 +299,22 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 293
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->getWidth()I
 
     move-result v0
 
     div-int/lit8 v6, v0, 0x2
 
-    .line 294
     .local v6, "centerX":I
     iget v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleRingWH:I
 
     div-int/lit8 v7, v0, 0x2
 
-    .line 296
     .local v7, "centerY":I
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v8
 
-    .line 298
     .local v8, "seq":I
     const/high16 v0, 0x42340000    # 45.0f
 
@@ -363,7 +324,6 @@
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/graphics/Canvas;->rotate(FFF)V
 
-    .line 300
     iget v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mCrossWidth:I
 
     div-int/lit8 v0, v0, 0x2
@@ -390,7 +350,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 302
     int-to-float v1, v6
 
     iget v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mCrossWidth:I
@@ -417,10 +376,8 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 303
     invoke-virtual {p1, v8}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    .line 304
     return-void
 .end method
 
@@ -429,26 +386,22 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 311
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->getWidth()I
 
     move-result v0
 
     div-int/lit8 v6, v0, 0x2
 
-    .line 312
     .local v6, "centerX":I
     iget v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleRingWH:I
 
     div-int/lit8 v7, v0, 0x2
 
-    .line 313
     .local v7, "centerY":I
     iget v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mInnerRingDiameter:I
 
     div-int/lit8 v8, v0, 0x2
 
-    .line 314
     .local v8, "innerCircle":I
     new-instance v1, Landroid/graphics/RectF;
 
@@ -518,7 +471,6 @@
 
     invoke-direct {v1, v0, v2, v3, v4}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    .line 320
     .local v1, "rect2":Landroid/graphics/RectF;
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleArcPaint:Landroid/graphics/Paint;
 
@@ -528,7 +480,6 @@
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 322
     iget v2, p0, Lcom/android/server/policy/global/GlobalActionCancel;->startAngle:F
 
     const/high16 v0, 0x43b40000    # 360.0f
@@ -553,7 +504,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
 
-    .line 323
     return-void
 .end method
 
@@ -562,12 +512,10 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 251
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v0
 
-    .line 252
     .local v0, "seq":I
     iget-object v2, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mTipPaint:Landroid/graphics/Paint;
 
@@ -577,7 +525,6 @@
 
     move-result v1
 
-    .line 253
     .local v1, "textWidth":F
     iget-object v2, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mTipMsg:Ljava/lang/String;
 
@@ -607,10 +554,8 @@
 
     invoke-virtual {p1, v2, v3, v4, v5}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    .line 255
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    .line 256
     return-void
 .end method
 
@@ -618,7 +563,6 @@
     .locals 1
 
     .prologue
-    .line 79
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -631,16 +575,12 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->density:F
 
-    .line 81
     invoke-direct {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->initLine()V
 
-    .line 82
     invoke-direct {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->initArc()V
 
-    .line 83
     invoke-direct {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->initTip()V
 
-    .line 84
     return-void
 .end method
 
@@ -648,7 +588,6 @@
     .locals 2
 
     .prologue
-    .line 113
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -661,7 +600,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mArcColor:I
 
-    .line 114
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -674,12 +612,10 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mArcWidth:I
 
-    .line 115
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mArcBeginAngle:F
 
-    .line 116
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -692,7 +628,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mInnerRingDiameter:I
 
-    .line 118
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -705,7 +640,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleRingWH:I
 
-    .line 120
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -718,52 +652,44 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mCrossWidth:I
 
-    .line 122
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->paint:Landroid/graphics/Paint;
 
-    .line 123
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->paint:Landroid/graphics/Paint;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 124
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->paint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mArcColor:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 125
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->paint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 126
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->paint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Join;->ROUND:Landroid/graphics/Paint$Join;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeJoin(Landroid/graphics/Paint$Join;)V
 
-    .line 127
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->paint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
-    .line 129
     invoke-direct {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->initScaleArc()V
 
-    .line 130
     return-void
 .end method
 
@@ -771,7 +697,6 @@
     .locals 2
 
     .prologue
-    .line 104
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -784,7 +709,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mLineColorNormal:I
 
-    .line 105
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -797,7 +721,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mLineColorPress:I
 
-    .line 106
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -810,7 +733,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mLineWidth:I
 
-    .line 107
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -823,7 +745,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mLineHeight:I
 
-    .line 108
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -836,7 +757,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mLineOffsetInit:I
 
-    .line 109
     return-void
 .end method
 
@@ -850,14 +770,12 @@
 
     const/4 v6, 0x0
 
-    .line 396
     new-instance v3, Lcom/android/server/policy/global/GlobalActionCancel$1;
 
     invoke-direct {v3, p0}, Lcom/android/server/policy/global/GlobalActionCancel$1;-><init>(Lcom/android/server/policy/global/GlobalActionCancel;)V
 
     iput-object v3, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleListener:Landroid/animation/Animator$AnimatorListener;
 
-    .line 418
     const-string v3, "innerRingWidthInc"
 
     new-array v4, v8, [I
@@ -872,7 +790,6 @@
 
     move-result-object v2
 
-    .line 419
     .local v2, "ringScale":Landroid/animation/PropertyValuesHolder;
     const-string v3, "scaleRingAlpha"
 
@@ -888,7 +805,6 @@
 
     move-result-object v1
 
-    .line 420
     .local v1, "ringAlpha":Landroid/animation/PropertyValuesHolder;
     const-string v3, "lineOffsetScale"
 
@@ -904,7 +820,6 @@
 
     move-result-object v0
 
-    .line 421
     .local v0, "lineScale":Landroid/animation/PropertyValuesHolder;
     const/4 v3, 0x3
 
@@ -922,14 +837,12 @@
 
     iput-object v3, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleAnimator:Landroid/animation/ObjectAnimator;
 
-    .line 422
     iget-object v3, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleAnimator:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v4, 0x834
 
     invoke-virtual {v3, v4, v5}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 423
     iget-object v3, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleAnimator:Landroid/animation/ObjectAnimator;
 
     new-instance v4, Landroid/view/animation/AccelerateInterpolator;
@@ -940,26 +853,22 @@
 
     invoke-virtual {v3, v4}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 424
     iget-object v3, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleAnimator:Landroid/animation/ObjectAnimator;
 
     const/4 v4, -0x1
 
     invoke-virtual {v3, v4}, Landroid/animation/ObjectAnimator;->setRepeatCount(I)V
 
-    .line 425
     iget-object v3, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v3, v7}, Landroid/animation/ObjectAnimator;->setRepeatMode(I)V
 
-    .line 426
     iget-object v3, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleAnimator:Landroid/animation/ObjectAnimator;
 
     iget-object v4, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleListener:Landroid/animation/Animator$AnimatorListener;
 
     invoke-virtual {v3, v4}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 427
     return-void
 .end method
 
@@ -967,7 +876,6 @@
     .locals 2
 
     .prologue
-    .line 135
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -980,14 +888,12 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleRingColor:I
 
-    .line 136
     iget v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleRingColor:I
 
     shr-int/lit8 v0, v0, 0x18
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleRingAlpha:I
 
-    .line 137
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1000,7 +906,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mRingWidthIncMax:I
 
-    .line 139
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1013,52 +918,44 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mLineOffsetScaleInit:I
 
-    .line 141
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleArcPaint:Landroid/graphics/Paint;
 
-    .line 142
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleArcPaint:Landroid/graphics/Paint;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 143
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleArcPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleRingColor:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 144
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleArcPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 145
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleArcPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Join;->ROUND:Landroid/graphics/Paint$Join;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeJoin(Landroid/graphics/Paint$Join;)V
 
-    .line 146
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleArcPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
-    .line 148
     invoke-direct {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->initScale()V
 
-    .line 149
     return-void
 .end method
 
@@ -1068,7 +965,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 88
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1081,7 +977,6 @@
 
     iput-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mTipMsg:Ljava/lang/String;
 
-    .line 89
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1096,7 +991,6 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mTipTextSize:F
 
-    .line 90
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1109,59 +1003,50 @@
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mTipPaddingBottom:I
 
-    .line 92
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mTipPaint:Landroid/graphics/Paint;
 
-    .line 93
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mTipPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 94
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mTipPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setDither(Z)V
 
-    .line 95
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mTipPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mLineColorNormal:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 96
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mTipPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mTipTextSize:F
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    .line 97
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mTipPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 98
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mTipPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Join;->ROUND:Landroid/graphics/Paint$Join;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeJoin(Landroid/graphics/Paint$Join;)V
 
-    .line 99
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mTipPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
-    .line 100
     return-void
 .end method
 
@@ -1171,7 +1056,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 364
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleArcPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleRingColor:I
@@ -1188,16 +1072,12 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 365
     iput v3, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mLineOffsetScale:I
 
-    .line 366
     iput v3, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mRingWidthInc:I
 
-    .line 367
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->invalidate()V
 
-    .line 368
     return-void
 .end method
 
@@ -1206,13 +1086,10 @@
     .param p1, "ringWidthInc"    # I
 
     .prologue
-    .line 359
     iput p1, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mRingWidthInc:I
 
-    .line 360
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->invalidate()V
 
-    .line 361
     return-void
 .end method
 
@@ -1221,13 +1098,10 @@
     .param p1, "lineOffsetScale"    # I
 
     .prologue
-    .line 354
     iput p1, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mLineOffsetScale:I
 
-    .line 355
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->invalidate()V
 
-    .line 356
     return-void
 .end method
 
@@ -1236,7 +1110,6 @@
     .param p1, "alpha"    # I
 
     .prologue
-    .line 349
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleArcPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleRingColor:I
@@ -1251,10 +1124,8 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 350
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->invalidate()V
 
-    .line 351
     return-void
 .end method
 
@@ -1264,25 +1135,20 @@
     .locals 1
 
     .prologue
-    .line 372
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->stopMarquee()V
 
-    .line 373
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleAnimator:Landroid/animation/ObjectAnimator;
 
     if-eqz v0, :cond_0
 
-    .line 374
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 375
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->removeAllListeners()V
 
-    .line 377
     :cond_0
     return-void
 .end method
@@ -1291,10 +1157,8 @@
     .locals 3
 
     .prologue
-    .line 160
     const/4 v0, 0x0
 
-    .line 161
     .local v0, "tipWidth":I
     iget-object v1, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mTipMsg:Ljava/lang/String;
 
@@ -1304,7 +1168,6 @@
 
     if-nez v1, :cond_0
 
-    .line 162
     iget-object v1, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mTipPaint:Landroid/graphics/Paint;
 
     iget-object v2, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mTipMsg:Ljava/lang/String;
@@ -1319,7 +1182,6 @@
 
     float-to-int v0, v1
 
-    .line 164
     :cond_0
     iget v1, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleRingWH:I
 
@@ -1336,7 +1198,6 @@
     .param p2, "marginBase"    # I
 
     .prologue
-    .line 174
     iget v1, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleRingWH:I
 
     sub-int v1, p1, v1
@@ -1345,7 +1206,6 @@
 
     sub-int v0, p2, v1
 
-    .line 175
     .local v0, "margin":I
     invoke-static {v0}, Ljava/lang/Math;->abs(I)I
 
@@ -1359,7 +1219,6 @@
     .param p1, "animation"    # Z
 
     .prologue
-    .line 439
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
@@ -1410,7 +1269,6 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 443
     return-void
 .end method
 
@@ -1423,16 +1281,13 @@
 
     const/4 v9, 0x0
 
-    .line 206
     const/4 v4, 0x2
 
     new-array v3, v4, [I
 
-    .line 207
     .local v3, "location":[I
     invoke-virtual {p0, v3}, Lcom/android/server/policy/global/GlobalActionCancel;->getLocationInWindow([I)V
 
-    .line 209
     new-instance v2, Landroid/graphics/Rect;
 
     aget v4, v3, v9
@@ -1457,7 +1312,6 @@
 
     invoke-direct {v2, v4, v5, v6, v7}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 211
     .local v2, "frame":Landroid/graphics/Rect;
     invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
 
@@ -1467,7 +1321,6 @@
 
     if-le v4, v5, :cond_0
 
-    .line 212
     invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
 
     move-result v4
@@ -1478,7 +1331,6 @@
 
     div-int/lit8 v0, v4, 0x2
 
-    .line 213
     .local v0, "bottomOffsetY":I
     iget v4, v2, Landroid/graphics/Rect;->bottom:I
 
@@ -1486,7 +1338,6 @@
 
     iput v4, v2, Landroid/graphics/Rect;->bottom:I
 
-    .line 215
     .end local v0    # "bottomOffsetY":I
     :cond_0
     invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
@@ -1497,7 +1348,6 @@
 
     if-le v4, v5, :cond_1
 
-    .line 216
     invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
 
     move-result v4
@@ -1508,11 +1358,9 @@
 
     div-int/lit8 v1, v4, 0x2
 
-    .line 218
     .local v1, "dx":I
     invoke-virtual {v2, v1, v9}, Landroid/graphics/Rect;->inset(II)V
 
-    .line 221
     .end local v1    # "dx":I
     :cond_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
@@ -1539,10 +1387,8 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 231
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mTipMsg:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1563,22 +1409,17 @@
 
     if-gtz v0, :cond_1
 
-    .line 243
     :cond_0
     :goto_0
     return-void
 
-    .line 236
     :cond_1
     invoke-direct {p0, p1}, Lcom/android/server/policy/global/GlobalActionCancel;->drawScaleArc(Landroid/graphics/Canvas;)V
 
-    .line 238
     invoke-direct {p0, p1}, Lcom/android/server/policy/global/GlobalActionCancel;->drawArc(Landroid/graphics/Canvas;)V
 
-    .line 240
     invoke-direct {p0, p1}, Lcom/android/server/policy/global/GlobalActionCancel;->drawCross(Landroid/graphics/Canvas;)V
 
-    .line 242
     invoke-direct {p0, p1}, Lcom/android/server/policy/global/GlobalActionCancel;->drawTip(Landroid/graphics/Canvas;)V
 
     goto :goto_0
@@ -1589,12 +1430,10 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 194
     invoke-super {p0, p1}, Landroid/view/View;->onFilterTouchEventForSecurity(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
-    .line 195
     .local v0, "result":Z
     if-eqz v0, :cond_0
 
@@ -1604,7 +1443,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 197
     .end local v0    # "result":Z
     :cond_0
     :goto_0
@@ -1623,7 +1461,6 @@
     .locals 0
 
     .prologue
-    .line 453
     return-void
 .end method
 
@@ -1632,7 +1469,6 @@
     .param p1, "value"    # F
 
     .prologue
-    .line 179
     const/high16 v0, 0x3f800000    # 1.0f
 
     cmpl-float v0, p1, v0
@@ -1645,12 +1481,10 @@
 
     if-gez v0, :cond_1
 
-    .line 182
     :cond_0
     :goto_0
     return-void
 
-    .line 181
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/server/policy/global/GlobalActionCancel;->setAlpha(F)V
 
@@ -1662,17 +1496,14 @@
     .param p1, "angle"    # F
 
     .prologue
-    .line 263
     iget v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mArcBeginAngle:F
 
     add-float/2addr v0, p1
 
     iput v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->startAngle:F
 
-    .line 264
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->invalidate()V
 
-    .line 265
     return-void
 .end method
 
@@ -1681,7 +1512,6 @@
     .param p1, "res"    # I
 
     .prologue
-    .line 152
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -1694,7 +1524,6 @@
 
     iput-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mTipMsg:Ljava/lang/String;
 
-    .line 153
     return-void
 .end method
 
@@ -1703,13 +1532,10 @@
     .param p1, "lineOffset"    # I
 
     .prologue
-    .line 281
     iput p1, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mLineOffset:I
 
-    .line 282
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->invalidate()V
 
-    .line 283
     return-void
 .end method
 
@@ -1718,7 +1544,6 @@
     .param p1, "alapha"    # I
 
     .prologue
-    .line 272
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mTipPaint:Landroid/graphics/Paint;
 
     iget-object v1, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mTipPaint:Landroid/graphics/Paint;
@@ -1737,10 +1562,8 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 273
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->invalidate()V
 
-    .line 274
     return-void
 .end method
 
@@ -1751,7 +1574,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 431
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
@@ -1772,10 +1594,8 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/policy/global/GlobalActionCancel;->setTranslationY(F)V
 
-    .line 433
     invoke-virtual {p0, v4}, Lcom/android/server/policy/global/GlobalActionCancel;->setAlpha(F)V
 
-    .line 434
     invoke-virtual {p0}, Lcom/android/server/policy/global/GlobalActionCancel;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
@@ -1808,7 +1628,6 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 436
     return-void
 .end method
 
@@ -1816,7 +1635,6 @@
     .locals 0
 
     .prologue
-    .line 449
     return-void
 .end method
 
@@ -1824,30 +1642,25 @@
     .locals 4
 
     .prologue
-    .line 385
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleAnimator:Landroid/animation/ObjectAnimator;
 
     if-nez v0, :cond_1
 
-    .line 391
     :cond_0
     :goto_0
     return-void
 
-    .line 386
     :cond_1
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mCancel:Z
 
-    .line 387
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleAnimator:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v2, 0x41a
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
 
-    .line 388
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->isRunning()Z
@@ -1856,7 +1669,6 @@
 
     if-nez v0, :cond_0
 
-    .line 390
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mScaleAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
@@ -1868,16 +1680,13 @@
     .locals 1
 
     .prologue
-    .line 380
     iget-boolean v0, p0, Lcom/android/server/policy/global/GlobalActionCancel;->mCancel:Z
 
     if-eqz v0, :cond_0
 
-    .line 382
     :goto_0
     return-void
 
-    .line 381
     :cond_0
     const/4 v0, 0x1
 

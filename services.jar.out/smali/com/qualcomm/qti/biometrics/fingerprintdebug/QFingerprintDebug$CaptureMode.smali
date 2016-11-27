@@ -44,7 +44,6 @@
 
     const/4 v2, 0x0
 
-    .line 839
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$CaptureMode;
 
     const-string v1, "FingerDetect"
@@ -53,7 +52,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$CaptureMode;->FingerDetect:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$CaptureMode;
 
-    .line 844
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$CaptureMode;
 
     const-string v1, "LivePreview"
@@ -62,7 +60,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$CaptureMode;->LivePreview:Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$CaptureMode;
 
-    .line 835
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$CaptureMode;
@@ -90,13 +87,10 @@
     .end annotation
 
     .prologue
-    .line 848
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 849
     iput p3, p0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$CaptureMode;->mValue:I
 
-    .line 850
     return-void
 .end method
 
@@ -105,7 +99,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 835
     const-class v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$CaptureMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -121,7 +114,6 @@
     .locals 1
 
     .prologue
-    .line 835
     sget-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$CaptureMode;->$VALUES:[Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$CaptureMode;
 
     invoke-virtual {v0}, [Lcom/qualcomm/qti/biometrics/fingerprintdebug/QFingerprintDebug$CaptureMode;->clone()Ljava/lang/Object;

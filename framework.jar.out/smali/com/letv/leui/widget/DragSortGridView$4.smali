@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 601
     iput-object p1, p0, Lcom/letv/leui/widget/DragSortGridView$4;->this$0:Lcom/letv/leui/widget/DragSortGridView;
 
     iput-object p2, p0, Lcom/letv/leui/widget/DragSortGridView$4;->val$mobileView:Landroid/view/View;
@@ -42,7 +41,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 610
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortGridView$4;->this$0:Lcom/letv/leui/widget/DragSortGridView;
 
     const/4 v1, 0x0
@@ -50,13 +48,11 @@
     # setter for: Lcom/letv/leui/widget/DragSortGridView;->mHoverAnimation:Z
     invoke-static {v0, v1}, Lcom/letv/leui/widget/DragSortGridView;->access$102(Lcom/letv/leui/widget/DragSortGridView;Z)Z
 
-    .line 611
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortGridView$4;->this$0:Lcom/letv/leui/widget/DragSortGridView;
 
     # invokes: Lcom/letv/leui/widget/DragSortGridView;->updateEnableState()V
     invoke-static {v0}, Lcom/letv/leui/widget/DragSortGridView;->access$200(Lcom/letv/leui/widget/DragSortGridView;)V
 
-    .line 612
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortGridView$4;->this$0:Lcom/letv/leui/widget/DragSortGridView;
 
     iget-object v1, p0, Lcom/letv/leui/widget/DragSortGridView$4;->val$mobileView:Landroid/view/View;
@@ -64,7 +60,6 @@
     # invokes: Lcom/letv/leui/widget/DragSortGridView;->reset(Landroid/view/View;)V
     invoke-static {v0, v1}, Lcom/letv/leui/widget/DragSortGridView;->access$300(Lcom/letv/leui/widget/DragSortGridView;Landroid/view/View;)V
 
-    .line 613
     return-void
 .end method
 
@@ -73,7 +68,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 604
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortGridView$4;->this$0:Lcom/letv/leui/widget/DragSortGridView;
 
     const/4 v1, 0x1
@@ -81,12 +75,10 @@
     # setter for: Lcom/letv/leui/widget/DragSortGridView;->mHoverAnimation:Z
     invoke-static {v0, v1}, Lcom/letv/leui/widget/DragSortGridView;->access$102(Lcom/letv/leui/widget/DragSortGridView;Z)Z
 
-    .line 605
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortGridView$4;->this$0:Lcom/letv/leui/widget/DragSortGridView;
 
     # invokes: Lcom/letv/leui/widget/DragSortGridView;->updateEnableState()V
     invoke-static {v0}, Lcom/letv/leui/widget/DragSortGridView;->access$200(Lcom/letv/leui/widget/DragSortGridView;)V
 
-    .line 606
     return-void
 .end method

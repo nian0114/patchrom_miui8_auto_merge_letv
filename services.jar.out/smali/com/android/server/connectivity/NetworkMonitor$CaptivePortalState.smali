@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 568
     iput-object p1, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -41,7 +40,6 @@
     .param p2, "x1"    # Lcom/android/server/connectivity/NetworkMonitor$1;
 
     .prologue
-    .line 568
     invoke-direct {p0, p1}, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;-><init>(Lcom/android/server/connectivity/NetworkMonitor;)V
 
     return-void
@@ -53,7 +51,6 @@
     .locals 7
 
     .prologue
-    .line 577
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mDontDisplaySigninNotification:Z
@@ -63,11 +60,9 @@
 
     if-eqz v1, :cond_0
 
-    .line 595
     :goto_0
     return-void
 
-    .line 581
     :cond_0
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -78,7 +73,6 @@
 
     if-nez v1, :cond_1
 
-    .line 583
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     new-instance v2, Lcom/android/server/connectivity/NetworkMonitor$CustomIntentReceiver;
@@ -102,7 +96,6 @@
     # setter for: Lcom/android/server/connectivity/NetworkMonitor;->mLaunchCaptivePortalAppBroadcastReceiver:Lcom/android/server/connectivity/NetworkMonitor$CustomIntentReceiver;
     invoke-static {v1, v2}, Lcom/android/server/connectivity/NetworkMonitor;->access$1002(Lcom/android/server/connectivity/NetworkMonitor;Lcom/android/server/connectivity/NetworkMonitor$CustomIntentReceiver;)Lcom/android/server/connectivity/NetworkMonitor$CustomIntentReceiver;
 
-    .line 588
     :cond_1
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -136,7 +129,6 @@
 
     move-result-object v0
 
-    .line 591
     .local v0, "message":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -147,7 +139,6 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 593
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     const v2, 0x8200c
@@ -165,7 +156,6 @@
     .locals 2
 
     .prologue
-    .line 599
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     const v1, 0x8200c
@@ -173,6 +163,5 @@
     # invokes: Lcom/android/server/connectivity/NetworkMonitor;->removeMessages(I)V
     invoke-static {v0, v1}, Lcom/android/server/connectivity/NetworkMonitor;->access$3200(Lcom/android/server/connectivity/NetworkMonitor;I)V
 
-    .line 600
     return-void
 .end method

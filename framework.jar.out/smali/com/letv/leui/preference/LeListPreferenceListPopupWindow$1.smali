@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 573
     iput-object p1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$1;->this$0:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "above"    # Z
 
     .prologue
-    .line 576
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$1;->this$0:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;
@@ -53,17 +51,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 577
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$1;->this$0:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->updatePromptView(Z)V
 
-    .line 578
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$1;->this$0:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;
 
     iput-boolean p1, v0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->isAbove:Z
 
-    .line 580
     :cond_0
     return-void
 .end method

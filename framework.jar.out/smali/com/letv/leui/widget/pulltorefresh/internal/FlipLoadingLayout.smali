@@ -36,17 +36,14 @@
     .param p4, "attrs"    # Landroid/content/res/TypedArray;
 
     .prologue
-    .line 40
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;-><init>(Landroid/content/Context;Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Orientation;Landroid/content/res/TypedArray;)V
 
-    .line 42
     sget-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;->PULL_FROM_START:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
 
     if-ne p2, v0, :cond_0
 
     const/16 v7, -0xb4
 
-    .line 44
     .local v7, "rotateAngle":I
     :goto_0
     new-instance v0, Landroid/view/animation/RotateAnimation;
@@ -67,28 +64,24 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/FlipLoadingLayout;->mRotateAnimation:Landroid/view/animation/Animation;
 
-    .line 46
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/FlipLoadingLayout;->mRotateAnimation:Landroid/view/animation/Animation;
 
     sget-object v1, Lcom/letv/leui/widget/pulltorefresh/internal/FlipLoadingLayout;->ANIMATION_INTERPOLATOR:Landroid/view/animation/Interpolator;
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 47
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/FlipLoadingLayout;->mRotateAnimation:Landroid/view/animation/Animation;
 
     const-wide/16 v2, 0x96
 
     invoke-virtual {v0, v2, v3}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 48
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/FlipLoadingLayout;->mRotateAnimation:Landroid/view/animation/Animation;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setFillAfter(Z)V
 
-    .line 50
     new-instance v0, Landroid/view/animation/RotateAnimation;
 
     int-to-float v1, v7
@@ -107,31 +100,26 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/FlipLoadingLayout;->mResetRotateAnimation:Landroid/view/animation/Animation;
 
-    .line 52
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/FlipLoadingLayout;->mResetRotateAnimation:Landroid/view/animation/Animation;
 
     sget-object v1, Lcom/letv/leui/widget/pulltorefresh/internal/FlipLoadingLayout;->ANIMATION_INTERPOLATOR:Landroid/view/animation/Interpolator;
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 53
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/FlipLoadingLayout;->mResetRotateAnimation:Landroid/view/animation/Animation;
 
     const-wide/16 v2, 0x96
 
     invoke-virtual {v0, v2, v3}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 54
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/FlipLoadingLayout;->mResetRotateAnimation:Landroid/view/animation/Animation;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setFillAfter(Z)V
 
-    .line 55
     return-void
 
-    .line 42
     .end local v7    # "rotateAngle":I
     :cond_0
     const/16 v7, 0xb4
@@ -143,10 +131,8 @@
     .locals 3
 
     .prologue
-    .line 122
     const/4 v0, 0x0
 
-    .line 123
     .local v0, "angle":F
     sget-object v1, Lcom/letv/leui/widget/pulltorefresh/internal/FlipLoadingLayout$1;->$SwitchMap$com$letv$leui$widget$pulltorefresh$PullToRefreshBase$Mode:[I
 
@@ -160,12 +146,10 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 142
     :cond_0
     :goto_0
     return v0
 
-    .line 125
     :pswitch_0
     iget-object v1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/FlipLoadingLayout;->mScrollDirection:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Orientation;
 
@@ -173,19 +157,15 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 126
     const/high16 v0, 0x42b40000    # 90.0f
 
     goto :goto_0
 
-    .line 128
     :cond_1
     const/high16 v0, 0x43340000    # 180.0f
 
-    .line 130
     goto :goto_0
 
-    .line 133
     :pswitch_1
     iget-object v1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/FlipLoadingLayout;->mScrollDirection:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Orientation;
 
@@ -193,12 +173,10 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 134
     const/high16 v0, 0x43870000    # 270.0f
 
     goto :goto_0
 
-    .line 123
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -212,7 +190,6 @@
     .locals 1
 
     .prologue
-    .line 118
     const v0, 0x10805e9
 
     return v0
@@ -225,21 +202,17 @@
     .prologue
     const/high16 v7, 0x40000000    # 2.0f
 
-    .line 59
     if-eqz p1, :cond_0
 
-    .line 60
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v0
 
-    .line 61
     .local v0, "dHeight":I
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v1
 
-    .line 68
     .local v1, "dWidth":I
     iget-object v4, p0, Lcom/letv/leui/widget/pulltorefresh/internal/FlipLoadingLayout;->mHeaderImage:Landroid/widget/ImageView;
 
@@ -247,7 +220,6 @@
 
     move-result-object v2
 
-    .line 69
     .local v2, "lp":Landroid/view/ViewGroup$LayoutParams;
     invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
 
@@ -257,24 +229,20 @@
 
     iput v4, v2, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 70
     iget-object v4, p0, Lcom/letv/leui/widget/pulltorefresh/internal/FlipLoadingLayout;->mHeaderImage:Landroid/widget/ImageView;
 
     invoke-virtual {v4}, Landroid/widget/ImageView;->requestLayout()V
 
-    .line 76
     iget-object v4, p0, Lcom/letv/leui/widget/pulltorefresh/internal/FlipLoadingLayout;->mHeaderImage:Landroid/widget/ImageView;
 
     sget-object v5, Landroid/widget/ImageView$ScaleType;->MATRIX:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v4, v5}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 77
     new-instance v3, Landroid/graphics/Matrix;
 
     invoke-direct {v3}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 78
     .local v3, "matrix":Landroid/graphics/Matrix;
     iget v4, v2, Landroid/view/ViewGroup$LayoutParams;->width:I
 
@@ -294,7 +262,6 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    .line 79
     invoke-direct {p0}, Lcom/letv/leui/widget/pulltorefresh/internal/FlipLoadingLayout;->getDrawableRotationAngle()F
 
     move-result v4
@@ -313,12 +280,10 @@
 
     invoke-virtual {v3, v4, v5, v6}, Landroid/graphics/Matrix;->postRotate(FFF)Z
 
-    .line 80
     iget-object v4, p0, Lcom/letv/leui/widget/pulltorefresh/internal/FlipLoadingLayout;->mHeaderImage:Landroid/widget/ImageView;
 
     invoke-virtual {v4, v3}, Landroid/widget/ImageView;->setImageMatrix(Landroid/graphics/Matrix;)V
 
-    .line 82
     .end local v0    # "dHeight":I
     .end local v1    # "dWidth":I
     .end local v2    # "lp":Landroid/view/ViewGroup$LayoutParams;
@@ -332,7 +297,6 @@
     .param p1, "scaleOfLayout"    # F
 
     .prologue
-    .line 87
     return-void
 .end method
 
@@ -340,7 +304,6 @@
     .locals 2
 
     .prologue
-    .line 92
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/FlipLoadingLayout;->mRotateAnimation:Landroid/view/animation/Animation;
 
     iget-object v1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/FlipLoadingLayout;->mHeaderImage:Landroid/widget/ImageView;
@@ -351,14 +314,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 93
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/FlipLoadingLayout;->mHeaderImage:Landroid/widget/ImageView;
 
     iget-object v1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/FlipLoadingLayout;->mResetRotateAnimation:Landroid/view/animation/Animation;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 95
     :cond_0
     return-void
 .end method
@@ -367,26 +328,22 @@
     .locals 2
 
     .prologue
-    .line 99
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/FlipLoadingLayout;->mHeaderImage:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->clearAnimation()V
 
-    .line 100
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/FlipLoadingLayout;->mHeaderImage:Landroid/widget/ImageView;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 101
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/FlipLoadingLayout;->mHeaderProgress:Landroid/widget/ProgressBar;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
-    .line 102
     return-void
 .end method
 
@@ -394,14 +351,12 @@
     .locals 2
 
     .prologue
-    .line 106
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/FlipLoadingLayout;->mHeaderImage:Landroid/widget/ImageView;
 
     iget-object v1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/FlipLoadingLayout;->mRotateAnimation:Landroid/view/animation/Animation;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 107
     return-void
 .end method
 
@@ -409,25 +364,21 @@
     .locals 2
 
     .prologue
-    .line 111
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/FlipLoadingLayout;->mHeaderImage:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->clearAnimation()V
 
-    .line 112
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/FlipLoadingLayout;->mHeaderProgress:Landroid/widget/ProgressBar;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
-    .line 113
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/FlipLoadingLayout;->mHeaderImage:Landroid/widget/ImageView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 114
     return-void
 .end method

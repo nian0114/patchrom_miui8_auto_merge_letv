@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 592
     .local p0, "this":Lcom/google/gson/internal/LinkedTreeMap$KeySet;, "Lcom/google/gson/internal/LinkedTreeMap<TK;TV;>.KeySet;"
     iput-object p1, p0, Lcom/google/gson/internal/LinkedTreeMap$KeySet;->this$0:Lcom/google/gson/internal/LinkedTreeMap;
 
@@ -45,13 +44,11 @@
     .locals 1
 
     .prologue
-    .line 614
     .local p0, "this":Lcom/google/gson/internal/LinkedTreeMap$KeySet;, "Lcom/google/gson/internal/LinkedTreeMap<TK;TV;>.KeySet;"
     iget-object v0, p0, Lcom/google/gson/internal/LinkedTreeMap$KeySet;->this$0:Lcom/google/gson/internal/LinkedTreeMap;
 
     invoke-virtual {v0}, Lcom/google/gson/internal/LinkedTreeMap;->clear()V
 
-    .line 615
     return-void
 .end method
 
@@ -60,7 +57,6 @@
     .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
-    .line 606
     .local p0, "this":Lcom/google/gson/internal/LinkedTreeMap$KeySet;, "Lcom/google/gson/internal/LinkedTreeMap<TK;TV;>.KeySet;"
     iget-object v0, p0, Lcom/google/gson/internal/LinkedTreeMap$KeySet;->this$0:Lcom/google/gson/internal/LinkedTreeMap;
 
@@ -82,7 +78,6 @@
     .end annotation
 
     .prologue
-    .line 598
     .local p0, "this":Lcom/google/gson/internal/LinkedTreeMap$KeySet;, "Lcom/google/gson/internal/LinkedTreeMap<TK;TV;>.KeySet;"
     new-instance v0, Lcom/google/gson/internal/LinkedTreeMap$KeySet$1;
 
@@ -96,7 +91,6 @@
     .param p1, "key"    # Ljava/lang/Object;
 
     .prologue
-    .line 610
     .local p0, "this":Lcom/google/gson/internal/LinkedTreeMap$KeySet;, "Lcom/google/gson/internal/LinkedTreeMap<TK;TV;>.KeySet;"
     iget-object v0, p0, Lcom/google/gson/internal/LinkedTreeMap$KeySet;->this$0:Lcom/google/gson/internal/LinkedTreeMap;
 
@@ -121,7 +115,6 @@
     .locals 1
 
     .prologue
-    .line 594
     .local p0, "this":Lcom/google/gson/internal/LinkedTreeMap$KeySet;, "Lcom/google/gson/internal/LinkedTreeMap<TK;TV;>.KeySet;"
     iget-object v0, p0, Lcom/google/gson/internal/LinkedTreeMap$KeySet;->this$0:Lcom/google/gson/internal/LinkedTreeMap;
 

@@ -40,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 1237
     new-instance v0, Lcom/letv/leui/widget/slide/LeSlidePager$SavedState$1;
 
     invoke-direct {v0}, Lcom/letv/leui/widget/slide/LeSlidePager$SavedState$1;-><init>()V
@@ -55,15 +54,12 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 1211
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 1212
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlidePager$SavedState;->loader:Ljava/lang/ClassLoader;
 
     if-nez v0, :cond_0
 
-    .line 1213
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -74,7 +70,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/slide/LeSlidePager$SavedState;->loader:Ljava/lang/ClassLoader;
 
-    .line 1215
     :cond_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -82,7 +77,6 @@
 
     iput v0, p0, Lcom/letv/leui/widget/slide/LeSlidePager$SavedState;->position:I
 
-    .line 1216
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlidePager$SavedState;->loader:Ljava/lang/ClassLoader;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
@@ -91,7 +85,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/slide/LeSlidePager$SavedState;->adapterState:Landroid/os/Parcelable;
 
-    .line 1217
     return-void
 .end method
 
@@ -100,10 +93,8 @@
     .param p1, "superState"    # Landroid/os/Parcelable;
 
     .prologue
-    .line 1220
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 1221
     return-void
 .end method
 
@@ -113,7 +104,6 @@
     .locals 2
 
     .prologue
-    .line 1232
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -167,19 +157,15 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 1225
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 1226
     iget v0, p0, Lcom/letv/leui/widget/slide/LeSlidePager$SavedState;->position:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1227
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlidePager$SavedState;->adapterState:Landroid/os/Parcelable;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 1228
     return-void
 .end method

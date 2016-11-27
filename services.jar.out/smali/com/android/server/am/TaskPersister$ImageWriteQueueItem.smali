@@ -30,21 +30,16 @@
     .param p3, "isIcon"    # Z
 
     .prologue
-    .line 135
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/android/server/am/TaskPersister$WriteQueueItem;-><init>(Lcom/android/server/am/TaskPersister$1;)V
 
-    .line 136
     iput-object p1, p0, Lcom/android/server/am/TaskPersister$ImageWriteQueueItem;->mFilename:Ljava/lang/String;
 
-    .line 137
     iput-object p2, p0, Lcom/android/server/am/TaskPersister$ImageWriteQueueItem;->mImage:Landroid/graphics/Bitmap;
 
-    .line 138
     iput-boolean p3, p0, Lcom/android/server/am/TaskPersister$ImageWriteQueueItem;->mIsIcon:Z
 
-    .line 139
     return-void
 .end method
 
@@ -54,7 +49,6 @@
     .locals 2
 
     .prologue
-    .line 144
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

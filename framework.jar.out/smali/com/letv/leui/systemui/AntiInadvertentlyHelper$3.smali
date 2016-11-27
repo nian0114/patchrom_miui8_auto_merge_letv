@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 128
     iput-object p1, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper$3;->this$0:Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -40,16 +39,13 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 131
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 146
     :goto_0
     return-void
 
-    .line 133
     :pswitch_0
     # getter for: Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->access$400()Ljava/lang/String;
@@ -60,7 +56,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 135
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper$3;->this$0:Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     # getter for: Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mProximitySensorHelper:Lcom/letv/leui/systemui/ProximitySensorHelper;
@@ -70,7 +65,6 @@
 
     invoke-virtual {v0}, Lcom/letv/leui/systemui/ProximitySensorHelper;->start()V
 
-    .line 136
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper$3;->this$0:Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     # invokes: Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->updateWindowFocus(Z)V
@@ -78,7 +72,6 @@
 
     goto :goto_0
 
-    .line 139
     :pswitch_1
     # getter for: Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->access$400()Ljava/lang/String;
@@ -89,13 +82,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 141
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper$3;->this$0:Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     # invokes: Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->updateWindowVisiblity(Z)V
     invoke-static {v0, v2}, Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->access$800(Lcom/letv/leui/systemui/AntiInadvertentlyHelper;Z)V
 
-    .line 143
     iget-object v0, p0, Lcom/letv/leui/systemui/AntiInadvertentlyHelper$3;->this$0:Lcom/letv/leui/systemui/AntiInadvertentlyHelper;
 
     # getter for: Lcom/letv/leui/systemui/AntiInadvertentlyHelper;->mProximitySensorHelper:Lcom/letv/leui/systemui/ProximitySensorHelper;
@@ -107,7 +98,6 @@
 
     goto :goto_0
 
-    .line 131
     nop
 
     :pswitch_data_0

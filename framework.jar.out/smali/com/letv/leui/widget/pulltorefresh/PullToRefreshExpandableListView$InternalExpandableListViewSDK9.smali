@@ -29,13 +29,10 @@
     .param p3, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 96
     iput-object p1, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshExpandableListView$InternalExpandableListViewSDK9;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshExpandableListView;
 
-    .line 97
     invoke-direct {p0, p1, p2, p3}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshExpandableListView$InternalExpandableListView;-><init>(Lcom/letv/leui/widget/pulltorefresh/PullToRefreshExpandableListView;Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 98
     return-void
 .end method
 
@@ -54,12 +51,10 @@
     .param p9, "isTouchEvent"    # Z
 
     .prologue
-    .line 104
     invoke-super/range {p0 .. p9}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshExpandableListView$InternalExpandableListView;->overScrollBy(IIIIIIIIZ)Z
 
     move-result v6
 
-    .line 108
     .local v6, "returnValue":Z
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshExpandableListView$InternalExpandableListViewSDK9;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshExpandableListView;
 
@@ -75,6 +70,5 @@
 
     invoke-static/range {v0 .. v5}, Lcom/letv/leui/widget/pulltorefresh/OverscrollHelper;->overScrollBy(Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;IIIIZ)V
 
-    .line 111
     return v6
 .end method

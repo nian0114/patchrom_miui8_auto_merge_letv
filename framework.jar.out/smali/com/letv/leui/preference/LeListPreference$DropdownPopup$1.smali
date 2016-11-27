@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 898
     iput-object p1, p0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup$1;->this$1:Lcom/letv/leui/preference/LeListPreference$DropdownPopup;
 
     iput-object p2, p0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup$1;->val$this$0:Lcom/letv/leui/preference/LeListPreference;
@@ -48,12 +47,10 @@
     .param p4, "id"    # J
 
     .prologue
-    .line 900
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup$1;->this$1:Lcom/letv/leui/preference/LeListPreference$DropdownPopup;
 
     invoke-virtual {v0}, Lcom/letv/leui/preference/LeListPreference$DropdownPopup;->dismiss()V
 
-    .line 901
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup$1;->this$1:Lcom/letv/leui/preference/LeListPreference$DropdownPopup;
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup;->this$0:Lcom/letv/leui/preference/LeListPreference;
@@ -65,7 +62,6 @@
 
     if-eq v0, p3, :cond_1
 
-    .line 902
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup$1;->this$1:Lcom/letv/leui/preference/LeListPreference$DropdownPopup;
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup;->this$0:Lcom/letv/leui/preference/LeListPreference;
@@ -73,7 +69,6 @@
     # setter for: Lcom/letv/leui/preference/LeListPreference;->mClickedDialogEntryIndex:I
     invoke-static {v0, p3}, Lcom/letv/leui/preference/LeListPreference;->access$002(Lcom/letv/leui/preference/LeListPreference;I)I
 
-    .line 903
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup$1;->this$1:Lcom/letv/leui/preference/LeListPreference$DropdownPopup;
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup;->this$0:Lcom/letv/leui/preference/LeListPreference;
@@ -82,7 +77,6 @@
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/preference/LeListPreference;->onDialogClosed(Z)V
 
-    .line 904
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup$1;->this$1:Lcom/letv/leui/preference/LeListPreference$DropdownPopup;
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup;->this$0:Lcom/letv/leui/preference/LeListPreference;
@@ -94,7 +88,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 905
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup$1;->this$1:Lcom/letv/leui/preference/LeListPreference$DropdownPopup;
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup;->this$0:Lcom/letv/leui/preference/LeListPreference;
@@ -108,7 +101,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 906
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup$1;->this$1:Lcom/letv/leui/preference/LeListPreference$DropdownPopup;
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup;->this$0:Lcom/letv/leui/preference/LeListPreference;
@@ -153,7 +145,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 907
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup$1;->this$1:Lcom/letv/leui/preference/LeListPreference$DropdownPopup;
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup;->this$0:Lcom/letv/leui/preference/LeListPreference;
@@ -165,7 +156,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 908
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup$1;->this$1:Lcom/letv/leui/preference/LeListPreference$DropdownPopup;
 
     iget-object v0, v0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup;->this$0:Lcom/letv/leui/preference/LeListPreference;
@@ -207,7 +197,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 914
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup$1;->this$1:Lcom/letv/leui/preference/LeListPreference$DropdownPopup;
@@ -224,11 +213,9 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 923
     :cond_1
     return-void
 
-    .line 910
     :cond_2
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$DropdownPopup$1;->this$1:Lcom/letv/leui/preference/LeListPreference$DropdownPopup;
 

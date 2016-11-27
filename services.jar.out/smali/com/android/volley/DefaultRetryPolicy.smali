@@ -29,7 +29,6 @@
     .locals 3
 
     .prologue
-    .line 48
     const/16 v0, 0x9c4
 
     const/4 v1, 0x1
@@ -38,7 +37,6 @@
 
     invoke-direct {p0, v0, v1, v2}, Lcom/android/volley/DefaultRetryPolicy;-><init>(IIF)V
 
-    .line 49
     return-void
 .end method
 
@@ -49,19 +47,14 @@
     .param p3, "backoffMultiplier"    # F
 
     .prologue
-    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 58
     iput p1, p0, Lcom/android/volley/DefaultRetryPolicy;->mCurrentTimeoutMs:I
 
-    .line 59
     iput p2, p0, Lcom/android/volley/DefaultRetryPolicy;->mMaxNumRetries:I
 
-    .line 60
     iput p3, p0, Lcom/android/volley/DefaultRetryPolicy;->mBackoffMultiplier:F
 
-    .line 61
     return-void
 .end method
 
@@ -71,7 +64,6 @@
     .locals 1
 
     .prologue
-    .line 83
     iget v0, p0, Lcom/android/volley/DefaultRetryPolicy;->mBackoffMultiplier:F
 
     return v0
@@ -81,7 +73,6 @@
     .locals 1
 
     .prologue
-    .line 76
     iget v0, p0, Lcom/android/volley/DefaultRetryPolicy;->mCurrentRetryCount:I
 
     return v0
@@ -91,7 +82,6 @@
     .locals 1
 
     .prologue
-    .line 68
     iget v0, p0, Lcom/android/volley/DefaultRetryPolicy;->mCurrentTimeoutMs:I
 
     return v0
@@ -101,7 +91,6 @@
     .locals 2
 
     .prologue
-    .line 103
     iget v0, p0, Lcom/android/volley/DefaultRetryPolicy;->mCurrentRetryCount:I
 
     iget v1, p0, Lcom/android/volley/DefaultRetryPolicy;->mMaxNumRetries:I
@@ -129,14 +118,12 @@
     .end annotation
 
     .prologue
-    .line 92
     iget v0, p0, Lcom/android/volley/DefaultRetryPolicy;->mCurrentRetryCount:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/android/volley/DefaultRetryPolicy;->mCurrentRetryCount:I
 
-    .line 93
     iget v0, p0, Lcom/android/volley/DefaultRetryPolicy;->mCurrentTimeoutMs:I
 
     int-to-float v0, v0
@@ -155,17 +142,14 @@
 
     iput v0, p0, Lcom/android/volley/DefaultRetryPolicy;->mCurrentTimeoutMs:I
 
-    .line 94
     invoke-virtual {p0}, Lcom/android/volley/DefaultRetryPolicy;->hasAttemptRemaining()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 95
     throw p1
 
-    .line 97
     :cond_0
     return-void
 .end method

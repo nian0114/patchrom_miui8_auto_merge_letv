@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 423
     iput-object p1, p0, Lcom/letv/leui/widget/LePopupWindowController$2;->this$0:Lcom/letv/leui/widget/LePopupWindowController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 426
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController$2;->this$0:Lcom/letv/leui/widget/LePopupWindowController;
 
     # getter for: Lcom/letv/leui/widget/LePopupWindowController;->mLicenceCheckBox:Lcom/letv/leui/widget/LeCheckBox;
@@ -55,7 +53,6 @@
 
     if-nez v0, :cond_0
 
-    .line 427
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController$2;->this$0:Lcom/letv/leui/widget/LePopupWindowController;
 
     # getter for: Lcom/letv/leui/widget/LePopupWindowController;->mLicenceCheckBox:Lcom/letv/leui/widget/LeCheckBox;
@@ -67,11 +64,9 @@
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/widget/LeCheckBox;->setChecked(Z)V
 
-    .line 431
     :goto_0
     return-void
 
-    .line 429
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/LePopupWindowController$2;->this$0:Lcom/letv/leui/widget/LePopupWindowController;
 

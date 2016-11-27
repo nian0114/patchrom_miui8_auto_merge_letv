@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 641
     iput-object p1, p0, Lcom/letv/leui/preference/LeListPreference$3;->this$0:Lcom/letv/leui/preference/LeListPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
     .end annotation
 
     .prologue
-    .line 644
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$3;->this$0:Lcom/letv/leui/preference/LeListPreference;
 
@@ -63,7 +61,6 @@
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/LeBottomSheet;->disappear()V
 
-    .line 645
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$3;->this$0:Lcom/letv/leui/preference/LeListPreference;
 
     # getter for: Lcom/letv/leui/preference/LeListPreference;->mClickedDialogEntryIndex:I
@@ -73,20 +70,17 @@
 
     if-eq v0, p3, :cond_1
 
-    .line 646
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$3;->this$0:Lcom/letv/leui/preference/LeListPreference;
 
     # setter for: Lcom/letv/leui/preference/LeListPreference;->mClickedDialogEntryIndex:I
     invoke-static {v0, p3}, Lcom/letv/leui/preference/LeListPreference;->access$002(Lcom/letv/leui/preference/LeListPreference;I)I
 
-    .line 647
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$3;->this$0:Lcom/letv/leui/preference/LeListPreference;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/preference/LeListPreference;->onDialogClosed(Z)V
 
-    .line 648
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$3;->this$0:Lcom/letv/leui/preference/LeListPreference;
 
     # getter for: Lcom/letv/leui/preference/LeListPreference;->messageView:Landroid/view/View;
@@ -96,7 +90,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 649
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$3;->this$0:Lcom/letv/leui/preference/LeListPreference;
 
     # getter for: Lcom/letv/leui/preference/LeListPreference;->messageView:Landroid/view/View;
@@ -108,7 +101,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 650
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$3;->this$0:Lcom/letv/leui/preference/LeListPreference;
 
     # getter for: Lcom/letv/leui/preference/LeListPreference;->mEntries:[Ljava/lang/CharSequence;
@@ -145,7 +137,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 651
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$3;->this$0:Lcom/letv/leui/preference/LeListPreference;
 
     # getter for: Lcom/letv/leui/preference/LeListPreference;->mMessages:[Ljava/lang/CharSequence;
@@ -155,7 +146,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 652
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$3;->this$0:Lcom/letv/leui/preference/LeListPreference;
 
     # getter for: Lcom/letv/leui/preference/LeListPreference;->messageView:Landroid/view/View;
@@ -189,7 +179,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 659
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$3;->this$0:Lcom/letv/leui/preference/LeListPreference;
@@ -201,7 +190,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 660
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$3;->this$0:Lcom/letv/leui/preference/LeListPreference;
 
     iget-object v1, p0, Lcom/letv/leui/preference/LeListPreference$3;->this$0:Lcom/letv/leui/preference/LeListPreference;
@@ -216,11 +204,9 @@
     # invokes: Lcom/letv/leui/preference/LeListPreference;->callChangeListener(Ljava/lang/Object;)Z
     invoke-static {v0, v1}, Lcom/letv/leui/preference/LeListPreference;->access$800(Lcom/letv/leui/preference/LeListPreference;Ljava/lang/Object;)Z
 
-    .line 664
     :cond_1
     return-void
 
-    .line 654
     :cond_2
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreference$3;->this$0:Lcom/letv/leui/preference/LeListPreference;
 

@@ -48,7 +48,6 @@
 
     const/4 v2, 0x0
 
-    .line 13
     new-instance v0, Lcom/letv/leui/util/LeFontScaleConfig$FontScale;
 
     const-string v1, "Small"
@@ -57,7 +56,6 @@
 
     sput-object v0, Lcom/letv/leui/util/LeFontScaleConfig$FontScale;->Small:Lcom/letv/leui/util/LeFontScaleConfig$FontScale;
 
-    .line 14
     new-instance v0, Lcom/letv/leui/util/LeFontScaleConfig$FontScale;
 
     const-string v1, "Normal"
@@ -66,7 +64,6 @@
 
     sput-object v0, Lcom/letv/leui/util/LeFontScaleConfig$FontScale;->Normal:Lcom/letv/leui/util/LeFontScaleConfig$FontScale;
 
-    .line 15
     new-instance v0, Lcom/letv/leui/util/LeFontScaleConfig$FontScale;
 
     const-string v1, "Max"
@@ -75,7 +72,6 @@
 
     sput-object v0, Lcom/letv/leui/util/LeFontScaleConfig$FontScale;->Max:Lcom/letv/leui/util/LeFontScaleConfig$FontScale;
 
-    .line 16
     new-instance v0, Lcom/letv/leui/util/LeFontScaleConfig$FontScale;
 
     const-string v1, "Extra"
@@ -84,7 +80,6 @@
 
     sput-object v0, Lcom/letv/leui/util/LeFontScaleConfig$FontScale;->Extra:Lcom/letv/leui/util/LeFontScaleConfig$FontScale;
 
-    .line 12
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/letv/leui/util/LeFontScaleConfig$FontScale;
@@ -119,7 +114,6 @@
     .end annotation
 
     .prologue
-    .line 12
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -130,7 +124,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 12
     const-class v0, Lcom/letv/leui/util/LeFontScaleConfig$FontScale;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -146,7 +139,6 @@
     .locals 1
 
     .prologue
-    .line 12
     sget-object v0, Lcom/letv/leui/util/LeFontScaleConfig$FontScale;->$VALUES:[Lcom/letv/leui/util/LeFontScaleConfig$FontScale;
 
     invoke-virtual {v0}, [Lcom/letv/leui/util/LeFontScaleConfig$FontScale;->clone()Ljava/lang/Object;

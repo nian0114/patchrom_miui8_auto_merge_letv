@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 981
     iput-object p1, p0, Lcom/letv/leui/widget/AlphabetWavesView$3;->this$0:Lcom/letv/leui/widget/AlphabetWavesView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 984
     iget-object v1, p0, Lcom/letv/leui/widget/AlphabetWavesView$3;->this$0:Lcom/letv/leui/widget/AlphabetWavesView;
 
     iget-object v0, p0, Lcom/letv/leui/widget/AlphabetWavesView$3;->this$0:Lcom/letv/leui/widget/AlphabetWavesView;
@@ -56,10 +54,8 @@
     # setter for: Lcom/letv/leui/widget/AlphabetWavesView;->mShowingPrimary:Z
     invoke-static {v1, v0}, Lcom/letv/leui/widget/AlphabetWavesView;->access$302(Lcom/letv/leui/widget/AlphabetWavesView;Z)Z
 
-    .line 985
     return-void
 
-    .line 984
     :cond_0
     const/4 v0, 0x0
 

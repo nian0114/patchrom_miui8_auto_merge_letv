@@ -21,20 +21,16 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 19
     new-instance v0, Landroid/content/res/Configuration;
 
     invoke-direct {v0}, Landroid/content/res/Configuration;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/theme/LeThemeChangeManager;->mCurConfig:Landroid/content/res/Configuration;
 
-    .line 30
     iput-object p1, p0, Landroid/content/res/theme/LeThemeChangeManager;->mContext:Landroid/content/Context;
 
-    .line 31
     return-void
 .end method
 
@@ -43,31 +39,26 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 21
     sget-object v0, Landroid/content/res/theme/LeThemeChangeManager;->mThemeChangeManager:Landroid/content/res/theme/LeThemeChangeManager;
 
     if-nez v0, :cond_0
 
-    .line 22
     new-instance v0, Landroid/content/res/theme/LeThemeChangeManager;
 
     invoke-direct {v0, p0}, Landroid/content/res/theme/LeThemeChangeManager;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Landroid/content/res/theme/LeThemeChangeManager;->mThemeChangeManager:Landroid/content/res/theme/LeThemeChangeManager;
 
-    .line 23
     invoke-static {p0}, Landroid/content/res/theme/LeThemeManager;->getInstance(Landroid/content/Context;)Landroid/content/res/theme/LeThemeManager;
 
     move-result-object v0
 
     sput-object v0, Landroid/content/res/theme/LeThemeChangeManager;->mThemeManager:Landroid/content/res/theme/LeThemeManager;
 
-    .line 24
     sget-object v0, Landroid/content/res/theme/LeThemeChangeManager;->mThemeManager:Landroid/content/res/theme/LeThemeManager;
 
     invoke-static {}, Landroid/content/res/theme/LeThemeManager;->getThemeZips()V
 
-    .line 26
     :cond_0
     sget-object v0, Landroid/content/res/theme/LeThemeChangeManager;->mThemeChangeManager:Landroid/content/res/theme/LeThemeChangeManager;
 
@@ -84,7 +75,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 34
     :try_start_0
     const-string v2, "changeTheme"
 
@@ -92,7 +82,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "zipFilePath="
+    const-string v4, "zipFilePath="
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -108,7 +98,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 35
     sget-object v2, Landroid/content/res/theme/LeThemeChangeManager;->mThemeManager:Landroid/content/res/theme/LeThemeManager;
 
     sget-object v3, Landroid/content/res/theme/LeThemeChangeManager;->mThemeManager:Landroid/content/res/theme/LeThemeManager;
@@ -119,7 +108,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 42
     sget-object v2, Landroid/content/res/theme/LeThemeChangeManager;->mThemeManager:Landroid/content/res/theme/LeThemeManager;
 
     sget-object v3, Landroid/content/res/theme/LeThemeChangeManager;->mThemeManager:Landroid/content/res/theme/LeThemeManager;
@@ -128,27 +116,21 @@
 
     invoke-virtual {v2, v3}, Landroid/content/res/theme/LeThemeManager;->deleteThemeRes(Ljava/lang/String;)Z
 
-    .line 43
     sget-object v2, Landroid/content/res/theme/LeThemeChangeManager;->mThemeManager:Landroid/content/res/theme/LeThemeManager;
 
     invoke-virtual {v2}, Landroid/content/res/theme/LeThemeManager;->reNameLetvTheme1ToLetvTheme()V
 
-    .line 44
     invoke-virtual {p0, p2}, Landroid/content/res/theme/LeThemeChangeManager;->setThemeValues(I)V
 
-    .line 45
     :goto_0
     return v1
 
-    .line 36
     :catch_0
     move-exception v0
 
-    .line 37
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 38
     sget-object v2, Landroid/content/res/theme/LeThemeChangeManager;->mThemeManager:Landroid/content/res/theme/LeThemeManager;
 
     sget-object v3, Landroid/content/res/theme/LeThemeChangeManager;->mThemeManager:Landroid/content/res/theme/LeThemeManager;
@@ -157,14 +139,12 @@
 
     invoke-virtual {v2, v3}, Landroid/content/res/theme/LeThemeManager;->deleteThemeFile1(Ljava/lang/String;)Z
 
-    .line 39
     sget-object v2, Landroid/content/res/theme/LeThemeChangeManager;->mThemeManager:Landroid/content/res/theme/LeThemeManager;
 
     sget-object v3, Landroid/content/res/theme/LeThemeChangeManager;->mThemeManager:Landroid/content/res/theme/LeThemeManager;
 
     invoke-virtual {v2, v1}, Landroid/content/res/theme/LeThemeManager;->sendChangeThemeBroadCast(I)V
 
-    .line 40
     const/4 v1, 0x0
 
     goto :goto_0
@@ -175,7 +155,6 @@
     .param p1, "themeValues"    # I
 
     .prologue
-    .line 50
     :try_start_0
     sget-object v1, Landroid/content/res/theme/LeThemeChangeManager;->mThemeManager:Landroid/content/res/theme/LeThemeManager;
 
@@ -187,7 +166,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/res/theme/LeThemeManager;->setWallpaper(Ljava/lang/String;Z)V
 
-    .line 51
     sget-object v1, Landroid/content/res/theme/LeThemeChangeManager;->mThemeManager:Landroid/content/res/theme/LeThemeManager;
 
     sget-object v2, Landroid/content/res/theme/LeThemeChangeManager;->mThemeManager:Landroid/content/res/theme/LeThemeManager;
@@ -198,12 +176,10 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/res/theme/LeThemeManager;->setWallpaper(Ljava/lang/String;Z)V
 
-    .line 52
     iget-object v1, p0, Landroid/content/res/theme/LeThemeChangeManager;->mCurConfig:Landroid/content/res/Configuration;
 
     iput p1, v1, Landroid/content/res/Configuration;->letvTheme:I
 
-    .line 53
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
     move-result-object v1
@@ -214,15 +190,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 58
     :goto_0
     return-void
 
-    .line 55
     :catch_0
     move-exception v0
 
-    .line 56
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 

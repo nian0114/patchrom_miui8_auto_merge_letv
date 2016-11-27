@@ -86,15 +86,12 @@
     .locals 1
 
     .prologue
-    .line 21
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 22
     const-string v0, "com.android.internal.telecom.IConnectionServiceAdapter"
 
     invoke-virtual {p0, p0, v0}, Lcom/android/internal/telecom/IConnectionServiceAdapter$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 23
     return-void
 .end method
 
@@ -103,17 +100,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 30
     if-nez p0, :cond_0
 
-    .line 31
     const/4 v0, 0x0
 
-    .line 37
     :goto_0
     return-object v0
 
-    .line 33
     :cond_0
     const-string v1, "com.android.internal.telecom.IConnectionServiceAdapter"
 
@@ -121,7 +114,6 @@
 
     move-result-object v0
 
-    .line 34
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -129,12 +121,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 35
     check-cast v0, Lcom/android/internal/telecom/IConnectionServiceAdapter;
 
     goto :goto_0
 
-    .line 37
     :cond_1
     new-instance v0, Lcom/android/internal/telecom/IConnectionServiceAdapter$Stub$Proxy;
 
@@ -150,7 +140,6 @@
     .locals 0
 
     .prologue
-    .line 41
     return-object p0
 .end method
 
@@ -171,10 +160,8 @@
 
     const/4 v4, 0x1
 
-    .line 45
     sparse-switch p1, :sswitch_data_0
 
-    .line 347
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v4
@@ -182,7 +169,6 @@
     :goto_0
     return v4
 
-    .line 49
     :sswitch_0
     const-string v5, "com.android.internal.telecom.IConnectionServiceAdapter"
 
@@ -190,18 +176,15 @@
 
     goto :goto_0
 
-    .line 54
     :sswitch_1
     const-string v5, "com.android.internal.telecom.IConnectionServiceAdapter"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 56
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 58
     .local v0, "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -209,7 +192,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 59
     sget-object v5, Landroid/telecom/ConnectionRequest;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v5, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -218,7 +200,6 @@
 
     check-cast v1, Landroid/telecom/ConnectionRequest;
 
-    .line 65
     .local v1, "_arg1":Landroid/telecom/ConnectionRequest;
     :goto_1
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -227,7 +208,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 66
     sget-object v5, Landroid/telecom/ParcelableConnection;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v5, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -236,14 +216,12 @@
 
     check-cast v3, Landroid/telecom/ParcelableConnection;
 
-    .line 71
     .local v3, "_arg2":Landroid/telecom/ParcelableConnection;
     :goto_2
     invoke-virtual {p0, v0, v1, v3}, Lcom/android/internal/telecom/IConnectionServiceAdapter$Stub;->handleCreateConnectionComplete(Ljava/lang/String;Landroid/telecom/ConnectionRequest;Landroid/telecom/ParcelableConnection;)V
 
     goto :goto_0
 
-    .line 62
     .end local v1    # "_arg1":Landroid/telecom/ConnectionRequest;
     .end local v3    # "_arg2":Landroid/telecom/ParcelableConnection;
     :cond_0
@@ -252,14 +230,12 @@
     .restart local v1    # "_arg1":Landroid/telecom/ConnectionRequest;
     goto :goto_1
 
-    .line 69
     :cond_1
     const/4 v3, 0x0
 
     .restart local v3    # "_arg2":Landroid/telecom/ParcelableConnection;
     goto :goto_2
 
-    .line 76
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v1    # "_arg1":Landroid/telecom/ConnectionRequest;
     .end local v3    # "_arg2":Landroid/telecom/ParcelableConnection;
@@ -268,95 +244,79 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 78
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 79
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v0}, Lcom/android/internal/telecom/IConnectionServiceAdapter$Stub;->setActive(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 84
     .end local v0    # "_arg0":Ljava/lang/String;
     :sswitch_3
     const-string v5, "com.android.internal.telecom.IConnectionServiceAdapter"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 86
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 87
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v0}, Lcom/android/internal/telecom/IConnectionServiceAdapter$Stub;->setRinging(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 92
     .end local v0    # "_arg0":Ljava/lang/String;
     :sswitch_4
     const-string v5, "com.android.internal.telecom.IConnectionServiceAdapter"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 94
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 95
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v0}, Lcom/android/internal/telecom/IConnectionServiceAdapter$Stub;->setDialing(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 100
     .end local v0    # "_arg0":Ljava/lang/String;
     :sswitch_5
     const-string v5, "com.android.internal.telecom.IConnectionServiceAdapter"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 102
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 103
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v0}, Lcom/android/internal/telecom/IConnectionServiceAdapter$Stub;->setAlerting(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 108
     .end local v0    # "_arg0":Ljava/lang/String;
     :sswitch_6
     const-string v5, "com.android.internal.telecom.IConnectionServiceAdapter"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 109
     invoke-virtual {p0}, Lcom/android/internal/telecom/IConnectionServiceAdapter$Stub;->onCallForwardSsn()V
 
     goto :goto_0
 
-    .line 114
     :sswitch_7
     const-string v5, "com.android.internal.telecom.IConnectionServiceAdapter"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 116
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 118
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -364,7 +324,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 119
     sget-object v5, Landroid/telecom/DisconnectCause;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v5, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -373,14 +332,12 @@
 
     check-cast v1, Landroid/telecom/DisconnectCause;
 
-    .line 124
     .local v1, "_arg1":Landroid/telecom/DisconnectCause;
     :goto_3
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telecom/IConnectionServiceAdapter$Stub;->setDisconnected(Ljava/lang/String;Landroid/telecom/DisconnectCause;)V
 
     goto/16 :goto_0
 
-    .line 122
     .end local v1    # "_arg1":Landroid/telecom/DisconnectCause;
     :cond_2
     const/4 v1, 0x0
@@ -388,7 +345,6 @@
     .restart local v1    # "_arg1":Landroid/telecom/DisconnectCause;
     goto :goto_3
 
-    .line 129
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v1    # "_arg1":Landroid/telecom/DisconnectCause;
     :sswitch_8
@@ -396,30 +352,25 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 131
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 132
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v0}, Lcom/android/internal/telecom/IConnectionServiceAdapter$Stub;->setOnHold(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 137
     .end local v0    # "_arg0":Ljava/lang/String;
     :sswitch_9
     const-string v5, "com.android.internal.telecom.IConnectionServiceAdapter"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 139
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 141
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -429,14 +380,12 @@
 
     move v1, v4
 
-    .line 142
     .local v1, "_arg1":Z
     :cond_3
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telecom/IConnectionServiceAdapter$Stub;->setRingbackRequested(Ljava/lang/String;Z)V
 
     goto/16 :goto_0
 
-    .line 147
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v1    # "_arg1":Z
     :sswitch_a
@@ -444,24 +393,20 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 149
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 151
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 152
     .local v1, "_arg1":I
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telecom/IConnectionServiceAdapter$Stub;->setConnectionCapabilities(Ljava/lang/String;I)V
 
     goto/16 :goto_0
 
-    .line 157
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v1    # "_arg1":I
     :sswitch_b
@@ -469,24 +414,20 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 159
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 161
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 162
     .local v1, "_arg1":Ljava/lang/String;
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telecom/IConnectionServiceAdapter$Stub;->setIsConferenced(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 167
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v1    # "_arg1":Ljava/lang/String;
     :sswitch_c
@@ -494,30 +435,25 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 169
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 170
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v0}, Lcom/android/internal/telecom/IConnectionServiceAdapter$Stub;->setConferenceMergeFailed(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 175
     .end local v0    # "_arg0":Ljava/lang/String;
     :sswitch_d
     const-string v5, "com.android.internal.telecom.IConnectionServiceAdapter"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 177
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 179
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -525,7 +461,6 @@
 
     if-eqz v5, :cond_4
 
-    .line 180
     sget-object v5, Landroid/telecom/ParcelableConference;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v5, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -534,14 +469,12 @@
 
     check-cast v1, Landroid/telecom/ParcelableConference;
 
-    .line 185
     .local v1, "_arg1":Landroid/telecom/ParcelableConference;
     :goto_4
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telecom/IConnectionServiceAdapter$Stub;->addConferenceCall(Ljava/lang/String;Landroid/telecom/ParcelableConference;)V
 
     goto/16 :goto_0
 
-    .line 183
     .end local v1    # "_arg1":Landroid/telecom/ParcelableConference;
     :cond_4
     const/4 v1, 0x0
@@ -549,7 +482,6 @@
     .restart local v1    # "_arg1":Landroid/telecom/ParcelableConference;
     goto :goto_4
 
-    .line 190
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v1    # "_arg1":Landroid/telecom/ParcelableConference;
     :sswitch_e
@@ -557,42 +489,35 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 192
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 193
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v0}, Lcom/android/internal/telecom/IConnectionServiceAdapter$Stub;->removeCall(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 198
     .end local v0    # "_arg0":Ljava/lang/String;
     :sswitch_f
     const-string v5, "com.android.internal.telecom.IConnectionServiceAdapter"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 200
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 202
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 203
     .local v1, "_arg1":Ljava/lang/String;
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telecom/IConnectionServiceAdapter$Stub;->onPostDialWait(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 208
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v1    # "_arg1":Ljava/lang/String;
     :sswitch_10
@@ -600,12 +525,10 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 210
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 212
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -613,13 +536,11 @@
 
     int-to-char v1, v5
 
-    .line 213
     .local v1, "_arg1":C
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telecom/IConnectionServiceAdapter$Stub;->onPostDialChar(Ljava/lang/String;C)V
 
     goto/16 :goto_0
 
-    .line 218
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v1    # "_arg1":C
     :sswitch_11
@@ -627,7 +548,6 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 220
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v5
@@ -636,25 +556,21 @@
 
     move-result-object v0
 
-    .line 221
     .local v0, "_arg0":Lcom/android/internal/telecom/RemoteServiceCallback;
     invoke-virtual {p0, v0}, Lcom/android/internal/telecom/IConnectionServiceAdapter$Stub;->queryRemoteConnectionServices(Lcom/android/internal/telecom/RemoteServiceCallback;)V
 
     goto/16 :goto_0
 
-    .line 226
     .end local v0    # "_arg0":Lcom/android/internal/telecom/RemoteServiceCallback;
     :sswitch_12
     const-string v5, "com.android.internal.telecom.IConnectionServiceAdapter"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 228
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 230
     .local v0, "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
@@ -664,13 +580,11 @@
 
     move-result-object v1
 
-    .line 231
     .local v1, "_arg1":Lcom/android/internal/telecom/IVideoProvider;
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telecom/IConnectionServiceAdapter$Stub;->setVideoProvider(Ljava/lang/String;Lcom/android/internal/telecom/IVideoProvider;)V
 
     goto/16 :goto_0
 
-    .line 236
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v1    # "_arg1":Lcom/android/internal/telecom/IVideoProvider;
     :sswitch_13
@@ -678,24 +592,20 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 238
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 240
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 241
     .local v1, "_arg1":I
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telecom/IConnectionServiceAdapter$Stub;->setVideoState(Ljava/lang/String;I)V
 
     goto/16 :goto_0
 
-    .line 246
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v1    # "_arg1":I
     :sswitch_14
@@ -703,12 +613,10 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 248
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 250
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -718,14 +626,12 @@
 
     move v1, v4
 
-    .line 251
     .local v1, "_arg1":Z
     :cond_5
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telecom/IConnectionServiceAdapter$Stub;->setIsVoipAudioMode(Ljava/lang/String;Z)V
 
     goto/16 :goto_0
 
-    .line 256
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v1    # "_arg1":Z
     :sswitch_15
@@ -733,12 +639,10 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 258
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 260
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -746,7 +650,6 @@
 
     if-eqz v5, :cond_6
 
-    .line 261
     sget-object v5, Landroid/telecom/StatusHints;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v5, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -755,14 +658,12 @@
 
     check-cast v1, Landroid/telecom/StatusHints;
 
-    .line 266
     .local v1, "_arg1":Landroid/telecom/StatusHints;
     :goto_5
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telecom/IConnectionServiceAdapter$Stub;->setStatusHints(Ljava/lang/String;Landroid/telecom/StatusHints;)V
 
     goto/16 :goto_0
 
-    .line 264
     .end local v1    # "_arg1":Landroid/telecom/StatusHints;
     :cond_6
     const/4 v1, 0x0
@@ -770,7 +671,6 @@
     .restart local v1    # "_arg1":Landroid/telecom/StatusHints;
     goto :goto_5
 
-    .line 271
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v1    # "_arg1":Landroid/telecom/StatusHints;
     :sswitch_16
@@ -778,12 +678,10 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 273
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 275
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -791,7 +689,6 @@
 
     if-eqz v5, :cond_7
 
-    .line 276
     sget-object v5, Landroid/net/Uri;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v5, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -800,20 +697,17 @@
 
     check-cast v1, Landroid/net/Uri;
 
-    .line 282
     .local v1, "_arg1":Landroid/net/Uri;
     :goto_6
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 283
     .local v3, "_arg2":I
     invoke-virtual {p0, v0, v1, v3}, Lcom/android/internal/telecom/IConnectionServiceAdapter$Stub;->setAddress(Ljava/lang/String;Landroid/net/Uri;I)V
 
     goto/16 :goto_0
 
-    .line 279
     .end local v1    # "_arg1":Landroid/net/Uri;
     .end local v3    # "_arg2":I
     :cond_7
@@ -822,7 +716,6 @@
     .restart local v1    # "_arg1":Landroid/net/Uri;
     goto :goto_6
 
-    .line 288
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v1    # "_arg1":Landroid/net/Uri;
     :sswitch_17
@@ -830,30 +723,25 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 290
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 292
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 294
     .local v1, "_arg1":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 295
     .restart local v3    # "_arg2":I
     invoke-virtual {p0, v0, v1, v3}, Lcom/android/internal/telecom/IConnectionServiceAdapter$Stub;->setCallerDisplayName(Ljava/lang/String;Ljava/lang/String;I)V
 
     goto/16 :goto_0
 
-    .line 300
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v1    # "_arg1":Ljava/lang/String;
     .end local v3    # "_arg2":I
@@ -862,24 +750,20 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 302
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 304
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->createStringArrayList()Ljava/util/ArrayList;
 
     move-result-object v2
 
-    .line 305
     .local v2, "_arg1":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-virtual {p0, v0, v2}, Lcom/android/internal/telecom/IConnectionServiceAdapter$Stub;->setConferenceableConnections(Ljava/lang/String;Ljava/util/List;)V
 
     goto/16 :goto_0
 
-    .line 310
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :sswitch_19
@@ -887,12 +771,10 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 312
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 314
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -900,7 +782,6 @@
 
     if-eqz v5, :cond_8
 
-    .line 315
     sget-object v5, Landroid/telecom/ParcelableConnection;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v5, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -909,14 +790,12 @@
 
     check-cast v1, Landroid/telecom/ParcelableConnection;
 
-    .line 320
     .local v1, "_arg1":Landroid/telecom/ParcelableConnection;
     :goto_7
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telecom/IConnectionServiceAdapter$Stub;->addExistingConnection(Ljava/lang/String;Landroid/telecom/ParcelableConnection;)V
 
     goto/16 :goto_0
 
-    .line 318
     .end local v1    # "_arg1":Landroid/telecom/ParcelableConnection;
     :cond_8
     const/4 v1, 0x0
@@ -924,7 +803,6 @@
     .restart local v1    # "_arg1":Landroid/telecom/ParcelableConnection;
     goto :goto_7
 
-    .line 325
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v1    # "_arg1":Landroid/telecom/ParcelableConnection;
     :sswitch_1a
@@ -932,12 +810,10 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 327
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 329
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -945,7 +821,6 @@
 
     if-eqz v5, :cond_9
 
-    .line 330
     sget-object v5, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v5, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -954,14 +829,12 @@
 
     check-cast v1, Landroid/os/Bundle;
 
-    .line 335
     .local v1, "_arg1":Landroid/os/Bundle;
     :goto_8
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telecom/IConnectionServiceAdapter$Stub;->setExtras(Ljava/lang/String;Landroid/os/Bundle;)V
 
     goto/16 :goto_0
 
-    .line 333
     .end local v1    # "_arg1":Landroid/os/Bundle;
     :cond_9
     const/4 v1, 0x0
@@ -969,7 +842,6 @@
     .restart local v1    # "_arg1":Landroid/os/Bundle;
     goto :goto_8
 
-    .line 340
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v1    # "_arg1":Landroid/os/Bundle;
     :sswitch_1b
@@ -977,18 +849,15 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 342
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 343
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v0}, Lcom/android/internal/telecom/IConnectionServiceAdapter$Stub;->resetCdmaConnectionTime(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 45
     nop
 
     :sswitch_data_0

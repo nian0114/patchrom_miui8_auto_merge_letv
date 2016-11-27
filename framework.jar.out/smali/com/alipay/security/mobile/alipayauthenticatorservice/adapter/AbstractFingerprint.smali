@@ -49,32 +49,26 @@
     .locals 1
 
     .prologue
-    .line 23
     const/4 v0, 0x0
 
     sput v0, Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint;->CMD_RESULT_OK:I
 
-    .line 24
     const/4 v0, -0x1
 
     sput v0, Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint;->CMD_RESULT_FAIL:I
 
-    .line 29
     const/4 v0, 0x1
 
     sput v0, Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint;->STATUS_WAITING_FOR_INPUT:I
 
-    .line 30
     const/4 v0, 0x2
 
     sput v0, Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint;->STATUS_INPUTTING:I
 
-    .line 31
     const/4 v0, 0x3
 
     sput v0, Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint;->STATUS_INPUT_COMPLETED:I
 
-    .line 47
     const-class v0, Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -90,10 +84,8 @@
     .locals 0
 
     .prologue
-    .line 94
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 95
     return-void
 .end method
 
@@ -101,7 +93,6 @@
     .locals 1
 
     .prologue
-    .line 145
     const-string v0, "1.0"
 
     return-object v0
@@ -118,7 +109,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 106
     :try_start_0
     sget-object v5, Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint;->TAG:Ljava/lang/String;
 
@@ -146,14 +136,12 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 108
     const-string v5, "com.alipay.android.fingerprint.AlipayFingerprint"
 
     invoke-static {v5}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 109
     .local v0, "FingerPrintClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-string v5, "open"
 
@@ -165,7 +153,6 @@
 
     move-result-object v3
 
-    .line 110
     .local v3, "open":Ljava/lang/reflect/Method;
     const/4 v5, 0x0
 
@@ -179,11 +166,9 @@
 
     check-cast v2, Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint;
 
-    .line 111
     .local v2, "fp":Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint;
     if-nez v2, :cond_0
 
-    .line 112
     sget-object v5, Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint;->TAG:Ljava/lang/String;
 
     const-string v6, "load fingerprint fail through open"
@@ -196,18 +181,15 @@
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_3
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_4
 
-    .line 137
     .end local v2    # "fp":Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint;
     .end local v3    # "open":Ljava/lang/reflect/Method;
     :cond_0
     :goto_0
     return-object v2
 
-    .line 116
     :catch_0
     move-exception v1
 
-    .line 118
     .local v1, "e":Ljava/lang/ClassNotFoundException;
     sget-object v5, Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint;->TAG:Ljava/lang/String;
 
@@ -237,15 +219,12 @@
 
     move-object v2, v4
 
-    .line 119
     goto :goto_0
 
-    .line 120
     .end local v1    # "e":Ljava/lang/ClassNotFoundException;
     :catch_1
     move-exception v1
 
-    .line 122
     .local v1, "e":Ljava/lang/NoSuchMethodException;
     sget-object v5, Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint;->TAG:Ljava/lang/String;
 
@@ -275,15 +254,12 @@
 
     move-object v2, v4
 
-    .line 123
     goto :goto_0
 
-    .line 124
     .end local v1    # "e":Ljava/lang/NoSuchMethodException;
     :catch_2
     move-exception v1
 
-    .line 126
     .local v1, "e":Ljava/lang/IllegalArgumentException;
     sget-object v5, Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint;->TAG:Ljava/lang/String;
 
@@ -313,15 +289,12 @@
 
     move-object v2, v4
 
-    .line 127
     goto :goto_0
 
-    .line 128
     .end local v1    # "e":Ljava/lang/IllegalArgumentException;
     :catch_3
     move-exception v1
 
-    .line 130
     .local v1, "e":Ljava/lang/IllegalAccessException;
     sget-object v5, Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint;->TAG:Ljava/lang/String;
 
@@ -353,14 +326,11 @@
     :goto_1
     move-object v2, v4
 
-    .line 137
     goto :goto_0
 
-    .line 131
     :catch_4
     move-exception v1
 
-    .line 133
     .local v1, "e":Ljava/lang/reflect/InvocationTargetException;
     sget-object v5, Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint;->TAG:Ljava/lang/String;
 
@@ -400,7 +370,6 @@
     .end annotation
 
     .prologue
-    .line 157
     new-instance v0, Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint$UnsupportedException;
 
     invoke-direct {v0}, Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint$UnsupportedException;-><init>()V
@@ -425,14 +394,12 @@
     .param p2, "param"    # [B
 
     .prologue
-    .line 217
     sget-object v0, Lcom/alipay/security/mobile/alipayauthenticatorservice/adapter/AbstractFingerprint;->TAG:Ljava/lang/String;
 
     const-string v1, "invokeTACmd not implement"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 218
     const/4 v0, 0x0
 
     return-object v0

@@ -43,7 +43,6 @@
     .end annotation
 
     .prologue
-    .line 47
     .local p3, "headers":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-wide/16 v6, 0x0
 
@@ -59,7 +58,6 @@
 
     invoke-direct/range {v1 .. v7}, Lcom/android/volley/NetworkResponse;-><init>(I[BLjava/util/Map;ZJ)V
 
-    .line 48
     return-void
 .end method
 
@@ -81,26 +79,19 @@
     .end annotation
 
     .prologue
-    .line 37
     .local p3, "headers":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     iput p1, p0, Lcom/android/volley/NetworkResponse;->statusCode:I
 
-    .line 39
     iput-object p2, p0, Lcom/android/volley/NetworkResponse;->data:[B
 
-    .line 40
     iput-object p3, p0, Lcom/android/volley/NetworkResponse;->headers:Ljava/util/Map;
 
-    .line 41
     iput-boolean p4, p0, Lcom/android/volley/NetworkResponse;->notModified:Z
 
-    .line 42
     iput-wide p5, p0, Lcom/android/volley/NetworkResponse;->networkTimeMs:J
 
-    .line 43
     return-void
 .end method
 
@@ -109,7 +100,6 @@
     .param p1, "data"    # [B
 
     .prologue
-    .line 51
     const/16 v2, 0xc8
 
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
@@ -126,7 +116,6 @@
 
     invoke-direct/range {v1 .. v7}, Lcom/android/volley/NetworkResponse;-><init>(I[BLjava/util/Map;ZJ)V
 
-    .line 52
     return-void
 .end method
 
@@ -145,7 +134,6 @@
     .end annotation
 
     .prologue
-    .line 55
     .local p2, "headers":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const/16 v2, 0xc8
 
@@ -161,6 +149,5 @@
 
     invoke-direct/range {v1 .. v7}, Lcom/android/volley/NetworkResponse;-><init>(I[BLjava/util/Map;ZJ)V
 
-    .line 56
     return-void
 .end method

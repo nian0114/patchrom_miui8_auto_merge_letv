@@ -38,16 +38,12 @@
     .param p2, "imei"    # Ljava/lang/String;
 
     .prologue
-    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 19
     iput-object p2, p0, Lcom/letv/domain/bean/DeviceInfo;->imei:Ljava/lang/String;
 
-    .line 20
     iput-object p1, p0, Lcom/letv/domain/bean/DeviceInfo;->type:Lcom/letv/domain/bean/DeviceInfo$Type;
 
-    .line 21
     return-void
 .end method
 
@@ -57,7 +53,6 @@
     .locals 1
 
     .prologue
-    .line 56
     iget-object v0, p0, Lcom/letv/domain/bean/DeviceInfo;->app_name:Ljava/lang/String;
 
     return-object v0
@@ -67,7 +62,6 @@
     .locals 1
 
     .prologue
-    .line 64
     iget-object v0, p0, Lcom/letv/domain/bean/DeviceInfo;->app_version:Ljava/lang/String;
 
     return-object v0
@@ -77,7 +71,6 @@
     .locals 1
 
     .prologue
-    .line 48
     iget-object v0, p0, Lcom/letv/domain/bean/DeviceInfo;->hardware_version:Ljava/lang/String;
 
     return-object v0
@@ -87,7 +80,6 @@
     .locals 1
 
     .prologue
-    .line 72
     iget-object v0, p0, Lcom/letv/domain/bean/DeviceInfo;->imei:Ljava/lang/String;
 
     return-object v0
@@ -97,7 +89,6 @@
     .locals 1
 
     .prologue
-    .line 24
     iget-object v0, p0, Lcom/letv/domain/bean/DeviceInfo;->services:Ljava/lang/String;
 
     return-object v0
@@ -107,7 +98,6 @@
     .locals 1
 
     .prologue
-    .line 40
     iget-object v0, p0, Lcom/letv/domain/bean/DeviceInfo;->software_version:Ljava/lang/String;
 
     return-object v0
@@ -117,7 +107,6 @@
     .locals 1
 
     .prologue
-    .line 76
     iget-object v0, p0, Lcom/letv/domain/bean/DeviceInfo;->type:Lcom/letv/domain/bean/DeviceInfo$Type;
 
     invoke-virtual {v0}, Lcom/letv/domain/bean/DeviceInfo$Type;->getType()Ljava/lang/String;
@@ -131,7 +120,6 @@
     .locals 1
 
     .prologue
-    .line 32
     iget-object v0, p0, Lcom/letv/domain/bean/DeviceInfo;->ui_version:Ljava/lang/String;
 
     return-object v0
@@ -141,7 +129,6 @@
     .locals 1
 
     .prologue
-    .line 80
     iget-boolean v0, p0, Lcom/letv/domain/bean/DeviceInfo;->isOversea:Z
 
     return v0
@@ -152,10 +139,8 @@
     .param p1, "app_name"    # Ljava/lang/String;
 
     .prologue
-    .line 60
     iput-object p1, p0, Lcom/letv/domain/bean/DeviceInfo;->app_name:Ljava/lang/String;
 
-    .line 61
     return-void
 .end method
 
@@ -164,10 +149,8 @@
     .param p1, "app_version"    # Ljava/lang/String;
 
     .prologue
-    .line 68
     iput-object p1, p0, Lcom/letv/domain/bean/DeviceInfo;->app_version:Ljava/lang/String;
 
-    .line 69
     return-void
 .end method
 
@@ -176,10 +159,8 @@
     .param p1, "hardware_version"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     iput-object p1, p0, Lcom/letv/domain/bean/DeviceInfo;->hardware_version:Ljava/lang/String;
 
-    .line 53
     return-void
 .end method
 
@@ -188,10 +169,8 @@
     .param p1, "isOversea"    # Z
 
     .prologue
-    .line 84
     iput-boolean p1, p0, Lcom/letv/domain/bean/DeviceInfo;->isOversea:Z
 
-    .line 85
     return-void
 .end method
 
@@ -200,10 +179,8 @@
     .param p1, "services"    # Ljava/lang/String;
 
     .prologue
-    .line 28
     iput-object p1, p0, Lcom/letv/domain/bean/DeviceInfo;->services:Ljava/lang/String;
 
-    .line 29
     return-void
 .end method
 
@@ -212,10 +189,8 @@
     .param p1, "software_version"    # Ljava/lang/String;
 
     .prologue
-    .line 44
     iput-object p1, p0, Lcom/letv/domain/bean/DeviceInfo;->software_version:Ljava/lang/String;
 
-    .line 45
     return-void
 .end method
 
@@ -224,9 +199,7 @@
     .param p1, "ui_version"    # Ljava/lang/String;
 
     .prologue
-    .line 36
     iput-object p1, p0, Lcom/letv/domain/bean/DeviceInfo;->ui_version:Ljava/lang/String;
 
-    .line 37
     return-void
 .end method

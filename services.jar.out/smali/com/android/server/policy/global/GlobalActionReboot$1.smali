@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 420
     iput-object p1, p0, Lcom/android/server/policy/global/GlobalActionReboot$1;->this$0:Lcom/android/server/policy/global/GlobalActionReboot;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,13 +40,11 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 438
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionReboot$1;->this$0:Lcom/android/server/policy/global/GlobalActionReboot;
 
     # invokes: Lcom/android/server/policy/global/GlobalActionReboot;->resetScale()V
     invoke-static {v0}, Lcom/android/server/policy/global/GlobalActionReboot;->access$100(Lcom/android/server/policy/global/GlobalActionReboot;)V
 
-    .line 439
     return-void
 .end method
 
@@ -56,7 +53,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 434
     return-void
 .end method
 
@@ -65,7 +61,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 428
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionReboot$1;->this$0:Lcom/android/server/policy/global/GlobalActionReboot;
 
     iget-boolean v0, v0, Lcom/android/server/policy/global/GlobalActionReboot;->mCancel:Z
@@ -81,7 +76,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 429
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionReboot$1;->this$0:Lcom/android/server/policy/global/GlobalActionReboot;
 
     # getter for: Lcom/android/server/policy/global/GlobalActionReboot;->mScaleAnimator:Landroid/animation/ObjectAnimator;
@@ -91,7 +85,6 @@
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 430
     :cond_0
     return-void
 .end method
@@ -101,6 +94,5 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 424
     return-void
 .end method

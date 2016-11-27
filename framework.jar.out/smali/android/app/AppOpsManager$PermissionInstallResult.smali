@@ -45,25 +45,21 @@
     .locals 1
 
     .prologue
-    .line 2688
     iput-object p1, p0, Landroid/app/AppOpsManager$PermissionInstallResult;->this$0:Landroid/app/AppOpsManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2689
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/app/AppOpsManager$PermissionInstallResult;->items:Ljava/util/List;
 
-    .line 2690
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/app/AppOpsManager$PermissionInstallResult;->noPassPerms:Ljava/util/List;
 
-    .line 2691
     return-void
 .end method

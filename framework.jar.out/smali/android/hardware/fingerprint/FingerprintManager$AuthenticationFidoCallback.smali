@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 1077
     invoke-direct {p0}, Landroid/hardware/fingerprint/FingerprintManager$AuthenticationCallback;-><init>()V
 
     return-void
@@ -32,6 +31,5 @@
     .param p1, "result"    # Landroid/hardware/fingerprint/FingerprintFido;
 
     .prologue
-    .line 1079
     return-void
 .end method

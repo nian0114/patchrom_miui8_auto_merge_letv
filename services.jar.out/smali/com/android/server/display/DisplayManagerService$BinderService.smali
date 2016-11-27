@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1239
     iput-object p1, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     invoke-direct {p0}, Landroid/hardware/display/IDisplayManager$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/display/DisplayManagerService$1;
 
     .prologue
-    .line 1239
     invoke-direct {p0, p1}, Lcom/android/server/display/DisplayManagerService$BinderService;-><init>(Lcom/android/server/display/DisplayManagerService;)V
 
     return-void
@@ -50,10 +48,8 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1580
     if-eqz p1, :cond_1
 
-    .line 1582
     :try_start_0
     invoke-interface {p1}, Landroid/media/projection/IMediaProjection;->canProjectSecureVideo()Z
     :try_end_0
@@ -63,16 +59,13 @@
 
     if-eqz v2, :cond_1
 
-    .line 1589
     :cond_0
     :goto_0
     return v1
 
-    .line 1585
     :catch_0
     move-exception v0
 
-    .line 1586
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "DisplayManagerService"
 
@@ -80,7 +73,6 @@
 
     invoke-static {v2, v3, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1589
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_1
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
@@ -110,10 +102,8 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1562
     if-eqz p1, :cond_1
 
-    .line 1564
     :try_start_0
     invoke-interface {p1}, Landroid/media/projection/IMediaProjection;->canProjectVideo()Z
     :try_end_0
@@ -123,16 +113,13 @@
 
     if-eqz v2, :cond_1
 
-    .line 1576
     :cond_0
     :goto_0
     return v1
 
-    .line 1567
     :catch_0
     move-exception v0
 
-    .line 1568
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "DisplayManagerService"
 
@@ -140,7 +127,6 @@
 
     invoke-static {v2, v3, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1571
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_1
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
@@ -158,7 +144,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1576
     invoke-direct {p0, p1}, Lcom/android/server/display/DisplayManagerService$BinderService;->canProjectSecureVideo(Landroid/media/projection/IMediaProjection;)Z
 
     move-result v1
@@ -172,10 +157,8 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1548
     if-eqz p2, :cond_1
 
-    .line 1549
     iget-object v5, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     # getter for: Lcom/android/server/display/DisplayManagerService;->mContext:Landroid/content/Context;
@@ -191,11 +174,9 @@
 
     move-result-object v4
 
-    .line 1550
     .local v4, "packageNames":[Ljava/lang/String;
     if-eqz v4, :cond_1
 
-    .line 1551
     move-object v0, v4
 
     .local v0, "arr$":[Ljava/lang/String;
@@ -210,7 +191,6 @@
 
     aget-object v3, v0, v1
 
-    .line 1552
     .local v3, "n":Ljava/lang/String;
     invoke-virtual {v3, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -218,10 +198,8 @@
 
     if-eqz v5, :cond_0
 
-    .line 1553
     const/4 v5, 0x1
 
-    .line 1558
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "i$":I
     .end local v2    # "len$":I
@@ -230,7 +208,6 @@
     :goto_1
     return v5
 
-    .line 1551
     .restart local v0    # "arr$":[Ljava/lang/String;
     .restart local v1    # "i$":I
     .restart local v2    # "len$":I
@@ -241,7 +218,6 @@
 
     goto :goto_0
 
-    .line 1558
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "i$":I
     .end local v2    # "len$":I
@@ -260,10 +236,8 @@
     .param p1, "address"    # Ljava/lang/String;
 
     .prologue
-    .line 1317
     if-nez p1, :cond_0
 
-    .line 1318
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "address must not be null"
@@ -272,7 +246,6 @@
 
     throw v2
 
-    .line 1320
     :cond_0
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
 
@@ -287,12 +260,10 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1323
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1325
     .local v0, "token":J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
@@ -302,13 +273,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1327
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1329
     return-void
 
-    .line 1327
     :catchall_0
     move-exception v2
 
@@ -330,12 +298,10 @@
     .param p9, "flags"    # I
 
     .prologue
-    .line 1434
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v5
 
-    .line 1435
     .local v5, "callingUid":I
     move-object/from16 v0, p0
 
@@ -347,7 +313,6 @@
 
     if-nez v2, :cond_0
 
-    .line 1436
     new-instance v2, Ljava/lang/SecurityException;
 
     const-string v3, "packageName must match the calling uid"
@@ -356,11 +321,9 @@
 
     throw v2
 
-    .line 1438
     :cond_0
     if-nez p1, :cond_1
 
-    .line 1439
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "appToken must not be null"
@@ -369,7 +332,6 @@
 
     throw v2
 
-    .line 1441
     :cond_1
     invoke-static/range {p4 .. p4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -377,7 +339,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 1442
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "name must be non-null and non-empty"
@@ -386,7 +347,6 @@
 
     throw v2
 
-    .line 1444
     :cond_2
     if-lez p5, :cond_3
 
@@ -394,7 +354,6 @@
 
     if-gtz p7, :cond_4
 
-    .line 1445
     :cond_3
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
@@ -404,29 +363,23 @@
 
     throw v2
 
-    .line 1449
     :cond_4
     and-int/lit8 v2, p9, 0x1
 
     if-eqz v2, :cond_5
 
-    .line 1450
     or-int/lit8 p9, p9, 0x10
 
-    .line 1452
     :cond_5
     and-int/lit8 v2, p9, 0x8
 
     if-eqz v2, :cond_6
 
-    .line 1453
     and-int/lit8 p9, p9, -0x11
 
-    .line 1456
     :cond_6
     if-eqz p2, :cond_8
 
-    .line 1458
     :try_start_0
     move-object/from16 v0, p0
 
@@ -445,7 +398,6 @@
 
     if-nez v2, :cond_7
 
-    .line 1459
     new-instance v2, Ljava/lang/SecurityException;
 
     const-string v3, "Invalid media projection"
@@ -456,11 +408,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1462
     :catch_0
     move-exception v13
 
-    .line 1463
     .local v13, "e":Landroid/os/RemoteException;
     new-instance v2, Ljava/lang/SecurityException;
 
@@ -470,7 +420,6 @@
 
     throw v2
 
-    .line 1461
     .end local v13    # "e":Landroid/os/RemoteException;
     :cond_7
     :try_start_1
@@ -484,7 +433,6 @@
 
     move-result p9
 
-    .line 1467
     :cond_8
     const/16 v2, 0x3e8
 
@@ -494,7 +442,6 @@
 
     if-eqz v2, :cond_9
 
-    .line 1469
     move-object/from16 v0, p0
 
     move-object/from16 v1, p2
@@ -505,7 +452,6 @@
 
     if-nez v2, :cond_9
 
-    .line 1470
     new-instance v2, Ljava/lang/SecurityException;
 
     const-string v3, "Requires CAPTURE_VIDEO_OUTPUT or CAPTURE_SECURE_VIDEO_OUTPUT permission, or an appropriate MediaProjection token in order to create a screen sharing virtual display."
@@ -514,13 +460,11 @@
 
     throw v2
 
-    .line 1476
     :cond_9
     and-int/lit8 v2, p9, 0x4
 
     if-eqz v2, :cond_a
 
-    .line 1477
     move-object/from16 v0, p0
 
     move-object/from16 v1, p2
@@ -531,7 +475,6 @@
 
     if-nez v2, :cond_a
 
-    .line 1478
     new-instance v2, Ljava/lang/SecurityException;
 
     const-string v3, "Requires CAPTURE_SECURE_VIDEO_OUTPUT or an appropriate MediaProjection token to create a secure virtual display."
@@ -540,13 +483,11 @@
 
     throw v2
 
-    .line 1484
     :cond_a
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v14
 
-    .line 1486
     .local v14, "token":J
     :try_start_2
     move-object/from16 v0, p0
@@ -578,7 +519,6 @@
 
     move-result v2
 
-    .line 1489
     invoke-static {v14, v15}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return v2
@@ -595,12 +535,10 @@
     .locals 3
 
     .prologue
-    .line 1338
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1340
     .local v0, "token":J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
@@ -610,13 +548,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1342
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1344
     return-void
 
-    .line 1342
     :catchall_0
     move-exception v2
 
@@ -632,7 +567,6 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 1526
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     # getter for: Lcom/android/server/display/DisplayManagerService;->mContext:Landroid/content/Context;
@@ -657,7 +591,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 1529
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -697,17 +630,14 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1545
     :goto_0
     return-void
 
-    .line 1534
     :cond_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1536
     .local v0, "token":J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
@@ -715,7 +645,6 @@
     # invokes: Lcom/android/server/display/DisplayManagerService;->dumpInternal(Ljava/io/PrintWriter;)V
     invoke-static {v2, p2}, Lcom/android/server/display/DisplayManagerService;->access$3900(Lcom/android/server/display/DisplayManagerService;Ljava/io/PrintWriter;)V
 
-    .line 1538
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     # getter for: Lcom/android/server/display/DisplayManagerService;->mDisplayPowerController:Lcom/android/server/display/DisplayPowerController;
@@ -725,7 +654,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 1539
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     # getter for: Lcom/android/server/display/DisplayManagerService;->mDisplayPowerController:Lcom/android/server/display/DisplayPowerController;
@@ -739,7 +667,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1543
     :cond_2
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -758,10 +685,8 @@
     .param p1, "address"    # Ljava/lang/String;
 
     .prologue
-    .line 1364
     if-nez p1, :cond_0
 
-    .line 1365
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "address must not be null"
@@ -770,7 +695,6 @@
 
     throw v2
 
-    .line 1367
     :cond_0
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
 
@@ -785,12 +709,10 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1370
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1372
     .local v0, "token":J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
@@ -800,13 +722,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1374
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1376
     return-void
 
-    .line 1374
     :catchall_0
     move-exception v2
 
@@ -819,12 +738,10 @@
     .locals 3
 
     .prologue
-    .line 1606
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1608
     .local v0, "token":J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
@@ -835,7 +752,6 @@
 
     move-result v2
 
-    .line 1610
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return v2
@@ -852,18 +768,15 @@
     .locals 4
 
     .prologue
-    .line 1263
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 1264
     .local v0, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 1266
     .local v2, "token":J
     :try_start_0
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
@@ -875,7 +788,6 @@
 
     move-result-object v1
 
-    .line 1268
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object v1
@@ -893,18 +805,15 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 1249
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 1250
     .local v0, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 1252
     .local v2, "token":J
     :try_start_0
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
@@ -916,7 +825,6 @@
 
     move-result-object v1
 
-    .line 1254
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object v1
@@ -933,12 +841,10 @@
     .locals 3
 
     .prologue
-    .line 1409
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1411
     .local v0, "token":J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
@@ -950,7 +856,6 @@
 
     move-result-object v2
 
-    .line 1413
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object v2
@@ -967,7 +872,6 @@
     .locals 5
 
     .prologue
-    .line 1380
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     # getter for: Lcom/android/server/display/DisplayManagerService;->mContext:Landroid/content/Context;
@@ -981,12 +885,10 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1383
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1385
     .local v0, "token":J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
@@ -996,13 +898,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1387
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1389
     return-void
 
-    .line 1387
     :catchall_0
     move-exception v2
 
@@ -1016,10 +915,8 @@
     .param p1, "callback"    # Landroid/hardware/display/IDisplayManagerCallback;
 
     .prologue
-    .line 1274
     if-nez p1, :cond_0
 
-    .line 1275
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v4, "listener must not be null"
@@ -1028,19 +925,16 @@
 
     throw v1
 
-    .line 1278
     :cond_0
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v0
 
-    .line 1279
     .local v0, "callingPid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 1281
     .local v2, "token":J
     :try_start_0
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
@@ -1050,13 +944,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1283
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1285
     return-void
 
-    .line 1283
     :catchall_0
     move-exception v1
 
@@ -1070,12 +961,10 @@
     .param p1, "callback"    # Landroid/hardware/display/IVirtualDisplayCallback;
 
     .prologue
-    .line 1516
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1518
     .local v0, "token":J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
@@ -1089,13 +978,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1520
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1522
     return-void
 
-    .line 1520
     :catchall_0
     move-exception v2
 
@@ -1110,10 +996,8 @@
     .param p2, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 1348
     if-nez p1, :cond_0
 
-    .line 1349
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "address must not be null"
@@ -1122,7 +1006,6 @@
 
     throw v2
 
-    .line 1351
     :cond_0
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
 
@@ -1137,12 +1020,10 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1354
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1356
     .local v0, "token":J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
@@ -1152,13 +1033,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1358
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1360
     return-void
 
-    .line 1358
     :catchall_0
     move-exception v2
 
@@ -1173,7 +1051,6 @@
     .param p2, "colorTransformId"    # I
 
     .prologue
-    .line 1419
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     # getter for: Lcom/android/server/display/DisplayManagerService;->mContext:Landroid/content/Context;
@@ -1187,12 +1064,10 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1422
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1424
     .local v0, "token":J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
@@ -1202,13 +1077,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1426
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1428
     return-void
 
-    .line 1426
     :catchall_0
     move-exception v2
 
@@ -1225,12 +1097,10 @@
     .param p4, "densityDpi"    # I
 
     .prologue
-    .line 1496
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1498
     .local v0, "token":J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
@@ -1244,13 +1114,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1500
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1502
     return-void
 
-    .line 1500
     :catchall_0
     move-exception v2
 
@@ -1263,7 +1130,6 @@
     .locals 5
 
     .prologue
-    .line 1393
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     # getter for: Lcom/android/server/display/DisplayManagerService;->mContext:Landroid/content/Context;
@@ -1277,12 +1143,10 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1396
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1398
     .local v0, "token":J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
@@ -1292,13 +1156,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1400
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1402
     return-void
 
-    .line 1400
     :catchall_0
     move-exception v2
 
@@ -1313,12 +1174,10 @@
     .param p2, "reboot"    # Z
 
     .prologue
-    .line 1596
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1598
     .local v0, "token":J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
@@ -1328,13 +1187,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1600
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1602
     return-void
 
-    .line 1600
     :catchall_0
     move-exception v2
 
@@ -1349,12 +1205,10 @@
     .param p2, "surface"    # Landroid/view/Surface;
 
     .prologue
-    .line 1506
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1508
     .local v0, "token":J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
@@ -1368,13 +1222,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1510
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1512
     return-void
 
-    .line 1510
     :catchall_0
     move-exception v2
 
@@ -1387,7 +1238,6 @@
     .locals 6
 
     .prologue
-    .line 1289
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     # getter for: Lcom/android/server/display/DisplayManagerService;->mContext:Landroid/content/Context;
@@ -1401,18 +1251,15 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1292
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v0
 
-    .line 1293
     .local v0, "callingPid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 1295
     .local v2, "token":J
     :try_start_0
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
@@ -1422,13 +1269,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1297
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1299
     return-void
 
-    .line 1297
     :catchall_0
     move-exception v1
 
@@ -1441,7 +1285,6 @@
     .locals 6
 
     .prologue
-    .line 1303
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     # getter for: Lcom/android/server/display/DisplayManagerService;->mContext:Landroid/content/Context;
@@ -1455,18 +1298,15 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1306
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v0
 
-    .line 1307
     .local v0, "callingPid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 1309
     .local v2, "token":J
     :try_start_0
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService$BinderService;->this$0:Lcom/android/server/display/DisplayManagerService;
@@ -1476,13 +1316,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1311
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1313
     return-void
 
-    .line 1311
     :catchall_0
     move-exception v1
 

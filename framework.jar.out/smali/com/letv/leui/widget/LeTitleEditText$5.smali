@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 781
     iput-object p1, p0, Lcom/letv/leui/widget/LeTitleEditText$5;->this$0:Lcom/letv/leui/widget/LeTitleEditText;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "s"    # Landroid/text/Editable;
 
     .prologue
-    .line 800
     iget-object v0, p0, Lcom/letv/leui/widget/LeTitleEditText$5;->this$0:Lcom/letv/leui/widget/LeTitleEditText;
 
     # getter for: Lcom/letv/leui/widget/LeTitleEditText;->mTextChangerListener:Landroid/text/TextWatcher;
@@ -51,7 +49,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 801
     iget-object v0, p0, Lcom/letv/leui/widget/LeTitleEditText$5;->this$0:Lcom/letv/leui/widget/LeTitleEditText;
 
     # getter for: Lcom/letv/leui/widget/LeTitleEditText;->mTextChangerListener:Landroid/text/TextWatcher;
@@ -61,7 +58,6 @@
 
     invoke-interface {v0, p1}, Landroid/text/TextWatcher;->afterTextChanged(Landroid/text/Editable;)V
 
-    .line 803
     :cond_0
     return-void
 .end method
@@ -74,7 +70,6 @@
     .param p4, "after"    # I
 
     .prologue
-    .line 785
     iget-object v0, p0, Lcom/letv/leui/widget/LeTitleEditText$5;->this$0:Lcom/letv/leui/widget/LeTitleEditText;
 
     # getter for: Lcom/letv/leui/widget/LeTitleEditText;->mTextChangerListener:Landroid/text/TextWatcher;
@@ -84,7 +79,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 786
     iget-object v0, p0, Lcom/letv/leui/widget/LeTitleEditText$5;->this$0:Lcom/letv/leui/widget/LeTitleEditText;
 
     # getter for: Lcom/letv/leui/widget/LeTitleEditText;->mTextChangerListener:Landroid/text/TextWatcher;
@@ -94,7 +88,6 @@
 
     invoke-interface {v0, p1, p2, p3, p4}, Landroid/text/TextWatcher;->beforeTextChanged(Ljava/lang/CharSequence;III)V
 
-    .line 788
     :cond_0
     return-void
 .end method
@@ -107,13 +100,11 @@
     .param p4, "after"    # I
 
     .prologue
-    .line 792
     iget-object v0, p0, Lcom/letv/leui/widget/LeTitleEditText$5;->this$0:Lcom/letv/leui/widget/LeTitleEditText;
 
     # invokes: Lcom/letv/leui/widget/LeTitleEditText;->onTextChanged(Ljava/lang/CharSequence;)V
     invoke-static {v0, p1}, Lcom/letv/leui/widget/LeTitleEditText;->access$900(Lcom/letv/leui/widget/LeTitleEditText;Ljava/lang/CharSequence;)V
 
-    .line 794
     iget-object v0, p0, Lcom/letv/leui/widget/LeTitleEditText$5;->this$0:Lcom/letv/leui/widget/LeTitleEditText;
 
     # getter for: Lcom/letv/leui/widget/LeTitleEditText;->mTextChangerListener:Landroid/text/TextWatcher;
@@ -123,7 +114,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 795
     iget-object v0, p0, Lcom/letv/leui/widget/LeTitleEditText$5;->this$0:Lcom/letv/leui/widget/LeTitleEditText;
 
     # getter for: Lcom/letv/leui/widget/LeTitleEditText;->mTextChangerListener:Landroid/text/TextWatcher;
@@ -133,7 +123,6 @@
 
     invoke-interface {v0, p1, p2, p3, p4}, Landroid/text/TextWatcher;->onTextChanged(Ljava/lang/CharSequence;III)V
 
-    .line 797
     :cond_0
     return-void
 .end method

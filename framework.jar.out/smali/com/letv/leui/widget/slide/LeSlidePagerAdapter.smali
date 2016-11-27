@@ -18,10 +18,8 @@
     .locals 1
 
     .prologue
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 13
     new-instance v0, Landroid/database/DataSetObservable;
 
     invoke-direct {v0}, Landroid/database/DataSetObservable;-><init>()V
@@ -40,7 +38,6 @@
     .param p3, "object"    # Ljava/lang/Object;
 
     .prologue
-    .line 126
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "Required method destroyItem was not overridden"
@@ -57,10 +54,8 @@
     .param p3, "object"    # Ljava/lang/Object;
 
     .prologue
-    .line 58
     invoke-virtual {p0, p1, p2, p3}, Lcom/letv/leui/widget/slide/LeSlidePagerAdapter;->destroyItem(Landroid/view/View;ILjava/lang/Object;)V
 
-    .line 59
     return-void
 .end method
 
@@ -69,7 +64,6 @@
     .param p1, "container"    # Landroid/view/View;
 
     .prologue
-    .line 153
     return-void
 .end method
 
@@ -78,10 +72,8 @@
     .param p1, "container"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 82
     invoke-virtual {p0, p1}, Lcom/letv/leui/widget/slide/LeSlidePagerAdapter;->finishUpdate(Landroid/view/View;)V
 
-    .line 83
     return-void
 .end method
 
@@ -93,7 +85,6 @@
     .param p1, "object"    # Ljava/lang/Object;
 
     .prologue
-    .line 202
     const/4 v0, -0x1
 
     return v0
@@ -104,7 +95,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 241
     const/4 v0, 0x0
 
     return-object v0
@@ -115,7 +105,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 252
     const/high16 v0, 0x3f800000    # 1.0f
 
     return v0
@@ -127,7 +116,6 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 109
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "Required method instantiateItem was not overridden"
@@ -143,7 +131,6 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 44
     invoke-virtual {p0, p1, p2}, Lcom/letv/leui/widget/slide/LeSlidePagerAdapter;->instantiateItem(Landroid/view/View;I)Ljava/lang/Object;
 
     move-result-object v0
@@ -158,12 +145,10 @@
     .locals 1
 
     .prologue
-    .line 210
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlidePagerAdapter;->mObservable:Landroid/database/DataSetObservable;
 
     invoke-virtual {v0}, Landroid/database/DataSetObservable;->notifyChanged()V
 
-    .line 211
     return-void
 .end method
 
@@ -172,12 +157,10 @@
     .param p1, "observer"    # Landroid/database/DataSetObserver;
 
     .prologue
-    .line 219
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlidePagerAdapter;->mObservable:Landroid/database/DataSetObservable;
 
     invoke-virtual {v0, p1}, Landroid/database/DataSetObservable;->registerObserver(Ljava/lang/Object;)V
 
-    .line 220
     return-void
 .end method
 
@@ -187,7 +170,6 @@
     .param p2, "loader"    # Ljava/lang/ClassLoader;
 
     .prologue
-    .line 184
     return-void
 .end method
 
@@ -195,7 +177,6 @@
     .locals 1
 
     .prologue
-    .line 173
     const/4 v0, 0x0
 
     return-object v0
@@ -208,7 +189,6 @@
     .param p3, "object"    # Ljava/lang/Object;
 
     .prologue
-    .line 141
     return-void
 .end method
 
@@ -219,10 +199,8 @@
     .param p3, "object"    # Ljava/lang/Object;
 
     .prologue
-    .line 71
     invoke-virtual {p0, p1, p2, p3}, Lcom/letv/leui/widget/slide/LeSlidePagerAdapter;->setPrimaryItem(Landroid/view/View;ILjava/lang/Object;)V
 
-    .line 72
     return-void
 .end method
 
@@ -231,7 +209,6 @@
     .param p1, "container"    # Landroid/view/View;
 
     .prologue
-    .line 93
     return-void
 .end method
 
@@ -240,10 +217,8 @@
     .param p1, "container"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 29
     invoke-virtual {p0, p1}, Lcom/letv/leui/widget/slide/LeSlidePagerAdapter;->startUpdate(Landroid/view/View;)V
 
-    .line 30
     return-void
 .end method
 
@@ -252,11 +227,9 @@
     .param p1, "observer"    # Landroid/database/DataSetObserver;
 
     .prologue
-    .line 228
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlidePagerAdapter;->mObservable:Landroid/database/DataSetObservable;
 
     invoke-virtual {v0, p1}, Landroid/database/DataSetObservable;->unregisterObserver(Ljava/lang/Object;)V
 
-    .line 229
     return-void
 .end method

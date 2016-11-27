@@ -12,7 +12,6 @@
     .locals 1
 
     .prologue
-    .line 39
     new-instance v0, Landroid/security/NetworkSecurityPolicy;
 
     invoke-direct {v0}, Landroid/security/NetworkSecurityPolicy;-><init>()V
@@ -26,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +34,6 @@
     .locals 1
 
     .prologue
-    .line 50
     sget-object v0, Landroid/security/NetworkSecurityPolicy;->INSTANCE:Landroid/security/NetworkSecurityPolicy;
 
     return-object v0
@@ -48,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 72
     invoke-static {}, Llibcore/net/NetworkSecurityPolicy;->isCleartextTrafficPermitted()Z
 
     move-result v0
@@ -61,24 +57,20 @@
     .param p1, "opType"    # I
 
     .prologue
-    .line 99
     const-string v4, "appops"
 
     invoke-static {v4}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 100
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Lcom/android/internal/app/IAppOpsService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/app/IAppOpsService;
 
     move-result-object v3
 
-    .line 101
     .local v3, "service":Lcom/android/internal/app/IAppOpsService;
     const/4 v2, 0x1
 
-    .line 103
     .local v2, "mode":I
     const/16 v4, 0x43
 
@@ -97,7 +89,6 @@
 
     move-result v2
 
-    .line 107
     :goto_0
     if-nez v2, :cond_0
 
@@ -106,17 +97,14 @@
     :goto_1
     return v4
 
-    .line 104
     :catch_0
     move-exception v1
 
-    .line 105
     .local v1, "e":Landroid/os/RemoteException;
     invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 107
     .end local v1    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v4, 0x0
@@ -129,9 +117,7 @@
     .param p1, "permitted"    # Z
 
     .prologue
-    .line 84
     invoke-static {p1}, Llibcore/net/NetworkSecurityPolicy;->setCleartextTrafficPermitted(Z)V
 
-    .line 85
     return-void
 .end method

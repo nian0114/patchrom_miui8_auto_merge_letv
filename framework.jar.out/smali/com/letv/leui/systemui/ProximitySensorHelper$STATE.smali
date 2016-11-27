@@ -54,7 +54,6 @@
 
     const/4 v3, 0x0
 
-    .line 23
     new-instance v0, Lcom/letv/leui/systemui/ProximitySensorHelper$STATE;
 
     const-string v1, "NONE"
@@ -63,7 +62,6 @@
 
     sput-object v0, Lcom/letv/leui/systemui/ProximitySensorHelper$STATE;->NONE:Lcom/letv/leui/systemui/ProximitySensorHelper$STATE;
 
-    .line 24
     new-instance v0, Lcom/letv/leui/systemui/ProximitySensorHelper$STATE;
 
     const-string v1, "STANDBY"
@@ -72,7 +70,6 @@
 
     sput-object v0, Lcom/letv/leui/systemui/ProximitySensorHelper$STATE;->STANDBY:Lcom/letv/leui/systemui/ProximitySensorHelper$STATE;
 
-    .line 25
     new-instance v0, Lcom/letv/leui/systemui/ProximitySensorHelper$STATE;
 
     const-string v1, "LISTENING"
@@ -81,7 +78,6 @@
 
     sput-object v0, Lcom/letv/leui/systemui/ProximitySensorHelper$STATE;->LISTENING:Lcom/letv/leui/systemui/ProximitySensorHelper$STATE;
 
-    .line 26
     new-instance v0, Lcom/letv/leui/systemui/ProximitySensorHelper$STATE;
 
     const-string v1, "COVERED"
@@ -90,7 +86,6 @@
 
     sput-object v0, Lcom/letv/leui/systemui/ProximitySensorHelper$STATE;->COVERED:Lcom/letv/leui/systemui/ProximitySensorHelper$STATE;
 
-    .line 27
     new-instance v0, Lcom/letv/leui/systemui/ProximitySensorHelper$STATE;
 
     const-string v1, "RELEASE"
@@ -99,7 +94,6 @@
 
     sput-object v0, Lcom/letv/leui/systemui/ProximitySensorHelper$STATE;->RELEASE:Lcom/letv/leui/systemui/ProximitySensorHelper$STATE;
 
-    .line 28
     new-instance v0, Lcom/letv/leui/systemui/ProximitySensorHelper$STATE;
 
     const-string v1, "TIME_OUT"
@@ -110,7 +104,6 @@
 
     sput-object v0, Lcom/letv/leui/systemui/ProximitySensorHelper$STATE;->TIME_OUT:Lcom/letv/leui/systemui/ProximitySensorHelper$STATE;
 
-    .line 22
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/letv/leui/systemui/ProximitySensorHelper$STATE;
@@ -155,7 +148,6 @@
     .end annotation
 
     .prologue
-    .line 22
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -166,7 +158,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 22
     const-class v0, Lcom/letv/leui/systemui/ProximitySensorHelper$STATE;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -182,7 +173,6 @@
     .locals 1
 
     .prologue
-    .line 22
     sget-object v0, Lcom/letv/leui/systemui/ProximitySensorHelper$STATE;->$VALUES:[Lcom/letv/leui/systemui/ProximitySensorHelper$STATE;
 
     invoke-virtual {v0}, [Lcom/letv/leui/systemui/ProximitySensorHelper$STATE;->clone()Ljava/lang/Object;

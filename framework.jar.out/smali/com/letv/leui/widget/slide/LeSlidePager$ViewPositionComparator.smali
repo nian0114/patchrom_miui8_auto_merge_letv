@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 2845
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,14 +45,12 @@
     .param p2, "rhs"    # Landroid/view/View;
 
     .prologue
-    .line 2848
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Lcom/letv/leui/widget/slide/LeSlidePager$LayoutParams;
 
-    .line 2849
     .local v0, "llp":Lcom/letv/leui/widget/slide/LeSlidePager$LayoutParams;
     invoke-virtual {p2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -61,7 +58,6 @@
 
     check-cast v1, Lcom/letv/leui/widget/slide/LeSlidePager$LayoutParams;
 
-    .line 2850
     .local v1, "rlp":Lcom/letv/leui/widget/slide/LeSlidePager$LayoutParams;
     iget-boolean v2, v0, Lcom/letv/leui/widget/slide/LeSlidePager$LayoutParams;->isDecor:Z
 
@@ -69,24 +65,20 @@
 
     if-eq v2, v3, :cond_1
 
-    .line 2851
     iget-boolean v2, v0, Lcom/letv/leui/widget/slide/LeSlidePager$LayoutParams;->isDecor:Z
 
     if-eqz v2, :cond_0
 
     const/4 v2, 0x1
 
-    .line 2853
     :goto_0
     return v2
 
-    .line 2851
     :cond_0
     const/4 v2, -0x1
 
     goto :goto_0
 
-    .line 2853
     :cond_1
     iget v2, v0, Lcom/letv/leui/widget/slide/LeSlidePager$LayoutParams;->position:I
 
@@ -101,7 +93,6 @@
     .locals 1
 
     .prologue
-    .line 2845
     check-cast p1, Landroid/view/View;
 
     check-cast p2, Landroid/view/View;

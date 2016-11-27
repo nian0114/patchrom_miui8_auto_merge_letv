@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 214
     iput-object p1, p0, Lcom/android/server/policy/global/GlobalActionViewMediator$2;->this$0:Lcom/android/server/policy/global/GlobalActionViewMediator;
 
     invoke-direct {p0}, Lcom/android/server/policy/global/GlobalActionUpdateMonitor$UpdateMonitorCallback;-><init>()V
@@ -37,14 +36,12 @@
     .locals 2
 
     .prologue
-    .line 217
     const-string v0, "GlobalAction"
 
     const-string v1, "onCloseSystemDialog()..."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 219
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionViewMediator$2;->this$0:Lcom/android/server/policy/global/GlobalActionViewMediator;
 
     # getter for: Lcom/android/server/policy/global/GlobalActionViewMediator;->mIsActionStart:Z
@@ -54,13 +51,11 @@
 
     if-nez v0, :cond_0
 
-    .line 220
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionViewMediator$2;->this$0:Lcom/android/server/policy/global/GlobalActionViewMediator;
 
     # invokes: Lcom/android/server/policy/global/GlobalActionViewMediator;->hideLocked()V
     invoke-static {v0}, Lcom/android/server/policy/global/GlobalActionViewMediator;->access$300(Lcom/android/server/policy/global/GlobalActionViewMediator;)V
 
-    .line 222
     :cond_0
     return-void
 .end method

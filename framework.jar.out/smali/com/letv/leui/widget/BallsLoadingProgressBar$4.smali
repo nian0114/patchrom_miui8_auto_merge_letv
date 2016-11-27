@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 165
     iput-object p1, p0, Lcom/letv/leui/widget/BallsLoadingProgressBar$4;->this$0:Lcom/letv/leui/widget/BallsLoadingProgressBar;
 
     iput p2, p0, Lcom/letv/leui/widget/BallsLoadingProgressBar$4;->val$finalI:I
@@ -42,7 +41,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 168
     iget-object v1, p0, Lcom/letv/leui/widget/BallsLoadingProgressBar$4;->this$0:Lcom/letv/leui/widget/BallsLoadingProgressBar;
 
     # getter for: Lcom/letv/leui/widget/BallsLoadingProgressBar;->mBalls:Ljava/util/ArrayList;
@@ -58,16 +56,13 @@
 
     check-cast v0, Lcom/letv/leui/widget/BallsLoadingShapeHolder;
 
-    .line 169
     .local v0, "holder":Lcom/letv/leui/widget/BallsLoadingShapeHolder;
     if-eqz v0, :cond_0
 
-    .line 170
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/widget/BallsLoadingShapeHolder;->setAlpha(F)V
 
-    .line 172
     :cond_0
     return-void
 .end method

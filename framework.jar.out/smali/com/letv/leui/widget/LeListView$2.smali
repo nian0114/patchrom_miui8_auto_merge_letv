@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 1022
     iput-object p1, p0, Lcom/letv/leui/widget/LeListView$2;->this$0:Lcom/letv/leui/widget/LeListView;
 
     iput-object p2, p0, Lcom/letv/leui/widget/LeListView$2;->val$dismissView:Landroid/view/View;
@@ -50,7 +49,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 1031
     iget-object v0, p0, Lcom/letv/leui/widget/LeListView$2;->this$0:Lcom/letv/leui/widget/LeListView;
 
     # getter for: Lcom/letv/leui/widget/LeListView;->mSwipeHelper:Lcom/letv/leui/widget/SwipeListViewHelper;
@@ -60,7 +58,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1032
     iget-object v0, p0, Lcom/letv/leui/widget/LeListView$2;->this$0:Lcom/letv/leui/widget/LeListView;
 
     # getter for: Lcom/letv/leui/widget/LeListView;->mSwipeHelper:Lcom/letv/leui/widget/SwipeListViewHelper;
@@ -74,7 +71,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/letv/leui/widget/SwipeListViewHelper;->onDismissAnimationEnd(Landroid/view/View;I)V
 
-    .line 1034
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/LeListView$2;->this$0:Lcom/letv/leui/widget/LeListView;
 
@@ -83,13 +79,11 @@
     # setter for: Lcom/letv/leui/widget/LeListView;->mIsDismissAnimating:Z
     invoke-static {v0, v1}, Lcom/letv/leui/widget/LeListView;->access$102(Lcom/letv/leui/widget/LeListView;Z)Z
 
-    .line 1036
     iget-object v0, p0, Lcom/letv/leui/widget/LeListView$2;->this$0:Lcom/letv/leui/widget/LeListView;
 
     # --operator for: Lcom/letv/leui/widget/LeListView;->mDismissAnimationRefCount:I
     invoke-static {v0}, Lcom/letv/leui/widget/LeListView;->access$206(Lcom/letv/leui/widget/LeListView;)I
 
-    .line 1037
     iget-object v0, p0, Lcom/letv/leui/widget/LeListView$2;->this$0:Lcom/letv/leui/widget/LeListView;
 
     # getter for: Lcom/letv/leui/widget/LeListView;->mDismissAnimationRefCount:I
@@ -99,7 +93,6 @@
 
     if-nez v0, :cond_1
 
-    .line 1038
     iget-object v0, p0, Lcom/letv/leui/widget/LeListView$2;->this$0:Lcom/letv/leui/widget/LeListView;
 
     iget v1, p0, Lcom/letv/leui/widget/LeListView$2;->val$originalHeight:I
@@ -107,7 +100,6 @@
     # invokes: Lcom/letv/leui/widget/LeListView;->removePendingDismisses(I)V
     invoke-static {v0, v1}, Lcom/letv/leui/widget/LeListView;->access$300(Lcom/letv/leui/widget/LeListView;I)V
 
-    .line 1040
     :cond_1
     return-void
 .end method
@@ -117,7 +109,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 1025
     iget-object v0, p0, Lcom/letv/leui/widget/LeListView$2;->this$0:Lcom/letv/leui/widget/LeListView;
 
     # getter for: Lcom/letv/leui/widget/LeListView;->mSwipeHelper:Lcom/letv/leui/widget/SwipeListViewHelper;
@@ -127,7 +118,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1026
     iget-object v0, p0, Lcom/letv/leui/widget/LeListView$2;->this$0:Lcom/letv/leui/widget/LeListView;
 
     # getter for: Lcom/letv/leui/widget/LeListView;->mSwipeHelper:Lcom/letv/leui/widget/SwipeListViewHelper;
@@ -141,7 +131,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/letv/leui/widget/SwipeListViewHelper;->onDismissAnimationStart(Landroid/view/View;I)V
 
-    .line 1027
     :cond_0
     return-void
 .end method

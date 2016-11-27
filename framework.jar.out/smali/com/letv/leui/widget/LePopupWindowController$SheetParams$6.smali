@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 959
     iput-object p1, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$6;->this$0:Lcom/letv/leui/widget/LePopupWindowController$SheetParams;
 
     iput-object p2, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$6;->val$listView:Lcom/letv/leui/widget/LePopupWindowController$RecycleListView;
@@ -52,21 +51,18 @@
     .param p4, "id"    # J
 
     .prologue
-    .line 962
     iget-object v1, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$6;->this$0:Lcom/letv/leui/widget/LePopupWindowController$SheetParams;
 
     iget-object v1, v1, Lcom/letv/leui/widget/LePopupWindowController$SheetParams;->mComplexItems:Ljava/util/List;
 
     if-eqz v1, :cond_3
 
-    .line 964
     iget-object v1, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$6;->this$0:Lcom/letv/leui/widget/LePopupWindowController$SheetParams;
 
     iget-boolean v1, v1, Lcom/letv/leui/widget/LePopupWindowController$SheetParams;->mIsSingleChoice:Z
 
     if-eqz v1, :cond_5
 
-    .line 965
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -81,7 +77,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 966
     iget-object v1, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$6;->this$0:Lcom/letv/leui/widget/LePopupWindowController$SheetParams;
 
     iget-object v1, v1, Lcom/letv/leui/widget/LePopupWindowController$SheetParams;->mComplexItems:Ljava/util/List;
@@ -98,7 +93,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 967
     iget-object v1, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$6;->this$0:Lcom/letv/leui/widget/LePopupWindowController$SheetParams;
 
     iget-object v1, v1, Lcom/letv/leui/widget/LePopupWindowController$SheetParams;->mComplexItems:Ljava/util/List;
@@ -113,13 +107,11 @@
 
     invoke-virtual {v1, v2}, Lcom/letv/leui/widget/LePopupWindowAdapter$ItemData;->setStutes(Z)V
 
-    .line 965
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 969
     :cond_1
     iget-object v1, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$6;->this$0:Lcom/letv/leui/widget/LePopupWindowController$SheetParams;
 
@@ -137,7 +129,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 970
     iget-object v1, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$6;->this$0:Lcom/letv/leui/widget/LePopupWindowController$SheetParams;
 
     iget-object v1, v1, Lcom/letv/leui/widget/LePopupWindowController$SheetParams;->mComplexItems:Ljava/util/List;
@@ -152,7 +143,6 @@
 
     invoke-virtual {v1, v2}, Lcom/letv/leui/widget/LePopupWindowAdapter$ItemData;->setStutes(Z)V
 
-    .line 977
     .end local v0    # "i":I
     :cond_2
     :goto_1
@@ -167,7 +157,6 @@
 
     invoke-virtual {v1}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
 
-    .line 980
     :cond_3
     iget-object v1, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$6;->this$0:Lcom/letv/leui/widget/LePopupWindowController$SheetParams;
 
@@ -188,14 +177,12 @@
 
     invoke-interface {v1, v2, p3, v3}, Landroid/content/DialogInterface$OnMultiChoiceClickListener;->onClick(Landroid/content/DialogInterface;IZ)V
 
-    .line 981
     iget-object v1, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$6;->this$0:Lcom/letv/leui/widget/LePopupWindowController$SheetParams;
 
     iget-boolean v1, v1, Lcom/letv/leui/widget/LePopupWindowController$SheetParams;->isClickDismiss:Z
 
     if-eqz v1, :cond_4
 
-    .line 982
     iget-object v1, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$6;->val$dialog:Lcom/letv/leui/widget/LePopupWindowController;
 
     # getter for: Lcom/letv/leui/widget/LePopupWindowController;->mDialogInterface:Landroid/content/DialogInterface;
@@ -205,11 +192,9 @@
 
     invoke-interface {v1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 983
     :cond_4
     return-void
 
-    .line 971
     :cond_5
     iget-object v1, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$6;->this$0:Lcom/letv/leui/widget/LePopupWindowController$SheetParams;
 
@@ -217,7 +202,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 972
     iget-object v1, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$6;->this$0:Lcom/letv/leui/widget/LePopupWindowController$SheetParams;
 
     iget-object v1, v1, Lcom/letv/leui/widget/LePopupWindowController$SheetParams;->mComplexItems:Ljava/util/List;
@@ -234,7 +218,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 973
     iget-object v1, p0, Lcom/letv/leui/widget/LePopupWindowController$SheetParams$6;->this$0:Lcom/letv/leui/widget/LePopupWindowController$SheetParams;
 
     iget-object v1, v1, Lcom/letv/leui/widget/LePopupWindowController$SheetParams;->mComplexItems:Ljava/util/List;

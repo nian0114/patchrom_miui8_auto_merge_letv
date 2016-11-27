@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 297
     iput-object p1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$2;->this$0:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
 
     const/4 v2, 0x0
 
-    .line 300
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$2;->this$0:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
     iget-boolean v0, v0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->cancelAnimator:Z
@@ -75,7 +73,6 @@
 
     if-gez v0, :cond_0
 
-    .line 301
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$2;->this$0:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
     # getter for: Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->holder:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$AnimatorHolder;
@@ -85,7 +82,6 @@
 
     invoke-virtual {v0, v2}, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$AnimatorHolder;->setAngle(F)V
 
-    .line 302
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$2;->this$0:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
     iget-object v1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$2;->this$0:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
@@ -102,7 +98,6 @@
     # setter for: Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->stopAngle:F
     invoke-static {v0, v1}, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->access$502(Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;F)F
 
-    .line 303
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$2;->this$0:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
     # getter for: Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->animator:Landroid/animation/ObjectAnimator;
@@ -112,7 +107,6 @@
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 306
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$2;->this$0:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
@@ -156,7 +150,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/graphics/Matrix;->setRotate(FFF)V
 
-    .line 307
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$2;->this$0:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
     iget-object v0, v0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mHeaderImage:Landroid/widget/ImageView;
@@ -170,6 +163,5 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageMatrix(Landroid/graphics/Matrix;)V
 
-    .line 308
     return-void
 .end method

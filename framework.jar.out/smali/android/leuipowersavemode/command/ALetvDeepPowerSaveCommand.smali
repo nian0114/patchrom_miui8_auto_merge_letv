@@ -19,15 +19,12 @@
     .locals 1
 
     .prologue
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 13
     const-string v0, ""
 
     iput-object v0, p0, Landroid/leuipowersavemode/command/ALetvDeepPowerSaveCommand;->mCommandString:Ljava/lang/String;
 
-    .line 15
     return-void
 .end method
 
@@ -37,7 +34,6 @@
     .locals 1
 
     .prologue
-    .line 34
     iget-object v0, p0, Landroid/leuipowersavemode/command/ALetvDeepPowerSaveCommand;->mCommandString:Ljava/lang/String;
 
     return-object v0
@@ -48,7 +44,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 24
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -77,7 +72,6 @@
 
     iput-object v0, p0, Landroid/leuipowersavemode/command/ALetvDeepPowerSaveCommand;->mCommandString:Ljava/lang/String;
 
-    .line 25
     return-void
 .end method
 
@@ -86,7 +80,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 19
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -115,7 +108,6 @@
 
     iput-object v0, p0, Landroid/leuipowersavemode/command/ALetvDeepPowerSaveCommand;->mCommandString:Ljava/lang/String;
 
-    .line 20
     return-void
 .end method
 
@@ -124,7 +116,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 29
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -153,6 +144,5 @@
 
     iput-object v0, p0, Landroid/leuipowersavemode/command/ALetvDeepPowerSaveCommand;->mCommandString:Ljava/lang/String;
 
-    .line 30
     return-void
 .end method

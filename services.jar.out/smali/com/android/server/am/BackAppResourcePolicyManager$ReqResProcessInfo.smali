@@ -44,32 +44,23 @@
     .param p9, "rejected"    # Z
 
     .prologue
-    .line 370
     iput-object p1, p0, Lcom/android/server/am/BackAppResourcePolicyManager$ReqResProcessInfo;->this$0:Lcom/android/server/am/BackAppResourcePolicyManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 371
     iput-object p2, p0, Lcom/android/server/am/BackAppResourcePolicyManager$ReqResProcessInfo;->tag:Ljava/lang/String;
 
-    .line 372
     iput-object p3, p0, Lcom/android/server/am/BackAppResourcePolicyManager$ReqResProcessInfo;->procName:Ljava/lang/String;
 
-    .line 373
     iput p4, p0, Lcom/android/server/am/BackAppResourcePolicyManager$ReqResProcessInfo;->uid:I
 
-    .line 374
     iput p5, p0, Lcom/android/server/am/BackAppResourcePolicyManager$ReqResProcessInfo;->pid:I
 
-    .line 375
     iput p6, p0, Lcom/android/server/am/BackAppResourcePolicyManager$ReqResProcessInfo;->adj:I
 
-    .line 376
     iput-wide p7, p0, Lcom/android/server/am/BackAppResourcePolicyManager$ReqResProcessInfo;->time:J
 
-    .line 377
     iput-boolean p9, p0, Lcom/android/server/am/BackAppResourcePolicyManager$ReqResProcessInfo;->rejected:Z
 
-    .line 378
     return-void
 .end method

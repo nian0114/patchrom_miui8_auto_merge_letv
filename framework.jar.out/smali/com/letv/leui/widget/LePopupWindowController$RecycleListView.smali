@@ -24,15 +24,12 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 664
     invoke-direct {p0, p1}, Landroid/widget/ListView;-><init>(Landroid/content/Context;)V
 
-    .line 661
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/LePopupWindowController$RecycleListView;->mRecycleOnMeasure:Z
 
-    .line 665
     return-void
 .end method
 
@@ -42,15 +39,12 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 668
     invoke-direct {p0, p1, p2}, Landroid/widget/ListView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 661
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/LePopupWindowController$RecycleListView;->mRecycleOnMeasure:Z
 
-    .line 669
     return-void
 .end method
 
@@ -61,15 +55,12 @@
     .param p3, "defStyle"    # I
 
     .prologue
-    .line 672
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/ListView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 661
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/LePopupWindowController$RecycleListView;->mRecycleOnMeasure:Z
 
-    .line 673
     return-void
 .end method
 
@@ -79,7 +70,6 @@
     .locals 1
 
     .prologue
-    .line 676
     iget-boolean v0, p0, Lcom/letv/leui/widget/LePopupWindowController$RecycleListView;->mRecycleOnMeasure:Z
 
     return v0

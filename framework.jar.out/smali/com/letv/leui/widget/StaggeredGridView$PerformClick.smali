@@ -28,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 3475
     iput-object p1, p0, Lcom/letv/leui/widget/StaggeredGridView$PerformClick;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     const/4 v0, 0x0
@@ -44,7 +43,6 @@
     .param p2, "x1"    # Lcom/letv/leui/widget/StaggeredGridView$1;
 
     .prologue
-    .line 3475
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/StaggeredGridView$PerformClick;-><init>(Lcom/letv/leui/widget/StaggeredGridView;)V
 
     return-void
@@ -56,7 +54,6 @@
     .locals 6
 
     .prologue
-    .line 3480
     iget-object v3, p0, Lcom/letv/leui/widget/StaggeredGridView$PerformClick;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     # getter for: Lcom/letv/leui/widget/StaggeredGridView;->mDataChanged:Z
@@ -66,12 +63,10 @@
 
     if-eqz v3, :cond_1
 
-    .line 3494
     :cond_0
     :goto_0
     return-void
 
-    .line 3482
     :cond_1
     iget-object v3, p0, Lcom/letv/leui/widget/StaggeredGridView$PerformClick;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
@@ -80,11 +75,9 @@
 
     move-result-object v0
 
-    .line 3483
     .local v0, "adapter":Landroid/widget/ListAdapter;
     iget v1, p0, Lcom/letv/leui/widget/StaggeredGridView$PerformClick;->mClickMotionPosition:I
 
-    .line 3484
     .local v1, "motionPosition":I
     if-eqz v0, :cond_0
 
@@ -113,7 +106,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 3487
     iget-object v3, p0, Lcom/letv/leui/widget/StaggeredGridView$PerformClick;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     iget-object v4, p0, Lcom/letv/leui/widget/StaggeredGridView$PerformClick;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
@@ -129,11 +121,9 @@
 
     move-result-object v2
 
-    .line 3490
     .local v2, "view":Landroid/view/View;
     if-eqz v2, :cond_0
 
-    .line 3491
     iget-object v3, p0, Lcom/letv/leui/widget/StaggeredGridView$PerformClick;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     invoke-interface {v0, v1}, Landroid/widget/ListAdapter;->getItemId(I)J

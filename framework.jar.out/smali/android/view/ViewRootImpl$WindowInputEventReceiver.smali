@@ -25,13 +25,10 @@
     .param p3, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 6558
     iput-object p1, p0, Landroid/view/ViewRootImpl$WindowInputEventReceiver;->this$0:Landroid/view/ViewRootImpl;
 
-    .line 6559
     invoke-direct {p0, p2, p3}, Landroid/view/InputEventReceiver;-><init>(Landroid/view/InputChannel;Landroid/os/Looper;)V
 
-    .line 6560
     return-void
 .end method
 
@@ -41,15 +38,12 @@
     .locals 1
 
     .prologue
-    .line 6593
     iget-object v0, p0, Landroid/view/ViewRootImpl$WindowInputEventReceiver;->this$0:Landroid/view/ViewRootImpl;
 
     invoke-virtual {v0}, Landroid/view/ViewRootImpl;->unscheduleConsumeBatchedInput()V
 
-    .line 6594
     invoke-super {p0}, Landroid/view/InputEventReceiver;->dispose()V
 
-    .line 6595
     return-void
 .end method
 
@@ -57,7 +51,6 @@
     .locals 3
 
     .prologue
-    .line 6581
     iget-object v0, p0, Landroid/view/ViewRootImpl$WindowInputEventReceiver;->this$0:Landroid/view/ViewRootImpl;
 
     # getter for: Landroid/view/ViewRootImpl;->DEBUG_INPUT:Z
@@ -85,7 +78,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 6582
     :cond_0
     const-string v0, "ViewRootImpl"
 
@@ -109,7 +101,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6584
     :cond_1
     iget-object v0, p0, Landroid/view/ViewRootImpl$WindowInputEventReceiver;->this$0:Landroid/view/ViewRootImpl;
 
@@ -117,14 +108,11 @@
 
     if-eqz v0, :cond_2
 
-    .line 6585
     invoke-super {p0}, Landroid/view/InputEventReceiver;->onBatchedInputEventPending()V
 
-    .line 6589
     :goto_0
     return-void
 
-    .line 6587
     :cond_2
     iget-object v0, p0, Landroid/view/ViewRootImpl$WindowInputEventReceiver;->this$0:Landroid/view/ViewRootImpl;
 
@@ -138,12 +126,10 @@
     .param p1, "event"    # Landroid/view/InputEvent;
 
     .prologue
-    .line 6566
     instance-of v0, p1, Landroid/view/KeyEvent;
 
     if-eqz v0, :cond_0
 
-    .line 6567
     iget-object v1, p0, Landroid/view/ViewRootImpl$WindowInputEventReceiver;->this$0:Landroid/view/ViewRootImpl;
 
     move-object v0, p1
@@ -153,7 +139,6 @@
     # setter for: Landroid/view/ViewRootImpl;->mCurrentKeyEvent:Landroid/view/KeyEvent;
     invoke-static {v1, v0}, Landroid/view/ViewRootImpl;->access$2702(Landroid/view/ViewRootImpl;Landroid/view/KeyEvent;)Landroid/view/KeyEvent;
 
-    .line 6568
     iget-object v0, p0, Landroid/view/ViewRootImpl$WindowInputEventReceiver;->this$0:Landroid/view/ViewRootImpl;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -163,7 +148,6 @@
     # setter for: Landroid/view/ViewRootImpl;->mKeyEventStartTime:J
     invoke-static {v0, v2, v3}, Landroid/view/ViewRootImpl;->access$2802(Landroid/view/ViewRootImpl;J)J
 
-    .line 6569
     iget-object v0, p0, Landroid/view/ViewRootImpl$WindowInputEventReceiver;->this$0:Landroid/view/ViewRootImpl;
 
     const-string v1, "1: Start event from input"
@@ -171,7 +155,6 @@
     # setter for: Landroid/view/ViewRootImpl;->mKeyEventStatus:Ljava/lang/String;
     invoke-static {v0, v1}, Landroid/view/ViewRootImpl;->access$1102(Landroid/view/ViewRootImpl;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 6576
     :goto_0
     iget-object v0, p0, Landroid/view/ViewRootImpl$WindowInputEventReceiver;->this$0:Landroid/view/ViewRootImpl;
 
@@ -181,10 +164,8 @@
 
     invoke-virtual {v0, p1, p0, v1, v2}, Landroid/view/ViewRootImpl;->enqueueInputEvent(Landroid/view/InputEvent;Landroid/view/InputEventReceiver;IZ)V
 
-    .line 6577
     return-void
 
-    .line 6571
     :cond_0
     iget-object v1, p0, Landroid/view/ViewRootImpl$WindowInputEventReceiver;->this$0:Landroid/view/ViewRootImpl;
 
@@ -195,7 +176,6 @@
     # setter for: Landroid/view/ViewRootImpl;->mCurrentMotion:Landroid/view/MotionEvent;
     invoke-static {v1, v0}, Landroid/view/ViewRootImpl;->access$2902(Landroid/view/ViewRootImpl;Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
-    .line 6572
     iget-object v0, p0, Landroid/view/ViewRootImpl$WindowInputEventReceiver;->this$0:Landroid/view/ViewRootImpl;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -205,7 +185,6 @@
     # setter for: Landroid/view/ViewRootImpl;->mMotionEventStartTime:J
     invoke-static {v0, v2, v3}, Landroid/view/ViewRootImpl;->access$3002(Landroid/view/ViewRootImpl;J)J
 
-    .line 6573
     iget-object v0, p0, Landroid/view/ViewRootImpl$WindowInputEventReceiver;->this$0:Landroid/view/ViewRootImpl;
 
     const-string v1, "1: Start event from input"

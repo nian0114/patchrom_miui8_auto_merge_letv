@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 169
     iput-object p1, p0, Lcom/android/server/pm/AdbCmdDialog$AlwaysAsk;->this$0:Lcom/android/server/pm/AdbCmdDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,6 +41,5 @@
     .param p2, "isChecked"    # Z
 
     .prologue
-    .line 172
     return-void
 .end method

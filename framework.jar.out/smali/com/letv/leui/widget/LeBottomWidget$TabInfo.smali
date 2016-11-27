@@ -44,11 +44,9 @@
     .locals 0
 
     .prologue
-    .line 252
     iput-object p1, p0, Lcom/letv/leui/widget/LeBottomWidget$TabInfo;->this$0:Lcom/letv/leui/widget/LeBottomWidget;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 253
     return-void
 .end method

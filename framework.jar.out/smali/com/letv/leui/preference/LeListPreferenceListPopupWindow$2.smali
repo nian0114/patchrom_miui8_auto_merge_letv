@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/view/View;
 
     .prologue
-    .line 1046
     iput-object p1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$2;->this$0:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;
 
     invoke-direct {p0, p2}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$ForwardingListener;-><init>(Landroid/view/View;)V
@@ -38,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 1049
     iget-object v0, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$2;->this$0:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;
 
     return-object v0

@@ -27,29 +27,22 @@
     .param p3, "end"    # I
 
     .prologue
-    .line 16
     invoke-direct {p0}, Landroid/text/style/CharacterStyle;-><init>()V
 
-    .line 11
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/letv/leui/util/LeAlignSpan;->mType:I
 
-    .line 12
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/letv/leui/util/LeAlignSpan;->mPadding:F
 
-    .line 17
     iput p1, p0, Lcom/letv/leui/util/LeAlignSpan;->mType:I
 
-    .line 18
     iput p2, p0, Lcom/letv/leui/util/LeAlignSpan;->spanStart:I
 
-    .line 19
     iput p3, p0, Lcom/letv/leui/util/LeAlignSpan;->spanEnd:I
 
-    .line 20
     return-void
 .end method
 
@@ -60,6 +53,5 @@
     .param p1, "tp"    # Landroid/text/TextPaint;
 
     .prologue
-    .line 24
     return-void
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1503
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$9;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 3
 
     .prologue
-    .line 1506
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager$9;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     # getter for: Lcom/android/server/policy/PhoneWindowManager;->isScreenshotChord:Z
@@ -50,18 +48,15 @@
 
     if-nez v1, :cond_0
 
-    .line 1507
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager$9;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {v1}, Lcom/android/server/policy/PhoneWindowManager;->getTelecommService()Landroid/telecom/TelecomManager;
 
     move-result-object v0
 
-    .line 1508
     .local v0, "telecomManager":Landroid/telecom/TelecomManager;
     invoke-virtual {v0}, Landroid/telecom/TelecomManager;->endCall()Z
 
-    .line 1510
     .end local v0    # "telecomManager":Landroid/telecom/TelecomManager;
     :cond_0
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager$9;->this$0:Lcom/android/server/policy/PhoneWindowManager;
@@ -71,6 +66,5 @@
     # setter for: Lcom/android/server/policy/PhoneWindowManager;->isScreenshotChord:Z
     invoke-static {v1, v2}, Lcom/android/server/policy/PhoneWindowManager;->access$1702(Lcom/android/server/policy/PhoneWindowManager;Z)Z
 
-    .line 1511
     return-void
 .end method

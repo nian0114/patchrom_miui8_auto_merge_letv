@@ -36,7 +36,6 @@
     .locals 2
 
     .prologue
-    .line 467
     sget-object v0, Lcom/letv/leui/util/DomainContract;->BASE_CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "regions"
@@ -54,7 +53,6 @@
     .locals 0
 
     .prologue
-    .line 464
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

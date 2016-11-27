@@ -31,22 +31,18 @@
     .locals 1
 
     .prologue
-    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 67
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/PermissionDialogReqQueue;->mDialog:Lcom/android/server/PermissionDialog;
 
-    .line 68
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/PermissionDialogReqQueue;->resultList:Ljava/util/List;
 
-    .line 69
     return-void
 .end method
 
@@ -56,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 30
     iget-object v0, p0, Lcom/android/server/PermissionDialogReqQueue;->mDialog:Lcom/android/server/PermissionDialog;
 
     return-object v0
@@ -67,10 +62,8 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 81
     monitor-enter p0
 
-    .line 82
     :goto_0
     :try_start_0
     iget-object v1, p0, Lcom/android/server/PermissionDialogReqQueue;->resultList:Ljava/util/List;
@@ -81,7 +74,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 83
     iget-object v1, p0, Lcom/android/server/PermissionDialogReqQueue;->resultList:Ljava/util/List;
 
     const/4 v2, 0x0
@@ -92,13 +84,11 @@
 
     check-cast v0, Lcom/android/server/PermissionDialogReqQueue$PermissionDialogReq;
 
-    .line 84
     .local v0, "res":Lcom/android/server/PermissionDialogReqQueue$PermissionDialogReq;
     invoke-virtual {v0, p1}, Lcom/android/server/PermissionDialogReqQueue$PermissionDialogReq;->set(I)V
 
     goto :goto_0
 
-    .line 86
     .end local v0    # "res":Lcom/android/server/PermissionDialogReqQueue$PermissionDialogReq;
     :catchall_0
     move-exception v1
@@ -115,7 +105,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 87
     return-void
 .end method
 
@@ -124,10 +113,8 @@
     .param p1, "res"    # Lcom/android/server/PermissionDialogReqQueue$PermissionDialogReq;
 
     .prologue
-    .line 72
     monitor-enter p0
 
-    .line 73
     :try_start_0
     const-string v1, "gaozhipeng"
 
@@ -155,7 +142,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 74
     const-string v1, "gaozhipeng"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -182,14 +168,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 75
     iget-object v1, p0, Lcom/android/server/PermissionDialogReqQueue;->resultList:Ljava/util/List;
 
     invoke-interface {v1, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     move-result v0
 
-    .line 76
     .local v0, "temp":Z
     const-string v1, "gaozhipeng"
 
@@ -213,13 +197,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 77
     monitor-exit p0
 
-    .line 78
     return-void
 
-    .line 77
     .end local v0    # "temp":Z
     :catchall_0
     move-exception v1
@@ -236,9 +217,7 @@
     .param p1, "mDialog"    # Lcom/android/server/PermissionDialog;
 
     .prologue
-    .line 34
     iput-object p1, p0, Lcom/android/server/PermissionDialogReqQueue;->mDialog:Lcom/android/server/PermissionDialog;
 
-    .line 35
     return-void
 .end method

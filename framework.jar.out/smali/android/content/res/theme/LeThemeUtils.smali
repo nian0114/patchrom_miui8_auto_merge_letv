@@ -88,7 +88,6 @@
     .locals 0
 
     .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -100,14 +99,11 @@
     .param p1, "outPathString"    # Ljava/lang/String;
 
     .prologue
-    .line 66
     const/4 v5, 0x0
 
-    .line 67
     .local v5, "inZip":Ljava/util/zip/ZipInputStream;
     const/4 v8, 0x0
 
-    .line 69
     .local v8, "out":Ljava/io/FileOutputStream;
     :try_start_0
     new-instance v6, Ljava/util/zip/ZipInputStream;
@@ -123,7 +119,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_8
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 71
     .end local v5    # "inZip":Ljava/util/zip/ZipInputStream;
     .local v6, "inZip":Ljava/util/zip/ZipInputStream;
     :try_start_1
@@ -135,7 +130,6 @@
     .local v10, "szName":Ljava/lang/String;
     move-object v9, v8
 
-    .line 72
     .end local v8    # "out":Ljava/io/FileOutputStream;
     .local v9, "out":Ljava/io/FileOutputStream;
     :goto_0
@@ -147,7 +141,6 @@
     .local v11, "zipEntry":Ljava/util/zip/ZipEntry;
     if-eqz v11, :cond_4
 
-    .line 73
     invoke-virtual {v11}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
 
     move-result-object v12
@@ -160,14 +153,12 @@
 
     move-result-object v10
 
-    .line 74
     invoke-virtual {v11}, Ljava/util/zip/ZipEntry;->isDirectory()Z
 
     move-result v12
 
     if-eqz v12, :cond_2
 
-    .line 75
     const/4 v12, 0x0
 
     invoke-virtual {v10}, Ljava/lang/String;->length()I
@@ -180,7 +171,6 @@
 
     move-result-object v10
 
-    .line 76
     new-instance v4, Ljava/io/File;
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -209,11 +199,9 @@
 
     invoke-direct {v4, v12}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 77
     .local v4, "folder":Ljava/io/File;
     invoke-virtual {v4}, Ljava/io/File;->mkdirs()Z
 
-    .line 78
     invoke-virtual {v4}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object v12
@@ -231,7 +219,6 @@
 
     goto :goto_0
 
-    .line 92
     .end local v4    # "folder":Ljava/io/File;
     .end local v11    # "zipEntry":Ljava/util/zip/ZipEntry;
     :catch_0
@@ -243,7 +230,6 @@
     .restart local v8    # "out":Ljava/io/FileOutputStream;
     move-object v5, v6
 
-    .line 93
     .end local v6    # "inZip":Ljava/util/zip/ZipInputStream;
     .end local v10    # "szName":Ljava/lang/String;
     .local v2, "e":Ljava/lang/Exception;
@@ -254,33 +240,27 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 95
     if-eqz v5, :cond_0
 
-    .line 97
     :try_start_4
     invoke-virtual {v5}, Ljava/util/zip/ZipInputStream;->close()V
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_4
 
-    .line 102
     :cond_0
     :goto_2
     if-eqz v8, :cond_1
 
-    .line 104
     :try_start_5
     invoke-virtual {v8}, Ljava/io/FileOutputStream;->close()V
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_5
 
-    .line 110
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_1
     :goto_3
     return-void
 
-    .line 80
     .end local v5    # "inZip":Ljava/util/zip/ZipInputStream;
     .end local v8    # "out":Ljava/io/FileOutputStream;
     .restart local v6    # "inZip":Ljava/util/zip/ZipInputStream;
@@ -317,11 +297,9 @@
 
     invoke-direct {v3, v12}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 81
     .local v3, "file":Ljava/io/File;
     invoke-virtual {v3}, Ljava/io/File;->createNewFile()Z
 
-    .line 82
     invoke-virtual {v3}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object v12
@@ -334,7 +312,6 @@
 
     invoke-static {v12, v13, v14, v15}, Landroid/os/FileUtils;->setPermissions(Ljava/lang/String;III)I
 
-    .line 83
     new-instance v8, Ljava/io/FileOutputStream;
 
     invoke-direct {v8, v3}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
@@ -342,7 +319,6 @@
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_0
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
-    .line 85
     .end local v9    # "out":Ljava/io/FileOutputStream;
     .restart local v8    # "out":Ljava/io/FileOutputStream;
     const/16 v12, 0x400
@@ -350,7 +326,6 @@
     :try_start_7
     new-array v1, v12, [B
 
-    .line 86
     .local v1, "buffer":[B
     :goto_4
     invoke-virtual {v6, v1}, Ljava/util/zip/ZipInputStream;->read([B)I
@@ -362,12 +337,10 @@
 
     if-eq v7, v12, :cond_3
 
-    .line 87
     const/4 v12, 0x0
 
     invoke-virtual {v8, v1, v12, v7}, Ljava/io/FileOutputStream;->write([BII)V
 
-    .line 88
     invoke-virtual {v8}, Ljava/io/FileOutputStream;->flush()V
     :try_end_7
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_1
@@ -375,7 +348,6 @@
 
     goto :goto_4
 
-    .line 92
     .end local v1    # "buffer":[B
     .end local v3    # "file":Ljava/io/File;
     .end local v7    # "len":I
@@ -400,30 +372,25 @@
     :cond_3
     move-object v9, v8
 
-    .line 90
     .end local v8    # "out":Ljava/io/FileOutputStream;
     .restart local v9    # "out":Ljava/io/FileOutputStream;
     goto/16 :goto_0
 
-    .line 95
     .end local v1    # "buffer":[B
     .end local v3    # "file":Ljava/io/File;
     .end local v7    # "len":I
     :cond_4
     if-eqz v6, :cond_5
 
-    .line 97
     :try_start_8
     invoke-virtual {v6}, Ljava/util/zip/ZipInputStream;->close()V
     :try_end_8
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_2
 
-    .line 102
     :cond_5
     :goto_5
     if-eqz v9, :cond_8
 
-    .line 104
     :try_start_9
     invoke-virtual {v9}, Ljava/io/FileOutputStream;->close()V
     :try_end_9
@@ -435,12 +402,10 @@
     .restart local v8    # "out":Ljava/io/FileOutputStream;
     move-object v5, v6
 
-    .line 107
     .end local v6    # "inZip":Ljava/util/zip/ZipInputStream;
     .restart local v5    # "inZip":Ljava/util/zip/ZipInputStream;
     goto :goto_3
 
-    .line 98
     .end local v5    # "inZip":Ljava/util/zip/ZipInputStream;
     .end local v8    # "out":Ljava/io/FileOutputStream;
     .restart local v6    # "inZip":Ljava/util/zip/ZipInputStream;
@@ -448,18 +413,15 @@
     :catch_2
     move-exception v2
 
-    .line 99
     .restart local v2    # "e":Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_5
 
-    .line 105
     .end local v2    # "e":Ljava/lang/Exception;
     :catch_3
     move-exception v2
 
-    .line 106
     .restart local v2    # "e":Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -469,32 +431,26 @@
     .restart local v8    # "out":Ljava/io/FileOutputStream;
     move-object v5, v6
 
-    .line 107
     .end local v6    # "inZip":Ljava/util/zip/ZipInputStream;
     .restart local v5    # "inZip":Ljava/util/zip/ZipInputStream;
     goto :goto_3
 
-    .line 98
     .end local v10    # "szName":Ljava/lang/String;
     .end local v11    # "zipEntry":Ljava/util/zip/ZipEntry;
     :catch_4
     move-exception v2
 
-    .line 99
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_2
 
-    .line 105
     :catch_5
     move-exception v2
 
-    .line 106
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_3
 
-    .line 95
     .end local v2    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v12
@@ -502,50 +458,41 @@
     :goto_6
     if-eqz v5, :cond_6
 
-    .line 97
     :try_start_a
     invoke-virtual {v5}, Ljava/util/zip/ZipInputStream;->close()V
     :try_end_a
     .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_6
 
-    .line 102
     :cond_6
     :goto_7
     if-eqz v8, :cond_7
 
-    .line 104
     :try_start_b
     invoke-virtual {v8}, Ljava/io/FileOutputStream;->close()V
     :try_end_b
     .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_7
 
-    .line 107
     :cond_7
     :goto_8
     throw v12
 
-    .line 98
     :catch_6
     move-exception v2
 
-    .line 99
     .restart local v2    # "e":Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_7
 
-    .line 105
     .end local v2    # "e":Ljava/lang/Exception;
     :catch_7
     move-exception v2
 
-    .line 106
     .restart local v2    # "e":Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_8
 
-    .line 95
     .end local v2    # "e":Ljava/lang/Exception;
     .end local v5    # "inZip":Ljava/util/zip/ZipInputStream;
     .restart local v6    # "inZip":Ljava/util/zip/ZipInputStream;
@@ -576,7 +523,6 @@
     .restart local v5    # "inZip":Ljava/util/zip/ZipInputStream;
     goto :goto_6
 
-    .line 92
     .end local v10    # "szName":Ljava/lang/String;
     :catch_8
     move-exception v2
@@ -605,18 +551,14 @@
     .locals 11
 
     .prologue
-    .line 137
     const-string v6, ""
 
-    .line 138
     .local v6, "resRoot":Ljava/lang/String;
     const-string v5, ""
 
-    .line 139
     .local v5, "resPath":Ljava/lang/String;
     const-string v7, ""
 
-    .line 140
     .local v7, "tempPath":Ljava/lang/String;
     new-instance v4, Ljava/io/File;
 
@@ -624,7 +566,6 @@
 
     invoke-direct {v4, v8}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 141
     .local v4, "dataThemeFile":Ljava/io/File;
     invoke-virtual {v4}, Ljava/io/File;->exists()Z
 
@@ -632,10 +573,8 @@
 
     if-eqz v8, :cond_3
 
-    .line 142
     const-string v6, "/data/letvTheme/"
 
-    .line 146
     :goto_0
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -645,7 +584,7 @@
 
     move-result-object v8
 
-    const-string/jumbo v9, "icons_2k"
+    const-string v9, "icons_2k"
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -667,12 +606,10 @@
 
     move-result-object v7
 
-    .line 147
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 148
     .local v2, "calendarFile2k":Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -686,10 +623,8 @@
 
     if-eqz v8, :cond_4
 
-    .line 149
     move-object v5, v7
 
-    .line 157
     :cond_0
     :goto_1
     invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -698,7 +633,6 @@
 
     if-eqz v8, :cond_1
 
-    .line 158
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -707,7 +641,7 @@
 
     move-result-object v8
 
-    const-string/jumbo v9, "icons_1080p"
+    const-string v9, "icons_1080p"
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -729,12 +663,10 @@
 
     move-result-object v7
 
-    .line 159
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 160
     .local v1, "calendarFile1080p":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -742,10 +674,8 @@
 
     if-eqz v8, :cond_5
 
-    .line 161
     move-object v5, v7
 
-    .line 170
     .end local v1    # "calendarFile1080p":Ljava/io/File;
     :cond_1
     :goto_2
@@ -755,7 +685,6 @@
 
     if-eqz v8, :cond_2
 
-    .line 171
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -764,7 +693,7 @@
 
     move-result-object v8
 
-    const-string/jumbo v9, "icons"
+    const-string v9, "icons"
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -786,12 +715,10 @@
 
     move-result-object v7
 
-    .line 172
     new-instance v3, Ljava/io/File;
 
     invoke-direct {v3, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 173
     .local v3, "calendarFileComm":Ljava/io/File;
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
@@ -799,10 +726,8 @@
 
     if-eqz v8, :cond_6
 
-    .line 174
     move-object v5, v7
 
-    .line 183
     .end local v3    # "calendarFileComm":Ljava/io/File;
     :cond_2
     :goto_3
@@ -828,17 +753,14 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 184
     return-object v5
 
-    .line 144
     .end local v2    # "calendarFile2k":Ljava/io/File;
     :cond_3
     const-string v6, "/system/etc/letvTheme_3rd_default/"
 
     goto/16 :goto_0
 
-    .line 151
     .restart local v2    # "calendarFile2k":Ljava/io/File;
     :cond_4
     new-instance v8, Ljava/lang/StringBuilder;
@@ -859,12 +781,10 @@
 
     move-result-object v7
 
-    .line 152
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 153
     .local v0, "calendarFile":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -872,12 +792,10 @@
 
     if-eqz v8, :cond_0
 
-    .line 154
     move-object v5, v7
 
     goto/16 :goto_1
 
-    .line 163
     .end local v0    # "calendarFile":Ljava/io/File;
     .restart local v1    # "calendarFile1080p":Ljava/io/File;
     :cond_5
@@ -899,12 +817,10 @@
 
     move-result-object v7
 
-    .line 164
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 165
     .restart local v0    # "calendarFile":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -912,12 +828,10 @@
 
     if-eqz v8, :cond_1
 
-    .line 166
     move-object v5, v7
 
     goto/16 :goto_2
 
-    .line 176
     .end local v0    # "calendarFile":Ljava/io/File;
     .end local v1    # "calendarFile1080p":Ljava/io/File;
     .restart local v3    # "calendarFileComm":Ljava/io/File;
@@ -940,12 +854,10 @@
 
     move-result-object v7
 
-    .line 177
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 178
     .restart local v0    # "calendarFile":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -953,7 +865,6 @@
 
     if-eqz v8, :cond_2
 
-    .line 179
     move-object v5, v7
 
     goto :goto_3
@@ -963,14 +874,12 @@
     .locals 2
 
     .prologue
-    .line 114
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/system/etc/letvTheme_black_common.zip"
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 115
     .local v0, "file":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -978,10 +887,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 116
     const-string v1, "/system/etc/letvTheme_black_common.zip"
 
-    .line 118
     :goto_0
     return-object v1
 
@@ -996,14 +903,11 @@
     .param p0, "displayMetrics"    # Landroid/util/DisplayMetrics;
 
     .prologue
-    .line 123
     iget v1, p0, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    .line 124
     .local v1, "w":I
     iget v0, p0, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    .line 129
     .local v0, "h":I
     invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
 
@@ -1013,10 +917,8 @@
 
     if-le v2, v3, :cond_0
 
-    .line 130
     const/4 v2, 0x1
 
-    .line 132
     :goto_0
     return v2
 

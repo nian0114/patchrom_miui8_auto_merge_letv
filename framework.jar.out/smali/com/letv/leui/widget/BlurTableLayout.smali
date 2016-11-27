@@ -13,15 +13,12 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 21
     invoke-direct {p0, p1}, Landroid/widget/TableLayout;-><init>(Landroid/content/Context;)V
 
-    .line 22
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/letv/leui/widget/BlurTableLayout;->init(Landroid/util/AttributeSet;)V
 
-    .line 23
     return-void
 .end method
 
@@ -31,13 +28,10 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 26
     invoke-direct {p0, p1, p2}, Landroid/widget/TableLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 27
     invoke-direct {p0, p2}, Lcom/letv/leui/widget/BlurTableLayout;->init(Landroid/util/AttributeSet;)V
 
-    .line 28
     return-void
 .end method
 
@@ -48,17 +42,14 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 34
     new-instance v2, Lcom/letv/leui/widget/GaussianBlurRenderer;
 
     invoke-direct {v2, p0}, Lcom/letv/leui/widget/GaussianBlurRenderer;-><init>(Landroid/view/View;)V
 
     iput-object v2, p0, Lcom/letv/leui/widget/BlurTableLayout;->mBlurRenderer:Lcom/letv/leui/widget/GaussianBlurRenderer;
 
-    .line 36
     if-eqz p1, :cond_0
 
-    .line 38
     invoke-virtual {p0}, Lcom/letv/leui/widget/BlurTableLayout;->getContext()Landroid/content/Context;
 
     move-result-object v2
@@ -69,22 +60,18 @@
 
     move-result-object v0
 
-    .line 39
     .local v0, "a":Landroid/content/res/TypedArray;
     invoke-virtual {v0, v4, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v1
 
-    .line 40
     .local v1, "radius":I
     iget-object v2, p0, Lcom/letv/leui/widget/BlurTableLayout;->mBlurRenderer:Lcom/letv/leui/widget/GaussianBlurRenderer;
 
     invoke-virtual {v2, v1}, Lcom/letv/leui/widget/GaussianBlurRenderer;->setBlurRadius(I)V
 
-    .line 41
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 43
     .end local v0    # "a":Landroid/content/res/TypedArray;
     .end local v1    # "radius":I
     :cond_0
@@ -98,7 +85,6 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 64
     iget-object v0, p0, Lcom/letv/leui/widget/BlurTableLayout;->mBlurRenderer:Lcom/letv/leui/widget/GaussianBlurRenderer;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/GaussianBlurRenderer;->isOffscreenCanvas(Landroid/graphics/Canvas;)Z
@@ -107,22 +93,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 65
     iget-object v0, p0, Lcom/letv/leui/widget/BlurTableLayout;->mBlurRenderer:Lcom/letv/leui/widget/GaussianBlurRenderer;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/GaussianBlurRenderer;->applyBlur()V
 
-    .line 72
     :goto_0
     return-void
 
-    .line 69
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/BlurTableLayout;->mBlurRenderer:Lcom/letv/leui/widget/GaussianBlurRenderer;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/GaussianBlurRenderer;->drawToCanvas(Landroid/graphics/Canvas;)V
 
-    .line 70
     invoke-super {p0, p1}, Landroid/widget/TableLayout;->dispatchDraw(Landroid/graphics/Canvas;)V
 
     goto :goto_0
@@ -132,7 +114,6 @@
     .locals 1
 
     .prologue
-    .line 105
     iget-object v0, p0, Lcom/letv/leui/widget/BlurTableLayout;->mBlurRenderer:Lcom/letv/leui/widget/GaussianBlurRenderer;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/GaussianBlurRenderer;->getBlurEnabled()Z
@@ -146,7 +127,6 @@
     .locals 1
 
     .prologue
-    .line 83
     iget-object v0, p0, Lcom/letv/leui/widget/BlurTableLayout;->mBlurRenderer:Lcom/letv/leui/widget/GaussianBlurRenderer;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/GaussianBlurRenderer;->getBlurRadius()I
@@ -160,10 +140,8 @@
     .locals 1
 
     .prologue
-    .line 47
     invoke-super {p0}, Landroid/widget/TableLayout;->onAttachedToWindow()V
 
-    .line 48
     iget-object v0, p0, Lcom/letv/leui/widget/BlurTableLayout;->mBlurRenderer:Lcom/letv/leui/widget/GaussianBlurRenderer;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/GaussianBlurRenderer;->getBlurEnabled()Z
@@ -172,12 +150,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 49
     iget-object v0, p0, Lcom/letv/leui/widget/BlurTableLayout;->mBlurRenderer:Lcom/letv/leui/widget/GaussianBlurRenderer;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/GaussianBlurRenderer;->onAttachedToWindow()V
 
-    .line 51
     :cond_0
     return-void
 .end method
@@ -186,10 +162,8 @@
     .locals 1
 
     .prologue
-    .line 55
     invoke-super {p0}, Landroid/widget/TableLayout;->onDetachedFromWindow()V
 
-    .line 56
     iget-object v0, p0, Lcom/letv/leui/widget/BlurTableLayout;->mBlurRenderer:Lcom/letv/leui/widget/GaussianBlurRenderer;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/GaussianBlurRenderer;->getBlurEnabled()Z
@@ -198,12 +172,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 57
     iget-object v0, p0, Lcom/letv/leui/widget/BlurTableLayout;->mBlurRenderer:Lcom/letv/leui/widget/GaussianBlurRenderer;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/GaussianBlurRenderer;->onDetachedFromWindow()V
 
-    .line 59
     :cond_0
     return-void
 .end method
@@ -213,7 +185,6 @@
     .param p1, "blurEnabled"    # Z
 
     .prologue
-    .line 90
     iget-object v0, p0, Lcom/letv/leui/widget/BlurTableLayout;->mBlurRenderer:Lcom/letv/leui/widget/GaussianBlurRenderer;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/GaussianBlurRenderer;->getBlurEnabled()Z
@@ -222,18 +193,15 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 102
     :cond_0
     :goto_0
     return-void
 
-    .line 93
     :cond_1
     iget-object v0, p0, Lcom/letv/leui/widget/BlurTableLayout;->mBlurRenderer:Lcom/letv/leui/widget/GaussianBlurRenderer;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/GaussianBlurRenderer;->setBlurEnabled(Z)V
 
-    .line 95
     if-eqz p1, :cond_2
 
     invoke-virtual {p0}, Lcom/letv/leui/widget/BlurTableLayout;->isAttachedToWindow()Z
@@ -242,15 +210,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 96
     iget-object v0, p0, Lcom/letv/leui/widget/BlurTableLayout;->mBlurRenderer:Lcom/letv/leui/widget/GaussianBlurRenderer;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/GaussianBlurRenderer;->onAttachedToWindow()V
 
-    .line 97
     invoke-virtual {p0}, Lcom/letv/leui/widget/BlurTableLayout;->invalidate()V
 
-    .line 98
     :cond_2
     if-nez p1, :cond_0
 
@@ -260,12 +225,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 99
     iget-object v0, p0, Lcom/letv/leui/widget/BlurTableLayout;->mBlurRenderer:Lcom/letv/leui/widget/GaussianBlurRenderer;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/GaussianBlurRenderer;->onDetachedFromWindow()V
 
-    .line 100
     invoke-virtual {p0}, Lcom/letv/leui/widget/BlurTableLayout;->invalidate()V
 
     goto :goto_0
@@ -276,14 +239,11 @@
     .param p1, "radius"    # I
 
     .prologue
-    .line 78
     iget-object v0, p0, Lcom/letv/leui/widget/BlurTableLayout;->mBlurRenderer:Lcom/letv/leui/widget/GaussianBlurRenderer;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/GaussianBlurRenderer;->setBlurRadius(I)V
 
-    .line 79
     invoke-virtual {p0}, Lcom/letv/leui/widget/BlurTableLayout;->invalidate()V
 
-    .line 80
     return-void
 .end method

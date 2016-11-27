@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 94
     iput-object p1, p0, Lcom/android/server/activation/http/SimpleHttpURLConnection$1;->this$0:Lcom/android/server/activation/http/SimpleHttpURLConnection;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +46,6 @@
     .end annotation
 
     .prologue
-    .line 99
     return-void
 .end method
 
@@ -62,7 +60,6 @@
     .end annotation
 
     .prologue
-    .line 104
     return-void
 .end method
 
@@ -70,7 +67,6 @@
     .locals 1
 
     .prologue
-    .line 108
     const/4 v0, 0x0
 
     return-object v0

@@ -101,21 +101,16 @@
     .param p3, "type"    # I
 
     .prologue
-    .line 84
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 77
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/LeLicenceDialog;->checked:Z
 
-    .line 85
     iput-object p1, p0, Lcom/letv/leui/widget/LeLicenceDialog;->mContext:Landroid/content/Context;
 
-    .line 87
     invoke-direct {p0, p2, p3}, Lcom/letv/leui/widget/LeLicenceDialog;->initDialog(Ljava/lang/String;I)V
 
-    .line 88
     return-void
 .end method
 
@@ -125,7 +120,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 12
     iput-boolean p1, p0, Lcom/letv/leui/widget/LeLicenceDialog;->checked:Z
 
     return p1
@@ -137,7 +131,6 @@
     .param p2, "type"    # I
 
     .prologue
-    .line 91
     new-instance v0, Lcom/letv/leui/widget/LeBottomSheet;
 
     iget-object v1, p0, Lcom/letv/leui/widget/LeLicenceDialog;->mContext:Landroid/content/Context;
@@ -146,14 +139,11 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeLicenceDialog;->mBottomSheet:Lcom/letv/leui/widget/LeBottomSheet;
 
-    .line 93
     const-string v11, ""
 
-    .line 95
     .local v11, "pemissionStr":Ljava/lang/String;
     packed-switch p2, :pswitch_data_0
 
-    .line 124
     :goto_0
     iget-object v0, p0, Lcom/letv/leui/widget/LeLicenceDialog;->mBottomSheet:Lcom/letv/leui/widget/LeBottomSheet;
 
@@ -261,14 +251,12 @@
 
     invoke-virtual/range {v0 .. v10}, Lcom/letv/leui/widget/LeBottomSheet;->setStyle(ILandroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Landroid/widget/CompoundButton$OnCheckedChangeListener;[Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/String;[IZ)V
 
-    .line 143
     iget-object v0, p0, Lcom/letv/leui/widget/LeLicenceDialog;->mBottomSheet:Lcom/letv/leui/widget/LeBottomSheet;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/widget/LeBottomSheet;->setCanceledOnTouchOutside(Z)V
 
-    .line 144
     iget-object v0, p0, Lcom/letv/leui/widget/LeLicenceDialog;->mBottomSheet:Lcom/letv/leui/widget/LeBottomSheet;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/LeBottomSheet;->getCheckBox()Landroid/widget/CheckBox;
@@ -279,7 +267,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/CheckBox;->setChecked(Z)V
 
-    .line 145
     iget-object v0, p0, Lcom/letv/leui/widget/LeLicenceDialog;->mBottomSheet:Lcom/letv/leui/widget/LeBottomSheet;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/LeBottomSheet;->getBtn_confirm()Landroid/widget/Button;
@@ -288,7 +275,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeLicenceDialog;->btnAgree:Landroid/widget/Button;
 
-    .line 146
     iget-object v0, p0, Lcom/letv/leui/widget/LeLicenceDialog;->mBottomSheet:Lcom/letv/leui/widget/LeBottomSheet;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/LeBottomSheet;->getBtn_cancel()Landroid/widget/Button;
@@ -297,10 +283,8 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeLicenceDialog;->btnCancel:Landroid/widget/Button;
 
-    .line 147
     return-void
 
-    .line 101
     :pswitch_0
     iget-object v0, p0, Lcom/letv/leui/widget/LeLicenceDialog;->mContext:Landroid/content/Context;
 
@@ -310,10 +294,8 @@
 
     move-result-object v11
 
-    .line 102
     goto/16 :goto_0
 
-    .line 108
     :pswitch_1
     iget-object v0, p0, Lcom/letv/leui/widget/LeLicenceDialog;->mContext:Landroid/content/Context;
 
@@ -323,10 +305,8 @@
 
     move-result-object v11
 
-    .line 109
     goto/16 :goto_0
 
-    .line 112
     :pswitch_2
     iget-object v0, p0, Lcom/letv/leui/widget/LeLicenceDialog;->mContext:Landroid/content/Context;
 
@@ -336,10 +316,8 @@
 
     move-result-object v11
 
-    .line 113
     goto/16 :goto_0
 
-    .line 116
     :pswitch_3
     iget-object v0, p0, Lcom/letv/leui/widget/LeLicenceDialog;->mContext:Landroid/content/Context;
 
@@ -349,10 +327,8 @@
 
     move-result-object v11
 
-    .line 117
     goto/16 :goto_0
 
-    .line 120
     :pswitch_4
     iget-object v0, p0, Lcom/letv/leui/widget/LeLicenceDialog;->mContext:Landroid/content/Context;
 
@@ -364,7 +340,6 @@
 
     goto/16 :goto_0
 
-    .line 95
     nop
 
     :pswitch_data_0
@@ -394,17 +369,14 @@
     .param p2, "onClickListener"    # Landroid/view/View$OnClickListener;
 
     .prologue
-    .line 192
     if-eqz p2, :cond_0
 
-    .line 193
     new-instance v0, Lcom/letv/leui/widget/LeLicenceDialog$2;
 
     invoke-direct {v0, p0, p2}, Lcom/letv/leui/widget/LeLicenceDialog$2;-><init>(Lcom/letv/leui/widget/LeLicenceDialog;Landroid/view/View$OnClickListener;)V
 
     invoke-virtual {p1, v0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 201
     :cond_0
     return-void
 .end method
@@ -415,7 +387,6 @@
     .locals 1
 
     .prologue
-    .line 165
     iget-object v0, p0, Lcom/letv/leui/widget/LeLicenceDialog;->mBottomSheet:Lcom/letv/leui/widget/LeBottomSheet;
 
     if-eqz v0, :cond_0
@@ -428,12 +399,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 166
     iget-object v0, p0, Lcom/letv/leui/widget/LeLicenceDialog;->mBottomSheet:Lcom/letv/leui/widget/LeBottomSheet;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/LeBottomSheet;->dismiss()V
 
-    .line 168
     :cond_0
     return-object p0
 .end method
@@ -442,7 +411,6 @@
     .locals 1
 
     .prologue
-    .line 249
     iget-boolean v0, p0, Lcom/letv/leui/widget/LeLicenceDialog;->checked:Z
 
     return v0
@@ -453,7 +421,6 @@
     .param p1, "listener"    # Lcom/letv/leui/widget/LeLicenceDialog$LeLicenceDialogClickListener;
 
     .prologue
-    .line 221
     iget-object v0, p0, Lcom/letv/leui/widget/LeLicenceDialog;->btnAgree:Landroid/widget/Button;
 
     new-instance v1, Lcom/letv/leui/widget/LeLicenceDialog$3;
@@ -462,7 +429,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 228
     iget-object v0, p0, Lcom/letv/leui/widget/LeLicenceDialog;->btnCancel:Landroid/widget/Button;
 
     new-instance v1, Lcom/letv/leui/widget/LeLicenceDialog$4;
@@ -471,14 +437,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 235
     new-instance v0, Lcom/letv/leui/widget/LeLicenceDialog$5;
 
     invoke-direct {v0, p0, p1}, Lcom/letv/leui/widget/LeLicenceDialog$5;-><init>(Lcom/letv/leui/widget/LeLicenceDialog;Lcom/letv/leui/widget/LeLicenceDialog$LeLicenceDialogClickListener;)V
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/LeLicenceDialog;->setOnTouchOutCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Lcom/letv/leui/widget/LeLicenceDialog;
 
-    .line 241
     return-object p0
 .end method
 
@@ -487,12 +451,10 @@
     .param p1, "onAgreeListener"    # Landroid/view/View$OnClickListener;
 
     .prologue
-    .line 187
     iget-object v0, p0, Lcom/letv/leui/widget/LeLicenceDialog;->btnAgree:Landroid/widget/Button;
 
     invoke-direct {p0, v0, p1}, Lcom/letv/leui/widget/LeLicenceDialog;->setBtnOnClickListener(Landroid/widget/Button;Landroid/view/View$OnClickListener;)V
 
-    .line 188
     return-object p0
 .end method
 
@@ -501,12 +463,10 @@
     .param p1, "onCancelListener"    # Landroid/view/View$OnClickListener;
 
     .prologue
-    .line 177
     iget-object v0, p0, Lcom/letv/leui/widget/LeLicenceDialog;->btnCancel:Landroid/widget/Button;
 
     invoke-direct {p0, v0, p1}, Lcom/letv/leui/widget/LeLicenceDialog;->setBtnOnClickListener(Landroid/widget/Button;Landroid/view/View$OnClickListener;)V
 
-    .line 178
     return-object p0
 .end method
 
@@ -515,17 +475,14 @@
     .param p1, "listener"    # Landroid/content/DialogInterface$OnCancelListener;
 
     .prologue
-    .line 209
     iget-object v0, p0, Lcom/letv/leui/widget/LeLicenceDialog;->mBottomSheet:Lcom/letv/leui/widget/LeBottomSheet;
 
     if-eqz v0, :cond_0
 
-    .line 210
     iget-object v0, p0, Lcom/letv/leui/widget/LeLicenceDialog;->mBottomSheet:Lcom/letv/leui/widget/LeBottomSheet;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/LeBottomSheet;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
-    .line 212
     :cond_0
     return-object p0
 .end method
@@ -534,7 +491,6 @@
     .locals 1
 
     .prologue
-    .line 154
     iget-object v0, p0, Lcom/letv/leui/widget/LeLicenceDialog;->mBottomSheet:Lcom/letv/leui/widget/LeBottomSheet;
 
     if-eqz v0, :cond_0
@@ -547,12 +503,10 @@
 
     if-nez v0, :cond_0
 
-    .line 155
     iget-object v0, p0, Lcom/letv/leui/widget/LeLicenceDialog;->mBottomSheet:Lcom/letv/leui/widget/LeBottomSheet;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/LeBottomSheet;->show()V
 
-    .line 157
     :cond_0
     return-object p0
 .end method

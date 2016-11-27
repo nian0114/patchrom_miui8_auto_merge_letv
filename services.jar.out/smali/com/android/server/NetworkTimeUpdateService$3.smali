@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 326
     iput-object p1, p0, Lcom/android/server/NetworkTimeUpdateService$3;->this$0:Lcom/android/server/NetworkTimeUpdateService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 330
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 331
     .local v0, "action":Ljava/lang/String;
     const-string v1, "android.net.conn.CONNECTIVITY_CHANGE"
 
@@ -54,14 +51,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 332
     const-string v1, "NetworkTimeUpdateService"
 
     const-string v2, "mConnectivityReceiver onReceive ..."
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 334
     iget-object v1, p0, Lcom/android/server/NetworkTimeUpdateService$3;->this$0:Lcom/android/server/NetworkTimeUpdateService;
 
     # getter for: Lcom/android/server/NetworkTimeUpdateService;->mHandler:Landroid/os/Handler;
@@ -77,7 +72,6 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 336
     :cond_0
     return-void
 .end method

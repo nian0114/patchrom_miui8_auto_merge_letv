@@ -135,15 +135,12 @@
 
     const/4 v2, 0x0
 
-    .line 130
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/letv/leui/widget/pulltorefresh/internal/RotateLoadingLayout;-><init>(Landroid/content/Context;Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Orientation;Landroid/content/res/TypedArray;)V
 
-    .line 54
     sget-object v0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$ColorStyle;->COLOR:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$ColorStyle;
 
     iput-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->colorStyle:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$ColorStyle;
 
-    .line 56
     const/4 v0, 0x6
 
     new-array v0, v0, [I
@@ -152,111 +149,86 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->ballColor:[I
 
-    .line 64
     iput-boolean v1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->cancelAnimator:Z
 
-    .line 65
     iput-object v2, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->refreshCompletedListener:Lcom/letv/leui/widget/pulltorefresh/internal/RefreshCompletedListener;
 
-    .line 78
     iput-boolean v1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mUseCenter:Z
 
-    .line 79
     const/high16 v0, 0x43870000    # 270.0f
 
     iput v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->startAngle:F
 
-    .line 80
     iput-object v2, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mHeaderImageMatrix:Landroid/graphics/Matrix;
 
-    .line 81
     iput-boolean v1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->isReleaseToRefresh:Z
 
-    .line 82
     iput-boolean v3, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->isPullToRefresh:Z
 
-    .line 83
     iput-object v2, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mBitmap:Landroid/graphics/Bitmap;
 
-    .line 84
     iput-object v2, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mCanvas:Landroid/graphics/Canvas;
 
-    .line 92
     iput-object v2, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->arrowShape:Lcom/letv/leui/widget/LeArrowShape;
 
-    .line 94
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->paintColor:I
 
-    .line 95
     iput-boolean v1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->isRefreshing:Z
 
-    .line 505
     iput-boolean v3, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->animatorCanbeStarted:Z
 
-    .line 133
     const/16 v0, 0x1f4
 
     iput v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->duration:I
 
-    .line 135
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mPaint:Landroid/graphics/Paint;
 
-    .line 136
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->paintColor:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 139
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 141
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mHeaderImage:Landroid/widget/ImageView;
 
     sget-object v1, Landroid/widget/ImageView$ScaleType;->MATRIX:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 142
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mHeaderImageMatrix:Landroid/graphics/Matrix;
 
-    .line 143
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mHeaderImage:Landroid/widget/ImageView;
 
     iget-object v1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mHeaderImageMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageMatrix(Landroid/graphics/Matrix;)V
 
-    .line 144
     new-instance v0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$AnimatorHolder;
 
     invoke-direct {v0, p0, v2}, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$AnimatorHolder;-><init>(Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$1;)V
 
     iput-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->holder:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$AnimatorHolder;
 
-    .line 145
     invoke-direct {p0}, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->setImageViewLayoutParams()V
 
-    .line 146
     invoke-direct {p0}, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->initVariable()V
 
-    .line 147
     return-void
 
-    .line 56
     nop
 
     :array_0
@@ -279,18 +251,14 @@
     .param p5, "paintColor"    # I
 
     .prologue
-    .line 122
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;-><init>(Landroid/content/Context;Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Orientation;Landroid/content/res/TypedArray;)V
 
-    .line 123
     iput p5, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->paintColor:I
 
-    .line 124
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p5}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 126
     return-void
 .end method
 
@@ -299,7 +267,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
     .prologue
-    .line 21
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mBitmap:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -311,7 +278,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 21
     iput-boolean p1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->animatorCanbeStarted:Z
 
     return p1
@@ -322,7 +288,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
     .prologue
-    .line 21
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mCanvas:Landroid/graphics/Canvas;
 
     return-object v0
@@ -333,7 +298,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
     .prologue
-    .line 21
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->colorStyle:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$ColorStyle;
 
     return-object v0
@@ -344,7 +308,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
     .prologue
-    .line 21
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mPaint:Landroid/graphics/Paint;
 
     return-object v0
@@ -355,7 +318,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
     .prologue
-    .line 21
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->ballColor:[I
 
     return-object v0
@@ -366,7 +328,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
     .prologue
-    .line 21
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->relativeCenters:Ljava/util/List;
 
     return-object v0
@@ -377,7 +338,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
     .prologue
-    .line 21
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->arrowShape:Lcom/letv/leui/widget/LeArrowShape;
 
     return-object v0
@@ -388,7 +348,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
     .prologue
-    .line 21
     iget-boolean v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->isRefreshing:Z
 
     return v0
@@ -400,7 +359,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 21
     iput-boolean p1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->isRefreshing:Z
 
     return p1
@@ -411,7 +369,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
     .prologue
-    .line 21
     invoke-direct {p0}, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->startDismiss()V
 
     return-void
@@ -422,7 +379,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
     .prologue
-    .line 21
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->holder:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$AnimatorHolder;
 
     return-object v0
@@ -433,7 +389,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
     .prologue
-    .line 21
     iget v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->stopAngle:F
 
     return v0
@@ -445,7 +400,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 21
     iput p1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->stopAngle:F
 
     return p1
@@ -456,7 +410,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
     .prologue
-    .line 21
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->animator:Landroid/animation/ObjectAnimator;
 
     return-object v0
@@ -467,7 +420,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
     .prologue
-    .line 21
     iget v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mWidth:I
 
     return v0
@@ -478,7 +430,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
     .prologue
-    .line 21
     iget v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mHeight:I
 
     return v0
@@ -489,7 +440,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;
 
     .prologue
-    .line 21
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mHeaderImageMatrix:Landroid/graphics/Matrix;
 
     return-object v0
@@ -501,17 +451,14 @@
     .prologue
     const v2, 0xffffff
 
-    .line 386
     iget-object v1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v1, v2}, Landroid/graphics/Bitmap;->eraseColor(I)V
 
-    .line 387
     iget-object v1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mCanvas:Landroid/graphics/Canvas;
 
     invoke-virtual {v1, v2}, Landroid/graphics/Canvas;->drawColor(I)V
 
-    .line 389
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -520,21 +467,18 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 390
     iget-object v1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->colorStyle:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$ColorStyle;
 
     sget-object v2, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$ColorStyle;->WHITE:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$ColorStyle;
 
     if-ne v1, v2, :cond_0
 
-    .line 391
     iget-object v1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mPaint:Landroid/graphics/Paint;
 
     const/4 v2, -0x1
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 396
     :goto_1
     iget-object v2, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mCanvas:Landroid/graphics/Canvas;
 
@@ -564,12 +508,10 @@
 
     invoke-virtual {v2, v3, v1, v4, v5}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 389
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 393
     :cond_0
     iget-object v1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mPaint:Landroid/graphics/Paint;
 
@@ -581,7 +523,6 @@
 
     goto :goto_1
 
-    .line 399
     :cond_1
     iget-object v1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mHeaderImage:Landroid/widget/ImageView;
 
@@ -589,12 +530,10 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 400
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mAngle:F
 
-    .line 401
     return-void
 .end method
 
@@ -602,20 +541,17 @@
     .locals 4
 
     .prologue
-    .line 469
     new-instance v0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$AnimatorHolder;
 
     const/4 v2, 0x0
 
     invoke-direct {v0, p0, v2}, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$AnimatorHolder;-><init>(Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$1;)V
 
-    .line 470
     .local v0, "arrowHolder":Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$AnimatorHolder;
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$AnimatorHolder;->setAngle(F)V
 
-    .line 472
     const-string v2, "angle"
 
     const/4 v3, 0x2
@@ -628,52 +564,43 @@
 
     move-result-object v1
 
-    .line 473
     .local v1, "drawArrowAnimator":Landroid/animation/ObjectAnimator;
     const-wide/16 v2, 0x15e
 
     invoke-virtual {v1, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 474
     sget-object v2, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->ANIMATION_INTERPOLATOR:Landroid/view/animation/Interpolator;
 
     invoke-virtual {v1, v2}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 476
     iget-object v2, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mPaint:Landroid/graphics/Paint;
 
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 477
     iget-object v2, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mPaint:Landroid/graphics/Paint;
 
     iget v3, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->paintColor:I
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 478
     new-instance v2, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$5;
 
     invoke-direct {v2, p0}, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$5;-><init>(Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;)V
 
     invoke-virtual {v1, v2}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 489
     new-instance v2, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$6;
 
     invoke-direct {v2, p0, v0}, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$6;-><init>(Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$AnimatorHolder;)V
 
     invoke-virtual {v1, v2}, Landroid/animation/ObjectAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 501
     invoke-virtual {v1}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 503
     return-void
 
-    .line 472
     nop
 
     :array_0
@@ -687,35 +614,30 @@
     .locals 4
 
     .prologue
-    .line 271
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->animator:Landroid/animation/ObjectAnimator;
 
     sget-object v1, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->ANIMATION_INTERPOLATOR:Landroid/view/animation/Interpolator;
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 272
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->animator:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v2, 0x1f4
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 273
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->animator:Landroid/animation/ObjectAnimator;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setRepeatMode(I)V
 
-    .line 274
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->animator:Landroid/animation/ObjectAnimator;
 
     const/4 v1, -0x1
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setRepeatCount(I)V
 
-    .line 276
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->animator:Landroid/animation/ObjectAnimator;
 
     new-instance v1, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$1;
@@ -724,7 +646,6 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 297
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->animator:Landroid/animation/ObjectAnimator;
 
     new-instance v1, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$2;
@@ -733,7 +654,6 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 312
     return-void
 .end method
 
@@ -741,17 +661,14 @@
     .locals 14
 
     .prologue
-    .line 149
     const/16 v4, 0x5f
 
     iput v4, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mWidth:I
 
-    .line 150
     iget v4, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mWidth:I
 
     iput v4, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mHeight:I
 
-    .line 151
     iget v4, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mWidth:I
 
     iget v5, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mHeight:I
@@ -769,7 +686,6 @@
     :goto_0
     iput v4, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->radius:F
 
-    .line 152
     iget-object v4, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mBitmap:Landroid/graphics/Bitmap;
 
     if-nez v4, :cond_1
@@ -782,7 +698,6 @@
 
     if-lez v4, :cond_1
 
-    .line 154
     iget v4, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mWidth:I
 
     iget v5, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mHeight:I
@@ -795,12 +710,10 @@
 
     iput-object v4, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mBitmap:Landroid/graphics/Bitmap;
 
-    .line 155
     iget-object v4, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mCanvas:Landroid/graphics/Canvas;
 
     if-nez v4, :cond_0
 
-    .line 156
     new-instance v4, Landroid/graphics/Canvas;
 
     iget-object v5, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mBitmap:Landroid/graphics/Bitmap;
@@ -809,7 +722,6 @@
 
     iput-object v4, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mCanvas:Landroid/graphics/Canvas;
 
-    .line 157
     new-instance v4, Landroid/graphics/RectF;
 
     iget v5, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mWidth:I
@@ -868,13 +780,11 @@
 
     iput-object v4, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mRectF:Landroid/graphics/RectF;
 
-    .line 159
     :cond_0
     iget-object v4, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->arrowShape:Lcom/letv/leui/widget/LeArrowShape;
 
     if-nez v4, :cond_1
 
-    .line 160
     new-instance v4, Lcom/letv/leui/widget/LeArrowShape;
 
     iget v5, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mWidth:I
@@ -889,7 +799,6 @@
 
     iput-object v4, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->arrowShape:Lcom/letv/leui/widget/LeArrowShape;
 
-    .line 163
     :cond_1
     new-instance v4, Ljava/util/ArrayList;
 
@@ -897,17 +806,14 @@
 
     iput-object v4, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->ballCenters:Ljava/util/List;
 
-    .line 164
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v4, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->relativeCenters:Ljava/util/List;
 
-    .line 165
     const/high16 v0, 0x42700000    # 60.0f
 
-    .line 166
     .local v0, "angleUnit":F
     iget v4, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->radius:F
 
@@ -915,7 +821,6 @@
 
     sub-float v1, v4, v5
 
-    .line 167
     .local v1, "drawRadius":F
     const/4 v2, 0x0
 
@@ -925,12 +830,10 @@
 
     if-ge v2, v4, :cond_3
 
-    .line 168
     new-instance v3, Landroid/graphics/PointF;
 
     invoke-direct {v3}, Landroid/graphics/PointF;-><init>()V
 
-    .line 169
     .local v3, "pointF":Landroid/graphics/PointF;
     const-wide v4, 0x4047800000000000L    # 47.0
 
@@ -994,12 +897,10 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/graphics/PointF;->set(FF)V
 
-    .line 171
     iget-object v4, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->ballCenters:Ljava/util/List;
 
     invoke-interface {v4, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 172
     iget-object v4, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->relativeCenters:Ljava/util/List;
 
     new-instance v5, Landroid/graphics/PointF;
@@ -1060,12 +961,10 @@
 
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 167
     add-int/lit8 v2, v2, 0x1
 
     goto/16 :goto_1
 
-    .line 151
     .end local v0    # "angleUnit":F
     .end local v1    # "drawRadius":F
     .end local v2    # "i":I
@@ -1081,7 +980,6 @@
 
     goto/16 :goto_0
 
-    .line 176
     .restart local v0    # "angleUnit":F
     .restart local v1    # "drawRadius":F
     .restart local v2    # "i":I
@@ -1095,26 +993,21 @@
     .prologue
     const/16 v2, 0x5f
 
-    .line 115
     iget-object v1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mHeaderImage:Landroid/widget/ImageView;
 
     invoke-virtual {v1}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    .line 116
     .local v0, "params":Landroid/view/ViewGroup$LayoutParams;
     iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 117
     iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 118
     iget-object v1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mHeaderImage:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 119
     return-void
 .end method
 
@@ -1122,12 +1015,10 @@
     .locals 4
 
     .prologue
-    .line 314
     iget-object v1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mCanvas:Landroid/graphics/Canvas;
 
     if-eqz v1, :cond_1
 
-    .line 315
     const/4 v1, 0x2
 
     new-array v1, v1, [F
@@ -1138,7 +1029,6 @@
 
     move-result-object v0
 
-    .line 316
     .local v0, "dismissAnimator":Landroid/animation/ValueAnimator;
     new-instance v1, Landroid/view/animation/AnticipateInterpolator;
 
@@ -1146,51 +1036,42 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 317
     const-wide/16 v2, 0xfa
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 318
     new-instance v1, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$3;
 
     invoke-direct {v1, p0}, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$3;-><init>(Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 338
     new-instance v1, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$4;
 
     invoke-direct {v1, p0}, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$4;-><init>(Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 348
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 356
     .end local v0    # "dismissAnimator":Landroid/animation/ValueAnimator;
     :cond_0
     :goto_0
     return-void
 
-    .line 351
     :cond_1
     invoke-virtual {p0}, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->resetImageHeader()V
 
-    .line 352
     iget-object v1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->refreshCompletedListener:Lcom/letv/leui/widget/pulltorefresh/internal/RefreshCompletedListener;
 
     if-eqz v1, :cond_0
 
-    .line 353
     iget-object v1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->refreshCompletedListener:Lcom/letv/leui/widget/pulltorefresh/internal/RefreshCompletedListener;
 
     invoke-interface {v1}, Lcom/letv/leui/widget/pulltorefresh/internal/RefreshCompletedListener;->refreshHeaderCompleteInternal()V
 
     goto :goto_0
 
-    .line 315
     :array_0
     .array-data 4
         0x3f800000    # 1.0f
@@ -1204,22 +1085,18 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 358
     iget-boolean v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->animatorCanbeStarted:Z
 
     if-eqz v0, :cond_1
 
-    .line 359
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mAngle:F
 
-    .line 360
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->animator:Landroid/animation/ObjectAnimator;
 
     if-nez v0, :cond_0
 
-    .line 361
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->holder:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$AnimatorHolder;
 
     const-string v1, "angle"
@@ -1248,19 +1125,15 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->animator:Landroid/animation/ObjectAnimator;
 
-    .line 363
     :cond_0
     invoke-direct {p0}, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->initAnimator()V
 
-    .line 365
     iput-boolean v6, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->animatorCanbeStarted:Z
 
-    .line 366
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->animator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 369
     :cond_1
     return-void
 .end method
@@ -1271,13 +1144,10 @@
     .locals 0
 
     .prologue
-    .line 403
     invoke-direct {p0}, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->drawBalls()V
 
-    .line 411
     invoke-virtual {p0}, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->refreshingImpl()V
 
-    .line 413
     return-void
 .end method
 
@@ -1285,7 +1155,6 @@
     .locals 1
 
     .prologue
-    .line 380
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->animator:Landroid/animation/ObjectAnimator;
 
     return-object v0
@@ -1295,7 +1164,6 @@
     .locals 1
 
     .prologue
-    .line 30
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->ballColor:[I
 
     return-object v0
@@ -1305,7 +1173,6 @@
     .locals 1
 
     .prologue
-    .line 51
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->colorStyle:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$ColorStyle;
 
     return-object v0
@@ -1315,7 +1182,6 @@
     .locals 1
 
     .prologue
-    .line 108
     iget v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->duration:I
 
     return v0
@@ -1336,36 +1202,29 @@
 
     const/4 v10, 0x0
 
-    .line 200
     move v1, p1
 
-    .line 201
     .local v1, "scale":F
     iget-boolean v5, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->isPullToRefresh:Z
 
     if-eqz v5, :cond_5
 
-    .line 202
     iget-object v5, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v5, v6}, Landroid/graphics/Bitmap;->eraseColor(I)V
 
-    .line 203
     iget-object v5, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mCanvas:Landroid/graphics/Canvas;
 
     invoke-virtual {v5, v6}, Landroid/graphics/Canvas;->drawColor(I)V
 
-    .line 204
     const v5, 0x3f99999a    # 1.2f
 
     cmpl-float v5, v1, v5
 
     if-lez v5, :cond_0
 
-    .line 205
     const v1, 0x3e4ccccd    # 0.2f
 
-    .line 207
     :cond_0
     const v5, 0x3e4ccccd    # 0.2f
 
@@ -1375,12 +1234,10 @@
 
     mul-float v1, v5, v6
 
-    .line 208
     cmpl-float v5, v1, v10
 
     if-lez v5, :cond_9
 
-    .line 210
     float-to-double v6, v1
 
     invoke-static {v6, v7}, Ljava/lang/Math;->floor(D)D
@@ -1389,22 +1246,18 @@
 
     double-to-int v2, v6
 
-    .line 211
     .local v2, "scale_int":I
     const/4 v5, 0x6
 
     if-lt v2, v5, :cond_1
 
-    .line 212
     const/4 v2, 0x5
 
-    .line 214
     :cond_1
     int-to-float v5, v2
 
     sub-float v3, v1, v5
 
-    .line 215
     .local v3, "scale_offset":F
     const/4 v0, 0x0
 
@@ -1412,19 +1265,16 @@
     :goto_0
     if-ge v0, v2, :cond_3
 
-    .line 216
     iget-object v5, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->colorStyle:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$ColorStyle;
 
     sget-object v6, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$ColorStyle;->WHITE:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$ColorStyle;
 
     if-ne v5, v6, :cond_2
 
-    .line 217
     iget-object v5, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v5, v13}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 222
     :goto_1
     iget-object v5, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mPaint:Landroid/graphics/Paint;
 
@@ -1432,7 +1282,6 @@
 
     invoke-virtual {v5, v6}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 223
     iget-object v6, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mCanvas:Landroid/graphics/Canvas;
 
     iget-object v5, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->ballCenters:Ljava/util/List;
@@ -1461,12 +1310,10 @@
 
     invoke-virtual {v6, v7, v5, v8, v9}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 215
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 219
     :cond_2
     iget-object v5, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mPaint:Landroid/graphics/Paint;
 
@@ -1478,42 +1325,35 @@
 
     goto :goto_1
 
-    .line 226
     :cond_3
     const v4, 0x3f36db6e
 
-    .line 227
     .local v4, "temp":F
     cmpl-float v5, v3, v10
 
     if-eqz v5, :cond_4
 
-    .line 228
     iget-object v5, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->colorStyle:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$ColorStyle;
 
     sget-object v6, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$ColorStyle;->WHITE:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$ColorStyle;
 
     if-ne v5, v6, :cond_7
 
-    .line 229
     iget-object v5, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v5, v13}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 234
     :goto_2
     cmpg-float v5, v3, v4
 
     if-gez v5, :cond_8
 
-    .line 235
     mul-float v5, v11, v3
 
     mul-float/2addr v5, v12
 
     iput v5, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->ballRadius:F
 
-    .line 239
     :goto_3
     iget-object v6, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mCanvas:Landroid/graphics/Canvas;
 
@@ -1543,7 +1383,6 @@
 
     invoke-virtual {v6, v7, v5, v8, v9}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 243
     :cond_4
     iget-object v5, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mHeaderImage:Landroid/widget/ImageView;
 
@@ -1551,7 +1390,6 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 254
     .end local v0    # "i":I
     .end local v2    # "scale_int":I
     .end local v3    # "scale_offset":F
@@ -1565,30 +1403,24 @@
 
     if-eqz v5, :cond_5
 
-    .line 255
     iget-boolean v5, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->animatorCanbeStarted:Z
 
     if-nez v5, :cond_5
 
-    .line 256
     const/4 v5, 0x1
 
     iput-boolean v5, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->cancelAnimator:Z
 
-    .line 260
     :cond_5
     iget-boolean v5, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->isReleaseToRefresh:Z
 
     if-eqz v5, :cond_6
 
-    .line 264
     invoke-direct {p0}, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->startRotation()V
 
-    .line 269
     :cond_6
     return-void
 
-    .line 231
     .restart local v0    # "i":I
     .restart local v2    # "scale_int":I
     .restart local v3    # "scale_offset":F
@@ -1604,7 +1436,6 @@
 
     goto :goto_2
 
-    .line 237
     :cond_8
     mul-float v5, v11, v3
 
@@ -1622,7 +1453,6 @@
 
     goto :goto_3
 
-    .line 245
     .end local v0    # "i":I
     .end local v2    # "scale_int":I
     .end local v3    # "scale_offset":F
@@ -1641,17 +1471,14 @@
     .locals 2
 
     .prologue
-    .line 372
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->isPullToRefresh:Z
 
-    .line 373
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->isReleaseToRefresh:Z
 
-    .line 374
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mHeaderImageMatrix:Landroid/graphics/Matrix;
 
     if-eqz v0, :cond_0
@@ -1664,19 +1491,16 @@
 
     if-nez v0, :cond_0
 
-    .line 375
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mHeaderImageMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v0}, Landroid/graphics/Matrix;->reset()V
 
-    .line 376
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mHeaderImage:Landroid/widget/ImageView;
 
     iget-object v1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mHeaderImageMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageMatrix(Landroid/graphics/Matrix;)V
 
-    .line 378
     :cond_0
     return-void
 .end method
@@ -1685,15 +1509,12 @@
     .locals 1
 
     .prologue
-    .line 416
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->isRefreshing:Z
 
-    .line 417
     invoke-direct {p0}, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->startRotation()V
 
-    .line 467
     return-void
 .end method
 
@@ -1701,17 +1522,14 @@
     .locals 1
 
     .prologue
-    .line 525
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->isReleaseToRefresh:Z
 
-    .line 526
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->isPullToRefresh:Z
 
-    .line 527
     return-void
 .end method
 
@@ -1721,23 +1539,18 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 516
     iput-boolean v1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->isPullToRefresh:Z
 
-    .line 517
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->isReleaseToRefresh:Z
 
-    .line 518
     iput-boolean v1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->animatorCanbeStarted:Z
 
-    .line 519
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mAngle:F
 
-    .line 521
     return-void
 .end method
 
@@ -1745,7 +1558,6 @@
     .locals 1
 
     .prologue
-    .line 510
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->animator:Landroid/animation/ObjectAnimator;
 
     if-eqz v0, :cond_0
@@ -1758,12 +1570,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 511
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->animator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 514
     :cond_0
     return-void
 .end method
@@ -1774,19 +1584,16 @@
     .param p2, "pos"    # I
 
     .prologue
-    .line 40
     if-ltz p2, :cond_0
 
     const/4 v0, 0x6
 
     if-le p2, v0, :cond_1
 
-    .line 44
     :cond_0
     :goto_0
     return-void
 
-    .line 43
     :cond_1
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->ballColor:[I
 
@@ -1800,7 +1607,6 @@
     .param p1, "ballColor"    # [I
 
     .prologue
-    .line 34
     if-eqz p1, :cond_0
 
     array-length v0, p1
@@ -1809,12 +1615,10 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 38
     :cond_0
     :goto_0
     return-void
 
-    .line 37
     :cond_1
     iput-object p1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->ballColor:[I
 
@@ -1826,10 +1630,8 @@
     .param p1, "colorStyle"    # Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$ColorStyle;
 
     .prologue
-    .line 47
     iput-object p1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->colorStyle:Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout$ColorStyle;
 
-    .line 48
     return-void
 .end method
 
@@ -1838,10 +1640,8 @@
     .param p1, "duration"    # I
 
     .prologue
-    .line 112
     iput p1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->duration:I
 
-    .line 113
     return-void
 .end method
 
@@ -1850,20 +1650,16 @@
     .param p1, "paintColor"    # I
 
     .prologue
-    .line 101
     iput p1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->paintColor:I
 
-    .line 102
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mPaint:Landroid/graphics/Paint;
 
     if-eqz v0, :cond_0
 
-    .line 103
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 105
     :cond_0
     return-void
 .end method
@@ -1873,9 +1669,7 @@
     .param p1, "listener"    # Lcom/letv/leui/widget/pulltorefresh/internal/RefreshCompletedListener;
 
     .prologue
-    .line 98
     iput-object p1, p0, Lcom/letv/leui/widget/pulltorefresh/internal/LeRotateLoadingLayout;->refreshCompletedListener:Lcom/letv/leui/widget/pulltorefresh/internal/RefreshCompletedListener;
 
-    .line 99
     return-void
 .end method

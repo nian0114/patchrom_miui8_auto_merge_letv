@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 273
     iput-object p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView$2;->this$0:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -38,15 +37,12 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 283
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
 
-    .line 285
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView$2;->this$0:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->resetOriginals()V
 
-    .line 286
     return-void
 .end method
 
@@ -55,10 +51,8 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 277
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
 
-    .line 278
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView$2;->this$0:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;
 
     # getter for: Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingView;->mRotateAnim:Landroid/animation/ObjectAnimator;
@@ -68,6 +62,5 @@
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->pause()V
 
-    .line 279
     return-void
 .end method

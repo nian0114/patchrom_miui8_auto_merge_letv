@@ -30,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 232
     .local p0, "this":Lcom/android/volley/Request$1;, "Lcom/android/volley/Request.1;"
     iput-object p1, p0, Lcom/android/volley/Request$1;->this$0:Lcom/android/volley/Request;
 
@@ -49,7 +48,6 @@
     .locals 4
 
     .prologue
-    .line 235
     .local p0, "this":Lcom/android/volley/Request$1;, "Lcom/android/volley/Request.1;"
     iget-object v0, p0, Lcom/android/volley/Request$1;->this$0:Lcom/android/volley/Request;
 
@@ -64,7 +62,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/volley/VolleyLog$MarkerLog;->add(Ljava/lang/String;J)V
 
-    .line 236
     iget-object v0, p0, Lcom/android/volley/Request$1;->this$0:Lcom/android/volley/Request;
 
     # getter for: Lcom/android/volley/Request;->mEventLog:Lcom/android/volley/VolleyLog$MarkerLog;
@@ -78,6 +75,5 @@
 
     invoke-virtual {v0, v1}, Lcom/android/volley/VolleyLog$MarkerLog;->finish(Ljava/lang/String;)V
 
-    .line 237
     return-void
 .end method

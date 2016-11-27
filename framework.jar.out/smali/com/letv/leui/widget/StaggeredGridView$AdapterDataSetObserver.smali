@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 3020
     iput-object p1, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/letv/leui/widget/StaggeredGridView$1;
 
     .prologue
-    .line 3020
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;-><init>(Lcom/letv/leui/widget/StaggeredGridView;)V
 
     return-void
@@ -53,13 +51,11 @@
 
     const/4 v12, 0x0
 
-    .line 3023
     iget-object v8, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     # setter for: Lcom/letv/leui/widget/StaggeredGridView;->mDataChanged:Z
     invoke-static {v8, v13}, Lcom/letv/leui/widget/StaggeredGridView;->access$502(Lcom/letv/leui/widget/StaggeredGridView;Z)Z
 
-    .line 3025
     iget-object v8, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     # getter for: Lcom/letv/leui/widget/StaggeredGridView;->mScroller:Landroid/widget/OverScroller;
@@ -73,7 +69,6 @@
 
     if-nez v8, :cond_0
 
-    .line 3026
     iget-object v8, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     # getter for: Lcom/letv/leui/widget/StaggeredGridView;->mVelocityTracker:Landroid/view/VelocityTracker;
@@ -83,7 +78,6 @@
 
     invoke-virtual {v8}, Landroid/view/VelocityTracker;->clear()V
 
-    .line 3027
     iget-object v8, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     # getter for: Lcom/letv/leui/widget/StaggeredGridView;->mScroller:Landroid/widget/OverScroller;
@@ -93,7 +87,6 @@
 
     invoke-virtual {v8}, Landroid/widget/OverScroller;->abortAnimation()V
 
-    .line 3030
     :cond_0
     iget-object v8, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
@@ -104,7 +97,6 @@
 
     if-eqz v8, :cond_1
 
-    .line 3031
     iget-object v8, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     # getter for: Lcom/letv/leui/widget/StaggeredGridView;->mFadeOutViewAnimatorSet:Landroid/animation/AnimatorSet;
@@ -114,7 +106,6 @@
 
     invoke-virtual {v8}, Landroid/animation/AnimatorSet;->end()V
 
-    .line 3034
     :cond_1
     iget-object v8, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
@@ -125,7 +116,6 @@
 
     if-eqz v8, :cond_2
 
-    .line 3035
     iget-object v8, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     # getter for: Lcom/letv/leui/widget/StaggeredGridView;->mUpdateAnimatorSet:Landroid/animation/AnimatorSet;
@@ -135,7 +125,6 @@
 
     invoke-virtual {v8}, Landroid/animation/AnimatorSet;->end()V
 
-    .line 3038
     :cond_2
     iget-object v8, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
@@ -153,7 +142,6 @@
     # setter for: Lcom/letv/leui/widget/StaggeredGridView;->mItemCount:I
     invoke-static {v8, v9}, Lcom/letv/leui/widget/StaggeredGridView;->access$1702(Lcom/letv/leui/widget/StaggeredGridView;I)I
 
-    .line 3039
     iget-object v8, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     # getter for: Lcom/letv/leui/widget/StaggeredGridView;->mChildRectsForAnimation:Ljava/util/Map;
@@ -163,14 +151,12 @@
 
     invoke-interface {v8}, Ljava/util/Map;->clear()V
 
-    .line 3040
     iget-object v8, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     iget-object v8, v8, Lcom/letv/leui/widget/StaggeredGridView;->mDeleteViews:Ljava/util/ArrayList;
 
     invoke-virtual {v8}, Ljava/util/ArrayList;->clear()V
 
-    .line 3041
     iget-object v8, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     iget v8, v8, Lcom/letv/leui/widget/StaggeredGridView;->mChoiceMode:I
@@ -199,19 +185,16 @@
 
     if-eqz v8, :cond_4
 
-    .line 3043
     iget-object v8, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     invoke-virtual {v8}, Lcom/letv/leui/widget/StaggeredGridView;->confirmCheckedPositionsById()V
 
-    .line 3045
     iget-object v8, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     invoke-virtual {v8}, Lcom/letv/leui/widget/StaggeredGridView;->getChildCount()I
 
     move-result v0
 
-    .line 3047
     .local v0, "childCount":I
     const/4 v2, 0x0
 
@@ -219,14 +202,12 @@
     :goto_0
     if-ge v2, v0, :cond_4
 
-    .line 3048
     iget-object v8, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     invoke-virtual {v8, v2}, Lcom/letv/leui/widget/StaggeredGridView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v7
 
-    .line 3049
     .local v7, "view":Landroid/view/View;
     invoke-virtual {v7}, Landroid/view/View;->getX()F
 
@@ -234,7 +215,6 @@
 
     float-to-int v3, v8
 
-    .line 3050
     .local v3, "left":I
     invoke-virtual {v7}, Landroid/view/View;->getY()F
 
@@ -242,7 +222,6 @@
 
     float-to-int v6, v8
 
-    .line 3051
     .local v6, "top":I
     new-instance v4, Landroid/graphics/Rect;
 
@@ -260,7 +239,6 @@
 
     invoke-direct {v4, v3, v6, v8, v9}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 3052
     .local v4, "localRect":Landroid/graphics/Rect;
     invoke-virtual {v7}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -268,7 +246,6 @@
 
     check-cast v5, Lcom/letv/leui/widget/StaggeredGridView$LayoutParams;
 
-    .line 3053
     .local v5, "params":Lcom/letv/leui/widget/StaggeredGridView$LayoutParams;
     iget-object v8, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
@@ -289,7 +266,6 @@
 
     invoke-interface {v8, v9, v10}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3055
     iget-object v8, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     # getter for: Lcom/letv/leui/widget/StaggeredGridView;->mDeleteItemId:Ljava/util/ArrayList;
@@ -318,20 +294,17 @@
 
     if-eqz v8, :cond_3
 
-    .line 3057
     iget-object v8, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     iget-object v8, v8, Lcom/letv/leui/widget/StaggeredGridView;->mDeleteViews:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 3047
     :cond_3
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 3065
     .end local v0    # "childCount":I
     .end local v2    # "i":I
     .end local v3    # "left":I
@@ -345,7 +318,6 @@
     # setter for: Lcom/letv/leui/widget/StaggeredGridView;->mSync:Z
     invoke-static {v8, v13}, Lcom/letv/leui/widget/StaggeredGridView;->access$2102(Lcom/letv/leui/widget/StaggeredGridView;Z)Z
 
-    .line 3066
     iget-object v8, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     iget-object v9, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
@@ -358,18 +330,15 @@
     # setter for: Lcom/letv/leui/widget/StaggeredGridView;->mSyncPosition:I
     invoke-static {v8, v9}, Lcom/letv/leui/widget/StaggeredGridView;->access$2202(Lcom/letv/leui/widget/StaggeredGridView;I)I
 
-    .line 3067
     iget-object v8, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     invoke-virtual {v8, v12}, Lcom/letv/leui/widget/StaggeredGridView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v7
 
-    .line 3068
     .restart local v7    # "view":Landroid/view/View;
     if-eqz v7, :cond_5
 
-    .line 3069
     iget-object v8, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     invoke-virtual {v7}, Landroid/view/View;->getTop()I
@@ -379,7 +348,6 @@
     # setter for: Lcom/letv/leui/widget/StaggeredGridView;->mSpecificTop:I
     invoke-static {v8, v9}, Lcom/letv/leui/widget/StaggeredGridView;->access$2402(Lcom/letv/leui/widget/StaggeredGridView;I)I
 
-    .line 3075
     :goto_1
     iget-object v8, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
@@ -390,7 +358,6 @@
 
     invoke-virtual {v8}, Lcom/letv/leui/widget/StaggeredGridView$RecycleBin;->clearTransientViews()V
 
-    .line 3079
     iget-object v8, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     # getter for: Lcom/letv/leui/widget/StaggeredGridView;->mLayoutRecords:Landroid/util/SparseArray;
@@ -400,13 +367,11 @@
 
     invoke-virtual {v8}, Landroid/util/SparseArray;->clear()V
 
-    .line 3080
     iget-object v8, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     # invokes: Lcom/letv/leui/widget/StaggeredGridView;->recycleAllViews()V
     invoke-static {v8}, Lcom/letv/leui/widget/StaggeredGridView;->access$2700(Lcom/letv/leui/widget/StaggeredGridView;)V
 
-    .line 3083
     iget-object v8, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     # getter for: Lcom/letv/leui/widget/StaggeredGridView;->mColCount:I
@@ -414,7 +379,6 @@
 
     move-result v1
 
-    .line 3084
     .local v1, "colCount":I
     const/4 v2, 0x0
 
@@ -422,7 +386,6 @@
     :goto_2
     if-ge v2, v1, :cond_6
 
-    .line 3085
     iget-object v8, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     # getter for: Lcom/letv/leui/widget/StaggeredGridView;->mItemBottoms:[I
@@ -441,12 +404,10 @@
 
     aput v9, v8, v2
 
-    .line 3084
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 3071
     .end local v1    # "colCount":I
     .end local v2    # "i":I
     :cond_5
@@ -472,7 +433,6 @@
 
     goto :goto_1
 
-    .line 3089
     .restart local v1    # "colCount":I
     .restart local v2    # "i":I
     :cond_6
@@ -523,21 +483,18 @@
 
     if-eqz v8, :cond_8
 
-    .line 3090
     :cond_7
     iget-object v8, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     # setter for: Lcom/letv/leui/widget/StaggeredGridView;->mFirstPosition:I
     invoke-static {v8, v12}, Lcom/letv/leui/widget/StaggeredGridView;->access$2302(Lcom/letv/leui/widget/StaggeredGridView;I)I
 
-    .line 3091
     iget-object v8, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     invoke-virtual {v8}, Lcom/letv/leui/widget/StaggeredGridView;->getPaddingTop()I
 
     move-result v6
 
-    .line 3092
     .restart local v6    # "top":I
     iget-object v8, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
@@ -548,7 +505,6 @@
 
     invoke-static {v8, v6}, Ljava/util/Arrays;->fill([II)V
 
-    .line 3093
     iget-object v8, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     # getter for: Lcom/letv/leui/widget/StaggeredGridView;->mItemBottoms:[I
@@ -558,7 +514,6 @@
 
     invoke-static {v8, v6}, Ljava/util/Arrays;->fill([II)V
 
-    .line 3095
     iget-object v8, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     # getter for: Lcom/letv/leui/widget/StaggeredGridView;->mRestoreOffsets:[I
@@ -568,7 +523,6 @@
 
     if-eqz v8, :cond_8
 
-    .line 3097
     iget-object v8, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     const/4 v9, 0x0
@@ -576,14 +530,12 @@
     # setter for: Lcom/letv/leui/widget/StaggeredGridView;->mRestoreOffsets:[I
     invoke-static {v8, v9}, Lcom/letv/leui/widget/StaggeredGridView;->access$3202(Lcom/letv/leui/widget/StaggeredGridView;[I)[I
 
-    .line 3103
     .end local v6    # "top":I
     :cond_8
     iget-object v8, p0, Lcom/letv/leui/widget/StaggeredGridView$AdapterDataSetObserver;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     invoke-virtual {v8}, Lcom/letv/leui/widget/StaggeredGridView;->requestLayout()V
 
-    .line 3104
     return-void
 .end method
 
@@ -591,6 +543,5 @@
     .locals 0
 
     .prologue
-    .line 3108
     return-void
 .end method

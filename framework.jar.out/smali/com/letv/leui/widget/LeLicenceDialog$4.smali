@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 228
     iput-object p1, p0, Lcom/letv/leui/widget/LeLicenceDialog$4;->this$0:Lcom/letv/leui/widget/LeLicenceDialog;
 
     iput-object p2, p0, Lcom/letv/leui/widget/LeLicenceDialog$4;->val$listener:Lcom/letv/leui/widget/LeLicenceDialog$LeLicenceDialogClickListener;
@@ -45,18 +44,15 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 231
     iget-object v0, p0, Lcom/letv/leui/widget/LeLicenceDialog$4;->val$listener:Lcom/letv/leui/widget/LeLicenceDialog$LeLicenceDialogClickListener;
 
     sget-object v1, Lcom/letv/leui/widget/LeLicenceDialog$KEY;->BTN_CANCEL:Lcom/letv/leui/widget/LeLicenceDialog$KEY;
 
     invoke-interface {v0, v1}, Lcom/letv/leui/widget/LeLicenceDialog$LeLicenceDialogClickListener;->onClickListener(Lcom/letv/leui/widget/LeLicenceDialog$KEY;)V
 
-    .line 232
     iget-object v0, p0, Lcom/letv/leui/widget/LeLicenceDialog$4;->this$0:Lcom/letv/leui/widget/LeLicenceDialog;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/LeLicenceDialog;->dismiss()Lcom/letv/leui/widget/LeLicenceDialog;
 
-    .line 233
     return-void
 .end method

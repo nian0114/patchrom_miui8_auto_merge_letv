@@ -28,13 +28,10 @@
     .param p3, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 78
     iput-object p1, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshExpandableListView$InternalExpandableListView;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshExpandableListView;
 
-    .line 79
     invoke-direct {p0, p2, p3}, Landroid/widget/ExpandableListView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 80
     return-void
 .end method
 
@@ -45,12 +42,10 @@
     .param p1, "emptyView"    # Landroid/view/View;
 
     .prologue
-    .line 84
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshExpandableListView$InternalExpandableListView;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshExpandableListView;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshExpandableListView;->setEmptyView(Landroid/view/View;)V
 
-    .line 85
     return-void
 .end method
 
@@ -59,9 +54,7 @@
     .param p1, "emptyView"    # Landroid/view/View;
 
     .prologue
-    .line 89
     invoke-super {p0, p1}, Landroid/widget/ExpandableListView;->setEmptyView(Landroid/view/View;)V
 
-    .line 90
     return-void
 .end method

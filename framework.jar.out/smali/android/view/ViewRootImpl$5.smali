@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 7885
     iput-object p1, p0, Landroid/view/ViewRootImpl$5;->this$0:Landroid/view/ViewRootImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +40,9 @@
     .param p1, "x"    # Ljava/lang/String;
 
     .prologue
-    .line 7888
     const-string v0, "ViewRootImpl"
 
     invoke-static {v0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7889
     return-void
 .end method

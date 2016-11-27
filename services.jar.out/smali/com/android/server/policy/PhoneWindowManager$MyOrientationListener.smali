@@ -27,20 +27,16 @@
     .param p3, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 952
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$MyOrientationListener;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
-    .line 953
     invoke-direct {p0, p2, p3}, Lcom/android/server/policy/WindowOrientationListener;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
 
-    .line 943
     new-instance v0, Lcom/android/server/policy/PhoneWindowManager$MyOrientationListener$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/policy/PhoneWindowManager$MyOrientationListener$1;-><init>(Lcom/android/server/policy/PhoneWindowManager$MyOrientationListener;)V
 
     iput-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$MyOrientationListener;->mUpdateRotationRunnable:Ljava/lang/Runnable;
 
-    .line 954
     return-void
 .end method
 
@@ -51,7 +47,6 @@
     .param p1, "rotation"    # I
 
     .prologue
-    .line 958
     sget-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->localLOGV:Z
 
     if-eqz v0, :cond_0
@@ -78,7 +73,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 959
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$MyOrientationListener;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -88,6 +82,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 960
     return-void
 .end method

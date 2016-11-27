@@ -47,7 +47,6 @@
     .locals 1
 
     .prologue
-    .line 16
     const-string v0, "Network"
 
     sput-object v0, Lcom/letv/tracker/agnes/Network;->ID:Ljava/lang/String;
@@ -59,59 +58,50 @@
     .locals 1
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 18
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/letv/tracker/agnes/Network;->props:Ljava/util/Map;
 
-    .line 20
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/letv/tracker/agnes/Network;->acts:Ljava/util/List;
 
-    .line 29
     new-instance v0, Lcom/letv/tracker/agnes/VPN;
 
     invoke-direct {v0}, Lcom/letv/tracker/agnes/VPN;-><init>()V
 
     iput-object v0, p0, Lcom/letv/tracker/agnes/Network;->vpn:Lcom/letv/tracker/agnes/VPN;
 
-    .line 30
     new-instance v0, Lcom/letv/tracker/agnes/Wifi;
 
     invoke-direct {v0}, Lcom/letv/tracker/agnes/Wifi;-><init>()V
 
     iput-object v0, p0, Lcom/letv/tracker/agnes/Network;->wifi:Lcom/letv/tracker/agnes/Wifi;
 
-    .line 31
     new-instance v0, Lcom/letv/tracker/agnes/Bluetooth;
 
     invoke-direct {v0}, Lcom/letv/tracker/agnes/Bluetooth;-><init>()V
 
     iput-object v0, p0, Lcom/letv/tracker/agnes/Network;->blue:Lcom/letv/tracker/agnes/Bluetooth;
 
-    .line 32
     new-instance v0, Lcom/letv/tracker/agnes/NFC;
 
     invoke-direct {v0}, Lcom/letv/tracker/agnes/NFC;-><init>()V
 
     iput-object v0, p0, Lcom/letv/tracker/agnes/Network;->nfc:Lcom/letv/tracker/agnes/NFC;
 
-    .line 33
     new-instance v0, Lcom/letv/tracker/agnes/GPS;
 
     invoke-direct {v0}, Lcom/letv/tracker/agnes/GPS;-><init>()V
 
     iput-object v0, p0, Lcom/letv/tracker/agnes/Network;->gps:Lcom/letv/tracker/agnes/GPS;
 
-    .line 34
     return-void
 .end method
 
@@ -123,7 +113,6 @@
     .param p2, "propValue"    # Ljava/lang/String;
 
     .prologue
-    .line 45
     iget-object v0, p0, Lcom/letv/tracker/agnes/Network;->props:Ljava/util/Map;
 
     invoke-virtual {p1}, Lcom/letv/tracker/enums/Key;->getKeyId()Ljava/lang/String;
@@ -136,10 +125,8 @@
     :goto_0
     invoke-interface {v0, v1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 46
     return-void
 
-    .line 45
     .restart local p2    # "propValue":Ljava/lang/String;
     :cond_0
     const-string p2, ""
@@ -153,14 +140,12 @@
     .param p2, "propValue"    # Ljava/lang/String;
 
     .prologue
-    .line 37
     invoke-static {p1}, Lcom/letv/tracker/enums/Key;->isExsited(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 38
     iget-object v0, p0, Lcom/letv/tracker/agnes/Network;->props:Ljava/util/Map;
 
     if-eqz p2, :cond_0
@@ -169,18 +154,15 @@
     :goto_0
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 42
     :goto_1
     return-void
 
-    .line 38
     .restart local p2    # "propValue":Ljava/lang/String;
     :cond_0
     const-string p2, ""
 
     goto :goto_0
 
-    .line 40
     :cond_1
     iget-object v0, p0, Lcom/letv/tracker/agnes/Network;->props:Ljava/util/Map;
 
@@ -221,16 +203,13 @@
     .locals 10
 
     .prologue
-    .line 128
     new-instance v4, Lcom/android/letv/agnes/service/beans/IApp;
 
     invoke-direct {v4}, Lcom/android/letv/agnes/service/beans/IApp;-><init>()V
 
-    .line 129
     .local v4, "iapp":Lcom/android/letv/agnes/service/beans/IApp;
     const/4 v1, 0x0
 
-    .line 131
     .local v1, "anyUpdate":Z
     iget-object v7, p0, Lcom/letv/tracker/agnes/Network;->props:Ljava/util/Map;
 
@@ -240,10 +219,8 @@
 
     if-nez v7, :cond_0
 
-    .line 132
     iget-object v6, p0, Lcom/letv/tracker/agnes/Network;->props:Ljava/util/Map;
 
-    .line 133
     .local v6, "temp":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     new-instance v7, Ljava/util/HashMap;
 
@@ -251,13 +228,10 @@
 
     iput-object v7, p0, Lcom/letv/tracker/agnes/Network;->props:Ljava/util/Map;
 
-    .line 134
     invoke-virtual {v4, v6}, Lcom/android/letv/agnes/service/beans/IApp;->setProps(Ljava/util/Map;)V
 
-    .line 135
     const/4 v1, 0x1
 
-    .line 138
     .end local v6    # "temp":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     iget-object v7, p0, Lcom/letv/tracker/agnes/Network;->acts:Ljava/util/List;
@@ -268,10 +242,8 @@
 
     if-nez v7, :cond_2
 
-    .line 139
     iget-object v5, p0, Lcom/letv/tracker/agnes/Network;->acts:Ljava/util/List;
 
-    .line 140
     .local v5, "temp":Ljava/util/List;, "Ljava/util/List<Lcom/letv/tracker/msg/bean/Action;>;"
     new-instance v7, Ljava/util/ArrayList;
 
@@ -279,12 +251,10 @@
 
     iput-object v7, p0, Lcom/letv/tracker/agnes/Network;->acts:Ljava/util/List;
 
-    .line 141
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 142
     .local v3, "iacts":Ljava/util/List;, "Ljava/util/List<Lcom/android/letv/agnes/service/beans/IAction;>;"
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -304,7 +274,6 @@
 
     check-cast v0, Lcom/letv/tracker/msg/bean/Action;
 
-    .line 143
     .local v0, "ac":Lcom/letv/tracker/msg/bean/Action;
     invoke-static {v0}, Lcom/letv/tracker/service/Converter;->convertAction(Lcom/letv/tracker/msg/bean/Action;)Lcom/android/letv/agnes/service/beans/IAction;
 
@@ -314,34 +283,28 @@
 
     goto :goto_0
 
-    .line 145
     .end local v0    # "ac":Lcom/letv/tracker/msg/bean/Action;
     :cond_1
     invoke-virtual {v4, v3}, Lcom/android/letv/agnes/service/beans/IApp;->setActs(Ljava/util/List;)V
 
-    .line 146
     const/4 v1, 0x1
 
-    .line 149
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v3    # "iacts":Ljava/util/List;, "Ljava/util/List<Lcom/android/letv/agnes/service/beans/IAction;>;"
     .end local v5    # "temp":Ljava/util/List;, "Ljava/util/List<Lcom/letv/tracker/msg/bean/Action;>;"
     :cond_2
     if-eqz v1, :cond_3
 
-    .line 150
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v8
 
     invoke-virtual {v4, v8, v9}, Lcom/android/letv/agnes/service/beans/IApp;->setTime(J)V
 
-    .line 151
     sget-object v7, Lcom/letv/tracker/agnes/Network;->ID:Ljava/lang/String;
 
     invoke-virtual {v4, v7}, Lcom/android/letv/agnes/service/beans/IApp;->setId(Ljava/lang/String;)V
 
-    .line 154
     .end local v4    # "iapp":Lcom/android/letv/agnes/service/beans/IApp;
     :goto_1
     return-object v4
@@ -358,23 +321,19 @@
     .param p1, "slot"    # Ljava/lang/String;
 
     .prologue
-    .line 73
     new-instance v0, Lcom/letv/tracker/msg/bean/Action;
 
     const-string v1, "connMobileData"
 
     invoke-direct {v0, v1}, Lcom/letv/tracker/msg/bean/Action;-><init>(Ljava/lang/String;)V
 
-    .line 74
     .local v0, "ac":Lcom/letv/tracker/msg/bean/Action;
     invoke-virtual {v0, p1}, Lcom/letv/tracker/msg/bean/Action;->setDes(Ljava/lang/String;)V
 
-    .line 75
     iget-object v1, p0, Lcom/letv/tracker/agnes/Network;->acts:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 76
     return-void
 .end method
 
@@ -382,20 +341,17 @@
     .locals 2
 
     .prologue
-    .line 103
     new-instance v0, Lcom/letv/tracker/msg/bean/Action;
 
     const-string v1, "conn"
 
     invoke-direct {v0, v1}, Lcom/letv/tracker/msg/bean/Action;-><init>(Ljava/lang/String;)V
 
-    .line 104
     .local v0, "ac":Lcom/letv/tracker/msg/bean/Action;
     iget-object v1, p0, Lcom/letv/tracker/agnes/Network;->acts:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 105
     return-void
 .end method
 
@@ -403,20 +359,17 @@
     .locals 2
 
     .prologue
-    .line 79
     new-instance v0, Lcom/letv/tracker/msg/bean/Action;
 
     const-string v1, "disconnMobileData"
 
     invoke-direct {v0, v1}, Lcom/letv/tracker/msg/bean/Action;-><init>(Ljava/lang/String;)V
 
-    .line 80
     .local v0, "ac":Lcom/letv/tracker/msg/bean/Action;
     iget-object v1, p0, Lcom/letv/tracker/agnes/Network;->acts:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 81
     return-void
 .end method
 
@@ -424,7 +377,6 @@
     .locals 1
 
     .prologue
-    .line 112
     iget-object v0, p0, Lcom/letv/tracker/agnes/Network;->blue:Lcom/letv/tracker/agnes/Bluetooth;
 
     return-object v0
@@ -434,7 +386,6 @@
     .locals 1
 
     .prologue
-    .line 120
     iget-object v0, p0, Lcom/letv/tracker/agnes/Network;->gps:Lcom/letv/tracker/agnes/GPS;
 
     return-object v0
@@ -444,7 +395,6 @@
     .locals 1
 
     .prologue
-    .line 124
     iget-object v0, p0, Lcom/letv/tracker/agnes/Network;->nfc:Lcom/letv/tracker/agnes/NFC;
 
     return-object v0
@@ -464,7 +414,6 @@
     .end annotation
 
     .prologue
-    .line 49
     iget-object v0, p0, Lcom/letv/tracker/agnes/Network;->props:Ljava/util/Map;
 
     return-object v0
@@ -474,7 +423,6 @@
     .locals 1
 
     .prologue
-    .line 108
     iget-object v0, p0, Lcom/letv/tracker/agnes/Network;->vpn:Lcom/letv/tracker/agnes/VPN;
 
     return-object v0
@@ -484,7 +432,6 @@
     .locals 1
 
     .prologue
-    .line 116
     iget-object v0, p0, Lcom/letv/tracker/agnes/Network;->wifi:Lcom/letv/tracker/agnes/Wifi;
 
     return-object v0
@@ -494,20 +441,17 @@
     .locals 2
 
     .prologue
-    .line 98
     new-instance v0, Lcom/letv/tracker/msg/bean/Action;
 
     const-string v1, "disconn"
 
     invoke-direct {v0, v1}, Lcom/letv/tracker/msg/bean/Action;-><init>(Ljava/lang/String;)V
 
-    .line 99
     .local v0, "ac":Lcom/letv/tracker/msg/bean/Action;
     iget-object v1, p0, Lcom/letv/tracker/agnes/Network;->acts:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 100
     return-void
 .end method
 
@@ -515,20 +459,17 @@
     .locals 2
 
     .prologue
-    .line 68
     new-instance v0, Lcom/letv/tracker/msg/bean/Action;
 
     const-string v1, "offMobileData"
 
     invoke-direct {v0, v1}, Lcom/letv/tracker/msg/bean/Action;-><init>(Ljava/lang/String;)V
 
-    .line 69
     .local v0, "ac":Lcom/letv/tracker/msg/bean/Action;
     iget-object v1, p0, Lcom/letv/tracker/agnes/Network;->acts:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 70
     return-void
 .end method
 
@@ -536,20 +477,17 @@
     .locals 2
 
     .prologue
-    .line 58
     new-instance v0, Lcom/letv/tracker/msg/bean/Action;
 
     const-string v1, "offRomaing"
 
     invoke-direct {v0, v1}, Lcom/letv/tracker/msg/bean/Action;-><init>(Ljava/lang/String;)V
 
-    .line 59
     .local v0, "ac":Lcom/letv/tracker/msg/bean/Action;
     iget-object v1, p0, Lcom/letv/tracker/agnes/Network;->acts:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 60
     return-void
 .end method
 
@@ -557,20 +495,17 @@
     .locals 2
 
     .prologue
-    .line 63
     new-instance v0, Lcom/letv/tracker/msg/bean/Action;
 
     const-string v1, "onMobileData"
 
     invoke-direct {v0, v1}, Lcom/letv/tracker/msg/bean/Action;-><init>(Ljava/lang/String;)V
 
-    .line 64
     .local v0, "ac":Lcom/letv/tracker/msg/bean/Action;
     iget-object v1, p0, Lcom/letv/tracker/agnes/Network;->acts:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 65
     return-void
 .end method
 
@@ -578,20 +513,17 @@
     .locals 2
 
     .prologue
-    .line 53
     new-instance v0, Lcom/letv/tracker/msg/bean/Action;
 
     const-string v1, "onRomaing"
 
     invoke-direct {v0, v1}, Lcom/letv/tracker/msg/bean/Action;-><init>(Ljava/lang/String;)V
 
-    .line 54
     .local v0, "ac":Lcom/letv/tracker/msg/bean/Action;
     iget-object v1, p0, Lcom/letv/tracker/agnes/Network;->acts:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 55
     return-void
 .end method
 
@@ -600,14 +532,12 @@
     .param p1, "apn"    # Ljava/lang/String;
 
     .prologue
-    .line 84
     iget-object v0, p0, Lcom/letv/tracker/agnes/Network;->props:Ljava/util/Map;
 
     const-string v1, "apn"
 
     invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 85
     return-void
 .end method
 
@@ -616,7 +546,6 @@
     .param p1, "model"    # Lcom/letv/tracker/enums/NetworkModel;
 
     .prologue
-    .line 88
     iget-object v0, p0, Lcom/letv/tracker/agnes/Network;->props:Ljava/util/Map;
 
     const-string v1, "netModel"
@@ -627,7 +556,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 89
     return-void
 .end method
 
@@ -636,14 +564,12 @@
     .param p1, "op"    # Lcom/letv/tracker/enums/Operator;
 
     .prologue
-    .line 92
     new-instance v0, Lcom/letv/tracker/msg/bean/Action;
 
     const-string v1, "setOperator"
 
     invoke-direct {v0, v1}, Lcom/letv/tracker/msg/bean/Action;-><init>(Ljava/lang/String;)V
 
-    .line 93
     .local v0, "ac":Lcom/letv/tracker/msg/bean/Action;
     invoke-virtual {p1}, Lcom/letv/tracker/enums/Operator;->getId()Ljava/lang/String;
 
@@ -651,11 +577,9 @@
 
     invoke-virtual {v0, v1}, Lcom/letv/tracker/msg/bean/Action;->setDes(Ljava/lang/String;)V
 
-    .line 94
     iget-object v1, p0, Lcom/letv/tracker/agnes/Network;->acts:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 95
     return-void
 .end method

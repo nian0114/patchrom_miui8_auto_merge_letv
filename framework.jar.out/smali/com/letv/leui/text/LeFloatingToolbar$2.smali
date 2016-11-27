@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 83
     iput-object p1, p0, Lcom/letv/leui/text/LeFloatingToolbar$2;->this$0:Lcom/letv/leui/text/LeFloatingToolbar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
-    .line 86
     iget-object v0, p0, Lcom/letv/leui/text/LeFloatingToolbar$2;->this$0:Lcom/letv/leui/text/LeFloatingToolbar;
 
     # getter for: Lcom/letv/leui/text/LeFloatingToolbar;->mPopup:Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup;
@@ -69,7 +67,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 87
     iget-object v0, p0, Lcom/letv/leui/text/LeFloatingToolbar$2;->this$0:Lcom/letv/leui/text/LeFloatingToolbar;
 
     const/4 v1, 0x1
@@ -77,12 +74,10 @@
     # setter for: Lcom/letv/leui/text/LeFloatingToolbar;->mWidthChanged:Z
     invoke-static {v0, v1}, Lcom/letv/leui/text/LeFloatingToolbar;->access$202(Lcom/letv/leui/text/LeFloatingToolbar;Z)Z
 
-    .line 88
     iget-object v0, p0, Lcom/letv/leui/text/LeFloatingToolbar$2;->this$0:Lcom/letv/leui/text/LeFloatingToolbar;
 
     invoke-virtual {v0}, Lcom/letv/leui/text/LeFloatingToolbar;->updateLayout()Lcom/letv/leui/text/LeFloatingToolbar;
 
-    .line 90
     :cond_0
     return-void
 .end method
@@ -91,6 +86,5 @@
     .locals 0
 
     .prologue
-    .line 93
     return-void
 .end method

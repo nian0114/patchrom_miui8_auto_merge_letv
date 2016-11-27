@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 63
     iput-object p1, p0, Lcom/letv/leui/widget/LeLoadingDialog$1$1;->this$1:Lcom/letv/leui/widget/LeLoadingDialog$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 66
     iget-object v0, p0, Lcom/letv/leui/widget/LeLoadingDialog$1$1;->this$1:Lcom/letv/leui/widget/LeLoadingDialog$1;
 
     iget-object v0, v0, Lcom/letv/leui/widget/LeLoadingDialog$1;->this$0:Lcom/letv/leui/widget/LeLoadingDialog;
@@ -48,21 +46,18 @@
     # invokes: Landroid/app/Dialog;->dismiss()V
     invoke-static {v0}, Lcom/letv/leui/widget/LeLoadingDialog;->access$001(Lcom/letv/leui/widget/LeLoadingDialog;)V
 
-    .line 67
     iget-object v0, p0, Lcom/letv/leui/widget/LeLoadingDialog$1$1;->this$1:Lcom/letv/leui/widget/LeLoadingDialog$1;
 
     iget-object v0, v0, Lcom/letv/leui/widget/LeLoadingDialog$1;->val$dismissCallBack:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_0
 
-    .line 68
     iget-object v0, p0, Lcom/letv/leui/widget/LeLoadingDialog$1$1;->this$1:Lcom/letv/leui/widget/LeLoadingDialog$1;
 
     iget-object v0, v0, Lcom/letv/leui/widget/LeLoadingDialog$1;->val$dismissCallBack:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 70
     :cond_0
     return-void
 .end method

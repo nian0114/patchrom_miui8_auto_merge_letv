@@ -24,7 +24,6 @@
     .param p2, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 533
     iput-object p1, p0, Lcom/android/server/am/BackAppResourcePolicyManager$1;->this$0:Lcom/android/server/am/BackAppResourcePolicyManager;
 
     invoke-direct {p0, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
@@ -38,10 +37,8 @@
     .locals 15
 
     .prologue
-    .line 537
     const/4 v9, 0x0
 
-    .line 539
     .local v9, "pendingBroadcastSize":I
     :cond_0
     :goto_0
@@ -81,7 +78,6 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 540
     :cond_1
     sget-object v11, Lcom/android/server/am/BackAppResourcePolicyManager;->mPendingBroadcasts:Ljava/util/ArrayList;
 
@@ -99,13 +95,11 @@
 
     if-ne v9, v11, :cond_5
 
-    .line 541
     :cond_2
     sget-object v12, Lcom/android/server/am/BackAppResourcePolicyManager;->mObject:Ljava/lang/Object;
 
     monitor-enter v12
 
-    .line 543
     :try_start_0
     sget-boolean v11, Lcom/android/server/am/ActivityManagerDebugConfig;->DEBUG_LIMIT:Z
 
@@ -145,16 +139,13 @@
 
     invoke-static {v11, v13}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 544
     :cond_3
     sget-object v11, Lcom/android/server/am/BackAppResourcePolicyManager;->mObject:Ljava/lang/Object;
 
     invoke-virtual {v11}, Ljava/lang/Object;->wait()V
 
-    .line 545
     const/4 v9, 0x0
 
-    .line 546
     sget-boolean v11, Lcom/android/server/am/ActivityManagerDebugConfig;->DEBUG_LIMIT:Z
 
     if-eqz v11, :cond_4
@@ -200,7 +191,6 @@
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 549
     :cond_4
     :goto_1
     :try_start_1
@@ -217,7 +207,6 @@
 
     throw v11
 
-    .line 550
     :cond_5
     sget-object v11, Lcom/android/server/am/BackAppResourcePolicyManager;->mPendingBroadcasts:Ljava/util/ArrayList;
 
@@ -227,14 +216,12 @@
 
     if-eq v9, v11, :cond_0
 
-    .line 551
     sget-object v11, Lcom/android/server/am/BackAppResourcePolicyManager;->mPendingBroadcasts:Ljava/util/ArrayList;
 
     invoke-virtual {v11}, Ljava/util/ArrayList;->size()I
 
     move-result v9
 
-    .line 552
     iget-object v11, p0, Lcom/android/server/am/BackAppResourcePolicyManager$1;->this$0:Lcom/android/server/am/BackAppResourcePolicyManager;
 
     # invokes: Lcom/android/server/am/BackAppResourcePolicyManager;->checkNetworkConnect()Z
@@ -242,7 +229,6 @@
 
     move-result v8
 
-    .line 553
     .local v8, "isConnetNetwork":Z
     sget-boolean v11, Lcom/android/server/am/ActivityManagerDebugConfig;->DEBUG_LIMIT:Z
 
@@ -274,32 +260,25 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 554
     :cond_6
     const/4 v10, 0x0
 
-    .line 555
     .local v10, "r":Lcom/android/server/am/BroadcastRecord;
     const/4 v2, 0x0
 
-    .line 556
     .local v2, "_r":Lcom/android/server/am/BroadcastRecord;
     const/4 v5, 0x0
 
-    .line 557
     .local v5, "google_r":Lcom/android/server/am/BroadcastRecord;
     const/4 v1, 0x0
 
-    .line 558
     .local v1, "_google_r":Lcom/android/server/am/BroadcastRecord;
     if-eqz v8, :cond_13
 
-    .line 559
     sget-object v12, Lcom/android/server/am/BackAppResourcePolicyManager;->mPendingBroadcasts:Ljava/util/ArrayList;
 
     monitor-enter v12
 
-    .line 561
     :try_start_2
     sget-object v11, Lcom/android/server/am/BackAppResourcePolicyManager;->mPendingBroadcasts:Ljava/util/ArrayList;
 
@@ -311,7 +290,6 @@
 
     if-le v11, v13, :cond_e
 
-    .line 562
     sget-object v11, Lcom/android/server/am/BackAppResourcePolicyManager;->mPendingBroadcasts:Ljava/util/ArrayList;
 
     const/4 v13, 0x1
@@ -326,7 +304,6 @@
 
     move-object v2, v0
 
-    .line 563
     sget-object v11, Lcom/android/server/am/BackAppResourcePolicyManager;->mPendingBroadcasts:Ljava/util/ArrayList;
 
     const/4 v13, 0x0
@@ -341,17 +318,14 @@
 
     move-object v10, v0
 
-    .line 568
     :cond_7
     :goto_2
     monitor-exit v12
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 570
     if-eqz v10, :cond_8
 
-    .line 571
     iget-object v11, p0, Lcom/android/server/am/BackAppResourcePolicyManager$1;->this$0:Lcom/android/server/am/BackAppResourcePolicyManager;
 
     const-string v12, "com.google.android"
@@ -363,17 +337,14 @@
 
     move-result-object v5
 
-    .line 572
     iget-object v11, p0, Lcom/android/server/am/BackAppResourcePolicyManager$1;->this$0:Lcom/android/server/am/BackAppResourcePolicyManager;
 
     # invokes: Lcom/android/server/am/BackAppResourcePolicyManager;->syncPendingBroadcastLocked(Lcom/android/server/am/BroadcastRecord;)Z
     invoke-static {v11, v10}, Lcom/android/server/am/BackAppResourcePolicyManager;->access$300(Lcom/android/server/am/BackAppResourcePolicyManager;Lcom/android/server/am/BroadcastRecord;)Z
 
-    .line 575
     :cond_8
     if-eqz v2, :cond_9
 
-    .line 576
     iget-object v11, p0, Lcom/android/server/am/BackAppResourcePolicyManager$1;->this$0:Lcom/android/server/am/BackAppResourcePolicyManager;
 
     const-string v12, "com.google.android"
@@ -385,13 +356,11 @@
 
     move-result-object v1
 
-    .line 577
     iget-object v11, p0, Lcom/android/server/am/BackAppResourcePolicyManager$1;->this$0:Lcom/android/server/am/BackAppResourcePolicyManager;
 
     # invokes: Lcom/android/server/am/BackAppResourcePolicyManager;->syncPendingBroadcastLocked(Lcom/android/server/am/BroadcastRecord;)Z
     invoke-static {v11, v2}, Lcom/android/server/am/BackAppResourcePolicyManager;->access$300(Lcom/android/server/am/BackAppResourcePolicyManager;Lcom/android/server/am/BroadcastRecord;)Z
 
-    .line 580
     :cond_9
     iget-object v11, p0, Lcom/android/server/am/BackAppResourcePolicyManager$1;->this$0:Lcom/android/server/am/BackAppResourcePolicyManager;
 
@@ -414,7 +383,6 @@
     :cond_a
     const/4 v7, 0x1
 
-    .line 581
     .local v7, "isConnect":Z
     :goto_3
     sget-boolean v11, Lcom/android/server/am/ActivityManagerDebugConfig;->DEBUG_LIMIT:Z
@@ -467,14 +435,11 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 582
     :cond_b
     if-eqz v7, :cond_12
 
-    .line 583
     const/4 v6, 0x1
 
-    .line 584
     .local v6, "isAvailable":Z
     iget-object v11, p0, Lcom/android/server/am/BackAppResourcePolicyManager$1;->this$0:Lcom/android/server/am/BackAppResourcePolicyManager;
 
@@ -490,14 +455,11 @@
 
     check-cast v4, Landroid/net/ConnectivityManager;
 
-    .line 585
     .local v4, "cm":Landroid/net/ConnectivityManager;
     if-nez v4, :cond_10
 
-    .line 586
     const/4 v6, 0x0
 
-    .line 593
     :cond_c
     :goto_4
     sget-boolean v11, Lcom/android/server/am/ActivityManagerDebugConfig;->DEBUG_LIMIT:Z
@@ -530,23 +492,19 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 594
     :cond_d
     if-eqz v6, :cond_0
 
-    .line 595
     const/4 v11, 0x1
 
     # invokes: Lcom/android/server/am/BackAppResourcePolicyManager;->setOverseaNetStatus(Z)V
     invoke-static {v11}, Lcom/android/server/am/BackAppResourcePolicyManager;->access$500(Z)V
 
-    .line 596
     iget-object v11, p0, Lcom/android/server/am/BackAppResourcePolicyManager$1;->this$0:Lcom/android/server/am/BackAppResourcePolicyManager;
 
     # invokes: Lcom/android/server/am/BackAppResourcePolicyManager;->syncPendingBroadcastLocked(Lcom/android/server/am/BroadcastRecord;)Z
     invoke-static {v11, v5}, Lcom/android/server/am/BackAppResourcePolicyManager;->access$300(Lcom/android/server/am/BackAppResourcePolicyManager;Lcom/android/server/am/BroadcastRecord;)Z
 
-    .line 597
     iget-object v11, p0, Lcom/android/server/am/BackAppResourcePolicyManager$1;->this$0:Lcom/android/server/am/BackAppResourcePolicyManager;
 
     # invokes: Lcom/android/server/am/BackAppResourcePolicyManager;->syncPendingBroadcastLocked(Lcom/android/server/am/BroadcastRecord;)Z
@@ -554,7 +512,6 @@
 
     goto/16 :goto_0
 
-    .line 564
     .end local v4    # "cm":Landroid/net/ConnectivityManager;
     .end local v6    # "isAvailable":Z
     .end local v7    # "isConnect":Z
@@ -570,7 +527,6 @@
 
     if-ne v11, v13, :cond_7
 
-    .line 565
     sget-object v11, Lcom/android/server/am/BackAppResourcePolicyManager;->mPendingBroadcasts:Ljava/util/ArrayList;
 
     const/4 v13, 0x0
@@ -587,7 +543,6 @@
 
     goto/16 :goto_2
 
-    .line 568
     :catchall_1
     move-exception v11
 
@@ -597,13 +552,11 @@
 
     throw v11
 
-    .line 580
     :cond_f
     const/4 v7, 0x0
 
     goto/16 :goto_3
 
-    .line 588
     .restart local v4    # "cm":Landroid/net/ConnectivityManager;
     .restart local v6    # "isAvailable":Z
     .restart local v7    # "isConnect":Z
@@ -612,7 +565,6 @@
 
     move-result-object v3
 
-    .line 589
     .local v3, "activeNetworkInfo":Landroid/net/NetworkInfo;
     if-eqz v3, :cond_11
 
@@ -622,13 +574,11 @@
 
     if-nez v11, :cond_c
 
-    .line 590
     :cond_11
     const/4 v6, 0x0
 
     goto :goto_4
 
-    .line 600
     .end local v3    # "activeNetworkInfo":Landroid/net/NetworkInfo;
     .end local v4    # "cm":Landroid/net/ConnectivityManager;
     .end local v6    # "isAvailable":Z
@@ -640,7 +590,6 @@
 
     goto/16 :goto_0
 
-    .line 603
     .end local v7    # "isConnect":Z
     :cond_13
     const/4 v11, 0x0
@@ -650,7 +599,6 @@
 
     goto/16 :goto_0
 
-    .line 547
     .end local v1    # "_google_r":Lcom/android/server/am/BroadcastRecord;
     .end local v2    # "_r":Lcom/android/server/am/BroadcastRecord;
     .end local v5    # "google_r":Lcom/android/server/am/BroadcastRecord;

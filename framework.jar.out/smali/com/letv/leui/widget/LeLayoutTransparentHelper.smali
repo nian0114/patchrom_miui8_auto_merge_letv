@@ -22,15 +22,12 @@
     .locals 1
 
     .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/LeLayoutTransparentHelper;->isTrasparent:Z
 
-    .line 34
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/LeLayoutTransparentHelper;->hideMode:Z
@@ -47,23 +44,19 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 37
     iget-boolean v1, p0, Lcom/letv/leui/widget/LeLayoutTransparentHelper;->isTrasparent:Z
 
     if-eqz v1, :cond_0
 
-    .line 38
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    .line 39
     .local v0, "mPaint":Landroid/graphics/Paint;
     sget-object v1, Landroid/graphics/Paint$Style;->FILL_AND_STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 40
     new-instance v1, Landroid/graphics/PorterDuffXfermode;
 
     sget-object v2, Landroid/graphics/PorterDuff$Mode;->CLEAR:Landroid/graphics/PorterDuff$Mode;
@@ -72,14 +65,12 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    .line 41
     iget-boolean v1, p0, Lcom/letv/leui/widget/LeLayoutTransparentHelper;->hideMode:Z
 
     const/4 v2, 0x1
 
     if-ne v1, v2, :cond_1
 
-    .line 42
     new-instance v1, Landroid/graphics/RectF;
 
     invoke-virtual {p1}, Landroid/graphics/Canvas;->getWidth()I
@@ -102,13 +93,11 @@
 
     invoke-virtual {p1, v1, v0}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    .line 48
     .end local v0    # "mPaint":Landroid/graphics/Paint;
     :cond_0
     :goto_0
     return-void
 
-    .line 44
     .restart local v0    # "mPaint":Landroid/graphics/Paint;
     :cond_1
     new-instance v1, Landroid/graphics/RectF;
@@ -150,7 +139,6 @@
     .locals 1
 
     .prologue
-    .line 25
     iget-boolean v0, p0, Lcom/letv/leui/widget/LeLayoutTransparentHelper;->isTrasparent:Z
 
     return v0
@@ -161,10 +149,8 @@
     .param p1, "hideMode"    # Z
 
     .prologue
-    .line 31
     iput-boolean p1, p0, Lcom/letv/leui/widget/LeLayoutTransparentHelper;->hideMode:Z
 
-    .line 32
     return-void
 .end method
 
@@ -173,10 +159,8 @@
     .param p1, "hidePercent"    # F
 
     .prologue
-    .line 15
     iput p1, p0, Lcom/letv/leui/widget/LeLayoutTransparentHelper;->hidePercent:F
 
-    .line 16
     return-void
 .end method
 
@@ -185,9 +169,7 @@
     .param p1, "isTrasparent"    # Z
 
     .prologue
-    .line 21
     iput-boolean p1, p0, Lcom/letv/leui/widget/LeLayoutTransparentHelper;->isTrasparent:Z
 
-    .line 22
     return-void
 .end method

@@ -79,7 +79,6 @@
 
     const/4 v4, 0x0
 
-    .line 8
     new-instance v0, Lcom/letv/domain/Service;
 
     const-string v1, "ACCOUNT"
@@ -90,7 +89,6 @@
 
     sput-object v0, Lcom/letv/domain/Service;->ACCOUNT:Lcom/letv/domain/Service;
 
-    .line 9
     new-instance v0, Lcom/letv/domain/Service;
 
     const-string v1, "ITV"
@@ -101,7 +99,6 @@
 
     sput-object v0, Lcom/letv/domain/Service;->ITV:Lcom/letv/domain/Service;
 
-    .line 10
     new-instance v0, Lcom/letv/domain/Service;
 
     const-string v1, "DEVICE"
@@ -112,7 +109,6 @@
 
     sput-object v0, Lcom/letv/domain/Service;->DEVICE:Lcom/letv/domain/Service;
 
-    .line 11
     new-instance v0, Lcom/letv/domain/Service;
 
     const-string v1, "APIZHIFU"
@@ -123,7 +119,6 @@
 
     sput-object v0, Lcom/letv/domain/Service;->APIZHIFU:Lcom/letv/domain/Service;
 
-    .line 12
     new-instance v0, Lcom/letv/domain/Service;
 
     const-string v1, "ZHIFU"
@@ -134,7 +129,6 @@
 
     sput-object v0, Lcom/letv/domain/Service;->ZHIFU:Lcom/letv/domain/Service;
 
-    .line 13
     new-instance v0, Lcom/letv/domain/Service;
 
     const-string v1, "YUANXIAN"
@@ -147,7 +141,6 @@
 
     sput-object v0, Lcom/letv/domain/Service;->YUANXIAN:Lcom/letv/domain/Service;
 
-    .line 14
     new-instance v0, Lcom/letv/domain/Service;
 
     const-string v1, "USERCENTER"
@@ -160,7 +153,6 @@
 
     sput-object v0, Lcom/letv/domain/Service;->USERCENTER:Lcom/letv/domain/Service;
 
-    .line 15
     new-instance v0, Lcom/letv/domain/Service;
 
     const-string v1, "LOCK"
@@ -173,7 +165,6 @@
 
     sput-object v0, Lcom/letv/domain/Service;->LOCK:Lcom/letv/domain/Service;
 
-    .line 16
     new-instance v0, Lcom/letv/domain/Service;
 
     const-string v1, "BROWSER"
@@ -186,7 +177,6 @@
 
     sput-object v0, Lcom/letv/domain/Service;->BROWSER:Lcom/letv/domain/Service;
 
-    .line 17
     new-instance v0, Lcom/letv/domain/Service;
 
     const-string v1, "CALENDAR"
@@ -199,7 +189,6 @@
 
     sput-object v0, Lcom/letv/domain/Service;->CALENDAR:Lcom/letv/domain/Service;
 
-    .line 18
     new-instance v0, Lcom/letv/domain/Service;
 
     const-string v1, "XSQUARE"
@@ -212,7 +201,6 @@
 
     sput-object v0, Lcom/letv/domain/Service;->XSQUARE:Lcom/letv/domain/Service;
 
-    .line 19
     new-instance v0, Lcom/letv/domain/Service;
 
     const-string v1, "MUSIC"
@@ -225,7 +213,6 @@
 
     sput-object v0, Lcom/letv/domain/Service;->MUSIC:Lcom/letv/domain/Service;
 
-    .line 20
     new-instance v0, Lcom/letv/domain/Service;
 
     const-string v1, "PAY"
@@ -238,7 +225,6 @@
 
     sput-object v0, Lcom/letv/domain/Service;->PAY:Lcom/letv/domain/Service;
 
-    .line 21
     new-instance v0, Lcom/letv/domain/Service;
 
     const-string v1, "OTA"
@@ -251,7 +237,6 @@
 
     sput-object v0, Lcom/letv/domain/Service;->OTA:Lcom/letv/domain/Service;
 
-    .line 22
     new-instance v0, Lcom/letv/domain/Service;
 
     const-string v1, "XFEEDBACK"
@@ -264,7 +249,6 @@
 
     sput-object v0, Lcom/letv/domain/Service;->XFEEDBACK:Lcom/letv/domain/Service;
 
-    .line 23
     new-instance v0, Lcom/letv/domain/Service;
 
     const-string v1, "XPAGE"
@@ -277,7 +261,6 @@
 
     sput-object v0, Lcom/letv/domain/Service;->XPAGE:Lcom/letv/domain/Service;
 
-    .line 24
     new-instance v0, Lcom/letv/domain/Service;
 
     const-string v1, "REMOTE"
@@ -290,7 +273,6 @@
 
     sput-object v0, Lcom/letv/domain/Service;->REMOTE:Lcom/letv/domain/Service;
 
-    .line 25
     new-instance v0, Lcom/letv/domain/Service;
 
     const-string v1, "CONTROL"
@@ -303,7 +285,6 @@
 
     sput-object v0, Lcom/letv/domain/Service;->CONTROL:Lcom/letv/domain/Service;
 
-    .line 26
     new-instance v0, Lcom/letv/domain/Service;
 
     const-string v1, "PUSH"
@@ -316,7 +297,6 @@
 
     sput-object v0, Lcom/letv/domain/Service;->PUSH:Lcom/letv/domain/Service;
 
-    .line 27
     new-instance v0, Lcom/letv/domain/Service;
 
     const-string v1, "SYNC"
@@ -329,7 +309,6 @@
 
     sput-object v0, Lcom/letv/domain/Service;->SYNC:Lcom/letv/domain/Service;
 
-    .line 28
     new-instance v0, Lcom/letv/domain/Service;
 
     const-string v1, "WALLPAPER"
@@ -342,7 +321,6 @@
 
     sput-object v0, Lcom/letv/domain/Service;->WALLPAPER:Lcom/letv/domain/Service;
 
-    .line 6
     const/16 v0, 0x15
 
     new-array v0, v0, [Lcom/letv/domain/Service;
@@ -480,13 +458,10 @@
     .end annotation
 
     .prologue
-    .line 32
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 33
     iput-object p3, p0, Lcom/letv/domain/Service;->type:Ljava/lang/String;
 
-    .line 34
     return-void
 .end method
 
@@ -495,7 +470,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 6
     const-class v0, Lcom/letv/domain/Service;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -511,7 +485,6 @@
     .locals 1
 
     .prologue
-    .line 6
     sget-object v0, Lcom/letv/domain/Service;->$VALUES:[Lcom/letv/domain/Service;
 
     invoke-virtual {v0}, [Lcom/letv/domain/Service;->clone()Ljava/lang/Object;
@@ -529,7 +502,6 @@
     .locals 1
 
     .prologue
-    .line 37
     iget-object v0, p0, Lcom/letv/domain/Service;->type:Ljava/lang/String;
 
     return-object v0

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 231
     iput-object p1, p0, Lcom/letv/leui/widget/DragSortHelper$1;->this$0:Lcom/letv/leui/widget/DragSortHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "t"    # J
 
     .prologue
-    .line 234
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortHelper$1;->this$0:Lcom/letv/leui/widget/DragSortHelper;
 
     # getter for: Lcom/letv/leui/widget/DragSortHelper;->mMaxScrollSpeed:F

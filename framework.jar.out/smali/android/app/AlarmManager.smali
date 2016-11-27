@@ -64,13 +64,10 @@
     .param p2, "ctx"    # Landroid/content/Context;
 
     .prologue
-    .line 179
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 180
     iput-object p1, p0, Landroid/app/AlarmManager;->mService:Landroid/app/IAlarmManager;
 
-    .line 182
     invoke-virtual {p2}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v0
@@ -79,7 +76,6 @@
 
     iput v0, p0, Landroid/app/AlarmManager;->mTargetSdkVersion:I
 
-    .line 183
     iget v0, p0, Landroid/app/AlarmManager;->mTargetSdkVersion:I
 
     const/16 v1, 0x13
@@ -91,10 +87,8 @@
     :goto_0
     iput-boolean v0, p0, Landroid/app/AlarmManager;->mAlwaysExact:Z
 
-    .line 184
     return-void
 
-    .line 183
     :cond_0
     const/4 v0, 0x0
 
@@ -105,7 +99,6 @@
     .locals 2
 
     .prologue
-    .line 187
     iget-boolean v0, p0, Landroid/app/AlarmManager;->mAlwaysExact:Z
 
     if-eqz v0, :cond_0
@@ -133,17 +126,14 @@
     .param p11, "alarmClock"    # Landroid/app/AlarmManager$AlarmClockInfo;
 
     .prologue
-    .line 490
     const-wide/16 v0, 0x0
 
     cmp-long v0, p2, v0
 
     if-gez v0, :cond_0
 
-    .line 498
     const-wide/16 p2, 0x0
 
-    .line 502
     :cond_0
     :try_start_0
     iget-object v0, p0, Landroid/app/AlarmManager;->mService:Landroid/app/IAlarmManager;
@@ -168,11 +158,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 506
     :goto_0
     return-void
 
-    .line 504
     :catch_0
     move-exception v0
 
@@ -186,7 +174,6 @@
     .param p1, "operation"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 722
     :try_start_0
     iget-object v0, p0, Landroid/app/AlarmManager;->mService:Landroid/app/IAlarmManager;
 
@@ -194,11 +181,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 725
     :goto_0
     return-void
 
-    .line 723
     :catch_0
     move-exception v0
 
@@ -212,10 +197,8 @@
     .param p3, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 436
     invoke-virtual {p0, p2}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 437
     return-void
 .end method
 
@@ -223,7 +206,6 @@
     .locals 1
 
     .prologue
-    .line 798
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -240,7 +222,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 814
     :try_start_0
     iget-object v1, p0, Landroid/app/AlarmManager;->mService:Landroid/app/IAlarmManager;
 
@@ -250,15 +231,12 @@
 
     move-result-object v1
 
-    .line 816
     :goto_0
     return-object v1
 
-    .line 815
     :catch_0
     move-exception v0
 
-    .line 816
     .local v0, "ex":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -269,7 +247,6 @@
     .locals 4
 
     .prologue
-    .line 782
     :try_start_0
     iget-object v1, p0, Landroid/app/AlarmManager;->mService:Landroid/app/IAlarmManager;
 
@@ -279,15 +256,12 @@
 
     move-result-wide v2
 
-    .line 784
     :goto_0
     return-wide v2
 
-    .line 783
     :catch_0
     move-exception v0
 
-    .line 784
     .local v0, "ex":Landroid/os/RemoteException;
     const-wide v2, 0x7fffffffffffffffL
 
@@ -304,7 +278,6 @@
     .param p9, "workSource"    # Landroid/os/WorkSource;
 
     .prologue
-    .line 484
     const/4 v8, 0x0
 
     const/4 v11, 0x0
@@ -325,7 +298,6 @@
 
     invoke-direct/range {v0 .. v11}, Landroid/app/AlarmManager;->setImpl(IJJJILandroid/app/PendingIntent;Landroid/os/WorkSource;Landroid/app/AlarmManager$AlarmClockInfo;)V
 
-    .line 486
     return-void
 .end method
 
@@ -336,7 +308,6 @@
     .param p4, "operation"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 261
     invoke-direct {p0}, Landroid/app/AlarmManager;->legacyExactLength()J
 
     move-result-wide v4
@@ -359,7 +330,6 @@
 
     invoke-direct/range {v0 .. v11}, Landroid/app/AlarmManager;->setImpl(IJJJILandroid/app/PendingIntent;Landroid/os/WorkSource;Landroid/app/AlarmManager$AlarmClockInfo;)V
 
-    .line 262
     return-void
 .end method
 
@@ -373,7 +343,6 @@
 
     const/4 v1, 0x0
 
-    .line 477
     invoke-virtual {p1}, Landroid/app/AlarmManager$AlarmClockInfo;->getTriggerTime()J
 
     move-result-wide v2
@@ -392,7 +361,6 @@
 
     invoke-direct/range {v0 .. v11}, Landroid/app/AlarmManager;->setImpl(IJJJILandroid/app/PendingIntent;Landroid/os/WorkSource;Landroid/app/AlarmManager$AlarmClockInfo;)V
 
-    .line 478
     return-void
 .end method
 
@@ -403,7 +371,6 @@
     .param p4, "operation"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 652
     const-wide/16 v4, -0x1
 
     const-wide/16 v6, 0x0
@@ -424,7 +391,6 @@
 
     invoke-direct/range {v0 .. v11}, Landroid/app/AlarmManager;->setImpl(IJJJILandroid/app/PendingIntent;Landroid/os/WorkSource;Landroid/app/AlarmManager$AlarmClockInfo;)V
 
-    .line 654
     return-void
 .end method
 
@@ -435,7 +401,6 @@
     .param p4, "operation"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 411
     const-wide/16 v4, 0x0
 
     const-wide/16 v6, 0x0
@@ -456,7 +421,6 @@
 
     invoke-direct/range {v0 .. v11}, Landroid/app/AlarmManager;->setImpl(IJJJILandroid/app/PendingIntent;Landroid/os/WorkSource;Landroid/app/AlarmManager$AlarmClockInfo;)V
 
-    .line 412
     return-void
 .end method
 
@@ -467,7 +431,6 @@
     .param p4, "operation"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 706
     const-wide/16 v4, 0x0
 
     const-wide/16 v6, 0x0
@@ -488,7 +451,6 @@
 
     invoke-direct/range {v0 .. v11}, Landroid/app/AlarmManager;->setImpl(IJJJILandroid/app/PendingIntent;Landroid/os/WorkSource;Landroid/app/AlarmManager$AlarmClockInfo;)V
 
-    .line 708
     return-void
 .end method
 
@@ -499,7 +461,6 @@
     .param p4, "operation"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 449
     const-wide/16 v4, 0x0
 
     const-wide/16 v6, 0x0
@@ -520,7 +481,6 @@
 
     invoke-direct/range {v0 .. v11}, Landroid/app/AlarmManager;->setImpl(IJJJILandroid/app/PendingIntent;Landroid/os/WorkSource;Landroid/app/AlarmManager$AlarmClockInfo;)V
 
-    .line 450
     return-void
 .end method
 
@@ -532,7 +492,6 @@
     .param p6, "operation"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 603
     const-wide/16 v4, -0x1
 
     const/4 v8, 0x0
@@ -553,7 +512,6 @@
 
     invoke-direct/range {v0 .. v11}, Landroid/app/AlarmManager;->setImpl(IJJJILandroid/app/PendingIntent;Landroid/os/WorkSource;Landroid/app/AlarmManager$AlarmClockInfo;)V
 
-    .line 604
     return-void
 .end method
 
@@ -564,12 +522,10 @@
     .param p4, "operation"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 424
     const/4 v0, 0x4
 
     invoke-virtual {p0, v0, p2, p3, p4}, Landroid/app/AlarmManager;->setExact(IJLandroid/app/PendingIntent;)V
 
-    .line 425
     return-void
 .end method
 
@@ -581,7 +537,6 @@
     .param p6, "operation"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 322
     invoke-direct {p0}, Landroid/app/AlarmManager;->legacyExactLength()J
 
     move-result-wide v4
@@ -604,7 +559,6 @@
 
     invoke-direct/range {v0 .. v11}, Landroid/app/AlarmManager;->setImpl(IJJJILandroid/app/PendingIntent;Landroid/os/WorkSource;Landroid/app/AlarmManager$AlarmClockInfo;)V
 
-    .line 324
     return-void
 .end method
 
@@ -613,7 +567,6 @@
     .param p1, "millis"    # J
 
     .prologue
-    .line 735
     :try_start_0
     iget-object v0, p0, Landroid/app/AlarmManager;->mService:Landroid/app/IAlarmManager;
 
@@ -621,11 +574,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 738
     :goto_0
     return-void
 
-    .line 736
     :catch_0
     move-exception v0
 
@@ -637,18 +588,15 @@
     .param p1, "timeZone"    # Ljava/lang/String;
 
     .prologue
-    .line 756
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 777
     :goto_0
     return-void
 
-    .line 761
     :cond_0
     iget v1, p0, Landroid/app/AlarmManager;->mTargetSdkVersion:I
 
@@ -656,10 +604,8 @@
 
     if-lt v1, v2, :cond_1
 
-    .line 762
     const/4 v0, 0x0
 
-    .line 764
     .local v0, "hasTimeZone":Z
     :try_start_0
     invoke-static {}, Llibcore/util/ZoneInfoDB;->getInstance()Llibcore/util/ZoneInfoDB$TzData;
@@ -672,11 +618,9 @@
 
     move-result v0
 
-    .line 768
     :goto_1
     if-nez v0, :cond_1
 
-    .line 769
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -707,7 +651,6 @@
 
     throw v1
 
-    .line 774
     .end local v0    # "hasTimeZone":Z
     :cond_1
     :try_start_1
@@ -719,13 +662,11 @@
 
     goto :goto_0
 
-    .line 775
     :catch_0
     move-exception v1
 
     goto :goto_0
 
-    .line 765
     .restart local v0    # "hasTimeZone":Z
     :catch_1
     move-exception v1
@@ -741,7 +682,6 @@
     .param p6, "operation"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 373
     const-wide/16 v6, 0x0
 
     const/4 v8, 0x0
@@ -762,6 +702,5 @@
 
     invoke-direct/range {v0 .. v11}, Landroid/app/AlarmManager;->setImpl(IJJJILandroid/app/PendingIntent;Landroid/os/WorkSource;Landroid/app/AlarmManager$AlarmClockInfo;)V
 
-    .line 374
     return-void
 .end method

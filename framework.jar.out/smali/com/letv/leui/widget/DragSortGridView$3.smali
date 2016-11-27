@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 595
     iput-object p1, p0, Lcom/letv/leui/widget/DragSortGridView$3;->this$0:Lcom/letv/leui/widget/DragSortGridView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +40,9 @@
     .param p1, "valueAnimator"    # Landroid/animation/ValueAnimator;
 
     .prologue
-    .line 598
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortGridView$3;->this$0:Lcom/letv/leui/widget/DragSortGridView;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/DragSortGridView;->invalidate()V
 
-    .line 599
     return-void
 .end method

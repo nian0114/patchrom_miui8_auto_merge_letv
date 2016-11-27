@@ -78,29 +78,24 @@
 
     const/4 v1, 0x2
 
-    .line 6634
     invoke-direct {p0}, Landroid/view/ActionMode;-><init>()V
 
-    .line 6614
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mIsFromTextView:Z
 
-    .line 6616
     new-instance v0, Landroid/widget/Editor$LeTextActionModelImpl$1;
 
     invoke-direct {v0, p0}, Landroid/widget/Editor$LeTextActionModelImpl$1;-><init>(Landroid/widget/Editor$LeTextActionModelImpl;)V
 
     iput-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mMovingOff:Ljava/lang/Runnable;
 
-    .line 6623
     new-instance v0, Landroid/widget/Editor$LeTextActionModelImpl$2;
 
     invoke-direct {v0, p0}, Landroid/widget/Editor$LeTextActionModelImpl$2;-><init>(Landroid/widget/Editor$LeTextActionModelImpl;)V
 
     iput-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mHideOff:Ljava/lang/Runnable;
 
-    .line 6635
     invoke-static {p1}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -109,7 +104,6 @@
 
     iput-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mContext:Landroid/content/Context;
 
-    .line 6636
     invoke-static {p2}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -118,7 +112,6 @@
 
     iput-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mCallback:Landroid/view/ActionMode$Callback2;
 
-    .line 6637
     new-instance v0, Lcom/android/internal/view/menu/MenuBuilder;
 
     invoke-direct {v0, p1}, Lcom/android/internal/view/menu/MenuBuilder;-><init>(Landroid/content/Context;)V
@@ -129,67 +122,56 @@
 
     iput-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mMenu:Lcom/android/internal/view/menu/MenuBuilder;
 
-    .line 6639
     invoke-virtual {p0, v1}, Landroid/widget/Editor$LeTextActionModelImpl;->setType(I)V
 
-    .line 6640
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mContentRect:Landroid/graphics/Rect;
 
-    .line 6641
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mContentRectOnScreen:Landroid/graphics/Rect;
 
-    .line 6642
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mPreviousContentRectOnScreen:Landroid/graphics/Rect;
 
-    .line 6643
     new-array v0, v1, [I
 
     iput-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mViewPositionOnScreen:[I
 
-    .line 6644
     new-array v0, v1, [I
 
     iput-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mPreviousViewPositionOnScreen:[I
 
-    .line 6645
     new-array v0, v1, [I
 
     iput-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mRootViewPositionOnScreen:[I
 
-    .line 6646
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mViewRectOnScreen:Landroid/graphics/Rect;
 
-    .line 6647
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mPreviousViewRectOnScreen:Landroid/graphics/Rect;
 
-    .line 6648
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mScreenRect:Landroid/graphics/Rect;
 
-    .line 6649
     invoke-static {p3}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -198,22 +180,18 @@
 
     iput-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mOriginatingView:Landroid/view/View;
 
-    .line 6650
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mOriginatingView:Landroid/view/View;
 
     iget-object v1, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mViewPositionOnScreen:[I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 6651
     instance-of v0, p3, Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
 
-    .line 6652
     iput-boolean v2, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mIsFromTextView:Z
 
-    .line 6654
     :cond_0
     return-void
 .end method
@@ -223,7 +201,6 @@
     .param p0, "x0"    # Landroid/widget/Editor$LeTextActionModelImpl;
 
     .prologue
-    .line 6594
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mFloatingToolbarVisibilityHelper:Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;
 
     return-object v0
@@ -234,7 +211,6 @@
     .param p0, "x0"    # Landroid/widget/Editor$LeTextActionModelImpl;
 
     .prologue
-    .line 6594
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mCallback:Landroid/view/ActionMode$Callback2;
 
     return-object v0
@@ -248,7 +224,6 @@
 
     const/4 v2, 0x0
 
-    .line 6827
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mFloatingToolbar:Lcom/letv/leui/text/LeFloatingToolbar;
 
     if-eqz v0, :cond_0
@@ -258,7 +233,6 @@
     :goto_0
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 6828
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mFloatingToolbarVisibilityHelper:Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;
 
     if-eqz v0, :cond_1
@@ -266,19 +240,16 @@
     :goto_1
     invoke-static {v1}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 6829
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 6827
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 6828
     goto :goto_1
 .end method
 
@@ -288,7 +259,6 @@
     .param p1, "b"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 6762
     iget v0, p0, Landroid/graphics/Rect;->left:I
 
     iget v1, p1, Landroid/graphics/Rect;->right:I
@@ -330,7 +300,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 6748
     iget-object v1, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mScreenRect:Landroid/graphics/Rect;
 
     iget-object v2, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mContext:Landroid/content/Context;
@@ -359,7 +328,6 @@
 
     invoke-virtual {v1, v0, v0, v2, v3}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 6754
     iget-object v1, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mContentRectOnScreen:Landroid/graphics/Rect;
 
     iget-object v2, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mScreenRect:Landroid/graphics/Rect;
@@ -394,17 +362,14 @@
 
     const/4 v3, 0x1
 
-    .line 6716
     invoke-direct {p0}, Landroid/widget/Editor$LeTextActionModelImpl;->checkToolbarInitialized()V
 
-    .line 6718
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mContentRectOnScreen:Landroid/graphics/Rect;
 
     iget-object v1, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mContentRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 6719
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mContentRectOnScreen:Landroid/graphics/Rect;
 
     iget-object v1, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mViewPositionOnScreen:[I
@@ -417,19 +382,16 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Rect;->offset(II)V
 
-    .line 6721
     invoke-direct {p0}, Landroid/widget/Editor$LeTextActionModelImpl;->isContentRectWithinBounds()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 6722
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mFloatingToolbarVisibilityHelper:Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;
 
     invoke-virtual {v0, v4}, Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;->setOutOfBounds(Z)V
 
-    .line 6724
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mContentRectOnScreen:Landroid/graphics/Rect;
 
     iget-object v1, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mPreviousContentRectOnScreen:Landroid/graphics/Rect;
@@ -440,36 +402,30 @@
 
     if-nez v0, :cond_0
 
-    .line 6726
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mOriginatingView:Landroid/view/View;
 
     iget-object v1, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mMovingOff:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 6727
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mFloatingToolbarVisibilityHelper:Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;
 
     invoke-virtual {v0, v3}, Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;->setMoving(Z)V
 
-    .line 6728
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mFloatingToolbarVisibilityHelper:Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;
 
     invoke-virtual {v0}, Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;->updateToolbarVisibility()V
 
-    .line 6729
     iget-boolean v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mIsFromTextView:Z
 
     if-eqz v0, :cond_1
 
-    .line 6730
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mOriginatingView:Landroid/view/View;
 
     iget-object v1, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mMovingOff:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
-    .line 6735
     :goto_0
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mFloatingToolbar:Lcom/letv/leui/text/LeFloatingToolbar;
 
@@ -477,12 +433,10 @@
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/text/LeFloatingToolbar;->setContentRect(Landroid/graphics/Rect;)Lcom/letv/leui/text/LeFloatingToolbar;
 
-    .line 6736
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mFloatingToolbar:Lcom/letv/leui/text/LeFloatingToolbar;
 
     invoke-virtual {v0}, Lcom/letv/leui/text/LeFloatingToolbar;->updateLayout()Lcom/letv/leui/text/LeFloatingToolbar;
 
-    .line 6744
     :cond_0
     :goto_1
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mPreviousContentRectOnScreen:Landroid/graphics/Rect;
@@ -491,10 +445,8 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 6745
     return-void
 
-    .line 6732
     :cond_1
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mOriginatingView:Landroid/view/View;
 
@@ -506,18 +458,15 @@
 
     goto :goto_0
 
-    .line 6739
     :cond_2
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mFloatingToolbarVisibilityHelper:Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;
 
     invoke-virtual {v0, v3}, Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;->setOutOfBounds(Z)V
 
-    .line 6740
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mFloatingToolbarVisibilityHelper:Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;
 
     invoke-virtual {v0}, Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;->updateToolbarVisibility()V
 
-    .line 6741
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mContentRectOnScreen:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->setEmpty()V
@@ -529,31 +478,26 @@
     .locals 2
 
     .prologue
-    .line 6832
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mFloatingToolbar:Lcom/letv/leui/text/LeFloatingToolbar;
 
     invoke-virtual {v0}, Lcom/letv/leui/text/LeFloatingToolbar;->dismiss()V
 
-    .line 6833
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mFloatingToolbarVisibilityHelper:Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;
 
     invoke-virtual {v0}, Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;->deactivate()V
 
-    .line 6834
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mOriginatingView:Landroid/view/View;
 
     iget-object v1, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mMovingOff:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 6835
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mOriginatingView:Landroid/view/View;
 
     iget-object v1, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mHideOff:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 6836
     return-void
 .end method
 
@@ -563,18 +507,14 @@
     .locals 1
 
     .prologue
-    .line 6793
     invoke-direct {p0}, Landroid/widget/Editor$LeTextActionModelImpl;->checkToolbarInitialized()V
 
-    .line 6794
     invoke-direct {p0}, Landroid/widget/Editor$LeTextActionModelImpl;->reset()V
 
-    .line 6795
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mCallback:Landroid/view/ActionMode$Callback2;
 
     invoke-virtual {v0, p0}, Landroid/view/ActionMode$Callback2;->onDestroyActionMode(Landroid/view/ActionMode;)V
 
-    .line 6796
     return-void
 .end method
 
@@ -582,7 +522,6 @@
     .locals 1
 
     .prologue
-    .line 6815
     const/4 v0, 0x0
 
     return-object v0
@@ -592,7 +531,6 @@
     .locals 1
 
     .prologue
-    .line 6800
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mMenu:Lcom/android/internal/view/menu/MenuBuilder;
 
     return-object v0
@@ -602,7 +540,6 @@
     .locals 2
 
     .prologue
-    .line 6820
     new-instance v0, Landroid/view/MenuInflater;
 
     iget-object v1, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mContext:Landroid/content/Context;
@@ -616,7 +553,6 @@
     .locals 1
 
     .prologue
-    .line 6810
     const/4 v0, 0x0
 
     return-object v0
@@ -626,7 +562,6 @@
     .locals 1
 
     .prologue
-    .line 6805
     const/4 v0, 0x0
 
     return-object v0
@@ -637,22 +572,18 @@
     .param p1, "duration"    # J
 
     .prologue
-    .line 6768
     invoke-direct {p0}, Landroid/widget/Editor$LeTextActionModelImpl;->checkToolbarInitialized()V
 
-    .line 6770
     const-wide/16 v0, -0x1
 
     cmp-long v0, p1, v0
 
     if-nez v0, :cond_0
 
-    .line 6771
     invoke-static {}, Landroid/view/ViewConfiguration;->getDefaultActionModeHideDuration()J
 
     move-result-wide p1
 
-    .line 6773
     :cond_0
     const-wide/16 v0, 0xbb8
 
@@ -660,30 +591,25 @@
 
     move-result-wide p1
 
-    .line 6774
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mOriginatingView:Landroid/view/View;
 
     iget-object v1, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mHideOff:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 6775
     const-wide/16 v0, 0x0
 
     cmp-long v0, p1, v0
 
     if-gtz v0, :cond_1
 
-    .line 6776
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mHideOff:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 6782
     :goto_0
     return-void
 
-    .line 6778
     :cond_1
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mFloatingToolbarVisibilityHelper:Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;
 
@@ -691,12 +617,10 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;->setHideRequested(Z)V
 
-    .line 6779
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mFloatingToolbarVisibilityHelper:Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;
 
     invoke-virtual {v0}, Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;->updateToolbarVisibility()V
 
-    .line 6780
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mOriginatingView:Landroid/view/View;
 
     iget-object v1, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mHideOff:Ljava/lang/Runnable;
@@ -710,20 +634,16 @@
     .locals 2
 
     .prologue
-    .line 6686
     invoke-direct {p0}, Landroid/widget/Editor$LeTextActionModelImpl;->checkToolbarInitialized()V
 
-    .line 6687
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mCallback:Landroid/view/ActionMode$Callback2;
 
     iget-object v1, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mMenu:Lcom/android/internal/view/menu/MenuBuilder;
 
     invoke-virtual {v0, p0, v1}, Landroid/view/ActionMode$Callback2;->onPrepareActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z
 
-    .line 6688
     invoke-virtual {p0}, Landroid/widget/Editor$LeTextActionModelImpl;->invalidateContentRect()V
 
-    .line 6689
     return-void
 .end method
 
@@ -731,10 +651,8 @@
     .locals 3
 
     .prologue
-    .line 6693
     invoke-direct {p0}, Landroid/widget/Editor$LeTextActionModelImpl;->checkToolbarInitialized()V
 
-    .line 6694
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mCallback:Landroid/view/ActionMode$Callback2;
 
     iget-object v1, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mOriginatingView:Landroid/view/View;
@@ -743,10 +661,8 @@
 
     invoke-virtual {v0, p0, v1, v2}, Landroid/view/ActionMode$Callback2;->onGetContentRect(Landroid/view/ActionMode;Landroid/view/View;Landroid/graphics/Rect;)V
 
-    .line 6695
     invoke-direct {p0}, Landroid/widget/Editor$LeTextActionModelImpl;->repositionToolbar()V
 
-    .line 6696
     return-void
 .end method
 
@@ -755,20 +671,16 @@
     .param p1, "hasWindowFocus"    # Z
 
     .prologue
-    .line 6786
     invoke-direct {p0}, Landroid/widget/Editor$LeTextActionModelImpl;->checkToolbarInitialized()V
 
-    .line 6787
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mFloatingToolbarVisibilityHelper:Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;
 
     invoke-virtual {v0, p1}, Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;->setWindowFocused(Z)V
 
-    .line 6788
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mFloatingToolbarVisibilityHelper:Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;
 
     invoke-virtual {v0}, Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;->updateToolbarVisibility()V
 
-    .line 6789
     return-void
 .end method
 
@@ -777,7 +689,6 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 6682
     return-void
 .end method
 
@@ -786,7 +697,6 @@
     .param p1, "floatingToolbar"    # Lcom/letv/leui/text/LeFloatingToolbar;
 
     .prologue
-    .line 6657
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mMenu:Lcom/android/internal/view/menu/MenuBuilder;
 
     invoke-virtual {p1, v0}, Lcom/letv/leui/text/LeFloatingToolbar;->setMenu(Landroid/view/Menu;)Lcom/letv/leui/text/LeFloatingToolbar;
@@ -803,7 +713,6 @@
 
     iput-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mFloatingToolbar:Lcom/letv/leui/text/LeFloatingToolbar;
 
-    .line 6665
     new-instance v0, Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;
 
     iget-object v1, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mFloatingToolbar:Lcom/letv/leui/text/LeFloatingToolbar;
@@ -812,12 +721,10 @@
 
     iput-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mFloatingToolbarVisibilityHelper:Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;
 
-    .line 6666
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mFloatingToolbarVisibilityHelper:Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;
 
     invoke-virtual {v0}, Landroid/widget/Editor$LeTextActionModelImpl$FloatingToolbarVisibilityHelper;->activate()V
 
-    .line 6667
     return-void
 .end method
 
@@ -826,7 +733,6 @@
     .param p1, "resId"    # I
 
     .prologue
-    .line 6679
     return-void
 .end method
 
@@ -835,7 +741,6 @@
     .param p1, "subtitle"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 6676
     return-void
 .end method
 
@@ -844,7 +749,6 @@
     .param p1, "resId"    # I
 
     .prologue
-    .line 6673
     return-void
 .end method
 
@@ -853,7 +757,6 @@
     .param p1, "title"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 6670
     return-void
 .end method
 
@@ -865,17 +768,14 @@
 
     const/4 v3, 0x0
 
-    .line 6699
     invoke-direct {p0}, Landroid/widget/Editor$LeTextActionModelImpl;->checkToolbarInitialized()V
 
-    .line 6701
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mOriginatingView:Landroid/view/View;
 
     iget-object v1, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mViewPositionOnScreen:[I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 6702
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mOriginatingView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getRootView()Landroid/view/View;
@@ -886,14 +786,12 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 6703
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mOriginatingView:Landroid/view/View;
 
     iget-object v1, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mViewRectOnScreen:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->getGlobalVisibleRect(Landroid/graphics/Rect;)Z
 
-    .line 6704
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mViewRectOnScreen:Landroid/graphics/Rect;
 
     iget-object v1, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mRootViewPositionOnScreen:[I
@@ -906,7 +804,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Rect;->offset(II)V
 
-    .line 6706
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mViewPositionOnScreen:[I
 
     iget-object v1, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mPreviousViewPositionOnScreen:[I
@@ -927,11 +824,9 @@
 
     if-nez v0, :cond_1
 
-    .line 6708
     :cond_0
     invoke-direct {p0}, Landroid/widget/Editor$LeTextActionModelImpl;->repositionToolbar()V
 
-    .line 6709
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mPreviousViewPositionOnScreen:[I
 
     iget-object v1, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mViewPositionOnScreen:[I
@@ -940,7 +835,6 @@
 
     aput v1, v0, v3
 
-    .line 6710
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mPreviousViewPositionOnScreen:[I
 
     iget-object v1, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mViewPositionOnScreen:[I
@@ -949,14 +843,12 @@
 
     aput v1, v0, v4
 
-    .line 6711
     iget-object v0, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mPreviousViewRectOnScreen:Landroid/graphics/Rect;
 
     iget-object v1, p0, Landroid/widget/Editor$LeTextActionModelImpl;->mViewRectOnScreen:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 6713
     :cond_1
     return-void
 .end method

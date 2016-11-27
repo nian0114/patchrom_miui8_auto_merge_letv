@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1929
     iput-object p1, p0, Lcom/letv/leui/widget/LeHorizontalScrollView$1;->this$0:Lcom/letv/leui/widget/LeHorizontalScrollView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,11 +39,9 @@
     .locals 1
 
     .prologue
-    .line 1931
     iget-object v0, p0, Lcom/letv/leui/widget/LeHorizontalScrollView$1;->this$0:Lcom/letv/leui/widget/LeHorizontalScrollView;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/LeHorizontalScrollView;->requestLayout()V
 
-    .line 1932
     return-void
 .end method

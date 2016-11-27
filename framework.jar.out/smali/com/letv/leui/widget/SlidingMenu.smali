@@ -69,15 +69,12 @@
     .param p2, "slideStyle"    # I
 
     .prologue
-    .line 209
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/letv/leui/widget/SlidingMenu;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 210
     invoke-virtual {p0, p1, p2}, Lcom/letv/leui/widget/SlidingMenu;->attachToActivity(Landroid/app/Activity;I)V
 
-    .line 211
     return-void
 .end method
 
@@ -86,12 +83,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 199
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/letv/leui/widget/SlidingMenu;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 200
     return-void
 .end method
 
@@ -101,12 +96,10 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 220
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/letv/leui/widget/SlidingMenu;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 221
     return-void
 .end method
 
@@ -121,33 +114,26 @@
 
     const/4 v3, -0x1
 
-    .line 231
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 40
     iput-boolean v4, p0, Lcom/letv/leui/widget/SlidingMenu;->mActionbarOverlay:Z
 
-    .line 42
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Lcom/letv/leui/widget/SlidingMenu;->mFitSystemWindows:Z
 
-    .line 86
     iput v4, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAboveOffset:I
 
-    .line 1154
     new-instance v2, Landroid/os/Handler;
 
     invoke-direct {v2}, Landroid/os/Handler;-><init>()V
 
     iput-object v2, p0, Lcom/letv/leui/widget/SlidingMenu;->mHandler:Landroid/os/Handler;
 
-    .line 233
     new-instance v1, Landroid/widget/RelativeLayout$LayoutParams;
 
     invoke-direct {v1, v3, v3}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 234
     .local v1, "behindParams":Landroid/widget/RelativeLayout$LayoutParams;
     new-instance v2, Lcom/letv/leui/widget/CustomViewBehind;
 
@@ -155,17 +141,14 @@
 
     iput-object v2, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewBehind:Lcom/letv/leui/widget/CustomViewBehind;
 
-    .line 235
     iget-object v2, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewBehind:Lcom/letv/leui/widget/CustomViewBehind;
 
     invoke-virtual {p0, v2, v1}, Lcom/letv/leui/widget/SlidingMenu;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 236
     new-instance v0, Landroid/widget/RelativeLayout$LayoutParams;
 
     invoke-direct {v0, v3, v3}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 237
     .local v0, "aboveParams":Landroid/widget/RelativeLayout$LayoutParams;
     new-instance v2, Lcom/letv/leui/widget/CustomViewAbove;
 
@@ -173,26 +156,22 @@
 
     iput-object v2, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
-    .line 238
     iget-object v2, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     invoke-virtual {p0, v2, v0}, Lcom/letv/leui/widget/SlidingMenu;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 240
     iget-object v2, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     iget-object v3, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewBehind:Lcom/letv/leui/widget/CustomViewBehind;
 
     invoke-virtual {v2, v3}, Lcom/letv/leui/widget/CustomViewAbove;->setCustomViewBehind(Lcom/letv/leui/widget/CustomViewBehind;)V
 
-    .line 241
     iget-object v2, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewBehind:Lcom/letv/leui/widget/CustomViewBehind;
 
     iget-object v3, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     invoke-virtual {v2, v3}, Lcom/letv/leui/widget/CustomViewBehind;->setCustomViewAbove(Lcom/letv/leui/widget/CustomViewAbove;)V
 
-    .line 242
     iget-object v2, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     new-instance v3, Lcom/letv/leui/widget/SlidingMenu$1;
@@ -201,7 +180,6 @@
 
     invoke-virtual {v2, v3}, Lcom/letv/leui/widget/CustomViewAbove;->setOnPageChangeListener(Lcom/letv/leui/widget/CustomViewAbove$OnPageChangeListener;)V
 
-    .line 276
     return-void
 .end method
 
@@ -210,7 +188,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/SlidingMenu;
 
     .prologue
-    .line 35
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mSlidingMenuStateChangeListener:Lcom/letv/leui/widget/SlidingMenu$OnMenuStateChangeListener;
 
     return-object v0
@@ -221,7 +198,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/SlidingMenu;
 
     .prologue
-    .line 35
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mOpenListener:Lcom/letv/leui/widget/SlidingMenu$OnOpenListener;
 
     return-object v0
@@ -232,7 +208,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/SlidingMenu;
 
     .prologue
-    .line 35
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mCloseListener:Lcom/letv/leui/widget/SlidingMenu$OnCloseListener;
 
     return-object v0
@@ -243,7 +218,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/SlidingMenu;
 
     .prologue
-    .line 35
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mSecondaryOpenListner:Lcom/letv/leui/widget/SlidingMenu$OnOpenListener;
 
     return-object v0
@@ -261,7 +235,6 @@
 
     const/4 v7, 0x0
 
-    .line 398
     invoke-virtual {p0}, Lcom/letv/leui/widget/SlidingMenu;->getContext()Landroid/content/Context;
 
     move-result-object v4
@@ -280,22 +253,18 @@
 
     move-result-object v0
 
-    .line 400
     .local v0, "a":Landroid/content/res/TypedArray;
     invoke-virtual {v0, v7, v7}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v1
 
-    .line 401
     .local v1, "background":I
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 403
     invoke-virtual {p1, v2, p2}, Landroid/app/LocalActivityManager;->startActivity(Ljava/lang/String;Landroid/content/Intent;)Landroid/view/Window;
 
     move-result-object v3
 
-    .line 404
     .local v3, "window":Landroid/view/Window;
     if-eqz v3, :cond_0
 
@@ -303,30 +272,24 @@
 
     move-result-object v2
 
-    .line 405
     .local v2, "contentView":Landroid/view/View;
     :cond_0
     invoke-virtual {v2, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 407
     if-eqz v2, :cond_1
 
-    .line 408
     invoke-virtual {v2, v7}, Landroid/view/View;->setVisibility(I)V
 
-    .line 409
     invoke-virtual {v2, v8}, Landroid/view/View;->setFocusableInTouchMode(Z)V
 
     move-object v4, v2
 
-    .line 410
     check-cast v4, Landroid/view/ViewGroup;
 
     const/high16 v5, 0x40000
 
     invoke-virtual {v4, v5}, Landroid/view/ViewGroup;->setDescendantFocusability(I)V
 
-    .line 413
     :cond_1
     return-object v2
 .end method
@@ -338,12 +301,10 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 983
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/CustomViewAbove;->addIgnoredView(Landroid/view/View;)V
 
-    .line 984
     return-void
 .end method
 
@@ -353,12 +314,10 @@
     .param p2, "slideStyle"    # I
 
     .prologue
-    .line 285
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, v0}, Lcom/letv/leui/widget/SlidingMenu;->attachToActivity(Landroid/app/Activity;IZ)V
 
-    .line 286
     return-void
 .end method
 
@@ -373,12 +332,10 @@
 
     const/4 v9, 0x0
 
-    .line 297
     if-eqz p2, :cond_0
 
     if-eq p2, v7, :cond_0
 
-    .line 298
     new-instance v6, Ljava/lang/IllegalArgumentException;
 
     const-string v7, "slideStyle must be either SLIDING_WINDOW or SLIDING_CONTENT"
@@ -387,7 +344,6 @@
 
     throw v6
 
-    .line 301
     :cond_0
     invoke-virtual {p0}, Lcom/letv/leui/widget/SlidingMenu;->getParent()Landroid/view/ViewParent;
 
@@ -395,7 +351,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 302
     new-instance v6, Ljava/lang/IllegalStateException;
 
     const-string v7, "This SlidingMenu appears to already be attached"
@@ -404,7 +359,6 @@
 
     throw v6
 
-    .line 306
     :cond_1
     invoke-virtual {p1}, Landroid/app/Activity;->getTheme()Landroid/content/res/Resources$Theme;
 
@@ -420,29 +374,23 @@
 
     move-result-object v0
 
-    .line 308
     .local v0, "a":Landroid/content/res/TypedArray;
     invoke-virtual {v0, v9, v9}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v1
 
-    .line 309
     .local v1, "background":I
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 311
     packed-switch p2, :pswitch_data_0
 
-    .line 336
     :cond_2
     :goto_0
     return-void
 
-    .line 313
     :pswitch_0
     iput-boolean v9, p0, Lcom/letv/leui/widget/SlidingMenu;->mActionbarOverlay:Z
 
-    .line 314
     invoke-virtual {p1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v6
@@ -453,7 +401,6 @@
 
     check-cast v4, Landroid/view/ViewGroup;
 
-    .line 315
     .local v4, "decor":Landroid/view/ViewGroup;
     invoke-virtual {v4, v9}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
@@ -461,28 +408,22 @@
 
     check-cast v5, Landroid/view/ViewGroup;
 
-    .line 317
     .local v5, "decorChild":Landroid/view/ViewGroup;
     invoke-virtual {v5, v1}, Landroid/view/ViewGroup;->setBackgroundResource(I)V
 
-    .line 318
     invoke-virtual {v4, v5}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 319
     invoke-virtual {v4, p0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    .line 320
     invoke-virtual {p0, v5}, Lcom/letv/leui/widget/SlidingMenu;->setContent(Landroid/view/View;)V
 
     goto :goto_0
 
-    .line 323
     .end local v4    # "decor":Landroid/view/ViewGroup;
     .end local v5    # "decorChild":Landroid/view/ViewGroup;
     :pswitch_1
     iput-boolean p3, p0, Lcom/letv/leui/widget/SlidingMenu;->mActionbarOverlay:Z
 
-    .line 325
     const v6, 0x1020002
 
     invoke-virtual {p1, v6}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
@@ -491,35 +432,28 @@
 
     check-cast v3, Landroid/view/ViewGroup;
 
-    .line 327
     .local v3, "contentParent":Landroid/view/ViewGroup;
     invoke-virtual {v3, v9}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 328
     .local v2, "content":Landroid/view/View;
     invoke-virtual {v3, v2}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 329
     invoke-virtual {v3, p0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    .line 330
     invoke-virtual {p0, v2}, Lcom/letv/leui/widget/SlidingMenu;->setContent(Landroid/view/View;)V
 
-    .line 332
     invoke-virtual {v2}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v6
 
     if-nez v6, :cond_2
 
-    .line 333
     invoke-virtual {v2, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
     goto :goto_0
 
-    .line 311
     nop
 
     :pswitch_data_0
@@ -533,12 +467,10 @@
     .locals 1
 
     .prologue
-    .line 1000
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/CustomViewAbove;->clearIgnoredViews()V
 
-    .line 1001
     return-void
 .end method
 
@@ -552,22 +484,17 @@
     .end annotation
 
     .prologue
-    .line 1143
     iget v1, p1, Landroid/graphics/Rect;->left:I
 
-    .line 1144
     .local v1, "leftPadding":I
     iget v2, p1, Landroid/graphics/Rect;->right:I
 
-    .line 1145
     .local v2, "rightPadding":I
     iget v3, p1, Landroid/graphics/Rect;->top:I
 
-    .line 1146
     .local v3, "topPadding":I
     iget v0, p1, Landroid/graphics/Rect;->bottom:I
 
-    .line 1147
     .local v0, "bottomPadding":I
     iget-boolean v4, p0, Lcom/letv/leui/widget/SlidingMenu;->mActionbarOverlay:Z
 
@@ -577,17 +504,14 @@
 
     if-eqz v4, :cond_0
 
-    .line 1148
     const-string v4, "SlidingMenu"
 
     const-string v5, "setting padding!"
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1149
     invoke-virtual {p0, v1, v3, v2, v0}, Lcom/letv/leui/widget/SlidingMenu;->setPadding(IIII)V
 
-    .line 1151
     :cond_0
     const/4 v4, 0x1
 
@@ -598,7 +522,6 @@
     .locals 1
 
     .prologue
-    .line 663
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewBehind:Lcom/letv/leui/widget/CustomViewBehind;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/CustomViewBehind;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -616,7 +539,6 @@
     .locals 1
 
     .prologue
-    .line 772
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewBehind:Lcom/letv/leui/widget/CustomViewBehind;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/CustomViewBehind;->getScrollScale()F
@@ -630,7 +552,6 @@
     .locals 1
 
     .prologue
-    .line 422
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/CustomViewAbove;->getContent()Landroid/view/View;
@@ -644,7 +565,6 @@
     .locals 1
 
     .prologue
-    .line 718
     iget v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAboveOffset:I
 
     return v0
@@ -654,7 +574,6 @@
     .locals 1
 
     .prologue
-    .line 469
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewBehind:Lcom/letv/leui/widget/CustomViewBehind;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/CustomViewBehind;->getContent()Landroid/view/View;
@@ -668,7 +587,6 @@
     .locals 1
 
     .prologue
-    .line 708
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewBehind:Lcom/letv/leui/widget/CustomViewBehind;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/CustomViewBehind;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -686,7 +604,6 @@
     .locals 1
 
     .prologue
-    .line 544
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewBehind:Lcom/letv/leui/widget/CustomViewBehind;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/CustomViewBehind;->getMode()I
@@ -700,7 +617,6 @@
     .locals 1
 
     .prologue
-    .line 499
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewBehind:Lcom/letv/leui/widget/CustomViewBehind;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/CustomViewBehind;->getSecondaryContent()Landroid/view/View;
@@ -714,7 +630,6 @@
     .locals 1
 
     .prologue
-    .line 804
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/CustomViewAbove;->getTouchMode()I
@@ -728,7 +643,6 @@
     .locals 2
 
     .prologue
-    .line 643
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/CustomViewAbove;->getCurrentItem()I
@@ -763,7 +677,6 @@
     .locals 2
 
     .prologue
-    .line 653
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/CustomViewAbove;->getCurrentItem()I
@@ -789,7 +702,6 @@
     .locals 1
 
     .prologue
-    .line 517
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/CustomViewAbove;->isSlidingEnabled()Z
@@ -809,19 +721,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1158
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0xb
 
     if-ge v2, v3, :cond_1
 
-    .line 1178
     :cond_0
     :goto_0
     return-void
 
-    .line 1161
     :cond_1
     const/4 v2, 0x0
 
@@ -837,14 +746,12 @@
 
     const/4 v0, 0x1
 
-    .line 1162
     .local v0, "layer":Z
     :goto_1
     if-eqz v0, :cond_2
 
     const/4 v1, 0x2
 
-    .line 1165
     .local v1, "layerType":I
     :cond_2
     invoke-virtual {p0}, Lcom/letv/leui/widget/SlidingMenu;->getContent()Landroid/view/View;
@@ -857,7 +764,6 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 1166
     iget-object v2, p0, Lcom/letv/leui/widget/SlidingMenu;->mHandler:Landroid/os/Handler;
 
     new-instance v3, Lcom/letv/leui/widget/SlidingMenu$2;
@@ -873,7 +779,6 @@
     :cond_3
     move v0, v1
 
-    .line 1161
     goto :goto_1
 .end method
 
@@ -886,10 +791,8 @@
     .param p5, "b"    # I
 
     .prologue
-    .line 916
     invoke-super/range {p0 .. p5}, Landroid/widget/RelativeLayout;->onLayout(ZIIII)V
 
-    .line 917
     return-void
 .end method
 
@@ -901,25 +804,20 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 901
     invoke-super {p0, p1, p2}, Landroid/widget/RelativeLayout;->onMeasure(II)V
 
-    .line 902
     invoke-static {v5, p1}, Lcom/letv/leui/widget/SlidingMenu;->getDefaultSize(II)I
 
     move-result v3
 
-    .line 903
     .local v3, "width":I
     invoke-static {v5, p2}, Lcom/letv/leui/widget/SlidingMenu;->getDefaultSize(II)I
 
     move-result v2
 
-    .line 904
     .local v2, "height":I
     invoke-virtual {p0, v3, v2}, Lcom/letv/leui/widget/SlidingMenu;->setMeasuredDimension(II)V
 
-    .line 905
     iget v4, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAboveOffset:I
 
     sub-int v4, v3, v4
@@ -928,24 +826,20 @@
 
     move-result v1
 
-    .line 907
     .local v1, "contentWidth":I
     invoke-static {p2, v5, v2}, Lcom/letv/leui/widget/SlidingMenu;->getChildMeasureSpec(III)I
 
     move-result v0
 
-    .line 909
     .local v0, "contentHeight":I
     iget-object v4, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     if-eqz v4, :cond_0
 
-    .line 910
     iget-object v4, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     invoke-virtual {v4, v1, v0}, Lcom/letv/leui/widget/CustomViewAbove;->measure(II)V
 
-    .line 911
     :cond_0
     return-void
 .end method
@@ -955,12 +849,10 @@
     .param p1, "state"    # Landroid/os/Parcelable;
 
     .prologue
-    .line 1126
     move-object v0, p1
 
     check-cast v0, Lcom/letv/leui/widget/SlidingMenu$SavedState;
 
-    .line 1127
     .local v0, "ss":Lcom/letv/leui/widget/SlidingMenu$SavedState;
     invoke-virtual {v0}, Lcom/letv/leui/widget/SlidingMenu$SavedState;->getSuperState()Landroid/os/Parcelable;
 
@@ -968,7 +860,6 @@
 
     invoke-super {p0, v1}, Landroid/widget/RelativeLayout;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
-    .line 1128
     iget-object v1, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/SlidingMenu$SavedState;->getItem()I
@@ -977,7 +868,6 @@
 
     invoke-virtual {v1, v2}, Lcom/letv/leui/widget/CustomViewAbove;->setCurrentItem(I)V
 
-    .line 1129
     return-void
 .end method
 
@@ -985,12 +875,10 @@
     .locals 3
 
     .prologue
-    .line 1114
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onSaveInstanceState()Landroid/os/Parcelable;
 
     move-result-object v1
 
-    .line 1115
     .local v1, "superState":Landroid/os/Parcelable;
     new-instance v0, Lcom/letv/leui/widget/SlidingMenu$SavedState;
 
@@ -1002,7 +890,6 @@
 
     invoke-direct {v0, v1, v2}, Lcom/letv/leui/widget/SlidingMenu$SavedState;-><init>(Landroid/os/Parcelable;I)V
 
-    .line 1116
     .local v0, "ss":Lcom/letv/leui/widget/SlidingMenu$SavedState;
     return-object v0
 .end method
@@ -1012,12 +899,10 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 992
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/CustomViewAbove;->removeIgnoredView(Landroid/view/View;)V
 
-    .line 993
     return-void
 .end method
 
@@ -1026,12 +911,10 @@
     .param p1, "t"    # Lcom/letv/leui/widget/SlidingMenu$CanvasTransformer;
 
     .prologue
-    .line 795
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewBehind:Lcom/letv/leui/widget/CustomViewBehind;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/CustomViewBehind;->setCanvasTransformer(Lcom/letv/leui/widget/SlidingMenu$CanvasTransformer;)V
 
-    .line 796
     return-void
 .end method
 
@@ -1040,7 +923,6 @@
     .param p1, "f"    # F
 
     .prologue
-    .line 783
     const/4 v0, 0x0
 
     cmpg-float v0, p1, v0
@@ -1053,7 +935,6 @@
 
     if-lez v0, :cond_0
 
-    .line 784
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "ScrollScale must be between 0 and 1"
@@ -1062,13 +943,11 @@
 
     throw v0
 
-    .line 786
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewBehind:Lcom/letv/leui/widget/CustomViewBehind;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/CustomViewBehind;->setScrollScale(F)V
 
-    .line 787
     return-void
 .end method
 
@@ -1077,7 +956,6 @@
     .param p1, "res"    # I
 
     .prologue
-    .line 355
     invoke-virtual {p0}, Lcom/letv/leui/widget/SlidingMenu;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1094,7 +972,6 @@
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/SlidingMenu;->setContent(Landroid/view/View;)V
 
-    .line 356
     return-void
 .end method
 
@@ -1103,12 +980,10 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 374
     iget-object v1, p0, Lcom/letv/leui/widget/SlidingMenu;->mLocalActivityManager:Landroid/app/LocalActivityManager;
 
     if-nez v1, :cond_0
 
-    .line 375
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "Did you forget to call \'public void setup(LocalActivityManager activityManager)\'?"
@@ -1117,7 +992,6 @@
 
     throw v1
 
-    .line 379
     :cond_0
     iget-object v1, p0, Lcom/letv/leui/widget/SlidingMenu;->mLocalActivityManager:Landroid/app/LocalActivityManager;
 
@@ -1125,11 +999,9 @@
 
     move-result-object v0
 
-    .line 380
     .local v0, "v":Landroid/view/View;
     if-nez v0, :cond_1
 
-    .line 381
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "get content from Activity failed!"
@@ -1138,11 +1010,9 @@
 
     throw v1
 
-    .line 384
     :cond_1
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/SlidingMenu;->setContent(Landroid/view/View;)V
 
-    .line 385
     return-void
 .end method
 
@@ -1151,15 +1021,12 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 364
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/CustomViewAbove;->setContent(Landroid/view/View;)V
 
-    .line 365
     invoke-virtual {p0}, Lcom/letv/leui/widget/SlidingMenu;->showContent()V
 
-    .line 366
     return-void
 .end method
 
@@ -1170,15 +1037,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 693
     iput p1, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAboveOffset:I
 
-    .line 694
     iget-object v1, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     invoke-virtual {v1, p1}, Lcom/letv/leui/widget/CustomViewAbove;->setAboveOffsetLeft(I)V
 
-    .line 695
     iget-object v1, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     invoke-virtual {v1}, Lcom/letv/leui/widget/CustomViewAbove;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -1187,16 +1051,13 @@
 
     check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 697
     .local v0, "marginLayoutParams":Landroid/view/ViewGroup$MarginLayoutParams;
     iget v1, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAboveOffset:I
 
     invoke-virtual {v0, v1, v2, v2, v2}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
 
-    .line 698
     invoke-virtual {p0}, Lcom/letv/leui/widget/SlidingMenu;->requestLayout()V
 
-    .line 699
     return-void
 .end method
 
@@ -1205,7 +1066,6 @@
     .param p1, "resID"    # I
 
     .prologue
-    .line 728
     invoke-virtual {p0}, Lcom/letv/leui/widget/SlidingMenu;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -1220,11 +1080,9 @@
 
     float-to-int v0, v1
 
-    .line 729
     .local v0, "i":I
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/SlidingMenu;->setContentOffsetLeft(I)V
 
-    .line 730
     return-void
 .end method
 
@@ -1233,12 +1091,10 @@
     .param p1, "f"    # F
 
     .prologue
-    .line 935
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewBehind:Lcom/letv/leui/widget/CustomViewBehind;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/CustomViewBehind;->setFadeDegree(F)V
 
-    .line 936
     return-void
 .end method
 
@@ -1247,12 +1103,10 @@
     .param p1, "b"    # Z
 
     .prologue
-    .line 925
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewBehind:Lcom/letv/leui/widget/CustomViewBehind;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/CustomViewBehind;->setFadeEnabled(Z)V
 
-    .line 926
     return-void
 .end method
 
@@ -1261,10 +1115,8 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 1132
     iput-boolean p1, p0, Lcom/letv/leui/widget/SlidingMenu;->mFitSystemWindows:Z
 
-    .line 1133
     return-void
 .end method
 
@@ -1273,7 +1125,6 @@
     .param p1, "res"    # I
 
     .prologue
-    .line 432
     invoke-virtual {p0}, Lcom/letv/leui/widget/SlidingMenu;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1290,7 +1141,6 @@
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/SlidingMenu;->setMenu(Landroid/view/View;)V
 
-    .line 433
     return-void
 .end method
 
@@ -1299,12 +1149,10 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 450
     iget-object v1, p0, Lcom/letv/leui/widget/SlidingMenu;->mLocalActivityManager:Landroid/app/LocalActivityManager;
 
     if-nez v1, :cond_0
 
-    .line 451
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "Did you forget to call \'public void setup(LocalActivityManager activityManager)\'?"
@@ -1313,7 +1161,6 @@
 
     throw v1
 
-    .line 455
     :cond_0
     iget-object v1, p0, Lcom/letv/leui/widget/SlidingMenu;->mLocalActivityManager:Landroid/app/LocalActivityManager;
 
@@ -1321,11 +1168,9 @@
 
     move-result-object v0
 
-    .line 456
     .local v0, "v":Landroid/view/View;
     if-nez v0, :cond_1
 
-    .line 457
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "get content from Activity failed!"
@@ -1334,11 +1179,9 @@
 
     throw v1
 
-    .line 460
     :cond_1
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/SlidingMenu;->setMenu(Landroid/view/View;)V
 
-    .line 461
     return-void
 .end method
 
@@ -1347,12 +1190,10 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 441
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewBehind:Lcom/letv/leui/widget/CustomViewBehind;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/CustomViewBehind;->setContent(Landroid/view/View;)V
 
-    .line 442
     return-void
 .end method
 
@@ -1361,12 +1202,10 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 672
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewBehind:Lcom/letv/leui/widget/CustomViewBehind;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/CustomViewBehind;->setWidthOffset(I)V
 
-    .line 673
     return-void
 .end method
 
@@ -1375,7 +1214,6 @@
     .param p1, "resID"    # I
 
     .prologue
-    .line 683
     invoke-virtual {p0}, Lcom/letv/leui/widget/SlidingMenu;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -1390,11 +1228,9 @@
 
     float-to-int v0, v1
 
-    .line 684
     .local v0, "i":I
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/SlidingMenu;->setMenuOffset(I)V
 
-    .line 685
     return-void
 .end method
 
@@ -1403,12 +1239,10 @@
     .param p1, "b"    # Z
 
     .prologue
-    .line 535
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewBehind:Lcom/letv/leui/widget/CustomViewBehind;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/CustomViewBehind;->setMenuVisibleAlways(Z)V
 
-    .line 536
     return-void
 .end method
 
@@ -1417,7 +1251,6 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 739
     invoke-virtual {p0}, Lcom/letv/leui/widget/SlidingMenu;->getContext()Landroid/content/Context;
 
     move-result-object v7
@@ -1434,12 +1267,10 @@
 
     move-result-object v1
 
-    .line 742
     .local v1, "display":Landroid/view/Display;
     :try_start_0
     const-class v0, Landroid/view/Display;
 
-    .line 743
     .local v0, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v7, 0x1
 
@@ -1451,13 +1282,11 @@
 
     aput-object v8, v5, v7
 
-    .line 744
     .local v5, "parameterTypes":[Ljava/lang/Class;, "[Ljava/lang/Class<*>;"
     new-instance v4, Landroid/graphics/Point;
 
     invoke-direct {v4}, Landroid/graphics/Point;-><init>()V
 
-    .line 745
     .local v4, "parameter":Landroid/graphics/Point;
     const-string v7, "getSize"
 
@@ -1465,7 +1294,6 @@
 
     move-result-object v3
 
-    .line 746
     .local v3, "method":Ljava/lang/reflect/Method;
     const/4 v7, 0x1
 
@@ -1477,12 +1305,10 @@
 
     invoke-virtual {v3, v1, v7}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 747
     iget v6, v4, Landroid/graphics/Point;->x:I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 751
     .end local v0    # "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v3    # "method":Ljava/lang/reflect/Method;
     .end local v4    # "parameter":Landroid/graphics/Point;
@@ -1493,15 +1319,12 @@
 
     invoke-virtual {p0, v7}, Lcom/letv/leui/widget/SlidingMenu;->setMenuOffset(I)V
 
-    .line 752
     return-void
 
-    .line 748
     .end local v6    # "width":I
     :catch_0
     move-exception v2
 
-    .line 749
     .local v2, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Landroid/view/Display;->getWidth()I
 
@@ -1516,7 +1339,6 @@
     .param p1, "res"    # I
 
     .prologue
-    .line 762
     invoke-virtual {p0}, Lcom/letv/leui/widget/SlidingMenu;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -1531,11 +1353,9 @@
 
     float-to-int v0, v1
 
-    .line 763
     .local v0, "i":I
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/SlidingMenu;->setMenuWidth(I)V
 
-    .line 764
     return-void
 .end method
 
@@ -1544,7 +1364,6 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 527
     if-eqz p1, :cond_0
 
     const/4 v0, 0x1
@@ -1555,7 +1374,6 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 528
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "SlidingMenu mode must be LEFT, RIGHT, or LEFT_RIGHT"
@@ -1564,13 +1382,11 @@
 
     throw v0
 
-    .line 531
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewBehind:Lcom/letv/leui/widget/CustomViewBehind;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/CustomViewBehind;->setMode(I)V
 
-    .line 532
     return-void
 .end method
 
@@ -1579,10 +1395,8 @@
     .param p1, "listener"    # Lcom/letv/leui/widget/SlidingMenu$OnCloseListener;
 
     .prologue
-    .line 1032
     iput-object p1, p0, Lcom/letv/leui/widget/SlidingMenu;->mCloseListener:Lcom/letv/leui/widget/SlidingMenu$OnCloseListener;
 
-    .line 1033
     return-void
 .end method
 
@@ -1591,12 +1405,10 @@
     .param p1, "listener"    # Lcom/letv/leui/widget/SlidingMenu$OnClosedListener;
 
     .prologue
-    .line 1054
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/CustomViewAbove;->setOnClosedListener(Lcom/letv/leui/widget/SlidingMenu$OnClosedListener;)V
 
-    .line 1055
     return-void
 .end method
 
@@ -1605,10 +1417,8 @@
     .param p1, "l"    # Lcom/letv/leui/widget/SlidingMenu$OnMenuStateChangeListener;
 
     .prologue
-    .line 1064
     iput-object p1, p0, Lcom/letv/leui/widget/SlidingMenu;->mSlidingMenuStateChangeListener:Lcom/letv/leui/widget/SlidingMenu$OnMenuStateChangeListener;
 
-    .line 1065
     return-void
 .end method
 
@@ -1617,10 +1427,8 @@
     .param p1, "listener"    # Lcom/letv/leui/widget/SlidingMenu$OnOpenListener;
 
     .prologue
-    .line 1011
     iput-object p1, p0, Lcom/letv/leui/widget/SlidingMenu;->mOpenListener:Lcom/letv/leui/widget/SlidingMenu$OnOpenListener;
 
-    .line 1012
     return-void
 .end method
 
@@ -1629,12 +1437,10 @@
     .param p1, "listener"    # Lcom/letv/leui/widget/SlidingMenu$OnOpenedListener;
 
     .prologue
-    .line 1043
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/CustomViewAbove;->setOnOpenedListener(Lcom/letv/leui/widget/SlidingMenu$OnOpenedListener;)V
 
-    .line 1044
     return-void
 .end method
 
@@ -1643,7 +1449,6 @@
     .param p1, "res"    # I
 
     .prologue
-    .line 480
     invoke-virtual {p0}, Lcom/letv/leui/widget/SlidingMenu;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1660,7 +1465,6 @@
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/SlidingMenu;->setSecondaryMenu(Landroid/view/View;)V
 
-    .line 481
     return-void
 .end method
 
@@ -1669,12 +1473,10 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 489
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewBehind:Lcom/letv/leui/widget/CustomViewBehind;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/CustomViewBehind;->setSecondaryContent(Landroid/view/View;)V
 
-    .line 491
     return-void
 .end method
 
@@ -1683,10 +1485,8 @@
     .param p1, "listener"    # Lcom/letv/leui/widget/SlidingMenu$OnOpenListener;
 
     .prologue
-    .line 1021
     iput-object p1, p0, Lcom/letv/leui/widget/SlidingMenu;->mSecondaryOpenListner:Lcom/letv/leui/widget/SlidingMenu$OnOpenListener;
 
-    .line 1022
     return-void
 .end method
 
@@ -1695,7 +1495,6 @@
     .param p1, "resId"    # I
 
     .prologue
-    .line 867
     invoke-virtual {p0}, Lcom/letv/leui/widget/SlidingMenu;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1710,7 +1509,6 @@
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/SlidingMenu;->setSecondaryShadowDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 869
     return-void
 .end method
 
@@ -1719,12 +1517,10 @@
     .param p1, "d"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 877
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewBehind:Lcom/letv/leui/widget/CustomViewBehind;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/CustomViewBehind;->setSecondaryShadowDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 878
     return-void
 .end method
 
@@ -1733,12 +1529,10 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 954
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewBehind:Lcom/letv/leui/widget/CustomViewBehind;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/CustomViewBehind;->setSelectedView(Landroid/view/View;)V
 
-    .line 955
     return-void
 .end method
 
@@ -1747,12 +1541,10 @@
     .param p1, "b"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 973
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewBehind:Lcom/letv/leui/widget/CustomViewBehind;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/CustomViewBehind;->setSelectorBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 974
     return-void
 .end method
 
@@ -1761,7 +1553,6 @@
     .param p1, "res"    # I
 
     .prologue
-    .line 963
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewBehind:Lcom/letv/leui/widget/CustomViewBehind;
 
     invoke-virtual {p0}, Lcom/letv/leui/widget/SlidingMenu;->getResources()Landroid/content/res/Resources;
@@ -1774,7 +1565,6 @@
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/widget/CustomViewBehind;->setSelectorBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 965
     return-void
 .end method
 
@@ -1783,14 +1573,12 @@
     .param p1, "b"    # Z
 
     .prologue
-    .line 944
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewBehind:Lcom/letv/leui/widget/CustomViewBehind;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/widget/CustomViewBehind;->setSelectorEnabled(Z)V
 
-    .line 945
     return-void
 .end method
 
@@ -1799,7 +1587,6 @@
     .param p1, "resId"    # I
 
     .prologue
-    .line 849
     invoke-virtual {p0}, Lcom/letv/leui/widget/SlidingMenu;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1814,7 +1601,6 @@
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/SlidingMenu;->setShadowDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 850
     return-void
 .end method
 
@@ -1823,12 +1609,10 @@
     .param p1, "d"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 858
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewBehind:Lcom/letv/leui/widget/CustomViewBehind;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/CustomViewBehind;->setShadowDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 859
     return-void
 .end method
 
@@ -1837,12 +1621,10 @@
     .param p1, "pixels"    # I
 
     .prologue
-    .line 895
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewBehind:Lcom/letv/leui/widget/CustomViewBehind;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/CustomViewBehind;->setShadowWidth(I)V
 
-    .line 896
     return-void
 .end method
 
@@ -1851,7 +1633,6 @@
     .param p1, "resId"    # I
 
     .prologue
-    .line 886
     invoke-virtual {p0}, Lcom/letv/leui/widget/SlidingMenu;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1864,7 +1645,6 @@
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/SlidingMenu;->setShadowWidth(I)V
 
-    .line 887
     return-void
 .end method
 
@@ -1873,12 +1653,10 @@
     .param p1, "b"    # Z
 
     .prologue
-    .line 508
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/CustomViewAbove;->setSlidingEnabled(Z)V
 
-    .line 509
     return-void
 .end method
 
@@ -1889,44 +1667,36 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 554
     if-eqz p1, :cond_0
 
-    .line 555
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/SlidingMenu;->setSlidingEnabled(Z)V
 
-    .line 556
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     iget-object v1, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewBehind:Lcom/letv/leui/widget/CustomViewBehind;
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/widget/CustomViewAbove;->setCustomViewBehind(Lcom/letv/leui/widget/CustomViewBehind;)V
 
-    .line 557
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     invoke-virtual {v0, v2}, Lcom/letv/leui/widget/CustomViewAbove;->setCurrentItem(I)V
 
-    .line 565
     :goto_0
     return-void
 
-    .line 560
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     invoke-virtual {v0, v2}, Lcom/letv/leui/widget/CustomViewAbove;->setCurrentItem(I)V
 
-    .line 562
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     iget-object v1, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewBehind:Lcom/letv/leui/widget/CustomViewBehind;
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/widget/CustomViewAbove;->setCustomViewBehind(Lcom/letv/leui/widget/CustomViewBehind;)V
 
-    .line 563
     invoke-virtual {p0, v2}, Lcom/letv/leui/widget/SlidingMenu;->setSlidingEnabled(Z)V
 
     goto :goto_0
@@ -1937,7 +1707,6 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 816
     const/4 v0, 0x1
 
     if-eq p1, v0, :cond_0
@@ -1948,7 +1717,6 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 818
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "TouchMode must be set to eitherTOUCHMODE_FULLSCREEN or TOUCHMODE_MARGIN or TOUCHMODE_NONE."
@@ -1957,13 +1725,11 @@
 
     throw v0
 
-    .line 822
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/CustomViewAbove;->setTouchMode(I)V
 
-    .line 823
     return-void
 .end method
 
@@ -1972,7 +1738,6 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 834
     const/4 v0, 0x1
 
     if-eq p1, v0, :cond_0
@@ -1983,7 +1748,6 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 836
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "TouchMode must be set to eitherTOUCHMODE_FULLSCREEN or TOUCHMODE_MARGIN or TOUCHMODE_NONE."
@@ -1992,13 +1756,11 @@
 
     throw v0
 
-    .line 840
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewBehind:Lcom/letv/leui/widget/CustomViewBehind;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/CustomViewBehind;->setTouchMode(I)V
 
-    .line 841
     return-void
 .end method
 
@@ -2007,10 +1769,8 @@
     .param p1, "activityManager"    # Landroid/app/LocalActivityManager;
 
     .prologue
-    .line 345
     iput-object p1, p0, Lcom/letv/leui/widget/SlidingMenu;->mLocalActivityManager:Landroid/app/LocalActivityManager;
 
-    .line 346
     return-void
 .end method
 
@@ -2018,12 +1778,10 @@
     .locals 1
 
     .prologue
-    .line 605
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/SlidingMenu;->showContent(Z)V
 
-    .line 606
     return-void
 .end method
 
@@ -2032,14 +1790,12 @@
     .param p1, "animate"    # Z
 
     .prologue
-    .line 614
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1, p1}, Lcom/letv/leui/widget/CustomViewAbove;->setCurrentItem(IZ)V
 
-    .line 615
     return-void
 .end method
 
@@ -2047,12 +1803,10 @@
     .locals 1
 
     .prologue
-    .line 571
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/SlidingMenu;->showMenu(Z)V
 
-    .line 572
     return-void
 .end method
 
@@ -2061,14 +1815,12 @@
     .param p1, "animate"    # Z
 
     .prologue
-    .line 580
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1, p1}, Lcom/letv/leui/widget/CustomViewAbove;->setCurrentItem(IZ)V
 
-    .line 581
     return-void
 .end method
 
@@ -2076,12 +1828,10 @@
     .locals 1
 
     .prologue
-    .line 588
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/SlidingMenu;->showSecondaryMenu(Z)V
 
-    .line 589
     return-void
 .end method
 
@@ -2090,14 +1840,12 @@
     .param p1, "animate"    # Z
 
     .prologue
-    .line 598
     iget-object v0, p0, Lcom/letv/leui/widget/SlidingMenu;->mViewAbove:Lcom/letv/leui/widget/CustomViewAbove;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1, p1}, Lcom/letv/leui/widget/CustomViewAbove;->setCurrentItem(IZ)V
 
-    .line 599
     return-void
 .end method
 
@@ -2105,12 +1853,10 @@
     .locals 1
 
     .prologue
-    .line 621
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/SlidingMenu;->toggle(Z)V
 
-    .line 622
     return-void
 .end method
 
@@ -2119,21 +1865,17 @@
     .param p1, "animate"    # Z
 
     .prologue
-    .line 630
     invoke-virtual {p0}, Lcom/letv/leui/widget/SlidingMenu;->isMenuShowing()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 631
     invoke-virtual {p0, p1}, Lcom/letv/leui/widget/SlidingMenu;->showContent(Z)V
 
-    .line 635
     :goto_0
     return-void
 
-    .line 633
     :cond_0
     invoke-virtual {p0, p1}, Lcom/letv/leui/widget/SlidingMenu;->showMenu(Z)V
 

@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 3372
     iput-object p1, p0, Lcom/android/server/AlarmManagerService$TimeAlignModeObserver;->this$0:Lcom/android/server/AlarmManagerService;
 
-    .line 3373
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 3374
     return-void
 .end method
 
@@ -41,6 +38,5 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 3380
     return-void
 .end method

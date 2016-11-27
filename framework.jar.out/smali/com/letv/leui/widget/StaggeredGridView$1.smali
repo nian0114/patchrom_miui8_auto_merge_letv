@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 468
     iput-object p1, p0, Lcom/letv/leui/widget/StaggeredGridView$1;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 480
     iget-object v0, p0, Lcom/letv/leui/widget/StaggeredGridView$1;->this$0:Lcom/letv/leui/widget/StaggeredGridView;
 
     const/4 v1, 0x0
@@ -49,7 +47,6 @@
     # setter for: Lcom/letv/leui/widget/StaggeredGridView;->mLayoutAnim:Z
     invoke-static {v0, v1}, Lcom/letv/leui/widget/StaggeredGridView;->access$202(Lcom/letv/leui/widget/StaggeredGridView;Z)Z
 
-    .line 481
     return-void
 .end method
 
@@ -58,7 +55,6 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 476
     return-void
 .end method
 
@@ -67,6 +63,5 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 472
     return-void
 .end method

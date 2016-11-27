@@ -36,7 +36,6 @@
     .end annotation
 
     .prologue
-    .line 47
     .local p4, "listener":Lcom/android/volley/Response$Listener;, "Lcom/android/volley/Response$Listener<Lorg/json/JSONObject;>;"
     if-nez p3, :cond_0
 
@@ -55,10 +54,8 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/volley/toolbox/JsonRequest;-><init>(ILjava/lang/String;Ljava/lang/String;Lcom/android/volley/Response$Listener;Lcom/android/volley/Response$ErrorListener;)V
 
-    .line 49
     return-void
 
-    .line 47
     :cond_0
     invoke-virtual {p3}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
@@ -87,7 +84,6 @@
     .end annotation
 
     .prologue
-    .line 59
     .local p3, "listener":Lcom/android/volley/Response$Listener;, "Lcom/android/volley/Response$Listener<Lorg/json/JSONObject;>;"
     if-nez p2, :cond_0
 
@@ -106,10 +102,8 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/volley/toolbox/JsonObjectRequest;-><init>(ILjava/lang/String;Lorg/json/JSONObject;Lcom/android/volley/Response$Listener;Lcom/android/volley/Response$ErrorListener;)V
 
-    .line 61
     return-void
 
-    .line 59
     :cond_0
     const/4 v1, 0x1
 
@@ -134,7 +128,6 @@
     .end annotation
 
     .prologue
-    .line 66
     :try_start_0
     new-instance v2, Ljava/lang/String;
 
@@ -150,7 +143,6 @@
 
     invoke-direct {v2, v3, v4}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
 
-    .line 68
     .local v2, "jsonString":Ljava/lang/String;
     new-instance v3, Lorg/json/JSONObject;
 
@@ -167,16 +159,13 @@
 
     move-result-object v3
 
-    .line 73
     .end local v2    # "jsonString":Ljava/lang/String;
     :goto_0
     return-object v3
 
-    .line 70
     :catch_0
     move-exception v0
 
-    .line 71
     .local v0, "e":Ljava/io/UnsupportedEncodingException;
     new-instance v3, Lcom/android/volley/ParseError;
 
@@ -188,12 +177,10 @@
 
     goto :goto_0
 
-    .line 72
     .end local v0    # "e":Ljava/io/UnsupportedEncodingException;
     :catch_1
     move-exception v1
 
-    .line 73
     .local v1, "je":Lorg/json/JSONException;
     new-instance v3, Lcom/android/volley/ParseError;
 

@@ -13,15 +13,12 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 13
     invoke-direct {p0, p1}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
-    .line 10
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/LeStateColorDrawable;->mPressed:Z
 
-    .line 14
     return-void
 .end method
 
@@ -30,10 +27,8 @@
     .param p1, "state"    # [I
 
     .prologue
-    .line 40
     const/4 v2, 0x0
 
-    .line 41
     .local v2, "pressed":Z
     const/4 v0, 0x0
 
@@ -46,21 +41,17 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 42
     aget v3, p1, v0
 
     const v4, 0x10100a7
 
     if-ne v3, v4, :cond_2
 
-    .line 43
     const/4 v2, 0x1
 
-    .line 47
     :cond_0
     return v2
 
-    .line 41
     .end local v1    # "j":I
     :cond_1
     const/4 v1, 0x0
@@ -80,7 +71,6 @@
     .locals 1
 
     .prologue
-    .line 36
     const/4 v0, 0x1
 
     return v0
@@ -94,26 +84,21 @@
     .param p1, "state"    # [I
 
     .prologue
-    .line 19
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/LeStateColorDrawable;->isPressed([I)Z
 
     move-result v0
 
-    .line 20
     .local v0, "pressed":Z
     iget-boolean v1, p0, Lcom/letv/leui/widget/LeStateColorDrawable;->mPressed:Z
 
     if-eq v1, v0, :cond_0
 
-    .line 21
     iput-boolean v0, p0, Lcom/letv/leui/widget/LeStateColorDrawable;->mPressed:Z
 
-    .line 22
     iget-boolean v1, p0, Lcom/letv/leui/widget/LeStateColorDrawable;->mPressed:Z
 
     invoke-virtual {p0, v1}, Lcom/letv/leui/widget/LeStateColorDrawable;->onIsPressed(Z)V
 
-    .line 24
     :cond_0
     const/4 v1, 0x1
 
@@ -125,7 +110,6 @@
     .param p1, "stateSet"    # [I
 
     .prologue
-    .line 31
     invoke-super {p0, p1}, Landroid/graphics/drawable/ColorDrawable;->setState([I)Z
 
     move-result v0

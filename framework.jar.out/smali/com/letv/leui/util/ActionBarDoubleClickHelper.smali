@@ -31,7 +31,6 @@
     .locals 1
 
     .prologue
-    .line 26
     const-class v0, Lcom/letv/leui/util/ActionBarDoubleClickHelper;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -48,13 +47,10 @@
     .param p1, "a"    # Landroid/app/Activity;
 
     .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
     iput-object p1, p0, Lcom/letv/leui/util/ActionBarDoubleClickHelper;->mActivity:Landroid/app/Activity;
 
-    .line 29
     iget-object v0, p0, Lcom/letv/leui/util/ActionBarDoubleClickHelper;->mActivity:Landroid/app/Activity;
 
     invoke-static {v0}, Lcom/letv/leui/util/ActionBarDoubleClickHelper;->getActionBarView(Landroid/app/Activity;)Landroid/view/View;
@@ -63,19 +59,16 @@
 
     iput-object v0, p0, Lcom/letv/leui/util/ActionBarDoubleClickHelper;->mActionBarView:Landroid/view/View;
 
-    .line 30
     new-instance v0, Lcom/letv/leui/util/ActionBarDoubleClickHelper$SimpleOnClickListener;
 
     invoke-direct {v0}, Lcom/letv/leui/util/ActionBarDoubleClickHelper$SimpleOnClickListener;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/util/ActionBarDoubleClickHelper;->mSimpleOnClickListener:Lcom/letv/leui/util/ActionBarDoubleClickHelper$SimpleOnClickListener;
 
-    .line 32
     iget-object v0, p0, Lcom/letv/leui/util/ActionBarDoubleClickHelper;->mActivity:Landroid/app/Activity;
 
     if-nez v0, :cond_0
 
-    .line 33
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "ActionBarDoubleClickHelper constructor paramter must be an Activity object"
@@ -84,7 +77,6 @@
 
     throw v0
 
-    .line 36
     :cond_0
     return-void
 .end method
@@ -94,7 +86,6 @@
     .param p0, "a"    # Landroid/app/Activity;
 
     .prologue
-    .line 40
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
@@ -103,19 +94,15 @@
 
     if-nez v4, :cond_1
 
-    .line 41
     :cond_0
     const/4 v0, 0x0
 
-    .line 52
     :goto_0
     return-object v0
 
-    .line 43
     :cond_1
     const/4 v0, 0x0
 
-    .line 45
     .local v0, "actionBarView":Landroid/view/View;
     :try_start_0
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
@@ -126,7 +113,6 @@
 
     move-result-object v1
 
-    .line 46
     .local v1, "decorView":Landroid/view/View;
     invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
@@ -142,13 +128,11 @@
 
     move-result v3
 
-    .line 47
     .local v3, "resId":I
     invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 48
     sget-object v4, Lcom/letv/leui/util/ActionBarDoubleClickHelper;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -176,13 +160,11 @@
 
     goto :goto_0
 
-    .line 49
     .end local v1    # "decorView":Landroid/view/View;
     .end local v3    # "resId":I
     :catch_0
     move-exception v2
 
-    .line 50
     .local v2, "e":Ljava/lang/Exception;
     :try_start_1
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
@@ -191,7 +173,6 @@
 
     goto :goto_0
 
-    .line 52
     .end local v2    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v4
@@ -207,23 +188,19 @@
     .param p2, "startScrollPosition"    # I
 
     .prologue
-    .line 125
     invoke-virtual {p1}, Landroid/widget/ListView;->getFirstVisiblePosition()I
 
     move-result v0
 
     if-le v0, p2, :cond_0
 
-    .line 126
     invoke-virtual {p1, p2}, Landroid/widget/ListView;->setSelection(I)V
 
-    .line 128
     :cond_0
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/widget/ListView;->smoothScrollToPosition(I)V
 
-    .line 129
     return-void
 .end method
 
@@ -232,7 +209,6 @@
     .param p1, "l"    # Lcom/letv/leui/util/ActionBarDoubleClickHelper$OnDoubleClickListener;
 
     .prologue
-    .line 57
     sget-object v0, Lcom/letv/leui/util/ActionBarDoubleClickHelper;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -257,25 +233,20 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 58
     iget-object v0, p0, Lcom/letv/leui/util/ActionBarDoubleClickHelper;->mActionBarView:Landroid/view/View;
 
     if-nez v0, :cond_0
 
-    .line 67
     :goto_0
     return-void
 
-    .line 61
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/util/ActionBarDoubleClickHelper;->mSimpleOnClickListener:Lcom/letv/leui/util/ActionBarDoubleClickHelper$SimpleOnClickListener;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/util/ActionBarDoubleClickHelper$SimpleOnClickListener;->setOnDoubleClickListener(Lcom/letv/leui/util/ActionBarDoubleClickHelper$OnDoubleClickListener;)V
 
-    .line 62
     if-nez p1, :cond_1
 
-    .line 63
     iget-object v0, p0, Lcom/letv/leui/util/ActionBarDoubleClickHelper;->mActionBarView:Landroid/view/View;
 
     const/4 v1, 0x0
@@ -284,7 +255,6 @@
 
     goto :goto_0
 
-    .line 65
     :cond_1
     iget-object v0, p0, Lcom/letv/leui/util/ActionBarDoubleClickHelper;->mActionBarView:Landroid/view/View;
 

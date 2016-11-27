@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 5721
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$18;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iput-boolean p2, p0, Lcom/android/server/policy/PhoneWindowManager$18;->val$isMultiScrenshot:Z
@@ -46,14 +45,12 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 5724
     iget-object v4, p0, Lcom/android/server/policy/PhoneWindowManager$18;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v5, v4, Lcom/android/server/policy/PhoneWindowManager;->mScreenshotLock:Ljava/lang/Object;
 
     monitor-enter v5
 
-    .line 5725
     :try_start_0
     iget-object v4, p0, Lcom/android/server/policy/PhoneWindowManager$18;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -61,26 +58,21 @@
 
     if-eq v4, p0, :cond_0
 
-    .line 5726
     monitor-exit v5
 
-    .line 5766
     :goto_0
     return-void
 
-    .line 5728
     :cond_0
     new-instance v1, Landroid/os/Messenger;
 
     invoke-direct {v1, p2}, Landroid/os/Messenger;-><init>(Landroid/os/IBinder;)V
 
-    .line 5730
     .local v1, "messenger":Landroid/os/Messenger;
     iget-boolean v4, p0, Lcom/android/server/policy/PhoneWindowManager$18;->val$isMultiScrenshot:Z
 
     if-eqz v4, :cond_3
 
-    .line 5731
     const/4 v4, 0x0
 
     const/4 v6, 0x2
@@ -89,12 +81,10 @@
 
     move-result-object v2
 
-    .line 5735
     .local v2, "msg":Landroid/os/Message;
     :goto_1
     move-object v3, p0
 
-    .line 5736
     .local v3, "myConn":Landroid/content/ServiceConnection;
     new-instance v0, Lcom/android/server/policy/PhoneWindowManager$18$1;
 
@@ -108,7 +98,6 @@
 
     invoke-direct {v0, p0, v4, v3}, Lcom/android/server/policy/PhoneWindowManager$18$1;-><init>(Lcom/android/server/policy/PhoneWindowManager$18;Landroid/os/Looper;Landroid/content/ServiceConnection;)V
 
-    .line 5753
     .local v0, "h":Landroid/os/Handler;
     new-instance v4, Landroid/os/Messenger;
 
@@ -116,19 +105,16 @@
 
     iput-object v4, v2, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
 
-    .line 5754
     const/4 v4, 0x0
 
     iput v4, v2, Landroid/os/Message;->arg2:I
 
     iput v4, v2, Landroid/os/Message;->arg1:I
 
-    .line 5755
     iget-boolean v4, p0, Lcom/android/server/policy/PhoneWindowManager$18;->val$isMultiScrenshot:Z
 
     if-nez v4, :cond_2
 
-    .line 5756
     iget-object v4, p0, Lcom/android/server/policy/PhoneWindowManager$18;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v4, v4, Lcom/android/server/policy/PhoneWindowManager;->mStatusBar:Landroid/view/WindowManagerPolicy$WindowState;
@@ -145,12 +131,10 @@
 
     if-eqz v4, :cond_1
 
-    .line 5757
     const/4 v4, 0x1
 
     iput v4, v2, Landroid/os/Message;->arg1:I
 
-    .line 5758
     :cond_1
     iget-object v4, p0, Lcom/android/server/policy/PhoneWindowManager$18;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -168,14 +152,12 @@
 
     if-eqz v4, :cond_2
 
-    .line 5759
     const/4 v4, 0x1
 
     iput v4, v2, Landroid/os/Message;->arg2:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5762
     :cond_2
     :try_start_1
     invoke-virtual {v1, v2}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
@@ -183,7 +165,6 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 5765
     :goto_2
     :try_start_2
     monitor-exit v5
@@ -203,7 +184,6 @@
 
     throw v4
 
-    .line 5733
     .restart local v1    # "messenger":Landroid/os/Messenger;
     :cond_3
     const/4 v4, 0x0
@@ -220,7 +200,6 @@
     .restart local v2    # "msg":Landroid/os/Message;
     goto :goto_1
 
-    .line 5763
     .restart local v0    # "h":Landroid/os/Handler;
     .restart local v3    # "myConn":Landroid/content/ServiceConnection;
     :catch_0
@@ -234,6 +213,5 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 5768
     return-void
 .end method

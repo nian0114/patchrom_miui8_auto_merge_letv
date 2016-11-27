@@ -44,7 +44,6 @@
 
     const/4 v2, 0x0
 
-    .line 38
     new-instance v0, Lcom/android/server/power/xtend/ModulePropertiesInfo$Mode;
 
     const-string v1, "AUTOMATIC_MODE"
@@ -53,7 +52,6 @@
 
     sput-object v0, Lcom/android/server/power/xtend/ModulePropertiesInfo$Mode;->AUTOMATIC_MODE:Lcom/android/server/power/xtend/ModulePropertiesInfo$Mode;
 
-    .line 39
     new-instance v0, Lcom/android/server/power/xtend/ModulePropertiesInfo$Mode;
 
     const-string v1, "MANUAL_MODE"
@@ -62,7 +60,6 @@
 
     sput-object v0, Lcom/android/server/power/xtend/ModulePropertiesInfo$Mode;->MANUAL_MODE:Lcom/android/server/power/xtend/ModulePropertiesInfo$Mode;
 
-    .line 37
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/android/server/power/xtend/ModulePropertiesInfo$Mode;
@@ -90,13 +87,10 @@
     .end annotation
 
     .prologue
-    .line 43
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 44
     iput p3, p0, Lcom/android/server/power/xtend/ModulePropertiesInfo$Mode;->value:I
 
-    .line 45
     return-void
 .end method
 
@@ -105,7 +99,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 37
     const-class v0, Lcom/android/server/power/xtend/ModulePropertiesInfo$Mode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -121,7 +114,6 @@
     .locals 1
 
     .prologue
-    .line 37
     sget-object v0, Lcom/android/server/power/xtend/ModulePropertiesInfo$Mode;->$VALUES:[Lcom/android/server/power/xtend/ModulePropertiesInfo$Mode;
 
     invoke-virtual {v0}, [Lcom/android/server/power/xtend/ModulePropertiesInfo$Mode;->clone()Ljava/lang/Object;
@@ -139,7 +131,6 @@
     .locals 1
 
     .prologue
-    .line 48
     iget v0, p0, Lcom/android/server/power/xtend/ModulePropertiesInfo$Mode;->value:I
 
     return v0

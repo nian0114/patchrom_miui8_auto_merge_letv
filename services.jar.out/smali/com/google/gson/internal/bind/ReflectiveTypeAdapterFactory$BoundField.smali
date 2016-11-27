@@ -30,19 +30,14 @@
     .param p3, "deserialized"    # Z
 
     .prologue
-    .line 161
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 162
     iput-object p1, p0, Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;->name:Ljava/lang/String;
 
-    .line 163
     iput-boolean p2, p0, Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;->serialized:Z
 
-    .line 164
     iput-boolean p3, p0, Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;->deserialized:Z
 
-    .line 165
     return-void
 .end method
 

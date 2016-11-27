@@ -27,7 +27,6 @@
     .param p6, "x4"    # Lcom/android/volley/Response$ErrorListener;
 
     .prologue
-    .line 102
     .local p5, "x3":Lcom/android/volley/Response$Listener;, "Lcom/android/volley/Response$Listener<Lorg/json/JSONObject;>;"
     iput-object p1, p0, Lcom/letv/domain/DomainHelper$3;->this$0:Lcom/letv/domain/DomainHelper;
 
@@ -70,7 +69,6 @@
     .end annotation
 
     .prologue
-    .line 105
     iget-object v0, p0, Lcom/letv/domain/DomainHelper$3;->this$0:Lcom/letv/domain/DomainHelper;
 
     # getter for: Lcom/letv/domain/DomainHelper;->mDeviceInfo:Lcom/letv/domain/bean/DeviceInfo;

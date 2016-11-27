@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 808
     iput-object p1, p0, Lcom/letv/leui/widget/LeItemView$DropdownPopup$2;->this$1:Lcom/letv/leui/widget/LeItemView$DropdownPopup;
 
     iput-object p2, p0, Lcom/letv/leui/widget/LeItemView$DropdownPopup$2;->val$this$0:Lcom/letv/leui/widget/LeItemView;
@@ -45,11 +44,9 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 812
     iget-object v0, p0, Lcom/letv/leui/widget/LeItemView$DropdownPopup$2;->this$1:Lcom/letv/leui/widget/LeItemView$DropdownPopup;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/LeItemView$DropdownPopup;->dismiss()V
 
-    .line 813
     return-void
 .end method

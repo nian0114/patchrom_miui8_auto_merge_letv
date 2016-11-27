@@ -42,47 +42,36 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 8
     iput v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mOffsetToRefresh:I
 
-    .line 9
     new-instance v0, Landroid/graphics/PointF;
 
     invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mPtLastMove:Landroid/graphics/PointF;
 
-    .line 12
     iput v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mCurrentPos:I
 
-    .line 13
     iput v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mLastPos:I
 
-    .line 15
     iput v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mPressedPos:I
 
-    .line 18
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mRatioOfHeaderHeightToRefresh:F
 
-    .line 20
     const/high16 v0, 0x40300000    # 2.75f
 
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mResistance:F
 
-    .line 21
     iput-boolean v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mIsUnderTouch:Z
 
-    .line 22
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mOffsetToKeepHeaderWhileLoading:I
 
-    .line 24
     iput v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mRefreshCompleteY:I
 
     return-void
@@ -95,22 +84,18 @@
     .param p1, "ptrSlider"    # Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     .prologue
-    .line 134
     iget v0, p1, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mCurrentPos:I
 
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mCurrentPos:I
 
-    .line 135
     iget v0, p1, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mLastPos:I
 
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mLastPos:I
 
-    .line 136
     iget v0, p1, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mHeaderHeight:I
 
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mHeaderHeight:I
 
-    .line 137
     return-void
 .end method
 
@@ -118,7 +103,6 @@
     .locals 2
 
     .prologue
-    .line 164
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mLastPos:I
 
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->getOffsetToRefresh()I
@@ -150,19 +134,16 @@
     .locals 3
 
     .prologue
-    .line 193
     iget v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mHeaderHeight:I
 
     if-nez v1, :cond_0
 
     const/4 v0, 0x0
 
-    .line 194
     .local v0, "currentPercent":F
     :goto_0
     return v0
 
-    .line 193
     .end local v0    # "currentPercent":F
     :cond_0
     iget v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mCurrentPos:I
@@ -186,7 +167,6 @@
     .locals 1
 
     .prologue
-    .line 103
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mCurrentPos:I
 
     return v0
@@ -196,7 +176,6 @@
     .locals 1
 
     .prologue
-    .line 120
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mHeaderHeight:I
 
     return v0
@@ -206,19 +185,16 @@
     .locals 3
 
     .prologue
-    .line 188
     iget v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mHeaderHeight:I
 
     if-nez v1, :cond_0
 
     const/4 v0, 0x0
 
-    .line 189
     .local v0, "oldPercent":F
     :goto_0
     return v0
 
-    .line 188
     .end local v0    # "oldPercent":F
     :cond_0
     iget v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mLastPos:I
@@ -242,7 +218,6 @@
     .locals 1
 
     .prologue
-    .line 99
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mLastPos:I
 
     return v0
@@ -252,7 +227,6 @@
     .locals 1
 
     .prologue
-    .line 180
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mOffsetToKeepHeaderWhileLoading:I
 
     if-ltz v0, :cond_0
@@ -272,7 +246,6 @@
     .locals 1
 
     .prologue
-    .line 64
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mOffsetToRefresh:I
 
     return v0
@@ -282,7 +255,6 @@
     .locals 1
 
     .prologue
-    .line 91
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mOffsetX:F
 
     return v0
@@ -292,7 +264,6 @@
     .locals 1
 
     .prologue
-    .line 95
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mOffsetY:F
 
     return v0
@@ -302,7 +273,6 @@
     .locals 1
 
     .prologue
-    .line 60
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mRatioOfHeaderHeightToRefresh:F
 
     return v0
@@ -312,7 +282,6 @@
     .locals 1
 
     .prologue
-    .line 31
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mResistance:F
 
     return v0
@@ -322,7 +291,6 @@
     .locals 2
 
     .prologue
-    .line 47
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mCurrentPos:I
 
     iget v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mRefreshCompleteY:I
@@ -344,7 +312,6 @@
     .locals 1
 
     .prologue
-    .line 148
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mLastPos:I
 
     if-eqz v0, :cond_0
@@ -370,7 +337,6 @@
     .locals 1
 
     .prologue
-    .line 144
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mLastPos:I
 
     if-nez v0, :cond_0
@@ -396,7 +362,6 @@
     .locals 2
 
     .prologue
-    .line 168
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mLastPos:I
 
     iget v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mHeaderHeight:I
@@ -424,7 +389,6 @@
     .locals 1
 
     .prologue
-    .line 140
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mCurrentPos:I
 
     if-lez v0, :cond_0
@@ -444,7 +408,6 @@
     .locals 2
 
     .prologue
-    .line 156
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mCurrentPos:I
 
     iget v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mPressedPos:I
@@ -467,7 +430,6 @@
     .param p1, "to"    # I
 
     .prologue
-    .line 184
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mCurrentPos:I
 
     if-ne v0, p1, :cond_0
@@ -487,7 +449,6 @@
     .locals 1
 
     .prologue
-    .line 160
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mCurrentPos:I
 
     if-nez v0, :cond_0
@@ -507,7 +468,6 @@
     .locals 2
 
     .prologue
-    .line 172
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mCurrentPos:I
 
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->getOffsetToKeepHeaderWhileLoading()I
@@ -531,7 +491,6 @@
     .locals 2
 
     .prologue
-    .line 152
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mCurrentPos:I
 
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->getOffsetToRefresh()I
@@ -555,7 +514,6 @@
     .locals 1
 
     .prologue
-    .line 27
     iget-boolean v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mIsUnderTouch:Z
 
     return v0
@@ -567,14 +525,12 @@
     .param p2, "y"    # F
 
     .prologue
-    .line 79
     iget-object v2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mPtLastMove:Landroid/graphics/PointF;
 
     iget v2, v2, Landroid/graphics/PointF;->x:F
 
     sub-float v0, p1, v2
 
-    .line 80
     .local v0, "offsetX":F
     iget-object v2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mPtLastMove:Landroid/graphics/PointF;
 
@@ -582,16 +538,13 @@
 
     sub-float v1, p2, v2
 
-    .line 81
     .local v1, "offsetY":F
     invoke-virtual {p0, p1, p2, v0, v1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->processOnMove(FFFF)V
 
-    .line 82
     iget-object v2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mPtLastMove:Landroid/graphics/PointF;
 
     invoke-virtual {v2, p1, p2}, Landroid/graphics/PointF;->set(FF)V
 
-    .line 83
     return-void
 .end method
 
@@ -601,22 +554,18 @@
     .param p2, "y"    # F
 
     .prologue
-    .line 73
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mIsUnderTouch:Z
 
-    .line 74
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mCurrentPos:I
 
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mPressedPos:I
 
-    .line 75
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mPtLastMove:Landroid/graphics/PointF;
 
     invoke-virtual {v0, p1, p2}, Landroid/graphics/PointF;->set(FF)V
 
-    .line 76
     return-void
 .end method
 
@@ -624,12 +573,10 @@
     .locals 1
 
     .prologue
-    .line 39
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mIsUnderTouch:Z
 
-    .line 40
     return-void
 .end method
 
@@ -637,12 +584,10 @@
     .locals 1
 
     .prologue
-    .line 43
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mCurrentPos:I
 
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mRefreshCompleteY:I
 
-    .line 44
     return-void
 .end method
 
@@ -652,7 +597,6 @@
     .param p2, "last"    # I
 
     .prologue
-    .line 117
     return-void
 .end method
 
@@ -664,14 +608,12 @@
     .param p4, "offsetY"    # F
 
     .prologue
-    .line 51
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mResistance:F
 
     div-float v0, p4, v0
 
     invoke-virtual {p0, p3, v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->setOffset(FF)V
 
-    .line 52
     return-void
 .end method
 
@@ -680,20 +622,16 @@
     .param p1, "current"    # I
 
     .prologue
-    .line 110
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mCurrentPos:I
 
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mLastPos:I
 
-    .line 111
     iput p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mCurrentPos:I
 
-    .line 112
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mLastPos:I
 
     invoke-virtual {p0, p1, v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->onUpdatePos(II)V
 
-    .line 113
     return-void
 .end method
 
@@ -702,13 +640,10 @@
     .param p1, "height"    # I
 
     .prologue
-    .line 124
     iput p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mHeaderHeight:I
 
-    .line 125
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->updateHeight()V
 
-    .line 126
     return-void
 .end method
 
@@ -718,13 +653,10 @@
     .param p2, "y"    # F
 
     .prologue
-    .line 86
     iput p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mOffsetX:F
 
-    .line 87
     iput p2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mOffsetY:F
 
-    .line 88
     return-void
 .end method
 
@@ -733,10 +665,8 @@
     .param p1, "offset"    # I
 
     .prologue
-    .line 176
     iput p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mOffsetToKeepHeaderWhileLoading:I
 
-    .line 177
     return-void
 .end method
 
@@ -745,7 +675,6 @@
     .param p1, "offset"    # I
 
     .prologue
-    .line 68
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mHeaderHeight:I
 
     div-int/2addr v0, p1
@@ -754,10 +683,8 @@
 
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mRatioOfHeaderHeightToRefresh:F
 
-    .line 69
     iput p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mOffsetToRefresh:I
 
-    .line 70
     return-void
 .end method
 
@@ -766,10 +693,8 @@
     .param p1, "ratio"    # F
 
     .prologue
-    .line 55
     iput p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mRatioOfHeaderHeightToRefresh:F
 
-    .line 56
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mHeaderHeight:I
 
     int-to-float v0, v0
@@ -780,7 +705,6 @@
 
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mOffsetToRefresh:I
 
-    .line 57
     return-void
 .end method
 
@@ -789,10 +713,8 @@
     .param p1, "resistance"    # F
 
     .prologue
-    .line 35
     iput p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mResistance:F
 
-    .line 36
     return-void
 .end method
 
@@ -800,12 +722,10 @@
     .locals 1
 
     .prologue
-    .line 130
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mHeaderHeight:I
 
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->mOffsetToRefresh:I
 
-    .line 131
     return-void
 .end method
 
@@ -814,7 +734,6 @@
     .param p1, "to"    # I
 
     .prologue
-    .line 198
     if-gez p1, :cond_0
 
     const/4 v0, 0x1

@@ -25,12 +25,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 34
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/letv/leui/widget/LeEditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 35
     return-void
 .end method
 
@@ -40,12 +38,10 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 38
     const v0, 0x101006e
 
     invoke-direct {p0, p1, p2, v0}, Lcom/letv/leui/widget/LeEditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 39
     return-void
 .end method
 
@@ -56,12 +52,10 @@
     .param p3, "defStyle"    # I
 
     .prologue
-    .line 42
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/letv/leui/widget/LeEditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 43
     return-void
 .end method
 
@@ -73,32 +67,26 @@
     .param p4, "defStyleRes"    # I
 
     .prologue
-    .line 46
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/letv/leui/widget/LeTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 29
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/LeEditText;->mTextEditable:Z
 
-    .line 30
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/letv/leui/widget/LeEditText;->mAutoLink:I
 
-    .line 47
     sget-object v0, Landroid/widget/TextView$BufferType;->EDITABLE:Landroid/widget/TextView$BufferType;
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeEditText;->mTextBufferType:Landroid/widget/TextView$BufferType;
 
-    .line 48
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeEditText;->getAutoLinkMask()I
 
     move-result v0
 
     iput v0, p0, Lcom/letv/leui/widget/LeEditText;->mAutoLink:I
 
-    .line 49
     return-void
 .end method
 
@@ -108,17 +96,14 @@
     .param p1, "offset"    # I
 
     .prologue
-    .line 121
     instance-of v5, p0, Landroid/text/Spanned;
 
     if-eqz v5, :cond_1
 
     move-object v3, p0
 
-    .line 122
     check-cast v3, Landroid/text/Spanned;
 
-    .line 123
     .local v3, "spanned":Landroid/text/Spanned;
     const-class v5, Lcom/letv/leui/util/LeLinkify$LeURLSpan;
 
@@ -128,11 +113,9 @@
 
     check-cast v4, [Lcom/letv/leui/util/LeLinkify$LeURLSpan;
 
-    .line 124
     .local v4, "spans":[Lcom/letv/leui/util/LeLinkify$LeURLSpan;
     array-length v1, v4
 
-    .line 125
     .local v1, "length":I
     const/4 v0, 0x0
 
@@ -140,10 +123,8 @@
     :goto_0
     if-ge v0, v1, :cond_1
 
-    .line 126
     aget-object v2, v4, v0
 
-    .line 127
     .local v2, "span":Lcom/letv/leui/util/LeLinkify$LeURLSpan;
     invoke-virtual {v2}, Lcom/letv/leui/util/LeLinkify$LeURLSpan;->getStartOffset()I
 
@@ -157,10 +138,8 @@
 
     if-le v5, p1, :cond_0
 
-    .line 128
     const/4 v5, 0x1
 
-    .line 131
     .end local v0    # "i":I
     .end local v1    # "length":I
     .end local v2    # "span":Lcom/letv/leui/util/LeLinkify$LeURLSpan;
@@ -169,7 +148,6 @@
     :goto_1
     return v5
 
-    .line 125
     .restart local v0    # "i":I
     .restart local v1    # "length":I
     .restart local v2    # "span":Lcom/letv/leui/util/LeLinkify$LeURLSpan;
@@ -180,7 +158,6 @@
 
     goto :goto_0
 
-    .line 131
     .end local v0    # "i":I
     .end local v1    # "length":I
     .end local v2    # "span":Lcom/letv/leui/util/LeLinkify$LeURLSpan;
@@ -199,7 +176,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 160
     invoke-super {p0}, Lcom/letv/leui/widget/LeTextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -208,7 +184,6 @@
 
     invoke-static {v0, p1}, Landroid/text/Selection;->extendSelection(Landroid/text/Spannable;I)V
 
-    .line 161
     return-void
 .end method
 
@@ -216,7 +191,6 @@
     .locals 1
 
     .prologue
-    .line 94
     const/4 v0, 0x1
 
     return v0
@@ -226,7 +200,6 @@
     .locals 1
 
     .prologue
-    .line 99
     invoke-static {}, Landroid/text/method/ArrowKeyMovementMethod;->getInstance()Landroid/text/method/MovementMethod;
 
     move-result-object v0
@@ -238,12 +211,10 @@
     .locals 2
 
     .prologue
-    .line 86
     invoke-super {p0}, Lcom/letv/leui/widget/LeTextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    .line 87
     .local v1, "text":Ljava/lang/CharSequence;
     if-nez v1, :cond_0
 
@@ -255,7 +226,6 @@
 
     move-result-object v0
 
-    .line 88
     .local v0, "result":Landroid/text/Editable;
     return-object v0
 .end method
@@ -264,7 +234,6 @@
     .locals 1
 
     .prologue
-    .line 27
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeEditText;->getText()Landroid/text/Editable;
 
     move-result-object v0
@@ -276,7 +245,6 @@
     .locals 1
 
     .prologue
-    .line 52
     iget-boolean v0, p0, Lcom/letv/leui/widget/LeEditText;->mTextEditable:Z
 
     return v0
@@ -287,10 +255,8 @@
     .param p1, "event"    # Landroid/view/accessibility/AccessibilityEvent;
 
     .prologue
-    .line 174
     invoke-super {p0, p1}, Lcom/letv/leui/widget/LeTextView;->onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 175
     const-class v0, Lcom/letv/leui/widget/LeEditText;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -299,7 +265,6 @@
 
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityEvent;->setClassName(Ljava/lang/CharSequence;)V
 
-    .line 176
     return-void
 .end method
 
@@ -308,10 +273,8 @@
     .param p1, "info"    # Landroid/view/accessibility/AccessibilityNodeInfo;
 
     .prologue
-    .line 180
     invoke-super {p0, p1}, Lcom/letv/leui/widget/LeTextView;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    .line 181
     const-class v0, Lcom/letv/leui/widget/LeEditText;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -320,7 +283,6 @@
 
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setClassName(Ljava/lang/CharSequence;)V
 
-    .line 182
     return-void
 .end method
 
@@ -329,18 +291,15 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 109
     invoke-super {p0, p1}, Lcom/letv/leui/widget/LeTextView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
-    .line 111
     .local v0, "handled":Z
     iget-object v2, p0, Lcom/letv/leui/widget/LeEditText;->mAfterTouchListener:Lcom/letv/leui/widget/LeEditText$OnAfterTouchListener;
 
     if-eqz v2, :cond_0
 
-    .line 112
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v2
@@ -353,7 +312,6 @@
 
     move-result v1
 
-    .line 113
     .local v1, "offset":I
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeEditText;->getText()Landroid/text/Editable;
 
@@ -365,7 +323,6 @@
 
     if-nez v2, :cond_0
 
-    .line 114
     iget-object v2, p0, Lcom/letv/leui/widget/LeEditText;->mAfterTouchListener:Lcom/letv/leui/widget/LeEditText$OnAfterTouchListener;
 
     invoke-interface {v2, p1}, Lcom/letv/leui/widget/LeEditText$OnAfterTouchListener;->onAfterTouch(Landroid/view/MotionEvent;)Z
@@ -374,7 +331,6 @@
 
     or-int/2addr v0, v2
 
-    .line 117
     .end local v1    # "offset":I
     :cond_0
     return v0
@@ -386,10 +342,8 @@
     .param p2, "arguments"    # Landroid/os/Bundle;
 
     .prologue
-    .line 186
     const/4 v0, 0x1
 
-    .line 187
     .local v0, "checkSetText":Z
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -397,17 +351,14 @@
 
     if-le v2, v3, :cond_0
 
-    .line 188
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeEditText;->getAccessibilityDelegate()Landroid/view/View$AccessibilityDelegate;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 189
     const/4 v0, 0x0
 
-    .line 192
     :cond_0
     if-eqz v0, :cond_3
 
@@ -415,7 +366,6 @@
 
     if-ne p1, v2, :cond_3
 
-    .line 193
     if-eqz p2, :cond_2
 
     const-string v2, "ACTION_ARGUMENT_SET_TEXT_CHARSEQUENCE"
@@ -424,12 +374,10 @@
 
     move-result-object v1
 
-    .line 195
     .local v1, "text":Ljava/lang/CharSequence;
     :goto_0
     invoke-virtual {p0, v1}, Lcom/letv/leui/widget/LeEditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 196
     if-eqz v1, :cond_1
 
     invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
@@ -438,29 +386,24 @@
 
     if-lez v2, :cond_1
 
-    .line 197
     invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
 
     move-result v2
 
     invoke-virtual {p0, v2}, Lcom/letv/leui/widget/LeEditText;->setSelection(I)V
 
-    .line 199
     :cond_1
     const/4 v2, 0x1
 
-    .line 201
     .end local v1    # "text":Ljava/lang/CharSequence;
     :goto_1
     return v2
 
-    .line 193
     :cond_2
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 201
     :cond_3
     invoke-super {p0, p1, p2}, Lcom/letv/leui/widget/LeTextView;->performAccessibilityAction(ILandroid/os/Bundle;)Z
 
@@ -473,7 +416,6 @@
     .locals 1
 
     .prologue
-    .line 153
     invoke-super {p0}, Lcom/letv/leui/widget/LeTextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -482,7 +424,6 @@
 
     invoke-static {v0}, Landroid/text/Selection;->selectAll(Landroid/text/Spannable;)V
 
-    .line 154
     return-void
 .end method
 
@@ -491,12 +432,10 @@
     .param p1, "ellipsis"    # Landroid/text/TextUtils$TruncateAt;
 
     .prologue
-    .line 165
     sget-object v0, Landroid/text/TextUtils$TruncateAt;->MARQUEE:Landroid/text/TextUtils$TruncateAt;
 
     if-ne p1, v0, :cond_0
 
-    .line 166
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "LeEditText cannot use the ellipsize mode TextUtils.TruncateAt.MARQUEE"
@@ -505,11 +444,9 @@
 
     throw v0
 
-    .line 169
     :cond_0
     invoke-super {p0, p1}, Lcom/letv/leui/widget/LeTextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    .line 170
     return-void
 .end method
 
@@ -518,10 +455,8 @@
     .param p1, "listener"    # Lcom/letv/leui/widget/LeEditText$OnAfterTouchListener;
 
     .prologue
-    .line 205
     iput-object p1, p0, Lcom/letv/leui/widget/LeEditText;->mAfterTouchListener:Lcom/letv/leui/widget/LeEditText$OnAfterTouchListener;
 
-    .line 206
     return-void
 .end method
 
@@ -530,7 +465,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 146
     invoke-super {p0}, Lcom/letv/leui/widget/LeTextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -539,7 +473,6 @@
 
     invoke-static {v0, p1}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
 
-    .line 147
     return-void
 .end method
 
@@ -549,7 +482,6 @@
     .param p2, "stop"    # I
 
     .prologue
-    .line 139
     invoke-super {p0}, Lcom/letv/leui/widget/LeTextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -558,7 +490,6 @@
 
     invoke-static {v0, p1, p2}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;II)V
 
-    .line 140
     return-void
 .end method
 
@@ -568,7 +499,6 @@
     .param p2, "type"    # Landroid/widget/TextView$BufferType;
 
     .prologue
-    .line 104
     iget-boolean v0, p0, Lcom/letv/leui/widget/LeEditText;->mTextEditable:Z
 
     if-eqz v0, :cond_0
@@ -578,10 +508,8 @@
     :goto_0
     invoke-super {p0, p1, v0}, Lcom/letv/leui/widget/LeTextView;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
 
-    .line 105
     return-void
 
-    .line 104
     :cond_0
     sget-object v0, Landroid/widget/TextView$BufferType;->SPANNABLE:Landroid/widget/TextView$BufferType;
 
@@ -595,21 +523,16 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 56
     iget-boolean v3, p0, Lcom/letv/leui/widget/LeEditText;->mTextEditable:Z
 
     if-eq v3, p1, :cond_1
 
-    .line 57
     iput-boolean p1, p0, Lcom/letv/leui/widget/LeEditText;->mTextEditable:Z
 
-    .line 58
     if-eqz p1, :cond_2
 
-    .line 59
     invoke-virtual {p0, v5}, Lcom/letv/leui/widget/LeEditText;->setAutoLinkMask(I)V
 
-    .line 64
     :goto_0
     invoke-super {p0}, Lcom/letv/leui/widget/LeTextView;->getText()Ljava/lang/CharSequence;
 
@@ -619,27 +542,22 @@
 
     move-result-object v2
 
-    .line 65
     .local v2, "text":Ljava/lang/CharSequence;
     invoke-virtual {p0, v2}, Lcom/letv/leui/widget/LeEditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 66
     if-eqz p1, :cond_0
 
-    .line 67
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeEditText;->getDefaultMovementMethod()Landroid/text/method/MovementMethod;
 
     move-result-object v3
 
     invoke-virtual {p0, v3}, Lcom/letv/leui/widget/LeEditText;->setMovementMethod(Landroid/text/method/MovementMethod;)V
 
-    .line 69
     :cond_0
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeEditText;->getSelectionStart()I
 
     move-result v1
 
-    .line 70
     .local v1, "offset":I
     if-ltz v1, :cond_3
 
@@ -649,14 +567,11 @@
 
     if-ge v1, v3, :cond_3
 
-    .line 71
     invoke-virtual {p0, v1}, Lcom/letv/leui/widget/LeEditText;->setSelection(I)V
 
-    .line 76
     :goto_1
     if-eqz p1, :cond_1
 
-    .line 77
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeEditText;->getContext()Landroid/content/Context;
 
     move-result-object v3
@@ -669,18 +584,15 @@
 
     check-cast v0, Landroid/view/inputmethod/InputMethodManager;
 
-    .line 79
     .local v0, "inputManager":Landroid/view/inputmethod/InputMethodManager;
     invoke-virtual {v0, p0, v5}, Landroid/view/inputmethod/InputMethodManager;->showSoftInput(Landroid/view/View;I)Z
 
-    .line 82
     .end local v0    # "inputManager":Landroid/view/inputmethod/InputMethodManager;
     .end local v1    # "offset":I
     .end local v2    # "text":Ljava/lang/CharSequence;
     :cond_1
     return-void
 
-    .line 61
     :cond_2
     iget v3, p0, Lcom/letv/leui/widget/LeEditText;->mAutoLink:I
 
@@ -688,7 +600,6 @@
 
     goto :goto_0
 
-    .line 73
     .restart local v1    # "offset":I
     .restart local v2    # "text":Ljava/lang/CharSequence;
     :cond_3

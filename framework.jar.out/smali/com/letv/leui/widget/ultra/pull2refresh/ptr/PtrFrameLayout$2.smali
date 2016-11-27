@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 629
     iput-object p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout$2;->this$0:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 1
 
     .prologue
-    .line 632
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout$2;->this$0:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;
 
     # invokes: Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->performRefreshComplete()V
     invoke-static {v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->access$100(Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;)V
 
-    .line 633
     return-void
 .end method

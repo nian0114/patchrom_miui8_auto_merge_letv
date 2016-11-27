@@ -25,7 +25,6 @@
     .locals 3
 
     .prologue
-    .line 89
     invoke-static {}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;->values()[Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
 
     move-result-object v0
@@ -67,7 +66,6 @@
     :try_end_1
     .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 72
     :goto_1
     invoke-static {}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Orientation;->values()[Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Orientation;
 
@@ -123,7 +121,6 @@
 
     goto :goto_2
 
-    .line 89
     :catch_2
     move-exception v0
 

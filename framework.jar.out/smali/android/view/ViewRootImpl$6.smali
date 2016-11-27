@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 8040
     iput-object p1, p0, Landroid/view/ViewRootImpl$6;->this$0:Landroid/view/ViewRootImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,10 +39,8 @@
     .locals 4
 
     .prologue
-    .line 8043
     monitor-enter p0
 
-    .line 8044
     :try_start_0
     const-string v1, "ViewRootImpl"
 
@@ -77,14 +74,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8045
     iget-object v1, p0, Landroid/view/ViewRootImpl$6;->this$0:Landroid/view/ViewRootImpl;
 
     iget-object v1, v1, Landroid/view/ViewRootImpl;->mCurrentWatcher:Lcom/letv/eui/appsnapshot/IAppSnapshotWatcher;
 
     if-eqz v1, :cond_0
 
-    .line 8046
     iget-object v1, p0, Landroid/view/ViewRootImpl$6;->this$0:Landroid/view/ViewRootImpl;
 
     iget-object v1, v1, Landroid/view/ViewRootImpl;->mCurrentWatcher:Lcom/letv/eui/appsnapshot/IAppSnapshotWatcher;
@@ -93,31 +88,25 @@
 
     move-result-object v0
 
-    .line 8047
     .local v0, "binder":Landroid/os/IBinder;
     if-eqz v0, :cond_0
 
-    .line 8048
     const/4 v1, 0x0
 
     invoke-interface {v0, p0, v1}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 8049
     iget-object v1, p0, Landroid/view/ViewRootImpl$6;->this$0:Landroid/view/ViewRootImpl;
 
     const/4 v2, 0x0
 
     iput-object v2, v1, Landroid/view/ViewRootImpl;->mCurrentWatcher:Lcom/letv/eui/appsnapshot/IAppSnapshotWatcher;
 
-    .line 8052
     .end local v0    # "binder":Landroid/os/IBinder;
     :cond_0
     monitor-exit p0
 
-    .line 8053
     return-void
 
-    .line 8052
     :catchall_0
     move-exception v1
 

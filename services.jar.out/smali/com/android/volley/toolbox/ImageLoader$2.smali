@@ -38,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 252
     iput-object p1, p0, Lcom/android/volley/toolbox/ImageLoader$2;->this$0:Lcom/android/volley/toolbox/ImageLoader;
 
     iput-object p2, p0, Lcom/android/volley/toolbox/ImageLoader$2;->val$cacheKey:Ljava/lang/String;
@@ -55,14 +54,12 @@
     .param p1, "response"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 255
     iget-object v0, p0, Lcom/android/volley/toolbox/ImageLoader$2;->this$0:Lcom/android/volley/toolbox/ImageLoader;
 
     iget-object v1, p0, Lcom/android/volley/toolbox/ImageLoader$2;->val$cacheKey:Ljava/lang/String;
 
     invoke-virtual {v0, v1, p1}, Lcom/android/volley/toolbox/ImageLoader;->onGetImageSuccess(Ljava/lang/String;Landroid/graphics/Bitmap;)V
 
-    .line 256
     return-void
 .end method
 
@@ -70,7 +67,6 @@
     .locals 0
 
     .prologue
-    .line 252
     check-cast p1, Landroid/graphics/Bitmap;
 
     invoke-virtual {p0, p1}, Lcom/android/volley/toolbox/ImageLoader$2;->onResponse(Landroid/graphics/Bitmap;)V

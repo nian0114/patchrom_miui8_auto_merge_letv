@@ -34,17 +34,14 @@
     .locals 2
 
     .prologue
-    .line 1439
     iput-object p1, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1436
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->mLastOverFlingX:I
 
-    .line 1440
     new-instance v0, Landroid/widget/OverScroller;
 
     invoke-virtual {p1}, Lcom/letv/leui/widget/ModifiedGallery;->getContext()Landroid/content/Context;
@@ -55,7 +52,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->mScroller:Landroid/widget/OverScroller;
 
-    .line 1442
     return-void
 .end method
 
@@ -64,27 +60,22 @@
     .param p1, "scrollIntoSlots"    # Z
 
     .prologue
-    .line 1484
     iget-object v0, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->mScroller:Landroid/widget/OverScroller;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/widget/OverScroller;->forceFinished(Z)V
 
-    .line 1486
     if-eqz p1, :cond_0
 
-    .line 1487
     iget-object v0, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
     # invokes: Lcom/letv/leui/widget/ModifiedGallery;->scrollIntoSlots()V
     invoke-static {v0}, Lcom/letv/leui/widget/ModifiedGallery;->access$700(Lcom/letv/leui/widget/ModifiedGallery;)V
 
-    .line 1491
     :goto_0
     return-void
 
-    .line 1489
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
@@ -99,12 +90,10 @@
     .locals 1
 
     .prologue
-    .line 1446
     iget-object v0, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
     invoke-virtual {v0, p0}, Lcom/letv/leui/widget/ModifiedGallery;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 1447
     return-void
 .end method
 
@@ -122,26 +111,21 @@
 
     const/4 v8, 0x0
 
-    .line 1495
     iget-object v7, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
     iget v7, v7, Lcom/letv/leui/widget/ModifiedGallery;->mItemCount:I
 
     if-nez v7, :cond_1
 
-    .line 1496
     invoke-direct {p0, v11}, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->endFling(Z)V
 
-    .line 1561
     :cond_0
     :goto_0
     return-void
 
-    .line 1499
     :cond_1
     iget-object v5, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->mScroller:Landroid/widget/OverScroller;
 
-    .line 1501
     .local v5, "scroller":Landroid/widget/OverScroller;
     iget-object v7, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
@@ -152,13 +136,11 @@
 
     packed-switch v7, :pswitch_data_0
 
-    .line 1556
     iget-object v7, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
     # setter for: Lcom/letv/leui/widget/ModifiedGallery;->mTouchMode:I
     invoke-static {v7, v10}, Lcom/letv/leui/widget/ModifiedGallery;->access$202(Lcom/letv/leui/widget/ModifiedGallery;I)I
 
-    .line 1557
     iget-object v7, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
     # getter for: Lcom/letv/leui/widget/ModifiedGallery;->mLastScrollState:I
@@ -168,38 +150,32 @@
 
     if-eqz v7, :cond_0
 
-    .line 1558
     iget-object v7, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
     invoke-virtual {v7, v8}, Lcom/letv/leui/widget/ModifiedGallery;->reportScrollStateChange(I)V
 
     goto :goto_0
 
-    .line 1505
     :pswitch_0
     iget-object v7, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
     # setter for: Lcom/letv/leui/widget/ModifiedGallery;->mShouldStopFling:Z
     invoke-static {v7, v8}, Lcom/letv/leui/widget/ModifiedGallery;->access$802(Lcom/letv/leui/widget/ModifiedGallery;Z)Z
 
-    .line 1507
     invoke-virtual {v5}, Landroid/widget/OverScroller;->computeScrollOffset()Z
 
     move-result v4
 
-    .line 1508
     .local v4, "more":Z
     invoke-virtual {v5}, Landroid/widget/OverScroller;->getCurrX()I
 
     move-result v6
 
-    .line 1512
     .local v6, "x":I
     iget v7, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->mLastFlingX:I
 
     sub-int v1, v7, v6
 
-    .line 1514
     .local v1, "delta":I
     iget-object v7, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
@@ -207,7 +183,6 @@
 
     move-result v3
 
-    .line 1516
     .local v3, "isAtEdge":Z
     if-eqz v4, :cond_2
 
@@ -222,20 +197,16 @@
 
     if-nez v3, :cond_2
 
-    .line 1517
     iput v6, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->mLastFlingX:I
 
-    .line 1518
     iput v1, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->mLastDelta:I
 
-    .line 1519
     iget-object v7, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
     invoke-virtual {v7, p0}, Lcom/letv/leui/widget/ModifiedGallery;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
 
-    .line 1520
     :cond_2
     if-eqz v4, :cond_5
 
@@ -250,10 +221,8 @@
 
     if-eqz v3, :cond_5
 
-    .line 1522
     invoke-direct {p0, v8}, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->endFling(Z)V
 
-    .line 1523
     iget-object v7, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
     # getter for: Lcom/letv/leui/widget/ModifiedGallery;->mTouchMode:I
@@ -263,7 +232,6 @@
 
     if-ne v7, v9, :cond_4
 
-    .line 1524
     iget-object v7, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
     const/4 v8, 0x4
@@ -271,7 +239,6 @@
     # setter for: Lcom/letv/leui/widget/ModifiedGallery;->mTouchMode:I
     invoke-static {v7, v8}, Lcom/letv/leui/widget/ModifiedGallery;->access$202(Lcom/letv/leui/widget/ModifiedGallery;I)I
 
-    .line 1529
     :goto_1
     iget-object v7, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
@@ -282,18 +249,15 @@
 
     if-eq v7, v9, :cond_3
 
-    .line 1530
     iget-object v7, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
     invoke-virtual {v7, v9}, Lcom/letv/leui/widget/ModifiedGallery;->reportScrollStateChange(I)V
 
-    .line 1533
     :cond_3
     invoke-virtual {p0}, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->startSpringback()V
 
     goto :goto_0
 
-    .line 1526
     :cond_4
     iget-object v7, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
@@ -304,13 +268,11 @@
 
     goto :goto_1
 
-    .line 1535
     :cond_5
     invoke-direct {p0, v11}, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->endFling(Z)V
 
     goto/16 :goto_0
 
-    .line 1541
     .end local v1    # "delta":I
     .end local v3    # "isAtEdge":Z
     .end local v4    # "more":Z
@@ -322,51 +284,42 @@
 
     if-eqz v7, :cond_7
 
-    .line 1542
     invoke-virtual {v5}, Landroid/widget/OverScroller;->getCurrX()I
 
     move-result v0
 
-    .line 1543
     .local v0, "currX":I
     iget v7, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->mLastOverFlingX:I
 
     sub-int v2, v0, v7
 
-    .line 1544
     .local v2, "deltaX":I
     iput v0, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->mLastOverFlingX:I
 
-    .line 1546
     if-eqz v2, :cond_6
 
-    .line 1547
     iget-object v7, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
     neg-int v8, v2
 
     invoke-virtual {v7, v8}, Lcom/letv/leui/widget/ModifiedGallery;->trackMotionScroll(I)Z
 
-    .line 1548
     :cond_6
     iget-object v7, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
     invoke-virtual {v7}, Lcom/letv/leui/widget/ModifiedGallery;->invalidate()V
 
-    .line 1549
     iget-object v7, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
     invoke-virtual {v7, p0}, Lcom/letv/leui/widget/ModifiedGallery;->postOnAnimation(Ljava/lang/Runnable;)V
 
     goto/16 :goto_0
 
-    .line 1551
     .end local v0    # "currX":I
     .end local v2    # "deltaX":I
     :cond_7
     invoke-direct {p0, v8}, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->endFling(Z)V
 
-    .line 1552
     iget-object v7, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
     # setter for: Lcom/letv/leui/widget/ModifiedGallery;->mTouchMode:I
@@ -374,7 +327,6 @@
 
     goto/16 :goto_0
 
-    .line 1501
     nop
 
     :pswitch_data_0
@@ -392,7 +344,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1464
     iget-object v0, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->mScroller:Landroid/widget/OverScroller;
 
     iget-object v1, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
@@ -416,7 +367,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1465
     iget-object v0, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
     const/4 v1, 0x4
@@ -424,7 +374,6 @@
     # setter for: Lcom/letv/leui/widget/ModifiedGallery;->mTouchMode:I
     invoke-static {v0, v1}, Lcom/letv/leui/widget/ModifiedGallery;->access$202(Lcom/letv/leui/widget/ModifiedGallery;I)I
 
-    .line 1466
     iget-object v0, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
     # getter for: Lcom/letv/leui/widget/ModifiedGallery;->mCurrentOverScrollDistance:I
@@ -434,21 +383,17 @@
 
     iput v0, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->mLastOverFlingX:I
 
-    .line 1467
     iget-object v0, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/ModifiedGallery;->invalidate()V
 
-    .line 1468
     iget-object v0, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
     invoke-virtual {v0, p0}, Lcom/letv/leui/widget/ModifiedGallery;->postOnAnimation(Ljava/lang/Runnable;)V
 
-    .line 1472
     :goto_0
     return-void
 
-    .line 1470
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
@@ -467,14 +412,11 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1450
     if-nez p1, :cond_0
 
-    .line 1460
     :goto_0
     return-void
 
-    .line 1452
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
@@ -483,13 +425,10 @@
     # setter for: Lcom/letv/leui/widget/ModifiedGallery;->mTouchMode:I
     invoke-static {v0, v2}, Lcom/letv/leui/widget/ModifiedGallery;->access$202(Lcom/letv/leui/widget/ModifiedGallery;I)I
 
-    .line 1454
     invoke-direct {p0}, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->startCommon()V
 
-    .line 1456
     iput v1, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->mLastFlingX:I
 
-    .line 1458
     iget-object v0, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->mScroller:Landroid/widget/OverScroller;
 
     neg-int v3, p1
@@ -507,7 +446,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/widget/OverScroller;->startScroll(IIIII)V
 
-    .line 1459
     iget-object v0, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
     invoke-virtual {v0, p0}, Lcom/letv/leui/widget/ModifiedGallery;->postOnAnimation(Ljava/lang/Runnable;)V
@@ -520,14 +458,11 @@
     .param p1, "scrollIntoSlots"    # Z
 
     .prologue
-    .line 1475
     iget-object v0, p0, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->this$0:Lcom/letv/leui/widget/ModifiedGallery;
 
     invoke-virtual {v0, p0}, Lcom/letv/leui/widget/ModifiedGallery;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 1476
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/ModifiedGallery$FlingRunnable;->endFling(Z)V
 
-    .line 1477
     return-void
 .end method

@@ -20,23 +20,18 @@
     .param p2, "service"    # Landroid/app/IAlipayCaManager;
 
     .prologue
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 16
     const-string v0, "AlipayCaManager"
 
     const-string v1, "AlipayCaManager start!"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 17
     iput-object p1, p0, Landroid/app/AlipayCaManager;->mContext:Landroid/content/Context;
 
-    .line 18
     iput-object p2, p0, Landroid/app/AlipayCaManager;->mService:Landroid/app/IAlipayCaManager;
 
-    .line 19
     return-void
 .end method
 
@@ -47,58 +42,49 @@
     .param p1, "param"    # [B
 
     .prologue
-    .line 23
     :try_start_0
     const-string v1, "AlipayCaManager"
 
-    const-string/jumbo v2, "invokeAlipayCaCmd"
+    const-string v2, "invokeAlipayCaCmd"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 24
     iget-object v1, p0, Landroid/app/AlipayCaManager;->mService:Landroid/app/IAlipayCaManager;
 
     if-eqz v1, :cond_0
 
-    .line 25
     const-string v1, "AlipayCaManager"
 
-    const-string/jumbo v2, "mService != null"
+    const-string v2, "mService != null"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 26
     iget-object v1, p0, Landroid/app/AlipayCaManager;->mService:Landroid/app/IAlipayCaManager;
 
     invoke-interface {v1, p1}, Landroid/app/IAlipayCaManager;->invokeAlipayCaCmd([B)[B
 
     move-result-object v1
 
-    .line 34
     :goto_0
     return-object v1
 
-    .line 28
     :cond_0
     const-string v1, "AlipayCaManager"
 
-    const-string/jumbo v2, "mService == null"
+    const-string v2, "mService == null"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 34
     :goto_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 30
     :catch_0
     move-exception v0
 
-    .line 31
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "AlipayCaManager"
 
@@ -106,7 +92,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "invokeAlipayCaCmd "
+    const-string v3, "invokeAlipayCaCmd "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

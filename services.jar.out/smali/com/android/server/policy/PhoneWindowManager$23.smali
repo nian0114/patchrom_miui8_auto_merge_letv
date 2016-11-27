@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 6446
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$23;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 4
 
     .prologue
-    .line 6449
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$23;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager;->mWindowManagerFuncs:Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
@@ -51,7 +49,6 @@
 
     monitor-enter v1
 
-    .line 6450
     :try_start_0
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$23;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -61,14 +58,11 @@
 
     if-nez v0, :cond_0
 
-    .line 6452
     monitor-exit v1
 
-    .line 6457
     :goto_0
     return-void
 
-    .line 6454
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$23;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -79,7 +73,6 @@
     # setter for: Lcom/android/server/policy/PhoneWindowManager;->mPendingPanicGestureUptime:J
     invoke-static {v0, v2, v3}, Lcom/android/server/policy/PhoneWindowManager;->access$2502(Lcom/android/server/policy/PhoneWindowManager;J)J
 
-    .line 6455
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$23;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     # getter for: Lcom/android/server/policy/PhoneWindowManager;->mNavigationBarController:Lcom/android/server/policy/BarController;
@@ -89,7 +82,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/policy/BarController;->showTransient()V
 
-    .line 6456
     monitor-exit v1
 
     goto :goto_0

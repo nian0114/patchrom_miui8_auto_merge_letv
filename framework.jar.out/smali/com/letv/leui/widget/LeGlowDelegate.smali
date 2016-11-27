@@ -89,10 +89,8 @@
 
     const/4 v2, 0x0
 
-    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 14
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -103,38 +101,30 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->TAG:Ljava/lang/String;
 
-    .line 17
     iput-boolean v3, p0, Lcom/letv/leui/widget/LeGlowDelegate;->mEnabled:Z
 
-    .line 31
     const/high16 v0, -0x1000000
 
     iput v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectColor:I
 
-    .line 40
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectPressScaleStart:F
 
-    .line 41
     const v0, 0x3fe66666    # 1.8f
 
     iput v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectPressScaleEnd:F
 
-    .line 42
     iput v2, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectPressAlphaStart:I
 
-    .line 43
     const/16 v0, 0x19
 
     iput v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectPressAlphaEnd:I
 
-    .line 49
     iget v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectPressScaleEnd:F
 
     iput v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectReleaseScaleStart:F
 
-    .line 50
     iget v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectPressScaleEnd:F
 
     const/high16 v1, 0x41600000    # 14.0f
@@ -147,48 +137,38 @@
 
     iput v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectReleaseScaleEnd:F
 
-    .line 51
     iget v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectPressAlphaEnd:I
 
     iput v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectReleaseAlphaStart:I
 
-    .line 52
     iget v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectPressAlphaStart:I
 
     iput v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectReleaseAlphaEnd:I
 
-    .line 56
     iput-boolean v2, p0, Lcom/letv/leui/widget/LeGlowDelegate;->isUp:Z
 
-    .line 57
     iput-boolean v2, p0, Lcom/letv/leui/widget/LeGlowDelegate;->isPressAnimEnd:Z
 
-    .line 66
     iput-object p2, p0, Lcom/letv/leui/widget/LeGlowDelegate;->mView:Landroid/view/View;
 
-    .line 68
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectPaint:Landroid/graphics/Paint;
 
-    .line 69
     iget-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectColor:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 70
     iget-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 72
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeGlowDelegate;->init()V
 
-    .line 73
     return-void
 .end method
 
@@ -197,15 +177,12 @@
     .param p1, "delegateView"    # Landroid/view/View;
 
     .prologue
-    .line 60
     const/4 v0, 0x0
 
     invoke-direct {p0, v0, p1}, Lcom/letv/leui/widget/LeGlowDelegate;-><init>(Landroid/content/Context;Landroid/view/View;)V
 
-    .line 62
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeGlowDelegate;->init()V
 
-    .line 63
     return-void
 .end method
 
@@ -221,12 +198,10 @@
 
     const/4 v3, 0x0
 
-    .line 134
     iget-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->pressAnim:Landroid/animation/AnimatorSet;
 
     if-nez v0, :cond_0
 
-    .line 135
     const-string v0, "backRoundRectScale"
 
     new-array v1, v5, [F
@@ -245,7 +220,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectPressScale:Landroid/animation/ObjectAnimator;
 
-    .line 136
     iget-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectPressScale:Landroid/animation/ObjectAnimator;
 
     new-instance v1, Landroid/view/animation/AccelerateInterpolator;
@@ -254,12 +228,10 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 137
     iget-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectPressScale:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0, p0}, Landroid/animation/ObjectAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 139
     const-string v0, "backRoundRectAlpha"
 
     new-array v1, v5, [I
@@ -278,7 +250,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectPressAlpha:Landroid/animation/ObjectAnimator;
 
-    .line 140
     iget-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectPressAlpha:Landroid/animation/ObjectAnimator;
 
     new-instance v1, Landroid/view/animation/AccelerateInterpolator;
@@ -287,14 +258,12 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 142
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->pressAnim:Landroid/animation/AnimatorSet;
 
-    .line 143
     iget-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->pressAnim:Landroid/animation/AnimatorSet;
 
     new-array v1, v5, [Landroid/animation/Animator;
@@ -309,18 +278,15 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 144
     iget-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->pressAnim:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0, v6, v7}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 148
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->releaseAnim:Landroid/animation/AnimatorSet;
 
     if-nez v0, :cond_1
 
-    .line 149
     const-string v0, "backRoundRectScale"
 
     new-array v1, v5, [F
@@ -339,7 +305,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectReleaseScale:Landroid/animation/ObjectAnimator;
 
-    .line 150
     iget-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectReleaseScale:Landroid/animation/ObjectAnimator;
 
     new-instance v1, Landroid/view/animation/AccelerateInterpolator;
@@ -348,12 +313,10 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 151
     iget-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectReleaseScale:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0, p0}, Landroid/animation/ObjectAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 153
     const-string v0, "backRoundRectAlpha"
 
     new-array v1, v5, [I
@@ -372,7 +335,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectReleaseAlpha:Landroid/animation/ObjectAnimator;
 
-    .line 154
     iget-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectReleaseAlpha:Landroid/animation/ObjectAnimator;
 
     new-instance v1, Landroid/view/animation/AccelerateInterpolator;
@@ -381,14 +343,12 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 156
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->releaseAnim:Landroid/animation/AnimatorSet;
 
-    .line 157
     iget-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->releaseAnim:Landroid/animation/AnimatorSet;
 
     new-array v1, v5, [Landroid/animation/Animator;
@@ -403,12 +363,10 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 158
     iget-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->releaseAnim:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0, v6, v7}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 160
     :cond_1
     return-void
 .end method
@@ -419,7 +377,6 @@
     .locals 1
 
     .prologue
-    .line 163
     iget-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->pressAnim:Landroid/animation/AnimatorSet;
 
     if-eqz v0, :cond_0
@@ -432,12 +389,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 164
     iget-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->pressAnim:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
-    .line 166
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->releaseAnim:Landroid/animation/AnimatorSet;
 
@@ -451,26 +406,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 167
     iget-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->releaseAnim:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
-    .line 170
     :cond_1
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/LeGlowDelegate;->setBackRoundRectAlpha(I)V
 
-    .line 171
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/LeGlowDelegate;->setBackRoundRectScale(F)V
 
-    .line 173
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeGlowDelegate;->invalidate()V
 
-    .line 174
     return-void
 .end method
 
@@ -481,12 +431,10 @@
     .prologue
     const/high16 v5, 0x40000000    # 2.0f
 
-    .line 194
     iget-boolean v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->mEnabled:Z
 
     if-eqz v0, :cond_2
 
-    .line 195
     iget v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->centerX:I
 
     if-eqz v0, :cond_0
@@ -499,7 +447,6 @@
 
     if-nez v0, :cond_1
 
-    .line 196
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->mView:Landroid/view/View;
 
@@ -511,7 +458,6 @@
 
     iput v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->centerX:I
 
-    .line 197
     iget-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->mView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getHeight()I
@@ -522,14 +468,12 @@
 
     iput v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->centerY:I
 
-    .line 198
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->rectF:Landroid/graphics/RectF;
 
-    .line 200
     :cond_1
     iget-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->rectF:Landroid/graphics/RectF;
 
@@ -563,7 +507,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 201
     iget-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->rectF:Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/letv/leui/widget/LeGlowDelegate;->centerY:I
@@ -578,7 +521,6 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 203
     :cond_2
     return-void
 .end method
@@ -587,7 +529,6 @@
     .locals 1
 
     .prologue
-    .line 215
     iget v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectAlpha:I
 
     return v0
@@ -597,7 +538,6 @@
     .locals 1
 
     .prologue
-    .line 223
     iget v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectScale:F
 
     return v0
@@ -607,7 +547,6 @@
     .locals 1
 
     .prologue
-    .line 250
     const/4 v0, 0x0
 
     return v0
@@ -617,7 +556,6 @@
     .locals 1
 
     .prologue
-    .line 243
     const/4 v0, 0x0
 
     return v0
@@ -627,7 +565,6 @@
     .locals 1
 
     .prologue
-    .line 236
     const/4 v0, 0x0
 
     return v0
@@ -637,7 +574,6 @@
     .locals 2
 
     .prologue
-    .line 77
     iget-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->mView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
@@ -658,7 +594,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 78
     iget-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->mView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
@@ -673,7 +608,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setClipChildren(Z)V
 
-    .line 80
     :cond_0
     return-void
 .end method
@@ -682,12 +616,10 @@
     .locals 1
 
     .prologue
-    .line 211
     iget-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->mView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    .line 212
     return-void
 .end method
 
@@ -696,10 +628,8 @@
     .param p1, "animation"    # Landroid/animation/ValueAnimator;
 
     .prologue
-    .line 207
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeGlowDelegate;->invalidate()V
 
-    .line 208
     return-void
 .end method
 
@@ -708,16 +638,12 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 83
     iput-boolean p1, p0, Lcom/letv/leui/widget/LeGlowDelegate;->mEnabled:Z
 
-    .line 85
     if-nez p1, :cond_0
 
-    .line 86
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeGlowDelegate;->cancelAnimation()V
 
-    .line 88
     :cond_0
     return-void
 .end method
@@ -727,15 +653,12 @@
     .param p1, "backRoundRectAlpha"    # I
 
     .prologue
-    .line 218
     iget-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 219
     iput p1, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectAlpha:I
 
-    .line 220
     return-void
 .end method
 
@@ -744,17 +667,14 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 91
     iput p1, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectColor:I
 
-    .line 92
     iget-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectColor:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 93
     return-void
 .end method
 
@@ -763,12 +683,10 @@
     .param p1, "backRoundRectScale"    # F
 
     .prologue
-    .line 226
     iget v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->DEFAULT_BACK_ROUND_RECT_WIDTH:I
 
     if-nez v0, :cond_0
 
-    .line 227
     iget-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->mView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getWidth()I
@@ -787,7 +705,6 @@
 
     iput v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->DEFAULT_BACK_ROUND_RECT_WIDTH:I
 
-    .line 229
     :cond_0
     iget v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->DEFAULT_BACK_ROUND_RECT_WIDTH:I
 
@@ -797,10 +714,8 @@
 
     iput v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectWidth:F
 
-    .line 230
     iput p1, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectScale:F
 
-    .line 231
     return-void
 .end method
 
@@ -809,15 +724,12 @@
     .param p1, "alpha"    # I
 
     .prologue
-    .line 96
     iput p1, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectPressAlphaEnd:I
 
-    .line 97
     iget v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectPressAlphaEnd:I
 
     iput v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectReleaseAlphaStart:I
 
-    .line 98
     return-void
 .end method
 
@@ -826,15 +738,12 @@
     .param p1, "multiple"    # F
 
     .prologue
-    .line 101
     iput p1, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectPressScaleEnd:F
 
-    .line 102
     iget v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectPressScaleEnd:F
 
     iput v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectReleaseScaleStart:F
 
-    .line 103
     iget v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectPressScaleEnd:F
 
     const/high16 v1, 0x41600000    # 14.0f
@@ -847,7 +756,6 @@
 
     iput v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->backRoundRectReleaseScaleEnd:F
 
-    .line 104
     return-void
 .end method
 
@@ -856,7 +764,6 @@
     .param p1, "x"    # F
 
     .prologue
-    .line 254
     return-void
 .end method
 
@@ -865,10 +772,8 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 257
     invoke-virtual {p0, p1}, Lcom/letv/leui/widget/LeGlowDelegate;->setAnimationEnabled(Z)V
 
-    .line 258
     return-void
 .end method
 
@@ -877,7 +782,6 @@
     .param p1, "x"    # F
 
     .prologue
-    .line 247
     return-void
 .end method
 
@@ -886,7 +790,6 @@
     .param p1, "x"    # F
 
     .prologue
-    .line 240
     return-void
 .end method
 
@@ -897,32 +800,25 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 177
     iget-boolean v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->mEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 178
     if-eqz p1, :cond_1
 
-    .line 179
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->isPressAnimEnd:Z
 
-    .line 180
     invoke-virtual {p0, v1}, Lcom/letv/leui/widget/LeGlowDelegate;->startAnimation(I)V
 
-    .line 186
     :cond_0
     :goto_0
     return-void
 
-    .line 182
     :cond_1
     iput-boolean v1, p0, Lcom/letv/leui/widget/LeGlowDelegate;->isUp:Z
 
-    .line 183
     const/4 v0, 0x2
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/widget/LeGlowDelegate;->startAnimation(I)V
@@ -935,15 +831,12 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 189
     iput-object p1, p0, Lcom/letv/leui/widget/LeGlowDelegate;->mView:Landroid/view/View;
 
-    .line 190
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->centerX:I
 
-    .line 191
     return-void
 .end method
 
@@ -954,27 +847,21 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 107
     invoke-direct {p0}, Lcom/letv/leui/widget/LeGlowDelegate;->createAnimation()V
 
-    .line 108
     packed-switch p1, :pswitch_data_0
 
-    .line 130
     :cond_0
     :goto_0
     return-void
 
-    .line 110
     :pswitch_0
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeGlowDelegate;->cancelAnimation()V
 
-    .line 111
     iget-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->pressAnim:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 113
     iget-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->pressAnim:Landroid/animation/AnimatorSet;
 
     new-instance v1, Lcom/letv/leui/widget/LeGlowDelegate$1;
@@ -985,7 +872,6 @@
 
     goto :goto_0
 
-    .line 123
     :pswitch_1
     iget-boolean v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->isUp:Z
 
@@ -995,20 +881,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 124
     iput-boolean v1, p0, Lcom/letv/leui/widget/LeGlowDelegate;->isUp:Z
 
-    .line 125
     iput-boolean v1, p0, Lcom/letv/leui/widget/LeGlowDelegate;->isPressAnimEnd:Z
 
-    .line 126
     iget-object v0, p0, Lcom/letv/leui/widget/LeGlowDelegate;->releaseAnim:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
     goto :goto_0
 
-    .line 108
     nop
 
     :pswitch_data_0

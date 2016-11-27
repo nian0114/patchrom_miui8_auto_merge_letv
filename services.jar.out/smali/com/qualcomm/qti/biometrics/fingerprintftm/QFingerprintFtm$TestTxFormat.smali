@@ -35,23 +35,17 @@
     .param p5, "q95"    # I
 
     .prologue
-    .line 129
     iput-object p1, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm$TestTxFormat;->this$0:Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 130
     iput p2, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm$TestTxFormat;->median:I
 
-    .line 131
     iput p3, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm$TestTxFormat;->stddev:I
 
-    .line 132
     iput p4, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm$TestTxFormat;->q5:I
 
-    .line 133
     iput p5, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm$TestTxFormat;->q95:I
 
-    .line 134
     return-void
 .end method

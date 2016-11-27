@@ -29,13 +29,10 @@
     .param p3, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 97
     iput-object p1, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshGridView$InternalGridViewSDK9;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshGridView;
 
-    .line 98
     invoke-direct {p0, p1, p2, p3}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshGridView$InternalGridView;-><init>(Lcom/letv/leui/widget/pulltorefresh/PullToRefreshGridView;Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 99
     return-void
 .end method
 
@@ -54,12 +51,10 @@
     .param p9, "isTouchEvent"    # Z
 
     .prologue
-    .line 105
     invoke-super/range {p0 .. p9}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshGridView$InternalGridView;->overScrollBy(IIIIIIIIZ)Z
 
     move-result v6
 
-    .line 109
     .local v6, "returnValue":Z
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshGridView$InternalGridViewSDK9;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshGridView;
 
@@ -75,6 +70,5 @@
 
     invoke-static/range {v0 .. v5}, Lcom/letv/leui/widget/pulltorefresh/OverscrollHelper;->overScrollBy(Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;IIIIZ)V
 
-    .line 111
     return v6
 .end method

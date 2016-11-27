@@ -30,7 +30,6 @@
     .locals 2
 
     .prologue
-    .line 702
     sget-object v0, Lcom/letv/leui/provider/BrowserContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "combined"
@@ -48,7 +47,6 @@
     .locals 0
 
     .prologue
-    .line 697
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

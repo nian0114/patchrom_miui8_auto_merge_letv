@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 527
     iput-object p1, p0, Lcom/letv/leui/widget/LeListPreferenceView$4;->this$0:Lcom/letv/leui/widget/LeListPreferenceView;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -46,12 +45,10 @@
 
     const v2, 0x3d4ccccd    # 0.05f
 
-    .line 529
     iget v1, p1, Landroid/os/Message;->what:I
 
     if-ne v3, v1, :cond_1
 
-    .line 531
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/Float;
@@ -68,7 +65,6 @@
 
     iput-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 532
     iget-object v2, p0, Lcom/letv/leui/widget/LeListPreferenceView$4;->this$0:Lcom/letv/leui/widget/LeListPreferenceView;
 
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -81,21 +77,17 @@
 
     invoke-virtual {v2, v1}, Lcom/letv/leui/widget/LeListPreferenceView;->changeWindowAlpha(F)V
 
-    .line 533
     new-instance v0, Landroid/os/Message;
 
     invoke-direct {v0}, Landroid/os/Message;-><init>()V
 
-    .line 534
     .local v0, "msg2":Landroid/os/Message;
     iput v3, v0, Landroid/os/Message;->what:I
 
-    .line 535
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     iput-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 536
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/Float;
@@ -112,26 +104,22 @@
 
     if-lez v1, :cond_0
 
-    .line 537
     iget-object v1, p0, Lcom/letv/leui/widget/LeListPreferenceView$4;->this$0:Lcom/letv/leui/widget/LeListPreferenceView;
 
     iget-object v1, v1, Lcom/letv/leui/widget/LeListPreferenceView;->handler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0, v6, v7}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 555
     .end local v0    # "msg2":Landroid/os/Message;
     :cond_0
     :goto_0
     return-void
 
-    .line 542
     :cond_1
     iget v1, p1, Landroid/os/Message;->what:I
 
     if-ne v4, v1, :cond_0
 
-    .line 543
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/Float;
@@ -148,7 +136,6 @@
 
     iput-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 545
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/Float;
@@ -182,7 +169,6 @@
 
     iput-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 547
     iget-object v2, p0, Lcom/letv/leui/widget/LeListPreferenceView$4;->this$0:Lcom/letv/leui/widget/LeListPreferenceView;
 
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -195,7 +181,6 @@
 
     invoke-virtual {v2, v1}, Lcom/letv/leui/widget/LeListPreferenceView;->changeWindowAlpha(F)V
 
-    .line 548
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/Float;
@@ -215,21 +200,17 @@
 
     if-gez v1, :cond_0
 
-    .line 549
     new-instance v0, Landroid/os/Message;
 
     invoke-direct {v0}, Landroid/os/Message;-><init>()V
 
-    .line 550
     .restart local v0    # "msg2":Landroid/os/Message;
     iput v4, v0, Landroid/os/Message;->what:I
 
-    .line 551
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     iput-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 552
     iget-object v1, p0, Lcom/letv/leui/widget/LeListPreferenceView$4;->this$0:Lcom/letv/leui/widget/LeListPreferenceView;
 
     iget-object v1, v1, Lcom/letv/leui/widget/LeListPreferenceView;->handler:Landroid/os/Handler;
@@ -238,7 +219,6 @@
 
     goto :goto_0
 
-    .line 545
     .end local v0    # "msg2":Landroid/os/Message;
     :cond_2
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;

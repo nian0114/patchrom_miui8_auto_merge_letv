@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1204
     iput-object p1, p0, Lcom/letv/leui/widget/LeSpinner$DropdownPopup$2;->this$1:Lcom/letv/leui/widget/LeSpinner$DropdownPopup;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 1207
     iget-object v0, p0, Lcom/letv/leui/widget/LeSpinner$DropdownPopup$2;->this$1:Lcom/letv/leui/widget/LeSpinner$DropdownPopup;
 
     iget-object v0, v0, Lcom/letv/leui/widget/LeSpinner$DropdownPopup;->this$0:Lcom/letv/leui/widget/LeSpinner;
@@ -52,22 +50,18 @@
 
     if-nez v0, :cond_0
 
-    .line 1208
     iget-object v0, p0, Lcom/letv/leui/widget/LeSpinner$DropdownPopup$2;->this$1:Lcom/letv/leui/widget/LeSpinner$DropdownPopup;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/LeSpinner$DropdownPopup;->dismiss()V
 
-    .line 1216
     :goto_0
     return-void
 
-    .line 1210
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/LeSpinner$DropdownPopup$2;->this$1:Lcom/letv/leui/widget/LeSpinner$DropdownPopup;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/LeSpinner$DropdownPopup;->computeContentWidth()V
 
-    .line 1214
     iget-object v0, p0, Lcom/letv/leui/widget/LeSpinner$DropdownPopup$2;->this$1:Lcom/letv/leui/widget/LeSpinner$DropdownPopup;
 
     # invokes: Landroid/widget/ListPopupWindow;->show()V

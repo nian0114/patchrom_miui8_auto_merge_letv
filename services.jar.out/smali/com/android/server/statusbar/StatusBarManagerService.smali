@@ -77,86 +77,68 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 101
     invoke-direct {p0}, Lcom/android/internal/statusbar/IStatusBarService$Stub;-><init>()V
 
-    .line 58
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mHandler:Landroid/os/Handler;
 
-    .line 61
     new-instance v1, Lcom/android/internal/statusbar/StatusBarIconList;
 
     invoke-direct {v1}, Lcom/android/internal/statusbar/StatusBarIconList;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mIcons:Lcom/android/internal/statusbar/StatusBarIconList;
 
-    .line 64
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mDisableRecords:Ljava/util/ArrayList;
 
-    .line 65
     new-instance v1, Landroid/os/Binder;
 
     invoke-direct {v1}, Landroid/os/Binder;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mSysUiVisToken:Landroid/os/IBinder;
 
-    .line 66
     iput v2, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mDisabled1:I
 
-    .line 67
     iput v2, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mDisabled2:I
 
-    .line 69
     new-instance v1, Ljava/lang/Object;
 
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mLock:Ljava/lang/Object;
 
-    .line 71
     iput v2, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mSystemUiVisibility:I
 
-    .line 73
     iput v2, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mSystemUiIconColor:I
 
-    .line 76
     iput-boolean v2, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mMenuVisible:Z
 
-    .line 77
     iput v2, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mImeWindowVis:I
 
-    .line 80
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mImeToken:Landroid/os/IBinder;
 
-    .line 114
     new-instance v1, Lcom/android/server/statusbar/StatusBarManagerService$1;
 
     invoke-direct {v1, p0}, Lcom/android/server/statusbar/StatusBarManagerService$1;-><init>(Lcom/android/server/statusbar/StatusBarManagerService;)V
 
     iput-object v1, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mInternalService:Lcom/android/server/statusbar/StatusBarManagerInternal;
 
-    .line 102
     iput-object p1, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mContext:Landroid/content/Context;
 
-    .line 103
     iput-object p2, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
 
-    .line 105
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 106
     .local v0, "res":Landroid/content/res/Resources;
     iget-object v1, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mIcons:Lcom/android/internal/statusbar/StatusBarIconList;
 
@@ -168,14 +150,12 @@
 
     invoke-virtual {v1, v2}, Lcom/android/internal/statusbar/StatusBarIconList;->defineSlots([Ljava/lang/String;)V
 
-    .line 108
     const-class v1, Lcom/android/server/statusbar/StatusBarManagerInternal;
 
     iget-object v2, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mInternalService:Lcom/android/server/statusbar/StatusBarManagerInternal;
 
     invoke-static {v1, v2}, Lcom/android/server/LocalServices;->addService(Ljava/lang/Class;Ljava/lang/Object;)V
 
-    .line 109
     return-void
 .end method
 
@@ -184,7 +164,6 @@
     .param p0, "x0"    # Lcom/android/server/statusbar/StatusBarManagerService;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mNotificationDelegate:Lcom/android/server/notification/NotificationDelegate;
 
     return-object v0
@@ -196,7 +175,6 @@
     .param p1, "x1"    # Lcom/android/server/notification/NotificationDelegate;
 
     .prologue
-    .line 52
     iput-object p1, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mNotificationDelegate:Lcom/android/server/notification/NotificationDelegate;
 
     return-object p1
@@ -207,7 +185,6 @@
     .param p0, "x0"    # Lcom/android/server/statusbar/StatusBarManagerService;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
     return-object v0
@@ -222,10 +199,8 @@
     .param p5, "whichFlag"    # I
 
     .prologue
-    .line 281
     invoke-virtual/range {p0 .. p5}, Lcom/android/server/statusbar/StatusBarManagerService;->manageDisableListLocked(IILandroid/os/IBinder;Ljava/lang/String;I)V
 
-    .line 284
     iget v2, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mCurrentUserId:I
 
     const/4 v3, 0x1
@@ -234,7 +209,6 @@
 
     move-result v0
 
-    .line 285
     .local v0, "net1":I
     iget v2, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mCurrentUserId:I
 
@@ -244,7 +218,6 @@
 
     move-result v1
 
-    .line 286
     .local v1, "net2":I
     iget v2, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mDisabled1:I
 
@@ -254,14 +227,11 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 287
     :cond_0
     iput v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mDisabled1:I
 
-    .line 288
     iput v1, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mDisabled2:I
 
-    .line 289
     iget-object v2, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mHandler:Landroid/os/Handler;
 
     new-instance v3, Lcom/android/server/statusbar/StatusBarManagerService$2;
@@ -270,12 +240,10 @@
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 294
     iget-object v2, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
     if-eqz v2, :cond_1
 
-    .line 296
     :try_start_0
     iget-object v2, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
@@ -283,12 +251,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 301
     :cond_1
     :goto_0
     return-void
 
-    .line 297
     :catch_0
     move-exception v2
 
@@ -299,7 +265,6 @@
     .locals 3
 
     .prologue
-    .line 612
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.EXPAND_STATUS_BAR"
@@ -308,7 +273,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 614
     return-void
 .end method
 
@@ -316,7 +280,6 @@
     .locals 3
 
     .prologue
-    .line 607
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.STATUS_BAR"
@@ -325,7 +288,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 609
     return-void
 .end method
 
@@ -333,7 +295,6 @@
     .locals 3
 
     .prologue
-    .line 617
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.STATUS_BAR_SERVICE"
@@ -342,7 +303,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 619
     return-void
 .end method
 
@@ -351,15 +311,12 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 484
     iget v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mSystemUiIconColor:I
 
     if-eq v0, p1, :cond_0
 
-    .line 485
     iput p1, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mSystemUiIconColor:I
 
-    .line 486
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/statusbar/StatusBarManagerService$6;
@@ -368,7 +325,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 497
     :cond_0
     return-void
 .end method
@@ -379,15 +335,12 @@
     .param p2, "mask"    # I
 
     .prologue
-    .line 452
     iget v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mSystemUiVisibility:I
 
     if-eq v0, p1, :cond_0
 
-    .line 453
     iput p1, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mSystemUiVisibility:I
 
-    .line 454
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/statusbar/StatusBarManagerService$5;
@@ -396,7 +349,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 465
     :cond_0
     return-void
 .end method
@@ -407,12 +359,10 @@
     .locals 1
 
     .prologue
-    .line 579
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
     if-eqz v0, :cond_0
 
-    .line 581
     :try_start_0
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
@@ -420,12 +370,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 584
     :cond_0
     :goto_0
     return-void
 
-    .line 582
     :catch_0
     move-exception v0
 
@@ -436,12 +384,10 @@
     .locals 1
 
     .prologue
-    .line 570
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
     if-eqz v0, :cond_0
 
-    .line 572
     :try_start_0
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
@@ -449,12 +395,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 575
     :cond_0
     :goto_0
     return-void
 
-    .line 573
     :catch_0
     move-exception v0
 
@@ -467,12 +411,10 @@
     .param p3, "statusBarAnimationsDuration"    # J
 
     .prologue
-    .line 589
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
     if-eqz v0, :cond_0
 
-    .line 591
     :try_start_0
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
@@ -480,12 +422,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 595
     :cond_0
     :goto_0
     return-void
 
-    .line 593
     :catch_0
     move-exception v0
 
@@ -496,12 +436,10 @@
     .locals 1
 
     .prologue
-    .line 528
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
     if-eqz v0, :cond_0
 
-    .line 530
     :try_start_0
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
@@ -509,12 +447,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 533
     :cond_0
     :goto_0
     return-void
 
-    .line 531
     :catch_0
     move-exception v0
 
@@ -530,15 +466,12 @@
     .end annotation
 
     .prologue
-    .line 663
     invoke-direct {p0}, Lcom/android/server/statusbar/StatusBarManagerService;->enforceStatusBarService()V
 
-    .line 664
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 666
     .local v0, "identity":J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mNotificationDelegate:Lcom/android/server/notification/NotificationDelegate;
@@ -547,13 +480,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 668
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 670
     return-void
 
-    .line 668
     :catchall_0
     move-exception v2
 
@@ -566,15 +496,12 @@
     .locals 1
 
     .prologue
-    .line 214
     invoke-direct {p0}, Lcom/android/server/statusbar/StatusBarManagerService;->enforceExpandStatusBar()V
 
-    .line 216
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
     if-eqz v0, :cond_0
 
-    .line 218
     :try_start_0
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
@@ -582,12 +509,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 222
     :cond_0
     :goto_0
     return-void
 
-    .line 219
     :catch_0
     move-exception v0
 
@@ -601,12 +526,10 @@
     .param p3, "pkg"    # Ljava/lang/String;
 
     .prologue
-    .line 238
     iget v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mCurrentUserId:I
 
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/android/server/statusbar/StatusBarManagerService;->disableForUser(ILandroid/os/IBinder;Ljava/lang/String;I)V
 
-    .line 239
     return-void
 .end method
 
@@ -617,12 +540,10 @@
     .param p3, "pkg"    # Ljava/lang/String;
 
     .prologue
-    .line 258
     iget v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mCurrentUserId:I
 
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/android/server/statusbar/StatusBarManagerService;->disableForUser(ILandroid/os/IBinder;Ljava/lang/String;I)V
 
-    .line 259
     return-void
 .end method
 
@@ -634,15 +555,12 @@
     .param p4, "userId"    # I
 
     .prologue
-    .line 269
     invoke-direct {p0}, Lcom/android/server/statusbar/StatusBarManagerService;->enforceStatusBar()V
 
-    .line 271
     iget-object v6, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v6
 
-    .line 272
     const/4 v5, 0x2
 
     move-object v0, p0
@@ -658,13 +576,10 @@
     :try_start_0
     invoke-direct/range {v0 .. v5}, Lcom/android/server/statusbar/StatusBarManagerService;->disableLocked(IILandroid/os/IBinder;Ljava/lang/String;I)V
 
-    .line 273
     monitor-exit v6
 
-    .line 274
     return-void
 
-    .line 273
     :catchall_0
     move-exception v0
 
@@ -683,15 +598,12 @@
     .param p4, "userId"    # I
 
     .prologue
-    .line 243
     invoke-direct {p0}, Lcom/android/server/statusbar/StatusBarManagerService;->enforceStatusBar()V
 
-    .line 245
     iget-object v6, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v6
 
-    .line 246
     const/4 v5, 0x1
 
     move-object v0, p0
@@ -707,13 +619,10 @@
     :try_start_0
     invoke-direct/range {v0 .. v5}, Lcom/android/server/statusbar/StatusBarManagerService;->disableLocked(IILandroid/os/IBinder;Ljava/lang/String;I)V
 
-    .line 247
     monitor-exit v6
 
-    .line 248
     return-void
 
-    .line 247
     :catchall_0
     move-exception v0
 
@@ -733,12 +642,10 @@
     .end annotation
 
     .prologue
-    .line 904
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
     if-eqz v0, :cond_0
 
-    .line 906
     :try_start_0
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
@@ -746,12 +653,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 910
     :cond_0
     :goto_0
     return-void
 
-    .line 907
     :catch_0
     move-exception v0
 
@@ -765,7 +670,6 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 851
     iget-object v3, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mContext:Landroid/content/Context;
 
     const-string v4, "android.permission.DUMP"
@@ -776,7 +680,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 853
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -815,11 +718,9 @@
 
     invoke-virtual {p2, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 880
     :goto_0
     return-void
 
-    .line 859
     :cond_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -847,28 +748,23 @@
 
     invoke-virtual {p2, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 862
     iget-object v4, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mIcons:Lcom/android/internal/statusbar/StatusBarIconList;
 
     monitor-enter v4
 
-    .line 863
     :try_start_0
     iget-object v3, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mIcons:Lcom/android/internal/statusbar/StatusBarIconList;
 
     invoke-virtual {v3, p2}, Lcom/android/internal/statusbar/StatusBarIconList;->dump(Ljava/io/PrintWriter;)V
 
-    .line 864
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 866
     iget-object v4, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 867
     :try_start_1
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -896,7 +792,6 @@
 
     invoke-virtual {p2, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 868
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -923,14 +818,12 @@
 
     invoke-virtual {p2, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 869
     iget-object v3, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mDisableRecords:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 870
     .local v0, "N":I
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -952,14 +845,12 @@
 
     invoke-virtual {p2, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 871
     const/4 v1, 0x0
 
     .local v1, "i":I
     :goto_1
     if-ge v1, v0, :cond_1
 
-    .line 872
     iget-object v3, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mDisableRecords:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -968,7 +859,6 @@
 
     check-cast v2, Lcom/android/server/statusbar/StatusBarManagerService$DisableRecord;
 
-    .line 873
     .local v2, "tok":Lcom/android/server/statusbar/StatusBarManagerService$DisableRecord;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1060,12 +950,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 871
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 864
     .end local v0    # "N":I
     .end local v1    # "i":I
     .end local v2    # "tok":Lcom/android/server/statusbar/StatusBarManagerService$DisableRecord;
@@ -1079,7 +967,6 @@
 
     throw v3
 
-    .line 879
     .restart local v0    # "N":I
     .restart local v1    # "i":I
     :cond_1
@@ -1104,15 +991,12 @@
     .locals 1
 
     .prologue
-    .line 202
     invoke-direct {p0}, Lcom/android/server/statusbar/StatusBarManagerService;->enforceExpandStatusBar()V
 
-    .line 204
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
     if-eqz v0, :cond_0
 
-    .line 206
     :try_start_0
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
@@ -1120,12 +1004,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 210
     :cond_0
     :goto_0
     return-void
 
-    .line 207
     :catch_0
     move-exception v0
 
@@ -1136,15 +1018,12 @@
     .locals 1
 
     .prologue
-    .line 226
     invoke-direct {p0}, Lcom/android/server/statusbar/StatusBarManagerService;->enforceExpandStatusBar()V
 
-    .line 228
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
     if-eqz v0, :cond_0
 
-    .line 230
     :try_start_0
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
@@ -1152,12 +1031,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 234
     :cond_0
     :goto_0
     return-void
 
-    .line 231
     :catch_0
     move-exception v0
 
@@ -1170,18 +1047,15 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 834
     iget-object v4, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mDisableRecords:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 836
     .local v0, "N":I
     const/4 v2, 0x0
 
-    .line 837
     .local v2, "net":I
     const/4 v1, 0x0
 
@@ -1189,7 +1063,6 @@
     :goto_0
     if-ge v1, v0, :cond_2
 
-    .line 838
     iget-object v4, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mDisableRecords:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1198,13 +1071,11 @@
 
     check-cast v3, Lcom/android/server/statusbar/StatusBarManagerService$DisableRecord;
 
-    .line 839
     .local v3, "rec":Lcom/android/server/statusbar/StatusBarManagerService$DisableRecord;
     iget v4, v3, Lcom/android/server/statusbar/StatusBarManagerService$DisableRecord;->userId:I
 
     if-ne v4, p1, :cond_0
 
-    .line 840
     const/4 v4, 0x1
 
     if-ne p2, v4, :cond_1
@@ -1214,19 +1085,16 @@
     :goto_1
     or-int/2addr v2, v4
 
-    .line 837
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 840
     :cond_1
     iget v4, v3, Lcom/android/server/statusbar/StatusBarManagerService$DisableRecord;->what2:I
 
     goto :goto_1
 
-    .line 843
     .end local v3    # "rec":Lcom/android/server/statusbar/StatusBarManagerService$DisableRecord;
     :cond_2
     return v2
@@ -1246,16 +1114,13 @@
     .end annotation
 
     .prologue
-    .line 930
     const/4 v0, 0x0
 
-    .line 931
     .local v0, "mMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;"
     iget-object v1, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
     if-eqz v1, :cond_0
 
-    .line 933
     :try_start_0
     iget-object v1, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
@@ -1265,12 +1130,10 @@
 
     move-result-object v0
 
-    .line 937
     :cond_0
     :goto_0
     return-object v0
 
-    .line 934
     :catch_0
     move-exception v1
 
@@ -1283,12 +1146,10 @@
     .param p2, "triggeredFromHomeKey"    # Z
 
     .prologue
-    .line 546
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
     if-eqz v0, :cond_0
 
-    .line 548
     :try_start_0
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
@@ -1296,12 +1157,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 551
     :cond_0
     :goto_0
     return-void
 
-    .line 549
     :catch_0
     move-exception v0
 
@@ -1319,18 +1178,15 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 795
     iget-object v5, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mDisableRecords:Ljava/util/ArrayList;
 
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 796
     .local v0, "N":I
     const/4 v4, 0x0
 
-    .line 798
     .local v4, "tok":Lcom/android/server/statusbar/StatusBarManagerService$DisableRecord;
     const/4 v2, 0x0
 
@@ -1338,7 +1194,6 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
-    .line 799
     iget-object v5, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mDisableRecords:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1347,7 +1202,6 @@
 
     check-cast v3, Lcom/android/server/statusbar/StatusBarManagerService$DisableRecord;
 
-    .line 800
     .local v3, "t":Lcom/android/server/statusbar/StatusBarManagerService$DisableRecord;
     iget-object v5, v3, Lcom/android/server/statusbar/StatusBarManagerService$DisableRecord;->token:Landroid/os/IBinder;
 
@@ -1357,10 +1211,8 @@
 
     if-ne v5, p1, :cond_3
 
-    .line 801
     move-object v4, v3
 
-    .line 805
     .end local v3    # "t":Lcom/android/server/statusbar/StatusBarManagerService$DisableRecord;
     :cond_0
     if-eqz p2, :cond_1
@@ -1371,38 +1223,31 @@
 
     if-nez v5, :cond_4
 
-    .line 806
     :cond_1
     if-eqz v4, :cond_2
 
-    .line 807
     iget-object v5, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mDisableRecords:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 808
     iget-object v5, v4, Lcom/android/server/statusbar/StatusBarManagerService$DisableRecord;->token:Landroid/os/IBinder;
 
     invoke-interface {v5, v4, v6}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 830
     :cond_2
     :goto_1
     return-void
 
-    .line 798
     .restart local v3    # "t":Lcom/android/server/statusbar/StatusBarManagerService$DisableRecord;
     :cond_3
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 811
     .end local v3    # "t":Lcom/android/server/statusbar/StatusBarManagerService$DisableRecord;
     :cond_4
     if-nez v4, :cond_5
 
-    .line 812
     new-instance v4, Lcom/android/server/statusbar/StatusBarManagerService$DisableRecord;
 
     .end local v4    # "tok":Lcom/android/server/statusbar/StatusBarManagerService$DisableRecord;
@@ -1410,11 +1255,9 @@
 
     invoke-direct {v4, p0, v5}, Lcom/android/server/statusbar/StatusBarManagerService$DisableRecord;-><init>(Lcom/android/server/statusbar/StatusBarManagerService;Lcom/android/server/statusbar/StatusBarManagerService$1;)V
 
-    .line 813
     .restart local v4    # "tok":Lcom/android/server/statusbar/StatusBarManagerService$DisableRecord;
     iput p1, v4, Lcom/android/server/statusbar/StatusBarManagerService$DisableRecord;->userId:I
 
-    .line 815
     const/4 v5, 0x0
 
     :try_start_0
@@ -1422,38 +1265,30 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 820
     iget-object v5, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mDisableRecords:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 822
     :cond_5
     const/4 v5, 0x1
 
     if-ne p5, v5, :cond_6
 
-    .line 823
     iput p2, v4, Lcom/android/server/statusbar/StatusBarManagerService$DisableRecord;->what1:I
 
-    .line 827
     :goto_2
     iput-object p3, v4, Lcom/android/server/statusbar/StatusBarManagerService$DisableRecord;->token:Landroid/os/IBinder;
 
-    .line 828
     iput-object p4, v4, Lcom/android/server/statusbar/StatusBarManagerService$DisableRecord;->pkg:Ljava/lang/String;
 
     goto :goto_1
 
-    .line 817
     :catch_0
     move-exception v1
 
-    .line 818
     .local v1, "ex":Landroid/os/RemoteException;
     goto :goto_1
 
-    .line 825
     .end local v1    # "ex":Landroid/os/RemoteException;
     :cond_6
     iput p2, v4, Lcom/android/server/statusbar/StatusBarManagerService$DisableRecord;->what2:I
@@ -1466,27 +1301,22 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 773
     invoke-direct {p0}, Lcom/android/server/statusbar/StatusBarManagerService;->enforceStatusBarService()V
 
-    .line 774
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 775
     .local v1, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v0
 
-    .line 776
     .local v0, "callingPid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 778
     .local v2, "identity":J
     :try_start_0
     iget-object v4, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mNotificationDelegate:Lcom/android/server/notification/NotificationDelegate;
@@ -1495,13 +1325,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 780
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 782
     return-void
 
-    .line 780
     :catchall_0
     move-exception v4
 
@@ -1516,27 +1343,22 @@
     .param p2, "actionIndex"    # I
 
     .prologue
-    .line 698
     invoke-direct {p0}, Lcom/android/server/statusbar/StatusBarManagerService;->enforceStatusBarService()V
 
-    .line 699
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 700
     .local v1, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v0
 
-    .line 701
     .local v0, "callingPid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 703
     .local v2, "identity":J
     :try_start_0
     iget-object v4, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mNotificationDelegate:Lcom/android/server/notification/NotificationDelegate;
@@ -1545,13 +1367,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 706
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 708
     return-void
 
-    .line 706
     :catchall_0
     move-exception v4
 
@@ -1568,7 +1387,6 @@
     .param p4, "userId"    # I
 
     .prologue
-    .line 728
     const/4 v5, 0x0
 
     move-object v0, p0
@@ -1583,7 +1401,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/statusbar/StatusBarManagerService;->onNotificationClearShadow(Ljava/lang/String;Ljava/lang/String;IIZ)V
 
-    .line 729
     return-void
 .end method
 
@@ -1596,27 +1413,22 @@
     .param p5, "isShadow"    # Z
 
     .prologue
-    .line 733
     invoke-direct {p0}, Lcom/android/server/statusbar/StatusBarManagerService;->enforceStatusBarService()V
 
-    .line 734
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 735
     .local v1, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v2
 
-    .line 736
     .local v2, "callingPid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v8
 
-    .line 738
     .local v8, "identity":J
     :try_start_0
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mNotificationDelegate:Lcom/android/server/notification/NotificationDelegate;
@@ -1635,13 +1447,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 740
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 742
     return-void
 
-    .line 740
     :catchall_0
     move-exception v0
 
@@ -1655,27 +1464,22 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 685
     invoke-direct {p0}, Lcom/android/server/statusbar/StatusBarManagerService;->enforceStatusBarService()V
 
-    .line 686
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 687
     .local v1, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v0
 
-    .line 688
     .local v0, "callingPid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 690
     .local v2, "identity":J
     :try_start_0
     iget-object v4, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mNotificationDelegate:Lcom/android/server/notification/NotificationDelegate;
@@ -1684,13 +1488,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 692
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 694
     return-void
 
-    .line 692
     :catchall_0
     move-exception v4
 
@@ -1710,27 +1511,22 @@
     .param p7, "userId"    # I
 
     .prologue
-    .line 713
     invoke-direct {p0}, Lcom/android/server/statusbar/StatusBarManagerService;->enforceStatusBarService()V
 
-    .line 714
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 715
     .local v1, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v2
 
-    .line 716
     .local v2, "callingPid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 719
     .local v10, "identity":J
     :try_start_0
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mNotificationDelegate:Lcom/android/server/notification/NotificationDelegate;
@@ -1753,13 +1549,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 722
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 724
     return-void
 
-    .line 722
     :catchall_0
     move-exception v0
 
@@ -1780,15 +1573,12 @@
     .end annotation
 
     .prologue
-    .line 761
     invoke-direct {p0}, Lcom/android/server/statusbar/StatusBarManagerService;->enforceStatusBarService()V
 
-    .line 762
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 764
     .local v0, "identity":J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mNotificationDelegate:Lcom/android/server/notification/NotificationDelegate;
@@ -1797,13 +1587,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 767
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 769
     return-void
 
-    .line 767
     :catchall_0
     move-exception v2
 
@@ -1823,15 +1610,12 @@
     .end annotation
 
     .prologue
-    .line 748
     invoke-direct {p0}, Lcom/android/server/statusbar/StatusBarManagerService;->enforceStatusBarService()V
 
-    .line 749
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 751
     .local v0, "identity":J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mNotificationDelegate:Lcom/android/server/notification/NotificationDelegate;
@@ -1840,13 +1624,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 754
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 756
     return-void
 
-    .line 754
     :catchall_0
     move-exception v2
 
@@ -1864,15 +1645,12 @@
     .end annotation
 
     .prologue
-    .line 674
     invoke-direct {p0}, Lcom/android/server/statusbar/StatusBarManagerService;->enforceStatusBarService()V
 
-    .line 675
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 677
     .local v0, "identity":J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mNotificationDelegate:Lcom/android/server/notification/NotificationDelegate;
@@ -1881,13 +1659,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 679
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 681
     return-void
 
-    .line 679
     :catchall_0
     move-exception v2
 
@@ -1902,15 +1677,12 @@
     .param p2, "numItems"    # I
 
     .prologue
-    .line 652
     invoke-direct {p0}, Lcom/android/server/statusbar/StatusBarManagerService;->enforceStatusBarService()V
 
-    .line 653
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 655
     .local v0, "identity":J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mNotificationDelegate:Lcom/android/server/notification/NotificationDelegate;
@@ -1919,13 +1691,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 657
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 659
     return-void
 
-    .line 657
     :catchall_0
     move-exception v2
 
@@ -1938,12 +1707,10 @@
     .locals 1
 
     .prologue
-    .line 519
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
     if-eqz v0, :cond_0
 
-    .line 521
     :try_start_0
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
@@ -1951,12 +1718,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 524
     :cond_0
     :goto_0
     return-void
 
-    .line 522
     :catch_0
     move-exception v0
 
@@ -1987,10 +1752,8 @@
 
     const/4 v0, 0x1
 
-    .line 627
     invoke-direct {p0}, Lcom/android/server/statusbar/StatusBarManagerService;->enforceStatusBarService()V
 
-    .line 629
     const-string v2, "StatusBarManagerService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2013,31 +1776,25 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 630
     iput-object p1, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
-    .line 631
     iget-object v2, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mIcons:Lcom/android/internal/statusbar/StatusBarIconList;
 
     monitor-enter v2
 
-    .line 632
     :try_start_0
     iget-object v3, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mIcons:Lcom/android/internal/statusbar/StatusBarIconList;
 
     invoke-virtual {p2, v3}, Lcom/android/internal/statusbar/StatusBarIconList;->copyFrom(Lcom/android/internal/statusbar/StatusBarIconList;)V
 
-    .line 633
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 634
     iget-object v3, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 635
     const/4 v2, 0x0
 
     :try_start_1
@@ -2051,14 +1808,12 @@
 
     aput v4, p3, v2
 
-    .line 636
     const/4 v2, 0x1
 
     iget v4, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mSystemUiVisibility:I
 
     aput v4, p3, v2
 
-    .line 637
     const/4 v4, 0x2
 
     iget-boolean v2, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mMenuVisible:Z
@@ -2070,21 +1825,18 @@
     :goto_0
     aput v2, p3, v4
 
-    .line 638
     const/4 v2, 0x3
 
     iget v4, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mImeWindowVis:I
 
     aput v4, p3, v2
 
-    .line 639
     const/4 v2, 0x4
 
     iget v4, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mImeBackDisposition:I
 
     aput v4, p3, v2
 
-    .line 640
     const/4 v2, 0x5
 
     iget-boolean v4, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mShowImeSwitcher:Z
@@ -2094,7 +1846,6 @@
     :goto_1
     aput v0, p3, v2
 
-    .line 641
     const/4 v0, 0x6
 
     iget v1, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mCurrentUserId:I
@@ -2107,20 +1858,16 @@
 
     aput v1, p3, v0
 
-    .line 642
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mImeToken:Landroid/os/IBinder;
 
     invoke-interface {p4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 643
     monitor-exit v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 644
     return-void
 
-    .line 633
     :catchall_0
     move-exception v0
 
@@ -2134,16 +1881,13 @@
     :cond_0
     move v2, v1
 
-    .line 637
     goto :goto_0
 
     :cond_1
     move v0, v1
 
-    .line 640
     goto :goto_1
 
-    .line 643
     :catchall_1
     move-exception v0
 
@@ -2160,15 +1904,12 @@
     .param p1, "slot"    # Ljava/lang/String;
 
     .prologue
-    .line 359
     invoke-direct {p0}, Lcom/android/server/statusbar/StatusBarManagerService;->enforceStatusBar()V
 
-    .line 361
     iget-object v2, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mIcons:Lcom/android/internal/statusbar/StatusBarIconList;
 
     monitor-enter v2
 
-    .line 362
     :try_start_0
     iget-object v1, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mIcons:Lcom/android/internal/statusbar/StatusBarIconList;
 
@@ -2176,11 +1917,9 @@
 
     move-result v0
 
-    .line 363
     .local v0, "index":I
     if-gez v0, :cond_0
 
-    .line 364
     new-instance v1, Ljava/lang/SecurityException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2205,7 +1944,6 @@
 
     throw v1
 
-    .line 375
     .end local v0    # "index":I
     :catchall_0
     move-exception v1
@@ -2216,7 +1954,6 @@
 
     throw v1
 
-    .line 367
     .restart local v0    # "index":I
     :cond_0
     :try_start_1
@@ -2224,14 +1961,12 @@
 
     invoke-virtual {v1, v0}, Lcom/android/internal/statusbar/StatusBarIconList;->removeIcon(I)V
 
-    .line 369
     iget-object v1, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     if-eqz v1, :cond_1
 
-    .line 371
     :try_start_2
     iget-object v1, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
@@ -2240,7 +1975,6 @@
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 375
     :cond_1
     :goto_0
     :try_start_3
@@ -2248,10 +1982,8 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 376
     return-void
 
-    .line 372
     :catch_0
     move-exception v1
 
@@ -2264,12 +1996,10 @@
     .param p2, "isLongPress"    # Z
 
     .prologue
-    .line 944
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
     if-eqz v0, :cond_0
 
-    .line 946
     :try_start_0
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
@@ -2277,12 +2007,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 950
     :cond_0
     :goto_0
     return-void
 
-    .line 947
     :catch_0
     move-exception v0
 
@@ -2294,10 +2022,8 @@
     .param p1, "newUserId"    # I
 
     .prologue
-    .line 556
     iput p1, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mCurrentUserId:I
 
-    .line 557
     return-void
 .end method
 
@@ -2310,15 +2036,12 @@
     .param p5, "contentDescription"    # Ljava/lang/String;
 
     .prologue
-    .line 306
     invoke-direct {p0}, Lcom/android/server/statusbar/StatusBarManagerService;->enforceStatusBar()V
 
-    .line 308
     iget-object v8, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mIcons:Lcom/android/internal/statusbar/StatusBarIconList;
 
     monitor-enter v8
 
-    .line 309
     :try_start_0
     iget-object v1, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mIcons:Lcom/android/internal/statusbar/StatusBarIconList;
 
@@ -2326,11 +2049,9 @@
 
     move-result v7
 
-    .line 310
     .local v7, "index":I
     if-gez v7, :cond_0
 
-    .line 311
     new-instance v1, Ljava/lang/SecurityException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2355,7 +2076,6 @@
 
     throw v1
 
-    .line 326
     .end local v7    # "index":I
     :catchall_0
     move-exception v1
@@ -2366,7 +2086,6 @@
 
     throw v1
 
-    .line 314
     .restart local v7    # "index":I
     :cond_0
     :try_start_1
@@ -2386,20 +2105,17 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/internal/statusbar/StatusBarIcon;-><init>(Ljava/lang/String;Landroid/os/UserHandle;IIILjava/lang/CharSequence;)V
 
-    .line 318
     .local v0, "icon":Lcom/android/internal/statusbar/StatusBarIcon;
     iget-object v1, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mIcons:Lcom/android/internal/statusbar/StatusBarIconList;
 
     invoke-virtual {v1, v7, v0}, Lcom/android/internal/statusbar/StatusBarIconList;->setIcon(ILcom/android/internal/statusbar/StatusBarIcon;)V
 
-    .line 320
     iget-object v1, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     if-eqz v1, :cond_1
 
-    .line 322
     :try_start_2
     iget-object v1, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
@@ -2408,7 +2124,6 @@
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 326
     :cond_1
     :goto_0
     :try_start_3
@@ -2416,10 +2131,8 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 327
     return-void
 
-    .line 323
     :catch_0
     move-exception v1
 
@@ -2432,15 +2145,12 @@
     .param p2, "visible"    # Z
 
     .prologue
-    .line 331
     invoke-direct {p0}, Lcom/android/server/statusbar/StatusBarManagerService;->enforceStatusBar()V
 
-    .line 333
     iget-object v3, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mIcons:Lcom/android/internal/statusbar/StatusBarIconList;
 
     monitor-enter v3
 
-    .line 334
     :try_start_0
     iget-object v2, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mIcons:Lcom/android/internal/statusbar/StatusBarIconList;
 
@@ -2448,11 +2158,9 @@
 
     move-result v1
 
-    .line 335
     .local v1, "index":I
     if-gez v1, :cond_0
 
-    .line 336
     new-instance v2, Ljava/lang/SecurityException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2477,7 +2185,6 @@
 
     throw v2
 
-    .line 354
     .end local v1    # "index":I
     :catchall_0
     move-exception v2
@@ -2488,7 +2195,6 @@
 
     throw v2
 
-    .line 339
     .restart local v1    # "index":I
     :cond_0
     :try_start_1
@@ -2498,34 +2204,27 @@
 
     move-result-object v0
 
-    .line 340
     .local v0, "icon":Lcom/android/internal/statusbar/StatusBarIcon;
     if-nez v0, :cond_1
 
-    .line 341
     monitor-exit v3
 
-    .line 355
     :goto_0
     return-void
 
-    .line 344
     :cond_1
     iget-boolean v2, v0, Lcom/android/internal/statusbar/StatusBarIcon;->visible:Z
 
     if-eq v2, p2, :cond_2
 
-    .line 345
     iput-boolean p2, v0, Lcom/android/internal/statusbar/StatusBarIcon;->visible:Z
 
-    .line 347
     iget-object v2, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     if-eqz v2, :cond_2
 
-    .line 349
     :try_start_2
     iget-object v2, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
@@ -2534,7 +2233,6 @@
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 354
     :cond_2
     :goto_1
     :try_start_3
@@ -2544,7 +2242,6 @@
 
     goto :goto_0
 
-    .line 350
     :catch_0
     move-exception v2
 
@@ -2559,28 +2256,21 @@
     .param p4, "showImeSwitcher"    # Z
 
     .prologue
-    .line 407
     invoke-direct {p0}, Lcom/android/server/statusbar/StatusBarManagerService;->enforceStatusBar()V
 
-    .line 413
     iget-object v6, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v6
 
-    .line 417
     :try_start_0
     iput p2, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mImeWindowVis:I
 
-    .line 418
     iput p3, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mImeBackDisposition:I
 
-    .line 419
     iput-object p1, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mImeToken:Landroid/os/IBinder;
 
-    .line 420
     iput-boolean p4, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mShowImeSwitcher:Z
 
-    .line 421
     iget-object v7, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mHandler:Landroid/os/Handler;
 
     new-instance v0, Lcom/android/server/statusbar/StatusBarManagerService$4;
@@ -2599,13 +2289,10 @@
 
     invoke-virtual {v7, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 431
     monitor-exit v6
 
-    .line 432
     return-void
 
-    .line 431
     :catchall_0
     move-exception v0
 
@@ -2621,25 +2308,19 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 474
     invoke-direct {p0}, Lcom/android/server/statusbar/StatusBarManagerService;->enforceStatusBarService()V
 
-    .line 478
     iget-object v1, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 479
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/statusbar/StatusBarManagerService;->updateUiIconColorLocked(I)V
 
-    .line 480
     monitor-exit v1
 
-    .line 481
     return-void
 
-    .line 480
     :catchall_0
     move-exception v0
 
@@ -2657,19 +2338,15 @@
     .param p3, "cause"    # Ljava/lang/String;
 
     .prologue
-    .line 437
     invoke-direct {p0}, Lcom/android/server/statusbar/StatusBarManagerService;->enforceStatusBarService()V
 
-    .line 441
     iget-object v6, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v6
 
-    .line 442
     :try_start_0
     invoke-direct {p0, p1, p2}, Lcom/android/server/statusbar/StatusBarManagerService;->updateUiVisibilityLocked(II)V
 
-    .line 443
     iget v1, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mCurrentUserId:I
 
     const/high16 v0, 0x3ff0000
@@ -2686,13 +2363,10 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/statusbar/StatusBarManagerService;->disableLocked(IILandroid/os/IBinder;Ljava/lang/String;I)V
 
-    .line 448
     monitor-exit v6
 
-    .line 449
     return-void
 
-    .line 448
     :catchall_0
     move-exception v0
 
@@ -2709,12 +2383,10 @@
     .param p2, "state"    # I
 
     .prologue
-    .line 561
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
     if-eqz v0, :cond_0
 
-    .line 563
     :try_start_0
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
@@ -2722,12 +2394,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 566
     :cond_0
     :goto_0
     return-void
 
-    .line 564
     :catch_0
     move-exception v0
 
@@ -2739,12 +2409,10 @@
     .param p1, "triggeredFromAltTab"    # Z
 
     .prologue
-    .line 537
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
     if-eqz v0, :cond_0
 
-    .line 539
     :try_start_0
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
@@ -2752,12 +2420,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 542
     :cond_0
     :goto_0
     return-void
 
-    .line 540
     :catch_0
     move-exception v0
 
@@ -2769,12 +2435,10 @@
     .param p1, "args"    # Landroid/os/Bundle;
 
     .prologue
-    .line 599
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
     if-eqz v0, :cond_0
 
-    .line 601
     :try_start_0
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
@@ -2782,12 +2446,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 604
     :cond_0
     :goto_0
     return-void
 
-    .line 602
     :catch_0
     move-exception v0
 
@@ -2798,12 +2460,10 @@
     .locals 1
 
     .prologue
-    .line 510
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
     if-eqz v0, :cond_0
 
-    .line 512
     :try_start_0
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
@@ -2811,12 +2471,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 515
     :cond_0
     :goto_0
     return-void
 
-    .line 513
     :catch_0
     move-exception v0
 
@@ -2828,19 +2486,15 @@
     .param p1, "menuVisible"    # Z
 
     .prologue
-    .line 385
     invoke-direct {p0}, Lcom/android/server/statusbar/StatusBarManagerService;->enforceStatusBar()V
 
-    .line 389
     iget-object v1, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 390
     :try_start_0
     iput-boolean p1, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mMenuVisible:Z
 
-    .line 391
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mHandler:Landroid/os/Handler;
 
     new-instance v2, Lcom/android/server/statusbar/StatusBarManagerService$3;
@@ -2849,13 +2503,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 401
     monitor-exit v1
 
-    .line 402
     return-void
 
-    .line 401
     :catchall_0
     move-exception v0
 
@@ -2871,12 +2522,10 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 502
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
     if-eqz v0, :cond_0
 
-    .line 504
     :try_start_0
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
@@ -2884,12 +2533,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 507
     :cond_0
     :goto_0
     return-void
 
-    .line 505
     :catch_0
     move-exception v0
 
@@ -2906,7 +2553,6 @@
     .end annotation
 
     .prologue
-    .line 885
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/statusbar/StatusBarManagerService$7;
@@ -2915,7 +2561,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 895
     return-void
 .end method
 
@@ -2929,12 +2574,10 @@
     .end annotation
 
     .prologue
-    .line 915
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
     if-eqz v0, :cond_0
 
-    .line 917
     :try_start_0
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
@@ -2942,12 +2585,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 921
     :cond_0
     :goto_0
     return-void
 
-    .line 918
     :catch_0
     move-exception v0
 

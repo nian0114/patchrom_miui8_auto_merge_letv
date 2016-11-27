@@ -46,34 +46,27 @@
     .param p6, "listener"    # Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$OnSmoothScrollFinishedListener;
 
     .prologue
-    .line 1612
     .local p0, "this":Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$SmoothScrollRunnable;, "Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase<TT;>.SmoothScrollRunnable;"
     iput-object p1, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$SmoothScrollRunnable;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1608
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$SmoothScrollRunnable;->mContinueRunning:Z
 
-    .line 1609
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$SmoothScrollRunnable;->mStartTime:J
 
-    .line 1610
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$SmoothScrollRunnable;->mCurrentY:I
 
-    .line 1613
     iput p2, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$SmoothScrollRunnable;->mScrollFromY:I
 
-    .line 1614
     iput p3, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$SmoothScrollRunnable;->mScrollToY:I
 
-    .line 1615
     # getter for: Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;->mScrollAnimationInterpolator:Landroid/view/animation/Interpolator;
     invoke-static {p1}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;->access$200(Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;)Landroid/view/animation/Interpolator;
 
@@ -81,13 +74,10 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$SmoothScrollRunnable;->mInterpolator:Landroid/view/animation/Interpolator;
 
-    .line 1616
     iput-wide p4, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$SmoothScrollRunnable;->mDuration:J
 
-    .line 1617
     iput-object p6, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$SmoothScrollRunnable;->mListener:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$OnSmoothScrollFinishedListener;
 
-    .line 1618
     return-void
 .end method
 
@@ -100,7 +90,6 @@
     .local p0, "this":Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$SmoothScrollRunnable;, "Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase<TT;>.SmoothScrollRunnable;"
     const-wide/16 v8, 0x3e8
 
-    .line 1627
     iget-wide v4, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$SmoothScrollRunnable;->mStartTime:J
 
     const-wide/16 v6, -0x1
@@ -109,14 +98,12 @@
 
     if-nez v1, :cond_2
 
-    .line 1628
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
     iput-wide v4, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$SmoothScrollRunnable;->mStartTime:J
 
-    .line 1646
     :goto_0
     iget-boolean v1, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$SmoothScrollRunnable;->mContinueRunning:Z
 
@@ -128,12 +115,10 @@
 
     if-eq v1, v4, :cond_3
 
-    .line 1647
     iget-object v1, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$SmoothScrollRunnable;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;
 
     invoke-static {v1, p0}, Lcom/letv/leui/widget/pulltorefresh/internal/ViewCompat;->postOnAnimation(Landroid/view/View;Ljava/lang/Runnable;)V
 
-    .line 1655
     :cond_0
     :goto_1
     iget-object v1, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$SmoothScrollRunnable;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;
@@ -149,7 +134,6 @@
 
     if-nez v1, :cond_1
 
-    .line 1656
     iget-object v1, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$SmoothScrollRunnable;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;
 
     # getter for: Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;->mOnPullEventListener:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$OnPullEventListener;
@@ -170,11 +154,9 @@
 
     invoke-interface {v1, v4, v5, v6}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$OnPullEventListener;->onPullEvent(Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;)V
 
-    .line 1658
     :cond_1
     return-void
 
-    .line 1636
     :cond_2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -190,7 +172,6 @@
 
     div-long v2, v4, v6
 
-    .line 1637
     .local v2, "normalizedTime":J
     invoke-static {v2, v3, v8, v9}, Ljava/lang/Math;->min(JJ)J
 
@@ -202,7 +183,6 @@
 
     move-result-wide v2
 
-    .line 1639
     iget v1, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$SmoothScrollRunnable;->mScrollFromY:I
 
     iget v4, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$SmoothScrollRunnable;->mScrollToY:I
@@ -229,7 +209,6 @@
 
     move-result v0
 
-    .line 1641
     .local v0, "deltaY":I
     iget v1, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$SmoothScrollRunnable;->mScrollFromY:I
 
@@ -237,7 +216,6 @@
 
     iput v1, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$SmoothScrollRunnable;->mCurrentY:I
 
-    .line 1642
     iget-object v1, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$SmoothScrollRunnable;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;
 
     iget v4, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$SmoothScrollRunnable;->mCurrentY:I
@@ -246,7 +224,6 @@
 
     goto :goto_0
 
-    .line 1649
     .end local v0    # "deltaY":I
     .end local v2    # "normalizedTime":J
     :cond_3
@@ -254,7 +231,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1650
     iget-object v1, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$SmoothScrollRunnable;->mListener:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$OnSmoothScrollFinishedListener;
 
     invoke-interface {v1}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$OnSmoothScrollFinishedListener;->onSmoothScrollFinished()V
@@ -266,17 +242,14 @@
     .locals 1
 
     .prologue
-    .line 1661
     .local p0, "this":Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$SmoothScrollRunnable;, "Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase<TT;>.SmoothScrollRunnable;"
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$SmoothScrollRunnable;->mContinueRunning:Z
 
-    .line 1662
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$SmoothScrollRunnable;->this$0:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;
 
     invoke-virtual {v0, p0}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 1663
     return-void
 .end method

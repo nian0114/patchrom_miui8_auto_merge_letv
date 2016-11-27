@@ -31,10 +31,8 @@
     .locals 2
 
     .prologue
-    .line 357
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 359
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lcom/letv/leui/widget/StaggeredGridView$LayoutRecord;->id:J
@@ -47,7 +45,6 @@
     .param p1, "x0"    # Lcom/letv/leui/widget/StaggeredGridView$1;
 
     .prologue
-    .line 357
     invoke-direct {p0}, Lcom/letv/leui/widget/StaggeredGridView$LayoutRecord;-><init>()V
 
     return-void
@@ -57,12 +54,10 @@
     .locals 1
 
     .prologue
-    .line 365
     iget-object v0, p0, Lcom/letv/leui/widget/StaggeredGridView$LayoutRecord;->mMargins:[I
 
     if-nez v0, :cond_0
 
-    .line 368
     iget v0, p0, Lcom/letv/leui/widget/StaggeredGridView$LayoutRecord;->span:I
 
     mul-int/lit8 v0, v0, 0x2
@@ -71,7 +66,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/StaggeredGridView$LayoutRecord;->mMargins:[I
 
-    .line 370
     :cond_0
     return-void
 .end method
@@ -83,15 +77,12 @@
     .param p1, "col"    # I
 
     .prologue
-    .line 373
     iget-object v0, p0, Lcom/letv/leui/widget/StaggeredGridView$LayoutRecord;->mMargins:[I
 
     if-nez v0, :cond_0
 
-    .line 374
     const/4 v0, 0x0
 
-    .line 376
     :goto_0
     return v0
 
@@ -110,15 +101,12 @@
     .param p1, "col"    # I
 
     .prologue
-    .line 380
     iget-object v0, p0, Lcom/letv/leui/widget/StaggeredGridView$LayoutRecord;->mMargins:[I
 
     if-nez v0, :cond_0
 
-    .line 381
     const/4 v0, 0x0
 
-    .line 383
     :goto_0
     return v0
 
@@ -140,22 +128,18 @@
     .param p2, "margin"    # I
 
     .prologue
-    .line 387
     iget-object v0, p0, Lcom/letv/leui/widget/StaggeredGridView$LayoutRecord;->mMargins:[I
 
     if-nez v0, :cond_0
 
     if-nez p2, :cond_0
 
-    .line 392
     :goto_0
     return-void
 
-    .line 390
     :cond_0
     invoke-direct {p0}, Lcom/letv/leui/widget/StaggeredGridView$LayoutRecord;->ensureMargins()V
 
-    .line 391
     iget-object v0, p0, Lcom/letv/leui/widget/StaggeredGridView$LayoutRecord;->mMargins:[I
 
     mul-int/lit8 v1, p1, 0x2
@@ -171,22 +155,18 @@
     .param p2, "margin"    # I
 
     .prologue
-    .line 395
     iget-object v0, p0, Lcom/letv/leui/widget/StaggeredGridView$LayoutRecord;->mMargins:[I
 
     if-nez v0, :cond_0
 
     if-nez p2, :cond_0
 
-    .line 400
     :goto_0
     return-void
 
-    .line 398
     :cond_0
     invoke-direct {p0}, Lcom/letv/leui/widget/StaggeredGridView$LayoutRecord;->ensureMargins()V
 
-    .line 399
     iget-object v0, p0, Lcom/letv/leui/widget/StaggeredGridView$LayoutRecord;->mMargins:[I
 
     mul-int/lit8 v1, p1, 0x2
@@ -202,7 +182,6 @@
     .locals 6
 
     .prologue
-    .line 404
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -259,13 +238,11 @@
 
     move-result-object v1
 
-    .line 406
     .local v1, "result":Ljava/lang/String;
     iget-object v2, p0, Lcom/letv/leui/widget/StaggeredGridView$LayoutRecord;->mMargins:[I
 
     if-eqz v2, :cond_1
 
-    .line 407
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -284,7 +261,6 @@
 
     move-result-object v1
 
-    .line 408
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -295,7 +271,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 409
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -344,12 +319,10 @@
 
     move-result-object v1
 
-    .line 408
     add-int/lit8 v0, v0, 0x2
 
     goto :goto_0
 
-    .line 411
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -369,7 +342,6 @@
 
     move-result-object v1
 
-    .line 413
     .end local v0    # "i":I
     :cond_1
     new-instance v2, Ljava/lang/StringBuilder;

@@ -96,12 +96,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 71
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/letv/leui/widget/SimCardView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 72
     return-void
 .end method
 
@@ -111,12 +109,10 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 75
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/letv/leui/widget/SimCardView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 76
     return-void
 .end method
 
@@ -131,18 +127,14 @@
 
     const/4 v2, 0x0
 
-    .line 79
     invoke-direct {p0, p1, p2, p3}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 32
     iput v2, p0, Lcom/letv/leui/widget/SimCardView;->mGravity:I
 
-    .line 33
     const/high16 v1, 0x40c00000    # 6.0f
 
     iput v1, p0, Lcom/letv/leui/widget/SimCardView;->mStrokeWidth:F
 
-    .line 34
     const-string v1, "#43AD69"
 
     invoke-static {v1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
@@ -151,17 +143,14 @@
 
     iput v1, p0, Lcom/letv/leui/widget/SimCardView;->mBackBallColor:I
 
-    .line 35
     const/high16 v1, 0x42fe0000    # 127.0f
 
     iput v1, p0, Lcom/letv/leui/widget/SimCardView;->NORMAL_BACK_BALL_RADIUS:F
 
-    .line 36
     const/16 v1, 0x3e8
 
     iput v1, p0, Lcom/letv/leui/widget/SimCardView;->CIRCLE_ZOOM_OUT_DURATION:I
 
-    .line 40
     const-string v1, "#FFFFFF"
 
     invoke-static {v1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
@@ -170,24 +159,20 @@
 
     iput v1, p0, Lcom/letv/leui/widget/SimCardView;->mSimCardColor:I
 
-    .line 43
     const/high16 v1, 0x42980000    # 76.0f
 
     iput v1, p0, Lcom/letv/leui/widget/SimCardView;->NORMAL_RECT_WIDTH:F
 
-    .line 44
     const/high16 v1, 0x42c00000    # 96.0f
 
     iput v1, p0, Lcom/letv/leui/widget/SimCardView;->NORMAL_RECT_HEIGHT:F
 
-    .line 82
     sget-object v1, Lcom/android/internal/R$styleable;->SimCardView:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 83
     .local v0, "a":Landroid/content/res/TypedArray;
     invoke-virtual {v0, v2, v2}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -195,48 +180,40 @@
 
     iput v1, p0, Lcom/letv/leui/widget/SimCardView;->mGravity:I
 
-    .line 84
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 87
     new-instance v1, Landroid/graphics/Paint;
 
     invoke-direct {v1}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v1, p0, Lcom/letv/leui/widget/SimCardView;->mPaint:Landroid/graphics/Paint;
 
-    .line 88
     iget-object v1, p0, Lcom/letv/leui/widget/SimCardView;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 89
     iget-object v1, p0, Lcom/letv/leui/widget/SimCardView;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setDither(Z)V
 
-    .line 90
     iget-object v1, p0, Lcom/letv/leui/widget/SimCardView;->mPaint:Landroid/graphics/Paint;
 
     sget-object v2, Landroid/graphics/Paint$Join;->ROUND:Landroid/graphics/Paint$Join;
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setStrokeJoin(Landroid/graphics/Paint$Join;)V
 
-    .line 91
     iget-object v1, p0, Lcom/letv/leui/widget/SimCardView;->mPaint:Landroid/graphics/Paint;
 
     sget-object v2, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
-    .line 93
     new-instance v1, Landroid/graphics/Path;
 
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
     iput-object v1, p0, Lcom/letv/leui/widget/SimCardView;->mPath:Landroid/graphics/Path;
 
-    .line 94
     return-void
 .end method
 
@@ -244,12 +221,10 @@
     .locals 13
 
     .prologue
-    .line 125
     iget-object v9, p0, Lcom/letv/leui/widget/SimCardView;->simCardAnim:Landroid/animation/AnimatorSet;
 
     if-nez v9, :cond_0
 
-    .line 126
     const-string v9, "radius"
 
     const/4 v10, 0x2
@@ -272,7 +247,6 @@
 
     move-result-object v0
 
-    .line 127
     .local v0, "circleZoomOut":Landroid/animation/ObjectAnimator;
     iget v9, p0, Lcom/letv/leui/widget/SimCardView;->CIRCLE_ZOOM_OUT_DURATION:I
 
@@ -280,10 +254,8 @@
 
     invoke-virtual {v0, v10, v11}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 128
     invoke-virtual {v0, p0}, Landroid/animation/ObjectAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 129
     invoke-virtual {p0}, Lcom/letv/leui/widget/SimCardView;->getContext()Landroid/content/Context;
 
     move-result-object v9
@@ -296,7 +268,6 @@
 
     invoke-virtual {v0, v9}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 131
     const-string v9, "rectWidth"
 
     const/4 v10, 0x2
@@ -319,7 +290,6 @@
 
     move-result-object v8
 
-    .line 132
     .local v8, "simCardWidth":Landroid/animation/ObjectAnimator;
     iget v9, p0, Lcom/letv/leui/widget/SimCardView;->CIRCLE_ZOOM_OUT_DURATION:I
 
@@ -329,12 +299,10 @@
 
     invoke-virtual {v8, v10, v11}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 133
     const-wide/16 v10, 0xaf
 
     invoke-virtual {v8, v10, v11}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
 
-    .line 134
     invoke-virtual {p0}, Lcom/letv/leui/widget/SimCardView;->getContext()Landroid/content/Context;
 
     move-result-object v9
@@ -347,10 +315,8 @@
 
     invoke-virtual {v8, v9}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 135
     invoke-virtual {v8, p0}, Landroid/animation/ObjectAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 137
     const-string v9, "rectHeight"
 
     const/4 v10, 0x2
@@ -373,7 +339,6 @@
 
     move-result-object v7
 
-    .line 138
     .local v7, "simCardHeight":Landroid/animation/ObjectAnimator;
     iget v9, p0, Lcom/letv/leui/widget/SimCardView;->CIRCLE_ZOOM_OUT_DURATION:I
 
@@ -383,12 +348,10 @@
 
     invoke-virtual {v7, v10, v11}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 139
     const-wide/16 v10, 0xaf
 
     invoke-virtual {v7, v10, v11}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
 
-    .line 140
     invoke-virtual {p0}, Lcom/letv/leui/widget/SimCardView;->getContext()Landroid/content/Context;
 
     move-result-object v9
@@ -401,22 +364,18 @@
 
     invoke-virtual {v7, v9}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 141
     invoke-virtual {v7, p0}, Landroid/animation/ObjectAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 143
     new-instance v9, Landroid/animation/AnimatorSet;
 
     invoke-direct {v9}, Landroid/animation/AnimatorSet;-><init>()V
 
     iput-object v9, p0, Lcom/letv/leui/widget/SimCardView;->simCardAnim:Landroid/animation/AnimatorSet;
 
-    .line 144
     iget v9, p0, Lcom/letv/leui/widget/SimCardView;->mSimCardStatus:I
 
     packed-switch v9, :pswitch_data_0
 
-    .line 192
     .end local v0    # "circleZoomOut":Landroid/animation/ObjectAnimator;
     .end local v7    # "simCardHeight":Landroid/animation/ObjectAnimator;
     .end local v8    # "simCardWidth":Landroid/animation/ObjectAnimator;
@@ -424,7 +383,6 @@
     :goto_0
     return-void
 
-    .line 146
     .restart local v0    # "circleZoomOut":Landroid/animation/ObjectAnimator;
     .restart local v7    # "simCardHeight":Landroid/animation/ObjectAnimator;
     .restart local v8    # "simCardWidth":Landroid/animation/ObjectAnimator;
@@ -453,13 +411,11 @@
 
     move-result-object v1
 
-    .line 148
     .local v1, "hookDown":Landroid/animation/ObjectAnimator;
     const-wide/16 v10, 0x1f4
 
     invoke-virtual {v1, v10, v11}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
 
-    .line 149
     invoke-virtual {p0}, Lcom/letv/leui/widget/SimCardView;->getContext()Landroid/content/Context;
 
     move-result-object v9
@@ -472,10 +428,8 @@
 
     invoke-virtual {v1, v9}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 150
     invoke-virtual {v1, p0}, Landroid/animation/ObjectAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 152
     const-string v9, "hookUpSpeed"
 
     const/4 v10, 0x2
@@ -502,7 +456,6 @@
 
     move-result-object v2
 
-    .line 154
     .local v2, "hookUp":Landroid/animation/ObjectAnimator;
     iget v9, p0, Lcom/letv/leui/widget/SimCardView;->CIRCLE_ZOOM_OUT_DURATION:I
 
@@ -516,7 +469,6 @@
 
     invoke-virtual {v2, v10, v11}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
 
-    .line 155
     invoke-virtual {p0}, Lcom/letv/leui/widget/SimCardView;->getContext()Landroid/content/Context;
 
     move-result-object v9
@@ -529,10 +481,8 @@
 
     invoke-virtual {v2, v9}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 156
     invoke-virtual {v2, p0}, Landroid/animation/ObjectAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 158
     iget-object v9, p0, Lcom/letv/leui/widget/SimCardView;->simCardAnim:Landroid/animation/AnimatorSet;
 
     const/4 v10, 0x5
@@ -563,7 +513,6 @@
 
     goto :goto_0
 
-    .line 162
     .end local v1    # "hookDown":Landroid/animation/ObjectAnimator;
     .end local v2    # "hookUp":Landroid/animation/ObjectAnimator;
     :pswitch_1
@@ -579,21 +528,17 @@
 
     move-result-object v6
 
-    .line 163
     .local v6, "markUp":Landroid/animation/ObjectAnimator;
     const-wide/16 v10, 0x1f4
 
     invoke-virtual {v6, v10, v11}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 164
     const-wide/16 v10, 0x1f4
 
     invoke-virtual {v6, v10, v11}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
 
-    .line 165
     invoke-virtual {v6, p0}, Landroid/animation/ObjectAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 167
     const-string v9, "markDownSpeed"
 
     const/4 v10, 0x2
@@ -606,21 +551,17 @@
 
     move-result-object v5
 
-    .line 168
     .local v5, "markDown":Landroid/animation/ObjectAnimator;
     const-wide/16 v10, 0xaf
 
     invoke-virtual {v5, v10, v11}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 169
     const-wide/16 v10, 0x1f4
 
     invoke-virtual {v5, v10, v11}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
 
-    .line 170
     invoke-virtual {v5, p0}, Landroid/animation/ObjectAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 172
     iget-object v9, p0, Lcom/letv/leui/widget/SimCardView;->simCardAnim:Landroid/animation/AnimatorSet;
 
     const/4 v10, 0x5
@@ -651,7 +592,6 @@
 
     goto/16 :goto_0
 
-    .line 176
     .end local v5    # "markDown":Landroid/animation/ObjectAnimator;
     .end local v6    # "markUp":Landroid/animation/ObjectAnimator;
     :pswitch_2
@@ -667,18 +607,15 @@
 
     move-result-object v4
 
-    .line 177
     .local v4, "lockZoom":Landroid/animation/ObjectAnimator;
     const-wide/16 v10, 0x1f4
 
     invoke-virtual {v4, v10, v11}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 178
     const-wide/16 v10, 0x1f4
 
     invoke-virtual {v4, v10, v11}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
 
-    .line 180
     const-string v9, "arc"
 
     const/4 v10, 0x2
@@ -691,18 +628,15 @@
 
     move-result-object v3
 
-    .line 181
     .local v3, "lockArc":Landroid/animation/ObjectAnimator;
     const-wide/16 v10, 0x15e
 
     invoke-virtual {v3, v10, v11}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 182
     const-wide/16 v10, 0x28a
 
     invoke-virtual {v3, v10, v11}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
 
-    .line 184
     iget-object v9, p0, Lcom/letv/leui/widget/SimCardView;->simCardAnim:Landroid/animation/AnimatorSet;
 
     const/4 v10, 0x5
@@ -733,7 +667,6 @@
 
     goto/16 :goto_0
 
-    .line 188
     .end local v3    # "lockArc":Landroid/animation/ObjectAnimator;
     .end local v4    # "lockZoom":Landroid/animation/ObjectAnimator;
     :pswitch_3
@@ -759,7 +692,6 @@
 
     goto/16 :goto_0
 
-    .line 144
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -768,42 +700,36 @@
         :pswitch_3
     .end packed-switch
 
-    .line 146
     :array_0
     .array-data 4
         0x0
         0x3f800000    # 1.0f
     .end array-data
 
-    .line 152
     :array_1
     .array-data 4
         0x0
         0x3f800000    # 1.0f
     .end array-data
 
-    .line 162
     :array_2
     .array-data 4
         0x0
         0x3f800000    # 1.0f
     .end array-data
 
-    .line 167
     :array_3
     .array-data 4
         0x0
         0x3f800000    # 1.0f
     .end array-data
 
-    .line 176
     :array_4
     .array-data 4
         0x0
         0x3f800000    # 1.0f
     .end array-data
 
-    .line 180
     :array_5
     .array-data 4
         0x0
@@ -816,38 +742,31 @@
     .param p1, "measureSpec"    # I
 
     .prologue
-    .line 200
     const/4 v0, 0x0
 
-    .line 201
     .local v0, "result":F
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
     move-result v1
 
-    .line 202
     .local v1, "specMode":I
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v2
 
-    .line 204
     .local v2, "specSize":I
     const/high16 v3, 0x40000000    # 2.0f
 
     if-ne v1, v3, :cond_1
 
-    .line 206
     int-to-float v0, v2
 
-    .line 214
     :cond_0
     :goto_0
     float-to-int v3, v0
 
     return v3
 
-    .line 208
     :cond_1
     iget v3, p0, Lcom/letv/leui/widget/SimCardView;->NORMAL_BACK_BALL_RADIUS:F
 
@@ -855,12 +774,10 @@
 
     mul-float v0, v3, v4
 
-    .line 209
     const/high16 v3, -0x80000000
 
     if-ne v1, v3, :cond_0
 
-    .line 211
     int-to-float v3, v2
 
     invoke-static {v0, v3}, Ljava/lang/Math;->min(FF)F
@@ -878,7 +795,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 106
     iget-object v0, p0, Lcom/letv/leui/widget/SimCardView;->simCardAnim:Landroid/animation/AnimatorSet;
 
     if-eqz v0, :cond_0
@@ -891,48 +807,35 @@
 
     if-eqz v0, :cond_0
 
-    .line 107
     iget-object v0, p0, Lcom/letv/leui/widget/SimCardView;->simCardAnim:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
-    .line 109
     :cond_0
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/letv/leui/widget/SimCardView;->simCardAnim:Landroid/animation/AnimatorSet;
 
-    .line 111
     iput v1, p0, Lcom/letv/leui/widget/SimCardView;->radius:F
 
-    .line 112
     iput v1, p0, Lcom/letv/leui/widget/SimCardView;->rectWidth:F
 
-    .line 113
     iput v1, p0, Lcom/letv/leui/widget/SimCardView;->rectHeight:F
 
-    .line 114
     iput v1, p0, Lcom/letv/leui/widget/SimCardView;->hookDownSpeed:F
 
-    .line 115
     iput v1, p0, Lcom/letv/leui/widget/SimCardView;->hookUpSpeed:F
 
-    .line 116
     iput v1, p0, Lcom/letv/leui/widget/SimCardView;->markUpSpeed:F
 
-    .line 117
     iput v1, p0, Lcom/letv/leui/widget/SimCardView;->markDownSpeed:F
 
-    .line 118
     iput v1, p0, Lcom/letv/leui/widget/SimCardView;->lockScale:F
 
-    .line 119
     iput v1, p0, Lcom/letv/leui/widget/SimCardView;->arc:F
 
-    .line 121
     invoke-virtual {p0}, Lcom/letv/leui/widget/SimCardView;->invalidate()V
 
-    .line 122
     return-void
 .end method
 
@@ -940,7 +843,6 @@
     .locals 1
 
     .prologue
-    .line 394
     iget v0, p0, Lcom/letv/leui/widget/SimCardView;->arc:F
 
     return v0
@@ -950,7 +852,6 @@
     .locals 1
 
     .prologue
-    .line 354
     iget v0, p0, Lcom/letv/leui/widget/SimCardView;->hookDownSpeed:F
 
     return v0
@@ -960,7 +861,6 @@
     .locals 1
 
     .prologue
-    .line 362
     iget v0, p0, Lcom/letv/leui/widget/SimCardView;->hookUpSpeed:F
 
     return v0
@@ -970,7 +870,6 @@
     .locals 1
 
     .prologue
-    .line 386
     iget v0, p0, Lcom/letv/leui/widget/SimCardView;->lockScale:F
 
     return v0
@@ -980,7 +879,6 @@
     .locals 1
 
     .prologue
-    .line 378
     iget v0, p0, Lcom/letv/leui/widget/SimCardView;->markDownSpeed:F
 
     return v0
@@ -990,7 +888,6 @@
     .locals 1
 
     .prologue
-    .line 370
     iget v0, p0, Lcom/letv/leui/widget/SimCardView;->markUpSpeed:F
 
     return v0
@@ -1000,7 +897,6 @@
     .locals 1
 
     .prologue
-    .line 330
     iget v0, p0, Lcom/letv/leui/widget/SimCardView;->radius:F
 
     return v0
@@ -1010,7 +906,6 @@
     .locals 1
 
     .prologue
-    .line 346
     iget v0, p0, Lcom/letv/leui/widget/SimCardView;->rectHeight:F
 
     return v0
@@ -1020,7 +915,6 @@
     .locals 1
 
     .prologue
-    .line 338
     iget v0, p0, Lcom/letv/leui/widget/SimCardView;->rectWidth:F
 
     return v0
@@ -1031,10 +925,8 @@
     .param p1, "animation"    # Landroid/animation/ValueAnimator;
 
     .prologue
-    .line 326
     invoke-virtual {p0}, Lcom/letv/leui/widget/SimCardView;->invalidate()V
 
-    .line 327
     return-void
 .end method
 
@@ -1043,10 +935,8 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 242
     invoke-super/range {p0 .. p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 245
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/letv/leui/widget/SimCardView;->mPaint:Landroid/graphics/Paint;
@@ -1057,7 +947,6 @@
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 246
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/letv/leui/widget/SimCardView;->mPaint:Landroid/graphics/Paint;
@@ -1066,7 +955,6 @@
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 247
     move-object/from16 v0, p0
 
     iget v1, v0, Lcom/letv/leui/widget/SimCardView;->centerX:F
@@ -1087,14 +975,12 @@
 
     invoke-virtual {v0, v1, v3, v4, v5}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 250
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/letv/leui/widget/SimCardView;->mPath:Landroid/graphics/Path;
 
     invoke-virtual {v1}, Landroid/graphics/Path;->reset()V
 
-    .line 251
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/letv/leui/widget/SimCardView;->mPath:Landroid/graphics/Path;
@@ -1129,7 +1015,6 @@
 
     invoke-virtual {v1, v3, v4}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 252
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/letv/leui/widget/SimCardView;->mPath:Landroid/graphics/Path;
@@ -1164,7 +1049,6 @@
 
     invoke-virtual {v1, v3, v4}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 253
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/letv/leui/widget/SimCardView;->mPath:Landroid/graphics/Path;
@@ -1199,7 +1083,6 @@
 
     invoke-virtual {v1, v3, v4}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 254
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/letv/leui/widget/SimCardView;->mPath:Landroid/graphics/Path;
@@ -1234,7 +1117,6 @@
 
     invoke-virtual {v1, v3, v4}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 255
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/letv/leui/widget/SimCardView;->mPath:Landroid/graphics/Path;
@@ -1269,7 +1151,6 @@
 
     invoke-virtual {v1, v3, v4}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 256
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/letv/leui/widget/SimCardView;->mPath:Landroid/graphics/Path;
@@ -1304,7 +1185,6 @@
 
     invoke-virtual {v1, v3, v4}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 257
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/letv/leui/widget/SimCardView;->mPaint:Landroid/graphics/Paint;
@@ -1315,7 +1195,6 @@
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 258
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/letv/leui/widget/SimCardView;->mPaint:Landroid/graphics/Paint;
@@ -1324,7 +1203,6 @@
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 259
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/letv/leui/widget/SimCardView;->mPaint:Landroid/graphics/Paint;
@@ -1347,7 +1225,6 @@
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 260
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/letv/leui/widget/SimCardView;->mPath:Landroid/graphics/Path;
@@ -1360,18 +1237,15 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 262
     move-object/from16 v0, p0
 
     iget v1, v0, Lcom/letv/leui/widget/SimCardView;->mSimCardStatus:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 322
     :goto_0
     return-void
 
-    .line 264
     :pswitch_0
     move-object/from16 v0, p0
 
@@ -1387,19 +1261,16 @@
 
     sub-float v8, v1, v3
 
-    .line 265
     .local v8, "hookDownXStart":F
     move-object/from16 v0, p0
 
     iget v10, v0, Lcom/letv/leui/widget/SimCardView;->centerY:F
 
-    .line 266
     .local v10, "hookDownYStart":F
     move-object/from16 v0, p0
 
     iget v7, v0, Lcom/letv/leui/widget/SimCardView;->centerX:F
 
-    .line 267
     .local v7, "hookDownXEnd":F
     move-object/from16 v0, p0
 
@@ -1415,7 +1286,6 @@
 
     add-float v9, v1, v3
 
-    .line 268
     .local v9, "hookDownYEnd":F
     move-object/from16 v0, p0
 
@@ -1423,7 +1293,6 @@
 
     invoke-virtual {v1, v8, v10}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 269
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/letv/leui/widget/SimCardView;->mPath:Landroid/graphics/Path;
@@ -1450,7 +1319,6 @@
 
     invoke-virtual {v1, v3, v4}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 272
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/letv/leui/widget/SimCardView;->mPath:Landroid/graphics/Path;
@@ -1463,14 +1331,11 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 274
     move v12, v7
 
-    .line 275
     .local v12, "hookUpXStart":F
     move v14, v9
 
-    .line 276
     .local v14, "hookUpYStart":F
     move-object/from16 v0, p0
 
@@ -1486,7 +1351,6 @@
 
     add-float v11, v1, v3
 
-    .line 277
     .local v11, "hookUpXEnd":F
     move-object/from16 v0, p0
 
@@ -1502,7 +1366,6 @@
 
     sub-float v13, v1, v3
 
-    .line 278
     .local v13, "hookUpYEnd":F
     move-object/from16 v0, p0
 
@@ -1510,7 +1373,6 @@
 
     invoke-virtual {v1, v12, v14}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 279
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/letv/leui/widget/SimCardView;->mPath:Landroid/graphics/Path;
@@ -1537,7 +1399,6 @@
 
     invoke-virtual {v1, v3, v4}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 282
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/letv/leui/widget/SimCardView;->mPath:Landroid/graphics/Path;
@@ -1552,7 +1413,6 @@
 
     goto/16 :goto_0
 
-    .line 285
     .end local v7    # "hookDownXEnd":F
     .end local v8    # "hookDownXStart":F
     .end local v9    # "hookDownYEnd":F
@@ -1642,7 +1502,6 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 290
     move-object/from16 v0, p0
 
     iget v2, v0, Lcom/letv/leui/widget/SimCardView;->centerX:F
@@ -1725,7 +1584,6 @@
 
     goto/16 :goto_0
 
-    .line 296
     :pswitch_2
     move-object/from16 v0, p0
 
@@ -1737,7 +1595,6 @@
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 297
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/letv/leui/widget/SimCardView;->mPaint:Landroid/graphics/Paint;
@@ -1746,7 +1603,6 @@
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 298
     new-instance v15, Landroid/graphics/RectF;
 
     move-object/from16 v0, p0
@@ -1859,7 +1715,6 @@
 
     invoke-direct {v15, v1, v3, v4, v5}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    .line 303
     .local v15, "rectF":Landroid/graphics/RectF;
     const/high16 v1, 0x40a00000    # 5.0f
 
@@ -1873,7 +1728,6 @@
 
     invoke-virtual {v0, v15, v1, v3, v4}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 305
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/letv/leui/widget/SimCardView;->mPaint:Landroid/graphics/Paint;
@@ -1882,7 +1736,6 @@
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 306
     new-instance v2, Landroid/graphics/RectF;
 
     move-object/from16 v0, p0
@@ -1979,7 +1832,6 @@
 
     invoke-direct {v2, v1, v3, v4, v5}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    .line 312
     .local v2, "oval":Landroid/graphics/RectF;
     const/high16 v3, 0x43340000    # 180.0f
 
@@ -1997,7 +1849,6 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
 
-    .line 314
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/letv/leui/widget/SimCardView;->mPaint:Landroid/graphics/Paint;
@@ -2006,7 +1857,6 @@
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 315
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/letv/leui/widget/SimCardView;->mPaint:Landroid/graphics/Paint;
@@ -2017,7 +1867,6 @@
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 316
     move-object/from16 v0, p0
 
     iget v1, v0, Lcom/letv/leui/widget/SimCardView;->centerX:F
@@ -2090,7 +1939,6 @@
 
     goto/16 :goto_0
 
-    .line 262
     nop
 
     :pswitch_data_0
@@ -2110,29 +1958,23 @@
     .param p5, "bottom"    # I
 
     .prologue
-    .line 219
     invoke-super/range {p0 .. p5}, Landroid/view/View;->onLayout(ZIIII)V
 
-    .line 220
     iget v0, p0, Lcom/letv/leui/widget/SimCardView;->NORMAL_BACK_BALL_RADIUS:F
 
     iput v0, p0, Lcom/letv/leui/widget/SimCardView;->centerX:F
 
-    .line 221
     iget v0, p0, Lcom/letv/leui/widget/SimCardView;->NORMAL_BACK_BALL_RADIUS:F
 
     iput v0, p0, Lcom/letv/leui/widget/SimCardView;->centerY:F
 
-    .line 223
     iget v0, p0, Lcom/letv/leui/widget/SimCardView;->mGravity:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 238
     :goto_0
     return-void
 
-    .line 225
     :pswitch_0
     invoke-virtual {p0}, Lcom/letv/leui/widget/SimCardView;->getWidth()I
 
@@ -2144,7 +1986,6 @@
 
     iput v0, p0, Lcom/letv/leui/widget/SimCardView;->centerX:F
 
-    .line 226
     invoke-virtual {p0}, Lcom/letv/leui/widget/SimCardView;->getHeight()I
 
     move-result v0
@@ -2157,7 +1998,6 @@
 
     goto :goto_0
 
-    .line 230
     :pswitch_1
     invoke-virtual {p0}, Lcom/letv/leui/widget/SimCardView;->getHeight()I
 
@@ -2171,7 +2011,6 @@
 
     goto :goto_0
 
-    .line 234
     :pswitch_2
     invoke-virtual {p0}, Lcom/letv/leui/widget/SimCardView;->getWidth()I
 
@@ -2185,7 +2024,6 @@
 
     goto :goto_0
 
-    .line 223
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -2200,7 +2038,6 @@
     .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    .line 196
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/SimCardView;->measure(I)I
 
     move-result v0
@@ -2211,7 +2048,6 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/letv/leui/widget/SimCardView;->setMeasuredDimension(II)V
 
-    .line 197
     return-void
 .end method
 
@@ -2220,10 +2056,8 @@
     .param p1, "arc"    # F
 
     .prologue
-    .line 398
     iput p1, p0, Lcom/letv/leui/widget/SimCardView;->arc:F
 
-    .line 399
     return-void
 .end method
 
@@ -2232,12 +2066,10 @@
     .param p1, "radius"    # I
 
     .prologue
-    .line 407
     int-to-float v0, p1
 
     iput v0, p0, Lcom/letv/leui/widget/SimCardView;->NORMAL_BACK_BALL_RADIUS:F
 
-    .line 408
     return-object p0
 .end method
 
@@ -2246,10 +2078,8 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 402
     iput p1, p0, Lcom/letv/leui/widget/SimCardView;->mBackBallColor:I
 
-    .line 403
     return-object p0
 .end method
 
@@ -2258,10 +2088,8 @@
     .param p1, "hookDownSpeed"    # F
 
     .prologue
-    .line 358
     iput p1, p0, Lcom/letv/leui/widget/SimCardView;->hookDownSpeed:F
 
-    .line 359
     return-void
 .end method
 
@@ -2270,10 +2098,8 @@
     .param p1, "hookUpSpeed"    # F
 
     .prologue
-    .line 366
     iput p1, p0, Lcom/letv/leui/widget/SimCardView;->hookUpSpeed:F
 
-    .line 367
     return-void
 .end method
 
@@ -2282,10 +2108,8 @@
     .param p1, "lockScale"    # F
 
     .prologue
-    .line 390
     iput p1, p0, Lcom/letv/leui/widget/SimCardView;->lockScale:F
 
-    .line 391
     return-void
 .end method
 
@@ -2294,10 +2118,8 @@
     .param p1, "markDownSpeed"    # F
 
     .prologue
-    .line 382
     iput p1, p0, Lcom/letv/leui/widget/SimCardView;->markDownSpeed:F
 
-    .line 383
     return-void
 .end method
 
@@ -2306,10 +2128,8 @@
     .param p1, "markUpSpeed"    # F
 
     .prologue
-    .line 374
     iput p1, p0, Lcom/letv/leui/widget/SimCardView;->markUpSpeed:F
 
-    .line 375
     return-void
 .end method
 
@@ -2318,10 +2138,8 @@
     .param p1, "radius"    # F
 
     .prologue
-    .line 334
     iput p1, p0, Lcom/letv/leui/widget/SimCardView;->radius:F
 
-    .line 335
     return-void
 .end method
 
@@ -2331,13 +2149,10 @@
     .param p2, "height"    # F
 
     .prologue
-    .line 417
     iput p1, p0, Lcom/letv/leui/widget/SimCardView;->NORMAL_RECT_WIDTH:F
 
-    .line 418
     iput p2, p0, Lcom/letv/leui/widget/SimCardView;->NORMAL_RECT_HEIGHT:F
 
-    .line 419
     return-object p0
 .end method
 
@@ -2346,10 +2161,8 @@
     .param p1, "rectHeight"    # F
 
     .prologue
-    .line 350
     iput p1, p0, Lcom/letv/leui/widget/SimCardView;->rectHeight:F
 
-    .line 351
     return-void
 .end method
 
@@ -2358,10 +2171,8 @@
     .param p1, "rectWidth"    # F
 
     .prologue
-    .line 342
     iput p1, p0, Lcom/letv/leui/widget/SimCardView;->rectWidth:F
 
-    .line 343
     return-void
 .end method
 
@@ -2370,10 +2181,8 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 412
     iput p1, p0, Lcom/letv/leui/widget/SimCardView;->mSimCardColor:I
 
-    .line 413
     return-object p0
 .end method
 
@@ -2382,20 +2191,15 @@
     .param p1, "simCardStatus"    # I
 
     .prologue
-    .line 97
     invoke-virtual {p0}, Lcom/letv/leui/widget/SimCardView;->cancelAnimation()V
 
-    .line 99
     iput p1, p0, Lcom/letv/leui/widget/SimCardView;->mSimCardStatus:I
 
-    .line 101
     invoke-direct {p0}, Lcom/letv/leui/widget/SimCardView;->createAnimation()V
 
-    .line 102
     iget-object v0, p0, Lcom/letv/leui/widget/SimCardView;->simCardAnim:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 103
     return-void
 .end method

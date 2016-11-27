@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 463
     iput-object p1, p0, Lcom/letv/leui/widget/LeListPreferenceView$2$1;->this$1:Lcom/letv/leui/widget/LeListPreferenceView$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 4
 
     .prologue
-    .line 466
     iget-object v0, p0, Lcom/letv/leui/widget/LeListPreferenceView$2$1;->this$1:Lcom/letv/leui/widget/LeListPreferenceView$2;
 
     iget-object v0, v0, Lcom/letv/leui/widget/LeListPreferenceView$2;->this$0:Lcom/letv/leui/widget/LeListPreferenceView;
@@ -52,7 +50,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 467
     iget-object v0, p0, Lcom/letv/leui/widget/LeListPreferenceView$2$1;->this$1:Lcom/letv/leui/widget/LeListPreferenceView$2;
 
     iget-object v0, v0, Lcom/letv/leui/widget/LeListPreferenceView$2;->this$0:Lcom/letv/leui/widget/LeListPreferenceView;
@@ -88,7 +85,6 @@
 
     invoke-interface {v0, v1, v2}, Lcom/letv/leui/widget/LeListPreferenceView$OnChangeListener;->onChange(Lcom/letv/leui/widget/LeListPreferenceView;Ljava/lang/Object;)V
 
-    .line 470
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/LeListPreferenceView$2$1;->this$1:Lcom/letv/leui/widget/LeListPreferenceView$2;
 
@@ -97,6 +93,5 @@
     # invokes: Lcom/letv/leui/widget/LeListPreferenceView;->initView()V
     invoke-static {v0}, Lcom/letv/leui/widget/LeListPreferenceView;->access$700(Lcom/letv/leui/widget/LeListPreferenceView;)V
 
-    .line 471
     return-void
 .end method

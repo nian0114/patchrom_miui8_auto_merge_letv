@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 1395
     iput-object p1, p0, Lcom/android/server/fingerprint/FingerprintService$FingerprintHandler;->this$0:Lcom/android/server/fingerprint/FingerprintService;
 
-    .line 1396
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 1397
     return-void
 .end method
 
@@ -41,12 +38,10 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 1400
     iget v0, p1, Landroid/os/Message;->what:I
 
     sparse-switch v0, :sswitch_data_0
 
-    .line 1415
     const-string v0, "FingerprintService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -71,11 +66,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1417
     :goto_0
     return-void
 
-    .line 1402
     :sswitch_0
     iget-object v0, p0, Lcom/android/server/fingerprint/FingerprintService$FingerprintHandler;->this$0:Lcom/android/server/fingerprint/FingerprintService;
 
@@ -85,7 +78,6 @@
 
     goto :goto_0
 
-    .line 1406
     :sswitch_1
     iget-object v0, p0, Lcom/android/server/fingerprint/FingerprintService$FingerprintHandler;->this$0:Lcom/android/server/fingerprint/FingerprintService;
 
@@ -94,7 +86,6 @@
 
     goto :goto_0
 
-    .line 1411
     :sswitch_2
     iget-object v0, p0, Lcom/android/server/fingerprint/FingerprintService$FingerprintHandler;->this$0:Lcom/android/server/fingerprint/FingerprintService;
 
@@ -103,7 +94,6 @@
 
     goto :goto_0
 
-    .line 1400
     :sswitch_data_0
     .sparse-switch
         0xa -> :sswitch_0

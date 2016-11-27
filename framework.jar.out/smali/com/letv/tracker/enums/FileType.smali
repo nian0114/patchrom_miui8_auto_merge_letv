@@ -115,7 +115,6 @@
 
     const/4 v4, 0x0
 
-    .line 10
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "RMVB"
@@ -126,7 +125,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->RMVB:Lcom/letv/tracker/enums/FileType;
 
-    .line 14
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "MKV"
@@ -137,7 +135,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->MKV:Lcom/letv/tracker/enums/FileType;
 
-    .line 18
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "AVI"
@@ -148,7 +145,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->AVI:Lcom/letv/tracker/enums/FileType;
 
-    .line 22
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "MP4"
@@ -159,7 +155,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->MP4:Lcom/letv/tracker/enums/FileType;
 
-    .line 26
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "FLV"
@@ -170,7 +165,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->FLV:Lcom/letv/tracker/enums/FileType;
 
-    .line 30
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "WMV"
@@ -183,7 +177,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->WMV:Lcom/letv/tracker/enums/FileType;
 
-    .line 31
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "WAV"
@@ -196,7 +189,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->WAV:Lcom/letv/tracker/enums/FileType;
 
-    .line 33
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "AAC"
@@ -209,7 +201,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->AAC:Lcom/letv/tracker/enums/FileType;
 
-    .line 34
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "APK"
@@ -222,7 +213,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->APK:Lcom/letv/tracker/enums/FileType;
 
-    .line 35
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "BIN"
@@ -235,7 +225,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->BIN:Lcom/letv/tracker/enums/FileType;
 
-    .line 36
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "CLASS"
@@ -248,7 +237,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->CLASS:Lcom/letv/tracker/enums/FileType;
 
-    .line 37
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "CSS"
@@ -261,7 +249,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->CSS:Lcom/letv/tracker/enums/FileType;
 
-    .line 38
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "CSV"
@@ -274,7 +261,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->CSV:Lcom/letv/tracker/enums/FileType;
 
-    .line 39
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "DOC"
@@ -287,7 +273,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->DOC:Lcom/letv/tracker/enums/FileType;
 
-    .line 40
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "DOCX"
@@ -300,7 +285,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->DOCX:Lcom/letv/tracker/enums/FileType;
 
-    .line 41
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "EXE"
@@ -313,7 +297,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->EXE:Lcom/letv/tracker/enums/FileType;
 
-    .line 42
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "GIF"
@@ -326,7 +309,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->GIF:Lcom/letv/tracker/enums/FileType;
 
-    .line 43
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "HTML"
@@ -339,7 +321,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->HTML:Lcom/letv/tracker/enums/FileType;
 
-    .line 44
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "HTM"
@@ -352,7 +333,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->HTM:Lcom/letv/tracker/enums/FileType;
 
-    .line 45
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "IMG"
@@ -365,7 +345,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->IMG:Lcom/letv/tracker/enums/FileType;
 
-    .line 46
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "JAR"
@@ -378,7 +357,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->JAR:Lcom/letv/tracker/enums/FileType;
 
-    .line 47
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "JAVA"
@@ -391,7 +369,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->JAVA:Lcom/letv/tracker/enums/FileType;
 
-    .line 48
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "JBF"
@@ -404,7 +381,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->JBF:Lcom/letv/tracker/enums/FileType;
 
-    .line 49
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "JIF"
@@ -417,7 +393,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->JIF:Lcom/letv/tracker/enums/FileType;
 
-    .line 50
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "JPEG"
@@ -430,7 +405,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->JPEG:Lcom/letv/tracker/enums/FileType;
 
-    .line 51
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "JS"
@@ -443,7 +417,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->JS:Lcom/letv/tracker/enums/FileType;
 
-    .line 52
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "JSP"
@@ -456,7 +429,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->JSP:Lcom/letv/tracker/enums/FileType;
 
-    .line 53
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "JTF"
@@ -469,7 +441,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->JTF:Lcom/letv/tracker/enums/FileType;
 
-    .line 54
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "LOG"
@@ -482,7 +453,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->LOG:Lcom/letv/tracker/enums/FileType;
 
-    .line 55
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "MP3"
@@ -495,7 +465,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->MP3:Lcom/letv/tracker/enums/FileType;
 
-    .line 56
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "MPEG"
@@ -508,7 +477,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->MPEG:Lcom/letv/tracker/enums/FileType;
 
-    .line 57
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "TXT"
@@ -521,7 +489,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->TXT:Lcom/letv/tracker/enums/FileType;
 
-    .line 58
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "TZ"
@@ -534,7 +501,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->TZ:Lcom/letv/tracker/enums/FileType;
 
-    .line 59
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "RAR"
@@ -547,7 +513,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->RAR:Lcom/letv/tracker/enums/FileType;
 
-    .line 60
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "XML"
@@ -560,7 +525,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->XML:Lcom/letv/tracker/enums/FileType;
 
-    .line 61
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "XLS"
@@ -573,7 +537,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->XLS:Lcom/letv/tracker/enums/FileType;
 
-    .line 62
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "XLSX"
@@ -586,7 +549,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->XLSX:Lcom/letv/tracker/enums/FileType;
 
-    .line 63
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "ZIP"
@@ -599,7 +561,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->ZIP:Lcom/letv/tracker/enums/FileType;
 
-    .line 68
     new-instance v0, Lcom/letv/tracker/enums/FileType;
 
     const-string v1, "Others"
@@ -612,7 +573,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/FileType;->Others:Lcom/letv/tracker/enums/FileType;
 
-    .line 6
     const/16 v0, 0x27
 
     new-array v0, v0, [Lcom/letv/tracker/enums/FileType;
@@ -858,13 +818,10 @@
     .end annotation
 
     .prologue
-    .line 80
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 81
     iput-object p3, p0, Lcom/letv/tracker/enums/FileType;->id:Ljava/lang/String;
 
-    .line 82
     return-void
 .end method
 
@@ -873,7 +830,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 6
     const-class v0, Lcom/letv/tracker/enums/FileType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -889,7 +845,6 @@
     .locals 1
 
     .prologue
-    .line 6
     sget-object v0, Lcom/letv/tracker/enums/FileType;->$VALUES:[Lcom/letv/tracker/enums/FileType;
 
     invoke-virtual {v0}, [Lcom/letv/tracker/enums/FileType;->clone()Ljava/lang/Object;
@@ -907,7 +862,6 @@
     .locals 1
 
     .prologue
-    .line 90
     iget-object v0, p0, Lcom/letv/tracker/enums/FileType;->id:Ljava/lang/String;
 
     return-object v0

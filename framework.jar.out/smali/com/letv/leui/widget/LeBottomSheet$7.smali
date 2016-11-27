@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 777
     iput-object p1, p0, Lcom/letv/leui/widget/LeBottomSheet$7;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     iput-object p2, p0, Lcom/letv/leui/widget/LeBottomSheet$7;->val$listener:Landroid/widget/AdapterView$OnItemClickListener;
@@ -56,14 +55,12 @@
     .end annotation
 
     .prologue
-    .line 780
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     iget-object v0, p0, Lcom/letv/leui/widget/LeBottomSheet$7;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # setter for: Lcom/letv/leui/widget/LeBottomSheet;->checkPos:I
     invoke-static {v0, p3}, Lcom/letv/leui/widget/LeBottomSheet;->access$102(Lcom/letv/leui/widget/LeBottomSheet;I)I
 
-    .line 781
     iget-object v0, p0, Lcom/letv/leui/widget/LeBottomSheet$7;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # getter for: Lcom/letv/leui/widget/LeBottomSheet;->adapter:Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;
@@ -73,7 +70,6 @@
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/LeBottomSheet$ListViewAdapter;->notifyDataSetChanged()V
 
-    .line 782
     iget-object v0, p0, Lcom/letv/leui/widget/LeBottomSheet$7;->val$listener:Landroid/widget/AdapterView$OnItemClickListener;
 
     move-object v1, p1
@@ -86,6 +82,5 @@
 
     invoke-interface/range {v0 .. v5}, Landroid/widget/AdapterView$OnItemClickListener;->onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
 
-    .line 783
     return-void
 .end method

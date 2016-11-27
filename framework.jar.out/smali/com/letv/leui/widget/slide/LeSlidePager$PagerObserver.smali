@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2782
     iput-object p1, p0, Lcom/letv/leui/widget/slide/LeSlidePager$PagerObserver;->this$0:Lcom/letv/leui/widget/slide/LeSlidePager;
 
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/letv/leui/widget/slide/LeSlidePager$1;
 
     .prologue
-    .line 2782
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/slide/LeSlidePager$PagerObserver;-><init>(Lcom/letv/leui/widget/slide/LeSlidePager;)V
 
     return-void
@@ -49,12 +47,10 @@
     .locals 1
 
     .prologue
-    .line 2785
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlidePager$PagerObserver;->this$0:Lcom/letv/leui/widget/slide/LeSlidePager;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/slide/LeSlidePager;->dataSetChanged()V
 
-    .line 2786
     return-void
 .end method
 
@@ -62,11 +58,9 @@
     .locals 1
 
     .prologue
-    .line 2789
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlidePager$PagerObserver;->this$0:Lcom/letv/leui/widget/slide/LeSlidePager;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/slide/LeSlidePager;->dataSetChanged()V
 
-    .line 2790
     return-void
 .end method

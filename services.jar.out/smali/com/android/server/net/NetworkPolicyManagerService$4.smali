@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Looper;
 
     .prologue
-    .line 685
     iput-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$4;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -41,16 +40,13 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 688
     iget v3, p1, Landroid/os/Message;->what:I
 
     packed-switch v3, :pswitch_data_0
 
-    .line 713
     :goto_0
     return-void
 
-    .line 691
     :pswitch_0
     iget-object v3, p0, Lcom/android/server/net/NetworkPolicyManagerService$4;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -71,7 +67,6 @@
 
     move-result-object v1
 
-    .line 693
     .local v1, "info":Landroid/net/NetworkInfo;
     iget-object v3, p0, Lcom/android/server/net/NetworkPolicyManagerService$4;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -91,7 +86,6 @@
     # setter for: Lcom/android/server/net/NetworkPolicyManagerService;->cur_KB_rx:J
     invoke-static {v3, v4, v5}, Lcom/android/server/net/NetworkPolicyManagerService;->access$302(Lcom/android/server/net/NetworkPolicyManagerService;J)J
 
-    .line 694
     iget-object v3, p0, Lcom/android/server/net/NetworkPolicyManagerService$4;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-static {}, Landroid/net/TrafficStats;->getTotalRxBytes()J
@@ -101,7 +95,6 @@
     # setter for: Lcom/android/server/net/NetworkPolicyManagerService;->old_KB_rx:J
     invoke-static {v3, v4, v5}, Lcom/android/server/net/NetworkPolicyManagerService;->access$402(Lcom/android/server/net/NetworkPolicyManagerService;J)J
 
-    .line 695
     iget-object v3, p0, Lcom/android/server/net/NetworkPolicyManagerService$4;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-static {}, Landroid/net/TrafficStats;->getTotalTxBytes()J
@@ -120,7 +113,6 @@
     # setter for: Lcom/android/server/net/NetworkPolicyManagerService;->cur_KB_tx:J
     invoke-static {v3, v4, v5}, Lcom/android/server/net/NetworkPolicyManagerService;->access$502(Lcom/android/server/net/NetworkPolicyManagerService;J)J
 
-    .line 696
     iget-object v3, p0, Lcom/android/server/net/NetworkPolicyManagerService$4;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-static {}, Landroid/net/TrafficStats;->getTotalTxBytes()J
@@ -130,7 +122,6 @@
     # setter for: Lcom/android/server/net/NetworkPolicyManagerService;->old_KB_tx:J
     invoke-static {v3, v4, v5}, Lcom/android/server/net/NetworkPolicyManagerService;->access$602(Lcom/android/server/net/NetworkPolicyManagerService;J)J
 
-    .line 697
     iget-object v3, p0, Lcom/android/server/net/NetworkPolicyManagerService$4;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     # getter for: Lcom/android/server/net/NetworkPolicyManagerService;->mContext:Landroid/content/Context;
@@ -163,7 +154,6 @@
 
     move-result-object v0
 
-    .line 698
     .local v0, "formatespeed":Ljava/lang/String;
     const-string v3, "NetworkPolicy"
 
@@ -187,14 +177,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 700
     new-instance v2, Landroid/content/Intent;
 
     const-string v3, "android.intent.action.UPDATE_REALTIME_SPEED"
 
     invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 701
     .local v2, "sIntent":Landroid/content/Intent;
     if-eqz v1, :cond_0
 
@@ -236,7 +224,6 @@
 
     if-ltz v3, :cond_2
 
-    .line 702
     :cond_0
     const-string v3, "realtime_speed"
 
@@ -244,7 +231,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 706
     :goto_1
     iget-object v3, p0, Lcom/android/server/net/NetworkPolicyManagerService$4;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -255,7 +241,6 @@
 
     invoke-virtual {v3, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 707
     iget-object v3, p0, Lcom/android/server/net/NetworkPolicyManagerService$4;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object v3, v3, Lcom/android/server/net/NetworkPolicyManagerService;->realtimeSpeedHandler:Landroid/os/Handler;
@@ -266,12 +251,10 @@
 
     if-nez v3, :cond_1
 
-    .line 708
     const-wide/16 v4, 0xbb8
 
     invoke-virtual {p0, v8, v4, v5}, Lcom/android/server/net/NetworkPolicyManagerService$4;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 709
     :cond_1
     iget-object v3, p0, Lcom/android/server/net/NetworkPolicyManagerService$4;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -284,7 +267,6 @@
 
     goto/16 :goto_0
 
-    .line 704
     :cond_2
     const-string v3, "realtime_speed"
 
@@ -292,7 +274,6 @@
 
     goto :goto_1
 
-    .line 688
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

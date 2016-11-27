@@ -95,33 +95,26 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 30
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->DEBUG:Z
 
-    .line 31
     sput v1, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->ID:I
 
-    .line 34
     sput-byte v1, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->FLAG_AUTO_REFRESH_AT_ONCE:B
 
-    .line 35
     const/4 v0, 0x2
 
     sput-byte v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->FLAG_AUTO_REFRESH_BUT_LATER:B
 
-    .line 36
     const/4 v0, 0x4
 
     sput-byte v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->FLAG_ENABLE_NEXT_PTR_AT_ONCE:B
 
-    .line 37
     const/16 v0, 0x8
 
     sput-byte v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->FLAG_PIN_CONTENT:B
 
-    .line 39
     const/4 v0, 0x3
 
     sput-byte v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->MASK_AUTO_REFRESH:B
@@ -134,12 +127,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 78
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 79
     return-void
 .end method
 
@@ -149,12 +140,10 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 82
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 83
     return-void
 .end method
 
@@ -171,10 +160,8 @@
 
     const/4 v6, 0x0
 
-    .line 86
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 41
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -201,75 +188,57 @@
 
     iput-object v3, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->LOG_TAG:Ljava/lang/String;
 
-    .line 44
     iput v6, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mHeaderId:I
 
-    .line 45
     iput v6, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mContainerId:I
 
-    .line 47
     iput v5, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mDurationToClose:I
 
-    .line 48
     iput v5, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mDurationToCloseHeader:I
 
-    .line 49
     iput-boolean v7, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mKeepHeaderWhenRefresh:Z
 
-    .line 50
     iput-boolean v6, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPullToRefresh:Z
 
-    .line 52
     invoke-static {}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHolder;->create()Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHolder;
 
     move-result-object v3
 
     iput-object v3, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrUIHandlerHolder:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHolder;
 
-    .line 61
     iput-byte v7, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mStatus:B
 
-    .line 62
     iput-boolean v6, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mDisableWhenHorizontalMove:Z
 
-    .line 63
     iput v6, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mFlag:I
 
-    .line 66
     iput-boolean v6, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPreventForHorizontal:Z
 
-    .line 72
     const/16 v3, 0x1f4
 
     iput v3, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mLoadingMinTime:I
 
-    .line 73
     const-wide/16 v4, 0x0
 
     iput-wide v4, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mLoadingStartTime:J
 
-    .line 75
     iput-boolean v6, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mHasSendCancelEvent:Z
 
-    .line 88
     new-instance v3, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     invoke-direct {v3}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;-><init>()V
 
     iput-object v3, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
-    .line 90
     sget-object v3, Lcom/android/internal/R$styleable;->LePtrFrameLayout:[I
 
     invoke-virtual {p1, p2, v3, v6, v6}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 91
     .local v0, "arr":Landroid/content/res/TypedArray;
     if-eqz v0, :cond_0
 
-    .line 93
     iget v3, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mHeaderId:I
 
     invoke-virtual {v0, v6, v3}, Landroid/content/res/TypedArray;->getResourceId(II)I
@@ -278,7 +247,6 @@
 
     iput v3, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mHeaderId:I
 
-    .line 94
     iget v3, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mContainerId:I
 
     invoke-virtual {v0, v7, v3}, Landroid/content/res/TypedArray;->getResourceId(II)I
@@ -287,7 +255,6 @@
 
     iput v3, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mContainerId:I
 
-    .line 96
     iget-object v3, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     const/4 v4, 0x2
@@ -304,7 +271,6 @@
 
     invoke-virtual {v3, v4}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->setResistance(F)V
 
-    .line 99
     const/4 v3, 0x4
 
     iget v4, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mDurationToClose:I
@@ -315,7 +281,6 @@
 
     iput v3, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mDurationToClose:I
 
-    .line 100
     const/4 v3, 0x5
 
     iget v4, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mDurationToCloseHeader:I
@@ -326,14 +291,12 @@
 
     iput v3, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mDurationToCloseHeader:I
 
-    .line 102
     iget-object v3, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     invoke-virtual {v3}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->getRatioOfHeaderToHeightRefresh()F
 
     move-result v2
 
-    .line 103
     .local v2, "ratio":F
     const/4 v3, 0x3
 
@@ -341,12 +304,10 @@
 
     move-result v2
 
-    .line 104
     iget-object v3, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     invoke-virtual {v3, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->setRatioOfHeaderHeightToRefresh(F)V
 
-    .line 106
     const/4 v3, 0x7
 
     iget-boolean v4, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mKeepHeaderWhenRefresh:Z
@@ -357,7 +318,6 @@
 
     iput-boolean v3, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mKeepHeaderWhenRefresh:Z
 
-    .line 108
     const/4 v3, 0x6
 
     iget-boolean v4, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPullToRefresh:Z
@@ -368,10 +328,8 @@
 
     iput-boolean v3, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPullToRefresh:Z
 
-    .line 109
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 112
     .end local v2    # "ratio":F
     :cond_0
     new-instance v3, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout$ScrollChecker;
@@ -380,7 +338,6 @@
 
     iput-object v3, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mScrollChecker:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout$ScrollChecker;
 
-    .line 114
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v3
@@ -389,7 +346,6 @@
 
     move-result-object v1
 
-    .line 115
     .local v1, "conf":Landroid/view/ViewConfiguration;
     invoke-virtual {v1}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
 
@@ -399,7 +355,6 @@
 
     iput v3, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPagingTouchSlop:I
 
-    .line 116
     return-void
 .end method
 
@@ -409,7 +364,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 21
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->notifyUIRefreshComplete(Z)V
 
     return-void
@@ -420,7 +374,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;
 
     .prologue
-    .line 21
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->performRefreshComplete()V
 
     return-void
@@ -431,7 +384,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;
 
     .prologue
-    .line 21
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     return-object v0
@@ -443,7 +395,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 21
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->movePos(F)V
 
     return-void
@@ -453,7 +404,6 @@
     .locals 2
 
     .prologue
-    .line 699
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mFlag:I
 
     sget-byte v1, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->MASK_AUTO_REFRESH:B
@@ -464,7 +414,6 @@
 
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mFlag:I
 
-    .line 700
     return-void
 .end method
 
@@ -472,32 +421,27 @@
     .locals 11
 
     .prologue
-    .line 227
     iget-object v8, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     invoke-virtual {v8}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->getCurrentPosY()I
 
     move-result v3
 
-    .line 228
     .local v3, "offsetX":I
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->getPaddingLeft()I
 
     move-result v4
 
-    .line 229
     .local v4, "paddingLeft":I
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->getPaddingTop()I
 
     move-result v5
 
-    .line 231
     .local v5, "paddingTop":I
     iget-object v8, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mHeaderView:Landroid/view/View;
 
     if-eqz v8, :cond_0
 
-    .line 232
     iget-object v8, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mHeaderView:Landroid/view/View;
 
     invoke-virtual {v8}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -506,13 +450,11 @@
 
     check-cast v2, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 233
     .local v2, "lp":Landroid/view/ViewGroup$MarginLayoutParams;
     iget v8, v2, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
     add-int v1, v4, v8
 
-    .line 235
     .local v1, "left":I
     iget v8, v2, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
@@ -520,7 +462,6 @@
 
     add-int v7, v8, v3
 
-    .line 236
     .local v7, "top":I
     iget-object v8, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mHeaderView:Landroid/view/View;
 
@@ -530,7 +471,6 @@
 
     add-int v6, v1, v8
 
-    .line 237
     .local v6, "right":I
     iget-object v8, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mHeaderView:Landroid/view/View;
 
@@ -540,7 +480,6 @@
 
     add-int v0, v7, v8
 
-    .line 238
     .local v0, "bottom":I
     iget-object v8, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mHeaderView:Landroid/view/View;
 
@@ -554,12 +493,10 @@
 
     invoke-virtual {v8, v1, v9, v6, v10}, Landroid/view/View;->layout(IIII)V
 
-    .line 239
     sget-boolean v8, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->DEBUG:Z
 
     if-eqz v8, :cond_0
 
-    .line 243
     .end local v0    # "bottom":I
     .end local v1    # "left":I
     .end local v2    # "lp":Landroid/view/ViewGroup$MarginLayoutParams;
@@ -570,17 +507,14 @@
 
     if-eqz v8, :cond_3
 
-    .line 244
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->isPinContent()Z
 
     move-result v8
 
     if-eqz v8, :cond_1
 
-    .line 245
     const/4 v3, 0x0
 
-    .line 247
     :cond_1
     iget-object v8, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mContent:Landroid/view/View;
 
@@ -590,13 +524,11 @@
 
     check-cast v2, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 248
     .restart local v2    # "lp":Landroid/view/ViewGroup$MarginLayoutParams;
     iget v8, v2, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
     add-int v1, v4, v8
 
-    .line 249
     .restart local v1    # "left":I
     iget v8, v2, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
@@ -604,7 +536,6 @@
 
     add-int v7, v8, v3
 
-    .line 250
     .restart local v7    # "top":I
     iget-object v8, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mContent:Landroid/view/View;
 
@@ -614,7 +545,6 @@
 
     add-int v6, v1, v8
 
-    .line 251
     .restart local v6    # "right":I
     iget-object v8, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mContent:Landroid/view/View;
 
@@ -624,19 +554,16 @@
 
     add-int v0, v7, v8
 
-    .line 252
     .restart local v0    # "bottom":I
     sget-boolean v8, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->DEBUG:Z
 
     if-eqz v8, :cond_2
 
-    .line 255
     :cond_2
     iget-object v8, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mContent:Landroid/view/View;
 
     invoke-virtual {v8, v1, v7, v6, v0}, Landroid/view/View;->layout(IIII)V
 
-    .line 257
     .end local v0    # "bottom":I
     .end local v1    # "left":I
     .end local v2    # "lp":Landroid/view/ViewGroup$MarginLayoutParams;
@@ -653,14 +580,12 @@
     .param p3, "parentHeightMeasureSpec"    # I
 
     .prologue
-    .line 211
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v2
 
     check-cast v2, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 213
     .local v2, "lp":Landroid/view/ViewGroup$MarginLayoutParams;
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->getPaddingLeft()I
 
@@ -686,7 +611,6 @@
 
     move-result v1
 
-    .line 215
     .local v1, "childWidthMeasureSpec":I
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->getPaddingTop()I
 
@@ -708,11 +632,9 @@
 
     move-result v0
 
-    .line 218
     .local v0, "childHeightMeasureSpec":I
     invoke-virtual {p1, v1, v0}, Landroid/view/View;->measure(II)V
 
-    .line 219
     return-void
 .end method
 
@@ -723,7 +645,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 360
     const/4 v2, 0x0
 
     cmpg-float v2, p1, v2
@@ -738,12 +659,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 361
     sget-boolean v2, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->DEBUG:Z
 
     if-eqz v2, :cond_0
 
-    .line 362
     iget-object v2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->LOG_TAG:Ljava/lang/String;
 
     const-string v3, "has reached the top"
@@ -756,12 +675,10 @@
 
     invoke-static {v2, v3}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/util/PtrCLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 380
     :cond_0
     :goto_0
     return-void
 
-    .line 367
     :cond_1
     iget-object v2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
@@ -773,7 +690,6 @@
 
     add-int v1, v2, v3
 
-    .line 370
     .local v1, "to":I
     iget-object v2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
@@ -783,12 +699,10 @@
 
     if-eqz v2, :cond_3
 
-    .line 371
     sget-boolean v2, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->DEBUG:Z
 
     if-eqz v2, :cond_2
 
-    .line 372
     iget-object v2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->LOG_TAG:Ljava/lang/String;
 
     const-string v3, "over top"
@@ -801,17 +715,14 @@
 
     invoke-static {v2, v3}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/util/PtrCLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 374
     :cond_2
     const/4 v1, 0x0
 
-    .line 377
     :cond_3
     iget-object v2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     invoke-virtual {v2, v1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->setCurrentPos(I)V
 
-    .line 378
     iget-object v2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     invoke-virtual {v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->getLastPosY()I
@@ -820,7 +731,6 @@
 
     sub-int v0, v1, v2
 
-    .line 379
     .local v0, "change":I
     invoke-direct {p0, v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->updatePos(I)V
 
@@ -832,7 +742,6 @@
     .param p1, "ignoreHook"    # Z
 
     .prologue
-    .line 669
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->hasLeftStartPosition()Z
@@ -847,29 +756,24 @@
 
     if-eqz v0, :cond_1
 
-    .line 670
     sget-boolean v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 671
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->LOG_TAG:Ljava/lang/String;
 
     const-string v1, "notifyUIRefreshComplete mRefreshCompleteHook run."
 
     invoke-static {v0, v1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/util/PtrCLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 674
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mRefreshCompleteHook:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHook;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHook;->takeOver()V
 
-    .line 687
     :goto_0
     return-void
 
-    .line 677
     :cond_1
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrUIHandlerHolder:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHolder;
 
@@ -879,25 +783,21 @@
 
     if-eqz v0, :cond_3
 
-    .line 678
     sget-boolean v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->DEBUG:Z
 
     if-eqz v0, :cond_2
 
-    .line 679
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->LOG_TAG:Ljava/lang/String;
 
     const-string v1, "PtrUIHandler: onUIRefreshComplete"
 
     invoke-static {v0, v1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/util/PtrCLog;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 681
     :cond_2
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrUIHandlerHolder:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHolder;
 
     invoke-virtual {v0, p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHolder;->onUIRefreshComplete(Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;)V
 
-    .line 683
     :cond_3
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->LOG_TAG:Ljava/lang/String;
 
@@ -905,15 +805,12 @@
 
     invoke-static {v0, v1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/util/LogHelper;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 684
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->onUIRefreshComplete()V
 
-    .line 685
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->tryScrollBackToTopAfterComplete()V
 
-    .line 686
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->tryToNotifyReset()Z
 
     goto :goto_0
@@ -924,22 +821,18 @@
     .param p1, "stayForLoading"    # Z
 
     .prologue
-    .line 456
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->tryToPerformRefresh()Z
 
-    .line 458
     iget-byte v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mStatus:B
 
     const/4 v1, 0x3
 
     if-ne v0, v1, :cond_2
 
-    .line 460
     iget-boolean v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mKeepHeaderWhenRefresh:Z
 
     if-eqz v0, :cond_1
 
-    .line 462
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->isOverOffsetToKeepHeaderWhileLoading()Z
@@ -950,7 +843,6 @@
 
     if-nez p1, :cond_0
 
-    .line 463
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mScrollChecker:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout$ScrollChecker;
 
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
@@ -963,18 +855,15 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout$ScrollChecker;->tryToScrollTo(II)V
 
-    .line 477
     :cond_0
     :goto_0
     return-void
 
-    .line 468
     :cond_1
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->tryScrollBackToTopWhileLoading()V
 
     goto :goto_0
 
-    .line 471
     :cond_2
     iget-byte v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mStatus:B
 
@@ -982,14 +871,12 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 472
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->notifyUIRefreshComplete(Z)V
 
     goto :goto_0
 
-    .line 474
     :cond_3
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->tryScrollBackToTopAbortRefresh()V
 
@@ -1000,7 +887,6 @@
     .locals 2
 
     .prologue
-    .line 729
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mFlag:I
 
     sget-byte v1, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->MASK_AUTO_REFRESH:B
@@ -1026,14 +912,12 @@
     .locals 3
 
     .prologue
-    .line 547
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mLoadingStartTime:J
 
-    .line 548
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrUIHandlerHolder:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHolder;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHolder;->hasHandler()Z
@@ -1042,35 +926,29 @@
 
     if-eqz v0, :cond_0
 
-    .line 549
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrUIHandlerHolder:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHolder;
 
     invoke-virtual {v0, p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHolder;->onUIRefreshBegin(Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;)V
 
-    .line 550
     sget-boolean v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 551
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->LOG_TAG:Ljava/lang/String;
 
     const-string v1, "PtrUIHandler: onUIRefreshBegin"
 
     invoke-static {v0, v1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/util/PtrCLog;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 554
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrHandler:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrHandler;
 
     if-eqz v0, :cond_1
 
-    .line 555
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrHandler:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrHandler;
 
     invoke-interface {v0, p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrHandler;->onRefreshBegin(Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;)V
 
-    .line 558
     :cond_1
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->LOG_TAG:Ljava/lang/String;
 
@@ -1096,7 +974,6 @@
 
     invoke-static {v0, v1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/util/LogHelper;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 559
     return-void
 .end method
 
@@ -1106,12 +983,10 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 645
     const/4 v0, 0x4
 
     iput-byte v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mStatus:B
 
-    .line 648
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mScrollChecker:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout$ScrollChecker;
 
     # getter for: Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout$ScrollChecker;->mIsRunning:Z
@@ -1127,12 +1002,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 650
     sget-boolean v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 651
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->LOG_TAG:Ljava/lang/String;
 
     const-string v1, "performRefreshComplete do nothing, scrolling: %s, auto refresh: %s"
@@ -1166,12 +1039,10 @@
 
     invoke-static {v0, v1, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/util/PtrCLog;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 658
     :cond_0
     :goto_0
     return-void
 
-    .line 657
     :cond_1
     invoke-direct {p0, v4}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->notifyUIRefreshComplete(Z)V
 
@@ -1182,33 +1053,27 @@
     .locals 10
 
     .prologue
-    .line 943
     sget-boolean v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 944
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->LOG_TAG:Ljava/lang/String;
 
     const-string v1, "send cancel event"
 
     invoke-static {v0, v1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/util/PtrCLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 948
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mLastMoveEvent:Landroid/view/MotionEvent;
 
     if-nez v0, :cond_1
 
-    .line 954
     :goto_0
     return-void
 
-    .line 951
     :cond_1
     iget-object v9, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mLastMoveEvent:Landroid/view/MotionEvent;
 
-    .line 952
     .local v9, "last":Landroid/view/MotionEvent;
     invoke-virtual {v9}, Landroid/view/MotionEvent;->getDownTime()J
 
@@ -1244,7 +1109,6 @@
 
     move-result-object v8
 
-    .line 953
     .local v8, "e":Landroid/view/MotionEvent;
     invoke-virtual {p0, v8}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->dispatchTouchEventSupper(Landroid/view/MotionEvent;)Z
 
@@ -1255,23 +1119,19 @@
     .locals 10
 
     .prologue
-    .line 957
     sget-boolean v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 958
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->LOG_TAG:Ljava/lang/String;
 
     const-string v1, "send down event"
 
     invoke-static {v0, v1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/util/PtrCLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 960
     :cond_0
     iget-object v9, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mLastMoveEvent:Landroid/view/MotionEvent;
 
-    .line 961
     .local v9, "last":Landroid/view/MotionEvent;
     invoke-virtual {v9}, Landroid/view/MotionEvent;->getDownTime()J
 
@@ -1299,11 +1159,9 @@
 
     move-result-object v8
 
-    .line 962
     .local v8, "e":Landroid/view/MotionEvent;
     invoke-virtual {p0, v8}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->dispatchTouchEventSupper(Landroid/view/MotionEvent;)Z
 
-    .line 963
     return-void
 .end method
 
@@ -1311,14 +1169,12 @@
     .locals 3
 
     .prologue
-    .line 502
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->LOG_TAG:Ljava/lang/String;
 
     const-string v1, "tryToScrollTo  tryScrollBackToTop1"
 
     invoke-static {v0, v1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/util/LogHelper;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 503
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->isUnderTouch()Z
@@ -1327,14 +1183,12 @@
 
     if-nez v0, :cond_0
 
-    .line 504
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->LOG_TAG:Ljava/lang/String;
 
     const-string v1, "tryToScrollTo  tryScrollBackToTop2"
 
     invoke-static {v0, v1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/util/LogHelper;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 505
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mScrollChecker:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout$ScrollChecker;
 
     const/4 v1, 0x0
@@ -1343,7 +1197,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout$ScrollChecker;->tryToScrollTo(II)V
 
-    .line 507
     :cond_0
     return-void
 .end method
@@ -1352,10 +1205,8 @@
     .locals 0
 
     .prologue
-    .line 527
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->tryScrollBackToTop()V
 
-    .line 528
     return-void
 .end method
 
@@ -1363,10 +1214,8 @@
     .locals 0
 
     .prologue
-    .line 520
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->tryScrollBackToTop()V
 
-    .line 521
     return-void
 .end method
 
@@ -1374,10 +1223,8 @@
     .locals 0
 
     .prologue
-    .line 513
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->tryScrollBackToTop()V
 
-    .line 514
     return-void
 .end method
 
@@ -1387,14 +1234,12 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 565
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->LOG_TAG:Ljava/lang/String;
 
     const-string v2, "tryToNotifyReset1"
 
     invoke-static {v1, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/util/LogHelper;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 566
     iget-byte v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mStatus:B
 
     const/4 v2, 0x4
@@ -1416,14 +1261,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 567
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->LOG_TAG:Ljava/lang/String;
 
     const-string v2, "tryToNotifyReset2"
 
     invoke-static {v1, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/util/LogHelper;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 568
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrUIHandlerHolder:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHolder;
 
     invoke-virtual {v1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHolder;->hasHandler()Z
@@ -1432,38 +1275,31 @@
 
     if-eqz v1, :cond_1
 
-    .line 569
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->LOG_TAG:Ljava/lang/String;
 
     const-string v2, "tryToNotifyReset3"
 
     invoke-static {v1, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/util/LogHelper;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 570
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrUIHandlerHolder:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHolder;
 
     invoke-virtual {v1, p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHolder;->onUIReset(Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;)V
 
-    .line 571
     sget-boolean v1, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->DEBUG:Z
 
     if-eqz v1, :cond_1
 
-    .line 572
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->LOG_TAG:Ljava/lang/String;
 
     const-string v2, "PtrUIHandler: onUIReset"
 
     invoke-static {v1, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/util/PtrCLog;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 575
     :cond_1
     iput-byte v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mStatus:B
 
-    .line 576
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->clearFlag()V
 
-    .line 579
     :goto_0
     return v0
 
@@ -1479,19 +1315,16 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 531
     iget-byte v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mStatus:B
 
     const/4 v1, 0x2
 
     if-eq v0, v1, :cond_1
 
-    .line 543
     :cond_0
     :goto_0
     return v3
 
-    .line 535
     :cond_1
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->LOG_TAG:Ljava/lang/String;
 
@@ -1521,7 +1354,6 @@
 
     invoke-static {v0, v1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/util/LogHelper;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 536
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->LOG_TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1548,7 +1380,6 @@
 
     invoke-static {v0, v1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/util/LogHelper;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 537
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->LOG_TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1577,7 +1408,6 @@
 
     invoke-static {v0, v1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/util/LogHelper;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 539
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->isOverOffsetToKeepHeaderWhileLoading()Z
@@ -1601,13 +1431,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 540
     :cond_3
     const/4 v0, 0x3
 
     iput-byte v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mStatus:B
 
-    .line 541
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->performRefresh()V
 
     goto :goto_0
@@ -1626,14 +1454,11 @@
 
     const/4 v5, 0x1
 
-    .line 383
     if-nez p1, :cond_0
 
-    .line 444
     :goto_0
     return-void
 
-    .line 387
     :cond_0
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
@@ -1641,7 +1466,6 @@
 
     move-result v0
 
-    .line 390
     .local v0, "isUnderTouch":Z
     if-eqz v0, :cond_1
 
@@ -1657,13 +1481,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 391
     iput-boolean v5, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mHasSendCancelEvent:Z
 
-    .line 392
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->sendCancelEvent()V
 
-    .line 396
     :cond_1
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
@@ -1696,21 +1517,17 @@
 
     if-eqz v1, :cond_4
 
-    .line 399
     :cond_3
     iput-byte v6, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mStatus:B
 
-    .line 400
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrUIHandlerHolder:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHolder;
 
     invoke-virtual {v1, p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHolder;->onUIRefreshPrepare(Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;)V
 
-    .line 401
     sget-boolean v1, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->DEBUG:Z
 
     if-eqz v1, :cond_4
 
-    .line 402
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->LOG_TAG:Ljava/lang/String;
 
     const-string v2, "PtrUIHandler: onUIRefreshPrepare, mFlag %s"
@@ -1727,7 +1544,6 @@
 
     invoke-static {v1, v2, v3}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/util/PtrCLog;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 407
     :cond_4
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
@@ -1737,22 +1553,17 @@
 
     if-eqz v1, :cond_5
 
-    .line 408
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->tryToNotifyReset()Z
 
-    .line 411
     if-eqz v0, :cond_5
 
-    .line 412
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->sendDownEvent()V
 
-    .line 417
     :cond_5
     iget-byte v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mStatus:B
 
     if-ne v1, v6, :cond_7
 
-    .line 419
     if-eqz v0, :cond_6
 
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->isAutoRefresh()Z
@@ -1773,10 +1584,8 @@
 
     if-eqz v1, :cond_6
 
-    .line 421
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->tryToPerformRefresh()Z
 
-    .line 424
     :cond_6
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->performAutoRefreshButLater()Z
 
@@ -1792,16 +1601,13 @@
 
     if-eqz v1, :cond_7
 
-    .line 425
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->tryToPerformRefresh()Z
 
-    .line 429
     :cond_7
     sget-boolean v1, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->DEBUG:Z
 
     if-eqz v1, :cond_8
 
-    .line 430
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->LOG_TAG:Ljava/lang/String;
 
     const-string v2, "updatePos: change: %s, current: %s last: %s, top: %s, headerHeight: %s"
@@ -1864,7 +1670,6 @@
 
     invoke-static {v1, v2, v3}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/util/PtrCLog;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 435
     :cond_8
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->isPinContent()Z
 
@@ -1872,16 +1677,13 @@
 
     if-nez v1, :cond_9
 
-    .line 436
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mContent:Landroid/view/View;
 
     invoke-virtual {v1, p1}, Landroid/view/View;->offsetTopAndBottom(I)V
 
-    .line 438
     :cond_9
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->invalidate()V
 
-    .line 440
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrUIHandlerHolder:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHolder;
 
     invoke-virtual {v1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHolder;->hasHandler()Z
@@ -1890,7 +1692,6 @@
 
     if-eqz v1, :cond_a
 
-    .line 441
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrUIHandlerHolder:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHolder;
 
     iget-byte v2, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mStatus:B
@@ -1899,7 +1700,6 @@
 
     invoke-virtual {v1, p0, v0, v2, v3}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHolder;->onUIPositionChange(Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;ZBLcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;)V
 
-    .line 443
     :cond_a
     iget-byte v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mStatus:B
 
@@ -1917,12 +1717,10 @@
     .param p1, "ptrUIHandler"    # Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandler;
 
     .prologue
-    .line 807
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrUIHandlerHolder:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHolder;
 
     invoke-static {v0, p1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHolder;->addHandler(Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHolder;Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandler;)V
 
-    .line 808
     return-void
 .end method
 
@@ -1930,14 +1728,12 @@
     .locals 2
 
     .prologue
-    .line 690
     const/4 v0, 0x1
 
     iget v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mDurationToCloseHeader:I
 
     invoke-virtual {p0, v0, v1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->autoRefresh(ZI)V
 
-    .line 691
     return-void
 .end method
 
@@ -1946,12 +1742,10 @@
     .param p1, "atOnce"    # Z
 
     .prologue
-    .line 694
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mDurationToCloseHeader:I
 
     invoke-virtual {p0, p1, v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->autoRefresh(ZI)V
 
-    .line 695
     return-void
 .end method
 
@@ -1963,17 +1757,14 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 704
     iget-byte v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mStatus:B
 
     if-eq v0, v2, :cond_1
 
-    .line 722
     :cond_0
     :goto_0
     return-void
 
-    .line 708
     :cond_1
     iget v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mFlag:I
 
@@ -1986,12 +1777,10 @@
 
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mFlag:I
 
-    .line 710
     const/4 v0, 0x2
 
     iput-byte v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mStatus:B
 
-    .line 711
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrUIHandlerHolder:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHolder;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHolder;->hasHandler()Z
@@ -2000,17 +1789,14 @@
 
     if-eqz v0, :cond_2
 
-    .line 712
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrUIHandlerHolder:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHolder;
 
     invoke-virtual {v0, p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHolder;->onUIRefreshPrepare(Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;)V
 
-    .line 713
     sget-boolean v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->DEBUG:Z
 
     if-eqz v0, :cond_2
 
-    .line 714
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->LOG_TAG:Ljava/lang/String;
 
     const-string v1, "PtrUIHandler: onUIRefreshPrepare, mFlag %s"
@@ -2029,7 +1815,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/util/PtrCLog;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 717
     :cond_2
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mScrollChecker:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout$ScrollChecker;
 
@@ -2041,20 +1826,16 @@
 
     invoke-virtual {v0, v1, p2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout$ScrollChecker;->tryToScrollTo(II)V
 
-    .line 718
     if-eqz p1, :cond_0
 
-    .line 719
     const/4 v0, 0x3
 
     iput-byte v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mStatus:B
 
-    .line 720
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->performRefresh()V
 
     goto :goto_0
 
-    .line 708
     :cond_3
     sget-byte v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->FLAG_AUTO_REFRESH_BUT_LATER:B
 
@@ -2066,7 +1847,6 @@
     .param p1, "p"    # Landroid/view/ViewGroup$LayoutParams;
 
     .prologue
-    .line 924
     instance-of v0, p1, Landroid/widget/FrameLayout$LayoutParams;
 
     return v0
@@ -2077,10 +1857,8 @@
     .param p1, "disable"    # Z
 
     .prologue
-    .line 776
     iput-boolean p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mDisableWhenHorizontalMove:Z
 
-    .line 777
     return-void
 .end method
 
@@ -2089,7 +1867,6 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 266
     iget-object v9, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->LOG_TAG:Ljava/lang/String;
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -2114,7 +1891,6 @@
 
     invoke-static {v9, v10}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/util/LogHelper;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 267
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->isEnabled()Z
 
     move-result v9
@@ -2129,27 +1905,22 @@
 
     if-nez v9, :cond_1
 
-    .line 268
     :cond_0
     invoke-virtual {p0, p1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->dispatchTouchEventSupper(Landroid/view/MotionEvent;)Z
 
     move-result v9
 
-    .line 350
     :goto_0
     return v9
 
-    .line 270
     :cond_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    .line 271
     .local v0, "action":I
     packed-switch v0, :pswitch_data_0
 
-    .line 350
     :cond_2
     invoke-virtual {p0, p1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->dispatchTouchEventSupper(Landroid/view/MotionEvent;)Z
 
@@ -2157,13 +1928,11 @@
 
     goto :goto_0
 
-    .line 274
     :pswitch_0
     iget-object v9, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     invoke-virtual {v9}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->onRelease()V
 
-    .line 275
     iget-object v9, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     invoke-virtual {v9}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->hasLeftStartPosition()Z
@@ -2172,25 +1941,21 @@
 
     if-eqz v9, :cond_5
 
-    .line 276
     sget-boolean v9, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->DEBUG:Z
 
     if-eqz v9, :cond_3
 
-    .line 277
     iget-object v9, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->LOG_TAG:Ljava/lang/String;
 
     const-string v10, "call onRelease when user release"
 
     invoke-static {v9, v10}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/util/PtrCLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 279
     :cond_3
     const/4 v9, 0x0
 
     invoke-direct {p0, v9}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->onRelease(Z)V
 
-    .line 280
     iget-object v9, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     invoke-virtual {v9}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->hasMovedAfterPressedDown()Z
@@ -2199,15 +1964,12 @@
 
     if-eqz v9, :cond_4
 
-    .line 281
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->sendCancelEvent()V
 
-    .line 282
     const/4 v9, 0x1
 
     goto :goto_0
 
-    .line 284
     :cond_4
     invoke-virtual {p0, p1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->dispatchTouchEventSupper(Landroid/view/MotionEvent;)Z
 
@@ -2215,7 +1977,6 @@
 
     goto :goto_0
 
-    .line 286
     :cond_5
     invoke-virtual {p0, p1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->dispatchTouchEventSupper(Landroid/view/MotionEvent;)Z
 
@@ -2223,13 +1984,11 @@
 
     goto :goto_0
 
-    .line 290
     :pswitch_1
     const/4 v9, 0x0
 
     iput-boolean v9, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mHasSendCancelEvent:Z
 
-    .line 291
     iget-object v9, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
@@ -2242,29 +2001,23 @@
 
     invoke-virtual {v9, v10, v11}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->onPressDown(FF)V
 
-    .line 293
     iget-object v9, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mScrollChecker:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout$ScrollChecker;
 
     invoke-virtual {v9}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout$ScrollChecker;->abortIfWorking()V
 
-    .line 295
     const/4 v9, 0x0
 
     iput-boolean v9, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPreventForHorizontal:Z
 
-    .line 305
     invoke-virtual {p0, p1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->dispatchTouchEventSupper(Landroid/view/MotionEvent;)Z
 
-    .line 306
     const/4 v9, 0x1
 
     goto :goto_0
 
-    .line 309
     :pswitch_2
     iput-object p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mLastMoveEvent:Landroid/view/MotionEvent;
 
-    .line 310
     iget-object v9, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
@@ -2277,14 +2030,12 @@
 
     invoke-virtual {v9, v10, v11}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->onMove(FF)V
 
-    .line 311
     iget-object v9, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     invoke-virtual {v9}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->getOffsetX()F
 
     move-result v7
 
-    .line 312
     .local v7, "offsetX":F
     iget-object v9, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
@@ -2292,7 +2043,6 @@
 
     move-result v8
 
-    .line 314
     .local v8, "offsetY":F
     iget-boolean v9, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mDisableWhenHorizontalMove:Z
 
@@ -2326,7 +2076,6 @@
 
     if-lez v9, :cond_6
 
-    .line 315
     iget-object v9, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     invoke-virtual {v9}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->isInStartPosition()Z
@@ -2335,25 +2084,21 @@
 
     if-eqz v9, :cond_6
 
-    .line 316
     const/4 v9, 0x1
 
     iput-boolean v9, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPreventForHorizontal:Z
 
-    .line 319
     :cond_6
     iget-boolean v9, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPreventForHorizontal:Z
 
     if-eqz v9, :cond_7
 
-    .line 320
     invoke-virtual {p0, p1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->dispatchTouchEventSupper(Landroid/view/MotionEvent;)Z
 
     move-result v9
 
     goto/16 :goto_0
 
-    .line 323
     :cond_7
     const/4 v9, 0x0
 
@@ -2363,14 +2108,12 @@
 
     const/4 v5, 0x1
 
-    .line 324
     .local v5, "moveDown":Z
     :goto_1
     if-nez v5, :cond_a
 
     const/4 v6, 0x1
 
-    .line 325
     .local v6, "moveUp":Z
     :goto_2
     iget-object v9, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
@@ -2379,13 +2122,11 @@
 
     move-result v2
 
-    .line 327
     .local v2, "canMoveUp":Z
     sget-boolean v9, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->DEBUG:Z
 
     if-eqz v9, :cond_8
 
-    .line 328
     iget-object v9, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrHandler:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrHandler;
 
     if-eqz v9, :cond_b
@@ -2404,7 +2145,6 @@
 
     const/4 v1, 0x1
 
-    .line 329
     .local v1, "canMoveDown":Z
     :goto_3
     iget-object v9, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->LOG_TAG:Ljava/lang/String;
@@ -2471,7 +2211,6 @@
 
     invoke-static {v9, v10, v11}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/util/PtrCLog;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 333
     .end local v1    # "canMoveDown":Z
     :cond_8
     if-eqz v5, :cond_c
@@ -2492,14 +2231,12 @@
 
     if-nez v9, :cond_c
 
-    .line 334
     invoke-virtual {p0, p1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->dispatchTouchEventSupper(Landroid/view/MotionEvent;)Z
 
     move-result v9
 
     goto/16 :goto_0
 
-    .line 323
     .end local v2    # "canMoveUp":Z
     .end local v5    # "moveDown":Z
     .end local v6    # "moveUp":Z
@@ -2508,14 +2245,12 @@
 
     goto :goto_1
 
-    .line 324
     .restart local v5    # "moveDown":Z
     :cond_a
     const/4 v6, 0x0
 
     goto :goto_2
 
-    .line 328
     .restart local v2    # "canMoveUp":Z
     .restart local v6    # "moveUp":Z
     :cond_b
@@ -2523,7 +2258,6 @@
 
     goto :goto_3
 
-    .line 337
     :cond_c
     iget-object v9, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
@@ -2531,7 +2265,6 @@
 
     move-result v3
 
-    .line 338
     .local v3, "currentPosY":I
     iget-object v9, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
@@ -2539,7 +2272,6 @@
 
     move-result v4
 
-    .line 339
     .local v4, "lastPosY":I
     iget-object v9, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->LOG_TAG:Ljava/lang/String;
 
@@ -2573,7 +2305,6 @@
 
     invoke-static {v9, v10}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/util/LogHelper;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 340
     iget-byte v9, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mStatus:B
 
     const/4 v10, 0x3
@@ -2586,14 +2317,12 @@
 
     if-lt v4, v9, :cond_d
 
-    .line 341
     invoke-virtual {p0, p1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->dispatchTouchEventSupper(Landroid/view/MotionEvent;)Z
 
     move-result v9
 
     goto/16 :goto_0
 
-    .line 344
     :cond_d
     if-eqz v6, :cond_e
 
@@ -2602,7 +2331,6 @@
     :cond_e
     if-eqz v5, :cond_2
 
-    .line 345
     :cond_f
     const-string v9, "offsetY"
 
@@ -2626,15 +2354,12 @@
 
     invoke-static {v9, v10}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/util/LogHelper;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 346
     invoke-direct {p0, v8}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->movePos(F)V
 
-    .line 347
     const/4 v9, 0x1
 
     goto/16 :goto_0
 
-    .line 271
     nop
 
     :pswitch_data_0
@@ -2651,7 +2376,6 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 260
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -2663,7 +2387,6 @@
     .locals 1
 
     .prologue
-    .line 21
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->generateDefaultLayoutParams()Landroid/widget/FrameLayout$LayoutParams;
 
     move-result-object v0
@@ -2677,7 +2400,6 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 929
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
 
     invoke-direct {v0, v1, v1}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
@@ -2689,7 +2411,6 @@
     .locals 1
 
     .prologue
-    .line 21
     invoke-virtual {p0, p1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->generateLayoutParams(Landroid/util/AttributeSet;)Landroid/widget/FrameLayout$LayoutParams;
 
     move-result-object v0
@@ -2701,7 +2422,6 @@
     .locals 1
 
     .prologue
-    .line 21
     invoke-virtual {p0, p1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroid/widget/FrameLayout$LayoutParams;
 
     move-result-object v0
@@ -2714,7 +2434,6 @@
     .param p1, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 939
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
 
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->getContext()Landroid/content/Context;
@@ -2731,7 +2450,6 @@
     .param p1, "p"    # Landroid/view/ViewGroup$LayoutParams;
 
     .prologue
-    .line 934
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
 
     invoke-direct {v0, p1}, Landroid/widget/FrameLayout$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
@@ -2743,7 +2461,6 @@
     .locals 1
 
     .prologue
-    .line 799
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mContent:Landroid/view/View;
 
     return-object v0
@@ -2753,19 +2470,16 @@
     .locals 1
 
     .prologue
-    .line 966
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mHeaderView:Landroid/view/View;
 
     instance-of v0, v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingHeader;
 
     if-eqz v0, :cond_0
 
-    .line 967
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mHeaderView:Landroid/view/View;
 
     check-cast v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/leui/header/SimpleLeLoadingHeader;
 
-    .line 969
     :goto_0
     return-object v0
 
@@ -2779,7 +2493,6 @@
     .locals 1
 
     .prologue
-    .line 833
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mDurationToClose:I
 
     int-to-float v0, v0
@@ -2791,7 +2504,6 @@
     .locals 2
 
     .prologue
-    .line 847
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mDurationToCloseHeader:I
 
     int-to-long v0, v0
@@ -2803,7 +2515,6 @@
     .locals 1
 
     .prologue
-    .line 451
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mHeaderHeight:I
 
     return v0
@@ -2813,7 +2524,6 @@
     .locals 1
 
     .prologue
-    .line 906
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mHeaderView:Landroid/view/View;
 
     return-object v0
@@ -2823,7 +2533,6 @@
     .locals 1
 
     .prologue
-    .line 884
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->getOffsetToKeepHeaderWhileLoading()I
@@ -2837,7 +2546,6 @@
     .locals 1
 
     .prologue
-    .line 864
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->getOffsetToRefresh()I
@@ -2851,7 +2559,6 @@
     .locals 1
 
     .prologue
-    .line 874
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->getRatioOfHeaderToHeightRefresh()F
@@ -2865,7 +2572,6 @@
     .locals 1
 
     .prologue
-    .line 824
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->getResistance()F
@@ -2879,7 +2585,6 @@
     .locals 1
 
     .prologue
-    .line 973
     iget-byte v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mStatus:B
 
     return v0
@@ -2889,7 +2594,6 @@
     .locals 2
 
     .prologue
-    .line 725
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mFlag:I
 
     sget-byte v1, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->MASK_AUTO_REFRESH:B
@@ -2915,7 +2619,6 @@
     .end annotation
 
     .prologue
-    .line 748
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mFlag:I
 
     sget-byte v1, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->FLAG_ENABLE_NEXT_PTR_AT_ONCE:B
@@ -2939,7 +2642,6 @@
     .locals 1
 
     .prologue
-    .line 889
     iget-boolean v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mKeepHeaderWhenRefresh:Z
 
     return v0
@@ -2951,7 +2653,6 @@
     .end annotation
 
     .prologue
-    .line 767
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mFlag:I
 
     sget-byte v1, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->FLAG_PIN_CONTENT:B
@@ -2975,7 +2676,6 @@
     .locals 1
 
     .prologue
-    .line 897
     iget-boolean v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPullToRefresh:Z
 
     return v0
@@ -2985,7 +2685,6 @@
     .locals 2
 
     .prologue
-    .line 606
     iget-byte v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mStatus:B
 
     const/4 v1, 0x3
@@ -3013,16 +2712,13 @@
 
     const/4 v5, 0x1
 
-    .line 120
     invoke-virtual {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->getChildCount()I
 
     move-result v2
 
-    .line 121
     .local v2, "childCount":I
     if-le v2, v4, :cond_0
 
-    .line 122
     new-instance v4, Ljava/lang/IllegalStateException;
 
     const-string v5, "PtrFrameLayout only can host 2 elements"
@@ -3031,11 +2727,9 @@
 
     throw v4
 
-    .line 123
     :cond_0
     if-ne v2, v4, :cond_b
 
-    .line 124
     iget v4, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mHeaderId:I
 
     if-eqz v4, :cond_1
@@ -3044,7 +2738,6 @@
 
     if-nez v4, :cond_1
 
-    .line 125
     iget v4, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mHeaderId:I
 
     invoke-virtual {p0, v4}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->findViewById(I)Landroid/view/View;
@@ -3053,7 +2746,6 @@
 
     iput-object v4, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mHeaderView:Landroid/view/View;
 
-    .line 127
     :cond_1
     iget v4, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mContainerId:I
 
@@ -3063,7 +2755,6 @@
 
     if-nez v4, :cond_2
 
-    .line 128
     iget v4, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mContainerId:I
 
     invoke-virtual {p0, v4}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->findViewById(I)Landroid/view/View;
@@ -3072,7 +2763,6 @@
 
     iput-object v4, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mContent:Landroid/view/View;
 
-    .line 132
     :cond_2
     iget-object v4, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mContent:Landroid/view/View;
 
@@ -3082,41 +2772,33 @@
 
     if-nez v4, :cond_4
 
-    .line 134
     :cond_3
     invoke-virtual {p0, v6}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 135
     .local v0, "child1":Landroid/view/View;
     invoke-virtual {p0, v5}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 136
     .local v1, "child2":Landroid/view/View;
     instance-of v4, v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandler;
 
     if-eqz v4, :cond_5
 
-    .line 137
     iput-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mHeaderView:Landroid/view/View;
 
-    .line 138
     iput-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mContent:Landroid/view/View;
 
-    .line 174
     .end local v0    # "child1":Landroid/view/View;
     .end local v1    # "child2":Landroid/view/View;
     :cond_4
     :goto_0
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
-    .line 175
     return-void
 
-    .line 139
     .restart local v0    # "child1":Landroid/view/View;
     .restart local v1    # "child2":Landroid/view/View;
     :cond_5
@@ -3124,15 +2806,12 @@
 
     if-eqz v4, :cond_6
 
-    .line 140
     iput-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mHeaderView:Landroid/view/View;
 
-    .line 141
     iput-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mContent:Landroid/view/View;
 
     goto :goto_0
 
-    .line 144
     :cond_6
     iget-object v4, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mContent:Landroid/view/View;
 
@@ -3142,21 +2821,17 @@
 
     if-nez v4, :cond_7
 
-    .line 145
     iput-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mHeaderView:Landroid/view/View;
 
-    .line 146
     iput-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mContent:Landroid/view/View;
 
     goto :goto_0
 
-    .line 150
     :cond_7
     iget-object v4, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mHeaderView:Landroid/view/View;
 
     if-nez v4, :cond_9
 
-    .line 151
     iget-object v4, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mContent:Landroid/view/View;
 
     if-ne v4, v0, :cond_8
@@ -3173,7 +2848,6 @@
 
     goto :goto_1
 
-    .line 153
     :cond_9
     iget-object v4, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mHeaderView:Landroid/view/View;
 
@@ -3191,13 +2865,11 @@
 
     goto :goto_2
 
-    .line 158
     .end local v0    # "child1":Landroid/view/View;
     .end local v1    # "child2":Landroid/view/View;
     :cond_b
     if-ne v2, v5, :cond_c
 
-    .line 159
     invoke-virtual {p0, v6}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v4
@@ -3206,7 +2878,6 @@
 
     goto :goto_0
 
-    .line 161
     :cond_c
     new-instance v3, Landroid/widget/TextView;
 
@@ -3216,34 +2887,27 @@
 
     invoke-direct {v3, v4}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    .line 162
     .local v3, "errorView":Landroid/widget/TextView;
     invoke-virtual {v3, v5}, Landroid/widget/TextView;->setClickable(Z)V
 
-    .line 163
     const v4, -0x9a00
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 164
     const/16 v4, 0x11
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 165
     const/high16 v4, 0x41a00000    # 20.0f
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setTextSize(F)V
 
-    .line 166
     const-string v4, "The content view in PtrFrameLayout is empty. Do you forget to specify its id in xml layout file?"
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 167
     iput-object v3, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mContent:Landroid/view/View;
 
-    .line 168
     iget-object v4, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mContent:Landroid/view/View;
 
     invoke-virtual {p0, v4}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->addView(Landroid/view/View;)V
@@ -3260,10 +2924,8 @@
     .param p5, "l"    # I
 
     .prologue
-    .line 223
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->layoutChildren()V
 
-    .line 224
     return-void
 .end method
 
@@ -3275,21 +2937,17 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 179
     invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
-    .line 181
     sget-boolean v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 188
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mHeaderView:Landroid/view/View;
 
     if-eqz v0, :cond_1
 
-    .line 189
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mHeaderView:Landroid/view/View;
 
     move-object v0, p0
@@ -3302,7 +2960,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->measureChildWithMargins(Landroid/view/View;IIII)V
 
-    .line 190
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mHeaderView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -3311,7 +2968,6 @@
 
     check-cast v6, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 191
     .local v6, "lp":Landroid/view/ViewGroup$MarginLayoutParams;
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mHeaderView:Landroid/view/View;
 
@@ -3329,31 +2985,26 @@
 
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mHeaderHeight:I
 
-    .line 192
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     iget v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mHeaderHeight:I
 
     invoke-virtual {v0, v1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->setHeaderHeight(I)V
 
-    .line 195
     .end local v6    # "lp":Landroid/view/ViewGroup$MarginLayoutParams;
     :cond_1
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mContent:Landroid/view/View;
 
     if-eqz v0, :cond_2
 
-    .line 196
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mContent:Landroid/view/View;
 
     invoke-direct {p0, v0, p1, p2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->measureContentView(Landroid/view/View;II)V
 
-    .line 197
     sget-boolean v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->DEBUG:Z
 
     if-eqz v0, :cond_2
 
-    .line 206
     :cond_2
     return-void
 .end method
@@ -3365,7 +3016,6 @@
     .param p3, "mPtrIndicator"    # Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     .prologue
-    .line 447
     return-void
 .end method
 
@@ -3373,7 +3023,6 @@
     .locals 2
 
     .prologue
-    .line 583
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->hasLeftStartPosition()Z
@@ -3388,25 +3037,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 584
     sget-boolean v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 585
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->LOG_TAG:Ljava/lang/String;
 
     const-string v1, "call onRelease after scroll abort"
 
     invoke-static {v0, v1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/util/PtrCLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 587
     :cond_0
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->onRelease(Z)V
 
-    .line 589
     :cond_1
     return-void
 .end method
@@ -3415,7 +3060,6 @@
     .locals 2
 
     .prologue
-    .line 592
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->hasLeftStartPosition()Z
@@ -3430,25 +3074,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 593
     sget-boolean v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 594
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->LOG_TAG:Ljava/lang/String;
 
     const-string v1, "call onRelease after scroll finish"
 
     invoke-static {v0, v1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/util/PtrCLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 596
     :cond_0
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->onRelease(Z)V
 
-    .line 598
     :cond_1
     return-void
 .end method
@@ -3457,30 +3097,25 @@
     .locals 8
 
     .prologue
-    .line 614
     sget-boolean v1, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 615
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->LOG_TAG:Ljava/lang/String;
 
     const-string v2, "refreshComplete"
 
     invoke-static {v1, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/util/PtrCLog;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 618
     :cond_0
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mRefreshCompleteHook:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHook;
 
     if-eqz v1, :cond_1
 
-    .line 619
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mRefreshCompleteHook:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHook;
 
     invoke-virtual {v1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHook;->reset()V
 
-    .line 622
     :cond_1
     iget v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mLoadingMinTime:I
 
@@ -3498,32 +3133,26 @@
 
     long-to-int v0, v2
 
-    .line 623
     .local v0, "delay":I
     if-gtz v0, :cond_4
 
-    .line 624
     sget-boolean v1, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->DEBUG:Z
 
     if-eqz v1, :cond_2
 
-    .line 625
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->LOG_TAG:Ljava/lang/String;
 
     const-string v2, "performRefreshComplete at once"
 
     invoke-static {v1, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/util/PtrCLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 627
     :cond_2
     invoke-direct {p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->performRefreshComplete()V
 
-    .line 639
     :cond_3
     :goto_0
     return-void
 
-    .line 629
     :cond_4
     new-instance v1, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout$2;
 
@@ -3533,12 +3162,10 @@
 
     invoke-virtual {p0, v1, v2, v3}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 635
     sget-boolean v1, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->DEBUG:Z
 
     if-eqz v1, :cond_3
 
-    .line 636
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->LOG_TAG:Ljava/lang/String;
 
     const-string v2, "performRefreshComplete after delay: %s"
@@ -3565,7 +3192,6 @@
     .param p1, "ptrUIHandler"    # Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandler;
 
     .prologue
-    .line 812
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrUIHandlerHolder:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHolder;
 
     invoke-static {v0, p1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHolder;->removeHandler(Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHolder;Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandler;)Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHolder;
@@ -3574,7 +3200,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrUIHandlerHolder:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHolder;
 
-    .line 813
     return-void
 .end method
 
@@ -3583,10 +3208,8 @@
     .param p1, "duration"    # I
 
     .prologue
-    .line 842
     iput p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mDurationToClose:I
 
-    .line 843
     return-void
 .end method
 
@@ -3595,10 +3218,8 @@
     .param p1, "duration"    # I
 
     .prologue
-    .line 856
     iput p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mDurationToCloseHeader:I
 
-    .line 857
     return-void
 .end method
 
@@ -3609,10 +3230,8 @@
     .end annotation
 
     .prologue
-    .line 739
     if-eqz p1, :cond_0
 
-    .line 740
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mFlag:I
 
     sget-byte v1, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->FLAG_ENABLE_NEXT_PTR_AT_ONCE:B
@@ -3621,11 +3240,9 @@
 
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mFlag:I
 
-    .line 744
     :goto_0
     return-void
 
-    .line 742
     :cond_0
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mFlag:I
 
@@ -3645,7 +3262,6 @@
     .param p1, "header"    # Landroid/view/View;
 
     .prologue
-    .line 910
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mHeaderView:Landroid/view/View;
 
     if-eqz v1, :cond_0
@@ -3656,22 +3272,18 @@
 
     if-eq v1, p1, :cond_0
 
-    .line 911
     iget-object v1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mHeaderView:Landroid/view/View;
 
     invoke-virtual {p0, v1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->removeView(Landroid/view/View;)V
 
-    .line 913
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    .line 914
     .local v0, "lp":Landroid/view/ViewGroup$LayoutParams;
     if-nez v0, :cond_1
 
-    .line 915
     new-instance v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout$LayoutParams;
 
     .end local v0    # "lp":Landroid/view/ViewGroup$LayoutParams;
@@ -3681,20 +3293,16 @@
 
     invoke-direct {v0, v1, v2}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout$LayoutParams;-><init>(II)V
 
-    .line 916
     .restart local v0    # "lp":Landroid/view/ViewGroup$LayoutParams;
     invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 918
     :cond_1
     iput-object p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mHeaderView:Landroid/view/View;
 
-    .line 919
     const/4 v1, 0x0
 
     invoke-virtual {p0, p1, v1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->addView(Landroid/view/View;I)V
 
-    .line 920
     return-void
 .end method
 
@@ -3705,7 +3313,6 @@
     .end annotation
 
     .prologue
-    .line 795
     return-void
 .end method
 
@@ -3714,10 +3321,8 @@
     .param p1, "keepOrNot"    # Z
 
     .prologue
-    .line 893
     iput-boolean p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mKeepHeaderWhenRefresh:Z
 
-    .line 894
     return-void
 .end method
 
@@ -3726,10 +3331,8 @@
     .param p1, "time"    # I
 
     .prologue
-    .line 785
     iput p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mLoadingMinTime:I
 
-    .line 786
     return-void
 .end method
 
@@ -3738,12 +3341,10 @@
     .param p1, "offset"    # I
 
     .prologue
-    .line 879
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->setOffsetToKeepHeaderWhileLoading(I)V
 
-    .line 880
     return-void
 .end method
 
@@ -3752,12 +3353,10 @@
     .param p1, "offset"    # I
 
     .prologue
-    .line 869
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->setOffsetToRefresh(I)V
 
-    .line 870
     return-void
 .end method
 
@@ -3768,10 +3367,8 @@
     .end annotation
 
     .prologue
-    .line 758
     if-eqz p1, :cond_0
 
-    .line 759
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mFlag:I
 
     sget-byte v1, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->FLAG_PIN_CONTENT:B
@@ -3780,11 +3377,9 @@
 
     iput v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mFlag:I
 
-    .line 763
     :goto_0
     return-void
 
-    .line 761
     :cond_0
     iget v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mFlag:I
 
@@ -3804,10 +3399,8 @@
     .param p1, "ptrHandler"    # Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrHandler;
 
     .prologue
-    .line 803
     iput-object p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrHandler:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrHandler;
 
-    .line 804
     return-void
 .end method
 
@@ -3816,7 +3409,6 @@
     .param p1, "slider"    # Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     .prologue
-    .line 816
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     if-eqz v0, :cond_0
@@ -3825,16 +3417,13 @@
 
     if-eq v0, p1, :cond_0
 
-    .line 817
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     invoke-virtual {p1, v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->convertFrom(Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;)V
 
-    .line 819
     :cond_0
     iput-object p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
-    .line 820
     return-void
 .end method
 
@@ -3843,10 +3432,8 @@
     .param p1, "pullToRefresh"    # Z
 
     .prologue
-    .line 901
     iput-boolean p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPullToRefresh:Z
 
-    .line 902
     return-void
 .end method
 
@@ -3855,12 +3442,10 @@
     .param p1, "ratio"    # F
 
     .prologue
-    .line 860
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->setRatioOfHeaderHeightToRefresh(F)V
 
-    .line 861
     return-void
 .end method
 
@@ -3869,17 +3454,14 @@
     .param p1, "hook"    # Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHook;
 
     .prologue
-    .line 486
     iput-object p1, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mRefreshCompleteHook:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHook;
 
-    .line 487
     new-instance v0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout$1;
 
     invoke-direct {v0, p0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout$1;-><init>(Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;)V
 
     invoke-virtual {p1, v0}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrUIHandlerHook;->setResumeAction(Ljava/lang/Runnable;)V
 
-    .line 496
     return-void
 .end method
 
@@ -3888,11 +3470,9 @@
     .param p1, "resistance"    # F
 
     .prologue
-    .line 828
     iget-object v0, p0, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/PtrFrameLayout;->mPtrIndicator:Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/ultra/pull2refresh/ptr/indicator/PtrIndicator;->setResistance(F)V
 
-    .line 829
     return-void
 .end method

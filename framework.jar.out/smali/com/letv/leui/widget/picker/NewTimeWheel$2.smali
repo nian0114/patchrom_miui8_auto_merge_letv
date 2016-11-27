@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 130
     iput-object p1, p0, Lcom/letv/leui/widget/picker/NewTimeWheel$2;->this$0:Lcom/letv/leui/widget/picker/NewTimeWheel;
 
     invoke-direct {p0}, Lcom/letv/leui/widget/picker/OnWheelChangedListener;-><init>()V
@@ -40,7 +39,6 @@
     .param p3, "newValue"    # I
 
     .prologue
-    .line 133
     iget-object v0, p0, Lcom/letv/leui/widget/picker/NewTimeWheel$2;->this$0:Lcom/letv/leui/widget/picker/NewTimeWheel;
 
     # getter for: Lcom/letv/leui/widget/picker/NewTimeWheel;->mCurrentDate:Ljava/util/Calendar;
@@ -62,15 +60,12 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->set(II)V
 
-    .line 134
     if-eq p3, p2, :cond_0
 
-    .line 135
     iget-object v0, p0, Lcom/letv/leui/widget/picker/NewTimeWheel$2;->this$0:Lcom/letv/leui/widget/picker/NewTimeWheel;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/picker/NewTimeWheel;->onUpdateTime()V
 
-    .line 136
     :cond_0
     return-void
 .end method
@@ -81,6 +76,5 @@
     .param p2, "diff"    # I
 
     .prologue
-    .line 139
     return-void
 .end method

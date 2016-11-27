@@ -16,7 +16,6 @@
     .locals 0
 
     .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,14 +27,12 @@
     .param p1, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 28
     const/4 v0, 0x3
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1, p0, p1}, Lcom/android/server/activation/util/LogHelper;->log(ILjava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 29
     return-void
 .end method
 
@@ -45,14 +42,12 @@
     .param p1, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 44
     const/4 v0, 0x6
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1, p0, p1}, Lcom/android/server/activation/util/LogHelper;->log(ILjava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 45
     return-void
 .end method
 
@@ -61,7 +56,6 @@
     .param p0, "ex"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 40
     const/4 v0, 0x6
 
     const/4 v1, 0x0
@@ -72,7 +66,6 @@
 
     invoke-static {v0, p0, v1, v2}, Lcom/android/server/activation/util/LogHelper;->log(ILjava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 41
     return-void
 .end method
 
@@ -83,12 +76,10 @@
     .param p2, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 48
     const/4 v0, 0x6
 
     invoke-static {v0, p0, p1, p2}, Lcom/android/server/activation/util/LogHelper;->log(ILjava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 49
     return-void
 .end method
 
@@ -98,14 +89,12 @@
     .param p1, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 32
     const/4 v0, 0x4
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1, p0, p1}, Lcom/android/server/activation/util/LogHelper;->log(ILjava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 33
     return-void
 .end method
 
@@ -113,7 +102,6 @@
     .locals 1
 
     .prologue
-    .line 20
     const/4 v0, 0x1
 
     return v0
@@ -127,37 +115,30 @@
     .param p3, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 52
     invoke-static {}, Lcom/android/server/activation/util/LogHelper;->isLogEnable()Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    .line 67
     :cond_0
     :goto_0
     return-void
 
-    .line 54
     :cond_1
     array-length v3, p3
 
     if-lez v3, :cond_2
 
-    .line 55
     invoke-static {p2, p3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 57
     :cond_2
     if-nez p1, :cond_3
 
-    .line 58
     move-object v0, p2
 
-    .line 64
     .local v0, "log":Ljava/lang/String;
     :goto_1
     invoke-static {}, Lcom/android/server/activation/util/LogHelper;->isLogEnable()Z
@@ -166,14 +147,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 65
     const-string v3, "Activation"
 
     invoke-static {p0, v3, v0}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 60
     .end local v0    # "log":Ljava/lang/String;
     :cond_3
     if-nez p2, :cond_4
@@ -182,14 +161,12 @@
 
     move-result-object v2
 
-    .line 61
     .local v2, "logMessage":Ljava/lang/String;
     :goto_2
     invoke-static {p1}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 62
     .local v1, "logBody":Ljava/lang/String;
     const-string v3, "%1$s\n%2$s"
 
@@ -218,7 +195,6 @@
     :cond_4
     move-object v2, p2
 
-    .line 60
     goto :goto_2
 .end method
 
@@ -228,14 +204,12 @@
     .param p1, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 24
     const/4 v0, 0x2
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1, p0, p1}, Lcom/android/server/activation/util/LogHelper;->log(ILjava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 25
     return-void
 .end method
 
@@ -245,13 +219,11 @@
     .param p1, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 36
     const/4 v0, 0x5
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1, p0, p1}, Lcom/android/server/activation/util/LogHelper;->log(ILjava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 37
     return-void
 .end method

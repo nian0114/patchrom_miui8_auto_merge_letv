@@ -40,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 61
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
@@ -54,7 +53,6 @@
     .locals 2
 
     .prologue
-    .line 74
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/proc/"
@@ -63,7 +61,6 @@
 
     invoke-direct {p0, v0}, Lcom/android/internal/net/NetworkStatsFactory;-><init>(Ljava/io/File;)V
 
-    .line 75
     return-void
 .end method
 
@@ -72,10 +69,8 @@
     .param p1, "procRoot"    # Ljava/io/File;
 
     .prologue
-    .line 78
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 79
     new-instance v0, Ljava/io/File;
 
     const-string v1, "net/xt_qtaguid/iface_stat_all"
@@ -84,7 +79,6 @@
 
     iput-object v0, p0, Lcom/android/internal/net/NetworkStatsFactory;->mStatsXtIfaceAll:Ljava/io/File;
 
-    .line 80
     new-instance v0, Ljava/io/File;
 
     const-string v1, "net/xt_qtaguid/iface_stat_fmt"
@@ -93,7 +87,6 @@
 
     iput-object v0, p0, Lcom/android/internal/net/NetworkStatsFactory;->mStatsXtIfaceFmt:Ljava/io/File;
 
-    .line 81
     new-instance v0, Ljava/io/File;
 
     const-string v1, "net/xt_qtaguid/stats"
@@ -102,7 +95,6 @@
 
     iput-object v0, p0, Lcom/android/internal/net/NetworkStatsFactory;->mStatsXtUid:Ljava/io/File;
 
-    .line 82
     return-void
 .end method
 
@@ -121,12 +113,10 @@
     .prologue
     const/4 v11, -0x1
 
-    .line 269
     invoke-static {}, Landroid/os/StrictMode;->allowThreadDiskReads()Landroid/os/StrictMode$ThreadPolicy;
 
     move-result-object v6
 
-    .line 271
     .local v6, "savedPolicy":Landroid/os/StrictMode$ThreadPolicy;
     new-instance v7, Landroid/net/NetworkStats;
 
@@ -138,25 +128,20 @@
 
     invoke-direct {v7, v8, v9, v10}, Landroid/net/NetworkStats;-><init>(JI)V
 
-    .line 272
     .local v7, "stats":Landroid/net/NetworkStats;
     new-instance v1, Landroid/net/NetworkStats$Entry;
 
     invoke-direct {v1}, Landroid/net/NetworkStats$Entry;-><init>()V
 
-    .line 274
     .local v1, "entry":Landroid/net/NetworkStats$Entry;
     const/4 v2, 0x1
 
-    .line 275
     .local v2, "idx":I
     const/4 v3, 0x1
 
-    .line 277
     .local v3, "lastIdx":I
     const/4 v4, 0x0
 
-    .line 280
     .local v4, "reader":Lcom/android/internal/util/ProcFileReader;
     :try_start_0
     new-instance v5, Lcom/android/internal/util/ProcFileReader;
@@ -171,13 +156,11 @@
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 281
     .end local v4    # "reader":Lcom/android/internal/util/ProcFileReader;
     .local v5, "reader":Lcom/android/internal/util/ProcFileReader;
     :try_start_1
     invoke-virtual {v5}, Lcom/android/internal/util/ProcFileReader;->finishLine()V
 
-    .line 283
     :goto_0
     invoke-virtual {v5}, Lcom/android/internal/util/ProcFileReader;->hasMoreData()Z
 
@@ -185,17 +168,14 @@
 
     if-eqz v8, :cond_5
 
-    .line 284
     invoke-virtual {v5}, Lcom/android/internal/util/ProcFileReader;->nextInt()I
 
     move-result v2
 
-    .line 285
     add-int/lit8 v8, v3, 0x1
 
     if-eq v2, v8, :cond_0
 
-    .line 286
     new-instance v8, Ljava/net/ProtocolException;
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -234,13 +214,11 @@
     .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 308
     :catch_0
     move-exception v0
 
     move-object v4, v5
 
-    .line 309
     .end local v5    # "reader":Lcom/android/internal/util/ProcFileReader;
     .local v0, "e":Ljava/lang/NullPointerException;
     .restart local v4    # "reader":Lcom/android/internal/util/ProcFileReader;
@@ -272,7 +250,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 313
     .end local v0    # "e":Ljava/lang/NullPointerException;
     :catchall_0
     move-exception v8
@@ -280,18 +257,15 @@
     :goto_2
     invoke-static {v4}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 314
     invoke-static {v6}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
     throw v8
 
-    .line 289
     .end local v4    # "reader":Lcom/android/internal/util/ProcFileReader;
     .restart local v5    # "reader":Lcom/android/internal/util/ProcFileReader;
     :cond_0
     move v3, v2
 
-    .line 291
     :try_start_3
     invoke-virtual {v5}, Lcom/android/internal/util/ProcFileReader;->nextString()Ljava/lang/String;
 
@@ -299,7 +273,6 @@
 
     iput-object v8, v1, Landroid/net/NetworkStats$Entry;->iface:Ljava/lang/String;
 
-    .line 292
     invoke-virtual {v5}, Lcom/android/internal/util/ProcFileReader;->nextString()Ljava/lang/String;
 
     move-result-object v8
@@ -310,49 +283,42 @@
 
     iput v8, v1, Landroid/net/NetworkStats$Entry;->tag:I
 
-    .line 293
     invoke-virtual {v5}, Lcom/android/internal/util/ProcFileReader;->nextInt()I
 
     move-result v8
 
     iput v8, v1, Landroid/net/NetworkStats$Entry;->uid:I
 
-    .line 294
     invoke-virtual {v5}, Lcom/android/internal/util/ProcFileReader;->nextInt()I
 
     move-result v8
 
     iput v8, v1, Landroid/net/NetworkStats$Entry;->set:I
 
-    .line 295
     invoke-virtual {v5}, Lcom/android/internal/util/ProcFileReader;->nextLong()J
 
     move-result-wide v8
 
     iput-wide v8, v1, Landroid/net/NetworkStats$Entry;->rxBytes:J
 
-    .line 296
     invoke-virtual {v5}, Lcom/android/internal/util/ProcFileReader;->nextLong()J
 
     move-result-wide v8
 
     iput-wide v8, v1, Landroid/net/NetworkStats$Entry;->rxPackets:J
 
-    .line 297
     invoke-virtual {v5}, Lcom/android/internal/util/ProcFileReader;->nextLong()J
 
     move-result-wide v8
 
     iput-wide v8, v1, Landroid/net/NetworkStats$Entry;->txBytes:J
 
-    .line 298
     invoke-virtual {v5}, Lcom/android/internal/util/ProcFileReader;->nextLong()J
 
     move-result-wide v8
 
     iput-wide v8, v1, Landroid/net/NetworkStats$Entry;->txPackets:J
 
-    .line 300
     if-eqz p2, :cond_1
 
     iget-object v8, v1, Landroid/net/NetworkStats$Entry;->iface:Ljava/lang/String;
@@ -377,11 +343,9 @@
 
     if-ne p3, v8, :cond_4
 
-    .line 303
     :cond_3
     invoke-virtual {v7, v1}, Landroid/net/NetworkStats;->addValues(Landroid/net/NetworkStats$Entry;)Landroid/net/NetworkStats;
 
-    .line 306
     :cond_4
     invoke-virtual {v5}, Lcom/android/internal/util/ProcFileReader;->finishLine()V
     :try_end_3
@@ -391,13 +355,11 @@
 
     goto/16 :goto_0
 
-    .line 310
     :catch_1
     move-exception v0
 
     move-object v4, v5
 
-    .line 311
     .end local v5    # "reader":Lcom/android/internal/util/ProcFileReader;
     .local v0, "e":Ljava/lang/NumberFormatException;
     .restart local v4    # "reader":Lcom/android/internal/util/ProcFileReader;
@@ -429,20 +391,16 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 313
     .end local v0    # "e":Ljava/lang/NumberFormatException;
     .end local v4    # "reader":Lcom/android/internal/util/ProcFileReader;
     .restart local v5    # "reader":Lcom/android/internal/util/ProcFileReader;
     :cond_5
     invoke-static {v5}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 314
     invoke-static {v6}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
-    .line 317
     return-object v7
 
-    .line 313
     :catchall_1
     move-exception v8
 
@@ -452,13 +410,11 @@
     .restart local v4    # "reader":Lcom/android/internal/util/ProcFileReader;
     goto :goto_2
 
-    .line 310
     :catch_2
     move-exception v0
 
     goto :goto_3
 
-    .line 308
     :catch_3
     move-exception v0
 
@@ -474,28 +430,22 @@
     .param p1, "baseIface"    # Ljava/lang/String;
 
     .prologue
-    .line 64
     sget-object v1, Lcom/android/internal/net/NetworkStatsFactory;->sStackedIfaces:Landroid/util/ArrayMap;
 
     monitor-enter v1
 
-    .line 65
     if-eqz p1, :cond_0
 
-    .line 66
     :try_start_0
     sget-object v0, Lcom/android/internal/net/NetworkStatsFactory;->sStackedIfaces:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, p0, p1}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 70
     :goto_0
     monitor-exit v1
 
-    .line 71
     return-void
 
-    .line 68
     :cond_0
     sget-object v0, Lcom/android/internal/net/NetworkStatsFactory;->sStackedIfaces:Landroid/util/ArrayMap;
 
@@ -503,7 +453,6 @@
 
     goto :goto_0
 
-    .line 70
     :catchall_0
     move-exception v0
 
@@ -527,13 +476,10 @@
     .end annotation
 
     .prologue
-    .line 240
     if-eqz p4, :cond_0
 
-    .line 241
     move-object v0, p4
 
-    .line 242
     .local v0, "stats":Landroid/net/NetworkStats;
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -541,7 +487,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/net/NetworkStats;->setElapsedRealtime(J)V
 
-    .line 246
     :goto_0
     iget-object v1, p0, Lcom/android/internal/net/NetworkStatsFactory;->mStatsXtUid:Ljava/io/File;
 
@@ -555,7 +500,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 248
     new-instance v1, Ljava/io/IOException;
 
     const-string v2, "Failed to parse network stats"
@@ -564,7 +508,6 @@
 
     throw v1
 
-    .line 244
     .end local v0    # "stats":Landroid/net/NetworkStats;
     :cond_0
     new-instance v0, Landroid/net/NetworkStats;
@@ -580,7 +523,6 @@
     .restart local v0    # "stats":Landroid/net/NetworkStats;
     goto :goto_0
 
-    .line 255
     :cond_1
     return-object v0
 .end method
@@ -593,7 +535,6 @@
     .param p2, "actual"    # Landroid/net/NetworkStats;
 
     .prologue
-    .line 321
     invoke-virtual {p1}, Landroid/net/NetworkStats;->size()I
 
     move-result v3
@@ -604,7 +545,6 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 322
     new-instance v3, Ljava/lang/AssertionError;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -647,15 +587,12 @@
 
     throw v3
 
-    .line 326
     :cond_0
     const/4 v1, 0x0
 
-    .line 327
     .local v1, "expectedRow":Landroid/net/NetworkStats$Entry;
     const/4 v0, 0x0
 
-    .line 328
     .local v0, "actualRow":Landroid/net/NetworkStats$Entry;
     const/4 v2, 0x0
 
@@ -667,24 +604,20 @@
 
     if-ge v2, v3, :cond_2
 
-    .line 329
     invoke-virtual {p1, v2, v1}, Landroid/net/NetworkStats;->getValues(ILandroid/net/NetworkStats$Entry;)Landroid/net/NetworkStats$Entry;
 
     move-result-object v1
 
-    .line 330
     invoke-virtual {p2, v2, v0}, Landroid/net/NetworkStats;->getValues(ILandroid/net/NetworkStats$Entry;)Landroid/net/NetworkStats$Entry;
 
     move-result-object v0
 
-    .line 331
     invoke-virtual {v1, v0}, Landroid/net/NetworkStats$Entry;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    .line 332
     new-instance v3, Ljava/lang/AssertionError;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -729,13 +662,11 @@
 
     throw v3
 
-    .line 328
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 336
     :cond_2
     return-void
 .end method
@@ -752,7 +683,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 351
     const/4 v0, 0x0
 
     invoke-direct {p0, v0, v1, p1, v1}, Lcom/android/internal/net/NetworkStatsFactory;->readNetworkStatsDetailInternal(I[Ljava/lang/String;ILandroid/net/NetworkStats;)Landroid/net/NetworkStats;
@@ -775,7 +705,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 355
     invoke-direct {p0, p1, v0, p2, v0}, Lcom/android/internal/net/NetworkStatsFactory;->readNetworkStatsDetailInternal(I[Ljava/lang/String;ILandroid/net/NetworkStats;)Landroid/net/NetworkStats;
 
     move-result-object v0
@@ -796,7 +725,6 @@
 
     const/4 v0, -0x1
 
-    .line 186
     invoke-virtual {p0, v0, v1, v0, v1}, Lcom/android/internal/net/NetworkStatsFactory;->readNetworkStatsDetail(I[Ljava/lang/String;ILandroid/net/NetworkStats;)Landroid/net/NetworkStats;
 
     move-result-object v0
@@ -817,18 +745,15 @@
     .end annotation
 
     .prologue
-    .line 191
     invoke-direct/range {p0 .. p4}, Lcom/android/internal/net/NetworkStatsFactory;->readNetworkStatsDetailInternal(I[Ljava/lang/String;ILandroid/net/NetworkStats;)Landroid/net/NetworkStats;
 
     move-result-object v22
 
-    .line 194
     .local v22, "stats":Landroid/net/NetworkStats;
     sget-object v23, Lcom/android/internal/net/NetworkStatsFactory;->sStackedIfaces:Landroid/util/ArrayMap;
 
     monitor-enter v23
 
-    .line 197
     :try_start_0
     sget-object v5, Lcom/android/internal/net/NetworkStatsFactory;->sStackedIfaces:Landroid/util/ArrayMap;
 
@@ -836,7 +761,6 @@
 
     move-result v20
 
-    .line 198
     .local v20, "size":I
     const/16 v18, 0x0
 
@@ -848,7 +772,6 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 199
     sget-object v5, Lcom/android/internal/net/NetworkStatsFactory;->sStackedIfaces:Landroid/util/ArrayMap;
 
     move/from16 v0, v18
@@ -859,7 +782,6 @@
 
     check-cast v21, Ljava/lang/String;
 
-    .line 200
     .local v21, "stackedIface":Ljava/lang/String;
     sget-object v5, Lcom/android/internal/net/NetworkStatsFactory;->sStackedIfaces:Landroid/util/ArrayMap;
 
@@ -871,7 +793,6 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 204
     .local v4, "baseIface":Ljava/lang/String;
     new-instance v3, Landroid/net/NetworkStats$Entry;
 
@@ -893,11 +814,9 @@
 
     invoke-direct/range {v3 .. v17}, Landroid/net/NetworkStats$Entry;-><init>(Ljava/lang/String;IIIJJJJJ)V
 
-    .line 206
     .local v3, "adjust":Landroid/net/NetworkStats$Entry;
     const/4 v2, 0x0
 
-    .line 207
     .local v2, "entry":Landroid/net/NetworkStats$Entry;
     const/16 v19, 0x0
 
@@ -911,7 +830,6 @@
 
     if-ge v0, v5, :cond_1
 
-    .line 208
     move-object/from16 v0, v22
 
     move/from16 v1, v19
@@ -920,7 +838,6 @@
 
     move-result-object v2
 
-    .line 209
     iget-object v5, v2, Landroid/net/NetworkStats$Entry;->iface:Ljava/lang/String;
 
     move-object/from16 v0, v21
@@ -931,7 +848,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 210
     iget-wide v6, v3, Landroid/net/NetworkStats$Entry;->txBytes:J
 
     iget-wide v8, v2, Landroid/net/NetworkStats$Entry;->txBytes:J
@@ -940,7 +856,6 @@
 
     iput-wide v6, v3, Landroid/net/NetworkStats$Entry;->txBytes:J
 
-    .line 211
     iget-wide v6, v3, Landroid/net/NetworkStats$Entry;->txPackets:J
 
     iget-wide v8, v2, Landroid/net/NetworkStats$Entry;->txPackets:J
@@ -949,24 +864,20 @@
 
     iput-wide v6, v3, Landroid/net/NetworkStats$Entry;->txPackets:J
 
-    .line 207
     :cond_0
     add-int/lit8 v19, v19, 0x1
 
     goto :goto_1
 
-    .line 214
     :cond_1
     move-object/from16 v0, v22
 
     invoke-virtual {v0, v3}, Landroid/net/NetworkStats;->combineValues(Landroid/net/NetworkStats$Entry;)Landroid/net/NetworkStats;
 
-    .line 198
     add-int/lit8 v18, v18, 0x1
 
     goto :goto_0
 
-    .line 216
     .end local v2    # "entry":Landroid/net/NetworkStats$Entry;
     .end local v3    # "adjust":Landroid/net/NetworkStats$Entry;
     .end local v4    # "baseIface":Ljava/lang/String;
@@ -977,10 +888,8 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 220
     const/4 v2, 0x0
 
-    .line 221
     .restart local v2    # "entry":Landroid/net/NetworkStats$Entry;
     const/16 v18, 0x0
 
@@ -993,7 +902,6 @@
 
     if-ge v0, v5, :cond_4
 
-    .line 222
     move-object/from16 v0, v22
 
     move/from16 v1, v18
@@ -1002,7 +910,6 @@
 
     move-result-object v2
 
-    .line 223
     iget-object v5, v2, Landroid/net/NetworkStats$Entry;->iface:Ljava/lang/String;
 
     if-eqz v5, :cond_3
@@ -1017,7 +924,6 @@
 
     if-eqz v5, :cond_3
 
-    .line 225
     iget-wide v6, v2, Landroid/net/NetworkStats$Entry;->rxPackets:J
 
     const-wide/16 v8, 0x14
@@ -1026,33 +932,27 @@
 
     iput-wide v6, v2, Landroid/net/NetworkStats$Entry;->rxBytes:J
 
-    .line 226
     const-wide/16 v6, 0x0
 
     iput-wide v6, v2, Landroid/net/NetworkStats$Entry;->rxPackets:J
 
-    .line 227
     const-wide/16 v6, 0x0
 
     iput-wide v6, v2, Landroid/net/NetworkStats$Entry;->txBytes:J
 
-    .line 228
     const-wide/16 v6, 0x0
 
     iput-wide v6, v2, Landroid/net/NetworkStats$Entry;->txPackets:J
 
-    .line 229
     move-object/from16 v0, v22
 
     invoke-virtual {v0, v2}, Landroid/net/NetworkStats;->combineValues(Landroid/net/NetworkStats$Entry;)Landroid/net/NetworkStats;
 
-    .line 221
     :cond_3
     add-int/lit8 v18, v18, 0x1
 
     goto :goto_2
 
-    .line 216
     .end local v2    # "entry":Landroid/net/NetworkStats$Entry;
     .end local v18    # "i":I
     .end local v20    # "size":I
@@ -1066,7 +966,6 @@
 
     throw v5
 
-    .line 233
     .restart local v2    # "entry":Landroid/net/NetworkStats$Entry;
     .restart local v18    # "i":I
     .restart local v20    # "size":I
@@ -1085,12 +984,10 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 93
     invoke-static {}, Landroid/os/StrictMode;->allowThreadDiskReads()Landroid/os/StrictMode$ThreadPolicy;
 
     move-result-object v5
 
-    .line 95
     .local v5, "savedPolicy":Landroid/os/StrictMode$ThreadPolicy;
     new-instance v6, Landroid/net/NetworkStats;
 
@@ -1102,17 +999,14 @@
 
     invoke-direct {v6, v8, v9, v10}, Landroid/net/NetworkStats;-><init>(JI)V
 
-    .line 96
     .local v6, "stats":Landroid/net/NetworkStats;
     new-instance v2, Landroid/net/NetworkStats$Entry;
 
     invoke-direct {v2}, Landroid/net/NetworkStats$Entry;-><init>()V
 
-    .line 98
     .local v2, "entry":Landroid/net/NetworkStats$Entry;
     const/4 v3, 0x0
 
-    .line 100
     .local v3, "reader":Lcom/android/internal/util/ProcFileReader;
     :try_start_0
     new-instance v4, Lcom/android/internal/util/ProcFileReader;
@@ -1129,7 +1023,6 @@
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 102
     .end local v3    # "reader":Lcom/android/internal/util/ProcFileReader;
     .local v4, "reader":Lcom/android/internal/util/ProcFileReader;
     :goto_0
@@ -1140,29 +1033,24 @@
 
     if-eqz v8, :cond_2
 
-    .line 103
     invoke-virtual {v4}, Lcom/android/internal/util/ProcFileReader;->nextString()Ljava/lang/String;
 
     move-result-object v8
 
     iput-object v8, v2, Landroid/net/NetworkStats$Entry;->iface:Ljava/lang/String;
 
-    .line 104
     const/4 v8, -0x1
 
     iput v8, v2, Landroid/net/NetworkStats$Entry;->uid:I
 
-    .line 105
     const/4 v8, -0x1
 
     iput v8, v2, Landroid/net/NetworkStats$Entry;->set:I
 
-    .line 106
     const/4 v8, 0x0
 
     iput v8, v2, Landroid/net/NetworkStats$Entry;->tag:I
 
-    .line 108
     invoke-virtual {v4}, Lcom/android/internal/util/ProcFileReader;->nextInt()I
 
     move-result v8
@@ -1171,7 +1059,6 @@
 
     const/4 v0, 0x1
 
-    .line 111
     .local v0, "active":Z
     :goto_1
     invoke-virtual {v4}, Lcom/android/internal/util/ProcFileReader;->nextLong()J
@@ -1180,31 +1067,26 @@
 
     iput-wide v8, v2, Landroid/net/NetworkStats$Entry;->rxBytes:J
 
-    .line 112
     invoke-virtual {v4}, Lcom/android/internal/util/ProcFileReader;->nextLong()J
 
     move-result-wide v8
 
     iput-wide v8, v2, Landroid/net/NetworkStats$Entry;->rxPackets:J
 
-    .line 113
     invoke-virtual {v4}, Lcom/android/internal/util/ProcFileReader;->nextLong()J
 
     move-result-wide v8
 
     iput-wide v8, v2, Landroid/net/NetworkStats$Entry;->txBytes:J
 
-    .line 114
     invoke-virtual {v4}, Lcom/android/internal/util/ProcFileReader;->nextLong()J
 
     move-result-wide v8
 
     iput-wide v8, v2, Landroid/net/NetworkStats$Entry;->txPackets:J
 
-    .line 117
     if-eqz v0, :cond_0
 
-    .line 118
     iget-wide v8, v2, Landroid/net/NetworkStats$Entry;->rxBytes:J
 
     invoke-virtual {v4}, Lcom/android/internal/util/ProcFileReader;->nextLong()J
@@ -1215,7 +1097,6 @@
 
     iput-wide v8, v2, Landroid/net/NetworkStats$Entry;->rxBytes:J
 
-    .line 119
     iget-wide v8, v2, Landroid/net/NetworkStats$Entry;->rxPackets:J
 
     invoke-virtual {v4}, Lcom/android/internal/util/ProcFileReader;->nextLong()J
@@ -1226,7 +1107,6 @@
 
     iput-wide v8, v2, Landroid/net/NetworkStats$Entry;->rxPackets:J
 
-    .line 120
     iget-wide v8, v2, Landroid/net/NetworkStats$Entry;->txBytes:J
 
     invoke-virtual {v4}, Lcom/android/internal/util/ProcFileReader;->nextLong()J
@@ -1237,7 +1117,6 @@
 
     iput-wide v8, v2, Landroid/net/NetworkStats$Entry;->txBytes:J
 
-    .line 121
     iget-wide v8, v2, Landroid/net/NetworkStats$Entry;->txPackets:J
 
     invoke-virtual {v4}, Lcom/android/internal/util/ProcFileReader;->nextLong()J
@@ -1248,11 +1127,9 @@
 
     iput-wide v8, v2, Landroid/net/NetworkStats$Entry;->txPackets:J
 
-    .line 124
     :cond_0
     invoke-virtual {v6, v2}, Landroid/net/NetworkStats;->addValues(Landroid/net/NetworkStats$Entry;)Landroid/net/NetworkStats;
 
-    .line 125
     invoke-virtual {v4}, Lcom/android/internal/util/ProcFileReader;->finishLine()V
     :try_end_1
     .catch Ljava/lang/NullPointerException; {:try_start_1 .. :try_end_1} :catch_0
@@ -1261,14 +1138,12 @@
 
     goto :goto_0
 
-    .line 127
     .end local v0    # "active":Z
     :catch_0
     move-exception v1
 
     move-object v3, v4
 
-    .line 128
     .end local v4    # "reader":Lcom/android/internal/util/ProcFileReader;
     .local v1, "e":Ljava/lang/NullPointerException;
     .restart local v3    # "reader":Lcom/android/internal/util/ProcFileReader;
@@ -1284,7 +1159,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 132
     .end local v1    # "e":Ljava/lang/NullPointerException;
     :catchall_0
     move-exception v7
@@ -1292,7 +1166,6 @@
     :goto_3
     invoke-static {v3}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 133
     invoke-static {v5}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
     throw v7
@@ -1302,26 +1175,20 @@
     :cond_1
     move v0, v7
 
-    .line 108
     goto :goto_1
 
-    .line 132
     :cond_2
     invoke-static {v4}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 133
     invoke-static {v5}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
-    .line 135
     return-object v6
 
-    .line 129
     .end local v4    # "reader":Lcom/android/internal/util/ProcFileReader;
     .restart local v3    # "reader":Lcom/android/internal/util/ProcFileReader;
     :catch_1
     move-exception v1
 
-    .line 130
     .local v1, "e":Ljava/lang/NumberFormatException;
     :goto_4
     :try_start_3
@@ -1335,7 +1202,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 132
     .end local v1    # "e":Ljava/lang/NumberFormatException;
     .end local v3    # "reader":Lcom/android/internal/util/ProcFileReader;
     .restart local v4    # "reader":Lcom/android/internal/util/ProcFileReader;
@@ -1348,7 +1214,6 @@
     .restart local v3    # "reader":Lcom/android/internal/util/ProcFileReader;
     goto :goto_3
 
-    .line 129
     .end local v3    # "reader":Lcom/android/internal/util/ProcFileReader;
     .restart local v4    # "reader":Lcom/android/internal/util/ProcFileReader;
     :catch_2
@@ -1360,7 +1225,6 @@
     .restart local v3    # "reader":Lcom/android/internal/util/ProcFileReader;
     goto :goto_4
 
-    .line 127
     :catch_3
     move-exception v1
 
@@ -1376,12 +1240,10 @@
     .end annotation
 
     .prologue
-    .line 146
     invoke-static {}, Landroid/os/StrictMode;->allowThreadDiskReads()Landroid/os/StrictMode$ThreadPolicy;
 
     move-result-object v4
 
-    .line 149
     .local v4, "savedPolicy":Landroid/os/StrictMode$ThreadPolicy;
     iget-object v6, p0, Lcom/android/internal/net/NetworkStatsFactory;->mStatsXtIfaceFmt:Ljava/io/File;
 
@@ -1393,11 +1255,9 @@
 
     const/4 v5, 0x0
 
-    .line 182
     :goto_0
     return-object v5
 
-    .line 151
     :cond_0
     new-instance v5, Landroid/net/NetworkStats;
 
@@ -1409,17 +1269,14 @@
 
     invoke-direct {v5, v6, v7, v8}, Landroid/net/NetworkStats;-><init>(JI)V
 
-    .line 152
     .local v5, "stats":Landroid/net/NetworkStats;
     new-instance v1, Landroid/net/NetworkStats$Entry;
 
     invoke-direct {v1}, Landroid/net/NetworkStats$Entry;-><init>()V
 
-    .line 154
     .local v1, "entry":Landroid/net/NetworkStats$Entry;
     const/4 v2, 0x0
 
-    .line 157
     .local v2, "reader":Lcom/android/internal/util/ProcFileReader;
     :try_start_0
     new-instance v3, Lcom/android/internal/util/ProcFileReader;
@@ -1436,13 +1293,11 @@
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 158
     .end local v2    # "reader":Lcom/android/internal/util/ProcFileReader;
     .local v3, "reader":Lcom/android/internal/util/ProcFileReader;
     :try_start_1
     invoke-virtual {v3}, Lcom/android/internal/util/ProcFileReader;->finishLine()V
 
-    .line 160
     :goto_1
     invoke-virtual {v3}, Lcom/android/internal/util/ProcFileReader;->hasMoreData()Z
 
@@ -1450,60 +1305,50 @@
 
     if-eqz v6, :cond_1
 
-    .line 161
     invoke-virtual {v3}, Lcom/android/internal/util/ProcFileReader;->nextString()Ljava/lang/String;
 
     move-result-object v6
 
     iput-object v6, v1, Landroid/net/NetworkStats$Entry;->iface:Ljava/lang/String;
 
-    .line 162
     const/4 v6, -0x1
 
     iput v6, v1, Landroid/net/NetworkStats$Entry;->uid:I
 
-    .line 163
     const/4 v6, -0x1
 
     iput v6, v1, Landroid/net/NetworkStats$Entry;->set:I
 
-    .line 164
     const/4 v6, 0x0
 
     iput v6, v1, Landroid/net/NetworkStats$Entry;->tag:I
 
-    .line 166
     invoke-virtual {v3}, Lcom/android/internal/util/ProcFileReader;->nextLong()J
 
     move-result-wide v6
 
     iput-wide v6, v1, Landroid/net/NetworkStats$Entry;->rxBytes:J
 
-    .line 167
     invoke-virtual {v3}, Lcom/android/internal/util/ProcFileReader;->nextLong()J
 
     move-result-wide v6
 
     iput-wide v6, v1, Landroid/net/NetworkStats$Entry;->rxPackets:J
 
-    .line 168
     invoke-virtual {v3}, Lcom/android/internal/util/ProcFileReader;->nextLong()J
 
     move-result-wide v6
 
     iput-wide v6, v1, Landroid/net/NetworkStats$Entry;->txBytes:J
 
-    .line 169
     invoke-virtual {v3}, Lcom/android/internal/util/ProcFileReader;->nextLong()J
 
     move-result-wide v6
 
     iput-wide v6, v1, Landroid/net/NetworkStats$Entry;->txPackets:J
 
-    .line 171
     invoke-virtual {v5, v1}, Landroid/net/NetworkStats;->addValues(Landroid/net/NetworkStats$Entry;)Landroid/net/NetworkStats;
 
-    .line 172
     invoke-virtual {v3}, Lcom/android/internal/util/ProcFileReader;->finishLine()V
     :try_end_1
     .catch Ljava/lang/NullPointerException; {:try_start_1 .. :try_end_1} :catch_0
@@ -1512,13 +1357,11 @@
 
     goto :goto_1
 
-    .line 174
     :catch_0
     move-exception v0
 
     move-object v2, v3
 
-    .line 175
     .end local v3    # "reader":Lcom/android/internal/util/ProcFileReader;
     .local v0, "e":Ljava/lang/NullPointerException;
     .restart local v2    # "reader":Lcom/android/internal/util/ProcFileReader;
@@ -1534,7 +1377,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 179
     .end local v0    # "e":Ljava/lang/NullPointerException;
     :catchall_0
     move-exception v6
@@ -1542,29 +1384,24 @@
     :goto_3
     invoke-static {v2}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 180
     invoke-static {v4}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
     throw v6
 
-    .line 179
     .end local v2    # "reader":Lcom/android/internal/util/ProcFileReader;
     .restart local v3    # "reader":Lcom/android/internal/util/ProcFileReader;
     :cond_1
     invoke-static {v3}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 180
     invoke-static {v4}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
     goto :goto_0
 
-    .line 176
     .end local v3    # "reader":Lcom/android/internal/util/ProcFileReader;
     .restart local v2    # "reader":Lcom/android/internal/util/ProcFileReader;
     :catch_1
     move-exception v0
 
-    .line 177
     .local v0, "e":Ljava/lang/NumberFormatException;
     :goto_4
     :try_start_3
@@ -1578,7 +1415,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 179
     .end local v0    # "e":Ljava/lang/NumberFormatException;
     .end local v2    # "reader":Lcom/android/internal/util/ProcFileReader;
     .restart local v3    # "reader":Lcom/android/internal/util/ProcFileReader;
@@ -1591,7 +1427,6 @@
     .restart local v2    # "reader":Lcom/android/internal/util/ProcFileReader;
     goto :goto_3
 
-    .line 176
     .end local v2    # "reader":Lcom/android/internal/util/ProcFileReader;
     .restart local v3    # "reader":Lcom/android/internal/util/ProcFileReader;
     :catch_2
@@ -1603,7 +1438,6 @@
     .restart local v2    # "reader":Lcom/android/internal/util/ProcFileReader;
     goto :goto_4
 
-    .line 174
     :catch_3
     move-exception v0
 

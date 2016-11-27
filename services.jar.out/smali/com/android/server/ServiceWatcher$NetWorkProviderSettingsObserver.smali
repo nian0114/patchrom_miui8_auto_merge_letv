@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 114
     iput-object p1, p0, Lcom/android/server/ServiceWatcher$NetWorkProviderSettingsObserver;->this$0:Lcom/android/server/ServiceWatcher;
 
-    .line 115
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 117
     return-void
 .end method
 
@@ -40,7 +37,6 @@
     .locals 4
 
     .prologue
-    .line 119
     iget-object v1, p0, Lcom/android/server/ServiceWatcher$NetWorkProviderSettingsObserver;->this$0:Lcom/android/server/ServiceWatcher;
 
     # getter for: Lcom/android/server/ServiceWatcher;->mContext:Landroid/content/Context;
@@ -52,7 +48,6 @@
 
     move-result-object v0
 
-    .line 120
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v1, "network_provider_package"
 
@@ -66,7 +61,6 @@
 
     invoke-virtual {v0, v1, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 123
     return-void
 .end method
 
@@ -76,7 +70,6 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 127
     const-string v1, "network"
 
     iget-object v2, p0, Lcom/android/server/ServiceWatcher$NetWorkProviderSettingsObserver;->this$0:Lcom/android/server/ServiceWatcher;
@@ -92,7 +85,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 128
     iget-object v1, p0, Lcom/android/server/ServiceWatcher$NetWorkProviderSettingsObserver;->this$0:Lcom/android/server/ServiceWatcher;
 
     # getter for: Lcom/android/server/ServiceWatcher;->mContext:Landroid/content/Context;
@@ -110,7 +102,6 @@
 
     move-result-object v0
 
-    .line 130
     .local v0, "packageName":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -127,7 +118,6 @@
 
     if-nez v1, :cond_0
 
-    .line 131
     iget-object v1, p0, Lcom/android/server/ServiceWatcher$NetWorkProviderSettingsObserver;->this$0:Lcom/android/server/ServiceWatcher;
 
     # getter for: Lcom/android/server/ServiceWatcher;->mLock:Ljava/lang/Object;
@@ -137,28 +127,23 @@
 
     monitor-enter v2
 
-    .line 132
     :try_start_0
     iget-object v1, p0, Lcom/android/server/ServiceWatcher$NetWorkProviderSettingsObserver;->this$0:Lcom/android/server/ServiceWatcher;
 
     # invokes: Lcom/android/server/ServiceWatcher;->unbindLocked()V
     invoke-static {v1}, Lcom/android/server/ServiceWatcher;->access$400(Lcom/android/server/ServiceWatcher;)V
 
-    .line 133
     iget-object v1, p0, Lcom/android/server/ServiceWatcher$NetWorkProviderSettingsObserver;->this$0:Lcom/android/server/ServiceWatcher;
 
     # invokes: Lcom/android/server/ServiceWatcher;->bindBestPackageLocked(Ljava/lang/String;)Z
     invoke-static {v1, v0}, Lcom/android/server/ServiceWatcher;->access$500(Lcom/android/server/ServiceWatcher;Ljava/lang/String;)Z
 
-    .line 134
     monitor-exit v2
 
-    .line 137
     .end local v0    # "packageName":Ljava/lang/String;
     :cond_0
     return-void
 
-    .line 134
     .restart local v0    # "packageName":Ljava/lang/String;
     :catchall_0
     move-exception v1

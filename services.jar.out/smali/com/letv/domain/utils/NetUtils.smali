@@ -14,7 +14,6 @@
     .locals 0
 
     .prologue
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,24 +36,20 @@
     .end annotation
 
     .prologue
-    .line 20
     invoke-virtual {p0}, Lcom/letv/domain/bean/DeviceInfo;->getApp_name()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 21
     .local v0, "app_name":Ljava/lang/String;
     invoke-virtual {p0}, Lcom/letv/domain/bean/DeviceInfo;->getApp_version()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 23
     .local v1, "app_version":Ljava/lang/String;
     new-instance v4, Ljava/util/HashMap;
 
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
-    .line 27
     .local v4, "headMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :try_start_0
     const-string v8, "android.os.SystemProperties"
@@ -63,7 +58,6 @@
 
     move-result-object v2
 
-    .line 28
     .local v2, "clazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-string v8, "get"
 
@@ -87,7 +81,6 @@
 
     move-result-object v5
 
-    .line 29
     .local v5, "method":Ljava/lang/reflect/Method;
     const/4 v8, 0x0
 
@@ -115,7 +108,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 36
     .end local v2    # "clazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v5    # "method":Ljava/lang/reflect/Method;
     .local v6, "model":Ljava/lang/String;
@@ -188,16 +180,13 @@
 
     move-result-object v7
 
-    .line 43
     .local v7, "user_agent":Ljava/lang/String;
     const-string v8, "User-Agent"
 
     invoke-virtual {v4, v8, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 44
     return-object v4
 
-    .line 30
     .end local v6    # "model":Ljava/lang/String;
     .end local v7    # "user_agent":Ljava/lang/String;
     .restart local v0    # "app_name":Ljava/lang/String;
@@ -205,18 +194,15 @@
     :catch_0
     move-exception v3
 
-    .line 31
     .local v3, "e":Ljava/lang/Exception;
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 32
     const-string v8, "DomainHelper"
 
     const-string v9, "invoke SystemProperties.get() wrong, use UNKNOWN as model."
 
     invoke-static {v8, v9}, Lcom/letv/domain/utils/LogUtils;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 33
     const-string v6, "unknown"
 
     .restart local v6    # "model":Ljava/lang/String;

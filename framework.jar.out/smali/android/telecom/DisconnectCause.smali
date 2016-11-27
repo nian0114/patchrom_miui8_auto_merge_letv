@@ -60,7 +60,6 @@
     .locals 1
 
     .prologue
-    .line 182
     new-instance v0, Landroid/telecom/DisconnectCause$1;
 
     invoke-direct {v0}, Landroid/telecom/DisconnectCause$1;-><init>()V
@@ -77,7 +76,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 84
     const/4 v5, -0x1
 
     move-object v0, p0
@@ -90,7 +88,6 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/telecom/DisconnectCause;-><init>(ILjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/String;I)V
 
-    .line 85
     return-void
 .end method
 
@@ -102,7 +99,6 @@
     .param p4, "reason"    # Ljava/lang/String;
 
     .prologue
-    .line 106
     const/4 v5, -0x1
 
     move-object v0, p0
@@ -117,7 +113,6 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/telecom/DisconnectCause;-><init>(ILjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/String;I)V
 
-    .line 107
     return-void
 .end method
 
@@ -130,25 +125,18 @@
     .param p5, "toneToPlay"    # I
 
     .prologue
-    .line 119
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 120
     iput p1, p0, Landroid/telecom/DisconnectCause;->mDisconnectCode:I
 
-    .line 121
     iput-object p2, p0, Landroid/telecom/DisconnectCause;->mDisconnectLabel:Ljava/lang/CharSequence;
 
-    .line 122
     iput-object p3, p0, Landroid/telecom/DisconnectCause;->mDisconnectDescription:Ljava/lang/CharSequence;
 
-    .line 123
     iput-object p4, p0, Landroid/telecom/DisconnectCause;->mDisconnectReason:Ljava/lang/String;
 
-    .line 124
     iput p5, p0, Landroid/telecom/DisconnectCause;->mToneToPlay:I
 
-    .line 125
     return-void
 .end method
 
@@ -160,7 +148,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 94
     const/4 v5, -0x1
 
     move-object v0, p0
@@ -173,7 +160,6 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/telecom/DisconnectCause;-><init>(ILjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/String;I)V
 
-    .line 95
     return-void
 .end method
 
@@ -183,7 +169,6 @@
     .locals 1
 
     .prologue
-    .line 210
     const/4 v0, 0x0
 
     return v0
@@ -196,17 +181,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 224
     instance-of v2, p1, Landroid/telecom/DisconnectCause;
 
     if-eqz v2, :cond_0
 
     move-object v0, p1
 
-    .line 225
     check-cast v0, Landroid/telecom/DisconnectCause;
 
-    .line 226
     .local v0, "d":Landroid/telecom/DisconnectCause;
     iget v2, p0, Landroid/telecom/DisconnectCause;->mDisconnectCode:I
 
@@ -286,7 +268,6 @@
 
     const/4 v1, 0x1
 
-    .line 232
     .end local v0    # "d":Landroid/telecom/DisconnectCause;
     :cond_0
     return v1
@@ -296,7 +277,6 @@
     .locals 1
 
     .prologue
-    .line 133
     iget v0, p0, Landroid/telecom/DisconnectCause;->mDisconnectCode:I
 
     return v0
@@ -306,7 +286,6 @@
     .locals 1
 
     .prologue
-    .line 160
     iget-object v0, p0, Landroid/telecom/DisconnectCause;->mDisconnectDescription:Ljava/lang/CharSequence;
 
     return-object v0
@@ -316,7 +295,6 @@
     .locals 1
 
     .prologue
-    .line 146
     iget-object v0, p0, Landroid/telecom/DisconnectCause;->mDisconnectLabel:Ljava/lang/CharSequence;
 
     return-object v0
@@ -326,7 +304,6 @@
     .locals 1
 
     .prologue
-    .line 170
     iget-object v0, p0, Landroid/telecom/DisconnectCause;->mDisconnectReason:Ljava/lang/String;
 
     return-object v0
@@ -336,7 +313,6 @@
     .locals 1
 
     .prologue
-    .line 179
     iget v0, p0, Landroid/telecom/DisconnectCause;->mToneToPlay:I
 
     return v0
@@ -346,7 +322,6 @@
     .locals 2
 
     .prologue
-    .line 215
     iget v0, p0, Landroid/telecom/DisconnectCause;->mDisconnectCode:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -400,21 +375,18 @@
     .locals 6
 
     .prologue
-    .line 237
     const-string v0, ""
 
-    .line 238
     .local v0, "code":Ljava/lang/String;
     iget v4, p0, Landroid/telecom/DisconnectCause;->mDisconnectCode:I
 
     packed-switch v4, :pswitch_data_0
 
-    .line 273
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "invalid code: "
+    const-string v5, "invalid code: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -430,7 +402,6 @@
 
     move-result-object v0
 
-    .line 276
     :goto_0
     iget-object v4, p0, Landroid/telecom/DisconnectCause;->mDisconnectLabel:Ljava/lang/CharSequence;
 
@@ -438,7 +409,6 @@
 
     const-string v2, ""
 
-    .line 277
     .local v2, "label":Ljava/lang/String;
     :goto_1
     iget-object v4, p0, Landroid/telecom/DisconnectCause;->mDisconnectDescription:Ljava/lang/CharSequence;
@@ -447,7 +417,6 @@
 
     const-string v1, ""
 
-    .line 279
     .local v1, "description":Ljava/lang/String;
     :goto_2
     iget-object v4, p0, Landroid/telecom/DisconnectCause;->mDisconnectReason:Ljava/lang/String;
@@ -456,7 +425,6 @@
 
     const-string v3, ""
 
-    .line 280
     .local v3, "reason":Ljava/lang/String;
     :goto_3
     new-instance v4, Ljava/lang/StringBuilder;
@@ -551,87 +519,64 @@
 
     return-object v4
 
-    .line 240
     .end local v1    # "description":Ljava/lang/String;
     .end local v2    # "label":Ljava/lang/String;
     .end local v3    # "reason":Ljava/lang/String;
     :pswitch_0
     const-string v0, "UNKNOWN"
 
-    .line 241
     goto :goto_0
 
-    .line 243
     :pswitch_1
     const-string v0, "ERROR"
 
-    .line 244
     goto :goto_0
 
-    .line 246
     :pswitch_2
     const-string v0, "LOCAL"
 
-    .line 247
     goto :goto_0
 
-    .line 249
     :pswitch_3
     const-string v0, "REMOTE"
 
-    .line 250
     goto :goto_0
 
-    .line 252
     :pswitch_4
     const-string v0, "CANCELED"
 
-    .line 253
     goto :goto_0
 
-    .line 255
     :pswitch_5
     const-string v0, "MISSED"
 
-    .line 256
     goto :goto_0
 
-    .line 258
     :pswitch_6
     const-string v0, "REJECTED"
 
-    .line 259
     goto/16 :goto_0
 
-    .line 261
     :pswitch_7
     const-string v0, "BUSY"
 
-    .line 262
     goto/16 :goto_0
 
-    .line 264
     :pswitch_8
     const-string v0, "RESTRICTED"
 
-    .line 265
     goto/16 :goto_0
 
-    .line 267
     :pswitch_9
     const-string v0, "OTHER"
 
-    .line 268
     goto/16 :goto_0
 
-    .line 270
     :pswitch_a
     const-string v0, "CONNECTION_MANAGER_NOT_SUPPORTED"
 
-    .line 271
     goto/16 :goto_0
 
-    .line 276
     :cond_0
     iget-object v4, p0, Landroid/telecom/DisconnectCause;->mDisconnectLabel:Ljava/lang/CharSequence;
 
@@ -641,7 +586,6 @@
 
     goto/16 :goto_1
 
-    .line 277
     .restart local v2    # "label":Ljava/lang/String;
     :cond_1
     iget-object v4, p0, Landroid/telecom/DisconnectCause;->mDisconnectDescription:Ljava/lang/CharSequence;
@@ -652,14 +596,12 @@
 
     goto/16 :goto_2
 
-    .line 279
     .restart local v1    # "description":Ljava/lang/String;
     :cond_2
     iget-object v3, p0, Landroid/telecom/DisconnectCause;->mDisconnectReason:Ljava/lang/String;
 
     goto/16 :goto_3
 
-    .line 238
     nop
 
     :pswitch_data_0
@@ -684,31 +626,25 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 201
     iget v0, p0, Landroid/telecom/DisconnectCause;->mDisconnectCode:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 202
     iget-object v0, p0, Landroid/telecom/DisconnectCause;->mDisconnectLabel:Ljava/lang/CharSequence;
 
     invoke-static {v0, p1, p2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
-    .line 203
     iget-object v0, p0, Landroid/telecom/DisconnectCause;->mDisconnectDescription:Ljava/lang/CharSequence;
 
     invoke-static {v0, p1, p2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
-    .line 204
     iget-object v0, p0, Landroid/telecom/DisconnectCause;->mDisconnectReason:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 205
     iget v0, p0, Landroid/telecom/DisconnectCause;->mToneToPlay:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 206
     return-void
 .end method

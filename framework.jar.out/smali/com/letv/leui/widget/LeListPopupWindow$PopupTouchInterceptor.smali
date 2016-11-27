@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 608
     iput-object p1, p0, Lcom/letv/leui/widget/LeListPopupWindow$PopupTouchInterceptor;->this$0:Lcom/letv/leui/widget/LeListPopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/letv/leui/widget/LeListPopupWindow$1;
 
     .prologue
-    .line 608
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/LeListPopupWindow$PopupTouchInterceptor;-><init>(Lcom/letv/leui/widget/LeListPopupWindow;)V
 
     return-void
@@ -54,12 +52,10 @@
     .param p2, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 610
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    .line 611
     .local v0, "action":I
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
@@ -67,7 +63,6 @@
 
     float-to-int v1, v3
 
-    .line 612
     .local v1, "x":I
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
@@ -75,7 +70,6 @@
 
     float-to-int v2, v3
 
-    .line 614
     .local v2, "y":I
     if-nez v0, :cond_1
 
@@ -107,7 +101,6 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 617
     iget-object v3, p0, Lcom/letv/leui/widget/LeListPopupWindow$PopupTouchInterceptor;->this$0:Lcom/letv/leui/widget/LeListPopupWindow;
 
     # getter for: Lcom/letv/leui/widget/LeListPopupWindow;->mHandler:Landroid/os/Handler;
@@ -126,20 +119,17 @@
 
     invoke-virtual {v3, v4, v6, v7}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 621
     :cond_0
     :goto_0
     const/4 v3, 0x0
 
     return v3
 
-    .line 618
     :cond_1
     const/4 v3, 0x1
 
     if-ne v0, v3, :cond_0
 
-    .line 619
     iget-object v3, p0, Lcom/letv/leui/widget/LeListPopupWindow$PopupTouchInterceptor;->this$0:Lcom/letv/leui/widget/LeListPopupWindow;
 
     # getter for: Lcom/letv/leui/widget/LeListPopupWindow;->mHandler:Landroid/os/Handler;

@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 104
     iput-object p1, p0, Lcom/android/server/pm/theme/ThemeControl$ThemeHandler;->this$0:Lcom/android/server/pm/theme/ThemeControl;
 
-    .line 105
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 106
     return-void
 .end method
 
@@ -41,12 +38,10 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 109
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 126
     :goto_0
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
@@ -54,17 +49,14 @@
 
     invoke-virtual {v1}, Landroid/os/Looper;->quitSafely()V
 
-    .line 127
     const-string v1, "ThemeControl"
 
     const-string v2, "ControlTheme handler finished : quitSafely"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 128
     return-void
 
-    .line 111
     :pswitch_0
     const-string v1, "ThemeControl"
 
@@ -72,12 +64,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 112
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/String;
 
-    .line 113
     .local v0, "themeName":Ljava/lang/String;
     iget-object v1, p0, Lcom/android/server/pm/theme/ThemeControl$ThemeHandler;->this$0:Lcom/android/server/pm/theme/ThemeControl;
 
@@ -88,7 +78,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 114
     iget-object v1, p0, Lcom/android/server/pm/theme/ThemeControl$ThemeHandler;->this$0:Lcom/android/server/pm/theme/ThemeControl;
 
     iget-object v2, p0, Lcom/android/server/pm/theme/ThemeControl$ThemeHandler;->this$0:Lcom/android/server/pm/theme/ThemeControl;
@@ -101,7 +90,6 @@
     # invokes: Lcom/android/server/pm/theme/ThemeControl;->handleZipFile(Landroid/content/Context;Ljava/lang/String;)V
     invoke-static {v1, v2, v0}, Lcom/android/server/pm/theme/ThemeControl;->access$100(Lcom/android/server/pm/theme/ThemeControl;Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 118
     :goto_1
     const-string v1, "ThemeControl"
 
@@ -109,7 +97,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 119
     iget-object v1, p0, Lcom/android/server/pm/theme/ThemeControl$ThemeHandler;->this$0:Lcom/android/server/pm/theme/ThemeControl;
 
     # getter for: Lcom/android/server/pm/theme/ThemeControl;->upzip:Lcom/android/server/pm/theme/ThemeControl$Upzip;
@@ -119,7 +106,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 120
     iget-object v1, p0, Lcom/android/server/pm/theme/ThemeControl$ThemeHandler;->this$0:Lcom/android/server/pm/theme/ThemeControl;
 
     # getter for: Lcom/android/server/pm/theme/ThemeControl;->upzip:Lcom/android/server/pm/theme/ThemeControl$Upzip;
@@ -131,7 +117,6 @@
 
     goto :goto_0
 
-    .line 116
     :cond_0
     const-string v1, "ThemeControl"
 
@@ -141,7 +126,6 @@
 
     goto :goto_1
 
-    .line 122
     :cond_1
     const-string v1, "ThemeControl"
 
@@ -151,7 +135,6 @@
 
     goto :goto_0
 
-    .line 109
     nop
 
     :pswitch_data_0

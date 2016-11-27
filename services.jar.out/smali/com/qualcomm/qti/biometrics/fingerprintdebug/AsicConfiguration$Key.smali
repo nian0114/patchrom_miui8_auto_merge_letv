@@ -102,7 +102,6 @@
 
     const/4 v3, 0x0
 
-    .line 291
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
     const-string v1, "scanWidth"
@@ -111,7 +110,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;->scanWidth:Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
-    .line 292
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
     const-string v1, "scanHeight"
@@ -120,7 +118,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;->scanHeight:Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
-    .line 293
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
     const-string v1, "settleTime"
@@ -129,7 +126,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;->settleTime:Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
-    .line 294
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
     const-string v1, "t20VV"
@@ -138,7 +134,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;->t20VV:Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
-    .line 295
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
     const-string v1, "t20VI"
@@ -147,7 +142,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;->t20VI:Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
-    .line 296
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
     const-string v1, "vGateV"
@@ -158,7 +152,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;->vGateV:Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
-    .line 297
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
     const-string v1, "vGateI"
@@ -169,7 +162,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;->vGateI:Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
-    .line 298
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
     const-string v1, "vLogicV"
@@ -180,7 +172,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;->vLogicV:Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
-    .line 299
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
     const-string v1, "vLogicI"
@@ -191,7 +182,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;->vLogicI:Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
-    .line 300
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
     const-string v1, "apV"
@@ -202,7 +192,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;->apV:Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
-    .line 301
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
     const-string v1, "apI"
@@ -213,7 +202,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;->apI:Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
-    .line 302
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
     const-string v1, "dresetvV"
@@ -224,7 +212,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;->dresetvV:Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
-    .line 303
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
     const-string v1, "dresetvI"
@@ -235,7 +222,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;->dresetvI:Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
-    .line 304
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
     const-string v1, "rbiasV1"
@@ -246,7 +232,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;->rbiasV1:Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
-    .line 305
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
     const-string v1, "rbiasV2"
@@ -257,7 +242,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;->rbiasV2:Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
-    .line 306
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
     const-string v1, "rbiasV3"
@@ -268,7 +252,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;->rbiasV3:Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
-    .line 307
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
     const-string v1, "rbiasV4"
@@ -279,7 +262,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;->rbiasV4:Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
-    .line 308
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
     const-string v1, "dbiasV1"
@@ -290,7 +272,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;->dbiasV1:Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
-    .line 309
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
     const-string v1, "dbiasV2"
@@ -301,7 +282,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;->dbiasV2:Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
-    .line 310
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
     const-string v1, "dbiasV3"
@@ -312,7 +292,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;->dbiasV3:Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
-    .line 311
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
     const-string v1, "dbiasV4"
@@ -323,7 +302,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;->dbiasV4:Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
-    .line 312
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
     const-string v1, "tbgFreq"
@@ -334,7 +312,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;->tbgFreq:Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
-    .line 313
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
     const-string v1, "tbgEnable"
@@ -345,7 +322,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;->tbgEnable:Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
-    .line 314
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
     const-string v1, "numRows"
@@ -356,7 +332,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;->numRows:Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
-    .line 315
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
     const-string v1, "sensorBias"
@@ -367,7 +342,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;->sensorBias:Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
-    .line 316
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
     const-string v1, "adcMidRange"
@@ -378,7 +352,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;->adcMidRange:Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
-    .line 317
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
     const-string v1, "rangeGateDelay"
@@ -389,7 +362,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;->rangeGateDelay:Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
-    .line 318
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
     const-string v1, "rangeGateWidth"
@@ -400,7 +372,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;->rangeGateWidth:Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
-    .line 319
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
     const-string v1, "pulseCount"
@@ -411,7 +382,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;->pulseCount:Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
-    .line 320
     new-instance v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
     const-string v1, "numRegs"
@@ -422,7 +392,6 @@
 
     sput-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;->numRegs:Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
-    .line 290
     const/16 v0, 0x1e
 
     new-array v0, v0, [Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
@@ -611,7 +580,6 @@
     .end annotation
 
     .prologue
-    .line 290
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -622,7 +590,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 290
     const-class v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -638,7 +605,6 @@
     .locals 1
 
     .prologue
-    .line 290
     sget-object v0, Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;->$VALUES:[Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;
 
     invoke-virtual {v0}, [Lcom/qualcomm/qti/biometrics/fingerprintdebug/AsicConfiguration$Key;->clone()Ljava/lang/Object;

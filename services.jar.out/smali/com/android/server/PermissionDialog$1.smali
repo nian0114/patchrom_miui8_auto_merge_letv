@@ -26,7 +26,6 @@
     .param p2, "x0"    # Landroid/os/Looper;
 
     .prologue
-    .line 131
     iput-object p1, p0, Lcom/android/server/PermissionDialog$1;->this$0:Lcom/android/server/PermissionDialog;
 
     iput-object p3, p0, Lcom/android/server/PermissionDialog$1;->val$thread:Landroid/os/HandlerThread;
@@ -43,10 +42,8 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 133
     const/4 v4, 0x1
 
-    .line 134
     .local v4, "mode":I
     iget-object v0, p0, Lcom/android/server/PermissionDialog$1;->this$0:Lcom/android/server/PermissionDialog;
 
@@ -59,13 +56,11 @@
 
     move-result v5
 
-    .line 135
     .local v5, "remember":Z
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 146
     :pswitch_0
     const-string v0, "gaozhipeng"
 
@@ -95,13 +90,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 147
     const/4 v4, 0x1
 
-    .line 148
     const/4 v5, 0x0
 
-    .line 151
     :goto_0
     iget-object v0, p0, Lcom/android/server/PermissionDialog$1;->this$0:Lcom/android/server/PermissionDialog;
 
@@ -133,7 +125,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/AppOpsService;->notifyOperation(IILjava/lang/String;IZ)V
 
-    .line 153
     iget-object v0, p0, Lcom/android/server/PermissionDialog$1;->this$0:Lcom/android/server/PermissionDialog;
 
     # getter for: Lcom/android/server/PermissionDialog;->mHandler:Landroid/os/Handler;
@@ -145,41 +136,31 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 154
     iget-object v0, p0, Lcom/android/server/PermissionDialog$1;->val$thread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->quitSafely()Z
 
-    .line 155
     iget-object v0, p0, Lcom/android/server/PermissionDialog$1;->this$0:Lcom/android/server/PermissionDialog;
 
     invoke-virtual {v0}, Lcom/android/server/PermissionDialog;->dismiss()V
 
-    .line 156
     return-void
 
-    .line 137
     :pswitch_1
     const/4 v4, 0x0
 
-    .line 138
     goto :goto_0
 
-    .line 140
     :pswitch_2
     const/4 v4, 0x1
 
-    .line 141
     goto :goto_0
 
-    .line 143
     :pswitch_3
     const/4 v4, 0x0
 
-    .line 144
     goto :goto_0
 
-    .line 135
     nop
 
     :pswitch_data_0

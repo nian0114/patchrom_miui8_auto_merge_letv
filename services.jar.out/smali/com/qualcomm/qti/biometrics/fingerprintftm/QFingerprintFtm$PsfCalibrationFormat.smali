@@ -32,20 +32,15 @@
     .param p4, "initialDelay"    # I
 
     .prologue
-    .line 194
     iput-object p1, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm$PsfCalibrationFormat;->this$0:Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 195
     iput p2, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm$PsfCalibrationFormat;->status:I
 
-    .line 196
     iput p3, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm$PsfCalibrationFormat;->phase:I
 
-    .line 197
     iput p4, p0, Lcom/qualcomm/qti/biometrics/fingerprintftm/QFingerprintFtm$PsfCalibrationFormat;->initialDelay:I
 
-    .line 198
     return-void
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1073
     iput-object p1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$3;->this$0:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,14 +39,12 @@
     .locals 2
 
     .prologue
-    .line 1076
     iget-object v1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$3;->this$0:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;
 
     invoke-virtual {v1}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->getAnchorView()Landroid/view/View;
 
     move-result-object v0
 
-    .line 1077
     .local v0, "view":Landroid/view/View;
     if-eqz v0, :cond_0
 
@@ -57,12 +54,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 1078
     iget-object v1, p0, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow$3;->this$0:Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;
 
     invoke-virtual {v1}, Lcom/letv/leui/preference/LeListPreferenceListPopupWindow;->show()V
 
-    .line 1080
     :cond_0
     return-void
 .end method

@@ -40,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 107
     new-instance v0, Lcom/android/letv/agnes/service/beans/IEvent$1;
 
     invoke-direct {v0}, Lcom/android/letv/agnes/service/beans/IEvent$1;-><init>()V
@@ -54,10 +53,8 @@
     .locals 0
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     return-void
 .end method
 
@@ -72,31 +69,22 @@
     .param p8, "props"    # Ljava/util/Map;
 
     .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     iput-wide p1, p0, Lcom/android/letv/agnes/service/beans/IEvent;->time:J
 
-    .line 35
     iput-object p3, p0, Lcom/android/letv/agnes/service/beans/IEvent;->id:Ljava/lang/String;
 
-    .line 36
     iput-object p5, p0, Lcom/android/letv/agnes/service/beans/IEvent;->wid:Ljava/lang/String;
 
-    .line 37
     iput-object p4, p0, Lcom/android/letv/agnes/service/beans/IEvent;->appId:Ljava/lang/String;
 
-    .line 38
     iput-object p6, p0, Lcom/android/letv/agnes/service/beans/IEvent;->pushId:Ljava/lang/String;
 
-    .line 39
     iput-object p7, p0, Lcom/android/letv/agnes/service/beans/IEvent;->result:Ljava/lang/String;
 
-    .line 40
     iput-object p8, p0, Lcom/android/letv/agnes/service/beans/IEvent;->props:Ljava/util/Map;
 
-    .line 41
     return-void
 .end method
 
@@ -106,7 +94,6 @@
     .locals 1
 
     .prologue
-    .line 93
     const/4 v0, 0x0
 
     return v0
@@ -116,7 +103,6 @@
     .locals 1
 
     .prologue
-    .line 72
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IEvent;->appId:Ljava/lang/String;
 
     return-object v0
@@ -126,7 +112,6 @@
     .locals 1
 
     .prologue
-    .line 56
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IEvent;->id:Ljava/lang/String;
 
     return-object v0
@@ -136,7 +121,6 @@
     .locals 1
 
     .prologue
-    .line 21
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IEvent;->props:Ljava/util/Map;
 
     return-object v0
@@ -146,7 +130,6 @@
     .locals 1
 
     .prologue
-    .line 80
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IEvent;->pushId:Ljava/lang/String;
 
     return-object v0
@@ -156,7 +139,6 @@
     .locals 1
 
     .prologue
-    .line 88
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IEvent;->result:Ljava/lang/String;
 
     return-object v0
@@ -166,7 +148,6 @@
     .locals 2
 
     .prologue
-    .line 48
     iget-wide v0, p0, Lcom/android/letv/agnes/service/beans/IEvent;->time:J
 
     return-wide v0
@@ -176,7 +157,6 @@
     .locals 1
 
     .prologue
-    .line 64
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IEvent;->wid:Ljava/lang/String;
 
     return-object v0
@@ -187,10 +167,8 @@
     .param p1, "appId"    # Ljava/lang/String;
 
     .prologue
-    .line 68
     iput-object p1, p0, Lcom/android/letv/agnes/service/beans/IEvent;->appId:Ljava/lang/String;
 
-    .line 69
     return-void
 .end method
 
@@ -199,10 +177,8 @@
     .param p1, "id"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     iput-object p1, p0, Lcom/android/letv/agnes/service/beans/IEvent;->id:Ljava/lang/String;
 
-    .line 53
     return-void
 .end method
 
@@ -211,10 +187,8 @@
     .param p1, "props"    # Ljava/util/Map;
 
     .prologue
-    .line 25
     iput-object p1, p0, Lcom/android/letv/agnes/service/beans/IEvent;->props:Ljava/util/Map;
 
-    .line 26
     return-void
 .end method
 
@@ -223,10 +197,8 @@
     .param p1, "pushId"    # Ljava/lang/String;
 
     .prologue
-    .line 76
     iput-object p1, p0, Lcom/android/letv/agnes/service/beans/IEvent;->pushId:Ljava/lang/String;
 
-    .line 77
     return-void
 .end method
 
@@ -235,10 +207,8 @@
     .param p1, "result"    # Ljava/lang/String;
 
     .prologue
-    .line 84
     iput-object p1, p0, Lcom/android/letv/agnes/service/beans/IEvent;->result:Ljava/lang/String;
 
-    .line 85
     return-void
 .end method
 
@@ -247,10 +217,8 @@
     .param p1, "time"    # J
 
     .prologue
-    .line 44
     iput-wide p1, p0, Lcom/android/letv/agnes/service/beans/IEvent;->time:J
 
-    .line 45
     return-void
 .end method
 
@@ -259,10 +227,8 @@
     .param p1, "id"    # Ljava/lang/String;
 
     .prologue
-    .line 60
     iput-object p1, p0, Lcom/android/letv/agnes/service/beans/IEvent;->wid:Ljava/lang/String;
 
-    .line 61
     return-void
 .end method
 
@@ -272,41 +238,33 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 98
     iget-wide v0, p0, Lcom/android/letv/agnes/service/beans/IEvent;->time:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 99
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IEvent;->id:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 100
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IEvent;->appId:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 101
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IEvent;->wid:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 102
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IEvent;->pushId:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 103
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IEvent;->result:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 104
     iget-object v0, p0, Lcom/android/letv/agnes/service/beans/IEvent;->props:Ljava/util/Map;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeMap(Ljava/util/Map;)V
 
-    .line 105
     return-void
 .end method

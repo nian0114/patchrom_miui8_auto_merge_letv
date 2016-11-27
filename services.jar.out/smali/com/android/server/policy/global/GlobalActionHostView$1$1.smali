@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 431
     iput-object p1, p0, Lcom/android/server/policy/global/GlobalActionHostView$1$1;->this$1:Lcom/android/server/policy/global/GlobalActionHostView$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 451
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHostView$1$1;->this$1:Lcom/android/server/policy/global/GlobalActionHostView$1;
 
     iget-object v0, v0, Lcom/android/server/policy/global/GlobalActionHostView$1;->this$0:Lcom/android/server/policy/global/GlobalActionHostView;
@@ -50,14 +48,12 @@
 
     invoke-interface {v0}, Lcom/android/server/policy/global/GlobalActionViewMediator$MediatorCallback;->reboot()V
 
-    .line 452
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHostView$1$1;->this$1:Lcom/android/server/policy/global/GlobalActionHostView$1;
 
     iget-object v0, v0, Lcom/android/server/policy/global/GlobalActionHostView$1;->this$0:Lcom/android/server/policy/global/GlobalActionHostView;
 
     invoke-virtual {v0}, Lcom/android/server/policy/global/GlobalActionHostView;->removeAllViews()V
 
-    .line 453
     return-void
 .end method
 
@@ -66,7 +62,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 444
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHostView$1$1;->this$1:Lcom/android/server/policy/global/GlobalActionHostView$1;
 
     iget-object v0, v0, Lcom/android/server/policy/global/GlobalActionHostView$1;->this$0:Lcom/android/server/policy/global/GlobalActionHostView;
@@ -75,14 +70,12 @@
 
     invoke-interface {v0}, Lcom/android/server/policy/global/GlobalActionViewMediator$MediatorCallback;->reboot()V
 
-    .line 445
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionHostView$1$1;->this$1:Lcom/android/server/policy/global/GlobalActionHostView$1;
 
     iget-object v0, v0, Lcom/android/server/policy/global/GlobalActionHostView$1;->this$0:Lcom/android/server/policy/global/GlobalActionHostView;
 
     invoke-virtual {v0}, Lcom/android/server/policy/global/GlobalActionHostView;->removeAllViews()V
 
-    .line 446
     return-void
 .end method
 
@@ -91,7 +84,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 439
     return-void
 .end method
 
@@ -100,6 +92,5 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 435
     return-void
 .end method

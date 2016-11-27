@@ -70,14 +70,12 @@
     .locals 1
 
     .prologue
-    .line 69
     new-instance v0, Landroid/graphics/BlurParams;
 
     invoke-direct {v0}, Landroid/graphics/BlurParams;-><init>()V
 
     sput-object v0, Landroid/graphics/BlurParams;->EMPTY:Landroid/graphics/BlurParams;
 
-    .line 150
     new-instance v0, Landroid/graphics/BlurParams$1;
 
     invoke-direct {v0}, Landroid/graphics/BlurParams$1;-><init>()V
@@ -97,35 +95,26 @@
 
     const/4 v1, 0x0
 
-    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     iput v3, p0, Landroid/graphics/BlurParams;->mode:I
 
-    .line 30
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/graphics/BlurParams;->area:Landroid/graphics/Rect;
 
-    .line 34
     iput v1, p0, Landroid/graphics/BlurParams;->radius:F
 
-    .line 37
     iput v2, p0, Landroid/graphics/BlurParams;->lumaContrast:F
 
-    .line 40
     iput v1, p0, Landroid/graphics/BlurParams;->lumaBrightness:F
 
-    .line 43
     iput v2, p0, Landroid/graphics/BlurParams;->chromaContrast:F
 
-    .line 48
     iput v3, p0, Landroid/graphics/BlurParams;->blendColor:I
 
-    .line 55
     return-void
 .end method
 
@@ -144,50 +133,36 @@
 
     const/4 v1, 0x0
 
-    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     iput v3, p0, Landroid/graphics/BlurParams;->mode:I
 
-    .line 30
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/graphics/BlurParams;->area:Landroid/graphics/Rect;
 
-    .line 34
     iput v1, p0, Landroid/graphics/BlurParams;->radius:F
 
-    .line 37
     iput v2, p0, Landroid/graphics/BlurParams;->lumaContrast:F
 
-    .line 40
     iput v1, p0, Landroid/graphics/BlurParams;->lumaBrightness:F
 
-    .line 43
     iput v2, p0, Landroid/graphics/BlurParams;->chromaContrast:F
 
-    .line 48
     iput v3, p0, Landroid/graphics/BlurParams;->blendColor:I
 
-    .line 62
     iput p1, p0, Landroid/graphics/BlurParams;->radius:F
 
-    .line 63
     iput p2, p0, Landroid/graphics/BlurParams;->lumaContrast:F
 
-    .line 64
     iput p3, p0, Landroid/graphics/BlurParams;->lumaBrightness:F
 
-    .line 65
     iput p4, p0, Landroid/graphics/BlurParams;->chromaContrast:F
 
-    .line 66
     iput p5, p0, Landroid/graphics/BlurParams;->blendColor:I
 
-    .line 67
     return-void
 .end method
 
@@ -202,38 +177,28 @@
 
     const/4 v1, 0x0
 
-    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     iput v3, p0, Landroid/graphics/BlurParams;->mode:I
 
-    .line 30
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/graphics/BlurParams;->area:Landroid/graphics/Rect;
 
-    .line 34
     iput v1, p0, Landroid/graphics/BlurParams;->radius:F
 
-    .line 37
     iput v2, p0, Landroid/graphics/BlurParams;->lumaContrast:F
 
-    .line 40
     iput v1, p0, Landroid/graphics/BlurParams;->lumaBrightness:F
 
-    .line 43
     iput v2, p0, Landroid/graphics/BlurParams;->chromaContrast:F
 
-    .line 48
     iput v3, p0, Landroid/graphics/BlurParams;->blendColor:I
 
-    .line 58
     invoke-virtual {p0, p1}, Landroid/graphics/BlurParams;->set(Landroid/graphics/BlurParams;)V
 
-    .line 59
     return-void
 .end method
 
@@ -243,16 +208,13 @@
     .param p1, "rhs"    # Landroid/graphics/BlurParams;
 
     .prologue
-    .line 87
     if-ne p0, p1, :cond_0
 
     const/4 v0, 0x1
 
-    .line 90
     :goto_0
     return v0
 
-    .line 88
     :cond_0
     if-nez p0, :cond_1
 
@@ -260,7 +222,6 @@
 
     goto :goto_0
 
-    .line 90
     :cond_1
     invoke-virtual {p0, p1}, Landroid/graphics/BlurParams;->equals(Landroid/graphics/BlurParams;)Z
 
@@ -276,7 +237,6 @@
     .param p2, "bw"    # F
 
     .prologue
-    .line 125
     sub-float v0, p1, p0
 
     mul-float/2addr v0, p2
@@ -293,7 +253,6 @@
     .param p2, "bw"    # F
 
     .prologue
-    .line 130
     invoke-static {}, Landroid/animation/ArgbEvaluator;->getInstance()Landroid/animation/ArgbEvaluator;
 
     move-result-object v0
@@ -326,25 +285,21 @@
     .param p2, "bw"    # F
 
     .prologue
-    .line 112
     new-instance v0, Landroid/graphics/BlurParams;
 
     invoke-direct {v0}, Landroid/graphics/BlurParams;-><init>()V
 
-    .line 113
     .local v0, "c":Landroid/graphics/BlurParams;
     iget v1, p1, Landroid/graphics/BlurParams;->mode:I
 
     iput v1, v0, Landroid/graphics/BlurParams;->mode:I
 
-    .line 114
     iget-object v1, v0, Landroid/graphics/BlurParams;->area:Landroid/graphics/Rect;
 
     iget-object v2, p1, Landroid/graphics/BlurParams;->area:Landroid/graphics/Rect;
 
     invoke-virtual {v1, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 115
     iget v1, p0, Landroid/graphics/BlurParams;->radius:F
 
     iget v2, p1, Landroid/graphics/BlurParams;->radius:F
@@ -355,7 +310,6 @@
 
     iput v1, v0, Landroid/graphics/BlurParams;->radius:F
 
-    .line 116
     iget v1, p0, Landroid/graphics/BlurParams;->lumaContrast:F
 
     iget v2, p1, Landroid/graphics/BlurParams;->lumaContrast:F
@@ -366,7 +320,6 @@
 
     iput v1, v0, Landroid/graphics/BlurParams;->lumaContrast:F
 
-    .line 117
     iget v1, p0, Landroid/graphics/BlurParams;->lumaBrightness:F
 
     iget v2, p1, Landroid/graphics/BlurParams;->lumaBrightness:F
@@ -377,7 +330,6 @@
 
     iput v1, v0, Landroid/graphics/BlurParams;->lumaBrightness:F
 
-    .line 118
     iget v1, p0, Landroid/graphics/BlurParams;->chromaContrast:F
 
     iget v2, p1, Landroid/graphics/BlurParams;->chromaContrast:F
@@ -388,7 +340,6 @@
 
     iput v1, v0, Landroid/graphics/BlurParams;->chromaContrast:F
 
-    .line 119
     iget v1, p0, Landroid/graphics/BlurParams;->blendColor:I
 
     iget v2, p1, Landroid/graphics/BlurParams;->blendColor:I
@@ -399,7 +350,6 @@
 
     iput v1, v0, Landroid/graphics/BlurParams;->blendColor:I
 
-    .line 121
     return-object v0
 .end method
 
@@ -409,7 +359,6 @@
     .locals 1
 
     .prologue
-    .line 136
     const/4 v0, 0x0
 
     return v0
@@ -426,15 +375,12 @@
 
     const v4, 0x3c23d70a    # 0.01f
 
-    .line 72
     if-ne p0, p1, :cond_1
 
-    .line 75
     :cond_0
     :goto_0
     return v0
 
-    .line 73
     :cond_1
     if-nez p1, :cond_2
 
@@ -442,7 +388,6 @@
 
     goto :goto_0
 
-    .line 75
     :cond_2
     iget v2, p0, Landroid/graphics/BlurParams;->mode:I
 
@@ -532,7 +477,6 @@
     .locals 2
 
     .prologue
-    .line 94
     iget v0, p0, Landroid/graphics/BlurParams;->mode:I
 
     if-eqz v0, :cond_0
@@ -574,44 +518,36 @@
     .param p1, "src"    # Landroid/graphics/BlurParams;
 
     .prologue
-    .line 102
     iget v0, p1, Landroid/graphics/BlurParams;->mode:I
 
     iput v0, p0, Landroid/graphics/BlurParams;->mode:I
 
-    .line 103
     iget-object v0, p0, Landroid/graphics/BlurParams;->area:Landroid/graphics/Rect;
 
     iget-object v1, p1, Landroid/graphics/BlurParams;->area:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 104
     iget v0, p1, Landroid/graphics/BlurParams;->radius:F
 
     iput v0, p0, Landroid/graphics/BlurParams;->radius:F
 
-    .line 105
     iget v0, p1, Landroid/graphics/BlurParams;->lumaContrast:F
 
     iput v0, p0, Landroid/graphics/BlurParams;->lumaContrast:F
 
-    .line 106
     iget v0, p1, Landroid/graphics/BlurParams;->lumaBrightness:F
 
     iput v0, p0, Landroid/graphics/BlurParams;->lumaBrightness:F
 
-    .line 107
     iget v0, p1, Landroid/graphics/BlurParams;->chromaContrast:F
 
     iput v0, p0, Landroid/graphics/BlurParams;->chromaContrast:F
 
-    .line 108
     iget v0, p1, Landroid/graphics/BlurParams;->blendColor:I
 
     iput v0, p0, Landroid/graphics/BlurParams;->blendColor:I
 
-    .line 109
     return-void
 .end method
 
@@ -621,41 +557,33 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 141
     iget v0, p0, Landroid/graphics/BlurParams;->mode:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 142
     iget-object v0, p0, Landroid/graphics/BlurParams;->area:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p1, p2}, Landroid/graphics/Rect;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 143
     iget v0, p0, Landroid/graphics/BlurParams;->radius:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 144
     iget v0, p0, Landroid/graphics/BlurParams;->lumaContrast:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 145
     iget v0, p0, Landroid/graphics/BlurParams;->lumaBrightness:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 146
     iget v0, p0, Landroid/graphics/BlurParams;->chromaContrast:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 147
     iget v0, p0, Landroid/graphics/BlurParams;->blendColor:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 148
     return-void
 .end method

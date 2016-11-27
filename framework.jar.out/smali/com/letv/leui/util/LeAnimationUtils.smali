@@ -20,7 +20,6 @@
     .locals 1
 
     .prologue
-    .line 16
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
@@ -34,10 +33,8 @@
     .locals 0
 
     .prologue
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
     return-void
 .end method
 
@@ -48,36 +45,29 @@
     .param p2, "listener"    # Lcom/letv/leui/util/LeAnimationUtils$AnimationListener;
 
     .prologue
-    .line 27
     if-nez p0, :cond_0
 
-    .line 54
     :goto_0
     return-void
 
-    .line 31
     :cond_0
     const/4 v2, 0x0
 
-    .line 32
     .local v2, "duration":I
     invoke-virtual {p0}, Landroid/widget/ImageView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    .line 33
     .local v4, "res":Landroid/content/res/Resources;
     invoke-virtual {v4, p1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 34
     .local v0, "d":Landroid/graphics/drawable/Drawable;
     instance-of v5, v0, Landroid/graphics/drawable/AnimationDrawable;
 
     if-nez v5, :cond_1
 
-    .line 35
     new-instance v5, Ljava/security/InvalidParameterException;
 
     const-string v6, "You should pass a AnimationDrawable Resource Id to paramater animationDrawableResId."
@@ -89,10 +79,8 @@
     :cond_1
     move-object v1, v0
 
-    .line 39
     check-cast v1, Landroid/graphics/drawable/AnimationDrawable;
 
-    .line 40
     .local v1, "drawable":Landroid/graphics/drawable/AnimationDrawable;
     const/4 v3, 0x0
 
@@ -104,26 +92,21 @@
 
     if-ge v3, v5, :cond_2
 
-    .line 41
     invoke-virtual {v1, v3}, Landroid/graphics/drawable/AnimationDrawable;->getDuration(I)I
 
     move-result v5
 
     add-int/2addr v2, v5
 
-    .line 40
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 44
     :cond_2
     invoke-virtual {p0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 45
     invoke-virtual {v1}, Landroid/graphics/drawable/AnimationDrawable;->start()V
 
-    .line 46
     sget-object v5, Lcom/letv/leui/util/LeAnimationUtils;->mAnimationHandler:Landroid/os/Handler;
 
     new-instance v6, Lcom/letv/leui/util/LeAnimationUtils$1;

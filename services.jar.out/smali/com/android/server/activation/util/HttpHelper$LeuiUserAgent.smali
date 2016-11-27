@@ -37,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 151
     const-string v0, ""
 
     sput-object v0, Lcom/android/server/activation/util/HttpHelper$LeuiUserAgent;->USER_AGENT_VALUE:Ljava/lang/String;
@@ -49,7 +48,6 @@
     .locals 0
 
     .prologue
-    .line 140
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -60,7 +58,6 @@
     .param p0, "x0"    # Landroid/content/Context;
 
     .prologue
-    .line 140
     invoke-static {p0}, Lcom/android/server/activation/util/HttpHelper$LeuiUserAgent;->ensureUserAgent(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
@@ -75,7 +72,6 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 160
     sget-object v4, Lcom/android/server/activation/util/HttpHelper$LeuiUserAgent;->USER_AGENT_VALUE:Ljava/lang/String;
 
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -84,16 +80,13 @@
 
     if-eqz v4, :cond_0
 
-    .line 161
     const-string v0, "android"
 
-    .line 163
     .local v0, "defaultPackageName":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 164
     .local v3, "sb":Ljava/lang/StringBuilder;
     const-string v4, "Phone"
 
@@ -141,13 +134,10 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 173
     if-nez p0, :cond_1
 
-    .line 174
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 187
     :goto_0
     const-string v4, ";"
 
@@ -171,14 +161,12 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 192
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v4
 
     sput-object v4, Lcom/android/server/activation/util/HttpHelper$LeuiUserAgent;->USER_AGENT_VALUE:Ljava/lang/String;
 
-    .line 193
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -203,7 +191,6 @@
 
     invoke-static {v4, v5}, Lcom/android/server/activation/util/LogHelper;->d(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 195
     .end local v0    # "defaultPackageName":Ljava/lang/String;
     .end local v3    # "sb":Ljava/lang/StringBuilder;
     :cond_0
@@ -211,13 +198,11 @@
 
     return-object v4
 
-    .line 176
     .restart local v0    # "defaultPackageName":Ljava/lang/String;
     .restart local v3    # "sb":Ljava/lang/StringBuilder;
     :cond_1
     const/4 v2, 0x0
 
-    .line 178
     .local v2, "info":Landroid/content/pm/PackageInfo;
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -234,7 +219,6 @@
 
     move-result-object v2
 
-    .line 179
     iget-object v4, v2, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -255,15 +239,12 @@
 
     goto :goto_0
 
-    .line 182
     :catch_0
     move-exception v1
 
-    .line 183
     .local v1, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 184
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V

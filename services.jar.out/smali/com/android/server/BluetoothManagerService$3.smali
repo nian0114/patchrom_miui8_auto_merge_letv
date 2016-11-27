@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 475
     iput-object p1, p0, Lcom/android/server/BluetoothManagerService$3;->this$0:Lcom/android/server/BluetoothManagerService;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -39,7 +38,6 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 478
     iget-object v1, p0, Lcom/android/server/BluetoothManagerService$3;->this$0:Lcom/android/server/BluetoothManagerService;
 
     invoke-virtual {v1}, Lcom/android/server/BluetoothManagerService;->isBleScanAlwaysAvailable()Z
@@ -48,19 +46,16 @@
 
     if-nez v1, :cond_0
 
-    .line 479
     iget-object v1, p0, Lcom/android/server/BluetoothManagerService$3;->this$0:Lcom/android/server/BluetoothManagerService;
 
     # invokes: Lcom/android/server/BluetoothManagerService;->disableBleScanMode()V
     invoke-static {v1}, Lcom/android/server/BluetoothManagerService;->access$1300(Lcom/android/server/BluetoothManagerService;)V
 
-    .line 480
     iget-object v1, p0, Lcom/android/server/BluetoothManagerService$3;->this$0:Lcom/android/server/BluetoothManagerService;
 
     # invokes: Lcom/android/server/BluetoothManagerService;->clearBleApps()V
     invoke-static {v1}, Lcom/android/server/BluetoothManagerService;->access$1400(Lcom/android/server/BluetoothManagerService;)V
 
-    .line 482
     :try_start_0
     iget-object v1, p0, Lcom/android/server/BluetoothManagerService$3;->this$0:Lcom/android/server/BluetoothManagerService;
 
@@ -82,16 +77,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 487
     :cond_0
     :goto_0
     return-void
 
-    .line 483
     :catch_0
     move-exception v0
 
-    .line 484
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "BluetoothManagerService"
 

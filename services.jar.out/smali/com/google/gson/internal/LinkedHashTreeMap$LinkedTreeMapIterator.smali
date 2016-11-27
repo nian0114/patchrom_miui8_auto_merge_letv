@@ -57,13 +57,11 @@
     .locals 1
 
     .prologue
-    .line 760
     .local p0, "this":Lcom/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;, "Lcom/google/gson/internal/LinkedHashTreeMap<TK;TV;>.LinkedTreeMapIterator<TT;>;"
     iput-object p1, p0, Lcom/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;->this$0:Lcom/google/gson/internal/LinkedHashTreeMap;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 761
     iget-object v0, p0, Lcom/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;->this$0:Lcom/google/gson/internal/LinkedHashTreeMap;
 
     iget-object v0, v0, Lcom/google/gson/internal/LinkedHashTreeMap;->header:Lcom/google/gson/internal/LinkedHashTreeMap$Node;
@@ -72,12 +70,10 @@
 
     iput-object v0, p0, Lcom/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;->next:Lcom/google/gson/internal/LinkedHashTreeMap$Node;
 
-    .line 762
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;->lastReturned:Lcom/google/gson/internal/LinkedHashTreeMap$Node;
 
-    .line 763
     iget-object v0, p0, Lcom/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;->this$0:Lcom/google/gson/internal/LinkedHashTreeMap;
 
     iget v0, v0, Lcom/google/gson/internal/LinkedHashTreeMap;->modCount:I
@@ -93,7 +89,6 @@
     .param p2, "x1"    # Lcom/google/gson/internal/LinkedHashTreeMap$1;
 
     .prologue
-    .line 760
     .local p0, "this":Lcom/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;, "Lcom/google/gson/internal/LinkedHashTreeMap<TK;TV;>.LinkedTreeMapIterator<TT;>;"
     invoke-direct {p0, p1}, Lcom/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;-><init>(Lcom/google/gson/internal/LinkedHashTreeMap;)V
 
@@ -106,7 +101,6 @@
     .locals 2
 
     .prologue
-    .line 766
     .local p0, "this":Lcom/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;, "Lcom/google/gson/internal/LinkedHashTreeMap<TK;TV;>.LinkedTreeMapIterator<TT;>;"
     iget-object v0, p0, Lcom/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;->next:Lcom/google/gson/internal/LinkedHashTreeMap$Node;
 
@@ -138,11 +132,9 @@
     .end annotation
 
     .prologue
-    .line 770
     .local p0, "this":Lcom/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;, "Lcom/google/gson/internal/LinkedHashTreeMap<TK;TV;>.LinkedTreeMapIterator<TT;>;"
     iget-object v0, p0, Lcom/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;->next:Lcom/google/gson/internal/LinkedHashTreeMap$Node;
 
-    .line 771
     .local v0, "e":Lcom/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     iget-object v1, p0, Lcom/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;->this$0:Lcom/google/gson/internal/LinkedHashTreeMap;
 
@@ -150,14 +142,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 772
     new-instance v1, Ljava/util/NoSuchElementException;
 
     invoke-direct {v1}, Ljava/util/NoSuchElementException;-><init>()V
 
     throw v1
 
-    .line 774
     :cond_0
     iget-object v1, p0, Lcom/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;->this$0:Lcom/google/gson/internal/LinkedHashTreeMap;
 
@@ -167,20 +157,17 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 775
     new-instance v1, Ljava/util/ConcurrentModificationException;
 
     invoke-direct {v1}, Ljava/util/ConcurrentModificationException;-><init>()V
 
     throw v1
 
-    .line 777
     :cond_1
     iget-object v1, v0, Lcom/google/gson/internal/LinkedHashTreeMap$Node;->next:Lcom/google/gson/internal/LinkedHashTreeMap$Node;
 
     iput-object v1, p0, Lcom/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;->next:Lcom/google/gson/internal/LinkedHashTreeMap$Node;
 
-    .line 778
     iput-object v0, p0, Lcom/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;->lastReturned:Lcom/google/gson/internal/LinkedHashTreeMap$Node;
 
     return-object v0
@@ -190,20 +177,17 @@
     .locals 3
 
     .prologue
-    .line 782
     .local p0, "this":Lcom/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;, "Lcom/google/gson/internal/LinkedHashTreeMap<TK;TV;>.LinkedTreeMapIterator<TT;>;"
     iget-object v0, p0, Lcom/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;->lastReturned:Lcom/google/gson/internal/LinkedHashTreeMap$Node;
 
     if-nez v0, :cond_0
 
-    .line 783
     new-instance v0, Ljava/lang/IllegalStateException;
 
     invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
 
     throw v0
 
-    .line 785
     :cond_0
     iget-object v0, p0, Lcom/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;->this$0:Lcom/google/gson/internal/LinkedHashTreeMap;
 
@@ -213,18 +197,15 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/google/gson/internal/LinkedHashTreeMap;->removeInternal(Lcom/google/gson/internal/LinkedHashTreeMap$Node;Z)V
 
-    .line 786
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;->lastReturned:Lcom/google/gson/internal/LinkedHashTreeMap$Node;
 
-    .line 787
     iget-object v0, p0, Lcom/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;->this$0:Lcom/google/gson/internal/LinkedHashTreeMap;
 
     iget v0, v0, Lcom/google/gson/internal/LinkedHashTreeMap;->modCount:I
 
     iput v0, p0, Lcom/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;->expectedModCount:I
 
-    .line 788
     return-void
 .end method

@@ -43,25 +43,20 @@
     .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 20
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/letv/leui/app/FlingBackHelper;->mFlingBackMode:I
 
-    .line 25
     iput-object p1, p0, Lcom/letv/leui/app/FlingBackHelper;->mActivity:Landroid/app/Activity;
 
-    .line 26
     iget-object v1, p0, Lcom/letv/leui/app/FlingBackHelper;->mActivity:Landroid/app/Activity;
 
     invoke-static {v1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
 
     move-result-object v0
 
-    .line 27
     .local v0, "configuration":Landroid/view/ViewConfiguration;
     invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledPagingTouchSlop()I
 
@@ -69,7 +64,6 @@
 
     iput v1, p0, Lcom/letv/leui/app/FlingBackHelper;->mScaledPagingTouchSlop:I
 
-    .line 28
     return-void
 .end method
 
@@ -78,7 +72,6 @@
     .param p0, "x0"    # Lcom/letv/leui/app/FlingBackHelper;
 
     .prologue
-    .line 10
     iget v0, p0, Lcom/letv/leui/app/FlingBackHelper;->mScaledPagingTouchSlop:I
 
     return v0
@@ -89,7 +82,6 @@
     .param p0, "x0"    # Lcom/letv/leui/app/FlingBackHelper;
 
     .prologue
-    .line 10
     iget-object v0, p0, Lcom/letv/leui/app/FlingBackHelper;->mFlingBackGestureListener:Lcom/letv/leui/app/FlingBackHelper$OnFlingBackGestureListener;
 
     return-object v0
@@ -100,7 +92,6 @@
     .param p0, "x0"    # Lcom/letv/leui/app/FlingBackHelper;
 
     .prologue
-    .line 10
     iget-object v0, p0, Lcom/letv/leui/app/FlingBackHelper;->mActivity:Landroid/app/Activity;
 
     return-object v0
@@ -112,7 +103,6 @@
     .locals 1
 
     .prologue
-    .line 51
     iget v0, p0, Lcom/letv/leui/app/FlingBackHelper;->mFlingBackMode:I
 
     return v0
@@ -122,7 +112,6 @@
     .locals 1
 
     .prologue
-    .line 67
     iget v0, p0, Lcom/letv/leui/app/FlingBackHelper;->mFlingBackMode:I
 
     and-int/lit8 v0, v0, 0x8
@@ -144,7 +133,6 @@
     .locals 2
 
     .prologue
-    .line 71
     invoke-virtual {p0}, Lcom/letv/leui/app/FlingBackHelper;->isLeftFlingBackEnabled()Z
 
     move-result v0
@@ -174,7 +162,6 @@
     .locals 1
 
     .prologue
-    .line 55
     iget v0, p0, Lcom/letv/leui/app/FlingBackHelper;->mFlingBackMode:I
 
     and-int/lit8 v0, v0, 0x1
@@ -196,7 +183,6 @@
     .locals 1
 
     .prologue
-    .line 59
     iget v0, p0, Lcom/letv/leui/app/FlingBackHelper;->mFlingBackMode:I
 
     and-int/lit8 v0, v0, 0x2
@@ -218,7 +204,6 @@
     .locals 1
 
     .prologue
-    .line 63
     iget v0, p0, Lcom/letv/leui/app/FlingBackHelper;->mFlingBackMode:I
 
     and-int/lit8 v0, v0, 0x4
@@ -241,15 +226,12 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 78
     iget-object v0, p0, Lcom/letv/leui/app/FlingBackHelper;->mGestureDetector:Landroid/view/GestureDetector;
 
     if-nez v0, :cond_0
 
-    .line 79
     const/4 v0, 0x0
 
-    .line 81
     :goto_0
     return v0
 
@@ -270,36 +252,29 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 37
     iput p1, p0, Lcom/letv/leui/app/FlingBackHelper;->mFlingBackMode:I
 
-    .line 39
     iget v0, p0, Lcom/letv/leui/app/FlingBackHelper;->mFlingBackMode:I
 
     and-int/lit8 v0, v0, 0xf
 
     if-nez v0, :cond_1
 
-    .line 40
     iget-object v0, p0, Lcom/letv/leui/app/FlingBackHelper;->mGestureDetector:Landroid/view/GestureDetector;
 
     if-eqz v0, :cond_0
 
-    .line 41
     iput-object v3, p0, Lcom/letv/leui/app/FlingBackHelper;->mGestureDetector:Landroid/view/GestureDetector;
 
-    .line 48
     :cond_0
     :goto_0
     return-void
 
-    .line 44
     :cond_1
     iget-object v0, p0, Lcom/letv/leui/app/FlingBackHelper;->mGestureDetector:Landroid/view/GestureDetector;
 
     if-nez v0, :cond_0
 
-    .line 45
     new-instance v0, Landroid/view/GestureDetector;
 
     iget-object v1, p0, Lcom/letv/leui/app/FlingBackHelper;->mActivity:Landroid/app/Activity;
@@ -320,9 +295,7 @@
     .param p1, "l"    # Lcom/letv/leui/app/FlingBackHelper$OnFlingBackGestureListener;
 
     .prologue
-    .line 92
     iput-object p1, p0, Lcom/letv/leui/app/FlingBackHelper;->mFlingBackGestureListener:Lcom/letv/leui/app/FlingBackHelper$OnFlingBackGestureListener;
 
-    .line 93
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 176
     iput-object p1, p0, Lcom/letv/leui/widget/BallsLoadingProgressBar$5;->this$0:Lcom/letv/leui/widget/BallsLoadingProgressBar;
 
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/BallsLoadingProgressBar$EmptyAnimatorListener;-><init>(Lcom/letv/leui/widget/BallsLoadingProgressBar;)V
@@ -42,19 +41,16 @@
 
     const/high16 v4, 0x40000000    # 2.0f
 
-    .line 179
     iget-object v2, p0, Lcom/letv/leui/widget/BallsLoadingProgressBar$5;->this$0:Lcom/letv/leui/widget/BallsLoadingProgressBar;
 
     # setter for: Lcom/letv/leui/widget/BallsLoadingProgressBar;->mIsFinish:Z
     invoke-static {v2, v3}, Lcom/letv/leui/widget/BallsLoadingProgressBar;->access$502(Lcom/letv/leui/widget/BallsLoadingProgressBar;Z)Z
 
-    .line 180
     iget-object v2, p0, Lcom/letv/leui/widget/BallsLoadingProgressBar$5;->this$0:Lcom/letv/leui/widget/BallsLoadingProgressBar;
 
     # setter for: Lcom/letv/leui/widget/BallsLoadingProgressBar;->mIsAnimLoading:Z
     invoke-static {v2, v3}, Lcom/letv/leui/widget/BallsLoadingProgressBar;->access$102(Lcom/letv/leui/widget/BallsLoadingProgressBar;Z)Z
 
-    .line 181
     iget-object v2, p0, Lcom/letv/leui/widget/BallsLoadingProgressBar$5;->this$0:Lcom/letv/leui/widget/BallsLoadingProgressBar;
 
     const/4 v3, 0x1
@@ -62,7 +58,6 @@
     # setter for: Lcom/letv/leui/widget/BallsLoadingProgressBar;->mIsFirstRun:Z
     invoke-static {v2, v3}, Lcom/letv/leui/widget/BallsLoadingProgressBar;->access$702(Lcom/letv/leui/widget/BallsLoadingProgressBar;Z)Z
 
-    .line 182
     iget-object v2, p0, Lcom/letv/leui/widget/BallsLoadingProgressBar$5;->this$0:Lcom/letv/leui/widget/BallsLoadingProgressBar;
 
     # getter for: Lcom/letv/leui/widget/BallsLoadingProgressBar;->mBalls:Ljava/util/ArrayList;
@@ -88,7 +83,6 @@
 
     check-cast v0, Lcom/letv/leui/widget/BallsLoadingShapeHolder;
 
-    .line 183
     .local v0, "balls":Lcom/letv/leui/widget/BallsLoadingShapeHolder;
     iget-object v2, p0, Lcom/letv/leui/widget/BallsLoadingProgressBar$5;->this$0:Lcom/letv/leui/widget/BallsLoadingProgressBar;
 
@@ -99,7 +93,6 @@
 
     invoke-virtual {v0, v2}, Lcom/letv/leui/widget/BallsLoadingShapeHolder;->setWidth(F)V
 
-    .line 184
     iget-object v2, p0, Lcom/letv/leui/widget/BallsLoadingProgressBar$5;->this$0:Lcom/letv/leui/widget/BallsLoadingProgressBar;
 
     # getter for: Lcom/letv/leui/widget/BallsLoadingProgressBar;->mBallNormalRadius:F
@@ -109,7 +102,6 @@
 
     invoke-virtual {v0, v2}, Lcom/letv/leui/widget/BallsLoadingShapeHolder;->setHeight(F)V
 
-    .line 185
     invoke-virtual {v0}, Lcom/letv/leui/widget/BallsLoadingShapeHolder;->getX()F
 
     move-result v2
@@ -127,7 +119,6 @@
 
     invoke-virtual {v0, v2}, Lcom/letv/leui/widget/BallsLoadingShapeHolder;->setX(F)V
 
-    .line 186
     invoke-virtual {v0}, Lcom/letv/leui/widget/BallsLoadingShapeHolder;->getY()F
 
     move-result v2
@@ -147,7 +138,6 @@
 
     goto :goto_0
 
-    .line 188
     .end local v0    # "balls":Lcom/letv/leui/widget/BallsLoadingShapeHolder;
     :cond_0
     iget-object v2, p0, Lcom/letv/leui/widget/BallsLoadingProgressBar$5;->this$0:Lcom/letv/leui/widget/BallsLoadingProgressBar;
@@ -159,7 +149,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 189
     iget-object v2, p0, Lcom/letv/leui/widget/BallsLoadingProgressBar$5;->this$0:Lcom/letv/leui/widget/BallsLoadingProgressBar;
 
     # getter for: Lcom/letv/leui/widget/BallsLoadingProgressBar;->mProcessBarListener:Lcom/letv/leui/widget/BallsLoadingProgressBar$AnimProcessBarListener;
@@ -169,7 +158,6 @@
 
     invoke-interface {v2}, Lcom/letv/leui/widget/BallsLoadingProgressBar$AnimProcessBarListener;->onLoadFinished()V
 
-    .line 191
     :cond_1
     return-void
 .end method

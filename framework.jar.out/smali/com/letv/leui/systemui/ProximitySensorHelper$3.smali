@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 114
     iput-object p1, p0, Lcom/letv/leui/systemui/ProximitySensorHelper$3;->this$0:Lcom/letv/leui/systemui/ProximitySensorHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 3
 
     .prologue
-    .line 117
     # getter for: Lcom/letv/leui/systemui/ProximitySensorHelper;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/letv/leui/systemui/ProximitySensorHelper;->access$000()Ljava/lang/String;
 
@@ -73,11 +71,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 118
     iget-object v0, p0, Lcom/letv/leui/systemui/ProximitySensorHelper$3;->this$0:Lcom/letv/leui/systemui/ProximitySensorHelper;
 
     invoke-virtual {v0}, Lcom/letv/leui/systemui/ProximitySensorHelper;->stop()V
 
-    .line 119
     return-void
 .end method

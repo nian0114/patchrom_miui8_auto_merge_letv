@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 3593
     iput-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$21;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const-wide/16 v4, -0x3e8
 
-    .line 3596
     iget-object v6, p0, Lcom/android/server/net/NetworkPolicyManagerService$21;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     # getter for: Lcom/android/server/net/NetworkPolicyManagerService;->mTime:Landroid/util/TrustedTime;
@@ -51,7 +49,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 3597
     iget-object v6, p0, Lcom/android/server/net/NetworkPolicyManagerService$21;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     # getter for: Lcom/android/server/net/NetworkPolicyManagerService;->mTime:Landroid/util/TrustedTime;
@@ -61,7 +58,6 @@
 
     invoke-interface {v6}, Landroid/util/TrustedTime;->forceRefresh()Z
 
-    .line 3599
     :cond_0
     iget-object v6, p0, Lcom/android/server/net/NetworkPolicyManagerService$21;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -69,7 +65,6 @@
 
     monitor-enter v6
 
-    .line 3600
     :try_start_0
     const-string v7, "subId"
 
@@ -87,17 +82,14 @@
 
     move-result-wide v2
 
-    .line 3601
     .local v2, "subId":J
     :goto_0
     cmp-long v4, v2, v4
 
     if-nez v4, :cond_2
 
-    .line 3602
     monitor-exit v6
 
-    .line 3620
     :goto_1
     return-void
 
@@ -105,10 +97,8 @@
     :cond_1
     move-wide v2, v4
 
-    .line 3600
     goto :goto_0
 
-    .line 3606
     .restart local v2    # "subId":J
     :cond_2
     iget-object v4, p0, Lcom/android/server/net/NetworkPolicyManagerService$21;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
@@ -125,7 +115,6 @@
     :goto_2
     if-ltz v0, :cond_5
 
-    .line 3607
     iget-object v4, p0, Lcom/android/server/net/NetworkPolicyManagerService$21;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object v4, v4, Lcom/android/server/net/NetworkPolicyManagerService;->mNetworkPolicy:Landroid/util/ArrayMap;
@@ -136,7 +125,6 @@
 
     check-cast v1, Landroid/net/NetworkPolicy;
 
-    .line 3609
     .local v1, "policy":Landroid/net/NetworkPolicy;
     iget-object v4, p0, Lcom/android/server/net/NetworkPolicyManagerService$21;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -155,38 +143,32 @@
 
     if-nez v4, :cond_4
 
-    .line 3606
     :cond_3
     :goto_3
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_2
 
-    .line 3613
     :cond_4
     iget-object v4, p0, Lcom/android/server/net/NetworkPolicyManagerService$21;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     # invokes: Lcom/android/server/net/NetworkPolicyManagerService;->resetBytesLocked(JLandroid/net/NetworkPolicy;)V
     invoke-static {v4, v2, v3, v1}, Lcom/android/server/net/NetworkPolicyManagerService;->access$2200(Lcom/android/server/net/NetworkPolicyManagerService;JLandroid/net/NetworkPolicy;)V
 
-    .line 3614
     iget-object v4, p0, Lcom/android/server/net/NetworkPolicyManagerService$21;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-virtual {v4}, Lcom/android/server/net/NetworkPolicyManagerService;->updateNetworkEnabledLocked()V
 
-    .line 3615
     iget-object v4, p0, Lcom/android/server/net/NetworkPolicyManagerService$21;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-virtual {v4}, Lcom/android/server/net/NetworkPolicyManagerService;->updateNetworkRulesLocked()V
 
-    .line 3616
     iget-object v4, p0, Lcom/android/server/net/NetworkPolicyManagerService$21;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-virtual {v4}, Lcom/android/server/net/NetworkPolicyManagerService;->updateNotificationsLocked()V
 
     goto :goto_3
 
-    .line 3618
     .end local v0    # "i":I
     .end local v1    # "policy":Landroid/net/NetworkPolicy;
     .end local v2    # "subId":J
@@ -207,7 +189,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 3619
     iget-object v4, p0, Lcom/android/server/net/NetworkPolicyManagerService$21;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object v4, v4, Lcom/android/server/net/NetworkPolicyManagerService;->mHandler:Landroid/os/Handler;

@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 8384
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$SettingsObserverForLongPressKey;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
-    .line 8385
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 8386
     return-void
 .end method
 
@@ -44,7 +41,6 @@
 
     const/4 v2, -0x1
 
-    .line 8391
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager$SettingsObserverForLongPressKey;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v1, v1, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
@@ -53,7 +49,6 @@
 
     move-result-object v0
 
-    .line 8392
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v1, "leui_long_press_back_behaviour_settings"
 
@@ -63,7 +58,6 @@
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 8395
     const-string v1, "leui_long_press_home_behaviour_settings"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -72,7 +66,6 @@
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 8398
     const-string v1, "leui_long_press_recent_behaviour_settings"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -81,7 +74,6 @@
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 8402
     const-string v1, "device_provisioned"
 
     invoke-static {v1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -90,13 +82,11 @@
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 8406
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager$SettingsObserverForLongPressKey;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     # invokes: Lcom/android/server/policy/PhoneWindowManager;->initForbidVirtualKeyEnableSetting()V
     invoke-static {v1}, Lcom/android/server/policy/PhoneWindowManager;->access$2700(Lcom/android/server/policy/PhoneWindowManager;)V
 
-    .line 8407
     const-string v1, "leui_forbid_virtual_key_settings"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -105,12 +95,10 @@
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 8412
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager$SettingsObserverForLongPressKey;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {v1}, Lcom/android/server/policy/PhoneWindowManager;->updateLongPressKeySettings()V
 
-    .line 8413
     return-void
 .end method
 
@@ -119,11 +107,9 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 8416
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$SettingsObserverForLongPressKey;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/server/policy/PhoneWindowManager;->updateLongPressKeySettings()V
 
-    .line 8417
     return-void
 .end method

@@ -37,7 +37,6 @@
     .locals 2
 
     .prologue
-    .line 451
     sget-object v0, Lcom/letv/leui/provider/BrowserContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "history"
@@ -55,7 +54,6 @@
     .locals 0
 
     .prologue
-    .line 446
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

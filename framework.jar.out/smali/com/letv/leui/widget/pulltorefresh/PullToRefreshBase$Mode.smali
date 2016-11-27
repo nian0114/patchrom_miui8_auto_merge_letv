@@ -56,7 +56,6 @@
 
     const/4 v2, 0x0
 
-    .line 1358
     new-instance v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
 
     const-string v1, "DISABLED"
@@ -65,7 +64,6 @@
 
     sput-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;->DISABLED:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
 
-    .line 1365
     new-instance v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
 
     const-string v1, "PULL_FROM_START"
@@ -74,7 +72,6 @@
 
     sput-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;->PULL_FROM_START:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
 
-    .line 1372
     new-instance v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
 
     const-string v1, "PULL_FROM_END"
@@ -83,7 +80,6 @@
 
     sput-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;->PULL_FROM_END:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
 
-    .line 1377
     new-instance v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
 
     const-string v1, "BOTH"
@@ -92,7 +88,6 @@
 
     sput-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;->BOTH:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
 
-    .line 1384
     new-instance v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
 
     const-string v1, "MANUAL_REFRESH_ONLY"
@@ -101,7 +96,6 @@
 
     sput-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;->MANUAL_REFRESH_ONLY:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
 
-    .line 1353
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
@@ -141,13 +135,10 @@
     .end annotation
 
     .prologue
-    .line 1412
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 1413
     iput p3, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;->mIntValue:I
 
-    .line 1414
     return-void
 .end method
 
@@ -155,7 +146,6 @@
     .locals 1
 
     .prologue
-    .line 1406
     sget-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;->PULL_FROM_START:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
 
     return-object v0
@@ -166,7 +156,6 @@
     .param p0, "modeInt"    # I
 
     .prologue
-    .line 1395
     invoke-static {}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;->values()[Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
 
     move-result-object v0
@@ -183,7 +172,6 @@
 
     aget-object v3, v0, v1
 
-    .line 1396
     .local v3, "value":Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
     invoke-virtual {v3}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;->getIntValue()I
 
@@ -191,19 +179,16 @@
 
     if-ne p0, v4, :cond_0
 
-    .line 1402
     .end local v3    # "value":Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
     :goto_1
     return-object v3
 
-    .line 1395
     .restart local v3    # "value":Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1402
     .end local v3    # "value":Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
     :cond_1
     invoke-static {}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;->getDefault()Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
@@ -218,7 +203,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 1353
     const-class v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -234,7 +218,6 @@
     .locals 1
 
     .prologue
-    .line 1353
     sget-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;->$VALUES:[Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
 
     invoke-virtual {v0}, [Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;->clone()Ljava/lang/Object;
@@ -252,7 +235,6 @@
     .locals 1
 
     .prologue
-    .line 1438
     iget v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;->mIntValue:I
 
     return v0
@@ -262,7 +244,6 @@
     .locals 1
 
     .prologue
-    .line 1420
     sget-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;->DISABLED:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
 
     if-eq p0, v0, :cond_0
@@ -286,7 +267,6 @@
     .locals 1
 
     .prologue
-    .line 1434
     sget-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;->PULL_FROM_END:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
 
     if-eq p0, v0, :cond_0
@@ -315,7 +295,6 @@
     .locals 1
 
     .prologue
-    .line 1427
     sget-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;->PULL_FROM_START:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
 
     if-eq p0, v0, :cond_0

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 188
     iput-object p1, p0, Lcom/letv/leui/widget/slide/LeSlide$4;->val$panel:Lcom/letv/leui/widget/slide/LeSlideLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 219
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlide$4;->val$panel:Lcom/letv/leui/widget/slide/LeSlideLayout;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/slide/LeSlideLayout;->isSliding()Z
@@ -54,12 +52,10 @@
     .locals 1
 
     .prologue
-    .line 191
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlide$4;->val$panel:Lcom/letv/leui/widget/slide/LeSlideLayout;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/slide/LeSlideLayout;->lock()V
 
-    .line 192
     return-void
 .end method
 
@@ -67,12 +63,10 @@
     .locals 1
 
     .prologue
-    .line 201
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlide$4;->val$panel:Lcom/letv/leui/widget/slide/LeSlideLayout;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/slide/LeSlideLayout;->onBackPressed()V
 
-    .line 202
     return-void
 .end method
 
@@ -81,15 +75,12 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 206
     if-eqz p1, :cond_0
 
-    .line 207
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlide$4;->val$panel:Lcom/letv/leui/widget/slide/LeSlideLayout;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/slide/LeSlideLayout;->setInitializeState()V
 
-    .line 209
     :cond_0
     return-void
 .end method
@@ -99,12 +90,10 @@
     .param p1, "b"    # Z
 
     .prologue
-    .line 214
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlide$4;->val$panel:Lcom/letv/leui/widget/slide/LeSlideLayout;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/slide/LeSlideLayout;->setEnableSlideToOpen(Z)V
 
-    .line 215
     return-void
 .end method
 
@@ -112,11 +101,9 @@
     .locals 1
 
     .prologue
-    .line 196
     iget-object v0, p0, Lcom/letv/leui/widget/slide/LeSlide$4;->val$panel:Lcom/letv/leui/widget/slide/LeSlideLayout;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/slide/LeSlideLayout;->unlock()V
 
-    .line 197
     return-void
 .end method

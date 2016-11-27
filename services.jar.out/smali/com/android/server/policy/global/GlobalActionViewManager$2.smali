@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 262
     iput-object p1, p0, Lcom/android/server/policy/global/GlobalActionViewManager$2;->this$0:Lcom/android/server/policy/global/GlobalActionViewManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,13 +40,11 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 276
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionViewManager$2;->this$0:Lcom/android/server/policy/global/GlobalActionViewManager;
 
     # invokes: Lcom/android/server/policy/global/GlobalActionViewManager;->hideLocked()V
     invoke-static {v0}, Lcom/android/server/policy/global/GlobalActionViewManager;->access$000(Lcom/android/server/policy/global/GlobalActionViewManager;)V
 
-    .line 277
     return-void
 .end method
 
@@ -56,13 +53,11 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 271
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionViewManager$2;->this$0:Lcom/android/server/policy/global/GlobalActionViewManager;
 
     # invokes: Lcom/android/server/policy/global/GlobalActionViewManager;->hideLocked()V
     invoke-static {v0}, Lcom/android/server/policy/global/GlobalActionViewManager;->access$000(Lcom/android/server/policy/global/GlobalActionViewManager;)V
 
-    .line 272
     return-void
 .end method
 
@@ -71,7 +66,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 281
     return-void
 .end method
 
@@ -80,6 +74,5 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 267
     return-void
 .end method

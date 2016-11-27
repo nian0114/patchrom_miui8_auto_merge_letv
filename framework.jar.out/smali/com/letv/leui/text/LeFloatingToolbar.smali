@@ -52,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 62
     new-instance v0, Lcom/letv/leui/text/LeFloatingToolbar$1;
 
     invoke-direct {v0}, Lcom/letv/leui/text/LeFloatingToolbar$1;-><init>()V
@@ -68,57 +67,46 @@
     .param p2, "window"    # Landroid/view/Window;
 
     .prologue
-    .line 99
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 73
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mContentRect:Landroid/graphics/Rect;
 
-    .line 74
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mPreviousContentRect:Landroid/graphics/Rect;
 
-    .line 77
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mShowingMenuItems:Ljava/util/List;
 
-    .line 78
     sget-object v0, Lcom/letv/leui/text/LeFloatingToolbar;->NO_OP_MENUITEM_CLICK_LISTENER:Landroid/view/MenuItem$OnMenuItemClickListener;
 
     iput-object v0, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mMenuItemClickListener:Landroid/view/MenuItem$OnMenuItemClickListener;
 
-    .line 81
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mWidthChanged:Z
 
-    .line 83
     new-instance v0, Lcom/letv/leui/text/LeFloatingToolbar$2;
 
     invoke-direct {v0, p0}, Lcom/letv/leui/text/LeFloatingToolbar$2;-><init>(Lcom/letv/leui/text/LeFloatingToolbar;)V
 
     iput-object v0, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mOrientationChangeHandler:Landroid/content/ComponentCallbacks;
 
-    .line 100
     invoke-static {p1}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 101
     invoke-static {p2}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 102
     iput-object p1, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mContext:Landroid/content/Context;
 
-    .line 103
     new-instance v0, Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup;
 
     iget-object v1, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mContext:Landroid/content/Context;
@@ -131,7 +119,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mPopup:Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup;
 
-    .line 104
     return-void
 .end method
 
@@ -140,7 +127,6 @@
     .param p0, "x0"    # Lcom/letv/leui/text/LeFloatingToolbar;
 
     .prologue
-    .line 60
     iget-object v0, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mPopup:Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup;
 
     return-object v0
@@ -152,7 +138,6 @@
     .param p1, "x1"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 60
     invoke-static {p0, p1}, Lcom/letv/leui/text/LeFloatingToolbar;->createMenuItemButton(Landroid/content/Context;Landroid/view/MenuItem;)Landroid/view/View;
 
     move-result-object v0
@@ -165,7 +150,6 @@
     .param p0, "x0"    # Landroid/content/Context;
 
     .prologue
-    .line 60
     invoke-static {p0}, Lcom/letv/leui/text/LeFloatingToolbar;->createMenuDivider(Landroid/content/Context;)Landroid/view/View;
 
     move-result-object v0
@@ -179,7 +163,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 60
     iput-boolean p1, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mWidthChanged:Z
 
     return p1
@@ -190,7 +173,6 @@
     .param p0, "x0"    # Landroid/view/View;
 
     .prologue
-    .line 60
     invoke-static {p0}, Lcom/letv/leui/text/LeFloatingToolbar;->createArrowEnterAnimation(Landroid/view/View;)Landroid/animation/AnimatorSet;
 
     move-result-object v0
@@ -205,7 +187,6 @@
     .param p2, "x2"    # Landroid/animation/Animator$AnimatorListener;
 
     .prologue
-    .line 60
     invoke-static {p0, p1, p2}, Lcom/letv/leui/text/LeFloatingToolbar;->createArrowExitAnimation(Landroid/view/View;ILandroid/animation/Animator$AnimatorListener;)Landroid/animation/AnimatorSet;
 
     move-result-object v0
@@ -218,7 +199,6 @@
     .param p0, "x0"    # Landroid/view/View;
 
     .prologue
-    .line 60
     invoke-static {p0}, Lcom/letv/leui/text/LeFloatingToolbar;->createEnterAnimation(Landroid/view/View;)Landroid/animation/AnimatorSet;
 
     move-result-object v0
@@ -231,12 +211,10 @@
     .param p0, "view"    # Landroid/view/View;
 
     .prologue
-    .line 789
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
-    .line 790
     .local v0, "animation":Landroid/animation/AnimatorSet;
     const/4 v1, 0x1
 
@@ -266,10 +244,8 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 792
     return-object v0
 
-    .line 790
     nop
 
     :array_0
@@ -286,12 +262,10 @@
     .param p2, "listener"    # Landroid/animation/Animator$AnimatorListener;
 
     .prologue
-    .line 797
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
-    .line 798
     .local v0, "animation":Landroid/animation/AnimatorSet;
     const/4 v1, 0x1
 
@@ -321,18 +295,14 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 800
     int-to-long v2, p1
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/AnimatorSet;->setStartDelay(J)V
 
-    .line 801
     invoke-virtual {v0, p2}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 802
     return-object v0
 
-    .line 798
     :array_0
     .array-data 4
         0x3f800000    # 1.0f
@@ -349,18 +319,15 @@
 
     const/4 v8, 0x2
 
-    .line 772
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
-    .line 773
     .local v0, "animation":Landroid/animation/AnimatorSet;
     invoke-static {}, Lcom/letv/leui/animation/LeBounceInterpolator;->getDefaultInterpolator()Landroid/view/animation/Interpolator;
 
     move-result-object v2
 
-    .line 774
     .local v2, "it":Landroid/view/animation/Interpolator;
     sget-object v5, Landroid/view/View;->SCALE_X:Landroid/util/Property;
 
@@ -376,11 +343,9 @@
 
     move-result-object v3
 
-    .line 775
     .local v3, "scaleXAnimator":Landroid/animation/Animator;
     invoke-virtual {v3, v2}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 776
     sget-object v5, Landroid/view/View;->SCALE_Y:Landroid/util/Property;
 
     new-array v6, v8, [F
@@ -395,11 +360,9 @@
 
     move-result-object v4
 
-    .line 777
     .local v4, "scaleYAnimator":Landroid/animation/Animator;
     invoke-virtual {v4, v2}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 778
     sget-object v5, Landroid/view/View;->ALPHA:Landroid/util/Property;
 
     new-array v6, v8, [F
@@ -416,7 +379,6 @@
 
     move-result-object v1
 
-    .line 779
     .local v1, "fadeAnimator":Landroid/animation/Animator;
     new-instance v5, Landroid/view/animation/AccelerateDecelerateInterpolator;
 
@@ -424,7 +386,6 @@
 
     invoke-virtual {v1, v5}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 780
     const/4 v5, 0x3
 
     new-array v5, v5, [Landroid/animation/Animator;
@@ -441,24 +402,20 @@
 
     invoke-virtual {v0, v5}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 785
     return-object v0
 
-    .line 774
     :array_0
     .array-data 4
         0x3f6b851f    # 0.92f
         0x3f800000    # 1.0f
     .end array-data
 
-    .line 776
     :array_1
     .array-data 4
         0x3f6b851f    # 0.92f
         0x3f800000    # 1.0f
     .end array-data
 
-    .line 778
     :array_2
     .array-data 4
         0x3e4ccccd    # 0.2f
@@ -471,12 +428,10 @@
     .param p0, "c"    # Landroid/content/Context;
 
     .prologue
-    .line 767
     new-instance v0, Landroid/view/View;
 
     invoke-direct {v0, p0}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 768
     .local v0, "view":Landroid/view/View;
     return-object v0
 .end method
@@ -491,7 +446,6 @@
 
     const/high16 v6, 0x41600000    # 14.0f
 
-    .line 752
     invoke-static {p0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v3
@@ -506,7 +460,6 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 754
     .local v0, "menuItemButton":Landroid/widget/TextView;
     invoke-interface {p1}, Landroid/view/MenuItem;->getTitle()Ljava/lang/CharSequence;
 
@@ -514,7 +467,6 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 755
     const/4 v3, 0x1
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -531,32 +483,26 @@
 
     float-to-int v1, v3
 
-    .line 756
     .local v1, "paddingLeft":I
     move v2, v1
 
-    .line 757
     .local v2, "paddingRight":I
     const/4 v3, 0x2
 
     invoke-virtual {v0, v3, v6}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 758
     const/high16 v3, -0x1000000
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 759
     invoke-virtual {v0, v1, v7, v2, v7}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 760
     invoke-interface {p1}, Landroid/view/MenuItem;->getTitle()Ljava/lang/CharSequence;
 
     move-result-object v3
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 763
     return-object v0
 .end method
 
@@ -577,13 +523,11 @@
     .end annotation
 
     .prologue
-    .line 248
     .local p1, "menuItems":Ljava/util/List;, "Ljava/util/List<Landroid/view/MenuItem;>;"
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 249
     .local v2, "references":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Object;>;"
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -603,7 +547,6 @@
 
     check-cast v1, Landroid/view/MenuItem;
 
-    .line 250
     .local v1, "menuItem":Landroid/view/MenuItem;
     invoke-interface {v1}, Landroid/view/MenuItem;->getTitle()Ljava/lang/CharSequence;
 
@@ -613,7 +556,6 @@
 
     goto :goto_0
 
-    .line 252
     .end local v1    # "menuItem":Landroid/view/MenuItem;
     :cond_0
     return-object v2
@@ -635,12 +577,10 @@
     .end annotation
 
     .prologue
-    .line 232
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 233
     .local v2, "menuItems":Ljava/util/List;, "Ljava/util/List<Landroid/view/MenuItem;>;"
     const/4 v0, 0x0
 
@@ -654,12 +594,10 @@
 
     if-ge v0, v4, :cond_2
 
-    .line 234
     invoke-interface {p1, v0}, Landroid/view/Menu;->getItem(I)Landroid/view/MenuItem;
 
     move-result-object v1
 
-    .line 235
     .local v1, "menuItem":Landroid/view/MenuItem;
     invoke-interface {v1}, Landroid/view/MenuItem;->isVisible()Z
 
@@ -673,23 +611,19 @@
 
     if-eqz v4, :cond_0
 
-    .line 236
     invoke-interface {v1}, Landroid/view/MenuItem;->getSubMenu()Landroid/view/SubMenu;
 
     move-result-object v3
 
-    .line 237
     .local v3, "subMenu":Landroid/view/Menu;
     if-eqz v3, :cond_1
 
-    .line 238
     invoke-direct {p0, v3}, Lcom/letv/leui/text/LeFloatingToolbar;->getVisibleAndEnabledMenuItems(Landroid/view/Menu;)Ljava/util/List;
 
     move-result-object v4
 
     invoke-interface {v2, v4}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 233
     .end local v3    # "subMenu":Landroid/view/Menu;
     :cond_0
     :goto_1
@@ -697,14 +631,12 @@
 
     goto :goto_0
 
-    .line 240
     .restart local v3    # "subMenu":Landroid/view/Menu;
     :cond_1
     invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 244
     .end local v1    # "menuItem":Landroid/view/MenuItem;
     .end local v3    # "subMenu":Landroid/view/Menu;
     :cond_2
@@ -724,7 +656,6 @@
     .end annotation
 
     .prologue
-    .line 224
     .local p1, "menuItems":Ljava/util/List;, "Ljava/util/List<Landroid/view/MenuItem;>;"
     iget-object v0, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mShowingMenuItems:Ljava/util/List;
 
@@ -745,19 +676,16 @@
     .locals 2
 
     .prologue
-    .line 194
     iget-object v0, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mOrientationChangeHandler:Landroid/content/ComponentCallbacks;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterComponentCallbacks(Landroid/content/ComponentCallbacks;)V
 
-    .line 195
     iget-object v0, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mPopup:Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup;
 
     invoke-virtual {v0}, Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup;->dismiss()V
 
-    .line 196
     return-void
 .end method
 
@@ -765,12 +693,10 @@
     .locals 1
 
     .prologue
-    .line 203
     iget-object v0, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mPopup:Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup;
 
     invoke-virtual {v0}, Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup;->hide()V
 
-    .line 204
     return-void
 .end method
 
@@ -778,7 +704,6 @@
     .locals 1
 
     .prologue
-    .line 217
     iget-object v0, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mPopup:Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup;
 
     invoke-virtual {v0}, Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup;->isHidden()Z
@@ -792,7 +717,6 @@
     .locals 1
 
     .prologue
-    .line 210
     iget-object v0, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mPopup:Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup;
 
     invoke-virtual {v0}, Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup;->isShowing()Z
@@ -807,7 +731,6 @@
     .param p1, "rect"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 136
     iget-object v1, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mContentRect:Landroid/graphics/Rect;
 
     invoke-static {p1}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -818,7 +741,6 @@
 
     invoke-virtual {v1, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 137
     return-object p0
 .end method
 
@@ -827,7 +749,6 @@
     .param p1, "menu"    # Landroid/view/Menu;
 
     .prologue
-    .line 112
     invoke-static {p1}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -836,7 +757,6 @@
 
     iput-object v0, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mMenu:Landroid/view/Menu;
 
-    .line 113
     return-object p0
 .end method
 
@@ -845,17 +765,13 @@
     .param p1, "menuItemClickListener"    # Landroid/view/MenuItem$OnMenuItemClickListener;
 
     .prologue
-    .line 121
     if-eqz p1, :cond_0
 
-    .line 122
     iput-object p1, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mMenuItemClickListener:Landroid/view/MenuItem$OnMenuItemClickListener;
 
-    .line 126
     :goto_0
     return-object p0
 
-    .line 124
     :cond_0
     sget-object v0, Lcom/letv/leui/text/LeFloatingToolbar;->NO_OP_MENUITEM_CLICK_LISTENER:Landroid/view/MenuItem$OnMenuItemClickListener;
 
@@ -869,7 +785,6 @@
     .param p1, "suggestedWidth"    # I
 
     .prologue
-    .line 149
     iget v1, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mSuggestedWidth:I
 
     sub-int v1, p1, v1
@@ -878,7 +793,6 @@
 
     move-result v0
 
-    .line 150
     .local v0, "difference":I
     int-to-double v2, v0
 
@@ -899,13 +813,10 @@
     :goto_0
     iput-boolean v1, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mWidthChanged:Z
 
-    .line 152
     iput p1, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mSuggestedWidth:I
 
-    .line 153
     return-object p0
 
-    .line 150
     :cond_0
     const/4 v1, 0x0
 
@@ -916,28 +827,24 @@
     .locals 4
 
     .prologue
-    .line 160
     iget-object v1, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mOrientationChangeHandler:Landroid/content/ComponentCallbacks;
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->unregisterComponentCallbacks(Landroid/content/ComponentCallbacks;)V
 
-    .line 161
     iget-object v1, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mOrientationChangeHandler:Landroid/content/ComponentCallbacks;
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->registerComponentCallbacks(Landroid/content/ComponentCallbacks;)V
 
-    .line 162
     iget-object v1, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mMenu:Landroid/view/Menu;
 
     invoke-direct {p0, v1}, Lcom/letv/leui/text/LeFloatingToolbar;->getVisibleAndEnabledMenuItems(Landroid/view/Menu;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 163
     .local v0, "menuItems":Ljava/util/List;, "Ljava/util/List<Landroid/view/MenuItem;>;"
     invoke-direct {p0, v0}, Lcom/letv/leui/text/LeFloatingToolbar;->isCurrentlyShowing(Ljava/util/List;)Z
 
@@ -949,13 +856,11 @@
 
     if-eqz v1, :cond_1
 
-    .line 164
     :cond_0
     iget-object v1, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mPopup:Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup;
 
     invoke-virtual {v1}, Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup;->dismiss()V
 
-    .line 165
     iget-object v1, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mPopup:Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup;
 
     iget-object v2, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mMenuItemClickListener:Landroid/view/MenuItem$OnMenuItemClickListener;
@@ -964,14 +869,12 @@
 
     invoke-virtual {v1, v0, v2, v3}, Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup;->layoutMenuItems(Ljava/util/List;Landroid/view/MenuItem$OnMenuItemClickListener;I)V
 
-    .line 166
     invoke-direct {p0, v0}, Lcom/letv/leui/text/LeFloatingToolbar;->getShowingMenuItemsReferences(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mShowingMenuItems:Ljava/util/List;
 
-    .line 168
     :cond_1
     iget-object v1, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mPopup:Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup;
 
@@ -981,31 +884,26 @@
 
     if-nez v1, :cond_3
 
-    .line 169
     iget-object v1, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mPopup:Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup;
 
     iget-object v2, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mContentRect:Landroid/graphics/Rect;
 
     invoke-virtual {v1, v2}, Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup;->show(Landroid/graphics/Rect;)V
 
-    .line 173
     :cond_2
     :goto_0
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mWidthChanged:Z
 
-    .line 174
     iget-object v1, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mPreviousContentRect:Landroid/graphics/Rect;
 
     iget-object v2, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mContentRect:Landroid/graphics/Rect;
 
     invoke-virtual {v1, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 175
     return-object p0
 
-    .line 170
     :cond_3
     iget-object v1, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mPreviousContentRect:Landroid/graphics/Rect;
 
@@ -1017,7 +915,6 @@
 
     if-nez v1, :cond_2
 
-    .line 171
     iget-object v1, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mPopup:Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup;
 
     iget-object v2, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mContentRect:Landroid/graphics/Rect;
@@ -1031,7 +928,6 @@
     .locals 1
 
     .prologue
-    .line 183
     iget-object v0, p0, Lcom/letv/leui/text/LeFloatingToolbar;->mPopup:Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup;
 
     invoke-virtual {v0}, Lcom/letv/leui/text/LeFloatingToolbar$FloatingToolbarPopup;->isShowing()Z
@@ -1040,10 +936,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 185
     invoke-virtual {p0}, Lcom/letv/leui/text/LeFloatingToolbar;->show()Lcom/letv/leui/text/LeFloatingToolbar;
 
-    .line 187
     :cond_0
     return-object p0
 .end method

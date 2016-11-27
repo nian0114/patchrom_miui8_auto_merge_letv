@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2261
     iput-object p1, p0, Landroid/media/AudioManager$1;->this$0:Landroid/media/AudioManager;
 
     invoke-direct {p0}, Landroid/media/IAudioFocusDispatcher$Stub;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "id"    # Ljava/lang/String;
 
     .prologue
-    .line 2264
     iget-object v2, p0, Landroid/media/AudioManager$1;->this$0:Landroid/media/AudioManager;
 
     # getter for: Landroid/media/AudioManager;->mAudioFocusEventHandlerDelegate:Landroid/media/AudioManager$FocusEventHandlerDelegate;
@@ -55,7 +53,6 @@
 
     move-result-object v1
 
-    .line 2265
     .local v1, "m":Landroid/os/Message;
     iget-object v2, p0, Landroid/media/AudioManager$1;->this$0:Landroid/media/AudioManager;
 
@@ -70,21 +67,18 @@
 
     invoke-virtual {v2, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 2268
     new-instance v0, Landroid/content/Intent;
 
     const-string v2, "DS_AUDIO_FOCUS_CHANGE_ACTION"
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 2269
     .local v0, "intent":Landroid/content/Intent;
     const-string v2, "com.dolby"
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2270
-    const-string/jumbo v2, "packageName"
+    const-string v2, "packageName"
 
     iget-object v3, p0, Landroid/media/AudioManager$1;->this$0:Landroid/media/AudioManager;
 
@@ -99,23 +93,19 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2271
     packed-switch p1, :pswitch_data_0
 
-    .line 2288
     :goto_0
     :pswitch_0
     return-void
 
-    .line 2275
     :pswitch_1
     const-string v2, "focusChange"
 
-    const-string/jumbo v3, "loss"
+    const-string v3, "loss"
 
     invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2276
     iget-object v2, p0, Landroid/media/AudioManager$1;->this$0:Landroid/media/AudioManager;
 
     # invokes: Landroid/media/AudioManager;->getContext()Landroid/content/Context;
@@ -127,7 +117,6 @@
 
     goto :goto_0
 
-    .line 2281
     :pswitch_2
     const-string v2, "focusChange"
 
@@ -135,7 +124,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2282
     iget-object v2, p0, Landroid/media/AudioManager$1;->this$0:Landroid/media/AudioManager;
 
     # invokes: Landroid/media/AudioManager;->getContext()Landroid/content/Context;
@@ -147,7 +135,6 @@
 
     goto :goto_0
 
-    .line 2271
     :pswitch_data_0
     .packed-switch -0x3
         :pswitch_1

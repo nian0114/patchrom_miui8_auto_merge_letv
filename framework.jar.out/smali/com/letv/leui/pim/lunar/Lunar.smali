@@ -38,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 27
     const/16 v0, 0x96
 
     new-array v0, v0, [J
@@ -208,22 +207,18 @@
     .locals 5
 
     .prologue
-    .line 114
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
     const/4 v3, 0x0
 
     iput-object v3, p0, Lcom/letv/leui/pim/lunar/Lunar;->mDaseDate:Ljava/util/Date;
 
-    .line 115
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v3
 
     iput-object v3, p0, Lcom/letv/leui/pim/lunar/Lunar;->mRes:Landroid/content/res/Resources;
 
-    .line 116
     iget-object v3, p0, Lcom/letv/leui/pim/lunar/Lunar;->mRes:Landroid/content/res/Resources;
 
     const v4, 0x1070070
@@ -234,7 +229,6 @@
 
     iput-object v3, p0, Lcom/letv/leui/pim/lunar/Lunar;->mChineseNumber:[Ljava/lang/String;
 
-    .line 117
     iget-object v3, p0, Lcom/letv/leui/pim/lunar/Lunar;->mRes:Landroid/content/res/Resources;
 
     const v4, 0x1070075
@@ -245,7 +239,6 @@
 
     iput-object v3, p0, Lcom/letv/leui/pim/lunar/Lunar;->mLunarMonthName:[Ljava/lang/String;
 
-    .line 118
     iget-object v3, p0, Lcom/letv/leui/pim/lunar/Lunar;->mRes:Landroid/content/res/Resources;
 
     const v4, 0x10405e0
@@ -254,7 +247,6 @@
 
     move-result-object v1
 
-    .line 119
     .local v1, "format1":Ljava/lang/String;
     new-instance v3, Ljava/text/SimpleDateFormat;
 
@@ -262,7 +254,6 @@
 
     iput-object v3, p0, Lcom/letv/leui/pim/lunar/Lunar;->mChineseDateFormat:Ljava/text/SimpleDateFormat;
 
-    .line 121
     :try_start_0
     iget-object v3, p0, Lcom/letv/leui/pim/lunar/Lunar;->mRes:Landroid/content/res/Resources;
 
@@ -272,7 +263,6 @@
 
     move-result-object v2
 
-    .line 122
     .local v2, "format2":Ljava/lang/String;
     iget-object v3, p0, Lcom/letv/leui/pim/lunar/Lunar;->mChineseDateFormat:Ljava/text/SimpleDateFormat;
 
@@ -284,16 +274,13 @@
     :try_end_0
     .catch Ljava/text/ParseException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 126
     .end local v2    # "format2":Ljava/lang/String;
     :goto_0
     return-void
 
-    .line 123
     :catch_0
     move-exception v0
 
-    .line 124
     .local v0, "e":Ljava/text/ParseException;
     invoke-virtual {v0}, Ljava/text/ParseException;->printStackTrace()V
 
@@ -305,7 +292,6 @@
     .param p1, "num"    # I
 
     .prologue
-    .line 104
     iget-object v2, p0, Lcom/letv/leui/pim/lunar/Lunar;->mRes:Landroid/content/res/Resources;
 
     const v3, 0x107006e
@@ -314,7 +300,6 @@
 
     move-result-object v0
 
-    .line 105
     .local v0, "Gan":[Ljava/lang/String;
     iget-object v2, p0, Lcom/letv/leui/pim/lunar/Lunar;->mRes:Landroid/content/res/Resources;
 
@@ -324,7 +309,6 @@
 
     move-result-object v1
 
-    .line 106
     .local v1, "Zhi":[Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -357,19 +341,16 @@
     .locals 1
 
     .prologue
-    .line 129
     sget-object v0, Lcom/letv/leui/pim/lunar/Lunar;->sLunar:Lcom/letv/leui/pim/lunar/Lunar;
 
     if-nez v0, :cond_0
 
-    .line 130
     new-instance v0, Lcom/letv/leui/pim/lunar/Lunar;
 
     invoke-direct {v0}, Lcom/letv/leui/pim/lunar/Lunar;-><init>()V
 
     sput-object v0, Lcom/letv/leui/pim/lunar/Lunar;->sLunar:Lcom/letv/leui/pim/lunar/Lunar;
 
-    .line 132
     :cond_0
     sget-object v0, Lcom/letv/leui/pim/lunar/Lunar;->sLunar:Lcom/letv/leui/pim/lunar/Lunar;
 
@@ -381,10 +362,8 @@
     .param p1, "y"    # I
 
     .prologue
-    .line 43
     const/16 v1, 0x15c
 
-    .line 44
     .local v1, "sum":I
     const v0, 0x8000
 
@@ -394,7 +373,6 @@
 
     if-le v0, v2, :cond_1
 
-    .line 45
     sget-object v2, Lcom/letv/leui/pim/lunar/Lunar;->sLunarInfo:[J
 
     add-int/lit16 v3, p1, -0x76c
@@ -411,16 +389,13 @@
 
     if-eqz v2, :cond_0
 
-    .line 46
     add-int/lit8 v1, v1, 0x1
 
-    .line 44
     :cond_0
     shr-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 48
     :cond_1
     invoke-virtual {p0, p1}, Lcom/letv/leui/pim/lunar/Lunar;->leapDays(I)I
 
@@ -437,7 +412,6 @@
     .locals 3
 
     .prologue
-    .line 99
     iget-object v1, p0, Lcom/letv/leui/pim/lunar/Lunar;->mRes:Landroid/content/res/Resources;
 
     const v2, 0x107006d
@@ -446,7 +420,6 @@
 
     move-result-object v0
 
-    .line 100
     .local v0, "Animals":[Ljava/lang/String;
     iget v1, p0, Lcom/letv/leui/pim/lunar/Lunar;->mYear:I
 
@@ -463,14 +436,12 @@
     .locals 2
 
     .prologue
-    .line 110
     iget v1, p0, Lcom/letv/leui/pim/lunar/Lunar;->mYear:I
 
     add-int/lit16 v1, v1, -0x76c
 
     add-int/lit8 v0, v1, 0x24
 
-    .line 111
     .local v0, "num":I
     invoke-direct {p0, v0}, Lcom/letv/leui/pim/lunar/Lunar;->cyclicalm(I)Ljava/lang/String;
 
@@ -488,7 +459,6 @@
 
     const/16 v4, 0xa
 
-    .line 192
     iget-object v2, p0, Lcom/letv/leui/pim/lunar/Lunar;->mRes:Landroid/content/res/Resources;
 
     const v3, 0x1070071
@@ -497,7 +467,6 @@
 
     move-result-object v0
 
-    .line 193
     .local v0, "chineseTen":[Ljava/lang/String;
     rem-int/lit8 v2, p1, 0xa
 
@@ -505,19 +474,15 @@
 
     const/16 v1, 0x9
 
-    .line 194
     .local v1, "n":I
     :goto_0
     if-le p1, v5, :cond_1
 
-    .line 195
     const-string v2, ""
 
-    .line 209
     :goto_1
     return-object v2
 
-    .line 193
     .end local v1    # "n":I
     :cond_0
     rem-int/lit8 v2, p1, 0xa
@@ -526,12 +491,10 @@
 
     goto :goto_0
 
-    .line 196
     .restart local v1    # "n":I
     :cond_1
     if-ne p1, v4, :cond_2
 
-    .line 197
     iget-object v2, p0, Lcom/letv/leui/pim/lunar/Lunar;->mRes:Landroid/content/res/Resources;
 
     const v3, 0x10405e6
@@ -542,13 +505,11 @@
 
     goto :goto_1
 
-    .line 198
     :cond_2
     const/16 v2, 0x14
 
     if-ne p1, v2, :cond_3
 
-    .line 199
     iget-object v2, p0, Lcom/letv/leui/pim/lunar/Lunar;->mRes:Landroid/content/res/Resources;
 
     const v3, 0x10405e7
@@ -559,11 +520,9 @@
 
     goto :goto_1
 
-    .line 200
     :cond_3
     if-ne p1, v5, :cond_4
 
-    .line 201
     iget-object v2, p0, Lcom/letv/leui/pim/lunar/Lunar;->mRes:Landroid/content/res/Resources;
 
     const v3, 0x10405e8
@@ -574,24 +533,19 @@
 
     goto :goto_1
 
-    .line 203
     :cond_4
     if-gez p1, :cond_5
 
-    .line 204
     const/4 p1, 0x0
 
-    .line 206
     :cond_5
     if-ltz v1, :cond_6
 
     if-le v1, v4, :cond_7
 
-    .line 207
     :cond_6
     const/4 v1, 0x0
 
-    .line 209
     :cond_7
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -624,7 +578,6 @@
     .locals 1
 
     .prologue
-    .line 255
     iget v0, p0, Lcom/letv/leui/pim/lunar/Lunar;->mDay:I
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/pim/lunar/Lunar;->getChinaDayString(I)Ljava/lang/String;
@@ -640,7 +593,6 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 238
     iget-object v2, p0, Lcom/letv/leui/pim/lunar/Lunar;->mRes:Landroid/content/res/Resources;
 
     const v3, 0x10405e2
@@ -649,7 +601,6 @@
 
     move-result-object v1
 
-    .line 239
     .local v1, "run1":Ljava/lang/String;
     iget-object v2, p0, Lcom/letv/leui/pim/lunar/Lunar;->mRes:Landroid/content/res/Resources;
 
@@ -659,7 +610,6 @@
 
     move-result-object v0
 
-    .line 240
     .local v0, "month1":Ljava/lang/String;
     iget v2, p0, Lcom/letv/leui/pim/lunar/Lunar;->mMonth:I
 
@@ -671,11 +621,9 @@
 
     if-le v2, v3, :cond_1
 
-    .line 241
     :cond_0
     iput v4, p0, Lcom/letv/leui/pim/lunar/Lunar;->mMonth:I
 
-    .line 243
     :cond_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -724,7 +672,6 @@
     .locals 3
 
     .prologue
-    .line 225
     iget-object v1, p0, Lcom/letv/leui/pim/lunar/Lunar;->mRes:Landroid/content/res/Resources;
 
     const v2, 0x10405e3
@@ -733,7 +680,6 @@
 
     move-result-object v0
 
-    .line 226
     .local v0, "year1":Ljava/lang/String;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -764,7 +710,6 @@
     .locals 1
 
     .prologue
-    .line 259
     iget v0, p0, Lcom/letv/leui/pim/lunar/Lunar;->mDay:I
 
     return v0
@@ -774,7 +719,6 @@
     .locals 1
 
     .prologue
-    .line 247
     iget-boolean v0, p0, Lcom/letv/leui/pim/lunar/Lunar;->mLeap:Z
 
     return v0
@@ -784,7 +728,6 @@
     .locals 1
 
     .prologue
-    .line 234
     iget v0, p0, Lcom/letv/leui/pim/lunar/Lunar;->mLeapMonth:I
 
     return v0
@@ -794,7 +737,6 @@
     .locals 1
 
     .prologue
-    .line 251
     iget v0, p0, Lcom/letv/leui/pim/lunar/Lunar;->mMonth:I
 
     return v0
@@ -804,7 +746,6 @@
     .locals 1
 
     .prologue
-    .line 230
     iget v0, p0, Lcom/letv/leui/pim/lunar/Lunar;->mYear:I
 
     return v0
@@ -815,7 +756,6 @@
     .param p1, "lunarFestivalStr"    # Ljava/lang/String;
 
     .prologue
-    .line 263
     iget v0, p0, Lcom/letv/leui/pim/lunar/Lunar;->mYear:I
 
     iget v1, p0, Lcom/letv/leui/pim/lunar/Lunar;->mMonth:I
@@ -828,10 +768,8 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 264
     const/4 v0, 0x1
 
-    .line 266
     :goto_0
     return v0
 
@@ -846,14 +784,12 @@
     .param p1, "y"    # I
 
     .prologue
-    .line 62
     invoke-virtual {p0, p1}, Lcom/letv/leui/pim/lunar/Lunar;->leapMonth(I)I
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 63
     sget-object v0, Lcom/letv/leui/pim/lunar/Lunar;->sLunarInfo:[J
 
     add-int/lit16 v1, p1, -0x76c
@@ -870,20 +806,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 64
     const/16 v0, 0x1e
 
-    .line 68
     :goto_0
     return v0
 
-    .line 66
     :cond_0
     const/16 v0, 0x1d
 
     goto :goto_0
 
-    .line 68
     :cond_1
     const/4 v0, 0x0
 
@@ -897,7 +829,6 @@
     .prologue
     const-wide/16 v2, 0xf
 
-    .line 76
     const/16 v0, 0x76c
 
     if-lt p1, v0, :cond_0
@@ -906,7 +837,6 @@
 
     if-gt p1, v0, :cond_0
 
-    .line 77
     sget-object v0, Lcom/letv/leui/pim/lunar/Lunar;->sLunarInfo:[J
 
     add-int/lit16 v1, p1, -0x76c
@@ -917,7 +847,6 @@
 
     long-to-int v0, v0
 
-    .line 79
     :goto_0
     return v0
 
@@ -941,7 +870,6 @@
     .param p2, "m"    # I
 
     .prologue
-    .line 92
     sget-object v0, Lcom/letv/leui/pim/lunar/Lunar;->sLunarInfo:[J
 
     add-int/lit16 v1, p1, -0x76c
@@ -962,10 +890,8 @@
 
     if-nez v0, :cond_0
 
-    .line 93
     const/16 v0, 0x1d
 
-    .line 95
     :goto_0
     return v0
 
@@ -980,14 +906,11 @@
     .param p1, "cal"    # Ljava/util/Calendar;
 
     .prologue
-    .line 137
     const/4 v5, 0x0
 
-    .line 138
     .local v5, "leapMonth":I
     iput-object p1, p0, Lcom/letv/leui/pim/lunar/Lunar;->mCalendar:Ljava/util/Calendar;
 
-    .line 139
     invoke-virtual {p1}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
 
     move-result-object v9
@@ -1010,19 +933,15 @@
 
     long-to-int v7, v10
 
-    .line 140
     .local v7, "offset":I
     add-int/lit8 v0, v7, 0x28
 
-    .line 141
     .local v0, "dayCyl":I
     const/16 v6, 0xe
 
-    .line 142
     .local v6, "monCyl":I
     const/4 v2, 0x0
 
-    .line 144
     .local v2, "daysOfYear":I
     const/16 v4, 0x76c
 
@@ -1034,60 +953,45 @@
 
     if-lez v7, :cond_0
 
-    .line 145
     invoke-direct {p0, v4}, Lcom/letv/leui/pim/lunar/Lunar;->yearDays(I)I
 
     move-result v2
 
-    .line 146
     sub-int/2addr v7, v2
 
-    .line 147
     add-int/lit8 v6, v6, 0xc
 
-    .line 144
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 149
     :cond_0
     if-gez v7, :cond_1
 
-    .line 150
     add-int/2addr v7, v2
 
-    .line 151
     add-int/lit8 v4, v4, -0x1
 
-    .line 152
     add-int/lit8 v6, v6, -0xc
 
-    .line 154
     :cond_1
     iput v4, p0, Lcom/letv/leui/pim/lunar/Lunar;->mYear:I
 
-    .line 155
     add-int/lit16 v8, v4, -0x748
 
-    .line 156
     .local v8, "yearCyl":I
     invoke-virtual {p0, v4}, Lcom/letv/leui/pim/lunar/Lunar;->leapMonth(I)I
 
     move-result v5
 
-    .line 157
     iput v5, p0, Lcom/letv/leui/pim/lunar/Lunar;->mLeapMonth:I
 
-    .line 158
     const/4 v9, 0x0
 
     iput-boolean v9, p0, Lcom/letv/leui/pim/lunar/Lunar;->mLeap:Z
 
-    .line 159
     const/4 v1, 0x0
 
-    .line 160
     .local v1, "daysOfMonth":I
     const/4 v3, 0x1
 
@@ -1099,7 +1003,6 @@
 
     if-lez v7, :cond_5
 
-    .line 161
     if-lez v5, :cond_4
 
     add-int/lit8 v9, v5, 0x1
@@ -1110,26 +1013,21 @@
 
     if-nez v9, :cond_4
 
-    .line 162
     add-int/lit8 v3, v3, -0x1
 
-    .line 163
     const/4 v9, 0x1
 
     iput-boolean v9, p0, Lcom/letv/leui/pim/lunar/Lunar;->mLeap:Z
 
-    .line 164
     iget v9, p0, Lcom/letv/leui/pim/lunar/Lunar;->mYear:I
 
     invoke-virtual {p0, v9}, Lcom/letv/leui/pim/lunar/Lunar;->leapDays(I)I
 
     move-result v1
 
-    .line 167
     :goto_2
     sub-int/2addr v7, v1
 
-    .line 168
     iget-boolean v9, p0, Lcom/letv/leui/pim/lunar/Lunar;->mLeap:Z
 
     if-eqz v9, :cond_2
@@ -1138,27 +1036,22 @@
 
     if-ne v3, v9, :cond_2
 
-    .line 169
     const/4 v9, 0x0
 
     iput-boolean v9, p0, Lcom/letv/leui/pim/lunar/Lunar;->mLeap:Z
 
-    .line 170
     :cond_2
     iget-boolean v9, p0, Lcom/letv/leui/pim/lunar/Lunar;->mLeap:Z
 
     if-nez v9, :cond_3
 
-    .line 171
     add-int/lit8 v6, v6, 0x1
 
-    .line 160
     :cond_3
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 166
     :cond_4
     iget v9, p0, Lcom/letv/leui/pim/lunar/Lunar;->mYear:I
 
@@ -1168,7 +1061,6 @@
 
     goto :goto_2
 
-    .line 173
     :cond_5
     if-nez v7, :cond_6
 
@@ -1178,52 +1070,40 @@
 
     if-ne v3, v9, :cond_6
 
-    .line 174
     iget-boolean v9, p0, Lcom/letv/leui/pim/lunar/Lunar;->mLeap:Z
 
     if-eqz v9, :cond_8
 
-    .line 175
     const/4 v9, 0x0
 
     iput-boolean v9, p0, Lcom/letv/leui/pim/lunar/Lunar;->mLeap:Z
 
-    .line 182
     :cond_6
     :goto_3
     if-gez v7, :cond_7
 
-    .line 183
     add-int/2addr v7, v1
 
-    .line 184
     add-int/lit8 v3, v3, -0x1
 
-    .line 185
     add-int/lit8 v6, v6, -0x1
 
-    .line 187
     :cond_7
     iput v3, p0, Lcom/letv/leui/pim/lunar/Lunar;->mMonth:I
 
-    .line 188
     add-int/lit8 v9, v7, 0x1
 
     iput v9, p0, Lcom/letv/leui/pim/lunar/Lunar;->mDay:I
 
-    .line 189
     return-void
 
-    .line 177
     :cond_8
     const/4 v9, 0x1
 
     iput-boolean v9, p0, Lcom/letv/leui/pim/lunar/Lunar;->mLeap:Z
 
-    .line 178
     add-int/lit8 v3, v3, -0x1
 
-    .line 179
     add-int/lit8 v6, v6, -0x1
 
     goto :goto_3
@@ -1235,7 +1115,6 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 214
     iget-object v3, p0, Lcom/letv/leui/pim/lunar/Lunar;->mRes:Landroid/content/res/Resources;
 
     const v4, 0x10405e3
@@ -1244,7 +1123,6 @@
 
     move-result-object v2
 
-    .line 215
     .local v2, "year1":Ljava/lang/String;
     iget-object v3, p0, Lcom/letv/leui/pim/lunar/Lunar;->mRes:Landroid/content/res/Resources;
 
@@ -1254,7 +1132,6 @@
 
     move-result-object v1
 
-    .line 216
     .local v1, "run1":Ljava/lang/String;
     iget-object v3, p0, Lcom/letv/leui/pim/lunar/Lunar;->mRes:Landroid/content/res/Resources;
 
@@ -1264,7 +1141,6 @@
 
     move-result-object v0
 
-    .line 217
     .local v0, "month1":Ljava/lang/String;
     iget v3, p0, Lcom/letv/leui/pim/lunar/Lunar;->mMonth:I
 
@@ -1276,11 +1152,9 @@
 
     if-le v3, v4, :cond_1
 
-    .line 218
     :cond_0
     iput v5, p0, Lcom/letv/leui/pim/lunar/Lunar;->mMonth:I
 
-    .line 220
     :cond_1
     new-instance v3, Ljava/lang/StringBuilder;
 

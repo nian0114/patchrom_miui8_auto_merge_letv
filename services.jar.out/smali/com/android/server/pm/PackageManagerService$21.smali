@@ -26,7 +26,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 15972
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$21;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput-object p3, p0, Lcom/android/server/pm/PackageManagerService$21;->val$systemConfig:Lcom/android/server/SystemConfig;
@@ -43,10 +42,8 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 15975
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 15976
     const-string v0, "SystemConfig"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -69,7 +66,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 15978
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$21;->val$systemConfig:Lcom/android/server/SystemConfig;
 
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$21;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -78,7 +74,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/SystemConfig;->writeCurrentFeatureFileToDataSystem(Ljava/io/File;)Z
 
-    .line 15979
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$21;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$21;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -94,7 +89,6 @@
 
     iput-object v1, v0, Lcom/android/server/pm/PackageManagerService;->mLastFeatureFile:Ljava/io/File;
 
-    .line 15980
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$21;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$21;->val$systemConfig:Lcom/android/server/SystemConfig;
@@ -114,6 +108,5 @@
     # invokes: Lcom/android/server/pm/PackageManagerService;->setDisableComponents(Landroid/util/ArraySet;)V
     invoke-static {v0, v1}, Lcom/android/server/pm/PackageManagerService;->access$6000(Lcom/android/server/pm/PackageManagerService;Landroid/util/ArraySet;)V
 
-    .line 15982
     return-void
 .end method

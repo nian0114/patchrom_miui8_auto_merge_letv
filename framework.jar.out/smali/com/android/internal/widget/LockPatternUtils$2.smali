@@ -28,19 +28,15 @@
     .locals 1
 
     .prologue
-    .line 1471
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1473
     const-string v0, "access.control."
 
     invoke-virtual {p0, v0}, Lcom/android/internal/widget/LockPatternUtils$2;->add(Ljava/lang/Object;)Z
 
-    .line 1474
     const-string v0, "file.protected."
 
     invoke-virtual {p0, v0}, Lcom/android/internal/widget/LockPatternUtils$2;->add(Ljava/lang/Object;)Z
 
-    .line 1475
     return-void
 .end method

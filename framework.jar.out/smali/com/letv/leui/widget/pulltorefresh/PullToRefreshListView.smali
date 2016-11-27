@@ -38,10 +38,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 46
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewBase;-><init>(Landroid/content/Context;)V
 
-    .line 47
     return-void
 .end method
 
@@ -51,10 +49,8 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 50
     invoke-direct {p0, p1, p2}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewBase;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 51
     return-void
 .end method
 
@@ -64,10 +60,8 @@
     .param p2, "mode"    # Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
 
     .prologue
-    .line 54
     invoke-direct {p0, p1, p2}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewBase;-><init>(Landroid/content/Context;Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;)V
 
-    .line 55
     return-void
 .end method
 
@@ -78,10 +72,8 @@
     .param p3, "style"    # Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$AnimationStyle;
 
     .prologue
-    .line 58
     invoke-direct {p0, p1, p2, p3}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewBase;-><init>(Landroid/content/Context;Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$AnimationStyle;)V
 
-    .line 59
     return-void
 .end method
 
@@ -90,7 +82,6 @@
     .param p0, "x0"    # Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;
 
     .prologue
-    .line 36
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->mLvFooterLoadingFrame:Landroid/widget/FrameLayout;
 
     return-object v0
@@ -104,24 +95,20 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 208
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x9
 
     if-lt v1, v2, :cond_0
 
-    .line 209
     new-instance v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView$InternalListViewSDK9;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView$InternalListViewSDK9;-><init>(Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 213
     .local v0, "lv":Landroid/widget/ListView;
     :goto_0
     return-object v0
 
-    .line 211
     .end local v0    # "lv":Landroid/widget/ListView;
     :cond_0
     new-instance v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView$InternalListView;
@@ -138,23 +125,19 @@
     .param p2, "includeEnd"    # Z
 
     .prologue
-    .line 190
     invoke-super {p0, p1, p2}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewBase;->createLoadingLayoutProxy(ZZ)Lcom/letv/leui/widget/pulltorefresh/LoadingLayoutProxy;
 
     move-result-object v1
 
-    .line 192
     .local v1, "proxy":Lcom/letv/leui/widget/pulltorefresh/LoadingLayoutProxy;
     iget-boolean v2, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->mListViewExtrasEnabled:Z
 
     if-eqz v2, :cond_1
 
-    .line 193
     invoke-virtual {p0}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->getMode()Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
 
     move-result-object v0
 
-    .line 195
     .local v0, "mode":Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
     if-eqz p1, :cond_0
 
@@ -164,12 +147,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 196
     iget-object v2, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->mHeaderLoadingView:Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
 
     invoke-virtual {v1, v2}, Lcom/letv/leui/widget/pulltorefresh/LoadingLayoutProxy;->addLayout(Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;)V
 
-    .line 198
     :cond_0
     if-eqz p2, :cond_1
 
@@ -179,12 +160,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 199
     iget-object v2, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->mFooterLoadingView:Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
 
     invoke-virtual {v1, v2}, Lcom/letv/leui/widget/pulltorefresh/LoadingLayoutProxy;->addLayout(Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;)V
 
-    .line 203
     .end local v0    # "mode":Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
     :cond_1
     return-object v1
@@ -194,7 +173,6 @@
     .locals 1
 
     .prologue
-    .line 36
     invoke-virtual {p0, p1, p2}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->createRefreshableView(Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/widget/ListView;
 
     move-result-object v0
@@ -210,34 +188,28 @@
     .prologue
     const v5, 0x102000a
 
-    .line 218
     iget v3, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->mRefreshableViewLayout:I
 
     const/4 v4, -0x1
 
     if-ne v3, v4, :cond_0
 
-    .line 219
     invoke-virtual {p0, p1, p2}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->createListView(Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/widget/ListView;
 
     move-result-object v1
 
-    .line 221
     .local v1, "lv":Landroid/widget/ListView;
     invoke-virtual {v1, v5}, Landroid/widget/ListView;->setId(I)V
 
-    .line 228
     .end local v1    # "lv":Landroid/widget/ListView;
     :goto_0
     return-object v1
 
-    .line 224
     :cond_0
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    .line 225
     .local v0, "inflater":Landroid/view/LayoutInflater;
     iget v3, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->mRefreshableViewLayout:I
 
@@ -249,16 +221,13 @@
 
     check-cast v2, Landroid/view/ViewGroup;
 
-    .line 226
     .local v2, "view":Landroid/view/View;
     instance-of v3, v2, Landroid/widget/ListView;
 
     if-eqz v3, :cond_1
 
-    .line 227
     invoke-virtual {v2, v5}, Landroid/view/View;->setId(I)V
 
-    .line 228
     check-cast v2, Landroid/widget/ListView;
 
     .end local v2    # "view":Landroid/view/View;
@@ -266,7 +235,6 @@
 
     goto :goto_0
 
-    .line 230
     .restart local v2    # "view":Landroid/view/View;
     :cond_1
     new-instance v3, Ljava/lang/UnsupportedOperationException;
@@ -282,7 +250,6 @@
     .locals 1
 
     .prologue
-    .line 63
     sget-object v0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Orientation;->VERTICAL:Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Orientation;
 
     return-object v0
@@ -293,10 +260,8 @@
     .param p1, "a"    # Landroid/content/res/TypedArray;
 
     .prologue
-    .line 238
     invoke-super {p0, p1}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewBase;->handleStyledAttributes(Landroid/content/res/TypedArray;)V
 
-    .line 266
     return-void
 .end method
 
@@ -307,7 +272,6 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 72
     iget-object v6, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->mRefreshableView:Landroid/view/View;
 
     check-cast v6, Landroid/widget/ListView;
@@ -316,7 +280,6 @@
 
     move-result-object v0
 
-    .line 73
     .local v0, "adapter":Landroid/widget/ListAdapter;
     iget-boolean v6, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->mListViewExtrasEnabled:Z
 
@@ -336,20 +299,16 @@
 
     if-eqz v6, :cond_2
 
-    .line 74
     :cond_0
     invoke-super {p0, p1}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewBase;->onRefreshing(Z)V
 
-    .line 128
     :cond_1
     :goto_0
     return-void
 
-    .line 78
     :cond_2
     invoke-super {p0, v8}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewBase;->onRefreshing(Z)V
 
-    .line 83
     sget-object v6, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView$1;->$SwitchMap$com$letv$leui$widget$pulltorefresh$PullToRefreshBase$Mode:[I
 
     invoke-virtual {p0}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->getCurrentMode()Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$Mode;
@@ -364,24 +323,19 @@
 
     packed-switch v6, :pswitch_data_0
 
-    .line 94
     invoke-virtual {p0}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->getHeaderLayout()Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
 
     move-result-object v3
 
-    .line 95
     .local v3, "origLoadingView":Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
     iget-object v1, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->mHeaderLoadingView:Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
 
-    .line 96
     .local v1, "listViewLoadingView":Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
     iget-object v2, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->mFooterLoadingView:Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
 
-    .line 97
     .local v2, "oppositeListViewLoadingView":Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
     const/4 v5, 0x0
 
-    .line 98
     .local v5, "selection":I
     invoke-virtual {p0}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->getScrollY()I
 
@@ -393,47 +347,36 @@
 
     add-int v4, v6, v7
 
-    .line 103
     .local v4, "scrollToY":I
     :goto_1
     invoke-virtual {v3}, Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;->reset()V
 
-    .line 104
     invoke-virtual {v3}, Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;->hideAllViews()V
 
-    .line 107
     const/16 v6, 0x8
 
     invoke-virtual {v2, v6}, Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;->setVisibility(I)V
 
-    .line 110
     invoke-virtual {v1, v8}, Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;->setVisibility(I)V
 
-    .line 111
     invoke-virtual {v1}, Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;->refreshing()V
 
-    .line 113
     if-eqz p1, :cond_1
 
-    .line 115
     invoke-virtual {p0}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->disableLoadingLayoutVisibilityChanges()V
 
-    .line 119
     invoke-virtual {p0, v4}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->setHeaderScroll(I)V
 
-    .line 123
     iget-object v6, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->mRefreshableView:Landroid/view/View;
 
     check-cast v6, Landroid/widget/ListView;
 
     invoke-virtual {v6, v5}, Landroid/widget/ListView;->setSelection(I)V
 
-    .line 126
     invoke-virtual {p0, v8}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->smoothScrollTo(I)V
 
     goto :goto_0
 
-    .line 86
     .end local v1    # "listViewLoadingView":Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
     .end local v2    # "oppositeListViewLoadingView":Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
     .end local v3    # "origLoadingView":Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
@@ -444,15 +387,12 @@
 
     move-result-object v3
 
-    .line 87
     .restart local v3    # "origLoadingView":Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
     iget-object v1, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->mFooterLoadingView:Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
 
-    .line 88
     .restart local v1    # "listViewLoadingView":Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
     iget-object v2, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->mHeaderLoadingView:Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
 
-    .line 89
     .restart local v2    # "oppositeListViewLoadingView":Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
     iget-object v6, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->mRefreshableView:Landroid/view/View;
 
@@ -464,7 +404,6 @@
 
     add-int/lit8 v5, v6, -0x1
 
-    .line 90
     .restart local v5    # "selection":I
     invoke-virtual {p0}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->getScrollY()I
 
@@ -476,11 +415,9 @@
 
     sub-int v4, v6, v7
 
-    .line 91
     .restart local v4    # "scrollToY":I
     goto :goto_1
 
-    .line 83
     nop
 
     :pswitch_data_0
@@ -498,19 +435,15 @@
 
     const/4 v2, 0x1
 
-    .line 135
     iget-boolean v5, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->mListViewExtrasEnabled:Z
 
     if-nez v5, :cond_0
 
-    .line 136
     invoke-super {p0}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewBase;->onReset()V
 
-    .line 186
     :goto_0
     return-void
 
-    .line 144
     :cond_0
     sget-object v5, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView$1;->$SwitchMap$com$letv$leui$widget$pulltorefresh$PullToRefreshBase$Mode:[I
 
@@ -526,16 +459,13 @@
 
     packed-switch v5, :pswitch_data_0
 
-    .line 155
     invoke-virtual {p0}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->getHeaderLayout()Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
 
     move-result-object v1
 
-    .line 156
     .local v1, "originalLoadingLayout":Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->mHeaderLoadingView:Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
 
-    .line 157
     .local v0, "listViewLoadingLayout":Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
     invoke-virtual {p0}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->getHeaderSize()I
 
@@ -543,11 +473,9 @@
 
     neg-int v3, v5
 
-    .line 158
     .local v3, "scrollToHeight":I
     const/4 v4, 0x0
 
-    .line 159
     .local v4, "selection":I
     iget-object v5, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->mRefreshableView:Landroid/view/View;
 
@@ -565,7 +493,6 @@
 
     if-gt v5, v2, :cond_3
 
-    .line 165
     .local v2, "scrollLvToEdge":Z
     :goto_1
     invoke-virtual {v0}, Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;->getVisibility()I
@@ -574,15 +501,12 @@
 
     if-nez v5, :cond_1
 
-    .line 168
     invoke-virtual {v1}, Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;->showInvisibleViews()V
 
-    .line 171
     const/16 v5, 0x8
 
     invoke-virtual {v0, v5}, Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;->setVisibility(I)V
 
-    .line 178
     if-eqz v2, :cond_1
 
     invoke-virtual {p0}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->getState()Lcom/letv/leui/widget/pulltorefresh/PullToRefreshBase$State;
@@ -593,23 +517,19 @@
 
     if-eq v5, v6, :cond_1
 
-    .line 179
     iget-object v5, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->mRefreshableView:Landroid/view/View;
 
     check-cast v5, Landroid/widget/ListView;
 
     invoke-virtual {v5, v4}, Landroid/widget/ListView;->setSelection(I)V
 
-    .line 180
     invoke-virtual {p0, v3}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->setHeaderScroll(I)V
 
-    .line 185
     :cond_1
     invoke-super {p0}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshAdapterViewBase;->onReset()V
 
     goto :goto_0
 
-    .line 147
     .end local v0    # "listViewLoadingLayout":Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
     .end local v1    # "originalLoadingLayout":Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
     .end local v2    # "scrollLvToEdge":Z
@@ -620,11 +540,9 @@
 
     move-result-object v1
 
-    .line 148
     .restart local v1    # "originalLoadingLayout":Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
     iget-object v0, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->mFooterLoadingView:Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
 
-    .line 149
     .restart local v0    # "listViewLoadingLayout":Lcom/letv/leui/widget/pulltorefresh/internal/LoadingLayout;
     iget-object v5, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->mRefreshableView:Landroid/view/View;
 
@@ -636,13 +554,11 @@
 
     add-int/lit8 v4, v5, -0x1
 
-    .line 150
     .restart local v4    # "selection":I
     invoke-virtual {p0}, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->getFooterSize()I
 
     move-result v3
 
-    .line 151
     .restart local v3    # "scrollToHeight":I
     iget-object v5, p0, Lcom/letv/leui/widget/pulltorefresh/PullToRefreshListView;->mRefreshableView:Landroid/view/View;
 
@@ -660,7 +576,6 @@
 
     if-gt v5, v2, :cond_2
 
-    .line 152
     .restart local v2    # "scrollLvToEdge":Z
     :goto_2
     goto :goto_1
@@ -669,16 +584,13 @@
     :cond_2
     move v2, v6
 
-    .line 151
     goto :goto_2
 
     :cond_3
     move v2, v6
 
-    .line 159
     goto :goto_1
 
-    .line 144
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

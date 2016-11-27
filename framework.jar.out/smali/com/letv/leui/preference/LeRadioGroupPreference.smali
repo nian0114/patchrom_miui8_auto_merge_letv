@@ -24,10 +24,8 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 21
     invoke-direct {p0, p1, p2}, Landroid/preference/PreferenceCategory;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 22
     return-void
 .end method
 
@@ -38,10 +36,8 @@
     .param p3, "defStyle"    # I
 
     .prologue
-    .line 17
     invoke-direct {p0, p1, p2, p3}, Landroid/preference/PreferenceCategory;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 18
     return-void
 .end method
 
@@ -51,7 +47,6 @@
     .param p1, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 11
     invoke-virtual {p0, p1}, Lcom/letv/leui/preference/LeRadioGroupPreference;->callChangeListener(Ljava/lang/Object;)Z
 
     move-result v0
@@ -66,7 +61,6 @@
     .param p2, "x2"    # Ljava/lang/String;
 
     .prologue
-    .line 11
     invoke-direct {p0, p1, p2}, Lcom/letv/leui/preference/LeRadioGroupPreference;->updateRadioChangeUI(ZLjava/lang/String;)V
 
     return-void
@@ -78,7 +72,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 11
     iput-object p1, p0, Lcom/letv/leui/preference/LeRadioGroupPreference;->checkedKey:Ljava/lang/String;
 
     return-object p1
@@ -90,7 +83,6 @@
     .param p2, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 81
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -101,14 +93,12 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 82
     invoke-virtual {p0, v0}, Lcom/letv/leui/preference/LeRadioGroupPreference;->getPreference(I)Landroid/preference/Preference;
 
     move-result-object v1
 
     check-cast v1, Lcom/letv/leui/preference/LeRadioPreference;
 
-    .line 83
     .local v1, "radioPreference":Lcom/letv/leui/preference/LeRadioPreference;
     invoke-virtual {v1}, Lcom/letv/leui/preference/LeRadioPreference;->getKey()Ljava/lang/String;
 
@@ -120,12 +110,10 @@
 
     invoke-virtual {v1, v2}, Lcom/letv/leui/preference/LeRadioPreference;->setChecked(Z)V
 
-    .line 81
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 85
     .end local v1    # "radioPreference":Lcom/letv/leui/preference/LeRadioPreference;
     :cond_0
     invoke-virtual {p0}, Lcom/letv/leui/preference/LeRadioGroupPreference;->shouldPersist()Z
@@ -134,10 +122,8 @@
 
     if-eqz v2, :cond_1
 
-    .line 86
     invoke-virtual {p0, p2}, Lcom/letv/leui/preference/LeRadioGroupPreference;->persistString(Ljava/lang/String;)Z
 
-    .line 88
     :cond_1
     return-void
 .end method
@@ -148,7 +134,6 @@
     .locals 1
 
     .prologue
-    .line 43
     iget-object v0, p0, Lcom/letv/leui/preference/LeRadioGroupPreference;->checkedKey:Ljava/lang/String;
 
     return-object v0
@@ -160,14 +145,12 @@
     .param p2, "index"    # I
 
     .prologue
-    .line 26
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/letv/leui/preference/LeRadioGroupPreference;->mDefault:Ljava/lang/String;
 
-    .line 27
     iget-object v0, p0, Lcom/letv/leui/preference/LeRadioGroupPreference;->mDefault:Ljava/lang/String;
 
     return-object v0
@@ -178,7 +161,6 @@
     .param p1, "preference"    # Landroid/preference/Preference;
 
     .prologue
-    .line 54
     invoke-virtual {p1}, Landroid/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object v0
@@ -189,7 +171,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 55
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "LeRadioPreference must have key"
@@ -198,7 +179,6 @@
 
     throw v0
 
-    .line 58
     :cond_0
     instance-of v0, p1, Lcom/letv/leui/preference/LeRadioPreference;
 
@@ -206,7 +186,6 @@
 
     move-object v0, p1
 
-    .line 59
     check-cast v0, Lcom/letv/leui/preference/LeRadioPreference;
 
     new-instance v1, Lcom/letv/leui/preference/LeRadioGroupPreference$1;
@@ -217,14 +196,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/letv/leui/preference/LeRadioPreference;->registerChangeListener(Lcom/letv/leui/preference/LeRadioGroupPreference$LeRadioPreferenceChangeListener;Ljava/lang/String;)V
 
-    .line 77
     invoke-super {p0, p1}, Landroid/preference/PreferenceCategory;->onPrepareAddPreference(Landroid/preference/Preference;)Z
 
     move-result v0
 
     return v0
 
-    .line 74
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -241,10 +218,8 @@
     .param p2, "defaultValue"    # Ljava/lang/Object;
 
     .prologue
-    .line 32
     if-eqz p1, :cond_1
 
-    .line 33
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/letv/leui/preference/LeRadioGroupPreference;->getPersistedString(Ljava/lang/String;)Ljava/lang/String;
@@ -253,15 +228,12 @@
 
     iput-object v0, p0, Lcom/letv/leui/preference/LeRadioGroupPreference;->checkedKey:Ljava/lang/String;
 
-    .line 39
     :cond_0
     :goto_0
     invoke-super {p0, p1, p2}, Landroid/preference/PreferenceCategory;->onSetInitialValue(ZLjava/lang/Object;)V
 
-    .line 40
     return-void
 
-    .line 35
     :cond_1
     iget-object v0, p0, Lcom/letv/leui/preference/LeRadioGroupPreference;->mDefault:Ljava/lang/String;
 
@@ -271,7 +243,6 @@
 
     if-nez v0, :cond_0
 
-    .line 36
     iget-object v0, p0, Lcom/letv/leui/preference/LeRadioGroupPreference;->mDefault:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/letv/leui/preference/LeRadioGroupPreference;->checkedKey:Ljava/lang/String;
@@ -284,14 +255,11 @@
     .param p1, "checkedKey"    # Ljava/lang/String;
 
     .prologue
-    .line 47
     iput-object p1, p0, Lcom/letv/leui/preference/LeRadioGroupPreference;->checkedKey:Ljava/lang/String;
 
-    .line 48
     const/4 v0, 0x1
 
     invoke-direct {p0, v0, p1}, Lcom/letv/leui/preference/LeRadioGroupPreference;->updateRadioChangeUI(ZLjava/lang/String;)V
 
-    .line 49
     return-void
 .end method

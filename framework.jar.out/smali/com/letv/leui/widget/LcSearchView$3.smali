@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 776
     iput-object p1, p0, Lcom/letv/leui/widget/LcSearchView$3;->this$0:Lcom/letv/leui/widget/LcSearchView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,12 +42,10 @@
     .param p3, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 782
     iget-object v0, p0, Lcom/letv/leui/widget/LcSearchView$3;->this$0:Lcom/letv/leui/widget/LcSearchView;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/LcSearchView;->clearFocus()V
 
-    .line 783
     iget-object v0, p0, Lcom/letv/leui/widget/LcSearchView$3;->this$0:Lcom/letv/leui/widget/LcSearchView;
 
     # getter for: Lcom/letv/leui/widget/LcSearchView;->mOnQueryEditorActionListener:Landroid/widget/TextView$OnEditorActionListener;
@@ -58,7 +55,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 784
     iget-object v0, p0, Lcom/letv/leui/widget/LcSearchView$3;->this$0:Lcom/letv/leui/widget/LcSearchView;
 
     # getter for: Lcom/letv/leui/widget/LcSearchView;->mOnQueryEditorActionListener:Landroid/widget/TextView$OnEditorActionListener;
@@ -70,7 +66,6 @@
 
     move-result v0
 
-    .line 788
     :goto_0
     return v0
 

@@ -49,7 +49,6 @@
     .locals 2
 
     .prologue
-    .line 438
     new-instance v0, Landroid/net/Uri$Builder;
 
     invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
@@ -79,9 +78,7 @@
     .locals 0
 
     .prologue
-    .line 423
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 497
     return-void
 .end method

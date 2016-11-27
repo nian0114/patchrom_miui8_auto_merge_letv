@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 7560
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,7 +46,6 @@
     .param p2, "label"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 7595
     if-nez p1, :cond_0
 
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -56,12 +54,10 @@
 
     if-nez v1, :cond_0
 
-    .line 7599
     .end local p2    # "label":Ljava/lang/CharSequence;
     :goto_0
     return-object p2
 
-    .line 7598
     .restart local p2    # "label":Ljava/lang/CharSequence;
     :cond_0
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -72,7 +68,6 @@
 
     move-result v0
 
-    .line 7599
     .local v0, "labelRes":I
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -86,7 +81,6 @@
     .param p0, "type"    # Ljava/lang/Integer;
 
     .prologue
-    .line 7585
     const v0, 0x104023e
 
     return v0

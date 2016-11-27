@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 141
     iput-object p1, p0, Lcom/letv/leui/widget/LeAlertParams$1;->this$0:Lcom/letv/leui/widget/LeAlertParams;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 144
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams$1;->this$0:Lcom/letv/leui/widget/LeAlertParams;
 
     # getter for: Lcom/letv/leui/widget/LeAlertParams;->checkBox:Landroid/widget/CheckBox;
@@ -55,7 +53,6 @@
 
     if-nez v0, :cond_0
 
-    .line 145
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams$1;->this$0:Lcom/letv/leui/widget/LeAlertParams;
 
     # getter for: Lcom/letv/leui/widget/LeAlertParams;->checkBox:Landroid/widget/CheckBox;
@@ -67,11 +64,9 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/CheckBox;->setChecked(Z)V
 
-    .line 151
     :goto_0
     return-void
 
-    .line 147
     :cond_0
     iget-object v0, p0, Lcom/letv/leui/widget/LeAlertParams$1;->this$0:Lcom/letv/leui/widget/LeAlertParams;
 

@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,15 +20,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 57
     if-nez p0, :cond_1
 
-    .line 61
     :cond_0
     :goto_0
     return v1
 
-    .line 59
     :cond_1
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -41,7 +37,6 @@
 
     move-result v0
 
-    .line 61
     .local v0, "flag":I
     and-int/lit8 v2, v0, 0x2
 
@@ -61,14 +56,11 @@
 
     const/4 v2, 0x0
 
-    .line 20
     if-nez p0, :cond_0
 
-    .line 24
     :goto_0
     return v2
 
-    .line 22
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -80,7 +72,6 @@
 
     move-result v0
 
-    .line 24
     .local v0, "flag":I
     and-int/lit8 v3, v0, 0x1
 
@@ -105,14 +96,11 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 72
     if-nez p0, :cond_0
 
-    .line 81
     :goto_0
     return v1
 
-    .line 74
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -124,14 +112,11 @@
 
     move-result v0
 
-    .line 76
     .local v0, "flag":I
     if-eqz p1, :cond_1
 
-    .line 77
     or-int/lit8 v0, v0, 0x2
 
-    .line 81
     :goto_1
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -147,7 +132,6 @@
 
     goto :goto_0
 
-    .line 79
     :cond_1
     and-int/lit8 v0, v0, -0x3
 
@@ -162,14 +146,11 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 35
     if-nez p0, :cond_0
 
-    .line 44
     :goto_0
     return v1
 
-    .line 37
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -181,14 +162,11 @@
 
     move-result v0
 
-    .line 39
     .local v0, "flag":I
     if-eqz p1, :cond_1
 
-    .line 40
     or-int/lit8 v0, v0, 0x1
 
-    .line 44
     :goto_1
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -204,7 +182,6 @@
 
     goto :goto_0
 
-    .line 42
     :cond_1
     and-int/lit8 v0, v0, -0x2
 

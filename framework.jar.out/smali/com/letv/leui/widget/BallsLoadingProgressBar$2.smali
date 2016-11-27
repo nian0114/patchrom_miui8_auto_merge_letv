@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 105
     iput-object p1, p0, Lcom/letv/leui/widget/BallsLoadingProgressBar$2;->this$0:Lcom/letv/leui/widget/BallsLoadingProgressBar;
 
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/BallsLoadingProgressBar$EmptyAnimatorListener;-><init>(Lcom/letv/leui/widget/BallsLoadingProgressBar;)V
@@ -38,13 +37,11 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 116
     iget-object v0, p0, Lcom/letv/leui/widget/BallsLoadingProgressBar$2;->this$0:Lcom/letv/leui/widget/BallsLoadingProgressBar;
 
     # invokes: Lcom/letv/leui/widget/BallsLoadingProgressBar;->createAnimStep2()V
     invoke-static {v0}, Lcom/letv/leui/widget/BallsLoadingProgressBar;->access$300(Lcom/letv/leui/widget/BallsLoadingProgressBar;)V
 
-    .line 117
     iget-object v0, p0, Lcom/letv/leui/widget/BallsLoadingProgressBar$2;->this$0:Lcom/letv/leui/widget/BallsLoadingProgressBar;
 
     # getter for: Lcom/letv/leui/widget/BallsLoadingProgressBar;->bounceAnim:Landroid/animation/Animator;
@@ -54,7 +51,6 @@
 
     invoke-virtual {v0}, Landroid/animation/Animator;->start()V
 
-    .line 118
     return-void
 .end method
 
@@ -63,7 +59,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 108
     iget-object v0, p0, Lcom/letv/leui/widget/BallsLoadingProgressBar$2;->this$0:Lcom/letv/leui/widget/BallsLoadingProgressBar;
 
     const/4 v1, 0x1
@@ -71,7 +66,6 @@
     # setter for: Lcom/letv/leui/widget/BallsLoadingProgressBar;->mIsAnimLoading:Z
     invoke-static {v0, v1}, Lcom/letv/leui/widget/BallsLoadingProgressBar;->access$102(Lcom/letv/leui/widget/BallsLoadingProgressBar;Z)Z
 
-    .line 109
     iget-object v0, p0, Lcom/letv/leui/widget/BallsLoadingProgressBar$2;->this$0:Lcom/letv/leui/widget/BallsLoadingProgressBar;
 
     # getter for: Lcom/letv/leui/widget/BallsLoadingProgressBar;->mProcessBarListener:Lcom/letv/leui/widget/BallsLoadingProgressBar$AnimProcessBarListener;
@@ -81,7 +75,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 110
     iget-object v0, p0, Lcom/letv/leui/widget/BallsLoadingProgressBar$2;->this$0:Lcom/letv/leui/widget/BallsLoadingProgressBar;
 
     # getter for: Lcom/letv/leui/widget/BallsLoadingProgressBar;->mProcessBarListener:Lcom/letv/leui/widget/BallsLoadingProgressBar$AnimProcessBarListener;
@@ -91,7 +84,6 @@
 
     invoke-interface {v0}, Lcom/letv/leui/widget/BallsLoadingProgressBar$AnimProcessBarListener;->onLoadStart()V
 
-    .line 112
     :cond_0
     return-void
 .end method

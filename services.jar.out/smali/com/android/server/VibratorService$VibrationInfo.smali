@@ -42,31 +42,22 @@
     .param p9, "opPkg"    # Ljava/lang/String;
 
     .prologue
-    .line 186
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 187
     iput-wide p1, p0, Lcom/android/server/VibratorService$VibrationInfo;->timeout:J
 
-    .line 188
     iput-wide p3, p0, Lcom/android/server/VibratorService$VibrationInfo;->startTime:J
 
-    .line 189
     iput-object p5, p0, Lcom/android/server/VibratorService$VibrationInfo;->pattern:[J
 
-    .line 190
     iput p6, p0, Lcom/android/server/VibratorService$VibrationInfo;->repeat:I
 
-    .line 191
     iput p7, p0, Lcom/android/server/VibratorService$VibrationInfo;->usageHint:I
 
-    .line 192
     iput p8, p0, Lcom/android/server/VibratorService$VibrationInfo;->uid:I
 
-    .line 193
     iput-object p9, p0, Lcom/android/server/VibratorService$VibrationInfo;->opPkg:Ljava/lang/String;
 
-    .line 194
     return-void
 .end method
 
@@ -76,7 +67,6 @@
     .locals 4
 
     .prologue
-    .line 198
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

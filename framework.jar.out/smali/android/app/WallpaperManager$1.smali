@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1132
     iput-object p1, p0, Landroid/app/WallpaperManager$1;->this$0:Landroid/app/WallpaperManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "fileName"    # Ljava/lang/String;
 
     .prologue
-    .line 1135
     const-string v0, ".jpg"
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -51,10 +49,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 1136
     const/4 v0, 0x1
 
-    .line 1138
     :goto_0
     return v0
 

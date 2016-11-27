@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 524
     iput-object p1, p0, Lcom/google/gson/internal/bind/TypeAdapters$22$1;->this$0:Lcom/google/gson/internal/bind/TypeAdapters$22;
 
     iput-object p2, p0, Lcom/google/gson/internal/bind/TypeAdapters$22$1;->val$dateTypeAdapter:Lcom/google/gson/TypeAdapter;
@@ -55,7 +54,6 @@
     .end annotation
 
     .prologue
-    .line 524
     invoke-virtual {p0, p1}, Lcom/google/gson/internal/bind/TypeAdapters$22$1;->read(Lcom/google/gson/stream/JsonReader;)Ljava/sql/Timestamp;
 
     move-result-object v0
@@ -73,7 +71,6 @@
     .end annotation
 
     .prologue
-    .line 526
     iget-object v1, p0, Lcom/google/gson/internal/bind/TypeAdapters$22$1;->val$dateTypeAdapter:Lcom/google/gson/TypeAdapter;
 
     invoke-virtual {v1, p1}, Lcom/google/gson/TypeAdapter;->read(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;
@@ -82,7 +79,6 @@
 
     check-cast v0, Ljava/util/Date;
 
-    .line 527
     .local v0, "date":Ljava/util/Date;
     if-eqz v0, :cond_0
 
@@ -112,7 +108,6 @@
     .end annotation
 
     .prologue
-    .line 524
     check-cast p2, Ljava/sql/Timestamp;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/gson/internal/bind/TypeAdapters$22$1;->write(Lcom/google/gson/stream/JsonWriter;Ljava/sql/Timestamp;)V
@@ -131,11 +126,9 @@
     .end annotation
 
     .prologue
-    .line 531
     iget-object v0, p0, Lcom/google/gson/internal/bind/TypeAdapters$22$1;->val$dateTypeAdapter:Lcom/google/gson/TypeAdapter;
 
     invoke-virtual {v0, p1, p2}, Lcom/google/gson/TypeAdapter;->write(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
 
-    .line 532
     return-void
 .end method

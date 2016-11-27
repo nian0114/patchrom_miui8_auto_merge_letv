@@ -32,7 +32,6 @@
     .param p2, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 57
     iput-object p1, p0, Lcom/android/server/MasterClearReceiver$1;->this$0:Lcom/android/server/MasterClearReceiver;
 
     iput-boolean p3, p0, Lcom/android/server/MasterClearReceiver$1;->val$leui_erase_reason:Z
@@ -54,13 +53,11 @@
     .locals 5
 
     .prologue
-    .line 61
     :try_start_0
     iget-boolean v1, p0, Lcom/android/server/MasterClearReceiver$1;->val$leui_erase_reason:Z
 
     if-eqz v1, :cond_0
 
-    .line 62
     iget-object v1, p0, Lcom/android/server/MasterClearReceiver$1;->val$context:Landroid/content/Context;
 
     iget-boolean v2, p0, Lcom/android/server/MasterClearReceiver$1;->val$shutdown:Z
@@ -71,7 +68,6 @@
 
     invoke-static {v1, v2, v3, v4}, Landroid/os/RecoverySystem;->rebootWipeUserData(Landroid/content/Context;ZLjava/lang/String;Ljava/lang/String;)V
 
-    .line 67
     :goto_0
     const-string v1, "MasterClear"
 
@@ -79,11 +75,9 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 73
     :goto_1
     return-void
 
-    .line 64
     :cond_0
     iget-object v1, p0, Lcom/android/server/MasterClearReceiver$1;->val$context:Landroid/content/Context;
 
@@ -100,11 +94,9 @@
 
     goto :goto_0
 
-    .line 68
     :catch_0
     move-exception v0
 
-    .line 69
     .local v0, "e":Ljava/io/IOException;
     const-string v1, "MasterClear"
 
@@ -114,12 +106,10 @@
 
     goto :goto_1
 
-    .line 70
     .end local v0    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v0
 
-    .line 71
     .local v0, "e":Ljava/lang/SecurityException;
     const-string v1, "MasterClear"
 

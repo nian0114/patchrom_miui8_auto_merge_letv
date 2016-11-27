@@ -36,13 +36,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 67
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 68
     iput-object p1, p0, Lcom/android/server/wifi/DefaultWifiFwkExt;->mContext:Landroid/content/Context;
 
-    .line 69
     return-void
 .end method
 
@@ -52,7 +49,6 @@
     .locals 2
 
     .prologue
-    .line 122
     iget-object v0, p0, Lcom/android/server/wifi/DefaultWifiFwkExt;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -72,7 +68,6 @@
     .locals 2
 
     .prologue
-    .line 167
     iget-object v0, p0, Lcom/android/server/wifi/DefaultWifiFwkExt;->mContext:Landroid/content/Context;
 
     const v1, 0x10403b1
@@ -89,7 +84,6 @@
     .param p1, "result"    # Landroid/net/wifi/ScanResult;
 
     .prologue
-    .line 150
     iget-object v0, p1, Landroid/net/wifi/ScanResult;->capabilities:Ljava/lang/String;
 
     const-string v1, "WAPI-PSK"
@@ -100,14 +94,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 151
     const/4 v0, 0x4
 
-    .line 163
     :goto_0
     return v0
 
-    .line 152
     :cond_0
     iget-object v0, p1, Landroid/net/wifi/ScanResult;->capabilities:Ljava/lang/String;
 
@@ -119,12 +110,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 153
     const/4 v0, 0x5
 
     goto :goto_0
 
-    .line 154
     :cond_1
     iget-object v0, p1, Landroid/net/wifi/ScanResult;->capabilities:Ljava/lang/String;
 
@@ -136,12 +125,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 155
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 156
     :cond_2
     iget-object v0, p1, Landroid/net/wifi/ScanResult;->capabilities:Ljava/lang/String;
 
@@ -153,12 +140,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 157
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 158
     :cond_3
     iget-object v0, p1, Landroid/net/wifi/ScanResult;->capabilities:Ljava/lang/String;
 
@@ -170,12 +155,10 @@
 
     if-eqz v0, :cond_4
 
-    .line 159
     const/4 v0, 0x3
 
     goto :goto_0
 
-    .line 160
     :cond_4
     iget-object v0, p1, Landroid/net/wifi/ScanResult;->capabilities:Ljava/lang/String;
 
@@ -187,12 +170,10 @@
 
     if-eqz v0, :cond_5
 
-    .line 161
     const/4 v0, 0x6
 
     goto :goto_0
 
-    .line 163
     :cond_5
     const/4 v0, 0x0
 
@@ -214,7 +195,6 @@
 
     const/4 v3, 0x1
 
-    .line 126
     iget-object v5, p1, Landroid/net/wifi/WifiConfiguration;->allowedKeyManagement:Ljava/util/BitSet;
 
     invoke-virtual {v5, v3}, Ljava/util/BitSet;->get(I)Z
@@ -223,11 +203,9 @@
 
     if-eqz v5, :cond_0
 
-    .line 146
     :goto_0
     return v0
 
-    .line 129
     :cond_0
     iget-object v5, p1, Landroid/net/wifi/WifiConfiguration;->allowedKeyManagement:Ljava/util/BitSet;
 
@@ -248,10 +226,8 @@
     :cond_1
     move v0, v4
 
-    .line 131
     goto :goto_0
 
-    .line 133
     :cond_2
     iget-object v0, p1, Landroid/net/wifi/WifiConfiguration;->allowedKeyManagement:Ljava/util/BitSet;
 
@@ -263,10 +239,8 @@
 
     move v0, v1
 
-    .line 134
     goto :goto_0
 
-    .line 136
     :cond_3
     iget-object v0, p1, Landroid/net/wifi/WifiConfiguration;->allowedKeyManagement:Ljava/util/BitSet;
 
@@ -278,10 +252,8 @@
 
     move v0, v2
 
-    .line 137
     goto :goto_0
 
-    .line 139
     :cond_4
     iget v0, p1, Landroid/net/wifi/WifiConfiguration;->wepTxKeyIndex:I
 
@@ -305,10 +277,8 @@
 
     move v0, v3
 
-    .line 141
     goto :goto_0
 
-    .line 143
     :cond_5
     iget-object v0, p1, Landroid/net/wifi/WifiConfiguration;->allowedKeyManagement:Ljava/util/BitSet;
 
@@ -320,12 +290,10 @@
 
     if-eqz v0, :cond_6
 
-    .line 144
     const/4 v0, 0x6
 
     goto :goto_0
 
-    .line 146
     :cond_6
     const/4 v0, 0x0
 
@@ -336,7 +304,6 @@
     .locals 1
 
     .prologue
-    .line 178
     const/4 v0, 0x0
 
     return v0
@@ -346,7 +313,6 @@
     .locals 1
 
     .prologue
-    .line 114
     const/4 v0, 0x0
 
     return v0
@@ -356,7 +322,6 @@
     .locals 1
 
     .prologue
-    .line 84
     const/4 v0, 0x0
 
     return v0
@@ -366,7 +331,6 @@
     .locals 1
 
     .prologue
-    .line 182
     const/4 v0, 0x0
 
     return v0
@@ -376,7 +340,6 @@
     .locals 2
 
     .prologue
-    .line 79
     iget-object v0, p0, Lcom/android/server/wifi/DefaultWifiFwkExt;->mContext:Landroid/content/Context;
 
     const-string v1, "wifi"
@@ -389,7 +352,6 @@
 
     iput-object v0, p0, Lcom/android/server/wifi/DefaultWifiFwkExt;->mWifiManager:Landroid/net/wifi/WifiManager;
 
-    .line 80
     return-void
 .end method
 
@@ -397,7 +359,6 @@
     .locals 1
 
     .prologue
-    .line 186
     const/4 v0, 0x0
 
     return v0
@@ -417,7 +378,6 @@
     .end annotation
 
     .prologue
-    .line 93
     .local p2, "disconnectNetworks":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     iget-object v6, p0, Lcom/android/server/wifi/DefaultWifiFwkExt;->mWifiManager:Landroid/net/wifi/WifiManager;
 
@@ -425,7 +385,6 @@
 
     move-result-object v3
 
-    .line 94
     .local v3, "networks":Ljava/util/List;, "Ljava/util/List<Landroid/net/wifi/WifiConfiguration;>;"
     iget-object v6, p0, Lcom/android/server/wifi/DefaultWifiFwkExt;->mWifiManager:Landroid/net/wifi/WifiManager;
 
@@ -433,13 +392,11 @@
 
     move-result-object v4
 
-    .line 95
     .local v4, "scanResults":Ljava/util/List;, "Ljava/util/List<Landroid/net/wifi/ScanResult;>;"
     if-eqz v3, :cond_2
 
     if-eqz v4, :cond_2
 
-    .line 96
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -457,7 +414,6 @@
 
     check-cast v2, Landroid/net/wifi/WifiConfiguration;
 
-    .line 97
     .local v2, "network":Landroid/net/wifi/WifiConfiguration;
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -477,7 +433,6 @@
 
     check-cast v5, Landroid/net/wifi/ScanResult;
 
-    .line 101
     .local v5, "scanresult":Landroid/net/wifi/ScanResult;
     iget-object v6, v2, Landroid/net/wifi/WifiConfiguration;->SSID:Ljava/lang/String;
 
@@ -535,10 +490,8 @@
 
     if-ne v6, p1, :cond_1
 
-    .line 105
     const/4 v6, 0x1
 
-    .line 110
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "network":Landroid/net/wifi/WifiConfiguration;
     .end local v5    # "scanresult":Landroid/net/wifi/ScanResult;
@@ -555,7 +508,6 @@
     .locals 1
 
     .prologue
-    .line 171
     const/4 v0, 0x0
 
     return v0
@@ -566,7 +518,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 175
     return-void
 .end method
 
@@ -575,7 +526,6 @@
     .param p1, "visible"    # Z
 
     .prologue
-    .line 190
     return-void
 .end method
 
@@ -583,7 +533,6 @@
     .locals 1
 
     .prologue
-    .line 89
     const/4 v0, 0x1
 
     return v0
@@ -594,6 +543,5 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 119
     return-void
 .end method

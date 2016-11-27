@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 57
     iput-object p1, p0, Lcom/letv/leui/widget/LeOptimizationDialog$1$1;->this$1:Lcom/letv/leui/widget/LeOptimizationDialog$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 60
     iget-object v0, p0, Lcom/letv/leui/widget/LeOptimizationDialog$1$1;->this$1:Lcom/letv/leui/widget/LeOptimizationDialog$1;
 
     iget-object v0, v0, Lcom/letv/leui/widget/LeOptimizationDialog$1;->this$0:Lcom/letv/leui/widget/LeOptimizationDialog;
@@ -48,6 +46,5 @@
     # invokes: Landroid/app/Dialog;->dismiss()V
     invoke-static {v0}, Lcom/letv/leui/widget/LeOptimizationDialog;->access$001(Lcom/letv/leui/widget/LeOptimizationDialog;)V
 
-    .line 61
     return-void
 .end method

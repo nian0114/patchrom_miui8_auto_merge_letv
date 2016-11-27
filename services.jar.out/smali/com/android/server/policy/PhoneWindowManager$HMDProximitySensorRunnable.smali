@@ -29,20 +29,16 @@
     .param p2, "state"    # I
 
     .prologue
-    .line 8434
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$HMDProximitySensorRunnable;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 8432
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/policy/PhoneWindowManager$HMDProximitySensorRunnable;->mState:I
 
-    .line 8435
     iput p2, p0, Lcom/android/server/policy/PhoneWindowManager$HMDProximitySensorRunnable;->mState:I
 
-    .line 8436
     return-void
 .end method
 
@@ -52,14 +48,12 @@
     .locals 4
 
     .prologue
-    .line 8439
     iget v1, p0, Lcom/android/server/policy/PhoneWindowManager$HMDProximitySensorRunnable;->mState:I
 
     const/4 v2, 0x1
 
     if-ne v1, v2, :cond_1
 
-    .line 8440
     const-string v1, "WindowManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -84,20 +78,17 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8441
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.proximity_sensor2"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 8442
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "psensor/1"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 8443
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager$HMDProximitySensorRunnable;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v1, v1, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
@@ -106,19 +97,16 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 8450
     .end local v0    # "intent":Landroid/content/Intent;
     :cond_0
     :goto_0
     return-void
 
-    .line 8444
     :cond_1
     iget v1, p0, Lcom/android/server/policy/PhoneWindowManager$HMDProximitySensorRunnable;->mState:I
 
     if-nez v1, :cond_0
 
-    .line 8445
     const-string v1, "WindowManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -143,20 +131,17 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8446
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.proximity_sensor2"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 8447
     .restart local v0    # "intent":Landroid/content/Intent;
     const-string v1, "psensor/0"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 8448
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager$HMDProximitySensorRunnable;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v1, v1, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;

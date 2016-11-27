@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 3551
     iput-object p1, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$5;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
 
     iput-object p2, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$5;->val$mode:Landroid/widget/Editor$LeTextActionModelImpl;
@@ -44,12 +43,10 @@
     .locals 1
 
     .prologue
-    .line 3554
     iget-object v0, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$5;->val$mode:Landroid/widget/Editor$LeTextActionModelImpl;
 
     invoke-virtual {v0}, Landroid/widget/Editor$LeTextActionModelImpl;->updateViewLocationInWindow()V
 
-    .line 3555
     const/4 v0, 0x1
 
     return v0

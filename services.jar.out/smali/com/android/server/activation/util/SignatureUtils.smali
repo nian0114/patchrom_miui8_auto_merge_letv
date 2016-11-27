@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,7 +42,6 @@
     .param p0, "jsonBody"    # Ljava/lang/String;
 
     .prologue
-    .line 87
     const-string v0, "UTF-8"
 
     invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
@@ -71,7 +69,6 @@
     .end annotation
 
     .prologue
-    .line 96
     .local p0, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-static {p0}, Lcom/android/server/activation/util/SignatureUtils;->encodeJson(Ljava/util/Map;)Ljava/lang/StringBuilder;
 
@@ -109,28 +106,23 @@
     .end annotation
 
     .prologue
-    .line 100
     .local p0, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 101
     .local v4, "sb":Ljava/lang/StringBuilder;
     if-nez p0, :cond_0
 
-    .line 114
     :goto_0
     return-object v4
 
-    .line 106
     :cond_0
     :try_start_0
     new-instance v3, Lorg/json/JSONObject;
 
     invoke-direct {v3}, Lorg/json/JSONObject;-><init>()V
 
-    .line 107
     .local v3, "object":Lorg/json/JSONObject;
     invoke-interface {p0}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
@@ -154,7 +146,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 108
     .local v2, "key":Ljava/lang/String;
     invoke-interface {p0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -166,20 +157,17 @@
 
     goto :goto_1
 
-    .line 111
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "key":Ljava/lang/String;
     .end local v3    # "object":Lorg/json/JSONObject;
     :catch_0
     move-exception v0
 
-    .line 112
     .local v0, "e":Lorg/json/JSONException;
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 110
     .end local v0    # "e":Lorg/json/JSONException;
     .restart local v1    # "i$":Ljava/util/Iterator;
     .restart local v3    # "object":Lorg/json/JSONObject;
@@ -219,18 +207,15 @@
     .end annotation
 
     .prologue
-    .line 50
     new-instance v6, Ljava/util/HashMap;
 
     invoke-direct {v6}, Ljava/util/HashMap;-><init>()V
 
-    .line 51
     .local v6, "header":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-static {p2, p3}, Lcom/letv/leui/util/LeSignature;->formatDate(J)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 52
     .local v4, "date":Ljava/lang/String;
     const-string v0, "Content-Type"
 
@@ -238,7 +223,6 @@
 
     invoke-interface {v6, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 53
     const-string v7, "Authorization"
 
     const-string v8, " LETV %s %s"
@@ -279,12 +263,10 @@
 
     invoke-interface {v6, v7, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 54
     const-string v0, "Date"
 
     invoke-interface {v6, v0, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 55
     return-object v6
 .end method
 
@@ -314,30 +296,25 @@
     .end annotation
 
     .prologue
-    .line 69
     .local p4, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     new-instance v6, Ljava/util/HashMap;
 
     invoke-direct {v6}, Ljava/util/HashMap;-><init>()V
 
-    .line 70
     .local v6, "header":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-static {p2, p3}, Lcom/letv/leui/util/LeSignature;->formatDate(J)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 71
     .local v4, "date":Ljava/lang/String;
     if-eqz p5, :cond_0
 
-    .line 72
     const-string v0, "Content-Type"
 
     const-string v1, "application/json"
 
     invoke-interface {v6, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 73
     const-string v7, "Authorization"
 
     const-string v8, " LETV %s %s"
@@ -378,16 +355,13 @@
 
     invoke-interface {v6, v7, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 77
     :goto_0
     const-string v0, "Date"
 
     invoke-interface {v6, v0, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 78
     return-object v6
 
-    .line 75
     :cond_0
     const-string v7, "Authorization"
 

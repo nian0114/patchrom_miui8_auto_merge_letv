@@ -36,36 +36,28 @@
     .param p4, "wid"    # Ljava/lang/String;
 
     .prologue
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/letv/tracker/agnes/Widget;->props:Ljava/util/Map;
 
-    .line 14
     iput-object p1, p0, Lcom/letv/tracker/agnes/Widget;->appId:Ljava/lang/String;
 
-    .line 15
     iput-object p3, p0, Lcom/letv/tracker/agnes/Widget;->appVer:Lcom/letv/tracker/msg/bean/Version;
 
-    .line 16
     iput-object p4, p0, Lcom/letv/tracker/agnes/Widget;->id:Ljava/lang/String;
 
-    .line 17
     iput-object p2, p0, Lcom/letv/tracker/agnes/Widget;->appRunId:Ljava/lang/String;
 
-    .line 18
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/letv/tracker/agnes/Widget;->timestamp:J
 
-    .line 19
     return-void
 .end method
 
@@ -77,7 +69,6 @@
     .param p2, "propValue"    # Ljava/lang/String;
 
     .prologue
-    .line 73
     iget-object v0, p0, Lcom/letv/tracker/agnes/Widget;->props:Ljava/util/Map;
 
     invoke-virtual {p1}, Lcom/letv/tracker/enums/Key;->getKeyId()Ljava/lang/String;
@@ -90,10 +81,8 @@
     :goto_0
     invoke-interface {v0, v1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 74
     return-void
 
-    .line 73
     .restart local p2    # "propValue":Ljava/lang/String;
     :cond_0
     const-string p2, ""
@@ -107,14 +96,12 @@
     .param p2, "propValue"    # Ljava/lang/String;
 
     .prologue
-    .line 65
     invoke-static {p1}, Lcom/letv/tracker/enums/Key;->isExsited(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 66
     iget-object v0, p0, Lcom/letv/tracker/agnes/Widget;->props:Ljava/util/Map;
 
     if-eqz p2, :cond_0
@@ -123,18 +110,15 @@
     :goto_0
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 70
     :goto_1
     return-void
 
-    .line 66
     .restart local p2    # "propValue":Ljava/lang/String;
     :cond_0
     const-string p2, ""
 
     goto :goto_0
 
-    .line 68
     :cond_1
     iget-object v0, p0, Lcom/letv/tracker/agnes/Widget;->props:Ljava/util/Map;
 
@@ -175,35 +159,29 @@
     .locals 5
 
     .prologue
-    .line 124
     new-instance v0, Lcom/android/letv/agnes/service/beans/IWidget;
 
     invoke-direct {v0}, Lcom/android/letv/agnes/service/beans/IWidget;-><init>()V
 
-    .line 126
     .local v0, "iw":Lcom/android/letv/agnes/service/beans/IWidget;
     iget-wide v2, p0, Lcom/letv/tracker/agnes/Widget;->timestamp:J
 
     invoke-virtual {v0, v2, v3}, Lcom/android/letv/agnes/service/beans/IWidget;->setTime(J)V
 
-    .line 127
     iget-object v2, p0, Lcom/letv/tracker/agnes/Widget;->id:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Lcom/android/letv/agnes/service/beans/IWidget;->setId(Ljava/lang/String;)V
 
-    .line 128
     iget-object v2, p0, Lcom/letv/tracker/agnes/Widget;->appId:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Lcom/android/letv/agnes/service/beans/IWidget;->setAppId(Ljava/lang/String;)V
 
-    .line 129
     invoke-virtual {p0}, Lcom/letv/tracker/agnes/Widget;->getAppVersion()Ljava/lang/String;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 130
     iget-object v2, p0, Lcom/letv/tracker/agnes/Widget;->props:Ljava/util/Map;
 
     const-string v3, "app_version"
@@ -214,7 +192,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 132
     :cond_0
     iget-object v2, p0, Lcom/letv/tracker/agnes/Widget;->props:Ljava/util/Map;
 
@@ -224,10 +201,8 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 133
     iget-object v1, p0, Lcom/letv/tracker/agnes/Widget;->props:Ljava/util/Map;
 
-    .line 134
     .local v1, "temp":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     new-instance v2, Ljava/util/HashMap;
 
@@ -235,10 +210,8 @@
 
     iput-object v2, p0, Lcom/letv/tracker/agnes/Widget;->props:Ljava/util/Map;
 
-    .line 135
     invoke-virtual {v0, v1}, Lcom/android/letv/agnes/service/beans/IWidget;->setProps(Ljava/util/Map;)V
 
-    .line 137
     return-object v0
 .end method
 
@@ -247,7 +220,6 @@
     .param p1, "type"    # Lcom/letv/tracker/enums/EventType;
 
     .prologue
-    .line 92
     new-instance v0, Lcom/letv/tracker/agnes/Event;
 
     iget-object v1, p0, Lcom/letv/tracker/agnes/Widget;->appId:Ljava/lang/String;
@@ -270,14 +242,12 @@
     .param p1, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 103
     invoke-static {p1}, Lcom/letv/tracker/enums/EventType;->isExsited(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 104
     new-instance v0, Lcom/letv/tracker/agnes/Event;
 
     iget-object v1, p0, Lcom/letv/tracker/agnes/Widget;->appId:Ljava/lang/String;
@@ -292,7 +262,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/letv/tracker/agnes/Event;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/letv/tracker/msg/bean/Version;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 106
     :goto_0
     return-object v0
 
@@ -334,7 +303,6 @@
     .locals 5
 
     .prologue
-    .line 120
     new-instance v0, Lcom/letv/tracker/agnes/MusicPlay;
 
     iget-object v1, p0, Lcom/letv/tracker/agnes/Widget;->appId:Ljava/lang/String;
@@ -354,7 +322,6 @@
     .locals 5
 
     .prologue
-    .line 116
     new-instance v0, Lcom/letv/tracker/agnes/VideoPlay;
 
     iget-object v1, p0, Lcom/letv/tracker/agnes/Widget;->appId:Ljava/lang/String;
@@ -374,7 +341,6 @@
     .locals 1
 
     .prologue
-    .line 46
     iget-object v0, p0, Lcom/letv/tracker/agnes/Widget;->appId:Ljava/lang/String;
 
     return-object v0
@@ -384,7 +350,6 @@
     .locals 1
 
     .prologue
-    .line 50
     iget-object v0, p0, Lcom/letv/tracker/agnes/Widget;->appVer:Lcom/letv/tracker/msg/bean/Version;
 
     invoke-virtual {v0}, Lcom/letv/tracker/msg/bean/Version;->hasRequiredFields()Z
@@ -393,14 +358,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 51
     iget-object v0, p0, Lcom/letv/tracker/agnes/Widget;->appVer:Lcom/letv/tracker/msg/bean/Version;
 
     invoke-virtual {v0}, Lcom/letv/tracker/msg/bean/Version;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 53
     :goto_0
     return-object v0
 
@@ -414,7 +377,6 @@
     .locals 1
 
     .prologue
-    .line 42
     iget-object v0, p0, Lcom/letv/tracker/agnes/Widget;->id:Ljava/lang/String;
 
     return-object v0
@@ -434,7 +396,6 @@
     .end annotation
 
     .prologue
-    .line 82
     iget-object v0, p0, Lcom/letv/tracker/agnes/Widget;->props:Ljava/util/Map;
 
     return-object v0

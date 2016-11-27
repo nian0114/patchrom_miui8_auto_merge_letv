@@ -33,13 +33,10 @@
     .param p3, "duration"    # I
 
     .prologue
-    .line 917
     iput-object p1, p0, Lcom/letv/leui/widget/DragSortHelper$DropAnimator;->this$0:Lcom/letv/leui/widget/DragSortHelper;
 
-    .line 918
     invoke-direct {p0, p1, p2, p3}, Lcom/letv/leui/widget/DragSortHelper$SmoothAnimator;-><init>(Lcom/letv/leui/widget/DragSortHelper;FI)V
 
-    .line 919
     return-void
 .end method
 
@@ -47,7 +44,6 @@
     .locals 6
 
     .prologue
-    .line 931
     iget-object v4, p0, Lcom/letv/leui/widget/DragSortHelper$DropAnimator;->this$0:Lcom/letv/leui/widget/DragSortHelper;
 
     # getter for: Lcom/letv/leui/widget/DragSortHelper;->mLeListView:Lcom/letv/leui/widget/LeListView;
@@ -59,7 +55,6 @@
 
     move-result v0
 
-    .line 932
     .local v0, "first":I
     iget-object v4, p0, Lcom/letv/leui/widget/DragSortHelper$DropAnimator;->this$0:Lcom/letv/leui/widget/DragSortHelper;
 
@@ -83,7 +78,6 @@
 
     div-int/lit8 v1, v4, 0x2
 
-    .line 933
     .local v1, "otherAdjust":I
     iget-object v4, p0, Lcom/letv/leui/widget/DragSortHelper$DropAnimator;->this$0:Lcom/letv/leui/widget/DragSortHelper;
 
@@ -100,31 +94,25 @@
 
     move-result-object v3
 
-    .line 934
     .local v3, "v":Landroid/view/View;
     const/4 v2, -0x1
 
-    .line 935
     .local v2, "targetY":I
     if-eqz v3, :cond_2
 
-    .line 936
     iget v4, p0, Lcom/letv/leui/widget/DragSortHelper$DropAnimator;->mDropPos:I
 
     iget v5, p0, Lcom/letv/leui/widget/DragSortHelper$DropAnimator;->srcPos:I
 
     if-ne v4, v5, :cond_0
 
-    .line 937
     invoke-virtual {v3}, Landroid/view/View;->getTop()I
 
     move-result v2
 
-    .line 950
     :goto_0
     return v2
 
-    .line 938
     :cond_0
     iget v4, p0, Lcom/letv/leui/widget/DragSortHelper$DropAnimator;->mDropPos:I
 
@@ -132,7 +120,6 @@
 
     if-ge v4, v5, :cond_1
 
-    .line 940
     invoke-virtual {v3}, Landroid/view/View;->getTop()I
 
     move-result v4
@@ -141,7 +128,6 @@
 
     goto :goto_0
 
-    .line 943
     :cond_1
     invoke-virtual {v3}, Landroid/view/View;->getBottom()I
 
@@ -160,7 +146,6 @@
 
     goto :goto_0
 
-    .line 947
     :cond_2
     invoke-virtual {p0}, Lcom/letv/leui/widget/DragSortHelper$DropAnimator;->cancel()V
 
@@ -173,7 +158,6 @@
     .locals 2
 
     .prologue
-    .line 923
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortHelper$DropAnimator;->this$0:Lcom/letv/leui/widget/DragSortHelper;
 
     # getter for: Lcom/letv/leui/widget/DragSortHelper;->mFloatPos:I
@@ -183,7 +167,6 @@
 
     iput v0, p0, Lcom/letv/leui/widget/DragSortHelper$DropAnimator;->mDropPos:I
 
-    .line 924
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortHelper$DropAnimator;->this$0:Lcom/letv/leui/widget/DragSortHelper;
 
     # getter for: Lcom/letv/leui/widget/DragSortHelper;->mSrcPos:I
@@ -193,7 +176,6 @@
 
     iput v0, p0, Lcom/letv/leui/widget/DragSortHelper$DropAnimator;->srcPos:I
 
-    .line 925
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortHelper$DropAnimator;->this$0:Lcom/letv/leui/widget/DragSortHelper;
 
     const/4 v1, 0x2
@@ -201,7 +183,6 @@
     # setter for: Lcom/letv/leui/widget/DragSortHelper;->mDragState:I
     invoke-static {v0, v1}, Lcom/letv/leui/widget/DragSortHelper;->access$402(Lcom/letv/leui/widget/DragSortHelper;I)I
 
-    .line 926
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortHelper$DropAnimator;->this$0:Lcom/letv/leui/widget/DragSortHelper;
 
     # getter for: Lcom/letv/leui/widget/DragSortHelper;->mFloatLoc:Landroid/graphics/Point;
@@ -221,7 +202,6 @@
 
     iput v0, p0, Lcom/letv/leui/widget/DragSortHelper$DropAnimator;->mInitDeltaY:F
 
-    .line 927
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortHelper$DropAnimator;->this$0:Lcom/letv/leui/widget/DragSortHelper;
 
     # getter for: Lcom/letv/leui/widget/DragSortHelper;->mFloatLoc:Landroid/graphics/Point;
@@ -248,7 +228,6 @@
 
     iput v0, p0, Lcom/letv/leui/widget/DragSortHelper$DropAnimator;->mInitDeltaX:F
 
-    .line 928
     return-void
 .end method
 
@@ -256,13 +235,11 @@
     .locals 1
 
     .prologue
-    .line 969
     iget-object v0, p0, Lcom/letv/leui/widget/DragSortHelper$DropAnimator;->this$0:Lcom/letv/leui/widget/DragSortHelper;
 
     # invokes: Lcom/letv/leui/widget/DragSortHelper;->dropFloatView()V
     invoke-static {v0}, Lcom/letv/leui/widget/DragSortHelper;->access$1200(Lcom/letv/leui/widget/DragSortHelper;)V
 
-    .line 970
     return-void
 .end method
 
@@ -272,12 +249,10 @@
     .param p2, "smoothFrac"    # F
 
     .prologue
-    .line 955
     invoke-direct {p0}, Lcom/letv/leui/widget/DragSortHelper$DropAnimator;->getTargetY()I
 
     move-result v4
 
-    .line 956
     .local v4, "targetY":I
     iget-object v5, p0, Lcom/letv/leui/widget/DragSortHelper$DropAnimator;->this$0:Lcom/letv/leui/widget/DragSortHelper;
 
@@ -290,7 +265,6 @@
 
     move-result v3
 
-    .line 957
     .local v3, "targetX":I
     iget-object v5, p0, Lcom/letv/leui/widget/DragSortHelper$DropAnimator;->this$0:Lcom/letv/leui/widget/DragSortHelper;
 
@@ -305,7 +279,6 @@
 
     int-to-float v1, v5
 
-    .line 958
     .local v1, "deltaY":F
     iget-object v5, p0, Lcom/letv/leui/widget/DragSortHelper$DropAnimator;->this$0:Lcom/letv/leui/widget/DragSortHelper;
 
@@ -320,13 +293,11 @@
 
     int-to-float v0, v5
 
-    .line 959
     .local v0, "deltaX":F
     const/high16 v5, 0x3f800000    # 1.0f
 
     sub-float v2, v5, p2
 
-    .line 960
     .local v2, "f":F
     iget v5, p0, Lcom/letv/leui/widget/DragSortHelper$DropAnimator;->mInitDeltaY:F
 
@@ -352,7 +323,6 @@
 
     if-gez v5, :cond_1
 
-    .line 961
     :cond_0
     iget-object v5, p0, Lcom/letv/leui/widget/DragSortHelper$DropAnimator;->this$0:Lcom/letv/leui/widget/DragSortHelper;
 
@@ -371,7 +341,6 @@
 
     iput v6, v5, Landroid/graphics/Point;->y:I
 
-    .line 962
     iget-object v5, p0, Lcom/letv/leui/widget/DragSortHelper$DropAnimator;->this$0:Lcom/letv/leui/widget/DragSortHelper;
 
     # getter for: Lcom/letv/leui/widget/DragSortHelper;->mFloatLoc:Landroid/graphics/Point;
@@ -400,7 +369,6 @@
 
     iput v6, v5, Landroid/graphics/Point;->x:I
 
-    .line 963
     iget-object v5, p0, Lcom/letv/leui/widget/DragSortHelper$DropAnimator;->this$0:Lcom/letv/leui/widget/DragSortHelper;
 
     const/4 v6, 0x1
@@ -408,7 +376,6 @@
     # invokes: Lcom/letv/leui/widget/DragSortHelper;->doDragFloatView(Z)V
     invoke-static {v5, v6}, Lcom/letv/leui/widget/DragSortHelper;->access$700(Lcom/letv/leui/widget/DragSortHelper;Z)V
 
-    .line 965
     :cond_1
     return-void
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 333
     iput-object p1, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView$1;->this$1:Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 336
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView$1;->this$1:Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;
 
     iget-object v0, v0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->this$0:Lcom/android/server/policy/global/GlobalActionViewManager;
@@ -52,7 +50,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 337
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView$1;->this$1:Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;
 
     iget-object v0, v0, Lcom/android/server/policy/global/GlobalActionViewManager$GlobalActionDecorView;->this$0:Lcom/android/server/policy/global/GlobalActionViewManager;
@@ -64,7 +61,6 @@
 
     invoke-interface {v0}, Lcom/android/server/policy/global/GlobalActionViewMediator$MediatorCallback;->hiddenWindow()V
 
-    .line 338
     :cond_0
     return-void
 .end method

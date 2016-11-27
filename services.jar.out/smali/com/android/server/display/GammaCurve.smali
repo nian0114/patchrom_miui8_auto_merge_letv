@@ -35,19 +35,14 @@
 
     const/4 v3, 0x0
 
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 12
     iput v0, p0, Lcom/android/server/display/GammaCurve;->mOffset:F
 
-    .line 13
     iput v0, p0, Lcom/android/server/display/GammaCurve;->mFactor:F
 
-    .line 14
     iput-boolean v3, p0, Lcom/android/server/display/GammaCurve;->mCurveInited:Z
 
-    .line 16
     array-length v0, p1
 
     if-lt v0, v1, :cond_0
@@ -56,7 +51,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 17
     :cond_0
     const-string v0, "GammaCurve"
 
@@ -64,10 +58,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 18
     iput-boolean v3, p0, Lcom/android/server/display/GammaCurve;->mCurveInited:Z
 
-    .line 24
     :cond_1
     aget v0, p2, v5
 
@@ -93,7 +85,6 @@
 
     iput v0, p0, Lcom/android/server/display/GammaCurve;->mFactor:F
 
-    .line 25
     aget v0, p2, v3
 
     invoke-static {v0, v4}, Landroid/util/MathUtils;->pow(FF)F
@@ -110,10 +101,8 @@
 
     iput v0, p0, Lcom/android/server/display/GammaCurve;->mOffset:F
 
-    .line 26
     iput-boolean v5, p0, Lcom/android/server/display/GammaCurve;->mCurveInited:Z
 
-    .line 27
     const-string v0, "GammaCurve"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -150,7 +139,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 28
     return-void
 .end method
 
@@ -161,12 +149,10 @@
     .param p1, "value"    # F
 
     .prologue
-    .line 31
     iget-boolean v0, p0, Lcom/android/server/display/GammaCurve;->mCurveInited:Z
 
     if-nez v0, :cond_0
 
-    .line 34
     .end local p1    # "value":F
     :goto_0
     return p1

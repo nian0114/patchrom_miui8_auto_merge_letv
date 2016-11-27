@@ -55,10 +55,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 68
     invoke-direct {p0, p1}, Landroid/app/Dialog;-><init>(Landroid/content/Context;)V
 
-    .line 69
     return-void
 .end method
 
@@ -68,10 +66,8 @@
     .param p2, "theme"    # I
 
     .prologue
-    .line 64
     invoke-direct {p0, p1, p2}, Landroid/app/Dialog;-><init>(Landroid/content/Context;I)V
 
-    .line 65
     return-void
 .end method
 
@@ -84,12 +80,10 @@
     .param p5, "dayOfMonth"    # I
 
     .prologue
-    .line 81
     const v1, 0x103051c
 
     invoke-direct {p0, p1, v1}, Lcom/letv/leui/widget/LeDatePickerDialog;-><init>(Landroid/content/Context;I)V
 
-    .line 82
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeDatePickerDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v1
@@ -98,29 +92,22 @@
 
     invoke-virtual {v1, v2}, Landroid/view/Window;->setGravity(I)V
 
-    .line 83
     iput-object p2, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->mDateSetListener:Lcom/letv/leui/widget/LeDatePickerDialog$OnDateSetListener;
 
-    .line 84
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/LeDatePickerDialog;->init(Landroid/content/Context;)V
 
-    .line 85
     iget-object v1, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->mDateWheel:Lcom/letv/leui/widget/picker/DateWheel;
 
     invoke-virtual {v1, p3, p4, p5}, Lcom/letv/leui/widget/picker/DateWheel;->updateDate(III)V
 
-    .line 86
     iput p3, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->year:I
 
-    .line 87
     add-int/lit8 v1, p4, -0x1
 
     iput v1, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->month:I
 
-    .line 88
     iput p5, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->day:I
 
-    .line 89
     iget v1, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->month:I
 
     iget v2, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->day:I
@@ -129,13 +116,11 @@
 
     move-result-object v0
 
-    .line 90
     .local v0, "dateText":Ljava/lang/String;
     iget-object v1, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->timeTv:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 91
     return-void
 .end method
 
@@ -151,12 +136,10 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 95
     const v0, 0x103051c
 
     invoke-direct {p0, p1, v0}, Lcom/letv/leui/widget/LeDatePickerDialog;-><init>(Landroid/content/Context;I)V
 
-    .line 96
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeDatePickerDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -165,13 +148,10 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->setGravity(I)V
 
-    .line 97
     iput-object p2, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->mLunarDateSetListener:Lcom/letv/leui/widget/LeDatePickerDialog$OnLunarDateSetListener;
 
-    .line 98
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/LeDatePickerDialog;->init(Landroid/content/Context;)V
 
-    .line 99
     iget-object v0, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->mDateWheel:Lcom/letv/leui/widget/picker/DateWheel;
 
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
@@ -182,12 +162,10 @@
 
     invoke-virtual {v0, v1, v3, v2, p6}, Lcom/letv/leui/widget/picker/DateWheel;->setCalendar(Ljava/util/Calendar;ZZZ)V
 
-    .line 100
     iget-object v0, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->mDateWheel:Lcom/letv/leui/widget/picker/DateWheel;
 
     invoke-virtual {v0, p3, p4, p5, v3}, Lcom/letv/leui/widget/picker/DateWheel;->updateDate(IIIZ)V
 
-    .line 102
     return-void
 .end method
 
@@ -200,34 +178,27 @@
     .prologue
     const/16 v6, 0x76c
 
-    .line 264
     const/4 v3, 0x0
 
-    .line 265
     .local v3, "pattern":Ljava/lang/String;
     iget-boolean v5, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->isChinese:Z
 
     if-eqz v5, :cond_1
 
-    .line 266
     if-ne p1, v6, :cond_0
 
-    .line 267
     const-string v3, "MM\u6708dd\u65e5"
 
-    .line 280
     :goto_0
     new-instance v1, Ljava/text/SimpleDateFormat;
 
     invoke-direct {v1, v3}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 281
     .local v1, "dateFormat":Ljava/text/SimpleDateFormat;
     new-instance v0, Ljava/util/GregorianCalendar;
 
     invoke-direct {v0, p1, p2, p3}, Ljava/util/GregorianCalendar;-><init>(III)V
 
-    .line 282
     .local v0, "ca":Ljava/util/Calendar;
     invoke-virtual {v0}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
 
@@ -237,11 +208,9 @@
 
     move-result-object v2
 
-    .line 283
     .local v2, "datetext":Ljava/lang/String;
     return-object v2
 
-    .line 269
     .end local v0    # "ca":Ljava/util/Calendar;
     .end local v1    # "dateFormat":Ljava/text/SimpleDateFormat;
     .end local v2    # "datetext":Ljava/lang/String;
@@ -250,18 +219,14 @@
 
     goto :goto_0
 
-    .line 272
     :cond_1
     const/4 v4, 0x0
 
-    .line 273
     .local v4, "skeleton":Ljava/lang/String;
     if-ne p1, v6, :cond_2
 
-    .line 274
     const-string v4, "MM-dd"
 
-    .line 278
     :goto_1
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
@@ -273,7 +238,6 @@
 
     goto :goto_0
 
-    .line 276
     :cond_2
     const-string v4, "yyyy-MM-dd"
 
@@ -290,7 +254,6 @@
     .end annotation
 
     .prologue
-    .line 195
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v1
@@ -305,12 +268,10 @@
 
     iput-object v1, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->view:Landroid/view/View;
 
-    .line 196
     iget-object v1, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->view:Landroid/view/View;
 
     invoke-virtual {p0, v1}, Lcom/letv/leui/widget/LeDatePickerDialog;->setContentView(Landroid/view/View;)V
 
-    .line 197
     iget-object v1, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->view:Landroid/view/View;
 
     const v2, 0x102007d
@@ -321,7 +282,6 @@
 
     invoke-virtual {v1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 198
     iget-object v1, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->view:Landroid/view/View;
 
     const v2, 0x102007e
@@ -332,7 +292,6 @@
 
     invoke-virtual {v1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 199
     const v1, 0x102007c
 
     invoke-virtual {p0, v1}, Lcom/letv/leui/widget/LeDatePickerDialog;->findViewById(I)Landroid/view/View;
@@ -343,19 +302,16 @@
 
     iput-object v1, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->mDateWheel:Lcom/letv/leui/widget/picker/DateWheel;
 
-    .line 200
     iget-object v1, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->mDateWheel:Lcom/letv/leui/widget/picker/DateWheel;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Lcom/letv/leui/widget/picker/DateWheel;->setCyclic(Z)V
 
-    .line 201
     const/16 v1, 0x76e
 
     invoke-virtual {p0, v1}, Lcom/letv/leui/widget/LeDatePickerDialog;->setMinYear(I)V
 
-    .line 202
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -368,7 +324,6 @@
 
     iput-object v1, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->timeStr:Ljava/lang/String;
 
-    .line 203
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -399,7 +354,6 @@
 
     iput-object v1, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->default_year:Ljava/lang/String;
 
-    .line 204
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeDatePickerDialog;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -418,7 +372,6 @@
 
     move-result-object v0
 
-    .line 205
     .local v0, "language":Ljava/lang/String;
     const-string v1, "zh"
 
@@ -428,23 +381,19 @@
 
     if-eqz v1, :cond_0
 
-    .line 206
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->isChinese:Z
 
-    .line 208
     :cond_0
     iget-object v1, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->mDateSetListener:Lcom/letv/leui/widget/LeDatePickerDialog$OnDateSetListener;
 
     if-eqz v1, :cond_1
 
-    .line 209
     iget-object v1, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->mDateWheel:Lcom/letv/leui/widget/picker/DateWheel;
 
     invoke-virtual {v1, p0}, Lcom/letv/leui/widget/picker/DateWheel;->addOnDateChangedListener(Lcom/letv/leui/widget/picker/DateWheel$OnDateChangedListener;)V
 
-    .line 213
     :goto_0
     iget-object v1, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->mDateWheel:Lcom/letv/leui/widget/picker/DateWheel;
 
@@ -452,7 +401,6 @@
 
     invoke-virtual {v1, v2}, Lcom/letv/leui/widget/picker/DateWheel;->setCenterItemTextColor(I)V
 
-    .line 214
     const v1, 0x102007b
 
     invoke-virtual {p0, v1}, Lcom/letv/leui/widget/LeDatePickerDialog;->findViewById(I)Landroid/view/View;
@@ -463,7 +411,6 @@
 
     iput-object v1, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->timeTv:Landroid/widget/TextView;
 
-    .line 215
     const v1, 0x1020079
 
     invoke-virtual {p0, v1}, Lcom/letv/leui/widget/LeDatePickerDialog;->findViewById(I)Landroid/view/View;
@@ -474,10 +421,8 @@
 
     iput-object v1, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->titleTv:Landroid/widget/TextView;
 
-    .line 217
     return-void
 
-    .line 211
     :cond_1
     iget-object v1, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->mDateWheel:Lcom/letv/leui/widget/picker/DateWheel;
 
@@ -490,7 +435,6 @@
     .locals 1
 
     .prologue
-    .line 137
     iget-object v0, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->timeTv:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getVisibility()I
@@ -518,25 +462,18 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 290
     iput-object v0, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->view:Landroid/view/View;
 
-    .line 291
     iput-object v0, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->mDateWheel:Lcom/letv/leui/widget/picker/DateWheel;
 
-    .line 292
     iput-object v0, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->mDateSetListener:Lcom/letv/leui/widget/LeDatePickerDialog$OnDateSetListener;
 
-    .line 293
     iput-object v0, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->timeTv:Landroid/widget/TextView;
 
-    .line 294
     iput-object v0, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->titleTv:Landroid/widget/TextView;
 
-    .line 295
     iput-object v0, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->timeStr:Ljava/lang/String;
 
-    .line 296
     return-void
 .end method
 
@@ -544,7 +481,6 @@
     .locals 1
 
     .prologue
-    .line 181
     iget-object v0, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->timeTv:Landroid/widget/TextView;
 
     return-object v0
@@ -554,7 +490,6 @@
     .locals 1
 
     .prologue
-    .line 141
     iget-object v0, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->mDateWheel:Lcom/letv/leui/widget/picker/DateWheel;
 
     return-object v0
@@ -565,7 +500,6 @@
     .param p1, "isShow"    # Z
 
     .prologue
-    .line 189
     iget-object v1, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->timeTv:Landroid/widget/TextView;
 
     if-eqz p1, :cond_0
@@ -575,10 +509,8 @@
     :goto_0
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 190
     return-void
 
-    .line 189
     :cond_0
     const/16 v0, 0x8
 
@@ -590,29 +522,24 @@
     .param p1, "b"    # Z
 
     .prologue
-    .line 119
     iget-object v1, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->titleTv:Landroid/widget/TextView;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 120
     if-nez p1, :cond_0
 
-    .line 121
     iget-object v1, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->timeTv:Landroid/widget/TextView;
 
     const/16 v2, 0x8
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 122
     iget-object v1, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->mLunarDateSetListener:Lcom/letv/leui/widget/LeDatePickerDialog$OnLunarDateSetListener;
 
     if-nez v1, :cond_1
 
-    .line 123
     iget v1, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->year:I
 
     iget v2, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->month:I
@@ -623,19 +550,16 @@
 
     move-result-object v0
 
-    .line 124
     .local v0, "dateText":Ljava/lang/String;
     iget-object v1, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->titleTv:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 134
     .end local v0    # "dateText":Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
 
-    .line 126
     :cond_1
     iget-object v1, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->default_year:Ljava/lang/String;
 
@@ -647,7 +571,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 127
     iget-object v1, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->titleTv:Landroid/widget/TextView;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -674,7 +597,6 @@
 
     goto :goto_0
 
-    .line 129
     :cond_2
     iget-object v1, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->titleTv:Landroid/widget/TextView;
 
@@ -714,24 +636,20 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 221
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 237
     :goto_0
     return-void
 
-    .line 223
     :pswitch_0
     iget-object v0, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->mDateSetListener:Lcom/letv/leui/widget/LeDatePickerDialog$OnDateSetListener;
 
     if-eqz v0, :cond_1
 
-    .line 224
     iget-object v0, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->mDateSetListener:Lcom/letv/leui/widget/LeDatePickerDialog$OnDateSetListener;
 
     iget v1, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->year:I
@@ -742,20 +660,17 @@
 
     invoke-interface {v0, v1, v2, v3}, Lcom/letv/leui/widget/LeDatePickerDialog$OnDateSetListener;->onDateSet(III)V
 
-    .line 228
     :cond_0
     :goto_1
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeDatePickerDialog;->dismiss()V
 
     goto :goto_0
 
-    .line 225
     :cond_1
     iget-object v0, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->mLunarDateSetListener:Lcom/letv/leui/widget/LeDatePickerDialog$OnLunarDateSetListener;
 
     if-eqz v0, :cond_0
 
-    .line 226
     iget-object v0, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->mLunarDateSetListener:Lcom/letv/leui/widget/LeDatePickerDialog$OnLunarDateSetListener;
 
     iget-object v1, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->yearStr:Ljava/lang/String;
@@ -768,13 +683,11 @@
 
     goto :goto_1
 
-    .line 232
     :pswitch_1
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeDatePickerDialog;->dismiss()V
 
     goto :goto_0
 
-    .line 221
     nop
 
     :pswitch_data_0
@@ -792,7 +705,6 @@
     .param p4, "day"    # Ljava/lang/String;
 
     .prologue
-    .line 301
     const-string v0, "--"
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -801,29 +713,23 @@
 
     if-eqz v0, :cond_0
 
-    .line 302
     const-string p2, ""
 
-    .line 303
     iget-object v0, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->default_year:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->yearStr:Ljava/lang/String;
 
-    .line 307
     :goto_0
     iput-object p3, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->monthStr:Ljava/lang/String;
 
-    .line 308
     iput-object p4, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->dayStr:Ljava/lang/String;
 
-    .line 309
     invoke-direct {p0}, Lcom/letv/leui/widget/LeDatePickerDialog;->subtitleIsShown()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 310
     iget-object v0, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->timeTv:Landroid/widget/TextView;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -848,17 +754,14 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 314
     :goto_1
     return-void
 
-    .line 305
     :cond_0
     iput-object p2, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->yearStr:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 312
     :cond_1
     iget-object v0, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->titleTv:Landroid/widget/TextView;
 
@@ -895,21 +798,16 @@
     .param p4, "day"    # I
 
     .prologue
-    .line 251
     iput p2, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->year:I
 
-    .line 252
     iput p3, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->month:I
 
-    .line 253
     iput p4, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->day:I
 
-    .line 254
     invoke-direct {p0, p2, p3, p4}, Lcom/letv/leui/widget/LeDatePickerDialog;->getDateText(III)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 255
     .local v0, "dateText":Ljava/lang/String;
     invoke-direct {p0}, Lcom/letv/leui/widget/LeDatePickerDialog;->subtitleIsShown()Z
 
@@ -917,16 +815,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 256
     iget-object v1, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->timeTv:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 261
     :goto_0
     return-void
 
-    .line 258
     :cond_0
     iget-object v1, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->titleTv:Landroid/widget/TextView;
 
@@ -940,12 +835,10 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 246
     iget-object v0, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->mDateWheel:Lcom/letv/leui/widget/picker/DateWheel;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/picker/DateWheel;->setCenterItemTextColor(I)V
 
-    .line 247
     return-void
 .end method
 
@@ -954,12 +847,10 @@
     .param p1, "max"    # I
 
     .prologue
-    .line 168
     iget-object v0, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->mDateWheel:Lcom/letv/leui/widget/picker/DateWheel;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/picker/DateWheel;->setMaxYear(I)V
 
-    .line 169
     return-void
 .end method
 
@@ -968,12 +859,10 @@
     .param p1, "min"    # I
 
     .prologue
-    .line 160
     iget-object v0, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->mDateWheel:Lcom/letv/leui/widget/picker/DateWheel;
 
     invoke-virtual {v0, p1}, Lcom/letv/leui/widget/picker/DateWheel;->setMinYear(I)V
 
-    .line 161
     return-void
 .end method
 
@@ -982,12 +871,10 @@
     .param p1, "resid"    # I
 
     .prologue
-    .line 176
     iget-object v0, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->titleTv:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 178
     return-void
 .end method
 
@@ -996,19 +883,16 @@
     .param p1, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 109
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 110
     iget-object v0, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->titleTv:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 112
     :cond_0
     return-void
 .end method
@@ -1020,13 +904,11 @@
     .param p3, "dayOfMonth"    # I
 
     .prologue
-    .line 152
     iget-object v0, p0, Lcom/letv/leui/widget/LeDatePickerDialog;->mDateWheel:Lcom/letv/leui/widget/picker/DateWheel;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, p1, p2, p3, v1}, Lcom/letv/leui/widget/picker/DateWheel;->updateDate(IIIZ)V
 
-    .line 153
     return-void
 .end method

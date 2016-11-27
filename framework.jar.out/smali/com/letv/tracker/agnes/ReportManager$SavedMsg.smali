@@ -27,16 +27,12 @@
     .param p2, "msg"    # Ljava/lang/Object;
 
     .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
     iput p1, p0, Lcom/letv/tracker/agnes/ReportManager$SavedMsg;->type:I
 
-    .line 25
     iput-object p2, p0, Lcom/letv/tracker/agnes/ReportManager$SavedMsg;->msg:Ljava/lang/Object;
 
-    .line 26
     return-void
 .end method
 
@@ -46,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 33
     iget-object v0, p0, Lcom/letv/tracker/agnes/ReportManager$SavedMsg;->msg:Ljava/lang/Object;
 
     return-object v0
@@ -56,7 +51,6 @@
     .locals 1
 
     .prologue
-    .line 29
     iget v0, p0, Lcom/letv/tracker/agnes/ReportManager$SavedMsg;->type:I
 
     return v0

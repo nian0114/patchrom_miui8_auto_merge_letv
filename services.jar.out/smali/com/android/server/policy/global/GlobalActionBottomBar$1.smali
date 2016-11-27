@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 369
     iput-object p1, p0, Lcom/android/server/policy/global/GlobalActionBottomBar$1;->this$0:Lcom/android/server/policy/global/GlobalActionBottomBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,13 +40,11 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 387
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar$1;->this$0:Lcom/android/server/policy/global/GlobalActionBottomBar;
 
     # invokes: Lcom/android/server/policy/global/GlobalActionBottomBar;->resetScale()V
     invoke-static {v0}, Lcom/android/server/policy/global/GlobalActionBottomBar;->access$100(Lcom/android/server/policy/global/GlobalActionBottomBar;)V
 
-    .line 388
     return-void
 .end method
 
@@ -56,7 +53,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 383
     return-void
 .end method
 
@@ -65,7 +61,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 377
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar$1;->this$0:Lcom/android/server/policy/global/GlobalActionBottomBar;
 
     iget-boolean v0, v0, Lcom/android/server/policy/global/GlobalActionBottomBar;->mCancel:Z
@@ -81,7 +76,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 378
     iget-object v0, p0, Lcom/android/server/policy/global/GlobalActionBottomBar$1;->this$0:Lcom/android/server/policy/global/GlobalActionBottomBar;
 
     # getter for: Lcom/android/server/policy/global/GlobalActionBottomBar;->mScaleAnimator:Landroid/animation/ObjectAnimator;
@@ -91,7 +85,6 @@
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 379
     :cond_0
     return-void
 .end method
@@ -101,6 +94,5 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 373
     return-void
 .end method

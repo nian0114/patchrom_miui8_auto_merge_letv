@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 69
     iput-object p1, p0, Lcom/letv/tracker/agnes/ReportManager$1$1;->this$1:Lcom/letv/tracker/agnes/ReportManager$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,13 +39,11 @@
     .locals 1
 
     .prologue
-    .line 72
     iget-object v0, p0, Lcom/letv/tracker/agnes/ReportManager$1$1;->this$1:Lcom/letv/tracker/agnes/ReportManager$1;
 
     iget-object v0, v0, Lcom/letv/tracker/agnes/ReportManager$1;->this$0:Lcom/letv/tracker/agnes/ReportManager;
 
     invoke-virtual {v0}, Lcom/letv/tracker/agnes/ReportManager;->proccessMsgInQueue()V
 
-    .line 73
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 152
     iput-object p1, p0, Lcom/letv/leui/util/ScrollBarAnimHelper$ScrollBarAnimChangedListener;->this$0:Lcom/letv/leui/util/ScrollBarAnimHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,6 +37,5 @@
     .param p1, "percent"    # F
 
     .prologue
-    .line 154
     return-void
 .end method

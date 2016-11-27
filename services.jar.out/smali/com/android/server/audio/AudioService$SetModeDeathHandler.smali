@@ -34,23 +34,18 @@
     .param p3, "pid"    # I
 
     .prologue
-    .line 2362
     iput-object p1, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->this$0:Lcom/android/server/audio/AudioService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2360
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mMode:I
 
-    .line 2363
     iput-object p2, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mCb:Landroid/os/IBinder;
 
-    .line 2364
     iput p3, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mPid:I
 
-    .line 2365
     return-void
 .end method
 
@@ -59,7 +54,6 @@
     .param p0, "x0"    # Lcom/android/server/audio/AudioService$SetModeDeathHandler;
 
     .prologue
-    .line 2357
     iget v0, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mPid:I
 
     return v0
@@ -71,10 +65,8 @@
     .locals 10
 
     .prologue
-    .line 2368
     const/4 v3, 0x0
 
-    .line 2369
     .local v3, "newModeOwnerPid":I
     iget-object v4, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->this$0:Lcom/android/server/audio/AudioService;
 
@@ -85,7 +77,6 @@
 
     monitor-enter v5
 
-    .line 2370
     :try_start_0
     const-string v4, "AudioService"
 
@@ -93,7 +84,6 @@
 
     invoke-static {v4, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2371
     iget-object v4, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->this$0:Lcom/android/server/audio/AudioService;
 
     # getter for: Lcom/android/server/audio/AudioService;->mSetModeDeathHandlers:Ljava/util/ArrayList;
@@ -105,47 +95,38 @@
 
     move-result v2
 
-    .line 2372
     .local v2, "index":I
     if-gez v2, :cond_1
 
-    .line 2373
     const-string v4, "AudioService"
 
     const-string v6, "unregistered setMode() client died"
 
     invoke-static {v4, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2377
     :goto_0
     monitor-exit v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2380
     if-eqz v3, :cond_0
 
-    .line 2381
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 2382
     .local v0, "ident":J
     iget-object v4, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->this$0:Lcom/android/server/audio/AudioService;
 
     # invokes: Lcom/android/server/audio/AudioService;->disconnectBluetoothSco(I)V
     invoke-static {v4, v3}, Lcom/android/server/audio/AudioService;->access$1500(Lcom/android/server/audio/AudioService;I)V
 
-    .line 2383
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2385
     .end local v0    # "ident":J
     :cond_0
     return-void
 
-    .line 2375
     :cond_1
     :try_start_1
     iget-object v4, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->this$0:Lcom/android/server/audio/AudioService;
@@ -165,7 +146,6 @@
 
     goto :goto_0
 
-    .line 2377
     .end local v2    # "index":I
     :catchall_0
     move-exception v4
@@ -181,7 +161,6 @@
     .locals 1
 
     .prologue
-    .line 2400
     iget-object v0, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mCb:Landroid/os/IBinder;
 
     return-object v0
@@ -191,7 +170,6 @@
     .locals 1
 
     .prologue
-    .line 2396
     iget v0, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mMode:I
 
     return v0
@@ -201,7 +179,6 @@
     .locals 1
 
     .prologue
-    .line 2388
     iget v0, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mPid:I
 
     return v0
@@ -212,9 +189,7 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 2392
     iput p1, p0, Lcom/android/server/audio/AudioService$SetModeDeathHandler;->mMode:I
 
-    .line 2393
     return-void
 .end method

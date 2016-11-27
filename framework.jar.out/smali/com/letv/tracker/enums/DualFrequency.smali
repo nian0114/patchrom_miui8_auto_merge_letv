@@ -39,7 +39,6 @@
 
     const/4 v3, 0x0
 
-    .line 4
     new-instance v0, Lcom/letv/tracker/enums/DualFrequency;
 
     const-string v1, "_2_4G"
@@ -50,7 +49,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/DualFrequency;->_2_4G:Lcom/letv/tracker/enums/DualFrequency;
 
-    .line 5
     new-instance v0, Lcom/letv/tracker/enums/DualFrequency;
 
     const-string v1, "_4G"
@@ -61,7 +59,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/DualFrequency;->_4G:Lcom/letv/tracker/enums/DualFrequency;
 
-    .line 6
     new-instance v0, Lcom/letv/tracker/enums/DualFrequency;
 
     const-string v1, "Auto"
@@ -72,7 +69,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/DualFrequency;->Auto:Lcom/letv/tracker/enums/DualFrequency;
 
-    .line 3
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/letv/tracker/enums/DualFrequency;
@@ -106,13 +102,10 @@
     .end annotation
 
     .prologue
-    .line 10
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 11
     iput-object p3, p0, Lcom/letv/tracker/enums/DualFrequency;->id:Ljava/lang/String;
 
-    .line 12
     return-void
 .end method
 
@@ -121,7 +114,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 3
     const-class v0, Lcom/letv/tracker/enums/DualFrequency;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -137,7 +129,6 @@
     .locals 1
 
     .prologue
-    .line 3
     sget-object v0, Lcom/letv/tracker/enums/DualFrequency;->$VALUES:[Lcom/letv/tracker/enums/DualFrequency;
 
     invoke-virtual {v0}, [Lcom/letv/tracker/enums/DualFrequency;->clone()Ljava/lang/Object;
@@ -155,7 +146,6 @@
     .locals 1
 
     .prologue
-    .line 15
     iget-object v0, p0, Lcom/letv/tracker/enums/DualFrequency;->id:Ljava/lang/String;
 
     return-object v0

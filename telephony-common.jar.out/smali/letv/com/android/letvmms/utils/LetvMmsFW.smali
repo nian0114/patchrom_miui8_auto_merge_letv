@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,12 +21,10 @@
     .locals 2
 
     .prologue
-    .line 75
     invoke-static {}, Landroid/telephony/SmsManager;->getDefault()Landroid/telephony/SmsManager;
 
     move-result-object v0
 
-    .line 76
     .local v0, "sm":Landroid/telephony/SmsManager;
     invoke-virtual {v0}, Landroid/telephony/SmsManager;->getSmsCapacityOnIcc()I
 
@@ -41,12 +38,10 @@
     .param p0, "subId"    # I
 
     .prologue
-    .line 64
     invoke-static {p0}, Landroid/telephony/SmsManager;->getSmsManagerForSubscriptionId(I)Landroid/telephony/SmsManager;
 
     move-result-object v0
 
-    .line 65
     .local v0, "sm":Landroid/telephony/SmsManager;
     invoke-virtual {v0}, Landroid/telephony/SmsManager;->getSmsCapacityOnIcc()I
 
@@ -59,12 +54,10 @@
     .locals 2
 
     .prologue
-    .line 40
     invoke-static {}, Landroid/telephony/SmsManager;->getDefault()Landroid/telephony/SmsManager;
 
     move-result-object v0
 
-    .line 41
     .local v0, "sm":Landroid/telephony/SmsManager;
     invoke-virtual {v0}, Landroid/telephony/SmsManager;->getSmscAddressFromIcc()Ljava/lang/String;
 
@@ -78,12 +71,10 @@
     .param p0, "subId"    # I
 
     .prologue
-    .line 29
     invoke-static {p0}, Landroid/telephony/SmsManager;->getSmsManagerForSubscriptionId(I)Landroid/telephony/SmsManager;
 
     move-result-object v0
 
-    .line 30
     .local v0, "sm":Landroid/telephony/SmsManager;
     invoke-virtual {v0}, Landroid/telephony/SmsManager;->getSmscAddressFromIcc()Ljava/lang/String;
 
@@ -98,12 +89,10 @@
     .param p1, "scAddress"    # Ljava/lang/String;
 
     .prologue
-    .line 53
     invoke-static {p0}, Landroid/telephony/SmsManager;->getSmsManagerForSubscriptionId(I)Landroid/telephony/SmsManager;
 
     move-result-object v0
 
-    .line 54
     .local v0, "sm":Landroid/telephony/SmsManager;
     invoke-virtual {v0, p1}, Landroid/telephony/SmsManager;->setSmscAddressToIcc(Ljava/lang/String;)Z
 

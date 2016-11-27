@@ -43,7 +43,6 @@
     .param p4, "x2"    # Z
 
     .prologue
-    .line 91
     iput-object p1, p0, Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory$1;->this$0:Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory;
 
     iput-object p5, p0, Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory$1;->val$context:Lcom/google/gson/Gson;
@@ -56,7 +55,6 @@
 
     invoke-direct {p0, p2, p3, p4}, Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;-><init>(Ljava/lang/String;ZZ)V
 
-    .line 92
     iget-object v0, p0, Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory$1;->this$0:Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory;
 
     iget-object v1, p0, Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory$1;->val$context:Lcom/google/gson/Gson;
@@ -89,14 +87,12 @@
     .end annotation
 
     .prologue
-    .line 103
     iget-object v1, p0, Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory$1;->typeAdapter:Lcom/google/gson/TypeAdapter;
 
     invoke-virtual {v1, p1}, Lcom/google/gson/TypeAdapter;->read(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 104
     .local v0, "fieldValue":Ljava/lang/Object;
     if-nez v0, :cond_0
 
@@ -104,13 +100,11 @@
 
     if-nez v1, :cond_1
 
-    .line 105
     :cond_0
     iget-object v1, p0, Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory$1;->val$field:Ljava/lang/reflect/Field;
 
     invoke-virtual {v1, p2, v0}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 107
     :cond_1
     return-void
 .end method
@@ -127,14 +121,12 @@
     .end annotation
 
     .prologue
-    .line 96
     iget-object v2, p0, Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory$1;->val$field:Ljava/lang/reflect/Field;
 
     invoke-virtual {v2, p2}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 97
     .local v0, "fieldValue":Ljava/lang/Object;
     new-instance v1, Lcom/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper;
 
@@ -150,11 +142,9 @@
 
     invoke-direct {v1, v2, v3, v4}, Lcom/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper;-><init>(Lcom/google/gson/Gson;Lcom/google/gson/TypeAdapter;Ljava/lang/reflect/Type;)V
 
-    .line 99
     .local v1, "t":Lcom/google/gson/TypeAdapter;
     invoke-virtual {v1, p1, v0}, Lcom/google/gson/TypeAdapter;->write(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
 
-    .line 100
     return-void
 .end method
 
@@ -171,17 +161,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 109
     iget-boolean v2, p0, Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory$1;->serialized:Z
 
     if-nez v2, :cond_1
 
-    .line 111
     :cond_0
     :goto_0
     return v1
 
-    .line 110
     :cond_1
     iget-object v2, p0, Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory$1;->val$field:Ljava/lang/reflect/Field;
 
@@ -189,7 +176,6 @@
 
     move-result-object v0
 
-    .line 111
     .local v0, "fieldValue":Ljava/lang/Object;
     if-eq v0, p1, :cond_0
 

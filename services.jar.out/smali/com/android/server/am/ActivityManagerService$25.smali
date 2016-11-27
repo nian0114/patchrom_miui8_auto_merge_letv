@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 22258
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$25;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Landroid/content/IIntentReceiver$Stub;-><init>()V
@@ -49,6 +48,5 @@
     .end annotation
 
     .prologue
-    .line 22263
     return-void
 .end method

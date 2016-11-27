@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 846
     iput-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$11;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,22 +40,18 @@
     .prologue
     const/4 v4, -0x1
 
-    .line 851
     const-string v1, "android.intent.extra.UID"
 
     invoke-virtual {p2, v1, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 852
     .local v0, "uid":I
     if-ne v0, v4, :cond_0
 
-    .line 865
     :goto_0
     return-void
 
-    .line 855
     :cond_0
     const-string v1, "NetworkPolicy"
 
@@ -80,14 +75,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 856
     iget-object v1, p0, Lcom/android/server/net/NetworkPolicyManagerService$11;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object v2, v1, Lcom/android/server/net/NetworkPolicyManagerService;->mRulesLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 857
     :try_start_0
     iget-object v1, p0, Lcom/android/server/net/NetworkPolicyManagerService$11;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -95,7 +88,6 @@
 
     invoke-virtual {v1, v0}, Landroid/util/SparseIntArray;->delete(I)V
 
-    .line 858
     iget-object v1, p0, Lcom/android/server/net/NetworkPolicyManagerService$11;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object v1, v1, Lcom/android/server/net/NetworkPolicyManagerService;->mUidWifiPolicy:Landroid/util/SparseIntArray;
@@ -108,14 +100,12 @@
 
     if-eq v1, v4, :cond_1
 
-    .line 859
     iget-object v1, p0, Lcom/android/server/net/NetworkPolicyManagerService$11;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object v1, v1, Lcom/android/server/net/NetworkPolicyManagerService;->mUidWifiPolicy:Landroid/util/SparseIntArray;
 
     invoke-virtual {v1, v0}, Landroid/util/SparseIntArray;->delete(I)V
 
-    .line 860
     iget-object v1, p0, Lcom/android/server/net/NetworkPolicyManagerService$11;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     const/4 v3, 0x1
@@ -127,18 +117,15 @@
     # invokes: Lcom/android/server/net/NetworkPolicyManagerService;->setUidWifiPolicyUncheckedLocked(IIZZ)V
     invoke-static {v1, v0, v3, v4, v5}, Lcom/android/server/net/NetworkPolicyManagerService;->access$1000(Lcom/android/server/net/NetworkPolicyManagerService;IIZZ)V
 
-    .line 862
     :cond_1
     iget-object v1, p0, Lcom/android/server/net/NetworkPolicyManagerService$11;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-virtual {v1, v0}, Lcom/android/server/net/NetworkPolicyManagerService;->updateRulesForUidLocked(I)V
 
-    .line 863
     iget-object v1, p0, Lcom/android/server/net/NetworkPolicyManagerService$11;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-virtual {v1}, Lcom/android/server/net/NetworkPolicyManagerService;->writePolicyLocked()V
 
-    .line 864
     monitor-exit v2
 
     goto :goto_0

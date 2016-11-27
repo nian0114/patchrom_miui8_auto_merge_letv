@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 92
     iput-object p1, p0, Lcom/letv/leui/widget/LeActionBarBottomSlider$1;->this$0:Lcom/letv/leui/widget/LeActionBarBottomSlider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 96
     iget-object v3, p0, Lcom/letv/leui/widget/LeActionBarBottomSlider$1;->this$0:Lcom/letv/leui/widget/LeActionBarBottomSlider;
 
     # getter for: Lcom/letv/leui/widget/LeActionBarBottomSlider;->mMenuView:Lcom/letv/leui/widget/LeTransLinearLayout;
@@ -58,7 +56,6 @@
 
     float-to-int v1, v3
 
-    .line 97
     .local v1, "top":I
     iget-object v3, p0, Lcom/letv/leui/widget/LeActionBarBottomSlider$1;->this$0:Lcom/letv/leui/widget/LeActionBarBottomSlider;
 
@@ -71,7 +68,6 @@
 
     move-result v0
 
-    .line 98
     .local v0, "bottom":I
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
@@ -79,7 +75,6 @@
 
     float-to-int v2, v3
 
-    .line 99
     .local v2, "y":I
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
@@ -87,18 +82,15 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 100
     if-lt v2, v1, :cond_0
 
     if-le v2, v0, :cond_1
 
-    .line 101
     :cond_0
     iget-object v3, p0, Lcom/letv/leui/widget/LeActionBarBottomSlider$1;->this$0:Lcom/letv/leui/widget/LeActionBarBottomSlider;
 
     invoke-virtual {v3}, Lcom/letv/leui/widget/LeActionBarBottomSlider;->disappear()V
 
-    .line 104
     :cond_1
     return v4
 .end method

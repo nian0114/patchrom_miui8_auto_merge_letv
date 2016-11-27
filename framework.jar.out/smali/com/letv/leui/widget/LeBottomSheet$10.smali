@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 878
     iput-object p1, p0, Lcom/letv/leui/widget/LeBottomSheet$10;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 882
     iget-object v0, p0, Lcom/letv/leui/widget/LeBottomSheet$10;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # getter for: Lcom/letv/leui/widget/LeBottomSheet;->mLeBotOnClickListener:Lcom/letv/leui/widget/LeBottomSheet$LeBotOnClickListener;
@@ -51,7 +49,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 883
     iget-object v0, p0, Lcom/letv/leui/widget/LeBottomSheet$10;->this$0:Lcom/letv/leui/widget/LeBottomSheet;
 
     # getter for: Lcom/letv/leui/widget/LeBottomSheet;->mLeBotOnClickListener:Lcom/letv/leui/widget/LeBottomSheet$LeBotOnClickListener;
@@ -61,7 +58,6 @@
 
     invoke-interface {v0}, Lcom/letv/leui/widget/LeBottomSheet$LeBotOnClickListener;->confirmOnClickListener()V
 
-    .line 885
     :cond_0
     return-void
 .end method

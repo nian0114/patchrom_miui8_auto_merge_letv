@@ -16,13 +16,10 @@
     .param p1, "constructorConstructor"    # Lcom/google/gson/internal/ConstructorConstructor;
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     iput-object p1, p0, Lcom/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory;->constructorConstructor:Lcom/google/gson/internal/ConstructorConstructor;
 
-    .line 38
     return-void
 .end method
 
@@ -46,13 +43,11 @@
     .end annotation
 
     .prologue
-    .line 52
     .local p2, "fieldType":Lcom/google/gson/reflect/TypeToken;, "Lcom/google/gson/reflect/TypeToken<*>;"
     invoke-interface {p3}, Lcom/google/gson/annotations/JsonAdapter;->value()Ljava/lang/Class;
 
     move-result-object v2
 
-    .line 53
     .local v2, "value":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-class v3, Lcom/google/gson/TypeAdapter;
 
@@ -62,10 +57,8 @@
 
     if-eqz v3, :cond_0
 
-    .line 54
     move-object v0, v2
 
-    .line 55
     .local v0, "typeAdapter":Ljava/lang/Class;, "Ljava/lang/Class<Lcom/google/gson/TypeAdapter<*>;>;"
     invoke-static {v0}, Lcom/google/gson/reflect/TypeToken;->get(Ljava/lang/Class;)Lcom/google/gson/reflect/TypeToken;
 
@@ -81,12 +74,10 @@
 
     check-cast v3, Lcom/google/gson/TypeAdapter;
 
-    .line 59
     .end local v0    # "typeAdapter":Ljava/lang/Class;, "Ljava/lang/Class<Lcom/google/gson/TypeAdapter<*>;>;"
     :goto_0
     return-object v3
 
-    .line 57
     :cond_0
     const-class v3, Lcom/google/gson/TypeAdapterFactory;
 
@@ -96,10 +87,8 @@
 
     if-eqz v3, :cond_1
 
-    .line 58
     move-object v1, v2
 
-    .line 59
     .local v1, "typeAdapterFactory":Ljava/lang/Class;, "Ljava/lang/Class<Lcom/google/gson/TypeAdapterFactory;>;"
     invoke-static {v1}, Lcom/google/gson/reflect/TypeToken;->get(Ljava/lang/Class;)Lcom/google/gson/reflect/TypeToken;
 
@@ -121,7 +110,6 @@
 
     goto :goto_0
 
-    .line 64
     .end local v1    # "typeAdapterFactory":Ljava/lang/Class;, "Ljava/lang/Class<Lcom/google/gson/TypeAdapterFactory;>;"
     :cond_1
     new-instance v3, Ljava/lang/IllegalArgumentException;
@@ -152,7 +140,6 @@
     .end annotation
 
     .prologue
-    .line 42
     .local p2, "targetType":Lcom/google/gson/reflect/TypeToken;, "Lcom/google/gson/reflect/TypeToken<TT;>;"
     invoke-virtual {p2}, Lcom/google/gson/reflect/TypeToken;->getRawType()Ljava/lang/Class;
 
@@ -166,14 +153,11 @@
 
     check-cast v0, Lcom/google/gson/annotations/JsonAdapter;
 
-    .line 43
     .local v0, "annotation":Lcom/google/gson/annotations/JsonAdapter;
     if-nez v0, :cond_0
 
-    .line 44
     const/4 v1, 0x0
 
-    .line 46
     :goto_0
     return-object v1
 

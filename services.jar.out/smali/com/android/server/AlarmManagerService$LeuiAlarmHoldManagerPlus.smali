@@ -44,7 +44,6 @@
     .locals 3
 
     .prologue
-    .line 4262
     const/4 v0, 0x3
 
     new-array v0, v0, [Ljava/lang/String;
@@ -79,29 +78,23 @@
     .prologue
     const-wide/16 v0, 0x0
 
-    .line 4275
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4273
     iput-wide v0, p0, Lcom/android/server/AlarmManagerService$LeuiAlarmHoldManagerPlus;->mLastHoldTime:J
 
-    .line 4276
     cmp-long v0, p1, v0
 
     if-nez v0, :cond_0
 
-    .line 4277
     const-string v0, "AlarmManager"
 
     const-string v1, "init LeuiAlarmHoldManagerPlus failed, nativeData == 0 !!!"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4282
     :goto_0
     return-void
 
-    .line 4280
     :cond_0
     new-instance v0, Ljava/util/HashMap;
 
@@ -109,7 +102,6 @@
 
     iput-object v0, p0, Lcom/android/server/AlarmManagerService$LeuiAlarmHoldManagerPlus;->mHoldAlarms:Ljava/util/Map;
 
-    .line 4281
     const-string v0, "AlarmManager"
 
     const-string v1, "init LeuiAlarmHoldManagerPlus..."
@@ -124,7 +116,6 @@
     .param p0, "x0"    # Lcom/android/server/AlarmManagerService$LeuiAlarmHoldManagerPlus;
 
     .prologue
-    .line 4255
     iget-object v0, p0, Lcom/android/server/AlarmManagerService$LeuiAlarmHoldManagerPlus;->mHoldAlarms:Ljava/util/Map;
 
     return-object v0
@@ -136,7 +127,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 4255
     invoke-direct {p0, p1}, Lcom/android/server/AlarmManagerService$LeuiAlarmHoldManagerPlus;->removeHoldAlarmLocked(Ljava/lang/String;)Z
 
     move-result v0
@@ -150,7 +140,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 4255
     invoke-direct {p0, p1}, Lcom/android/server/AlarmManagerService$LeuiAlarmHoldManagerPlus;->removeHoldAlarmLocked(I)Z
 
     move-result v0
@@ -164,7 +153,6 @@
     .param p1, "x1"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 4255
     invoke-direct {p0, p1}, Lcom/android/server/AlarmManagerService$LeuiAlarmHoldManagerPlus;->removeHoldAlarmLocked(Landroid/app/PendingIntent;)Z
 
     move-result v0
@@ -177,7 +165,6 @@
     .param p0, "x0"    # Lcom/android/server/AlarmManagerService$LeuiAlarmHoldManagerPlus;
 
     .prologue
-    .line 4255
     iget-wide v0, p0, Lcom/android/server/AlarmManagerService$LeuiAlarmHoldManagerPlus;->mLastHoldTime:J
 
     return-wide v0
@@ -189,16 +176,13 @@
     .param p2, "pkg"    # Ljava/lang/String;
 
     .prologue
-    .line 4313
     iget-object v3, p1, Lcom/android/server/AlarmManagerService$Alarm;->operation:Landroid/app/PendingIntent;
 
     if-nez v3, :cond_0
 
-    .line 4337
     :goto_0
     return-void
 
-    .line 4315
     :cond_0
     iget-object v3, p1, Lcom/android/server/AlarmManagerService$Alarm;->operation:Landroid/app/PendingIntent;
 
@@ -206,15 +190,12 @@
 
     move-result-object v0
 
-    .line 4316
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "NULL"
 
-    .line 4317
     .local v1, "key":Ljava/lang/String;
     if-nez v0, :cond_3
 
-    .line 4324
     :cond_1
     :goto_1
     iget-object v3, p0, Lcom/android/server/AlarmManagerService$LeuiAlarmHoldManagerPlus;->mHoldAlarms:Ljava/util/Map;
@@ -225,28 +206,23 @@
 
     check-cast v2, Ljava/util/HashMap;
 
-    .line 4325
     .local v2, "pkgMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/android/server/AlarmManagerService$Alarm;>;"
     if-nez v2, :cond_5
 
-    .line 4326
     new-instance v2, Ljava/util/HashMap;
 
     .end local v2    # "pkgMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/android/server/AlarmManagerService$Alarm;>;"
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
-    .line 4327
     .restart local v2    # "pkgMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/android/server/AlarmManagerService$Alarm;>;"
     iget-object v3, p0, Lcom/android/server/AlarmManagerService$LeuiAlarmHoldManagerPlus;->mHoldAlarms:Ljava/util/Map;
 
     invoke-interface {v3, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4331
     :cond_2
     :goto_2
     invoke-virtual {v2, v1, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4332
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v4
@@ -255,7 +231,6 @@
 
     goto :goto_0
 
-    .line 4318
     .end local v2    # "pkgMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/android/server/AlarmManagerService$Alarm;>;"
     :cond_3
     invoke-virtual {v0}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -268,14 +243,12 @@
 
     if-nez v3, :cond_4
 
-    .line 4319
     invoke-virtual {v0}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
 
     goto :goto_1
 
-    .line 4320
     :cond_4
     invoke-virtual {v0}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
@@ -283,7 +256,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 4321
     invoke-virtual {v0}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v3
@@ -294,7 +266,6 @@
 
     goto :goto_1
 
-    .line 4328
     .restart local v2    # "pkgMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/android/server/AlarmManagerService$Alarm;>;"
     :cond_5
     invoke-virtual {v2}, Ljava/util/HashMap;->size()I
@@ -305,7 +276,6 @@
 
     if-le v3, v4, :cond_2
 
-    .line 4329
     invoke-virtual {v2}, Ljava/util/HashMap;->clear()V
 
     goto :goto_2
@@ -316,7 +286,6 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 4409
     iget-object v5, p0, Lcom/android/server/AlarmManagerService$LeuiAlarmHoldManagerPlus;->mHoldAlarms:Ljava/util/Map;
 
     if-eqz v5, :cond_0
@@ -329,19 +298,15 @@
 
     if-eqz v5, :cond_2
 
-    .line 4410
     :cond_0
     const/4 v0, 0x0
 
-    .line 4425
     :cond_1
     return v0
 
-    .line 4413
     :cond_2
     const/4 v0, 0x0
 
-    .line 4415
     .local v0, "didRemove":Z
     iget-object v5, p0, Lcom/android/server/AlarmManagerService$LeuiAlarmHoldManagerPlus;->mHoldAlarms:Ljava/util/Map;
 
@@ -366,7 +331,6 @@
 
     check-cast v4, Ljava/util/HashMap;
 
-    .line 4416
     .local v4, "pkgMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/android/server/AlarmManagerService$Alarm;>;"
     if-eqz v4, :cond_3
 
@@ -376,7 +340,6 @@
 
     if-nez v5, :cond_3
 
-    .line 4417
     invoke-virtual {v4}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
     move-result-object v5
@@ -400,7 +363,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 4419
     .local v3, "key":Ljava/lang/String;
     invoke-virtual {v4, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -420,10 +382,8 @@
 
     if-ne v5, p1, :cond_4
 
-    .line 4420
     invoke-virtual {v4, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4421
     const/4 v0, 0x1
 
     goto :goto_0
@@ -436,7 +396,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 4367
     iget-object v5, p0, Lcom/android/server/AlarmManagerService$LeuiAlarmHoldManagerPlus;->mHoldAlarms:Ljava/util/Map;
 
     if-eqz v5, :cond_0
@@ -449,21 +408,17 @@
 
     if-eqz v5, :cond_1
 
-    .line 4399
     :cond_0
     :goto_0
     return v4
 
-    .line 4371
     :cond_1
     if-eqz p1, :cond_0
 
-    .line 4373
     invoke-virtual {p1}, Landroid/app/PendingIntent;->getCreatorPackage()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 4375
     .local v2, "pkg":Ljava/lang/String;
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -471,7 +426,6 @@
 
     if-nez v5, :cond_0
 
-    .line 4377
     iget-object v5, p0, Lcom/android/server/AlarmManagerService$LeuiAlarmHoldManagerPlus;->mHoldAlarms:Ljava/util/Map;
 
     invoke-interface {v5, v2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -480,7 +434,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 4381
     iget-object v5, p0, Lcom/android/server/AlarmManagerService$LeuiAlarmHoldManagerPlus;->mHoldAlarms:Ljava/util/Map;
 
     invoke-interface {v5, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -489,7 +442,6 @@
 
     check-cast v3, Ljava/util/HashMap;
 
-    .line 4382
     .local v3, "pkgMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/android/server/AlarmManagerService$Alarm;>;"
     if-eqz v3, :cond_0
 
@@ -499,20 +451,16 @@
 
     if-nez v5, :cond_0
 
-    .line 4386
     invoke-virtual {p1}, Landroid/app/PendingIntent;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 4387
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "NULL"
 
-    .line 4388
     .local v1, "key":Ljava/lang/String;
     if-nez v0, :cond_3
 
-    .line 4396
     :cond_2
     :goto_1
     invoke-virtual {v3, v1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -521,12 +469,10 @@
 
     if-eqz v5, :cond_0
 
-    .line 4399
     const/4 v4, 0x1
 
     goto :goto_0
 
-    .line 4390
     :cond_3
     invoke-virtual {v0}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -538,14 +484,12 @@
 
     if-nez v5, :cond_4
 
-    .line 4391
     invoke-virtual {v0}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
 
     goto :goto_1
 
-    .line 4392
     :cond_4
     invoke-virtual {v0}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
@@ -553,7 +497,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 4393
     invoke-virtual {v0}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v5
@@ -572,7 +515,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 4344
     iget-object v2, p0, Lcom/android/server/AlarmManagerService$LeuiAlarmHoldManagerPlus;->mHoldAlarms:Ljava/util/Map;
 
     if-eqz v2, :cond_0
@@ -585,12 +527,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 4359
     :cond_0
     :goto_0
     return v1
 
-    .line 4348
     :cond_1
     iget-object v2, p0, Lcom/android/server/AlarmManagerService$LeuiAlarmHoldManagerPlus;->mHoldAlarms:Ljava/util/Map;
 
@@ -600,7 +540,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 4352
     iget-object v2, p0, Lcom/android/server/AlarmManagerService$LeuiAlarmHoldManagerPlus;->mHoldAlarms:Ljava/util/Map;
 
     invoke-interface {v2, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -609,7 +548,6 @@
 
     check-cast v0, Ljava/util/HashMap;
 
-    .line 4353
     .local v0, "pkgMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/android/server/AlarmManagerService$Alarm;>;"
     if-eqz v0, :cond_0
 
@@ -619,13 +557,10 @@
 
     if-nez v2, :cond_0
 
-    .line 4357
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 4358
     const/4 v0, 0x0
 
-    .line 4359
     const/4 v1, 0x1
 
     goto :goto_0
@@ -638,21 +573,17 @@
     .param p1, "a"    # Lcom/android/server/AlarmManagerService$Alarm;
 
     .prologue
-    .line 4289
     iget v1, p1, Lcom/android/server/AlarmManagerService$Alarm;->uid:I
 
     const/16 v2, 0x2710
 
     if-ge v1, v2, :cond_0
 
-    .line 4290
     const/4 v1, 0x0
 
-    .line 4298
     :goto_0
     return v1
 
-    .line 4292
     :cond_0
     iget-object v1, p1, Lcom/android/server/AlarmManagerService$Alarm;->operation:Landroid/app/PendingIntent;
 
@@ -660,11 +591,9 @@
 
     move-result-object v0
 
-    .line 4297
     .local v0, "packageName":Ljava/lang/String;
     invoke-direct {p0, p1, v0}, Lcom/android/server/AlarmManagerService$LeuiAlarmHoldManagerPlus;->addHoldAlarmLocked(Lcom/android/server/AlarmManagerService$Alarm;Ljava/lang/String;)V
 
-    .line 4298
     const/4 v1, 0x1
 
     goto :goto_0

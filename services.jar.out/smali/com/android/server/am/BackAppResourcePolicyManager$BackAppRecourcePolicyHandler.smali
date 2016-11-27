@@ -24,17 +24,14 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 819
     iput-object p1, p0, Lcom/android/server/am/BackAppResourcePolicyManager$BackAppRecourcePolicyHandler;->this$0:Lcom/android/server/am/BackAppResourcePolicyManager;
 
-    .line 820
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-direct {p0, p2, v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 821
     return-void
 .end method
 
@@ -45,17 +42,14 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 825
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 836
     :cond_0
     :goto_0
     return-void
 
-    .line 827
     :pswitch_0
     iget-object v2, p0, Lcom/android/server/am/BackAppResourcePolicyManager$BackAppRecourcePolicyHandler;->this$0:Lcom/android/server/am/BackAppResourcePolicyManager;
 
@@ -71,13 +65,11 @@
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 828
     .local v0, "mConnMgr":Landroid/net/ConnectivityManager;
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getWifiValidateState()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 829
     .local v1, "wifiValidateState":Ljava/lang/String;
     sget-boolean v2, Lcom/android/server/am/ActivityManagerDebugConfig;->DEBUG_LIMIT:Z
 
@@ -109,7 +101,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 830
     :cond_1
     const-string v2, "ValidatedState"
 
@@ -119,7 +110,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 831
     sget-boolean v2, Lcom/android/server/am/ActivityManagerDebugConfig;->DEBUG_LIMIT:Z
 
     if-eqz v2, :cond_2
@@ -134,7 +124,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 832
     :cond_2
     iget-object v2, p0, Lcom/android/server/am/BackAppResourcePolicyManager$BackAppRecourcePolicyHandler;->this$0:Lcom/android/server/am/BackAppResourcePolicyManager;
 
@@ -143,7 +132,6 @@
 
     goto :goto_0
 
-    .line 825
     nop
 
     :pswitch_data_0

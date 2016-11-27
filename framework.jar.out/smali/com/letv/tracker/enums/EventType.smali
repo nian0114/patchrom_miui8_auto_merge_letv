@@ -187,7 +187,6 @@
 
     const/4 v4, 0x0
 
-    .line 7
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Expose"
@@ -198,7 +197,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Expose:Lcom/letv/tracker/enums/EventType;
 
-    .line 8
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Click"
@@ -209,7 +207,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Click:Lcom/letv/tracker/enums/EventType;
 
-    .line 9
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Install"
@@ -220,7 +217,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Install:Lcom/letv/tracker/enums/EventType;
 
-    .line 10
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Uninstall"
@@ -231,7 +227,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Uninstall:Lcom/letv/tracker/enums/EventType;
 
-    .line 11
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Upgrade"
@@ -242,7 +237,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Upgrade:Lcom/letv/tracker/enums/EventType;
 
-    .line 12
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Download"
@@ -255,7 +249,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Download:Lcom/letv/tracker/enums/EventType;
 
-    .line 13
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Jump"
@@ -268,7 +261,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Jump:Lcom/letv/tracker/enums/EventType;
 
-    .line 14
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Sync"
@@ -281,7 +273,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Sync:Lcom/letv/tracker/enums/EventType;
 
-    .line 15
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Upload"
@@ -294,7 +285,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Upload:Lcom/letv/tracker/enums/EventType;
 
-    .line 16
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "SearchResult"
@@ -307,7 +297,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->SearchResult:Lcom/letv/tracker/enums/EventType;
 
-    .line 17
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Book"
@@ -320,7 +309,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Book:Lcom/letv/tracker/enums/EventType;
 
-    .line 18
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Unbook"
@@ -333,7 +321,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Unbook:Lcom/letv/tracker/enums/EventType;
 
-    .line 19
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Follow"
@@ -346,7 +333,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Follow:Lcom/letv/tracker/enums/EventType;
 
-    .line 20
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Exception"
@@ -359,7 +345,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Exception:Lcom/letv/tracker/enums/EventType;
 
-    .line 21
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Push"
@@ -372,7 +357,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Push:Lcom/letv/tracker/enums/EventType;
 
-    .line 22
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Sort"
@@ -385,7 +369,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Sort:Lcom/letv/tracker/enums/EventType;
 
-    .line 23
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "SwitchDesktop"
@@ -398,7 +381,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->SwitchDesktop:Lcom/letv/tracker/enums/EventType;
 
-    .line 24
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Remove"
@@ -411,7 +393,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Remove:Lcom/letv/tracker/enums/EventType;
 
-    .line 25
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Open"
@@ -424,7 +405,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Open:Lcom/letv/tracker/enums/EventType;
 
-    .line 26
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Unopen"
@@ -437,7 +417,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Unopen:Lcom/letv/tracker/enums/EventType;
 
-    .line 27
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Close"
@@ -450,7 +429,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Close:Lcom/letv/tracker/enums/EventType;
 
-    .line 28
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "GoBack"
@@ -463,7 +441,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->GoBack:Lcom/letv/tracker/enums/EventType;
 
-    .line 29
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "SwitchMode"
@@ -476,7 +453,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->SwitchMode:Lcom/letv/tracker/enums/EventType;
 
-    .line 30
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Connect"
@@ -489,7 +465,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Connect:Lcom/letv/tracker/enums/EventType;
 
-    .line 31
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Share"
@@ -502,7 +477,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Share:Lcom/letv/tracker/enums/EventType;
 
-    .line 32
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "SwitchMessage"
@@ -515,7 +489,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->SwitchMessage:Lcom/letv/tracker/enums/EventType;
 
-    .line 33
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "SwitchApp"
@@ -528,7 +501,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->SwitchApp:Lcom/letv/tracker/enums/EventType;
 
-    .line 34
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Set"
@@ -541,7 +513,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Set:Lcom/letv/tracker/enums/EventType;
 
-    .line 35
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Intercept"
@@ -554,7 +525,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Intercept:Lcom/letv/tracker/enums/EventType;
 
-    .line 36
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Reminder"
@@ -567,7 +537,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Reminder:Lcom/letv/tracker/enums/EventType;
 
-    .line 37
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Receive"
@@ -580,7 +549,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Receive:Lcom/letv/tracker/enums/EventType;
 
-    .line 38
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Mute"
@@ -593,7 +561,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Mute:Lcom/letv/tracker/enums/EventType;
 
-    .line 39
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "AnswerPhone"
@@ -606,7 +573,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->AnswerPhone:Lcom/letv/tracker/enums/EventType;
 
-    .line 40
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Hangup"
@@ -619,7 +585,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Hangup:Lcom/letv/tracker/enums/EventType;
 
-    .line 41
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "LoseConnect"
@@ -632,7 +597,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->LoseConnect:Lcom/letv/tracker/enums/EventType;
 
-    .line 42
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Callback"
@@ -645,7 +609,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Callback:Lcom/letv/tracker/enums/EventType;
 
-    .line 43
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Shortcut"
@@ -658,7 +621,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Shortcut:Lcom/letv/tracker/enums/EventType;
 
-    .line 44
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "TakePhoto"
@@ -671,7 +633,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->TakePhoto:Lcom/letv/tracker/enums/EventType;
 
-    .line 45
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Record"
@@ -684,7 +645,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Record:Lcom/letv/tracker/enums/EventType;
 
-    .line 46
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "PhotoFilter"
@@ -697,7 +657,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->PhotoFilter:Lcom/letv/tracker/enums/EventType;
 
-    .line 47
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Unlock"
@@ -710,7 +669,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Unlock:Lcom/letv/tracker/enums/EventType;
 
-    .line 48
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "ShowNoticebar"
@@ -723,7 +681,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->ShowNoticebar:Lcom/letv/tracker/enums/EventType;
 
-    .line 49
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "ClearMemory"
@@ -736,7 +693,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->ClearMemory:Lcom/letv/tracker/enums/EventType;
 
-    .line 50
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Timeout"
@@ -749,7 +705,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Timeout:Lcom/letv/tracker/enums/EventType;
 
-    .line 51
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Comment"
@@ -762,7 +717,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Comment:Lcom/letv/tracker/enums/EventType;
 
-    .line 52
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Up"
@@ -775,7 +729,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Up:Lcom/letv/tracker/enums/EventType;
 
-    .line 53
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Down"
@@ -788,7 +741,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Down:Lcom/letv/tracker/enums/EventType;
 
-    .line 54
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Popup"
@@ -801,7 +753,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Popup:Lcom/letv/tracker/enums/EventType;
 
-    .line 55
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "TopAllocated"
@@ -814,7 +765,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->TopAllocated:Lcom/letv/tracker/enums/EventType;
 
-    .line 56
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Add"
@@ -827,7 +777,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Add:Lcom/letv/tracker/enums/EventType;
 
-    .line 57
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "CallOut"
@@ -840,7 +789,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->CallOut:Lcom/letv/tracker/enums/EventType;
 
-    .line 58
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Copy"
@@ -853,7 +801,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Copy:Lcom/letv/tracker/enums/EventType;
 
-    .line 59
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Move"
@@ -866,7 +813,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Move:Lcom/letv/tracker/enums/EventType;
 
-    .line 60
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Send"
@@ -879,7 +825,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Send:Lcom/letv/tracker/enums/EventType;
 
-    .line 61
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Delete"
@@ -892,7 +837,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Delete:Lcom/letv/tracker/enums/EventType;
 
-    .line 62
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Compress"
@@ -905,7 +849,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Compress:Lcom/letv/tracker/enums/EventType;
 
-    .line 63
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Decompress"
@@ -918,7 +861,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Decompress:Lcom/letv/tracker/enums/EventType;
 
-    .line 64
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Rename"
@@ -931,7 +873,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Rename:Lcom/letv/tracker/enums/EventType;
 
-    .line 65
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Create"
@@ -944,7 +885,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Create:Lcom/letv/tracker/enums/EventType;
 
-    .line 66
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Switch"
@@ -957,7 +897,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Switch:Lcom/letv/tracker/enums/EventType;
 
-    .line 67
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Subscrible"
@@ -970,7 +909,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Subscrible:Lcom/letv/tracker/enums/EventType;
 
-    .line 68
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Unsubscrible"
@@ -983,7 +921,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Unsubscrible:Lcom/letv/tracker/enums/EventType;
 
-    .line 69
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Accept"
@@ -996,7 +933,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Accept:Lcom/letv/tracker/enums/EventType;
 
-    .line 70
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Refuse"
@@ -1009,7 +945,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Refuse:Lcom/letv/tracker/enums/EventType;
 
-    .line 71
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "NotSure"
@@ -1022,7 +957,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->NotSure:Lcom/letv/tracker/enums/EventType;
 
-    .line 72
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Play"
@@ -1035,7 +969,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Play:Lcom/letv/tracker/enums/EventType;
 
-    .line 73
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Update"
@@ -1048,7 +981,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Update:Lcom/letv/tracker/enums/EventType;
 
-    .line 74
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Refresh"
@@ -1061,7 +993,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Refresh:Lcom/letv/tracker/enums/EventType;
 
-    .line 75
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Glide"
@@ -1074,7 +1005,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Glide:Lcom/letv/tracker/enums/EventType;
 
-    .line 77
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "acStart"
@@ -1087,7 +1017,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->acStart:Lcom/letv/tracker/enums/EventType;
 
-    .line 78
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "acEnd"
@@ -1100,7 +1029,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->acEnd:Lcom/letv/tracker/enums/EventType;
 
-    .line 79
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "Invoke"
@@ -1113,7 +1041,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->Invoke:Lcom/letv/tracker/enums/EventType;
 
-    .line 81
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "deviceboot"
@@ -1126,7 +1053,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->deviceboot:Lcom/letv/tracker/enums/EventType;
 
-    .line 82
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "shutdown"
@@ -1139,7 +1065,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->shutdown:Lcom/letv/tracker/enums/EventType;
 
-    .line 83
     new-instance v0, Lcom/letv/tracker/enums/EventType;
 
     const-string v1, "heartbeat"
@@ -1152,7 +1077,6 @@
 
     sput-object v0, Lcom/letv/tracker/enums/EventType;->heartbeat:Lcom/letv/tracker/enums/EventType;
 
-    .line 6
     const/16 v0, 0x4b
 
     new-array v0, v0, [Lcom/letv/tracker/enums/EventType;
@@ -1614,13 +1538,10 @@
     .end annotation
 
     .prologue
-    .line 95
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 96
     iput-object p3, p0, Lcom/letv/tracker/enums/EventType;->id:Ljava/lang/String;
 
-    .line 97
     return-void
 .end method
 
@@ -1629,7 +1550,6 @@
     .param p0, "id"    # Ljava/lang/String;
 
     .prologue
-    .line 115
     invoke-static {}, Lcom/letv/tracker/enums/EventType;->values()[Lcom/letv/tracker/enums/EventType;
 
     move-result-object v0
@@ -1646,7 +1566,6 @@
 
     aget-object v1, v0, v2
 
-    .line 116
     .local v1, "et":Lcom/letv/tracker/enums/EventType;
     invoke-virtual {v1}, Lcom/letv/tracker/enums/EventType;->getEventId()Ljava/lang/String;
 
@@ -1658,22 +1577,18 @@
 
     if-eqz v4, :cond_0
 
-    .line 117
     const/4 v4, 0x1
 
-    .line 120
     .end local v1    # "et":Lcom/letv/tracker/enums/EventType;
     :goto_1
     return v4
 
-    .line 115
     .restart local v1    # "et":Lcom/letv/tracker/enums/EventType;
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 120
     .end local v1    # "et":Lcom/letv/tracker/enums/EventType;
     :cond_1
     const/4 v4, 0x0
@@ -1686,7 +1601,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 6
     const-class v0, Lcom/letv/tracker/enums/EventType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -1702,7 +1616,6 @@
     .locals 1
 
     .prologue
-    .line 6
     sget-object v0, Lcom/letv/tracker/enums/EventType;->$VALUES:[Lcom/letv/tracker/enums/EventType;
 
     invoke-virtual {v0}, [Lcom/letv/tracker/enums/EventType;->clone()Ljava/lang/Object;
@@ -1720,7 +1633,6 @@
     .locals 1
 
     .prologue
-    .line 105
     iget-object v0, p0, Lcom/letv/tracker/enums/EventType;->id:Ljava/lang/String;
 
     return-object v0

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 76
     iput-object p1, p0, Lcom/letv/leui/systemui/ProximitySensorHelper$1;->this$0:Lcom/letv/leui/systemui/ProximitySensorHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "accuracy"    # I
 
     .prologue
-    .line 98
     return-void
 .end method
 
@@ -53,12 +51,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 79
     iget-object v2, p1, Landroid/hardware/SensorEvent;->values:[F
 
     aget v0, v2, v1
 
-    .line 80
     .local v0, "distance":F
     float-to-double v2, v0
 
@@ -76,7 +72,6 @@
 
     const/4 v1, 0x1
 
-    .line 81
     .local v1, "isCoverBySomething":Z
     :cond_0
     # getter for: Lcom/letv/leui/systemui/ProximitySensorHelper;->TAG:Ljava/lang/String;
@@ -114,7 +109,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 82
     iget-object v2, p0, Lcom/letv/leui/systemui/ProximitySensorHelper$1;->this$0:Lcom/letv/leui/systemui/ProximitySensorHelper;
 
     # getter for: Lcom/letv/leui/systemui/ProximitySensorHelper;->mHandler:Landroid/os/Handler;
@@ -131,10 +125,8 @@
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 83
     if-nez v1, :cond_3
 
-    .line 84
     iget-object v2, p0, Lcom/letv/leui/systemui/ProximitySensorHelper$1;->this$0:Lcom/letv/leui/systemui/ProximitySensorHelper;
 
     # getter for: Lcom/letv/leui/systemui/ProximitySensorHelper;->mState:Lcom/letv/leui/systemui/ProximitySensorHelper$STATE;
@@ -144,7 +136,6 @@
 
     monitor-enter v3
 
-    .line 85
     :try_start_0
     iget-object v2, p0, Lcom/letv/leui/systemui/ProximitySensorHelper$1;->this$0:Lcom/letv/leui/systemui/ProximitySensorHelper;
 
@@ -157,7 +148,6 @@
 
     if-ne v2, v4, :cond_2
 
-    .line 86
     iget-object v2, p0, Lcom/letv/leui/systemui/ProximitySensorHelper$1;->this$0:Lcom/letv/leui/systemui/ProximitySensorHelper;
 
     sget-object v4, Lcom/letv/leui/systemui/ProximitySensorHelper$STATE;->RELEASE:Lcom/letv/leui/systemui/ProximitySensorHelper$STATE;
@@ -165,7 +155,6 @@
     # setter for: Lcom/letv/leui/systemui/ProximitySensorHelper;->mState:Lcom/letv/leui/systemui/ProximitySensorHelper$STATE;
     invoke-static {v2, v4}, Lcom/letv/leui/systemui/ProximitySensorHelper;->access$302(Lcom/letv/leui/systemui/ProximitySensorHelper;Lcom/letv/leui/systemui/ProximitySensorHelper$STATE;)Lcom/letv/leui/systemui/ProximitySensorHelper$STATE;
 
-    .line 87
     iget-object v2, p0, Lcom/letv/leui/systemui/ProximitySensorHelper$1;->this$0:Lcom/letv/leui/systemui/ProximitySensorHelper;
 
     # getter for: Lcom/letv/leui/systemui/ProximitySensorHelper;->mStateCallback:Lcom/letv/leui/systemui/ProximitySensorHelper$StateCallback;
@@ -175,7 +164,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 88
     iget-object v2, p0, Lcom/letv/leui/systemui/ProximitySensorHelper$1;->this$0:Lcom/letv/leui/systemui/ProximitySensorHelper;
 
     # getter for: Lcom/letv/leui/systemui/ProximitySensorHelper;->mStateCallback:Lcom/letv/leui/systemui/ProximitySensorHelper$StateCallback;
@@ -185,7 +173,6 @@
 
     invoke-interface {v2}, Lcom/letv/leui/systemui/ProximitySensorHelper$StateCallback;->AntiInadevertentlyRelease()V
 
-    .line 89
     :cond_1
     iget-object v2, p0, Lcom/letv/leui/systemui/ProximitySensorHelper$1;->this$0:Lcom/letv/leui/systemui/ProximitySensorHelper;
 
@@ -203,15 +190,12 @@
 
     invoke-virtual {v2, v4}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 91
     :cond_2
     monitor-exit v3
 
-    .line 93
     :cond_3
     return-void
 
-    .line 91
     :catchall_0
     move-exception v2
 

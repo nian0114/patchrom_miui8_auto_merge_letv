@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 17222
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$26;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$26;->val$packageName:Ljava/lang/String;
@@ -52,7 +51,6 @@
     .locals 5
 
     .prologue
-    .line 17226
     :try_start_0
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$26;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -67,15 +65,12 @@
     :try_end_0
     .catch Lcom/android/server/pm/PackageManagerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 17232
     :goto_0
     return-void
 
-    .line 17227
     :catch_0
     move-exception v0
 
-    .line 17228
     .local v0, "e":Lcom/android/server/pm/PackageManagerException;
     const-string v1, "PackageManager"
 
@@ -101,7 +96,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 17229
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$26;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     # getter for: Lcom/android/server/pm/PackageManagerService;->mMoveCallbacks:Lcom/android/server/pm/PackageManagerService$MoveCallbacks;

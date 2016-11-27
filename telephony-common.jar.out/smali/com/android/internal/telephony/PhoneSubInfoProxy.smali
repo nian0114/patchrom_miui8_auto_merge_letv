@@ -13,13 +13,10 @@
     .param p1, "phoneSubInfo"    # Lcom/android/internal/telephony/PhoneSubInfo;
 
     .prologue
-    .line 29
     invoke-direct {p0}, Lcom/android/internal/telephony/IPhoneSubInfo$Stub;-><init>()V
 
-    .line 30
     iput-object p1, p0, Lcom/android/internal/telephony/PhoneSubInfoProxy;->mPhoneSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
 
-    .line 31
     return-void
 .end method
 
@@ -32,12 +29,10 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 295
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneSubInfoProxy;->mPhoneSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/telephony/PhoneSubInfo;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 296
     return-void
 .end method
 
@@ -45,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 121
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneSubInfoProxy;->mPhoneSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/PhoneSubInfo;->getCompleteVoiceMailNumber()Ljava/lang/String;
@@ -65,7 +59,6 @@
     .end annotation
 
     .prologue
-    .line 240
     const/4 v0, 0x0
 
     return-object v0
@@ -76,7 +69,6 @@
     .param p1, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 39
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneSubInfoProxy;->mPhoneSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/telephony/PhoneSubInfo;->getDeviceId(Ljava/lang/String;)Ljava/lang/String;
@@ -97,7 +89,6 @@
     .end annotation
 
     .prologue
-    .line 163
     const/4 v0, 0x0
 
     return-object v0
@@ -108,7 +99,6 @@
     .param p1, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 58
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneSubInfoProxy;->mPhoneSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/telephony/PhoneSubInfo;->getDeviceSvn(Ljava/lang/String;)Ljava/lang/String;
@@ -129,7 +119,6 @@
     .end annotation
 
     .prologue
-    .line 183
     const/4 v0, 0x0
 
     return-object v0
@@ -140,7 +129,6 @@
     .param p1, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 73
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneSubInfoProxy;->mPhoneSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/telephony/PhoneSubInfo;->getGroupIdLevel1(Ljava/lang/String;)Ljava/lang/String;
@@ -161,7 +149,6 @@
     .end annotation
 
     .prologue
-    .line 203
     const/4 v0, 0x0
 
     return-object v0
@@ -171,7 +158,6 @@
     .locals 1
 
     .prologue
-    .line 308
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneSubInfoProxy;->mPhoneSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/PhoneSubInfo;->getICCID()Ljava/lang/String;
@@ -186,7 +172,6 @@
     .param p1, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 81
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneSubInfoProxy;->mPhoneSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/telephony/PhoneSubInfo;->getIccSerialNumber(Ljava/lang/String;)Ljava/lang/String;
@@ -207,7 +192,6 @@
     .end annotation
 
     .prologue
-    .line 210
     const/4 v0, 0x0
 
     return-object v0
@@ -220,7 +204,6 @@
     .param p3, "data"    # Ljava/lang/String;
 
     .prologue
-    .line 290
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneSubInfoProxy;->mPhoneSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/telephony/PhoneSubInfo;->getIccSimChallengeResponse(IILjava/lang/String;)Ljava/lang/String;
@@ -235,7 +218,6 @@
     .param p1, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 43
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneSubInfoProxy;->mPhoneSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/telephony/PhoneSubInfo;->getImei(Ljava/lang/String;)Ljava/lang/String;
@@ -256,7 +238,6 @@
     .end annotation
 
     .prologue
-    .line 169
     const/4 v0, 0x0
 
     return-object v0
@@ -267,7 +248,6 @@
     .param p1, "nonce"    # Ljava/lang/String;
 
     .prologue
-    .line 276
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneSubInfoProxy;->mPhoneSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/telephony/PhoneSubInfo;->getIsimChallengeResponse(Ljava/lang/String;)Ljava/lang/String;
@@ -281,7 +261,6 @@
     .locals 1
 
     .prologue
-    .line 147
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneSubInfoProxy;->mPhoneSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/PhoneSubInfo;->getIsimDomain()Ljava/lang/String;
@@ -295,7 +274,6 @@
     .locals 1
 
     .prologue
-    .line 138
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneSubInfoProxy;->mPhoneSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/PhoneSubInfo;->getIsimImpi()Ljava/lang/String;
@@ -309,7 +287,6 @@
     .locals 1
 
     .prologue
-    .line 157
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneSubInfoProxy;->mPhoneSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/PhoneSubInfo;->getIsimImpu()[Ljava/lang/String;
@@ -323,7 +300,6 @@
     .locals 1
 
     .prologue
-    .line 255
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneSubInfoProxy;->mPhoneSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/PhoneSubInfo;->getIsimIst()Ljava/lang/String;
@@ -337,7 +313,6 @@
     .locals 1
 
     .prologue
-    .line 265
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneSubInfoProxy;->mPhoneSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/PhoneSubInfo;->getIsimPcscf()[Ljava/lang/String;
@@ -352,7 +327,6 @@
     .param p1, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 97
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneSubInfoProxy;->mPhoneSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/telephony/PhoneSubInfo;->getLine1AlphaTag(Ljava/lang/String;)Ljava/lang/String;
@@ -373,7 +347,6 @@
     .end annotation
 
     .prologue
-    .line 222
     const/4 v0, 0x0
 
     return-object v0
@@ -384,7 +357,6 @@
     .param p1, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 89
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneSubInfoProxy;->mPhoneSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/telephony/PhoneSubInfo;->getLine1Number(Ljava/lang/String;)Ljava/lang/String;
@@ -405,7 +377,6 @@
     .end annotation
 
     .prologue
-    .line 216
     const/4 v0, 0x0
 
     return-object v0
@@ -415,7 +386,6 @@
     .locals 1
 
     .prologue
-    .line 304
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneSubInfoProxy;->mPhoneSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/PhoneSubInfo;->getMLPL()Ljava/lang/String;
@@ -429,7 +399,6 @@
     .locals 1
 
     .prologue
-    .line 300
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneSubInfoProxy;->mPhoneSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/PhoneSubInfo;->getMSPL()Ljava/lang/String;
@@ -444,7 +413,6 @@
     .param p1, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 48
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneSubInfoProxy;->mPhoneSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/telephony/PhoneSubInfo;->getMeid(Ljava/lang/String;)Ljava/lang/String;
@@ -465,7 +433,6 @@
     .end annotation
 
     .prologue
-    .line 176
     const/4 v0, 0x0
 
     return-object v0
@@ -476,7 +443,6 @@
     .param p1, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 105
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneSubInfoProxy;->mPhoneSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/telephony/PhoneSubInfo;->getMsisdn(Ljava/lang/String;)Ljava/lang/String;
@@ -497,7 +463,6 @@
     .end annotation
 
     .prologue
-    .line 228
     const/4 v0, 0x0
 
     return-object v0
@@ -507,7 +472,6 @@
     .locals 1
 
     .prologue
-    .line 316
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneSubInfoProxy;->mPhoneSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/PhoneSubInfo;->getNID()Ljava/lang/String;
@@ -522,7 +486,6 @@
     .param p1, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 53
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneSubInfoProxy;->mPhoneSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/telephony/PhoneSubInfo;->getNai(Ljava/lang/String;)Ljava/lang/String;
@@ -543,7 +506,6 @@
     .end annotation
 
     .prologue
-    .line 189
     const/4 v0, 0x0
 
     return-object v0
@@ -553,7 +515,6 @@
     .locals 1
 
     .prologue
-    .line 312
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneSubInfoProxy;->mPhoneSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/PhoneSubInfo;->getSID()Ljava/lang/String;
@@ -568,7 +529,6 @@
     .param p1, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 66
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneSubInfoProxy;->mPhoneSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/telephony/PhoneSubInfo;->getSubscriberId(Ljava/lang/String;)Ljava/lang/String;
@@ -589,7 +549,6 @@
     .end annotation
 
     .prologue
-    .line 196
     const/4 v0, 0x0
 
     return-object v0
@@ -599,7 +558,6 @@
     .locals 1
 
     .prologue
-    .line 320
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneSubInfoProxy;->mPhoneSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/PhoneSubInfo;->getUIMid()Ljava/lang/String;
@@ -614,7 +572,6 @@
     .param p1, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 129
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneSubInfoProxy;->mPhoneSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/telephony/PhoneSubInfo;->getVoiceMailAlphaTag(Ljava/lang/String;)Ljava/lang/String;
@@ -635,7 +592,6 @@
     .end annotation
 
     .prologue
-    .line 246
     const/4 v0, 0x0
 
     return-object v0
@@ -646,7 +602,6 @@
     .param p1, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 113
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneSubInfoProxy;->mPhoneSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/telephony/PhoneSubInfo;->getVoiceMailNumber(Ljava/lang/String;)Ljava/lang/String;
@@ -667,7 +622,6 @@
     .end annotation
 
     .prologue
-    .line 234
     const/4 v0, 0x0
 
     return-object v0
@@ -678,9 +632,7 @@
     .param p1, "phoneSubInfo"    # Lcom/android/internal/telephony/PhoneSubInfo;
 
     .prologue
-    .line 34
     iput-object p1, p0, Lcom/android/internal/telephony/PhoneSubInfoProxy;->mPhoneSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
 
-    .line 35
     return-void
 .end method

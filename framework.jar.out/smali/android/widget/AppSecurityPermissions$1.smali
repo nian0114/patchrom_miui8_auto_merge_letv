@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1103
     iput-object p1, p0, Landroid/widget/AppSecurityPermissions$1;->this$0:Landroid/widget/AppSecurityPermissions;
 
     iput-object p2, p0, Landroid/widget/AppSecurityPermissions$1;->val$permItem:Landroid/app/AppOpsUtils$AppOpsItem;
@@ -46,26 +45,20 @@
     .param p2, "isChecked"    # Z
 
     .prologue
-    .line 1106
     const/4 v0, 0x1
 
-    .line 1107
     .local v0, "permRelult":I
     if-eqz p2, :cond_0
 
-    .line 1108
     const/4 v0, 0x0
 
-    .line 1112
     :goto_0
     iget-object v1, p0, Landroid/widget/AppSecurityPermissions$1;->val$permItem:Landroid/app/AppOpsUtils$AppOpsItem;
 
     iput v0, v1, Landroid/app/AppOpsUtils$AppOpsItem;->mode:I
 
-    .line 1114
     return-void
 
-    .line 1110
     :cond_0
     const/4 v0, 0x1
 

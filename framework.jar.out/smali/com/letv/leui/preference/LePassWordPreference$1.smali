@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 67
     iput-object p1, p0, Lcom/letv/leui/preference/LePassWordPreference$1;->this$0:Lcom/letv/leui/preference/LePassWordPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "isChecked"    # Z
 
     .prologue
-    .line 71
     iget-object v1, p0, Lcom/letv/leui/preference/LePassWordPreference$1;->this$0:Lcom/letv/leui/preference/LePassWordPreference;
 
     if-nez p2, :cond_0
@@ -52,15 +50,12 @@
     :goto_0
     invoke-virtual {v1, v0}, Lcom/letv/leui/preference/LePassWordPreference;->syncEditTextShow(Z)V
 
-    .line 72
     iget-object v0, p0, Lcom/letv/leui/preference/LePassWordPreference$1;->this$0:Lcom/letv/leui/preference/LePassWordPreference;
 
     iput-boolean p2, v0, Lcom/letv/leui/preference/LePassWordPreference;->checked:Z
 
-    .line 73
     return-void
 
-    .line 71
     :cond_0
     const/4 v0, 0x0
 

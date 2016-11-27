@@ -14,10 +14,8 @@
     .locals 1
 
     .prologue
-    .line 12
     invoke-direct {p0}, Landroid/leuipowersavemode/command/ALetvDeepPowerSaveCommand;-><init>()V
 
-    .line 13
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/leuipowersavemode/VibratePowerSaveCommand;->mDefaultVibrate:I
@@ -30,12 +28,11 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 45
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string/jumbo v1, "vibrate_when_ringing"
+    const-string v1, "vibrate_when_ringing"
 
     iget v2, p0, Landroid/leuipowersavemode/VibratePowerSaveCommand;->mDefaultVibrate:I
 
@@ -62,34 +59,30 @@
     .param p2, "isChecked"    # Z
 
     .prologue
-    .line 50
     if-eqz p2, :cond_0
 
     const/4 v1, 0x1
 
-    .line 51
     .local v1, "setValue":I
     :goto_0
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    const-string/jumbo v3, "vibrate_when_ringing"
+    const-string v3, "vibrate_when_ringing"
 
     invoke-static {v2, v3, v1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     move-result v0
 
-    .line 53
     .local v0, "setState":Z
     if-eqz v0, :cond_1
 
-    const-string/jumbo v2, "set Vibrate success!!!"
+    const-string v2, "set Vibrate success!!!"
 
     :goto_1
     return-object v2
 
-    .line 50
     .end local v0    # "setState":Z
     .end local v1    # "setValue":I
     :cond_0
@@ -97,11 +90,10 @@
 
     goto :goto_0
 
-    .line 53
     .restart local v0    # "setState":Z
     .restart local v1    # "setValue":I
     :cond_1
-    const-string/jumbo v2, "set Vibrate error!!!"
+    const-string v2, "set Vibrate error!!!"
 
     goto :goto_1
 .end method
@@ -113,15 +105,12 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 29
     invoke-super {p0, p1}, Landroid/leuipowersavemode/command/ALetvDeepPowerSaveCommand;->disabled(Landroid/content/Context;)V
 
-    .line 31
     invoke-direct {p0, p1}, Landroid/leuipowersavemode/VibratePowerSaveCommand;->getCurrentVibrateWhenRingState(Landroid/content/Context;)Z
 
     move-result v0
 
-    .line 32
     .local v0, "currentBibrateState":Z
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -155,12 +144,10 @@
 
     iput-object v1, p0, Landroid/leuipowersavemode/VibratePowerSaveCommand;->mCommandString:Ljava/lang/String;
 
-    .line 35
     iget-boolean v1, p0, Landroid/leuipowersavemode/VibratePowerSaveCommand;->mVibrateWhenRingBeforeState:Z
 
     if-eq v1, v0, :cond_2
 
-    .line 36
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -195,7 +182,6 @@
 
     iput-object v1, p0, Landroid/leuipowersavemode/VibratePowerSaveCommand;->mCommandString:Ljava/lang/String;
 
-    .line 41
     :goto_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -227,16 +213,13 @@
 
     iput-object v1, p0, Landroid/leuipowersavemode/VibratePowerSaveCommand;->mCommandString:Ljava/lang/String;
 
-    .line 42
     return-void
 
-    .line 36
     :cond_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 39
     :cond_2
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -248,7 +231,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "no action ,but success!!!"
+    const-string v2, "no action ,but success!!!"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -268,22 +251,19 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 18
     invoke-super {p0, p1}, Landroid/leuipowersavemode/command/ALetvDeepPowerSaveCommand;->enabled(Landroid/content/Context;)V
 
-    .line 20
     invoke-direct {p0, p1}, Landroid/leuipowersavemode/VibratePowerSaveCommand;->getCurrentVibrateWhenRingState(Landroid/content/Context;)Z
 
     move-result v1
 
     iput-boolean v1, p0, Landroid/leuipowersavemode/VibratePowerSaveCommand;->mVibrateWhenRingBeforeState:Z
 
-    .line 21
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    const-string/jumbo v2, "vibrate_when_ringing"
+    const-string v2, "vibrate_when_ringing"
 
     iget v3, p0, Landroid/leuipowersavemode/VibratePowerSaveCommand;->mDefaultVibrate:I
 
@@ -291,7 +271,6 @@
 
     move-result v0
 
-    .line 23
     .local v0, "isVibrateSetState":Z
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -327,6 +306,5 @@
 
     iput-object v1, p0, Landroid/leuipowersavemode/VibratePowerSaveCommand;->mCommandString:Ljava/lang/String;
 
-    .line 25
     return-void
 .end method

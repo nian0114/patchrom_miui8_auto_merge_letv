@@ -46,7 +46,6 @@
     .locals 1
 
     .prologue
-    .line 204
     new-instance v0, Landroid/net/NetSniffer$1;
 
     invoke-direct {v0}, Landroid/net/NetSniffer$1;-><init>()V
@@ -60,25 +59,20 @@
     .locals 1
 
     .prologue
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/net/NetSniffer;->mhttpUrl:Ljava/lang/String;
 
-    .line 40
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/net/NetSniffer;->msnifferRes:I
 
-    .line 55
-    const-string/jumbo v0, "http://www.google.com"
+    const-string v0, "http://www.google.com"
 
     iput-object v0, p0, Landroid/net/NetSniffer;->mhttpUrl:Ljava/lang/String;
 
-    .line 56
     return-void
 .end method
 
@@ -87,20 +81,16 @@
     .param p1, "httpurl"    # Ljava/lang/String;
 
     .prologue
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/net/NetSniffer;->mhttpUrl:Ljava/lang/String;
 
-    .line 40
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/net/NetSniffer;->msnifferRes:I
 
-    .line 47
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -109,17 +99,14 @@
 
     if-gtz v0, :cond_1
 
-    .line 48
     :cond_0
-    const-string/jumbo v0, "http://www.google.com"
+    const-string v0, "http://www.google.com"
 
     iput-object v0, p0, Landroid/net/NetSniffer;->mhttpUrl:Ljava/lang/String;
 
-    .line 52
     :goto_0
     return-void
 
-    .line 50
     :cond_1
     iput-object p1, p0, Landroid/net/NetSniffer;->mhttpUrl:Ljava/lang/String;
 
@@ -135,12 +122,10 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 63
     monitor-enter p0
 
     const/4 v2, 0x0
 
-    .line 65
     .local v2, "ret":Z
     if-eqz p1, :cond_0
 
@@ -151,13 +136,11 @@
 
     if-gtz v4, :cond_1
 
-    .line 66
     :cond_0
-    const-string/jumbo v4, "http://www.google.com"
+    const-string v4, "http://www.google.com"
 
     iput-object v4, p0, Landroid/net/NetSniffer;->mhttpUrl:Ljava/lang/String;
 
-    .line 71
     :goto_0
     new-instance v1, Landroid/net/NetSniffer$httpClientSniffer;
 
@@ -167,29 +150,24 @@
 
     invoke-direct {v1, p0, v4, v5}, Landroid/net/NetSniffer$httpClientSniffer;-><init>(Landroid/net/NetSniffer;Ljava/lang/String;Landroid/net/NetSniffer$1;)V
 
-    .line 72
     .local v1, "oneTask":Landroid/net/NetSniffer$httpClientSniffer;
     invoke-virtual {v1}, Landroid/net/NetSniffer$httpClientSniffer;->start()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 74
     :try_start_1
     invoke-virtual {v1}, Landroid/net/NetSniffer$httpClientSniffer;->join()V
     :try_end_1
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 80
     :try_start_2
     invoke-virtual {v1}, Landroid/net/NetSniffer$httpClientSniffer;->getAccessRetsult()Z
 
     move-result v2
 
-    .line 81
     if-eqz v2, :cond_2
 
-    .line 82
     const/4 v3, 0x1
 
     iput v3, p0, Landroid/net/NetSniffer;->msnifferRes:I
@@ -199,13 +177,11 @@
     :goto_1
     move v3, v2
 
-    .line 87
     :goto_2
     monitor-exit p0
 
     return v3
 
-    .line 68
     .end local v1    # "oneTask":Landroid/net/NetSniffer$httpClientSniffer;
     :cond_1
     :try_start_3
@@ -215,7 +191,6 @@
 
     goto :goto_0
 
-    .line 63
     :catchall_0
     move-exception v3
 
@@ -223,12 +198,10 @@
 
     throw v3
 
-    .line 75
     .restart local v1    # "oneTask":Landroid/net/NetSniffer$httpClientSniffer;
     :catch_0
     move-exception v0
 
-    .line 76
     .local v0, "e":Ljava/lang/InterruptedException;
     const/4 v4, 0x0
 
@@ -237,7 +210,6 @@
 
     goto :goto_2
 
-    .line 84
     .end local v0    # "e":Ljava/lang/InterruptedException;
     :cond_2
     const/4 v3, 0x0
@@ -253,7 +225,6 @@
     .locals 1
 
     .prologue
-    .line 192
     const/4 v0, 0x0
 
     return v0
@@ -263,7 +234,6 @@
     .locals 1
 
     .prologue
-    .line 91
     iget v0, p0, Landroid/net/NetSniffer;->msnifferRes:I
 
     return v0
@@ -275,16 +245,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 200
     iget-object v0, p0, Landroid/net/NetSniffer;->mhttpUrl:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 201
     iget v0, p0, Landroid/net/NetSniffer;->msnifferRes:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 202
     return-void
 .end method

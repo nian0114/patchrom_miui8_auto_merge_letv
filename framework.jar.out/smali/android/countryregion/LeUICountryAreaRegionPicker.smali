@@ -77,28 +77,22 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 51
     const/4 v0, 0x0
 
     sput-boolean v0, Landroid/countryregion/LeUICountryAreaRegionPicker;->hasSetCollator:Z
 
-    .line 52
     sput-object v1, Landroid/countryregion/LeUICountryAreaRegionPicker;->mCountryAreaRegionLables:[Ljava/lang/String;
 
-    .line 53
     sput-object v1, Landroid/countryregion/LeUICountryAreaRegionPicker;->mCountryAreaRegionMccs:[Ljava/lang/String;
 
-    .line 54
     const v0, 0x104073f
 
     sput v0, Landroid/countryregion/LeUICountryAreaRegionPicker;->mOthersLable:I
 
-    .line 55
     const v0, 0x1040740
 
     sput v0, Landroid/countryregion/LeUICountryAreaRegionPicker;->mOhtersMcc:I
 
-    .line 57
     const/4 v0, -0x1
 
     sput v0, Landroid/countryregion/LeUICountryAreaRegionPicker;->mStoredMccPos:I
@@ -110,25 +104,20 @@
     .locals 1
 
     .prologue
-    .line 44
     invoke-direct {p0}, Landroid/app/ListFragment;-><init>()V
 
-    .line 47
-    const-string/jumbo v0, "selected_key"
+    const-string v0, "selected_key"
 
     iput-object v0, p0, Landroid/countryregion/LeUICountryAreaRegionPicker;->SELECT_STAR_STATE_KEY:Ljava/lang/String;
 
-    .line 48
-    const-string/jumbo v0, "selected_name_key"
+    const-string v0, "selected_name_key"
 
     iput-object v0, p0, Landroid/countryregion/LeUICountryAreaRegionPicker;->SELECT_STAR_STATE_NAME_KEY:Ljava/lang/String;
 
-    .line 49
     const-string v0, "action_mode_key"
 
     iput-object v0, p0, Landroid/countryregion/LeUICountryAreaRegionPicker;->SELECT_STAR_STATE_ACTION_KEY:Ljava/lang/String;
 
-    .line 301
     return-void
 .end method
 
@@ -136,7 +125,6 @@
     .locals 1
 
     .prologue
-    .line 44
     sget-object v0, Landroid/countryregion/LeUICountryAreaRegionPicker;->mLocaleInfos:Ljava/util/List;
 
     return-object v0
@@ -146,7 +134,6 @@
     .locals 1
 
     .prologue
-    .line 44
     sget-object v0, Landroid/countryregion/LeUICountryAreaRegionPicker;->mCurrentSelectedInfo:Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;
 
     return-object v0
@@ -156,7 +143,6 @@
     .locals 1
 
     .prologue
-    .line 44
     sget-object v0, Landroid/countryregion/LeUICountryAreaRegionPicker;->sCollator:Ljava/text/Collator;
 
     return-object v0
@@ -167,7 +153,6 @@
     .param p0, "x0"    # Ljava/text/Collator;
 
     .prologue
-    .line 44
     sput-object p0, Landroid/countryregion/LeUICountryAreaRegionPicker;->sCollator:Ljava/text/Collator;
 
     return-object p0
@@ -178,7 +163,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 224
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -189,7 +173,6 @@
 
     iget-object v0, v2, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
-    .line 225
     .local v0, "newLocale":Ljava/util/Locale;
     const-string v2, "LeUICountryAreaRegionPicker"
 
@@ -225,7 +208,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 226
     sget-object v2, Landroid/countryregion/LeUICountryAreaRegionPicker;->mCurrLocale:Ljava/util/Locale;
 
     if-eqz v2, :cond_0
@@ -246,17 +228,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 236
     :goto_0
     return-void
 
-    .line 232
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 233
     .local v1, "res":Landroid/content/res/Resources;
     const v2, 0x1070084
 
@@ -266,7 +245,6 @@
 
     sput-object v2, Landroid/countryregion/LeUICountryAreaRegionPicker;->mCountryAreaRegionLables:[Ljava/lang/String;
 
-    .line 234
     const v2, 0x1070085
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
@@ -275,7 +253,6 @@
 
     sput-object v2, Landroid/countryregion/LeUICountryAreaRegionPicker;->mCountryAreaRegionMccs:[Ljava/lang/String;
 
-    .line 235
     sput-object v0, Landroid/countryregion/LeUICountryAreaRegionPicker;->mCurrLocale:Ljava/util/Locale;
 
     goto :goto_0
@@ -297,7 +274,6 @@
     .end annotation
 
     .prologue
-    .line 106
     const v0, 0x10900f0
 
     const v1, 0x10204b2
@@ -327,8 +303,7 @@
     .end annotation
 
     .prologue
-    .line 127
-    const-string/jumbo v0, "layout_inflater"
+    const-string v0, "layout_inflater"
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -336,7 +311,6 @@
 
     check-cast v5, Landroid/view/LayoutInflater;
 
-    .line 128
     .local v5, "inflater":Landroid/view/LayoutInflater;
     new-instance v0, Landroid/countryregion/LeUICountryAreaRegionPicker$1;
 
@@ -373,32 +347,26 @@
     .end annotation
 
     .prologue
-    .line 110
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 111
     .local v3, "countries":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     if-nez p1, :cond_1
 
     const/4 v3, 0x0
 
-    .line 122
     .end local v3    # "countries":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_0
     return-object v3
 
-    .line 112
     .restart local v3    # "countries":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_1
     const/4 v2, 0x0
 
-    .line 113
     .local v2, "count":I
     const/4 v4, 0x0
 
-    .line 114
     .local v4, "currentTitle":Ljava/lang/String;
     move-object v0, p1
 
@@ -414,13 +382,11 @@
 
     aget-object v5, v0, v6
 
-    .line 115
     .local v5, "hashM":Ljava/lang/Object;
     invoke-virtual {v5}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 116
     .local v1, "bucketName":Ljava/lang/String;
     invoke-static {v1, v4}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
@@ -428,17 +394,13 @@
 
     if-nez v8, :cond_2
 
-    .line 117
     add-int/lit8 v2, v2, 0x1
 
-    .line 119
     :cond_2
     move-object v4, v1
 
-    .line 120
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 114
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_0
@@ -460,22 +422,19 @@
     .end annotation
 
     .prologue
-    .line 247
     sget-boolean v2, Landroid/countryregion/LeUICountryAreaRegionPicker;->hasSetCollator:Z
 
     if-nez v2, :cond_0
 
-    .line 248
     const/4 v2, 0x1
 
     sput-boolean v2, Landroid/countryregion/LeUICountryAreaRegionPicker;->hasSetCollator:Z
 
-    .line 249
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
-    const-string/jumbo v3, "settings.locales_order_by_china"
+    const-string v3, "settings.locales_order_by_china"
 
     invoke-virtual {v2, v3}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
 
@@ -483,7 +442,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 250
     sget-object v2, Ljava/util/Locale;->CHINA:Ljava/util/Locale;
 
     invoke-static {v2}, Ljava/text/Collator;->getInstance(Ljava/util/Locale;)Ljava/text/Collator;
@@ -492,12 +450,10 @@
 
     sput-object v2, Landroid/countryregion/LeUICountryAreaRegionPicker;->sCollator:Ljava/text/Collator;
 
-    .line 255
     :cond_0
     :goto_0
     invoke-static {p0}, Landroid/countryregion/LeUICountryAreaRegionPicker;->checkInitResource(Landroid/content/Context;)V
 
-    .line 256
     new-instance v1, Ljava/util/ArrayList;
 
     sget-object v2, Landroid/countryregion/LeUICountryAreaRegionPicker;->mCountryAreaRegionLables:[Ljava/lang/String;
@@ -506,7 +462,6 @@
 
     invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 257
     .local v1, "localeInfos":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;>;"
     const/4 v0, 0x0
 
@@ -518,7 +473,6 @@
 
     if-ge v0, v2, :cond_2
 
-    .line 258
     new-instance v2, Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;
 
     sget-object v3, Landroid/countryregion/LeUICountryAreaRegionPicker;->mCountryAreaRegionLables:[Ljava/lang/String;
@@ -533,12 +487,10 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 257
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 252
     .end local v0    # "i":I
     .end local v1    # "localeInfos":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;>;"
     :cond_1
@@ -552,13 +504,11 @@
 
     goto :goto_0
 
-    .line 260
     .restart local v0    # "i":I
     .restart local v1    # "localeInfos":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;>;"
     :cond_2
     invoke-static {v1}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
-    .line 261
     new-instance v2, Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;
 
     sget v3, Landroid/countryregion/LeUICountryAreaRegionPicker;->mOthersLable:I
@@ -577,7 +527,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 262
     const/4 v0, 0x0
 
     :goto_2
@@ -587,17 +536,14 @@
 
     if-ge v0, v2, :cond_3
 
-    .line 263
     sget-object v2, Landroid/countryregion/LeUICountryAreaRegionPicker;->mStoredMcc:Ljava/lang/String;
 
     if-nez v2, :cond_4
 
-    .line 270
     :cond_3
     :goto_3
     return-object v1
 
-    .line 265
     :cond_4
     sget-object v3, Landroid/countryregion/LeUICountryAreaRegionPicker;->mStoredMcc:Ljava/lang/String;
 
@@ -615,12 +561,10 @@
 
     if-eqz v2, :cond_5
 
-    .line 266
     sput v0, Landroid/countryregion/LeUICountryAreaRegionPicker;->mStoredMccPos:I
 
     goto :goto_3
 
-    .line 262
     :cond_5
     add-int/lit8 v0, v0, 0x1
 
@@ -632,12 +576,10 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 238
     invoke-static {p0}, Landroid/countryregion/LeUICountryAreaRegionPicker;->getAllCountryAreaRegions(Landroid/content/Context;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 239
     .local v0, "allRegionInfos":Ljava/util/List;, "Ljava/util/List<Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;>;"
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -645,7 +587,6 @@
 
     new-array v2, v3, [Ljava/lang/String;
 
-    .line 240
     .local v2, "regionLables":[Ljava/lang/String;
     const/4 v1, 0x0
 
@@ -655,7 +596,6 @@
 
     if-ge v1, v3, :cond_0
 
-    .line 241
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -668,12 +608,10 @@
 
     aput-object v3, v2, v1
 
-    .line 240
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 243
     :cond_0
     return-object v2
 .end method
@@ -684,12 +622,10 @@
     .param p1, "currentRegionValue"    # Ljava/lang/String;
 
     .prologue
-    .line 214
     invoke-static {p0}, Landroid/countryregion/LeUICountryAreaRegionPicker;->getAllCountryAreaRegions(Landroid/content/Context;)Ljava/util/List;
 
     move-result-object v2
 
-    .line 215
     .local v2, "infors":Ljava/util/List;, "Ljava/util/List<Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;>;"
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -709,7 +645,6 @@
 
     check-cast v1, Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;
 
-    .line 216
     .local v1, "info":Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;
     invoke-virtual {v1}, Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;->getCountryCode()Ljava/lang/String;
 
@@ -721,12 +656,10 @@
 
     if-eqz v3, :cond_0
 
-    .line 217
     invoke-virtual {v1}, Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;->getLabel()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 220
     .end local v1    # "info":Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;
     :goto_0
     return-object v3
@@ -742,18 +675,16 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 283
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    const-string/jumbo v3, "leui_country_area_region_settings"
+    const-string v3, "leui_country_area_region_settings"
 
     invoke-static {v2, v3}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 284
     .local v1, "storedMcc":Ljava/lang/String;
     new-instance v0, Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;
 
@@ -763,7 +694,6 @@
 
     invoke-direct {v0, v2, v1}, Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 285
     .local v0, "info":Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;
     return-object v0
 .end method
@@ -774,18 +704,16 @@
     .param p1, "info"    # Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;
 
     .prologue
-    .line 299
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string/jumbo v1, "leui_country_area_region_settings"
+    const-string v1, "leui_country_area_region_settings"
 
     iget-object v2, p1, Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;->mCountryCode:Ljava/lang/String;
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 300
     return-void
 .end method
 
@@ -795,7 +723,6 @@
     .locals 1
 
     .prologue
-    .line 273
     sget-object v0, Landroid/countryregion/LeUICountryAreaRegionPicker;->mCurrentSelectedInfo:Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;
 
     return-object v0
@@ -805,7 +732,6 @@
     .locals 1
 
     .prologue
-    .line 276
     sget v0, Landroid/countryregion/LeUICountryAreaRegionPicker;->mStoredMccPos:I
 
     return v0
@@ -816,10 +742,8 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 99
     invoke-super {p0, p1}, Landroid/app/ListFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
-    .line 100
     invoke-virtual {p0}, Landroid/countryregion/LeUICountryAreaRegionPicker;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
@@ -828,14 +752,11 @@
 
     move-result-object v0
 
-    .line 101
     .local v0, "adapter":Landroid/widget/ArrayAdapter;, "Landroid/widget/ArrayAdapter<Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;>;"
     iput-object v0, p0, Landroid/countryregion/LeUICountryAreaRegionPicker;->mAdapter:Landroid/widget/ArrayAdapter;
 
-    .line 102
     invoke-virtual {p0, v0}, Landroid/countryregion/LeUICountryAreaRegionPicker;->setListAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 103
     return-void
 .end method
 
@@ -844,10 +765,8 @@
     .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
-    .line 79
     invoke-super {p0, p1}, Landroid/app/ListFragment;->onAttach(Landroid/app/Activity;)V
 
-    .line 80
     invoke-virtual {p1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -860,15 +779,13 @@
 
     sput-object v0, Landroid/countryregion/LeUICountryAreaRegionPicker;->mCurrLocale:Ljava/util/Locale;
 
-    .line 81
     iput-object p1, p0, Landroid/countryregion/LeUICountryAreaRegionPicker;->mActivity:Landroid/app/Activity;
 
-    .line 82
     invoke-virtual {p1}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string/jumbo v1, "leui_country_area_region_settings"
+    const-string v1, "leui_country_area_region_settings"
 
     invoke-static {v0, v1}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
@@ -876,7 +793,6 @@
 
     sput-object v0, Landroid/countryregion/LeUICountryAreaRegionPicker;->mStoredMcc:Ljava/lang/String;
 
-    .line 83
     new-instance v0, Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;
 
     iget-object v1, p0, Landroid/countryregion/LeUICountryAreaRegionPicker;->mActivity:Landroid/app/Activity;
@@ -893,7 +809,6 @@
 
     sput-object v0, Landroid/countryregion/LeUICountryAreaRegionPicker;->mCurrentSelectedInfo:Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;
 
-    .line 84
     iget-object v0, p0, Landroid/countryregion/LeUICountryAreaRegionPicker;->mActivity:Landroid/app/Activity;
 
     invoke-static {v0}, Landroid/countryregion/LeUICountryAreaRegionPicker;->getAllCountryAreaRegions(Landroid/content/Context;)Ljava/util/List;
@@ -902,7 +817,6 @@
 
     sput-object v0, Landroid/countryregion/LeUICountryAreaRegionPicker;->mLocaleInfos:Ljava/util/List;
 
-    .line 85
     const-string v0, "LeUICountryAreaRegionPicker"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -931,7 +845,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 86
     return-void
 .end method
 
@@ -940,16 +853,13 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 90
     invoke-super {p0, p1}, Landroid/app/ListFragment;->onCreate(Landroid/os/Bundle;)V
 
-    .line 91
     if-eqz p1, :cond_0
 
-    .line 92
     sget-object v1, Landroid/countryregion/LeUICountryAreaRegionPicker;->mCurrentSelectedInfo:Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;
 
-    const-string/jumbo v0, "selected_name_key"
+    const-string v0, "selected_name_key"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getSerializable(Ljava/lang/String;)Ljava/io/Serializable;
 
@@ -959,10 +869,9 @@
 
     iput-object v0, v1, Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;->mLabel:Ljava/lang/String;
 
-    .line 93
     sget-object v1, Landroid/countryregion/LeUICountryAreaRegionPicker;->mCurrentSelectedInfo:Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;
 
-    const-string/jumbo v0, "selected_key"
+    const-string v0, "selected_key"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getSerializable(Ljava/lang/String;)Ljava/io/Serializable;
 
@@ -972,7 +881,6 @@
 
     iput-object v0, v1, Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;->mCountryCode:Ljava/lang/String;
 
-    .line 95
     :cond_0
     return-void
 .end method
@@ -985,7 +893,6 @@
     .param p4, "id"    # J
 
     .prologue
-    .line 67
     invoke-virtual {p0}, Landroid/countryregion/LeUICountryAreaRegionPicker;->getListAdapter()Landroid/widget/ListAdapter;
 
     move-result-object v1
@@ -996,25 +903,21 @@
 
     check-cast v0, Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;
 
-    .line 68
     .local v0, "info":Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;
     iget-object v1, p0, Landroid/countryregion/LeUICountryAreaRegionPicker;->mListener:Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionSelectionListener;
 
     if-eqz v1, :cond_0
 
-    .line 69
     iget-object v1, p0, Landroid/countryregion/LeUICountryAreaRegionPicker;->mListener:Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionSelectionListener;
 
     invoke-interface {v1, v0}, Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionSelectionListener;->onCountryAreaRegionSelected(Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;)V
 
-    .line 70
     iget-object v1, p0, Landroid/countryregion/LeUICountryAreaRegionPicker;->mListener:Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionSelectionListener;
 
     sget-object v2, Landroid/countryregion/LeUICountryAreaRegionPicker;->mCurrentSelectedInfo:Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;
 
     invoke-interface {v1, v2, v0}, Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionSelectionListener;->onCountryAreaRegionChanged(Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;)V
 
-    .line 72
     :cond_0
     sget-object v1, Landroid/countryregion/LeUICountryAreaRegionPicker;->mCurrentSelectedInfo:Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;
 
@@ -1022,14 +925,12 @@
 
     iput-object v2, v1, Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;->mLabel:Ljava/lang/String;
 
-    .line 73
     sget-object v1, Landroid/countryregion/LeUICountryAreaRegionPicker;->mCurrentSelectedInfo:Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;
 
     iget-object v2, v0, Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;->mCountryCode:Ljava/lang/String;
 
     iput-object v2, v1, Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;->mCountryCode:Ljava/lang/String;
 
-    .line 74
     iget-object v1, p0, Landroid/countryregion/LeUICountryAreaRegionPicker;->mAdapter:Landroid/widget/ArrayAdapter;
 
     if-eqz v1, :cond_1
@@ -1038,7 +939,6 @@
 
     invoke-virtual {v1}, Landroid/widget/ArrayAdapter;->notifyDataSetChanged()V
 
-    .line 75
     :cond_1
     return-void
 .end method
@@ -1048,11 +948,9 @@
     .param p1, "outState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 290
     invoke-super {p0, p1}, Landroid/app/ListFragment;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    .line 291
-    const-string/jumbo v0, "selected_key"
+    const-string v0, "selected_key"
 
     sget-object v1, Landroid/countryregion/LeUICountryAreaRegionPicker;->mCurrentSelectedInfo:Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;
 
@@ -1062,8 +960,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
 
-    .line 292
-    const-string/jumbo v0, "selected_name_key"
+    const-string v0, "selected_name_key"
 
     sget-object v1, Landroid/countryregion/LeUICountryAreaRegionPicker;->mCurrentSelectedInfo:Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;
 
@@ -1073,7 +970,6 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
 
-    .line 293
     return-void
 .end method
 
@@ -1081,7 +977,6 @@
     .locals 3
 
     .prologue
-    .line 279
     sget-object v0, Landroid/countryregion/LeUICountryAreaRegionPicker;->mCurrentSelectedInfo:Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;
 
     iget-object v1, p0, Landroid/countryregion/LeUICountryAreaRegionPicker;->mActivity:Landroid/app/Activity;
@@ -1094,14 +989,12 @@
 
     iput-object v1, v0, Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;->mLabel:Ljava/lang/String;
 
-    .line 280
     sget-object v0, Landroid/countryregion/LeUICountryAreaRegionPicker;->mCurrentSelectedInfo:Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;
 
     sget-object v1, Landroid/countryregion/LeUICountryAreaRegionPicker;->mStoredMcc:Ljava/lang/String;
 
     iput-object v1, v0, Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionInfo;->mCountryCode:Ljava/lang/String;
 
-    .line 281
     return-void
 .end method
 
@@ -1110,9 +1003,7 @@
     .param p1, "listener"    # Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionSelectionListener;
 
     .prologue
-    .line 307
     iput-object p1, p0, Landroid/countryregion/LeUICountryAreaRegionPicker;->mListener:Landroid/countryregion/LeUICountryAreaRegionPicker$CountryAreaRegionSelectionListener;
 
-    .line 308
     return-void
 .end method

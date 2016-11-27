@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 143
     invoke-direct {p0}, Lcom/google/gson/TypeAdapter;-><init>()V
 
     return-void
@@ -46,7 +45,6 @@
     .end annotation
 
     .prologue
-    .line 146
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->peek()Lcom/google/gson/stream/JsonToken;
 
     move-result-object v0
@@ -55,17 +53,13 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 147
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->nextNull()V
 
-    .line 148
     const/4 v0, 0x0
 
-    .line 153
     :goto_0
     return-object v0
 
-    .line 149
     :cond_0
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->peek()Lcom/google/gson/stream/JsonToken;
 
@@ -75,7 +69,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 151
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->nextString()Ljava/lang/String;
 
     move-result-object v0
@@ -90,7 +83,6 @@
 
     goto :goto_0
 
-    .line 153
     :cond_1
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->nextBoolean()Z
 
@@ -112,7 +104,6 @@
     .end annotation
 
     .prologue
-    .line 143
     invoke-virtual {p0, p1}, Lcom/google/gson/internal/bind/TypeAdapters$3;->read(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -131,17 +122,13 @@
     .end annotation
 
     .prologue
-    .line 157
     if-nez p2, :cond_0
 
-    .line 158
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonWriter;->nullValue()Lcom/google/gson/stream/JsonWriter;
 
-    .line 162
     :goto_0
     return-void
 
-    .line 161
     :cond_0
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -161,7 +148,6 @@
     .end annotation
 
     .prologue
-    .line 143
     check-cast p2, Ljava/lang/Boolean;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/gson/internal/bind/TypeAdapters$3;->write(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Boolean;)V

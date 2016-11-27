@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 3313
     iput-object p1, p0, Lcom/android/server/InputMethodManagerService$7;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iput-object p2, p0, Lcom/android/server/InputMethodManagerService$7;->val$hardKeySwitch:Lcom/letv/leui/widget/LeSwitch;
@@ -47,7 +46,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 3316
     iget-object v2, p0, Lcom/android/server/InputMethodManagerService$7;->val$hardKeySwitch:Lcom/letv/leui/widget/LeSwitch;
 
     iget-object v0, p0, Lcom/android/server/InputMethodManagerService$7;->val$hardKeySwitch:Lcom/letv/leui/widget/LeSwitch;
@@ -63,10 +61,8 @@
     :goto_0
     invoke-virtual {v2, v0, v1}, Lcom/letv/leui/widget/LeSwitch;->setChecked(ZZ)V
 
-    .line 3317
     return-void
 
-    .line 3316
     :cond_0
     const/4 v0, 0x0
 

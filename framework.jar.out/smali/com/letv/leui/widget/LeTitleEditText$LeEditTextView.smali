@@ -24,10 +24,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 815
     invoke-direct {p0, p1}, Lcom/letv/leui/widget/LeAutoFillEditText;-><init>(Landroid/content/Context;)V
 
-    .line 816
     return-void
 .end method
 
@@ -37,10 +35,8 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 819
     invoke-direct {p0, p1, p2}, Lcom/letv/leui/widget/LeAutoFillEditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 820
     return-void
 .end method
 
@@ -51,10 +47,8 @@
     .param p3, "defStyle"    # I
 
     .prologue
-    .line 824
     invoke-direct {p0, p1, p2, p3}, Lcom/letv/leui/widget/LeAutoFillEditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 825
     return-void
 .end method
 
@@ -62,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 835
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeTitleEditText$LeEditTextView;->getText()Landroid/text/Editable;
 
     move-result-object v0
@@ -93,15 +86,12 @@
     .param p3, "previouslyFocusedRect"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 857
     invoke-super {p0, p1, p2, p3}, Lcom/letv/leui/widget/LeAutoFillEditText;->onFocusChanged(ZILandroid/graphics/Rect;)V
 
-    .line 858
     iget-object v0, p0, Lcom/letv/leui/widget/LeTitleEditText$LeEditTextView;->mLeTitleEditText:Lcom/letv/leui/widget/LeTitleEditText;
 
     invoke-virtual {v0}, Lcom/letv/leui/widget/LeTitleEditText;->onTextFocusChanged()V
 
-    .line 859
     return-void
 .end method
 
@@ -111,7 +101,6 @@
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 888
     invoke-super {p0, p1, p2}, Lcom/letv/leui/widget/LeAutoFillEditText;->onKeyPreIme(ILandroid/view/KeyEvent;)Z
 
     move-result v0
@@ -124,10 +113,8 @@
     .param p1, "hasWindowFocus"    # Z
 
     .prologue
-    .line 844
     invoke-super {p0, p1}, Lcom/letv/leui/widget/LeAutoFillEditText;->onWindowFocusChanged(Z)V
 
-    .line 846
     if-eqz p1, :cond_0
 
     iget-object v1, p0, Lcom/letv/leui/widget/LeTitleEditText$LeEditTextView;->mLeTitleEditText:Lcom/letv/leui/widget/LeTitleEditText;
@@ -144,7 +131,6 @@
 
     if-nez v1, :cond_0
 
-    .line 848
     invoke-virtual {p0}, Lcom/letv/leui/widget/LeTitleEditText$LeEditTextView;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -157,13 +143,11 @@
 
     check-cast v0, Landroid/view/inputmethod/InputMethodManager;
 
-    .line 850
     .local v0, "inputManager":Landroid/view/inputmethod/InputMethodManager;
     const/4 v1, 0x0
 
     invoke-virtual {v0, p0, v1}, Landroid/view/inputmethod/InputMethodManager;->showSoftInput(Landroid/view/View;I)Z
 
-    .line 852
     .end local v0    # "inputManager":Landroid/view/inputmethod/InputMethodManager;
     :cond_0
     return-void
@@ -174,9 +158,7 @@
     .param p1, "editView"    # Lcom/letv/leui/widget/LeTitleEditText;
 
     .prologue
-    .line 828
     iput-object p1, p0, Lcom/letv/leui/widget/LeTitleEditText$LeEditTextView;->mLeTitleEditText:Lcom/letv/leui/widget/LeTitleEditText;
 
-    .line 829
     return-void
 .end method

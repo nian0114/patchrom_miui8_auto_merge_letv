@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 87
     iput-object p1, p0, Lcom/android/server/encryption/AccessControlManagerService$1;->this$0:Lcom/android/server/encryption/AccessControlManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 3
 
     .prologue
-    .line 93
     :try_start_0
     iget-object v1, p0, Lcom/android/server/encryption/AccessControlManagerService$1;->this$0:Lcom/android/server/encryption/AccessControlManagerService;
 
@@ -48,12 +46,10 @@
 
     iput-boolean v2, v1, Lcom/android/server/encryption/AccessControlManagerService;->mWriteScheduled:Z
 
-    .line 94
     new-instance v0, Lcom/android/server/encryption/AccessControlManagerService$1$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/encryption/AccessControlManagerService$1$1;-><init>(Lcom/android/server/encryption/AccessControlManagerService$1;)V
 
-    .line 100
     .local v0, "task":Landroid/os/AsyncTask;, "Landroid/os/AsyncTask<Ljava/lang/Void;Ljava/lang/Void;Ljava/lang/Void;>;"
     sget-object v2, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
 
@@ -65,10 +61,8 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 103
     return-void
 
-    .line 101
     .end local v0    # "task":Landroid/os/AsyncTask;, "Landroid/os/AsyncTask<Ljava/lang/Void;Ljava/lang/Void;Ljava/lang/Void;>;"
     :catchall_0
     move-exception v1

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 5412
     iput-object p1, p0, Landroid/app/ActivityThread$2;->this$0:Landroid/app/ActivityThread;
 
     iput-object p2, p0, Landroid/app/ActivityThread$2;->val$mgr:Landroid/app/IActivityManager;
@@ -46,31 +45,26 @@
     .prologue
     const-wide/16 v10, 0x400
 
-    .line 5414
     iget-object v5, p0, Landroid/app/ActivityThread$2;->this$0:Landroid/app/ActivityThread;
 
     iget-boolean v5, v5, Landroid/app/ActivityThread;->mSomeActivitiesChanged:Z
 
     if-nez v5, :cond_1
 
-    .line 5430
     :cond_0
     :goto_0
     return-void
 
-    .line 5417
     :cond_1
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v4
 
-    .line 5418
     .local v4, "runtime":Ljava/lang/Runtime;
     invoke-virtual {v4}, Ljava/lang/Runtime;->maxMemory()J
 
     move-result-wide v0
 
-    .line 5419
     .local v0, "dalvikMax":J
     invoke-virtual {v4}, Ljava/lang/Runtime;->totalMemory()J
 
@@ -82,7 +76,6 @@
 
     sub-long v2, v6, v8
 
-    .line 5420
     .local v2, "dalvikUsed":J
     const-wide/16 v6, 0x3
 
@@ -96,7 +89,6 @@
 
     if-lez v5, :cond_0
 
-    .line 5421
     # getter for: Landroid/app/ActivityThread;->DEBUG_MEMORY_TRIM:Z
     invoke-static {}, Landroid/app/ActivityThread;->access$3800()Z
 
@@ -156,7 +148,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5424
     :cond_2
     iget-object v5, p0, Landroid/app/ActivityThread$2;->this$0:Landroid/app/ActivityThread;
 
@@ -164,7 +155,6 @@
 
     iput-boolean v6, v5, Landroid/app/ActivityThread;->mSomeActivitiesChanged:Z
 
-    .line 5426
     :try_start_0
     iget-object v5, p0, Landroid/app/ActivityThread$2;->val$mgr:Landroid/app/IActivityManager;
 
@@ -178,7 +168,6 @@
 
     goto :goto_0
 
-    .line 5427
     :catch_0
     move-exception v5
 

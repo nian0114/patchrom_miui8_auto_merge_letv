@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 108
     iput-object p1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$H;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -42,28 +41,23 @@
     .param p1, "what"    # I
 
     .prologue
-    .line 112
     packed-switch p1, :pswitch_data_0
 
-    .line 118
     const-string v0, "MSG_UNKNOW"
 
     :goto_0
     return-object v0
 
-    .line 114
     :pswitch_0
     const-string v0, "MSG_RELOAD_WALLPAPER"
 
     goto :goto_0
 
-    .line 116
     :pswitch_1
     const-string v0, "MSG_RELOAD_WALLPAPER"
 
     goto :goto_0
 
-    .line 112
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -78,7 +72,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 124
     const-string v1, "WallpaperManagerService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -107,27 +100,22 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 125
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 137
     const-string v1, "WallpaperManagerService"
 
     const-string v2, "Unknow message type"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 139
     :goto_0
     return-void
 
-    .line 127
     :pswitch_0
     iget v0, p1, Landroid/os/Message;->arg1:I
 
-    .line 128
     .local v0, "userId":I
     iget-object v1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$H;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
@@ -136,12 +124,10 @@
 
     goto :goto_0
 
-    .line 132
     .end local v0    # "userId":I
     :pswitch_1
     iget v0, p1, Landroid/os/Message;->arg1:I
 
-    .line 133
     .restart local v0    # "userId":I
     iget-object v1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$H;->this$0:Lcom/android/server/wallpaper/WallpaperManagerService;
 
@@ -150,7 +136,6 @@
 
     goto :goto_0
 
-    .line 125
     nop
 
     :pswitch_data_0
