@@ -1,4 +1,214 @@
 
+.method private isSkipUseSystem(II)Z
+    .locals 3
+    .param p1, "code"    # I
+    .param p2, "uid"    # I
+
+    .prologue
+    .line 2481
+    const/16 v0, 0x2710
+
+    if-gt p2, v0, :cond_0
+
+    const/16 v0, 0x21
+
+    if-eq p1, v0, :cond_0
+
+    const/16 v0, 0x23
+
+    if-eq p1, v0, :cond_0
+
+    .line 2482
+    const-string v0, "AppOps"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+  invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "isskipsystem  code:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "  uid:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 2483
+    const/4 v0, 0x1
+
+    .line 2485
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public isSkipPackage(ILjava/lang/String;)Z
+    .locals 3
+    .param p1, "code"    # I
+    .param p2, "packageName"    # Ljava/lang/String;
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 2456
+    if-nez p2, :cond_1
+
+    .line 2477
+    :cond_0
+    :goto_0
+    return v0
+
+    .line 2458
+    :cond_1
+    const-string v1, "com.android.cts"
+
+    invoke-virtual {p2, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    const-string v1, "com.google.android.xts"
+
+    invoke-virtual {p2, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    const-string v1, "android.jobscheduler.cts"
+
+    invoke-virtual {p2, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    const-string v1, "android.camera.cts"
+
+    invoke-virtual {p2, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    :cond_2
+    const/16 v1, 0x2f
+
+    if-eq p1, v1, :cond_0
+
+    const/16 v1, 0x2c
+
+    if-eq p1, v1, :cond_0
+    const/16 v1, 0x21
+
+    if-eq p1, v1, :cond_0
+
+    const/16 v1, 0x22
+
+    if-eq p1, v1, :cond_0
+
+    const/16 v1, 0x23
+
+    if-eq p1, v1, :cond_0
+
+    const/16 v1, 0x24
+
+    if-eq p1, v1, :cond_0
+
+    const/16 v1, 0x25
+
+    if-eq p1, v1, :cond_0
+
+    const/16 v1, 0x26
+
+    if-eq p1, v1, :cond_0
+
+    const/16 v1, 0x27
+
+    if-eq p1, v1, :cond_0
+
+    const/16 v1, 0x3b
+
+    if-eq p1, v1, :cond_0
+
+    const/16 v1, 0x3c
+
+    if-eq p1, v1, :cond_0
+
+    const/16 v1, 0xf
+
+    if-eq p1, v1, :cond_0
+
+    const/16 v1, 0x17
+
+    if-eq p1, v1, :cond_0
+
+    const/16 v1, 0x3a
+
+    if-eq p1, v1, :cond_0
+
+    .line 2474
+    const-string v0, "AppOps"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "isskippackage  code:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "  package:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 2475
+    const/4 v0, 0x1
+
+    goto :goto_0
+.end method
+
 .method public noteOperationFB(IILjava/lang/String;Z)I
     .locals 7
     .param p1, "code"    # I
