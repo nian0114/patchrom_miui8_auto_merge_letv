@@ -21,7 +21,7 @@ local-miui-removed-apps :=
 
 local-miui-removed-priv-apps :=
 
-local-miui-modified-apps := 
+local-miui-modified-apps := InCallUI
 
 local-miui-modified-apps-smali := Settings TeleService SecurityCoreAdd XiaomiServiceFramework MiuiSystemUI MiuiKeyguard SecurityCenter
 
