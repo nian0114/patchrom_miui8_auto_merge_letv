@@ -46,6 +46,8 @@ then
     applyPatch "overlay/framework"
     cp -rf $1/smali/android/widget/Editor*.smali $2/smali/android/widget/
     appendSmaliPart "framework"
+    sed -i 's/.field public static final MAXIMUM_BACKLIGHT:I = 0xff*/.field public static final MAXIMUM_BACKLIGHT:I = 0xfff/g' $2/smali/miui/app/ToggleManager.smali
+    sed -i 's/rsub-int v1, v1, 0xff/rsub-int v1, v1, 0xfff/g' $2/smali/miui/app/ToggleManager.smali
 fi
 
 if [ $2 = "$BUILD_OUT/services" ]
