@@ -23,7 +23,7 @@ local-miui-removed-priv-apps :=
 
 local-miui-modified-apps := 
 
-local-miui-modified-apps-smali := Settings TeleService SecurityCoreAdd XiaomiServiceFramework MiuiSystemUI SecurityCenter
+local-miui-modified-apps-smali := Settings TeleService SecurityCoreAdd XiaomiServiceFramework MiuiSystemUI MiuiKeyguard SecurityCenter
 
 PORT_PRODUCT := nian_lex2
 
