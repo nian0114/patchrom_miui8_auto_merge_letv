@@ -255,6 +255,17 @@
     return v1
 
     :cond_0
+    invoke-static {v0}, Lmiui/securityspace/XSpaceUserHandle;->isXSpaceUser(Landroid/content/pm/UserInfo;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_miui_1
+
+    sget v1, Landroid/miui/R$drawable;->ic_corp_icon_xspace:I
+
+    goto :goto_0
+
+    :cond_miui_1
     const/4 v1, 0x0
 
     goto :goto_0
@@ -4984,6 +4995,10 @@
     move-result-object v8
 
     .local v8, "r":Landroid/content/res/Resources;
+    iget-object v0, p1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    invoke-static {v8, v0}, Landroid/miui/ResourcesManager;->initMiuiResource(Landroid/content/res/Resources;Ljava/lang/String;)V
+    
     invoke-direct {p0, v8, p1}, Landroid/app/ApplicationPackageManager;->setResourceApplicationInfo(Landroid/content/res/Resources;Landroid/content/pm/ApplicationInfo;)V
 
     if-eqz v8, :cond_4
