@@ -17,7 +17,7 @@ local-out-zip-file := MIUI_x820.zip
 #local-modified-jars :=
 
 # All apks from MIUI
-local-miui-removed-apps := 
+local-miui-removed-apps := FM
 
 local-miui-removed-priv-apps :=
 
