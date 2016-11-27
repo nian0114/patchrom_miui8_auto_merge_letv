@@ -57,6 +57,7 @@ if [ $1 = "MiuiKeyguard" ];then
 fi
 
 if [ $1 = "MiuiSystemUI" ];then
+    applyPatch $1 $2
     appendSmaliPart "MiuiSystemUI"
 fi
 
