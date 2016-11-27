@@ -43,6 +43,11 @@ function isPatchrom() {
   sed -i -e "s/\"hammerhead\"/\"$device_name\"/g" `grep -lnr "hammerhead" $1/smali`
 }
 
+function changeID() {
+  $PORT_ROOT/tools/idtoname.py $PORT_ROOT/tools/public-$2.xml $1/smali
+  $PORT_ROOT/tools/nametoid.py out/framework-res/res/values/public.xml $1/smali
+}
+
 if [ $1 = "DeskClock" ];then
     isPatchrom $2
 fi
@@ -74,4 +79,5 @@ fi
 
 if [ $1 = "Settings" ];then
     applyPatch $1 $2
+    changeID $2 XXXHDPI
 fi
