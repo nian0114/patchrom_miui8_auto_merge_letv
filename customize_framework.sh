@@ -41,6 +41,12 @@ function applyPatch() {
 	done
 }
 
+if [ $2 = "$BUILD_OUT/framework" ]
+then
+    cp -rf $1/smali/android/widget/Editor*.smali $2/smali/android/widget/
+    appendSmaliPart "framework"
+fi
+
 if [ $2 = "$BUILD_OUT/services" ]
 then
     appendSmaliPart "services"

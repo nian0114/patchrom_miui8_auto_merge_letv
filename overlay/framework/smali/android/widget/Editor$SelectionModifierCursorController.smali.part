@@ -1,0 +1,54 @@
+
+.field private mDragAcceleratorActive:Z
+
+.field private mIsInSectionSelection:Z
+
+.field private mTopHandle:Landroid/widget/Editor$SectionTopHandleView;
+
+.method public isDragAcceleratorActive()Z
+    .locals 1
+
+    .prologue
+    .line 5519
+    iget-boolean v0, p0, Landroid/widget/Editor$SelectionModifierCursorController;->mDragAcceleratorActive:Z
+
+    return v0
+.end method
+
+.method public isSectionTopDragged()Z
+    .locals 1
+
+    .prologue
+    .line 5602
+    iget-object v0, p0, Landroid/widget/Editor$SelectionModifierCursorController;->mTopHandle:Landroid/widget/Editor$SectionTopHandleView;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/widget/Editor$SelectionModifierCursorController;->mTopHandle:Landroid/widget/Editor$SectionTopHandleView;
+
+    invoke-virtual {v0}, Landroid/widget/Editor$SectionTopHandleView;->isDragging()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public isInSectionMode()Z
+    .locals 1
+
+    .prologue
+    .line 5565
+    iget-boolean v0, p0, Landroid/widget/Editor$SelectionModifierCursorController;->mIsInSectionSelection:Z
+
+    return v0
+.end method
