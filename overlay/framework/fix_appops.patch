@@ -1,0 +1,89 @@
+From 999bb4c0faebbb36d35b1b2120f23b72a2a5e448 Mon Sep 17 00:00:00 2001
+From: nian0114 <268078545@qq.com>
+Date: Wed, 23 Nov 2016 03:59:58 +0800
+Subject: [PATCH] fix appops
+
+---
+ .../android/internal/app/IAppOpsService$Stub.smali | 62 ++++++++++++++++++++++
+ 1 file changed, 62 insertions(+)
+
+--- a/framework/smali/com/android/internal/app/IAppOpsService$Stub.smali
++++ b/framework/smali/com/android/internal/app/IAppOpsService$Stub.smali
+@@ -46,6 +46,8 @@
+ 
+ .field static final TRANSACTION_noteOperation:I = 0x2
+ 
++.field static final TRANSACTION_noteOperationFB:I = 0x17
++
+ .field static final TRANSACTION_noteProxyOperation:I = 0x9
+ 
+ .field static final TRANSACTION_permissionToOpCode:I = 0x8
+@@ -865,6 +867,57 @@
+ 
+     goto :goto_2
+ 
++        .end local v1    # "_arg0":I
++        .end local v2    # "_arg1":Ljava/lang/String;
++        .end local v3
++        .end local v6    # "_result":Z
++        :sswitch_17
++        const-string v0, "com.android.internal.app.IAppOpsService"
++
++        invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
++        invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
++
++        move-result v1
++
++        .restart local v1    # "_arg0":I
++        invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
++
++        move-result v2
++
++        .restart local v2    # "_arg1":Ljava/lang/String;
++        invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
++
++        move-result-object v3
++
++        .local v3, "_arg2":Ljava/lang/String;
++        invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
++
++        move-result v0
++
++       if-eqz p0, :cond_2
++
++        move v4, v8
++
++        .local v4, "_arg3":Z
++        :goto_3
++        invoke-virtual {p0, v1, v2, v3, v4}, Lcom/android/internal/app/IAppOpsService$Stub;->noteOperationFB(IILjava/lang/String;Z)I
++
++        move-result v6
++
++        .restart local v6    # "_result":Z
++        invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
++
++        invoke-virtual {p3, v6}, Landroid/os/Parcel;->writeInt(I)V
++
++        goto/16 :goto_0
++
++        .end local v4    # "_arg3":Z
++        .end local v6    # "_result":Z
++        :cond_2
++        move v4, v0
++
++    goto :goto_3
++
+     nop
+ 
+     :sswitch_data_0
+@@ -891,6 +944,7 @@
+         0x14 -> :sswitch_14
+         0x15 -> :sswitch_15
+         0x16 -> :sswitch_16
++        0x17 -> :sswitch_17
+         0x5f4e5446 -> :sswitch_0
+     .end sparse-switch
+ .end method
+-- 
+2.10.1
+

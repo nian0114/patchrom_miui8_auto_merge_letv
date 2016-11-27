@@ -1,0 +1,7 @@
+.method public abstract noteOperationFB(IILjava/lang/String;Z)I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
