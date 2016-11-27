@@ -71,3 +71,6 @@ local-pre-zip-misc:
 	rm -rf $(ZIP_DIR)/system/priv-app/CMSettings
 	echo "import /system/default.prop" >> $(ZIP_DIR)/system/build.prop
 	echo "ro.miui.type=hook" >> $(ZIP_DIR)/system/build.prop
+	@echo goodbye! miui prebuilt binaries!
+	cp -rf stockrom/system/bin/app_process64 $(ZIP_DIR)/system/bin/app_process64
+	cp -rf stockrom/system/bin/app_process32 $(ZIP_DIR)/system/bin/app_process32
