@@ -255,3 +255,12 @@
 
     goto :goto_0
 .end method
+
+.method public packageAdded(ILjava/lang/String;)V
+    .locals 2
+    .param p1, "uid"    # I
+    .param p2, "packageName"    # Ljava/lang/String;
+
+    .prologue
+    return-void
+.end method
