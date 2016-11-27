@@ -1,4 +1,4 @@
-.class final Lcom/android/server/lights/LightsService$LightImpl;
+.class public Lcom/android/server/lights/LightsService$LightImpl;
 .super Lcom/android/server/lights/Light;
 .source "LightsService.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x12
+    accessFlags = 0x1
     name = "LightImpl"
 .end annotation
 
@@ -67,7 +67,7 @@
     return-void
 .end method
 
-.method private setLightLocked(IIIII)V
+.method setLightLocked(IIIII)V
     .locals 10
     .param p1, "color"    # I
     .param p2, "mode"    # I
@@ -259,7 +259,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v5}, Lcom/android/server/lights/LightsService$LightImpl;->setLightLocked(IIIII)V
+    invoke-virtual/range {v0 .. v5}, Lcom/android/server/lights/LightsService$LightImpl;->setLightLocked(IIIII)V
 
     monitor-exit p0
 
@@ -319,7 +319,7 @@
 
     move v3, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/android/server/lights/LightsService$LightImpl;->setLightLocked(IIIII)V
+    invoke-virtual/range {v0 .. v5}, Lcom/android/server/lights/LightsService$LightImpl;->setLightLocked(IIIII)V
 
     const/4 v0, 0x0
 
@@ -415,7 +415,7 @@
 
     move v5, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/android/server/lights/LightsService$LightImpl;->setLightLocked(IIIII)V
+    invoke-virtual/range {v0 .. v5}, Lcom/android/server/lights/LightsService$LightImpl;->setLightLocked(IIIII)V
 
     monitor-exit p0
 
@@ -451,7 +451,7 @@
     move v1, p1
 
     :try_start_0
-    invoke-direct/range {v0 .. v5}, Lcom/android/server/lights/LightsService$LightImpl;->setLightLocked(IIIII)V
+    invoke-virtual/range {v0 .. v5}, Lcom/android/server/lights/LightsService$LightImpl;->setLightLocked(IIIII)V
 
     monitor-exit p0
 
@@ -490,7 +490,7 @@
     move v4, p4
 
     :try_start_0
-    invoke-direct/range {v0 .. v5}, Lcom/android/server/lights/LightsService$LightImpl;->setLightLocked(IIIII)V
+    invoke-virtual/range {v0 .. v5}, Lcom/android/server/lights/LightsService$LightImpl;->setLightLocked(IIIII)V
 
     monitor-exit p0
 
@@ -525,7 +525,7 @@
     move-object v0, p0
 
     :try_start_0
-    invoke-direct/range {v0 .. v5}, Lcom/android/server/lights/LightsService$LightImpl;->setLightLocked(IIIII)V
+    invoke-virtual/range {v0 .. v5}, Lcom/android/server/lights/LightsService$LightImpl;->setLightLocked(IIIII)V
 
     monitor-exit p0
 
@@ -539,4 +539,15 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
+.end method
+
+.method constructor <init>(Lcom/android/server/lights/LightsService;II)V
+    .locals 0
+    .param p2, "id"    # I
+    .param p3, "unused"    # I
+
+    .prologue
+    invoke-direct {p0, p1, p2}, Lcom/android/server/lights/LightsService$LightImpl;-><init>(Lcom/android/server/lights/LightsService;I)V
+
+    return-void
 .end method
