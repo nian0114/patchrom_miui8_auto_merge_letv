@@ -7797,9 +7797,9 @@
     :cond_4
     :goto_1
     :try_start_2
-    new-instance v8, Lcom/android/internal/policy/PhoneWindow;
+    new-instance v8, Lcom/android/internal/policy/MiuiPhoneWindow;
 
-    invoke-direct {v8, v2}, Lcom/android/internal/policy/PhoneWindow;-><init>(Landroid/content/Context;)V
+    invoke-direct {v8, v2}, Lcom/android/internal/policy/MiuiPhoneWindow;-><init>(Landroid/content/Context;)V
 
     .local v8, "win":Lcom/android/internal/policy/PhoneWindow;
     const/4 v10, 0x1
@@ -29840,19 +29840,19 @@
 
     invoke-virtual {p0, v1}, Lcom/android/server/policy/PhoneWindowManager;->sendCloseSystemWindows(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mGlobalActionViewMediator:Lcom/android/server/policy/global/GlobalActionViewMediator;
+    iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mGlobalActions:Lcom/android/server/policy/MiuiGlobalActions;
 
     if-nez v1, :cond_0
 
-    new-instance v1, Lcom/android/server/policy/global/GlobalActionViewMediator;
+    new-instance v1, Lcom/android/server/policy/MiuiGlobalActions;
 
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
 
     iget-object v3, p0, Lcom/android/server/policy/PhoneWindowManager;->mWindowManagerFuncs:Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
 
-    invoke-direct {v1, v2, v3}, Lcom/android/server/policy/global/GlobalActionViewMediator;-><init>(Landroid/content/Context;Landroid/view/WindowManagerPolicy$WindowManagerFuncs;)V
+    invoke-direct {v1, v2, v3}, Lcom/android/server/policy/MiuiGlobalActions;-><init>(Landroid/content/Context;Landroid/view/WindowManagerPolicy$WindowManagerFuncs;)V
 
-    iput-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mGlobalActionViewMediator:Lcom/android/server/policy/global/GlobalActionViewMediator;
+    iput-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mGlobalActions:Lcom/android/server/policy/MiuiGlobalActions;
 
     :cond_0
     invoke-direct {p0}, Lcom/android/server/policy/PhoneWindowManager;->isKeyguardShowingAndNotOccluded()Z
@@ -29860,13 +29860,13 @@
     move-result v0
 
     .local v0, "keyguardShowing":Z
-    iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mGlobalActionViewMediator:Lcom/android/server/policy/global/GlobalActionViewMediator;
+    iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mGlobalActions:Lcom/android/server/policy/MiuiGlobalActions;
 
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->isDeviceProvisioned()Z
 
     move-result v2
 
-    invoke-virtual {v1, v0, v2}, Lcom/android/server/policy/global/GlobalActionViewMediator;->showGlobal(ZZ)V
+    invoke-virtual {v1, v0, v2}, Lcom/android/server/policy/MiuiGlobalActions;->showDialog(ZZ)V
 
     if-eqz v0, :cond_1
 
