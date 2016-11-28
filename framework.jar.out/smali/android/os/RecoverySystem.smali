@@ -1099,7 +1099,7 @@
 .end method
 
 .method public static installPackage(Landroid/content/Context;Ljava/io/File;)V
-    .locals 12
+    .locals 11
     .param p0, "context"    # Landroid/content/Context;
     .param p1, "packageFile"    # Ljava/io/File;
     .annotation system Ldalvik/annotation/Throws;
@@ -1109,206 +1109,208 @@
     .end annotation
 
     .prologue
-    const/4 v11, 0x0
+    const/4 v10, 0x1
 
-    invoke-static {p0, v11}, Landroid/os/RecoverySystem;->broadcastUpgradeSubscripts(Landroid/content/Context;I)V
+    const/4 v9, 0x0
 
-    const-string v3, "/data/media/0/"
-
-    .local v3, "SDCardPath":Ljava/lang/String;
-    const-string v0, "/storage/emulated/legacy/"
-
-    .local v0, "EmulatedPath":Ljava/lang/String;
-    const-string v1, "/storage/emulated/0/"
-
-    .local v1, "EmulatedPath1":Ljava/lang/String;
-    const-string v2, "/mnt/shell/emulated/0"
-
-    .local v2, "EmulatedPath2":Ljava/lang/String;
     invoke-virtual {p1}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v1
 
-    .local v4, "filename":Ljava/lang/String;
-    invoke-virtual {v4, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    .local v1, "filename":Ljava/lang/String;
+    const-string v6, "ro.crypto.state"
 
-    move-result v8
+    const-string v7, "unsupported"
 
-    if-eqz v8, :cond_2
+    invoke-static {v6, v7}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v4, v0, v3}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v4
+    .local v0, "cryptoStatus":Ljava/lang/String;
+    const-string v6, "encrypted"
 
-    :cond_0
-    :goto_0
-    new-instance v7, Ljava/io/FileWriter;
+    invoke-virtual {v6, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
-    sget-object v8, Landroid/os/RecoverySystem;->UNCRYPT_FILE:Ljava/io/File;
+    move-result v3
 
-    invoke-direct {v7, v8}, Ljava/io/FileWriter;-><init>(Ljava/io/File;)V
+    .local v3, "isEncrypted":Z
+    if-eqz v3, :cond_1
 
-    .local v7, "uncryptFile":Ljava/io/FileWriter;
+    new-instance v5, Ljava/io/FileWriter;
+
+    sget-object v6, Landroid/os/RecoverySystem;->UNCRYPT_FILE:Ljava/io/File;
+
+    invoke-direct {v5, v6}, Ljava/io/FileWriter;-><init>(Ljava/io/File;)V
+
+    .local v5, "uncryptFile":Ljava/io/FileWriter;
     :try_start_0
-    new-instance v8, Ljava/lang/StringBuilder;
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v8
-
-    const-string v9, "\n"
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-virtual {v7, v8}, Ljava/io/FileWriter;->write(Ljava/lang/String;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v7}, Ljava/io/FileWriter;->close()V
-
-    const-string v8, "RecoverySystem"
-
-    new-instance v9, Ljava/lang/StringBuilder;
-
-    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v10, "!!! REBOOTING TO INSTALL "
-
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v9
-
-    invoke-virtual {v9, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v9
-
-    const-string v10, " !!!"
-
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v9
-
-    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v9
-
-    invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    const-string v8, "/data/"
-
-    invoke-virtual {v4, v8}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_1
-
-    const-string v4, "@/cache/recovery/block.map"
-
-    :cond_1
-    new-instance v8, Ljava/lang/StringBuilder;
-
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v9, "--update_package="
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v8
-
-    invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    .local v5, "filenameArg":Ljava/lang/String;
-    new-instance v8, Ljava/lang/StringBuilder;
-
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v9, "--locale="
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v8
-
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
-
-    move-result-object v9
-
-    invoke-virtual {v9}, Ljava/util/Locale;->toString()Ljava/lang/String;
-
-    move-result-object v9
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v6
 
-    .local v6, "localeArg":Ljava/lang/String;
-    const/4 v8, 0x2
+    const-string v7, "\n"
 
-    new-array v8, v8, [Ljava/lang/String;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    aput-object v5, v8, v11
+    move-result-object v6
 
-    const/4 v9, 0x1
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    aput-object v6, v8, v9
+    move-result-object v6
 
-    invoke-static {p0, v8}, Landroid/os/RecoverySystem;->bootCommand(Landroid/content/Context;[Ljava/lang/String;)V
+    invoke-virtual {v5, v6}, Ljava/io/FileWriter;->write(Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v5}, Ljava/io/FileWriter;->close()V
+
+    sget-object v6, Landroid/os/RecoverySystem;->UNCRYPT_FILE:Ljava/io/File;
+
+    invoke-virtual {v6, v10, v9}, Ljava/io/File;->setReadable(ZZ)Z
+
+    move-result v6
+
+    if-nez v6, :cond_0
+
+    const-string v6, "RecoverySystem"
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "Error setting readable for "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    sget-object v8, Landroid/os/RecoverySystem;->UNCRYPT_FILE:Ljava/io/File;
+
+    invoke-virtual {v8}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    const-string v6, "RecoverySystem"
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "!!! REBOOTING TO INSTALL "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    const-string v8, " !!!"
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string v6, "/data/"
+
+    invoke-virtual {v1, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_1
+
+    const-string v1, "@/cache/recovery/block.map"
+
+    .end local v5    # "uncryptFile":Ljava/io/FileWriter;
+    :cond_1
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "--update_package="
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    .local v2, "filenameArg":Ljava/lang/String;
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "--locale="
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/util/Locale;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    .local v4, "localeArg":Ljava/lang/String;
+    const/4 v6, 0x2
+
+    new-array v6, v6, [Ljava/lang/String;
+
+    aput-object v2, v6, v9
+
+    aput-object v4, v6, v10
+
+    invoke-static {p0, v6}, Landroid/os/RecoverySystem;->bootCommand(Landroid/content/Context;[Ljava/lang/String;)V
 
     return-void
 
-    .end local v5    # "filenameArg":Ljava/lang/String;
-    .end local v6    # "localeArg":Ljava/lang/String;
-    .end local v7    # "uncryptFile":Ljava/io/FileWriter;
-    :cond_2
-    invoke-virtual {v4, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_3
-
-    invoke-virtual {v4, v1, v3}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
-
-    move-result-object v4
-
-    goto/16 :goto_0
-
-    :cond_3
-    invoke-virtual {v4, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_0
-
-    invoke-virtual {v4, v2, v3}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
-
-    move-result-object v4
-
-    goto/16 :goto_0
-
-    .restart local v7    # "uncryptFile":Ljava/io/FileWriter;
+    .end local v2    # "filenameArg":Ljava/lang/String;
+    .end local v4    # "localeArg":Ljava/lang/String;
+    .restart local v5    # "uncryptFile":Ljava/io/FileWriter;
     :catchall_0
-    move-exception v8
+    move-exception v6
 
-    invoke-virtual {v7}, Ljava/io/FileWriter;->close()V
+    invoke-virtual {v5}, Ljava/io/FileWriter;->close()V
 
-    throw v8
+    throw v6
 .end method
 
 .method public static installPackage(Landroid/content/Context;Ljava/io/File;Z)V
