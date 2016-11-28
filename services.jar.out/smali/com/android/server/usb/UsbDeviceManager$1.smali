@@ -33,44 +33,10 @@
 
 # virtual methods
 .method public onUEvent(Landroid/os/UEventObserver$UEvent;)V
-    .locals 5
+    .locals 3
     .param p1, "event"    # Landroid/os/UEventObserver$UEvent;
 
     .prologue
-    # getter for: Lcom/android/server/usb/UsbDeviceManager;->DEBUG:Z
-    invoke-static {}, Lcom/android/server/usb/UsbDeviceManager;->access$200()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    const-string v2, "UsbDeviceManager"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "USB UEVENT: "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {p1}, Landroid/os/UEventObserver$UEvent;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
     const-string v2, "USB_STATE"
 
     invoke-virtual {p1, v2}, Landroid/os/UEventObserver$UEvent;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -85,7 +51,7 @@
     move-result-object v0
 
     .local v0, "accessory":Ljava/lang/String;
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_1
 
     iget-object v2, p0, Lcom/android/server/usb/UsbDeviceManager$1;->this$0:Lcom/android/server/usb/UsbDeviceManager;
 
@@ -96,37 +62,23 @@
 
     invoke-virtual {v2, v1}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->updateState(Ljava/lang/String;)V
 
-    :cond_1
+    :cond_0
     :goto_0
     return-void
 
-    :cond_2
+    :cond_1
     const-string v2, "START"
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_0
 
-    # getter for: Lcom/android/server/usb/UsbDeviceManager;->DEBUG:Z
-    invoke-static {}, Lcom/android/server/usb/UsbDeviceManager;->access$200()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    const-string v2, "UsbDeviceManager"
-
-    const-string v3, "got accessory start"
-
-    invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_3
     iget-object v2, p0, Lcom/android/server/usb/UsbDeviceManager$1;->this$0:Lcom/android/server/usb/UsbDeviceManager;
 
     # invokes: Lcom/android/server/usb/UsbDeviceManager;->startAccessoryMode()V
-    invoke-static {v2}, Lcom/android/server/usb/UsbDeviceManager;->access$300(Lcom/android/server/usb/UsbDeviceManager;)V
+    invoke-static {v2}, Lcom/android/server/usb/UsbDeviceManager;->access$200(Lcom/android/server/usb/UsbDeviceManager;)V
 
     goto :goto_0
 .end method

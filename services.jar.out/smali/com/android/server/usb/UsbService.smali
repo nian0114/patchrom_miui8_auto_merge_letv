@@ -381,22 +381,8 @@
 
     goto :goto_1
 
-    :sswitch_6
-    const-string v3, "mtp,cdrom"
-
-    invoke-virtual {p0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    const/4 v2, 0x6
-
-    goto :goto_1
-
     :sswitch_data_0
     .sparse-switch
-        -0x5762f9f4 -> :sswitch_6
         -0x55c6135c -> :sswitch_1
         0x1a7a9 -> :sswitch_3
         0x1b2ec -> :sswitch_4
@@ -407,7 +393,6 @@
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_0
         :pswitch_0
         :pswitch_0
         :pswitch_0
